@@ -19,6 +19,14 @@ class Admin extends CI_Controller {
 		redirect('CrudProdi');
 	}
 
+	function table_instrumen(){
+		redirect('CrudInstrumen');
+	}
+
+	function table_user(){
+		redirect('CrudUser');
+	}
+
 	function tampilan()
 	{
 		$this->load->view('Admin/tampilan_fakultas.php');
@@ -27,6 +35,14 @@ class Admin extends CI_Controller {
 
 	function tampilan_prodi(){
 		$this->load->view('Admin/tampilan_prodi.php');
+	}
+
+	function tampilan_instrumen(){
+		$this->load->view('Admin/tampilan_instrumen.php');
+	}
+
+	function tampilan_user(){
+		$this->load->view('Admin/tampilan_user.php');
 	}
 	
 }

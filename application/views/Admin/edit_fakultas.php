@@ -75,9 +75,64 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!-- END STYLE CUSTOMIZER -->
 
 	<!-- BEGIN PAGE HEADER-->
-		<?php 
-			echo $this->load->view('content.php');
-		 ?>
+		<div class="row">
+				<div class="col-md-12">
+					<!-- BEGIN EXAMPLE TABLE PORTLET-->
+					<div class="portlet box blue">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-edit"></i>Form Edit Fakultas
+							</div>
+							<div class="tools">
+								<a href="javascript:;" class="collapse">
+								</a>
+								<a href="#portlet-config" data-toggle="modal" class="config">
+								</a>
+								<a href="javascript:;" class="reload">
+								</a>
+								<a href="javascript:;" class="remove">
+								</a>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="table-toolbar">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="btn-group">
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							<form action="<?php echo base_url()."index.php/CrudFakultas/do_edit"; ?>" method="POST">
+							<div class="container">
+								<div class="col-md-10">
+									<div class="row">
+										<div class="form-group">
+											<label>Kode Fakultas</label>
+											<input type="text" class="form-control" name="kode" value="<?php echo $kode_fakultas; ?>" readonly>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Nama Fakultas</label>
+											<input type="text" class="form-control" name="fakultas" value="<?php echo $nama_fakultas; ?>">
+										</div>
+									</div>
+									<div class="row">
+										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+									</div>
+								</div>
+							</div>
+							</form>
+						</div>
+					</div>
+					<!-- END EXAMPLE TABLE PORTLET-->
+				</div>
+			</div>
+			<!-- END PAGE CONTENT -->
+		</div>
+	</div>
 	<!-- END CONTAINER -->		
 	<!-- BEGIN FOOTER -->
 		<?php 

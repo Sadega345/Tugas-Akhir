@@ -1,6 +1,6 @@
 /*
 SQLyog Enterprise - MySQL GUI v7.02 
-MySQL - 5.6.16 : Database - db_borangakreditasi
+MySQL - 5.6.21 : Database - db_borangakreditasi
 *********************************************************************
 */
 
@@ -14,21 +14,6 @@ MySQL - 5.6.16 : Database - db_borangakreditasi
 CREATE DATABASE /*!32312 IF NOT EXISTS*/`db_borangakreditasi` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
 USE `db_borangakreditasi`;
-
-/*Table structure for table `admin` */
-
-DROP TABLE IF EXISTS `admin`;
-
-CREATE TABLE `admin` (
-  `id` varchar(4) NOT NULL,
-  `usesrname` varchar(30) DEFAULT NULL,
-  `password` varchar(10) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-/*Data for the table `admin` */
-
-insert  into `admin`(`id`,`usesrname`,`password`) values ('1','admin','21232f297a');
 
 /*Table structure for table `apd_a311` */
 
@@ -1420,7 +1405,7 @@ CREATE TABLE `fakultas_tbl` (
 
 /*Data for the table `fakultas_tbl` */
 
-insert  into `fakultas_tbl`(`kode_fakultas`,`nama_fakultas`) values ('F001','Ilmu Komputer');
+insert  into `fakultas_tbl`(`kode_fakultas`,`nama_fakultas`) values ('F002','Ekonomi');
 
 /*Table structure for table `identitas_prodi` */
 
@@ -1475,13 +1460,27 @@ CREATE TABLE `prodi_tbl` (
   `nama_prodi` varchar(50) DEFAULT NULL,
   `kode_fakultas` varchar(4) DEFAULT NULL,
   PRIMARY KEY (`kode_prodi`),
-  KEY `kode_fakultas` (`kode_fakultas`),
-  CONSTRAINT `prodi_tbl_ibfk_1` FOREIGN KEY (`kode_fakultas`) REFERENCES `fakultas_tbl` (`kode_fakultas`)
+  KEY `kode_fakultas` (`kode_fakultas`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `prodi_tbl` */
 
-insert  into `prodi_tbl`(`kode_prodi`,`nama_prodi`,`kode_fakultas`) values ('P001','D3 Manajemen Informatika','F001'),('P002','S1 Teknik Informatika','F001');
+insert  into `prodi_tbl`(`kode_prodi`,`nama_prodi`,`kode_fakultas`) values ('P001','D3 Manajemen Informatika','F001'),('P002','S1 Teknik Informatika','F001'),('P003','Ekonomi','F001');
+
+/*Table structure for table `user` */
+
+DROP TABLE IF EXISTS `user`;
+
+CREATE TABLE `user` (
+  `id` varchar(4) NOT NULL,
+  `username` varchar(50) DEFAULT NULL,
+  `password` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `user` */
+
+insert  into `user`(`id`,`username`,`password`) values ('1','admin','21232f297a57a5a743894a0e4a801fc3');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

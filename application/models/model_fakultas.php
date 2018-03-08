@@ -1,9 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Model_prodi extends CI_Model {
-	public function GetProdi($where="")
+class Model_Fakultas extends CI_Model {
+	
+	public function GetFakultas($where="")
 	{
-		$data=$this->db->query("select * from prodi_tbl ".$where);
+		$data=$this->db->query("select * from fakultas_tbl ".$where);
 		return $data->result_array();
 	}
 

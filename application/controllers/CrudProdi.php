@@ -2,18 +2,20 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class CrudProdi extends CI_Controller {
+	
 	public function index(){
 		$data=$this->model_prodi->GetProdi();
 		$this->load->view('Admin/tampilan_prodi.php',array('data'=>$data));
 	}
 
 	public function tambah(){
-		$this->load->view('Admin/inputan_prodi.php');
+		$data=$this->model_prodi->GetFakultas();
+		$this->load->view('Admin/inputan_prodi.php',array('data' => $data));
 	}
 
 	public function do_tambah(){
 		$kode_prodi=$_POST['kode_prodi'];
-		$prodi=$_POST['nama_prodi'];
+		$nama_prodi=$_POST['nama_prodi'];
 		$kode_fakultas=$_POST['kode_fakultas'];
 		$data_insert=array(
 			'kode_prodi'=>$kode_prodi,
@@ -39,16 +41,17 @@ class CrudProdi extends CI_Controller {
 	}
 
 	public function edit_data($kode){
-		$res=$this->model_prodi->GetProdi("where kode_prodi='$kode_prodi'");
+		$res=$this->model_prodi->GetProdi("where kode_prodi='$kode'");
 		$data=array(
-			"kode_prodi"=>$res[0]['kode_prodi'],
-			"nama_prodi"=>$res[0]['nama_prodi'],
 			"kode_fakultas"=>$res[0]['kode_fakultas'],
+			"kode_prodi"=>$res[0]['kode_prodi'],
+			"nama_prodi"=>$res[0]['nama_prodi']
 		);
 		$this->load->view('Admin/edit_prodi',$data);
 	}
 
 	public function do_edit(){
+
 		$kode_prodi=$_POST['kode_prodi'];
 		$nama_prodi=$_POST['nama_prodi'];
 		$kode_fakultas=$_POST['kode_fakultas'];

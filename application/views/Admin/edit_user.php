@@ -81,7 +81,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Data Pogram Studi Universitas Nasional Pasim
+								<i class="fa fa-edit"></i>Form Edit User
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -102,43 +102,33 @@ License: You must have a valid license purchased only from themeforest(the above
 											
 										</div>
 									</div>
-									<div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div>
 								</div>
 							</div>
-							<form action="<?php echo base_url()."index.php/CrudProdi/do_tambah"; ?>" method="POST">
+							<form action="<?php echo base_url()."index.php/CrudUser/do_edit"; ?>" method="POST">
 							<div class="container">
 								<div class="col-md-10">
 									<div class="row">
 										<div class="form-group">
-											<label>Kode Fakultas</label>
-											<input type="text" class="form-control" name="kode_fakultas">
+											<label>Id</label>
+											<input type="text" class="form-control" name="id" value="<?php echo $id; ?>" readonly>
 										</div>
 									</div>
 									<div class="row">
 										<div class="form-group">
-											<label>Kode Prodi</label>
-											<input type="text" class="form-control" name="kode_prodi">
+											<label>Username</label>
+											<input type="text" class="form-control" name="username" value="<?php echo $username; ?>">
 										</div>
 									</div>
 									<div class="row">
 										<div class="form-group">
-											<label>Nama Prodi</label>
-											<input type="text" class="form-control" name="nama_prodi">
+											<label>Password</label>
+											<input type="text" class="form-control" name="password" value="<?php echo $password; ?>">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Level</label>
+											<input type="text" class="form-control" name="level" value="<?php echo $level; ?>">
 										</div>
 									</div>
 									<div class="row">
@@ -147,7 +137,46 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</div>
 							</form>
-							
+							<!-- <table class="table table-striped table-bordered table-hover" id="sample_1">
+							<thead>
+							<tr>
+								<th>
+									 No
+								</th>
+								<th>
+									 Kode Fakultas
+								</th>
+								<th>
+									 Nama Fakultas
+								</th>
+								<th>
+									 Aksi
+								</th>
+							</tr>
+							</thead>
+							<tbody>
+							<?php 
+								$no=1; 
+								foreach ($data as $d ) { 
+							?>
+							<tr class="odd gradeX">
+								<td>
+									<?php echo $no++; ?>
+								</td>
+								<td>
+									 <?php echo $d['kode_fakultas']; ?>
+								</td>
+								<td>
+									<?php echo $d['nama_fakultas']; ?>
+								</td>
+								<td class="center">
+									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
+         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
+								</td>
+							</tr>
+							<?php } ?>
+							</tbody>
+							</table> -->
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

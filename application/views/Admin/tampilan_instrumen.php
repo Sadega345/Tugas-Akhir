@@ -81,7 +81,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Data Fakultas Universitas Nasional Pasim
+								<i class="fa fa-edit"></i>Data Instrumen
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -99,14 +99,14 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="<?php echo base_url()."index.php/CrudInstrumen/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
-											Add New <i class="fa fa-plus"></i>
+											Tambah <i class="fa fa-plus"></i>
 											</button>
 											</a>
 										</div>
 									</div>
-									<div class="col-md-6">
+									<!-- <div class="col-md-6">
 										<div class="btn-group pull-right">
 											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
 											</button>
@@ -121,7 +121,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												</li>
 											</ul>
 										</div>
-									</div>
+									</div> -->
 								</div>
 							</div>
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
@@ -131,10 +131,13 @@ License: You must have a valid license purchased only from themeforest(the above
 									 No
 								</th>
 								<th>
-									 Kode Fakultas
+									Id
 								</th>
 								<th>
-									 Nama Fakultas
+									 Nama Instrumen
+								</th>
+								<th>
+									File
 								</th>
 								<th>
 									 Aksi
@@ -151,14 +154,17 @@ License: You must have a valid license purchased only from themeforest(the above
 									<?php echo $no++; ?>
 								</td>
 								<td>
-									 <?php echo $d['kode_fakultas']; ?>
+									 <?php echo $d['id']; ?>
 								</td>
 								<td>
-									<?php echo $d['nama_fakultas']; ?>
+									<?php echo $d['instrumen']; ?>
+								</td>
+								<td>
+									<?php echo $d['file']; ?>
 								</td>
 								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
+									<a href="<?php echo base_url()."index.php/CrudInstrumen/edit_data/".$d['id'];?>">Edit</a> ||
+         							<a href="<?php echo base_url()."index.php/CrudInstrumen/do_hapus/".$d['id'];?>">Delete</a>
 								</td>
 							</tr>
 							<?php } ?>

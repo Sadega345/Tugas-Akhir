@@ -2,6 +2,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class CrudFakultas extends CI_Controller {
+	
 	public function index(){
 		$data=$this->model_fakultas->GetFakultas();
 		$this->load->view('Admin/tampilan_fakultas.php',array('data'=>$data));
@@ -12,6 +13,7 @@ class CrudFakultas extends CI_Controller {
 	}
 
 	public function do_tambah(){
+		$this->model_squrity->getsqurity();
 		$kode=$_POST['kode'];
 		$fakultas=$_POST['fakultas'];
 		$data_insert=array(
@@ -27,6 +29,7 @@ class CrudFakultas extends CI_Controller {
 	}
 
 	public function do_hapus($kode){
+		$this->model_squrity->getsqurity();
 		$where=array('kode_fakultas'=>$kode);
 		$res=$this->model_fakultas->Delete('fakultas_tbl',$where);
 		if($res>=1){
@@ -37,6 +40,7 @@ class CrudFakultas extends CI_Controller {
 	}
 
 	public function edit_data($kode){
+		$this->model_squrity->getsqurity();
 		$res=$this->model_fakultas->GetFakultas("where kode_fakultas='$kode'");
 		$data=array(
 			"kode_fakultas"=>$res[0]['kode_fakultas'],
@@ -46,8 +50,8 @@ class CrudFakultas extends CI_Controller {
 	}
 
 	public function do_edit(){
-		$kode=$_POST['kode_fakultas'];
-		$fakultas=$_POST['nama_fakultas'];
+		$kode=$_POST['kode'];
+		$fakultas=$_POST['fakultas'];
 		$data_update=array(
 			'kode_fakultas'=>$kode,
 			'nama_fakultas'=>$fakultas
@@ -57,8 +61,8 @@ class CrudFakultas extends CI_Controller {
 		if ($res>=1) {
 			redirect('Admin/table');
 		}
-		else {
-			alert("Gagal Update") ;
-		}
+		// else {
+		// 	alert("Gagal Update") ;
+		// }
 	}
 }

@@ -81,7 +81,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Form Edit Program Studi
+								<i class="fa fa-edit"></i>Data User
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -99,49 +99,48 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											
+											<a href="<?php echo base_url()."index.php/CrudUser/tambah";?>">
+											<button id="sample_editable_1_new" class="btn green">
+											Tambah <i class="fa fa-plus"></i>
+											</button>
+											</a>
 										</div>
 									</div>
+									<!-- <div class="col-md-6">
+										<div class="btn-group pull-right">
+											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+											</button>
+											<ul class="dropdown-menu pull-right">
+												<li>
+													<a href="javascript:;">
+													Print </a>
+												</li>
+												<li>
+													<a href="javascript:;">
+													Export to Excel </a>
+												</li>
+											</ul>
+										</div>
+									</div> -->
 								</div>
 							</div>
-							<form action="<?php echo base_url()."index.php/CrudProdi/do_edit"; ?>" method="POST">
-							<div class="container">
-								<div class="col-md-10">
-									<div class="row">
-										<div class="form-group">
-											<label>Kode Fakultas</label>
-											<input type="text" class="form-control" name="kode_fakultas" value="<?php echo $kode_fakultas; ?>" readonly>
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Kode Program Studi</label>
-											<input type="text" class="form-control" name="kode_prodi" value="<?php echo $kode_prodi; ?>" readonly>
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Nama Program Studi</label>
-											<input type="text" class="form-control" name="nama_prodi" value="<?php echo $nama_prodi; ?>" readonly>
-										</div>
-									</div>
-									<div class="row">
-										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
-									</div>
-								</div>
-							</div>
-							</form>
-							<!-- <table class="table table-striped table-bordered table-hover" id="sample_1">
+							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 							<tr>
 								<th>
-									 No
+									No
 								</th>
 								<th>
-									 Kode Fakultas
+									 Id
 								</th>
 								<th>
-									 Nama Fakultas
+									 Username
+								</th>
+								<th>
+									 Password
+								</th>
+								<th>
+									 Level
 								</th>
 								<th>
 									 Aksi
@@ -158,19 +157,25 @@ License: You must have a valid license purchased only from themeforest(the above
 									<?php echo $no++; ?>
 								</td>
 								<td>
-									 <?php echo $d['kode_fakultas']; ?>
+									 <?php echo $d['id']; ?>
 								</td>
 								<td>
-									<?php echo $d['nama_fakultas']; ?>
+									<?php echo $d['username']; ?>
+								</td>
+								<td>
+									<?php echo $d['password']; ?>
+								</td>
+								<td>
+									<?php echo $d['level']; ?>
 								</td>
 								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
+									<a href="<?php echo base_url()."index.php/CrudUser/edit_data/".$d['id'];?>">Edit</a> ||
+         							<a href="<?php echo base_url()."index.php/CrudUser/do_hapus/".$d['id'];?>">Delete</a>
 								</td>
 							</tr>
 							<?php } ?>
 							</tbody>
-							</table> -->
+							</table>
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

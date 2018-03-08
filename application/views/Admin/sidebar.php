@@ -44,7 +44,9 @@
 				<li class="start active open">
 					<a href="javascript:;">
 					<i class="icon-home"></i>
+					<a href="<?php echo base_url(); ?>index.php/Web">
 					<span class="title">Dashboard</span>
+					</a>
 					<!-- <span class="selected"></span> -->
 					<!-- <span class="arrow "></span> -->
 					<!-- <span class="arrow open"></span> -->
@@ -56,7 +58,6 @@
 							Halaman Utama</a>
 						</li>
 					</ul> -->
-				</li>
 				<!-- BEGIN ANGULARJS LINK -->
 			
 				<!-- END ANGULARJS LINK -->
@@ -67,10 +68,6 @@
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub-menu">
-						<!-- <li>
-							<a href="<?php echo base_url(); ?>index.php/Admin/tampilan">
-							Fakultas Dan Prodi</a>
-						</li> -->
 						<li>
 							<a href="<?php echo base_url(); ?>index.php/Admin/table">
 							Fakultas</a>
@@ -80,8 +77,12 @@
 							Program Studi </a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="<?php echo base_url(); ?>index.php/Admin/table_instrumen">
 							Instrumen </a>
+						</li>
+						<li>
+							<a href="<?php echo base_url(); ?>index.php/Admin/table_user">
+							User </a>
 						</li>
 					</ul>
 				</li>

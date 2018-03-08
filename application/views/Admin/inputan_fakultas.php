@@ -81,7 +81,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Data Fakultas Universitas Nasional Pasim
+								<i class="fa fa-edit"></i>Data Fakultas
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -102,7 +102,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											
 										</div>
 									</div>
-									<div class="col-md-6">
+									<!-- <div class="col-md-6">
 										<div class="btn-group pull-right">
 											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
 											</button>
@@ -117,7 +117,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												</li>
 											</ul>
 										</div>
-									</div>
+									</div> -->
 								</div>
 							</div>
 							<form action="<?php echo base_url()."index.php/CrudFakultas/do_tambah"; ?>" method="POST">

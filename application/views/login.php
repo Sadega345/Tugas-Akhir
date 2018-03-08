@@ -83,7 +83,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 		</div>
 		<div class="form-actions">
-			<button type="submit" class="btn btn-success uppercase">Login</button>
+			<button type="submit" class="btn btn-success uppercase" name="ok">Login</button>
 		</div>
 	</form>
 	<!-- END LOGIN FORM -->

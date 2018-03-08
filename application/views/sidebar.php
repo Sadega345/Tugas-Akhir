@@ -38,24 +38,54 @@
 					</form> -->
 					<!-- END RESPONSIVE QUICK SEARCH FORM -->
 				<!-- </li> -->
+				<!-- <li>
+					<i class=""></i>
+				</li> -->
 				<li class="start active open">
 					<a href="javascript:;">
 					<i class="icon-home"></i>
-					<span class="title">Menu Utama</span>
-					<span class="selected"></span>
-					<span class="arrow open"></span>
+					<a href="<?php echo base_url(); ?>index.php/Web">
+					<span class="title">Dashboard</span>
 					</a>
-					<ul class="sub-menu">
+					<!-- <span class="selected"></span> -->
+					<!-- <span class="arrow "></span> -->
+					<!-- <span class="arrow open"></span> -->
+					</a>
+					<!-- <ul class="sub-menu">
 						<li class="active">
 							<a href="<?php echo base_url(); ?>index.php/Web">
 							<i class="icon-bulb"></i>
 							Halaman Utama</a>
 						</li>
-					</ul>
-				</li>
+					</ul> -->
 				<!-- BEGIN ANGULARJS LINK -->
 			
 				<!-- END ANGULARJS LINK -->
+				<li>
+					<a href="javascript:;">
+					<i class="icon-briefcase"></i>
+					<span class="title">Kelola Data</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="<?php echo base_url(); ?>index.php/Admin/table">
+							Fakultas</a>
+						</li>
+						<li>
+							<a href="<?php echo base_url(); ?>index.php/Admin/table_prodi">
+							Program Studi </a>
+						</li>
+						<li>
+							<a href="<?php echo base_url(); ?>index.php/Admin/table_instrumen">
+							Instrumen </a>
+						</li>
+						<li>
+							<a href="<?php echo base_url(); ?>index.php/Admin/table_user">
+							User </a>
+						</li>
+					</ul>
+				</li>
 				<li>
 					<a href="javascript:;">
 					<i class="icon-settings"></i>
@@ -67,23 +97,6 @@
 							<a href="<?php echo base_url(); ?>/index.php/Admin">
 							<span class="badge badge-roundless badge-danger"></span>Ganti Password<br>
 							</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="icon-briefcase"></i>
-					<span class="title">Data Tables</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="table_managed.html">
-							Managed Datatables</a>
-						</li>
-						<li>
-							<a href="<?php echo base_url(); ?>/table_editable.php">
-							Editable Datatables</a>
 						</li>
 					</ul>
 				</li>
