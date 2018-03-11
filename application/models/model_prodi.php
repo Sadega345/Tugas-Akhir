@@ -10,7 +10,7 @@ class Model_Prodi extends CI_Model {
 
 	public function GetFakultas($where="")
 	{
-		$data=$this->db->query("select kode_fakultas from prodi_tbl ".$where);
+		$data=$this->db->query("select kode_fakultas from fakultas_tbl ".$where);
 		return $data->result_array();
 	}
 

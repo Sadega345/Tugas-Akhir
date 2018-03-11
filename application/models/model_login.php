@@ -10,7 +10,7 @@ class Model_login extends CI_model {
 		$pwd=md5($password);
 		$this->db->where('username',$username);
 		$this->db->where('password',$pwd);
-		$query = $this->db->get('admin');
+		$query = $this->db->get('user');
 		// Untuk query select * from admin where username= '$nama' and password= '$pwd'
 
 		if ($query->num_rows()>0) {
