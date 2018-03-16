@@ -1,6 +1,6 @@
 /*
 SQLyog Enterprise - MySQL GUI v7.02 
-MySQL - 5.6.21 : Database - db_borangakreditasi
+MySQL - 5.6.16 : Database - db_borangakreditasi
 *********************************************************************
 */
 
@@ -1436,6 +1436,19 @@ CREATE TABLE `identitas_prodi` (
 
 /*Data for the table `identitas_prodi` */
 
+/*Table structure for table `instrumen` */
+
+DROP TABLE IF EXISTS `instrumen`;
+
+CREATE TABLE `instrumen` (
+  `id` int(3) NOT NULL,
+  `instrumen` varchar(30) NOT NULL,
+  `file` varchar(30) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `instrumen` */
+
 /*Table structure for table `pengisi_tbl` */
 
 DROP TABLE IF EXISTS `pengisi_tbl`;
@@ -1481,6 +1494,22 @@ CREATE TABLE `user` (
 /*Data for the table `user` */
 
 insert  into `user`(`id`,`username`,`password`) values ('1','admin','21232f297a57a5a743894a0e4a801fc3');
+
+/*Table structure for table `users` */
+
+DROP TABLE IF EXISTS `users`;
+
+CREATE TABLE `users` (
+  `id` int(2) NOT NULL AUTO_INCREMENT,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `level` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+/*Data for the table `users` */
+
+insert  into `users`(`id`,`username`,`password`,`level`) values (1,'admin','21232f297a57a5a743894a0e4a801fc3','admin'),(2,'Manajemen Informatika','f5c7528de45dfcd54d08030eecf985f9','user');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

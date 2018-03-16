@@ -1,4 +1,4 @@
-<!-- BEGIN CONTAINER -->
+BEGIN CONTAINER -->
 <div class="page-container">
 	<!-- BEGIN SIDEBAR -->
 	<div class="page-sidebar-wrapper">
@@ -47,9 +47,9 @@
 					<a href="<?php echo base_url(); ?>index.php/Web">
 					<span class="title">Dashboard</span>
 					</a>
-					<!-- <span class="selected"></span> -->
-					<!-- <span class="arrow "></span> -->
-					<!-- <span class="arrow open"></span> -->
+					<span class="selected"></span>
+					<span class="arrow "></span>
+					<span class="arrow open"></span>
 					</a>
 					<!-- <ul class="sub-menu">
 						<li class="active">
@@ -104,4 +104,4 @@
 			<!-- END SIDEBAR MENU -->
 		</div>
 	</div>
-	<!-- END SIDEBAR -->
+	<!-- END SIDEBAR

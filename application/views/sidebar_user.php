@@ -15,8 +15,6 @@ BEGIN CONTAINER -->
 			<ul class="page-sidebar-menu page-sidebar-menu-light" data-keep-expanded="true" data-auto-scroll="true" data-slide-speed="200">
 				<!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
 				<li class="sidebar-toggler-wrapper">
-				<a href="javascript"></a>
-				<center><img src="<?php echo base_url()."assets/";?>admin/layout/img/universitas nasional pasim.png" alt="logo" width="80" height="80"/></center>
 					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
 					<div class="sidebar-toggler">
 					</div>
@@ -43,17 +41,15 @@ BEGIN CONTAINER -->
 				<!-- <li>
 					<i class=""></i>
 				</li> -->
-				
-				<li>
+				<li class="start active open">
 					<a href="javascript:;">
 					<i class="icon-home"></i>
-					<span class="title">Dashboard</span>
 					<a href="<?php echo base_url(); ?>index.php/Web">
-					
+					<span class="title">Dashboard</span>
 					</a>
-						<!-- <span class="selected"></span>
-						<span class="arrow "></span>
-						<span class="arrow open"></span> -->
+					<!-- <span class="selected"></span> -->
+					<!-- <span class="arrow "></span> -->
+					<!-- <span class="arrow open"></span> -->
 					</a>
 					<!-- <ul class="sub-menu">
 						<li class="active">
@@ -62,17 +58,16 @@ BEGIN CONTAINER -->
 							Halaman Utama</a>
 						</li>
 					</ul> -->
-				</li>
 				<!-- BEGIN ANGULARJS LINK -->
 			
 				<!-- END ANGULARJS LINK -->
 				<li>
 					<a href="javascript:;">
 					<i class="icon-briefcase"></i>
-					<span class="title">Kelola Data</span>
+					<span class="title">Kelola Data Borang</span>
 					<span class="arrow "></span>
 					</a>
-					<ul class="sub-menu">
+					<!-- <ul class="sub-menu">
 						<li>
 							<a href="<?php echo base_url(); ?>index.php/Admin/table">
 							Fakultas</a>
@@ -89,9 +84,9 @@ BEGIN CONTAINER -->
 							<a href="<?php echo base_url(); ?>index.php/Admin/table_user">
 							User </a>
 						</li>
-					</ul>
+					</ul> -->
 				</li>
-				<li>
+				<!-- <li>
 					<a href="javascript:;">
 					<i class="icon-settings"></i>
 					<span class="title">Pengaturan Admin</span>
@@ -99,12 +94,12 @@ BEGIN CONTAINER -->
 					</a>
 					<ul class="sub-menu">
 						<li>
-							<a href="<?php echo base_url(); ?>/index.php/Admin/table_admin">
+							<a href="<?php echo base_url(); ?>/index.php/Admin">
 							<span class="badge badge-roundless badge-danger"></span>Ganti Password<br>
 							</a>
 						</li>
 					</ul>
-				</li>
+				</li> -->
 			</ul>
 			<!-- END SIDEBAR MENU -->
 		</div>

@@ -53,14 +53,15 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- END SIDEBAR TOGGLER BUTTON -->
 <!-- BEGIN LOGO -->
 <div class="logo">
-	<h1 align="center">HALAMAN LOGIN </h1>
+	<h1 align="center">Aplikai Pengolah Format Data Borang Akreditasi <br>Universitas Nasional PASIM</h1> 		
 </div>
+	<center><img alt="" src="<?php echo base_url()."assets/";?>frontend/layout/img/universitas nasional pasim.png" width="120px" height="120px"/></center>
 <!-- END LOGO -->
 <!-- BEGIN LOGIN -->
 <div class="content">
 	<!-- BEGIN LOGIN FORM -->
-	<form class="login-form" method="post" action="<?php echo base_url(); ?>index.php/Login/getlogin" >
-		<h3 class="form-title">Sign In</h3>
+	<form class="login-form" method="post" action="<?php echo base_url(); ?>index.php/Login/user_login" >
+		<h3 class="form-title">Login</h3>
 		<div class="alert alert-danger display-hide">
 			<button class="close" data-close="alert"></button>
 			<span>
@@ -83,7 +84,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 		</div>
 		<div class="form-actions">
-			<button type="submit" class="btn btn-success uppercase" name="ok">Login</button>
+			<button type="submit" class="btn btn-success uppercase" name="ok">Submit</button>
 		</div>
 	</form>
 	<!-- END LOGIN FORM -->
@@ -92,7 +93,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!-- END REGISTRATION FORM -->
 </div>
 <div class="copyright">
-	 2018 © Pasim.Login.
+	 2018 © Tugas Akhir
 </div>
 <!-- END LOGIN -->
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->

@@ -27,6 +27,10 @@ class Admin extends CI_Controller {
 		redirect('CrudUser');
 	}
 
+	function table_admin(){
+		redirect('CrudUser');
+	}
+
 	function tampilan()
 	{
 		$this->load->view('Admin/tampilan_fakultas.php');
@@ -44,5 +48,9 @@ class Admin extends CI_Controller {
 	function tampilan_user(){
 		$this->load->view('Admin/tampilan_user.php');
 	}
+
+	// function tampilan_admin()
+	// 	$this->load->view('Admin/tampilan_admin.php');
+	// }
 	
 }

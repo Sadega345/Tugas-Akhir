@@ -99,10 +99,14 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											
+											<a href="<?php echo base_url()."index.php/CrudUser/tambah";?>">
+											<button id="sample_editable_1_new" class="btn green">
+											Tambah <i class="fa fa-plus"></i>
+											</button>
+											</a>
 										</div>
 									</div>
-									<div class="col-md-6">
+									<!-- <div class="col-md-6">
 										<div class="btn-group pull-right">
 											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
 											</button>
@@ -117,48 +121,61 @@ License: You must have a valid license purchased only from themeforest(the above
 												</li>
 											</ul>
 										</div>
-									</div>
-								</div>
-							</div>
-							<form action="<?php echo base_url()."index.php/CrudUser/do_tambah"; ?>" method="POST">
-							<div class="container">
-								<div class="col-md-10">
-									<div class="row">
-										<div class="form-group">
-											<label>Id</label>
-											<input type="text" class="form-control" name="id">
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Username</label>
-											<input type="text" class="form-control" name="username">
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Password</label>
-											<input type="text" class="form-control" name="password">
-										</div>
-									</div>
-									<!-- <div class="row">
-										<div class="form-group">
-											<label>Level</label>
-											<select name="level" class="form-control">
-												<option disabled selected>Level</option>
-												<?php foreach($data as $d) { ?>
-									                <option value="<?php echo $d['level'];?>"><?php echo $d['level'];?></option>
-									            <?php } ?>
-											</select>
-										</div>
 									</div> -->
-									<div class="row">
-										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
-									</div>
 								</div>
 							</div>
-							</form>
-							
+							<table class="table table-striped table-bordered table-hover" id="sample_1">
+							<thead>
+							<tr>
+								<th>
+									No
+								</th>
+								<th>
+									 Id
+								</th>
+								<th>
+									 Username
+								</th>
+								<th>
+									 Password
+								</th>
+								<th>
+									 Level
+								</th>
+								<th>
+									 Aksi
+								</th>
+							</tr>
+							</thead>
+							<tbody>
+							<?php 
+								$no=1; 
+								foreach ($data as $d ) { 
+							?>
+							<tr class="odd gradeX">
+								<td>
+									<?php echo $no++; ?>
+								</td>
+								<td>
+									 <?php echo $d['id']; ?>
+								</td>
+								<td>
+									<?php echo $d['username']; ?>
+								</td>
+								<td>
+									<?php echo $d['password']; ?>
+								</td>
+								<td>
+									<?php echo $d['level']; ?>
+								</td>
+								<td class="center">
+									<a href="<?php echo base_url()."index.php/CrudUser/edit_data/".$d['id'];?>">Edit</a> ||
+         							<a href="<?php echo base_url()."index.php/CrudUser/do_hapus/".$d['id'];?>">Delete</a>
+								</td>
+							</tr>
+							<?php } ?>
+							</tbody>
+							</table>
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

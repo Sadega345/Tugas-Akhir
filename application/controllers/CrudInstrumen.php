@@ -17,7 +17,7 @@ class CrudInstrumen extends CI_Controller {
       $this->load->view('input');
     }
 
-	public function proses_input(){
+	public function do_tambah(){
 		// $id=$_POST['id'];
 		// $instrumen=$_POST['instrumen'];
 
@@ -55,7 +55,6 @@ class CrudInstrumen extends CI_Controller {
          ];
           $this->model_instrumen->input($data); //memasukan data ke database
           redirect('Admin/table_instrumen'); //mengalihkan halaman
-
       }
 	}
 

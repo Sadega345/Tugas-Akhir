@@ -17,7 +17,7 @@ class CrudUser extends CI_Controller {
 		$id=$_POST['id'];
 		$username=$_POST['username'];
 		$password=$_POST['password'];
-		$level=$_POST['level'];
+		$level='user';
 		$data_insert=array(
 			'id'=>$id,
 			'username'=>$username,

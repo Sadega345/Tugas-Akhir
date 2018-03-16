@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Model_User extends CI_Model {
+class Model_Admin extends CI_Model {
 	
 	public function GetUser()
 	{
