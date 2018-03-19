@@ -124,7 +124,10 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
-							<table class="table table-striped table-bordered table-hover" id="sample_1">
+							<div style="overflow-x:auto;">
+								
+							
+							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 							<thead>
 								<tr>
 									 <th rowspan="2">No</th>
@@ -217,6 +220,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		
 							</tbody>
 							</table>
+							</div>
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
 									<button id="sample_editable_1_new" class="btn green">
