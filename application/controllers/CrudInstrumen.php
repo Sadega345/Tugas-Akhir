@@ -18,36 +18,22 @@ class CrudInstrumen extends CI_Controller {
     }
 
 	public function do_tambah(){
-		// $id=$_POST['id'];
-		// $instrumen=$_POST['instrumen'];
-
-		// $data_insert=array(
-		// 	'id'=>$id,
-		// 	'instrumen'=>$instrumen,
-		// 	'file'=>$file
-		// );
-		// $res=$this->model_instrumen->insert('id',$data_insert);
-		// if ($res>=1) {
-		// 	redirect('Admin/table_instrumen');
-		// }else {
-		// 	alert('Gagal Insert');
-		// }
-
+	
 		 //membuat konfigurasi
       $config = [
         'upload_path' => './assets/instrumen/',
-        'allowed_types' => 'pdf|xlsx|docx',
-        'max_size' => 100000,
+        'allowed_types' => 'xlsx|docx|pdf',
+     
       ];
       $this->load->library('upload', $config);
-      if (!$this->upload->do_upload()) //jika gagal upload
+      if (!$this->upload->do_upload('file')) //jika gagal upload
       {
           $error = array('error' => $this->upload->display_errors()); //tampilkan error
-          $this->load->view('Admin/table_instrumen', $error);
+          redirect('Admin/table_instrumen', $error);
       } else
       //jika berhasil upload
       {
-          $file = $this->upload->data();
+      	  $file = $this->upload->data();
           //mengambil data di form
           $data = ['file' => $file['file_name'],
            'id' => set_value('id'),

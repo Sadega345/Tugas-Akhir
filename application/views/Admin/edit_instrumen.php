@@ -122,7 +122,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="row">
 										<div class="form-group">
 											<label>File</label>
-											<input type="text" class="form-control" name="file" value="<?php echo $instrumen; ?>">
+											<input type="file" class="form-control" name="file" value="<?php echo $instrumen; ?>">
 										</div>
 									</div>
 									<div class="row">

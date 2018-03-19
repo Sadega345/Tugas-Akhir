@@ -1449,6 +1449,8 @@ CREATE TABLE `instrumen` (
 
 /*Data for the table `instrumen` */
 
+insert  into `instrumen`(`id`,`instrumen`,`file`) values (1,'tes3','Problem_Set_2.docx'),(3,'tes9','Absence.xlsx'),(123,'tes','LAPORAN_MINGGAN_DIVISI_PENDIDI');
+
 /*Table structure for table `pengisi_tbl` */
 
 DROP TABLE IF EXISTS `pengisi_tbl`;

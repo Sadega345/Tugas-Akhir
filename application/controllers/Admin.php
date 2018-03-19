@@ -7,6 +7,7 @@ class Admin extends CI_Controller {
 
 	public function index()
 	{
+		$this->model_squrity->getsqurity();
 		$this->load->view('index');
 	}
 

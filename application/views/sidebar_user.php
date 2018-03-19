@@ -44,8 +44,9 @@ BEGIN CONTAINER -->
 				<li class="start active open">
 					<a href="javascript:;">
 					<i class="icon-home"></i>
-					<a href="<?php echo base_url(); ?>index.php/Web">
 					<span class="title">Dashboard</span>
+					<a href="<?php echo base_url(); ?>index.php/User">
+					
 					</a>
 					<!-- <span class="selected"></span> -->
 					<!-- <span class="arrow "></span> -->
@@ -58,48 +59,271 @@ BEGIN CONTAINER -->
 							Halaman Utama</a>
 						</li>
 					</ul> -->
+				</li>
+
+				<li >
+					<a href="javascript:;">
+					<i class="icon-briefcase"></i>
+					<span class="title">Pengisian data borang</span>
+					<a href="<?php echo base_url(); ?>index.php/Web">
+				</li>
 				<!-- BEGIN ANGULARJS LINK -->
 			
 				<!-- END ANGULARJS LINK -->
 				<li>
 					<a href="javascript:;">
 					<i class="icon-briefcase"></i>
-					<span class="title">Kelola Data Borang</span>
-					<span class="arrow "></span>
-					</a>
-					<!-- <ul class="sub-menu">
-						<li>
-							<a href="<?php echo base_url(); ?>index.php/Admin/table">
-							Fakultas</a>
-						</li>
-						<li>
-							<a href="<?php echo base_url(); ?>index.php/Admin/table_prodi">
-							Program Studi </a>
-						</li>
-						<li>
-							<a href="<?php echo base_url(); ?>index.php/Admin/table_instrumen">
-							Instrumen </a>
-						</li>
-						<li>
-							<a href="<?php echo base_url(); ?>index.php/Admin/table_user">
-							User </a>
-						</li>
-					</ul> -->
-				</li>
-				<!-- <li>
-					<a href="javascript:;">
-					<i class="icon-settings"></i>
-					<span class="title">Pengaturan Admin</span>
+					<span class="title">Borang 3A</span>
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub-menu">
 						<li>
-							<a href="<?php echo base_url(); ?>/index.php/Admin">
-							<span class="badge badge-roundless badge-danger"></span>Ganti Password<br>
-							</a>
+							<a href="javascript:;">
+							<span class="title">Butir 3</span>
+							<span class="arrow "></span>
+							<ul class="sub-menu">
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a311_excel">
+								Butir 3.1.1 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a313_excel">
+								Butir 3.1.3 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a341_excel">
+								Butir 3.4.1 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a345_excel">
+								Butir 3.4.5 </a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="javascript:;">
+							<span class="title">Butir 4</span>
+							<span class="arrow "></span>
+							<ul class="sub-menu">
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a431_excel">
+								Butir 4.3.1 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a432_excel">
+								Butir 4.3.2 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a433_excel">
+								Butir 4.3.3 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a434_excel">
+								Butir 4.3.4 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a435_excel">
+								Butir 4.3.5 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a441_excel">
+								Butir 4.4.1 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a442_excel">
+								Butir 4.4.2 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a451_excel">
+								Butir 4.5.1 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a452_excel">
+								Butir 4.5.2 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a453_excel">
+								Butir 4.5.3 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a455_excel">
+								Butir 4.5.5 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a461_excel">
+								Butir 4.6.1 </a>
+								</li>
+							</ul>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+							<span class="title">Butir 5</span>
+							<span class="arrow "></span>
+							<ul class="sub-menu">
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a5121_excel">
+								Butir 5.1.2.1 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a522_excel">
+								Butir 5.2.2 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a541_excel">
+								Butir 5.4.1 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a552_excel">
+								Butir 5.5.2 </a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="javascript:;">
+							<span class="title">Butir 6</span>
+							<span class="arrow "></span>
+							<ul class="sub-menu">
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a6211_excel">
+								Butir 6.2.1.1 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a6212_excel">
+								Butir 6.2.1.2 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a622_excel">
+								Butir 6.2.2 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a623_excel">
+								Butir 6.2.3 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a631_excel">
+								Butir 6.3.1 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a641_excel">
+								Butir 6.4.1 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a652_excel">
+								Butir 6.5.2 </a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="javascript:;">
+							<span class="title">Butir 7</span>
+							<span class="arrow "></span>
+							<ul class="sub-menu">
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a711_excel">
+								Butir 7.1.1 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a712_excel">
+								Butir 7.1.2 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_a721_excel">
+								Butir 7.2.1 </a>
+								</li>
+							</ul>
 						</li>
 					</ul>
-				</li> -->
+				</li>
+
+				<li>
+					<a href="javascript:;">
+					<i class="icon-briefcase"></i>
+					<span class="title">Borang 3B</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="javascript:;">
+							<span class="title">Butir 3</span>
+							<span class="arrow "></span>
+							<ul class="sub-menu">
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_b312_excel">
+								Butir 3.1.2 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_b321_excel">
+								Butir 3.2.1 </a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="javascript:;">
+							<span class="title">Butir 4</span>
+							<span class="arrow "></span>
+							<ul class="sub-menu">
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_b411_excel">
+								Butir 4.1.1 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_b412_excel">
+								Butir 4.1.2 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_b42_excel">
+								Butir 4,2 </a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="javascript:;">
+							<span class="title">Butir 6</span>
+							<span class="arrow "></span>
+							<ul class="sub-menu">
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_b6111_excel">
+								Butir 6.1.1.1 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_b6112_excel">
+								Butir 6.1.1.2 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_b6113_excel">
+								Butir 6.1.1.3 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_b642_excel">
+								Butir 6.4.2 </a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="javascript:;">
+							<span class="title">Butir 7</span>
+							<span class="arrow "></span>
+							<ul class="sub-menu">
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_b711_excel">
+								Butir 7.1.1 </a>
+								</li>
+								<li>
+									<a href="<?php echo base_url(); ?>index.php/Apd_b721_excel">
+								Butir 7.2.1</a>
+								</li>
+							</ul>
+						</li>
+
+					</ul>
+				</li>
 			</ul>
 			<!-- END SIDEBAR MENU -->
 		</div>

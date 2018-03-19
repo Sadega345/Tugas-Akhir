@@ -16,5 +16,5 @@ class User extends CI_Controller {
 		$this->session->sess_userdata();
 		redirect('login');
 	}
-	
+
 }

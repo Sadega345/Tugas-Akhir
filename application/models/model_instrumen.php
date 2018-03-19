@@ -15,7 +15,7 @@ class Model_Instrumen extends CI_Model {
 
 	public function input($data){
 	    try{
-	      $this->db->insert('CrudInstrumen', $data);
+	      $this->db->insert('instrumen', $data);
 	      return true;
 	    }catch(Exception $e){
 	    }

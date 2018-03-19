@@ -1,0 +1,20 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Pengisi_model extends CI_Model {
+
+public function __construct()
+ {
+ parent::__construct();
+ $this->load->database();
+ }
+
+// Listing
+ public function listing() {
+ $this->db->select('*');
+ $this->db->from('pengisi_tbl');
+ $query = $this->db->get();
+ return $query->result();
+ }
+
+}
