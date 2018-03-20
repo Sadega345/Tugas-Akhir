@@ -222,23 +222,23 @@ License: You must have a valid license purchased only from themeforest(the above
 							</table>
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+								<a href="#">
 									<button id="sample_editable_1_new" class="btn green">
-											Ubah 
+										Ubah 
 									</button>
 								</a>
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+								<a href="#">
 									<button id="sample_editable_1_new" class="btn green">
-											Hapus 
+										Hapus 
 									</button>
 								</a>
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+								<a href="<?php echo base_url()."index.php/Apd_a431_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn green">
-											Export ke Excel 
+										Export ke Excel 
 									</button>
 								</a>
 							</div>
