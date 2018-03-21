@@ -1,4 +1,3 @@
-<title>Pembangunan Aplikasi Pelaporan Data Kuantitatif Borang Akreditasi</title>
 <?php
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 //defined('BASEPATH') OR exit('No direct script access allowed');
@@ -35,12 +34,12 @@ class Login extends CI_Controller {
 	}	
 
 	public function user(){
-		$this->load->view('users');
+		$this->load->view('user');
 	}
 
 	public function logout(){
 		$this->session->sess_destroy();
-		redirect('Login','refresh');
+		redirect('Login');
 	}
 
 	// public function getlogin()

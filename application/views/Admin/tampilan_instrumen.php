@@ -61,12 +61,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <body class="page-header-fixed page-quick-sidebar-over-content">
 	<!-- BEGIN HEADER -->
 		<?php 
-			$this->load->view('header.php');
+			$this->load->view('Admin/header.php');
 		?>
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('sidebar.php');
+			$this->load->view('Admin/sidebar.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 

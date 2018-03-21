@@ -18,7 +18,7 @@ public function index() {
 public function export_excel(){
  $data = array( 'title' => 'TABEL DATA BUTIR 7.1.1 : PENELITIAN',
  'b711' => $this->apd_b711_model->listing());
- $this->load->view('User/Butir6B/tampilan_borang7.1.1_excel.php',$data);
+ $this->load->view('User/Butir7B/tampilan_borang7.1.1_excel.php',$data);
  }
 
 }

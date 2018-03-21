@@ -3,9 +3,8 @@
 	<div class="page-header-inner">
 		<!-- BEGIN LOGO -->
 		<div class="page-logo">
-			<a href="index_2.html">
 			<img src="<?php echo base_url()."assets/";?>admin/layout/img/logo.png" alt="logo" class="logo-default"/>
-			</a>
+			</a> 
 			<div class="menu-toggler sidebar-toggler hide">
 				<!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
 			</div>
@@ -24,7 +23,7 @@
 					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 					<img alt="" class="img-circle" src="<?php echo base_url()."assets/";?>admin/layout/img/avatar3_small.jpg"/>
 					<span class="username username-hide-on-mobile">
-					Teguh </span>
+					Admin </span>
 					<i class="fa fa-angle-down"></i>
 					</a>
 					<ul class="dropdown-menu dropdown-menu-default">

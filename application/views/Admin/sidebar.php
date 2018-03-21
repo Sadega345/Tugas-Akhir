@@ -15,6 +15,8 @@ BEGIN CONTAINER -->
 			<ul class="page-sidebar-menu page-sidebar-menu-light" data-keep-expanded="true" data-auto-scroll="true" data-slide-speed="200">
 				<!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
 				<li class="sidebar-toggler-wrapper">
+				<a href="javascript"></a>
+				<center><img src="<?php echo base_url()."assets/";?>admin/layout/img/universitas nasional pasim.png" alt="logo" width="80" height="80"/></center>
 					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
 					<div class="sidebar-toggler">
 					</div>
@@ -41,15 +43,16 @@ BEGIN CONTAINER -->
 				<!-- <li>
 					<i class=""></i>
 				</li> -->
-				<li class="start active open">
+				
+				<li>
 					<a href="javascript:;">
+					<a href="<?php echo base_url(); ?>index.php/Admin">
 					<i class="icon-home"></i>
-					<a href="<?php echo base_url(); ?>index.php/Web">
 					<span class="title">Dashboard</span>
 					</a>
-					<span class="selected"></span>
-					<span class="arrow "></span>
-					<span class="arrow open"></span>
+						<!-- <span class="selected"></span>
+						<span class="arrow "></span>
+						<span class="arrow open"></span> -->
 					</a>
 					<!-- <ul class="sub-menu">
 						<li class="active">
@@ -58,6 +61,7 @@ BEGIN CONTAINER -->
 							Halaman Utama</a>
 						</li>
 					</ul> -->
+				</li>
 				<!-- BEGIN ANGULARJS LINK -->
 			
 				<!-- END ANGULARJS LINK -->
@@ -94,7 +98,7 @@ BEGIN CONTAINER -->
 					</a>
 					<ul class="sub-menu">
 						<li>
-							<a href="<?php echo base_url(); ?>/index.php/Admin">
+							<a href="<?php echo base_url(); ?>/index.php/Admin/table_admin">
 							<span class="badge badge-roundless badge-danger"></span>Ganti Password<br>
 							</a>
 						</li>

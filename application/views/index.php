@@ -62,13 +62,13 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!-- BEGIN HEADER -->
 		<?php 
 			// $this->session->userdata('level').'/header.php' ; 
-			$this->load->view('header.php');
+			$this->load->view('Admin/header.php');
 		?>
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
 			// $this->session->userdata('level').'/sidebar.php' ; 
-			$this->load->view('sidebar.php');
+			$this->load->view('Admin/sidebar.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 

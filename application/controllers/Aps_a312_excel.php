@@ -12,13 +12,13 @@ class Aps_a312_excel extends CI_Controller {
 public function index() {
  $data = array( 'title' => ' TABEL DATA BUTIR 3.1 : PROFIL MAHASISWA DAN LULUSAN',
  'a312' => $this->aps_a312_model->listing());
- $this->load->view('vw_aps_a312',$data);
+ $this->load->view('Users/Butir3/tampilan_borang3.1.2.php',$data);
  }
 
 public function export_excel(){
  $data = array( 'title' => 'TABEL DATA BUTIR 3.1 : PROFIL MAHASISWA DAN LULUSAN',
  'a312' => $this->aps_a312_model->listing());
- $this->load->view('vw_aps_a312_excel',$data);
+ $this->load->view('Users/Butir3/tampilan_borang3.1.2_excel.php',$data);
  }
 
 }

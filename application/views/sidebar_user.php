@@ -15,6 +15,8 @@ BEGIN CONTAINER -->
 			<ul class="page-sidebar-menu page-sidebar-menu-light" data-keep-expanded="true" data-auto-scroll="true" data-slide-speed="200">
 				<!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
 				<li class="sidebar-toggler-wrapper">
+				<a href="javascript"></a>
+				<center><img src="<?php echo base_url()."assets/";?>admin/layout/img/universitas nasional pasim.png" alt="logo" width="80" height="80"/></center>
 					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
 					<div class="sidebar-toggler">
 					</div>
@@ -43,10 +45,9 @@ BEGIN CONTAINER -->
 				</li> -->
 				<li class="start active open">
 					<a href="javascript:;">
+					<a href="<?php echo base_url(); ?>index.php/User">
 					<i class="icon-home"></i>
 					<span class="title">Dashboard</span>
-					<a href="<?php echo base_url(); ?>index.php/User">
-					
 					</a>
 					<!-- <span class="selected"></span> -->
 					<!-- <span class="arrow "></span> -->
@@ -61,11 +62,30 @@ BEGIN CONTAINER -->
 					</ul> -->
 				</li>
 
+				
 				<li >
 					<a href="javascript:;">
-					<i class="icon-briefcase"></i>
-					<span class="title">Pengisian data borang</span>
-					<a href="<?php echo base_url(); ?>index.php/Web">
+						<a href="<?php echo base_url(); ?>index.php/Pengisi_excel">
+							<i class="icon-briefcase"></i>
+						<span class="title">Pengisian data borang</span>
+					</a>
+				</li>
+
+				<li >
+					<a href="javascript:;">
+						<a href="<?php echo base_url(); ?>index.php/Prodi_excel">
+						<i class="icon-briefcase"></i>
+						<span class="title">Identitas program studi</span>
+					</a>
+				</li>
+				
+
+				<li >
+					<a href="javascript:;">
+					<a href="<?php echo base_url(); ?>index.php/Data_dosen_excel">
+						<i class="icon-briefcase"></i>
+						<span class="title">Data Dosen</span>
+					</a>
 				</li>
 				<!-- BEGIN ANGULARJS LINK -->
 			

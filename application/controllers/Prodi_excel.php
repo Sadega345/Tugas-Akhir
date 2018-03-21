@@ -12,13 +12,13 @@ class Prodi_excel extends CI_Controller {
 public function index() {
  $data = array( 'title' => 'Data Prodi',
  'prodi' => $this->prodi_model->listing());
- $this->load->view('vw_prodi',$data);
+ $this->load->view('User/PengisiProdi/tampilan_pengisiprodi.php',$data);
  }
 
 public function export_excel(){
  $data = array( 'title' => 'Laporan Data Prodi',
  'prodi' => $this->prodi_model->listing());
- $this->load->view('vw_prodi_excel',$data);
+ $this->load->view('User/PengisiProdi/tampilan_pengisiprodi_excel.php',$data);
  }
 
 }

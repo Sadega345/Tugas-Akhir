@@ -21,12 +21,17 @@ class Model_login extends CI_model {
 					$sess = array('username' => $row->username,
 					   			'password' => $row->password);
 					$this->session->set_userdata( $sess );
-					redirect('Web');
+					redirect('Admin');
 				}else if($row->level=="user"){
 					$sess = array('username' => $row->username,
 					   			'password' => $row->password);
 					$this->session->set_userdata( $sess );
 					redirect('User');
+				}else if($row->level=="users"){
+					$sess = array('username' => $row->username,
+					   			'password' => $row->password);
+					$this->session->set_userdata( $sess );
+					redirect('Users');
 				}
 				
 			}

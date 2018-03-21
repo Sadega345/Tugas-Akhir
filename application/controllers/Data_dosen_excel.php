@@ -12,13 +12,13 @@ class Data_dosen_excel extends CI_Controller {
 public function index() {
  $data = array( 'title' => 'IDENTITAS PENGISI BORANG PROGRAM STUDI',
  'dosen' => $this->data_dosen_model->listing());
- $this->load->view('vw_data_dosen',$data);
+ $this->load->view('User/DataDosen/tampilan_dosen.php',$data);
  }
 
 public function export_excel(){
  $data = array( 'title' => 'IDENTITAS PENGISI BORANG PROGRAM STUDI',
  'dosen' => $this->data_dosen_model->listing());
- $this->load->view('vw_data_dosen_excel',$data);
+ $this->load->view('User/DataDosen/tampilan_dosen_excel.php',$data);
  }
 
 }

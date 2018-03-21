@@ -46,10 +46,9 @@ BEGIN CONTAINER -->
 				
 				<li>
 					<a href="javascript:;">
+					<a href="<?php echo base_url(); ?>index.php/Admin">
 					<i class="icon-home"></i>
 					<span class="title">Dashboard</span>
-					<a href="<?php echo base_url(); ?>index.php/Web">
-					
 					</a>
 						<!-- <span class="selected"></span>
 						<span class="arrow "></span>

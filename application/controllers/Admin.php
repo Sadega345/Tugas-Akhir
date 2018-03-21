@@ -50,6 +50,11 @@ class Admin extends CI_Controller {
 		$this->load->view('Admin/tampilan_user.php');
 	}
 
+	public function logout()
+	{
+		$this->session->sess_userdata();
+		redirect('login');
+	}
 	// function tampilan_admin()
 	// 	$this->load->view('Admin/tampilan_admin.php');
 	// }

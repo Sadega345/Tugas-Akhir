@@ -18,7 +18,8 @@ public function index() {
 public function export_excel(){
  $data = array( 'title' => ' TABEL DATA BUTIR 4.3.5 : AKTIVITAS MENGAJAR DOSEN TETAP YANG BIDANG KEAHLIANNYA DI LUAR PS',
  'a435' => $this->apd_a435_model->listing());
- $this->load->view('User/Butir4/tampilan_borang4.3.5.php',$data);
+ // echo "Masuk";
+ $this->load->view('User/Butir4/tampilan_borang4.3.5_excel.php',$data);
  }
 
 }
