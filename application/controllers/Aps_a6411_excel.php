@@ -10,15 +10,15 @@ class Aps_a6411_excel extends CI_Controller {
  }
 
 public function index() {
- $data = array( 'title' => 'TABEL DATA BUTIR 6.4.1 : Pustaka ',
+ $data = array( 'title' => 'TABEL DATA BUTIR 6.4.1.1 : Pustaka ',
  'a6411' => $this->aps_a6411_model->listing());
- $this->load->view('vw_aps_a6411',$data);
+ $this->load->view('Users/Butir6/tampilan_borang6.4.1.1.php',$data);
  }
 
 public function export_excel(){
- $data = array( 'title' => 'TABEL DATA BUTIR 6.4.1 : Pustaka ',
+ $data = array( 'title' => 'TABEL DATA BUTIR 6.4.1.1 : Pustaka ',
  'a6411' => $this->aps_a6411_model->listing());
- $this->load->view('vw_aps_a6411_excel',$data);
+ $this->load->view('Users/Butir6/tampilan_borang6.4.1.1_excel.php',$data);
  }
 
 }

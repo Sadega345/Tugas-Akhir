@@ -65,7 +65,7 @@ BEGIN CONTAINER -->
 				
 				<li >
 					<a href="javascript:;">
-						<a href="<?php echo base_url(); ?>index.php/Pengisi_excel">
+						<a href="<?php echo base_url(); ?>index.php/Pengisis_excel">
 							<i class="icon-briefcase"></i>
 						<span class="title">Pengisian data borang</span>
 					</a>
@@ -73,7 +73,7 @@ BEGIN CONTAINER -->
 
 				<li >
 					<a href="javascript:;">
-						<a href="<?php echo base_url(); ?>index.php/Prodi_excel">
+						<a href="<?php echo base_url(); ?>index.php/Prodis_excel">
 						<i class="icon-briefcase"></i>
 						<span class="title">Identitas program studi</span>
 					</a>
@@ -82,7 +82,7 @@ BEGIN CONTAINER -->
 
 				<li >
 					<a href="javascript:;">
-					<a href="<?php echo base_url(); ?>index.php/Data_dosen_excel">
+					<a href="<?php echo base_url(); ?>index.php/Data_dosens_excel">
 						<i class="icon-briefcase"></i>
 						<span class="title">Data Dosen</span>
 					</a>
@@ -127,39 +127,39 @@ BEGIN CONTAINER -->
 							<span class="arrow "></span>
 							<ul class="sub-menu">
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a431_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a431_excel">
 								Butir 4.3.1 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a432_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a432_excel">
 								Butir 4.3.2 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a433_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a433_excel">
 								Butir 4.3.3 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a434_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a434_excel">
 								Butir 4.3.4 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a435_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a435_excel">
 								Butir 4.3.5 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a441_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a441_excel">
 								Butir 4.4.1 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a442_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a442_excel">
 								Butir 4.4.2 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a451_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a451_excel">
 								Butir 4.5.1 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a452_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a452_excel">
 								Butir 4.5.2 </a>
 								</li>
 								<li>
@@ -167,15 +167,15 @@ BEGIN CONTAINER -->
 								Butir 4.5.3 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a453_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a454_excel">
 								Butir 4.5.4 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a455_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a455_excel">
 								Butir 4.5.5 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a461_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a461_excel">
 								Butir 4.6.1 </a>
 								</li>
 							</ul>
@@ -187,31 +187,27 @@ BEGIN CONTAINER -->
 							<span class="arrow "></span>
 							<ul class="sub-menu">
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a5121_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a5121_excel">
 								Butir 5.1.2.1 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a5121_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a5122_excel">
 								Butir 5.1.2.2 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a5121_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a513_excel">
 								Butir 5.1.3 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a522_excel">
-								Butir 5.2.2 </a>
-								</li>
-								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a541_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a541_excel">
 								Butir 5.4.1 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a541_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a551_excel">
 								Butir 5.5.1 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a552_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a552_excel">
 								Butir 5.5.2 </a>
 								</li>
 							</ul>
@@ -223,35 +219,35 @@ BEGIN CONTAINER -->
 							<span class="arrow "></span>
 							<ul class="sub-menu">
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a6211_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a6211_excel">
 								Butir 6.2.1.1 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a6212_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a6212_excel">
 								Butir 6.2.1.2 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a622_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a622_excel">
 								Butir 6.2.2 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a623_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a623_excel">
 								Butir 6.2.3 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a631_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a631_excel">
 								Butir 6.3.1 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a641_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a6411_excel">
 								Butir 6.4.1.1 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a641_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a6412_excel">
 								Butir 6.4.1.2 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a652_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a652_excel">
 								Butir 6.5.2 </a>
 								</li>
 							</ul>
@@ -263,19 +259,19 @@ BEGIN CONTAINER -->
 							<span class="arrow "></span>
 							<ul class="sub-menu">
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a711_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a711_excel">
 								Butir 7.1.1 &  Butir 7.1.2 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a712_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a713_excel">
 								Butir 7.1.3 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a712_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a714_excel">
 								Butir 7.1.4 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_a721_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_a721_excel">
 								Butir 7.2.1 </a>
 								</li>
 							</ul>
@@ -296,11 +292,11 @@ BEGIN CONTAINER -->
 							<span class="arrow "></span>
 							<ul class="sub-menu">
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_b312_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_b312_excel">
 								Butir 3.1.2 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_b321_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_b321_excel">
 								Butir 3.2.1 </a>
 								</li>
 							</ul>
@@ -312,15 +308,15 @@ BEGIN CONTAINER -->
 							<span class="arrow "></span>
 							<ul class="sub-menu">
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_b411_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_b411_excel">
 								Butir 4.1.1 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_b412_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_b412_excel">
 								Butir 4.1.2 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_b42_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_b42_excel">
 								Butir 4,2 </a>
 								</li>
 							</ul>
@@ -332,15 +328,15 @@ BEGIN CONTAINER -->
 							<span class="arrow "></span>
 							<ul class="sub-menu">
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_b6111_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_b6111_excel">
 								Butir 6.1.1.1 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_b6112_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_b6112_excel">
 								Butir 6.1.1.2 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_b6113_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_b6113_excel">
 								Butir 6.1.1.3 </a>
 								</li>
 								<li>
@@ -356,11 +352,11 @@ BEGIN CONTAINER -->
 							<span class="arrow "></span>
 							<ul class="sub-menu">
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_b711_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_b711_excel">
 								Butir 7.1.1 </a>
 								</li>
 								<li>
-									<a href="<?php echo base_url(); ?>index.php/Apd_b721_excel">
+									<a href="<?php echo base_url(); ?>index.php/Aps_b721_excel">
 								Butir 7.2.1</a>
 								</li>
 							</ul>

@@ -66,7 +66,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('User/sidebar_user.php');
+			$this->load->view('Users/sidebar_users.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 
@@ -81,7 +81,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Butir 7.1.1 : PENELITIAN DOSEN TETAP
+								<i class="fa fa-edit"></i>Butir 7.1.1 DAN 7.1.2 : PENELITIAN DOSEN TETAP
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -124,6 +124,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<p>7.1.1</p>
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -170,14 +171,14 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td></td>
 							 </tr>
 							 <tr>
-							 	<td>Kemristekdikti</td>
+							 	<td>Depdiknas</td>
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
 							 </tr>
 							  <tr>
-							 	<td>Institusi dalam negeri di luar Kemristekdikti</td>
+							 	<td>Institusi dalam negeri di luar Depdiknas</td>
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
@@ -190,34 +191,35 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td></td>
 							 	<td></td>
 							 </tr>
-							 <tr>
-							 	<td>Jumlah</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr>
-		
 							</tbody>
 							</table>
+							<p>7.1.2</p>
+								<p>Adakah mahasiswa tugas akhir yang dilibatkan dalam penelitian dosen dalam tiga tahun terakhir?<input type="text" name="">
+								</p>
+								<p>Jika ada, banyaknya mahasiswa PS yang ikut serta dalam penelitian dosen adalah 
+									<input type="text" name="">
+									orang, dari
+									<input type="text" name="">
+									mahasiswa yang melakukan tugas akhir melalui skripsi.
+								</p>
 							<div class="btn-group">
 								<a href="#">
 									<button id="sample_editable_1_new" class="btn green">
-											Ubah 
+										Ubah 
 									</button>
 								</a>
 							</div>
 							<div class="btn-group">
 								<a href="#">
 									<button id="sample_editable_1_new" class="btn green">
-											Hapus 
+										Hapus 
 									</button>
 								</a>
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a711_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Aps_a711_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn green">
-											Export ke Excel 
+										Export ke Excel 
 									</button>
 								</a>
 							</div>

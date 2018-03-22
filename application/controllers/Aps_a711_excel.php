@@ -12,13 +12,13 @@ class Aps_a711_excel extends CI_Controller {
 public function index() {
  $data = array( 'title' => 'TABEL DATA BUTIR 7.1.1 DAN 7.1.2 : PENELITIAN DOSEN TETAP',
  'a711' => $this->aps_a711_model->listing());
- $this->load->view('vw_aps_a711',$data);
+ $this->load->view('Users/Butir7/tampilan_borang7.1.1.php',$data);
  }
 
 public function export_excel(){
  $data = array( 'title' => 'TABEL DATA BUTIR 7.1.1 DAN 7.1.2 : PENELITIAN DOSEN TETAP',
  'a711' => $this->aps_a711_model->listing());
- $this->load->view('vw_aps_a711_excel',$data);
+ $this->load->view('Users/Butir7/tampilan_borang7.1.1_excel.php',$data);
  }
 
 }

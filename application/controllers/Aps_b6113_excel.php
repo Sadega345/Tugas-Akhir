@@ -12,13 +12,13 @@ class Aps_b6113_excel extends CI_Controller {
 public function index() {
  $data = array( 'title' => 'TABEL DATA BUTIR 6.1.1.3 : PENGGUNAAN DANA UNTUK TRIDARMA',
  'b6113' => $this->aps_b6113_model->listing());
- $this->load->view('vw_aps_b6113',$data);
+ $this->load->view('Users/Butir6B/tampilan_borang6.1.1.3.php',$data);
  }
 
 public function export_excel(){
  $data = array( 'title' => 'TABEL DATA BUTIR 6.1.1.3 : PENGGUNAAN DANA UNTUK TRIDARMA',
  'b6113' => $this->aps_b6113_model->listing());
- $this->load->view('vw_aps_b6113_excel',$data);
+ $this->load->view('Users/Butir6B/tampilan_borang6.1.1.3_excel.php',$data);
  }
 
 }

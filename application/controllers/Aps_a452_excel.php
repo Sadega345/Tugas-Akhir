@@ -12,13 +12,13 @@ class Aps_a452_excel extends CI_Controller {
 public function index() {
  $data = array( 'title' => ' TABEL DATA BUTIR 4.5.2 : PENINGKATAN KEMAMPUAN DOSEN TETAP MELALUI TUGAS BELAJAR',
  'a452' => $this->aps_a452_model->listing());
- $this->load->view('vw_aps_a452',$data);
+ $this->load->view('Users/Butir4/tampilan_borang4.5.2.php',$data);
  }
 
 public function export_excel(){
  $data = array( 'title' => ' TABEL DATA BUTIR 4.5.2 : PENINGKATAN KEMAMPUAN DOSEN TETAP MELALUI TUGAS BELAJAR',
  'a452' => $this->aps_a452_model->listing());
- $this->load->view('vw_aps_a452_excel',$data);
+ $this->load->view('Users/Butir4/tampilan_borang4.5.2_excel.php',$data);
  }
 
 }

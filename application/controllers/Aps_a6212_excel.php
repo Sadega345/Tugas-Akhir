@@ -10,15 +10,15 @@ class Aps_a6212_excel extends CI_Controller {
  }
 
 public function index() {
- $data = array( 'title' => 'TABEL DATA BUTIR 6.2.1 : PEROLEHAN DAN ALOKASI DANA',
+ $data = array( 'title' => 'TABEL DATA BUTIR 6.2.1.2 : PENGGUNAAN DANA',
  'a6212' => $this->aps_a6212_model->listing());
- $this->load->view('vw_aps_a6212',$data);
+ $this->load->view('Users/Butir6/tampilan_borang6.2.1.2.php',$data);
  }
 
 public function export_excel(){
- $data = array( 'title' => 'TABEL DATA BUTIR 6.2.1 : PEROLEHAN DAN ALOKASI DANA',
+ $data = array( 'title' => 'TABEL DATA BUTIR 6.2.1.2 : PENGGUNAAN DANA',
  'a6212' => $this->aps_a6212_model->listing());
- $this->load->view('vw_aps_a6212_excel',$data);
+ $this->load->view('Users/Butir6/tampilan_borang6.2.1.2_excel.php',$data);
  }
 
 }

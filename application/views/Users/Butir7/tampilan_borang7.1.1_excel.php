@@ -9,7 +9,7 @@ header("Pragma: no-cache");
 header("Expires: 0");
 
 ?>
-<p> TABEL DATA BUTIR 7.1.1 : PENELITIAN DOSEN TETAP</p>
+<p> TABEL DATA BUTIR 7.1.1 DAN 7.1.2 : PENELITIAN DOSEN TETAP</p>
 <table border="1" width="50%">
 		<thead>
 			 <tr>
@@ -36,14 +36,14 @@ header("Expires: 0");
 			 	<td></td>
 			 </tr>
 			 <tr>
-			 	<td>Kemristekdikti</td>
+			 	<td>Depdiknas</td>
 			 	<td></td>
 			 	<td></td>
 			 	<td></td>
 			 	<td></td>
 			 </tr>
 			  <tr>
-			 	<td>Institusi dalam negeri di luar Kemristekdikti</td>
+			 	<td>Institusi dalam negeri di luar Depdiknas</td>
 			 	<td></td>
 			 	<td></td>
 			 	<td></td>
@@ -56,13 +56,27 @@ header("Expires: 0");
 			 	<td></td>
 			 	<td></td>
 			 </tr>
-			 <tr>
-			 	<td>Jumlah</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
 		</tbody>
 	</table>
-
+	<p>7.1.2</p>
+	<p>Adakah mahasiswa tugas akhir yang dilibatkan dalam penelitian dosen dalam tiga tahun terakhir?
+		<table>
+			<tr>
+				<td> </td>
+			</tr>
+		</table>
+	</p>
+	<p>Jika ada, banyaknya mahasiswa PS yang ikut serta dalam penelitian dosen adalah 
+		<table>
+			<tr>
+				<td> </td>
+			</tr>
+		</table>
+		orang, dari
+		<table>
+			<tr>
+				<td></td>
+			</tr>
+		</table>
+		mahasiswa yang melakukan tugas akhir melalui skripsi.
+	</p>

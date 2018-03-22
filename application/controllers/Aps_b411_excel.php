@@ -12,13 +12,13 @@ class Aps_b411_excel extends CI_Controller {
 public function index() {
  $data = array( 'title' => ' TABEL DATA BUTIR 4.1.1 : SUMBER DAYA MANUSIA',
  'b411' => $this->aps_b411_model->listing());
- $this->load->view('vw_aps_b411',$data);
+ $this->load->view('Users/Butir4B/tampilan_borang4.1.1.php',$data);
  }
 
 public function export_excel(){
  $data = array( 'title' => 'TABEL DATA BUTIR 4.1.1 : SUMBER DAYA MANUSIA',
  'b411' => $this->aps_b411_model->listing());
- $this->load->view('vw_aps_b411_excel',$data);
+ $this->load->view('Users/Butir4B/tampilan_borang4.1.1_excel.php',$data);
  }
 
 }

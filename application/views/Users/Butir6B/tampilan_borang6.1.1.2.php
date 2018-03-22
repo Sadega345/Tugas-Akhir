@@ -66,7 +66,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('User/sidebar_user.php');
+			$this->load->view('Users/sidebar_users.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 
@@ -246,7 +246,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</a>
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_b6112_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Aps_b6112_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn green">
 											Export ke Excel 
 									</button>

@@ -12,13 +12,13 @@ class Aps_b6111_excel extends CI_Controller {
 public function index() {
  $data = array( 'title' => 'TABEL DATA BUTIR 6.1.1.1 : PEMBIAYAAN',
  'b6111' => $this->aps_b6111_model->listing());
- $this->load->view('vw_aps_b6111',$data);
+ $this->load->view('Users/Butir6B/tampilan_borang6.1.1.php',$data);
  }
 
 public function export_excel(){
  $data = array( 'title' => 'TABEL DATA BUTIR 6.1.1.1 : PEMBIAYAAN',
  'b6111' => $this->aps_b6111_model->listing());
- $this->load->view('vw_aps_b6111_excel',$data);
+ $this->load->view('Users/Butir6B/tampilan_borang6.1.1_excel.php',$data);
  }
 
 }

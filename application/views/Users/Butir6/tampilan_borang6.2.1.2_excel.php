@@ -9,7 +9,7 @@ header("Pragma: no-cache");
 header("Expires: 0");
 
 ?>
-<p>TABEL DATA BUTIR 6.2.1 : PEROLEHAN DAN ALOKASI DANA</p>
+<p>TABEL DATA BUTIR 6.2.1.2 : PENGGUNAAN DANA</p>
 <table border="1" width="50%">
 		<thead>
 			 <tr>

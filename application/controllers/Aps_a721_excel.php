@@ -12,13 +12,13 @@ class Aps_a721_excel extends CI_Controller {
 public function index() {
  $data = array( 'title' => 'TABEL DATA BUTIR 7.2.1 : KEGIATAN PELAYANAN/PENGABDIAN KEPADA MASYARAKAT (PKM)',
  'a721' => $this->aps_a721_model->listing());
- $this->load->view('vw_aps_a721',$data);
+ $this->load->view('Users/Butir7/tampilan_borang7.2.1.php',$data);
  }
 
 public function export_excel(){
  $data = array( 'title' => 'TABEL DATA BUTIR 7.2.1 : KEGIATAN PELAYANAN/PENGABDIAN KEPADA MASYARAKAT (PKM)',
  'a721' => $this->aps_a721_model->listing());
- $this->load->view('vw_aps_a721_excel',$data);
+ $this->load->view('Users/Butir7/tampilan_borang7.2.1_excel.php',$data);
  }
 
 }

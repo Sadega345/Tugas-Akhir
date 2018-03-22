@@ -12,13 +12,13 @@ class Aps_a5121_excel extends CI_Controller {
 public function index() {
  $data = array( 'title' => ' TABEL DATA BUTIR 5.1.2.1 : JUMLAH SKS PS (minimum untuk kelulusan)',
  'a5121' => $this->aps_a5121_model->listing());
- $this->load->view('vw_aps_a5121',$data);
+ $this->load->view('Users/Butir5/tampilan_borang5.1.2.1.php',$data);
  }
 
 public function export_excel(){
  $data = array( 'title' => ' TABEL DATA BUTIR 5.1.2.1 : JUMLAH SKS PS (minimum untuk kelulusan)',
  'a5121' => $this->aps_a5121_model->listing());
- $this->load->view('vw_aps_a5121_excel',$data);
+ $this->load->view('Users/Butir5/tampilan_borang5.1.2.1_excel.php',$data);
  }
 
 }

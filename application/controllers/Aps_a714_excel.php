@@ -12,13 +12,13 @@ class Aps_a714_excel extends CI_Controller {
 public function index() {
  $data = array( 'title' => 'TABEL DATA BUTIR 7.1.4 : HAK ATAS KEKAYAAN INTELEKTUAL  ',
  'a714' => $this->aps_a714_model->listing());
- $this->load->view('vw_aps_a714',$data);
+ $this->load->view('Users/Butir7/tampilan_borang7.1.4.php',$data);
  }
 
 public function export_excel(){
  $data = array( 'title' => 'TABEL DATA BUTIR 7.1.4 : HAK ATAS KEKAYAAN INTELEKTUAL  ',
  'a714' => $this->aps_a714_model->listing());
- $this->load->view('vw_aps_a714_excel',$data);
+ $this->load->view('Users/Butir7/tampilan_borang7.1.4_excel.php',$data);
  }
 
 }

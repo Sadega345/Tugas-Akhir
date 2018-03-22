@@ -12,13 +12,13 @@ class Aps_a451_excel extends CI_Controller {
 public function index() {
  $data = array( 'title' => ' TABEL DATA BUTIR 4.5.1 : KEGIATAN TENAGA AHLI/PAKAR (TIDAK TERMASUK DOSEN TETAP)',
  'a451' => $this->aps_a451_model->listing());
- $this->load->view('vw_aps_a451',$data);
+ $this->load->view('Users/Butir4/tampilan_borang4.5.1.php',$data);
  }
 
 public function export_excel(){
  $data = array( 'title' => ' TABEL DATA BUTIR 4.5.1 : KEGIATAN TENAGA AHLI/PAKAR (TIDAK TERMASUK DOSEN TETAP)',
  'a451' => $this->aps_a451_model->listing());
- $this->load->view('vw_aps_a451_excel',$data);
+ $this->load->view('Users/Butir4/tampilan_borang4.5.1_excel.php',$data);
  }
 
 }
