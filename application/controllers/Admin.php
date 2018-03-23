@@ -1,4 +1,3 @@
-<title>Pembangunan Aplikasi Pelaporan Data Kuantitatif Borang Akreditasi</title>
 <?php
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 //defined('BASEPATH') OR exit('No direct script access allowed');
@@ -30,6 +29,10 @@ class Admin extends CI_Controller {
 
 	function table_admin(){
 		redirect('CrudUser');
+	}
+
+	function ganti_pwd(){
+		redirect('EdeUser');
 	}
 
 	function tampilan()

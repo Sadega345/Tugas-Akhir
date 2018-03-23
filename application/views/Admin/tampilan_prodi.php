@@ -160,7 +160,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <?php echo $d['kode_prodi']; ?>
 								</td>
 								<td>
-									<?php echo $d['nama_prodi']; ?>
+									<?php echo $d['prodi']; ?>
 								</td>
 								<td class="center">
 									<a href="<?php echo base_url()."index.php/CrudProdi/edit_data/".$d['kode_prodi'];?>">Edit</a> ||

@@ -98,7 +98,7 @@ BEGIN CONTAINER -->
 					</a>
 					<ul class="sub-menu">
 						<li>
-							<a href="<?php echo base_url(); ?>/index.php/Admin/table_admin">
+							<a href="<?php echo base_url(); ?>/index.php/Admin/ganti_pwd">
 							<span class="badge badge-roundless badge-danger"></span>Ganti Password<br>
 							</a>
 						</li>

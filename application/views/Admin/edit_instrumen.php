@@ -127,7 +127,11 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 									<div class="row">
 										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+										<form action="<?php echo base_url()."index.php/CrudInstrumen"; ?>" method="POST">
+											<button type="submit" class="btn btn-danger" name="simpan">Cancel</button>
+										</form>	
 									</div>
+									</form>
 								</div>
 							</div>
 							</form>

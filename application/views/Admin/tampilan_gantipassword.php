@@ -81,7 +81,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Data Instrumen
+								<i class="fa fa-edit"></i>Data User
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -97,15 +97,6 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="portlet-body">
 							<div class="table-toolbar">
 								<div class="row">
-									<div class="col-md-6">
-										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudInstrumen/tambah";?>">
-											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
-											</button>
-											</a>
-										</div>
-									</div>
 									<!-- <div class="col-md-6">
 										<div class="btn-group pull-right">
 											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
@@ -128,16 +119,19 @@ License: You must have a valid license purchased only from themeforest(the above
 							<thead>
 							<tr>
 								<th>
-									 No
+									No
 								</th>
 								<th>
-									Id
+									 Id
 								</th>
 								<th>
-									 Nama Instrumen
+									 Username
 								</th>
 								<th>
-									File
+									 Password
+								</th>
+								<th>
+									 Level
 								</th>
 								<th>
 									 Aksi
@@ -157,14 +151,17 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <?php echo $d['id']; ?>
 								</td>
 								<td>
-									<?php echo $d['instrumen']; ?>
+									<?php echo $d['username']; ?>
 								</td>
 								<td>
-									<?php echo $d['file']; ?>
+									<?php echo $d['password']; ?>
+								</td>
+								<td>
+									<?php echo $d['level']; ?>
 								</td>
 								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudInstrumen/do_edit/".$d['id'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudInstrumen/do_hapus/".$d['id'];?>">Delete</a>
+									<a href="<?php echo base_url()."index.php/EdeUser/edit_data/".$d['id'];?>">Edit</a> ||
+         							<a href="<?php echo base_url()."index.php/EdeUser/do_hapus/".$d['id'];?>">Delete</a>
 								</td>
 							</tr>
 							<?php } ?>

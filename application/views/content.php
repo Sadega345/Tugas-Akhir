@@ -1,4 +1,4 @@
-<!-- BEGIN PAGE HEADER-->
+
 			<h3 class="page-title">
 			Dashboard <small>Home</small>
 			</h3>
@@ -21,7 +21,8 @@
 			</div>
 			<!-- END PAGE HEADER-->
 			<!-- BEGIN DASHBOARD STATS -->
-			<div class="row">
+			<h1>Selamat datang di aplikasi borang akreditasi </h1>
+			<!-- <div class="row">
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 					<div class="dashboard-stat blue-madison">
 						<div class="visual">
@@ -94,14 +95,14 @@
 						</a>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<!-- END DASHBOARD STATS -->
-			<div class="clearfix">
+			<!-- <div class="clearfix">
 			</div>
 			<div class="row">
-				<div class="col-md-6 col-sm-6">
+				<div class="col-md-6 col-sm-6"> -->
 					<!-- BEGIN PORTLET-->
-					<div class="portlet light bg-inverse">
+					<!-- <div class="portlet light bg-inverse">
 						<div class="portlet-title">
 							<div class="caption">
 								<i class="icon-bar-chart font-green-sharp"></i>
@@ -126,12 +127,12 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<!-- END PORTLET-->
-				</div>
-				<div class="col-md-6 col-sm-6">
+				<!-- </div> -->
+				<!-- <div class="col-md-6 col-sm-6"> -->
 					<!-- BEGIN PORTLET-->
-					<div class="portlet light bg-inverse">
+					<!-- <div class="portlet light bg-inverse">
 						<div class="portlet-title">
 							<div class="caption">
 								<i class="icon-share font-red-sunglo"></i>
@@ -206,11 +207,11 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<!-- END PORTLET-->
-				</div>
-			</div>
-			<div class="clearfix">
+				<!-- </div>
+			</div> -->
+			<!-- <div class="clearfix">
 			</div>
 			<div class="row">
 				<div class="col-md-6 col-sm-6">
@@ -558,8 +559,8 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-6 col-sm-6">
+				</div> -->
+				<!-- <div class="col-md-6 col-sm-6">
 					<div class="portlet light bordered tasks-widget">
 						<div class="portlet-title">
 							<div class="caption">
@@ -614,12 +615,12 @@
 									</ul>
 								</div>
 							</div>
-						</div>
-						<div class="portlet-body">
+						</div> -->
+						<!-- <div class="portlet-body">
 							<div class="task-content">
-								<div class="scroller" style="height: 305px;" data-always-visible="1" data-rail-visible1="1">
+								<div class="scroller" style="height: 305px;" data-always-visible="1" data-rail-visible1="1"> -->
 									<!-- START TASK LIST -->
-									<ul class="task-list">
+									<!-- <ul class="task-list">
 										<li>
 											<div class="task-checkbox">
 												<input type="checkbox" class="liChild" value=""/>
@@ -911,9 +912,9 @@
 												</div>
 											</div>
 										</li>
-									</ul>
+									</ul> -->
 									<!-- END START TASK LIST -->
-								</div>
+								<!-- </div>
 							</div>
 							<div class="task-footer">
 								<div class="btn-arrow-link pull-right">
@@ -924,8 +925,8 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="clearfix">
+			</div> -->
+			<!-- <div class="clearfix">
 			</div>
 			<div class="row">
 				<div class="col-md-6 col-sm-6">
@@ -985,8 +986,8 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-6 col-sm-6">
+				</div> -->
+				<!-- <div class="col-md-6 col-sm-6">
 					<div class="portlet light bordered">
 						<div class="portlet-title">
 							<div class="caption">
@@ -1039,13 +1040,13 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="clearfix">
+			</div> -->
+			<!-- <div class="clearfix">
 			</div>
 			<div class="row">
 				<div class="col-md-6 col-sm-6">
 					<!-- BEGIN REGIONAL STATS PORTLET-->
-					<div class="portlet light bg-inverse">
+					<!-- <div class="portlet light bg-inverse">
 						<div class="portlet-title">
 							<div class="caption">
 								<i class="icon-share font-red-sunglo"></i>
@@ -1117,12 +1118,12 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<!-- END REGIONAL STATS PORTLET-->
-				</div>
-				<div class="col-md-6 col-sm-6">
+				<!-- /div>
+				<div class="col-md-6 col-sm-6"> -->
 					<!-- BEGIN PORTLET-->
-					<div class="portlet light bordered">
+					<!-- <div class="portlet light bordered">
 						<div class="portlet-title tabbable-line">
 							<div class="caption">
 								<i class="icon-share font-green-sharp"></i>
@@ -1142,10 +1143,10 @@
 									Recent Users </a>
 								</li>
 							</ul>
-						</div>
-						<div class="portlet-body">
+						</div> -->
+						<!-- div class="portlet-body"> -->
 							<!--BEGIN TABS-->
-							<div class="tab-content">
+							<!-- <div class="tab-content">
 								<div class="tab-pane active" id="tab_1_1">
 									<div class="scroller" style="height: 337px;" data-always-visible="1" data-rail-visible="0">
 										<ul class="feeds">
@@ -1534,8 +1535,8 @@
 											</li>
 										</ul>
 									</div>
-								</div>
-								<div class="tab-pane" id="tab_1_2">
+								</div> -->
+								<!-- <div class="tab-pane" id="tab_1_2">
 									<div class="scroller" style="height: 290px;" data-always-visible="1" data-rail-visible1="1">
 										<ul class="feeds">
 											<li>
@@ -1770,8 +1771,8 @@
 											</li>
 										</ul>
 									</div>
-								</div>
-								<div class="tab-pane" id="tab_1_3">
+								</div> -->
+								<!-- <div class="tab-pane" id="tab_1_3">
 									<div class="scroller" style="height: 290px;" data-always-visible="1" data-rail-visible1="1">
 										<div class="row">
 											<div class="col-md-6 user-info">
@@ -1955,19 +1956,19 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> -->
 							<!--END TABS-->
-						</div>
-					</div>
+						<!-- </div>
+					</div> -->
 					<!-- END PORTLET-->
-				</div>
-			</div>
-			<div class="clearfix">
+				<!-- </div>
+			</div> -->
+			<!-- <div class="clearfix">
 			</div>
 			<div class="row">
-				<div class="col-md-6 col-sm-6">
+				<div class="col-md-6 col-sm-6"> -->
 					<!-- BEGIN PORTLET-->
-					<div class="portlet light calendar bordered">
+					<!-- <div class="portlet light calendar bordered">
 						<div class="portlet-title ">
 							<div class="caption">
 								<i class="icon-calendar font-green-sharp"></i>
@@ -1978,12 +1979,12 @@
 							<div id="calendar">
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<!-- END PORTLET-->
-				</div>
-				<div class="col-md-6 col-sm-6">
+				<!-- </div> -->
+				<!-- <div class="col-md-6 col-sm-6"> -->
 					<!-- BEGIN PORTLET-->
-					<div class="portlet light bordered">
+					<!-- <div class="portlet light bordered">
 						<div class="portlet-title">
 							<div class="caption">
 								<i class="icon-bubble font-red-sunglo"></i>
@@ -2119,7 +2120,7 @@
 									</a>
 								</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 					<!-- END PORTLET-->
 				</div>
@@ -2779,4 +2780,4 @@
 	</div>
 	<!-- END QUICK SIDEBAR -->
 </div>
-<!-- END CONTAINER -->
+<!-- END CONTAINER

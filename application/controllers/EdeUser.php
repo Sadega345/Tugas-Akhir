@@ -1,42 +1,17 @@
-<title>Pembangunan Aplikasi Pelaporan Data Kuantitatif Borang Akreditasi</title>
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class CrudUser extends CI_Controller {
+class EdeUser extends CI_Controller {
 	
 	public function index(){
 		$data=$this->model_user->GetUser();
-		$this->load->view('Admin/tampilan_user.php',array('data'=>$data));
-	}
-
-	public function tambah(){
-		$data=$this->model_user->GetUser();
-		$this->load->view('Admin/inputan_user.php',array('data' => $data));
-	}
-
-	public function do_tambah(){
-		$id=$_POST['id'];
-		$username=$_POST['username'];
-		$password=$_POST['password'];
-		$level='user';
-		$data_insert=array(
-			'id'=>$id,
-			'username'=>$username,
-			'password'=>$password,
-			'level'=>$level
-		);
-		$res=$this->model_user->insert('users',$data_insert);
-		if ($res>=1) {
-			redirect('Admin/table_user');
-		}else {
-			alert('Gagal Insert');
-		}
+		$this->load->view('Admin/tampilan_gantipassword.php',array('data'=>$data));
 	}
 
 	public function do_hapus($id){
 		$where=array('id'=>$id);
 		$res=$this->model_user->Delete('users',$where);
 		if($res>=1){
-			redirect('Admin/table_user');
+			redirect('Admin/ganti_pwd');
 		}else {
 			alert('Gagal Hapus');
 		}
@@ -50,7 +25,7 @@ class CrudUser extends CI_Controller {
 			"password"=>$res[0]['password'],
 			"level"=>$res[0]['level']
 		);
-		$this->load->view('Admin/edit_user',$data);
+		$this->load->view('Admin/edit_gantipassword.php',$data);
 	}
 
 	public function do_edit(){
@@ -68,10 +43,12 @@ class CrudUser extends CI_Controller {
 		$where=array('id'=>$id);
 		$res=$this->model_user->update('users',$data_update,$where);
 		if ($res>=1) {
-			redirect('Admin/table_user');
+			redirect('Admin/ganti_pwd');
 		}
 		else {
 			alert("Gagal Update") ;
 		}
 	}
+
+	
 }

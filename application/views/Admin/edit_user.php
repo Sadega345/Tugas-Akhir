@@ -133,6 +133,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 									<div class="row">
 										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+										<form action="<?php echo base_url()."index.php/CrudUser"; ?>" method="POST">
+											<button type="submit" class="btn btn-danger" name="back">Cancel</button>
+										</form>	
 									</div>
 								</div>
 							</div>

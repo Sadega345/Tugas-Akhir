@@ -122,11 +122,14 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="row">
 										<div class="form-group">
 											<label>Nama Program Studi</label>
-											<input type="text" class="form-control" name="nama_prodi" value="<?php echo $nama_prodi; ?>">
+											<input type="text" class="form-control" name="nama_prodi" value="<?php echo $prodi; ?>">
 										</div>
 									</div>
 									<div class="row">
 										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+										<form action="<?php echo base_url()."index.php/CrudProdi"; ?>" method="POST">
+											<button type="submit" class="btn btn-danger" name="back">Cancel</button>
+										</form>
 									</div>
 								</div>
 							</div>

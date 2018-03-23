@@ -8,18 +8,18 @@ class Model_Instrumen extends CI_Model {
 		return $data->result_array();
 	}
 
-	// public function insert($tablename,$data){
-	// 	$res=$this->db->insert($tablename,$data);
-	// 	return $res;
-	// }
+	public function insert($tablename,$data){
+		$res=$this->db->insert($tablename,$data);
+		return $res;
+	}
 
-	public function input($data){
-	    try{
-	      $this->db->insert('instrumen', $data);
-	      return true;
-	    }catch(Exception $e){
-	    }
-  	}
+	// public function input($data){
+	// 	try{
+	//       $this->db->insert('instrumen', $data);
+	//       return true;
+	//     }catch(Exception $e){
+	//     }
+ //  	}
 
 
 	public function update($tablename,$data,$where){

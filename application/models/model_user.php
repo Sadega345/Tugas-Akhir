@@ -2,9 +2,9 @@
 
 class Model_User extends CI_Model {
 	
-	public function GetUser()
+	public function GetUser($where="")
 	{
-		$data=$this->db->query("select * from users where level='user'");
+		$data=$this->db->query("select * from users ".$where);
 		return $data->result_array();
 	}
 

@@ -15,11 +15,11 @@ class CrudProdi extends CI_Controller {
 
 	public function do_tambah(){
 		$kode_prodi=$_POST['kode_prodi'];
-		$nama_prodi=$_POST['nama_prodi'];
+		$nama_prodi=$_POST['prodi'];
 		$kode_fakultas=$_POST['kode_fakultas'];
 		$data_insert=array(
 			'kode_prodi'=>$kode_prodi,
-			'nama_prodi'=>$nama_prodi,
+			'prodi'=>$nama_prodi,
 			'kode_fakultas'=>$kode_fakultas
 		);
 		$res=$this->model_prodi->insert('prodi_tbl',$data_insert);
@@ -45,7 +45,7 @@ class CrudProdi extends CI_Controller {
 		$data=array(
 			"kode_fakultas"=>$res[0]['kode_fakultas'],
 			"kode_prodi"=>$res[0]['kode_prodi'],
-			"nama_prodi"=>$res[0]['nama_prodi']
+			"prodi"=>$res[0]['prodi']
 		);
 		$this->load->view('Admin/edit_prodi',$data);
 	}
@@ -53,11 +53,11 @@ class CrudProdi extends CI_Controller {
 	public function do_edit(){
 
 		$kode_prodi=$_POST['kode_prodi'];
-		$nama_prodi=$_POST['nama_prodi'];
+		$nama_prodi=$_POST['prodi'];
 		$kode_fakultas=$_POST['kode_fakultas'];
 		$data_update=array(
 			'kode_prodi'=>$kode_prodi,
-			'nama_prodi'=>$nama_prodi,
+			'prodi'=>$nama_prodi,
 			'kode_fakultas'=>$kode_fakultas
 		);
 		$where=array('kode_prodi'=>$kode);
