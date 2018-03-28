@@ -170,12 +170,12 @@ License: You must have a valid license purchased only from themeforest(the above
 							 </tr>
 							 <tr>
 							 	<td>Satu ruang untuk 1 dosen (bukan pejabat struktural)</td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>16</td>
+							 	<td>64</td>
 							 </tr>
 							 <tr>
 							 	<td colspan="2">Total</td>
-							 	<td></td>
+							 	<td>64</td>
 							 </tr>
 		
 							</tbody>

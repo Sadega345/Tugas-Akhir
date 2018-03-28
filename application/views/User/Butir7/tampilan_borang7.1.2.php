@@ -172,24 +172,20 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tr>
 							<?php } ?> -->
 								<tr>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								 	<td>1</td>
+								 	<td>Pembangunan Sistem Informasi Konsumsi Tunas Raharja di MAN 1 Cirebon</td>
+								 	<td>Nur Achadi, Selly Meliana</td>
+								 	<td>Jurnal Ilmu Komputer Vol. 6 No. 1</td>
+								 	<td>2015</td>
+								 	<td>v</td>
 								 	<td></td>
 								 	<td></td>
 								 </tr>
 								 <tr>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								 	<td colspan="5" readonly=""></td>
+								 	<td>1</td>
+								 	<td>0</td>
+								 	<td>0</td>
 								 </tr>
 							</tbody>
 							</table>

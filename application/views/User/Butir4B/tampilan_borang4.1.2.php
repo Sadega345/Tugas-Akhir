@@ -183,6 +183,8 @@ License: You must have a valid license purchased only from themeforest(the above
 								<tr>
 								 	<td>1</td>
 								 	<td>Banyaknya dosen tugas belajar S2/Sp-1</td>
+								 	<td>3</td>
+								 	<td>3</td>
 								 	<td></td>
 								 	<td></td>
 								 	<td></td>
@@ -192,13 +194,13 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td></td>
 								 	<td></td>
 								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								 	<td>3</td>
 								 </tr>
 								  <tr>
 								 	<td>2</td>
 								 	<td>Banyaknya dosen tugas belajar S3/Sp-2</td>
+								 	<td>1</td>
+								 	<td>1</td>
 								 	<td></td>
 								 	<td></td>
 								 	<td></td>
@@ -208,9 +210,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td></td>
 								 	<td></td>
 								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								 	<td>1</td>
 								 </tr>
 							</tbody>
 							</table>

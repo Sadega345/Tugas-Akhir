@@ -155,38 +155,38 @@ License: You must have a valid license purchased only from themeforest(the above
 							<?php } ?> -->
 								<tr>
 								 	<td>Buku Teks dan handbook</td>
-								 	<td></td>
-								 	<td></td>
+								 	<td>620</td>
+								 	<td>670</td>
 								 </tr>
 								 <tr>
 								 	<td>Modul Praktikum / Praktek</td>
-								 	<td></td>
-								 	<td></td>
+								 	<td>30</td>
+								 	<td>60</td>
 								 </tr>
 								  <tr>
 								 	<td>Jurnal yang terakreditasi oleh lembaga resmi (Dikti. LIPI, dll).</td>
-								 	<td></td>
-								 	<td></td>
+								 	<td>4</td>
+								 	<td>4</td>
 								 </tr>
 								 <tr>
 								 	<td>Jurnal Internasional (termasuk e-journal)</td>
-								 	<td></td>
+								 	<td>2</td>
 								 	<td></td>
 								 </tr>
 								 <tr>
 								 	<td>Majalah Ilmiah</td>
-								 	<td></td>
+								 	<td>12</td>
 								 	<td></td>
 								 </tr>
 								  <tr>
 								 	<td>Prosiding</td>
-								 	<td></td>
+								 	<td>12</td>
 								 	<td></td>
 								 </tr>
 								 <tr>
 								 	<td>Total</td>
-								 	<td></td>
-								 	<td></td>
+								 	<td>680</td>
+								 	<td>734</td>
 								 </tr>
 							</tbody>
 							</table>

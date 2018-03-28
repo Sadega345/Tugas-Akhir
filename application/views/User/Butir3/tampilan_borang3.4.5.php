@@ -164,45 +164,45 @@ License: You must have a valid license purchased only from themeforest(the above
 							<?php } ?> -->
 							<tr>
 							 	<td>TS-4</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>33</td>
+							 	<td>PT. Pasim Sentra Utama</td>
+							 	<td>5</td>
+							 	<td>5</td>
 							 </tr>
 							 <tr>
 							 	<td>TS-3</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>25</td>
+							 	<td>PT. Pasim Sentra Utama</td>
+							 	<td>5</td>
+							 	<td>4</td>
 							 </tr>
 							 <tr>
 							 	<td>TS-2</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>37</td>
+							 	<td>PT. Pasim Sentra Utama</td>
+							 	<td>5</td>
+							 	<td>3</td>
 							 </tr>
 							 <tr>
 							 	<td>TS-1</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>41</td>
+							 	<td>PT. Pasim Sentra Utama</td>
+							 	<td>8</td>
+							 	<td>8</td>
 							 </tr>	
 							 <tr>
 							 	<td>TS</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>41</td>
+							 	<td>PT. Pasim Sentra Utama</td>
+							 	<td>5</td>
+							 	<td>4</td>
 							 </tr>	
 							 <tr>
 							 	<td>Total</td>
+							 	<td>177</td>
 							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>72</td>
+							 	<td>62</td>
 							 </tr>	
 							</tbody>
 							</table>

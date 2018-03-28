@@ -163,19 +163,12 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tr>
 							<?php } ?> -->
 							<tr>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>1</td>
+							 	<td>Kwon Young Choi</td>
+							 	<td>ARES, Co.Ltd</td>
+							 	<td>Workshop Visual Basic .Net</td>
+							 	<td>18 Desember 2014</td>
 							 </tr>
-							 <tr>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr>	
 							</tbody>
 							</table>
 							<div class="btn-group">

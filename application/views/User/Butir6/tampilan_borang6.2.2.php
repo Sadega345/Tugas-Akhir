@@ -161,20 +161,14 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tr>
 							<?php } ?> -->
 							<tr>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr>
-							 <tr>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>2014</td>
+							 	<td>Pembangunan Sistem Informasi Konsumsi Tunas Raharja di MAN 1 Cirebon</td>
+							 	<td>PS Sendiri</td>
+							 	<td>6</td>
 							 </tr>
 							 <tr>
 							 	<td colspan="3">Total**</td>
-							 	<td></td>
+							 	<td>6</td>
 							 </tr>
 							</tbody>
 							</table>

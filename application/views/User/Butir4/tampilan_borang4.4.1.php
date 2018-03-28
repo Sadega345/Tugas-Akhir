@@ -124,7 +124,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
-							
+							<div style="overflow-x:auto;">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -189,24 +189,25 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tr>
 							<?php } ?> -->
 								<tr>
+								 	<td>1</td>
+								 	<td>JUHRIDIN</td>
 								 	<td></td>
+								 	<td>09-03-1980</td>
 								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								 	<td>Tidak</td>
+								 	<td>STAI Siliwangi Bandung</td>
+								 	<td>Bahasa Inggris</td>
+								 	<td>S.Pd</td>
+								 	<td>Pasca Sarjana UIN SGD Bandng</td>
+								 	<td>PAI</td>
+								 	<td>M.Ag</td>
 								 	<td></td>
 								 	<td></td>
 								 	<td></td>
 								 </tr>
 							</tbody>
 							</table>
+							</div>
 							<div class="btn-group">
 								<a href="#">
 									<button id="sample_editable_1_new" class="btn green">

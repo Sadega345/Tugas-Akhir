@@ -124,7 +124,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
-							<table class="table table-striped table-bordered table-hover" id="sample_1">
+							<div style="overflow-x:auto;">
+							
+							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 							<thead>
 								<tr>
 									<td rowspan="2">Tahun <br> akademik</td>
@@ -194,46 +196,131 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 								 <tr>
 								 	<td>TS-4</td>
+								 	<td>50</td>
+								 	<td>1160</td>
+								 	<td>46</td>
+								 	<td>45</td>
+								 	<td>0</td>
+								 	<td>192</td>
+								 	<td>0</td>
+								 	<td>33</td>
+								 	<td>0</td>
+								 	<td>2.81</td>
+								 	<td>3.44</td>
+								 	<td>3.78</td>
+								 	<td>0.00</td>
+								 	<td>39.00</td>
+								 	<td>61.00</td>
 								 </tr>
 								 <tr>
 								 	<td>TS-3</td>
+								 	<td>65</td>
+								 	<td>2800</td>
+								 	<td>65</td>
+								 	<td>62</td>
+								 	<td>0</td>
+								 	<td>221</td>
+								 	<td>0</td>
+								 	<td>25</td>
+								 	<td>0</td>
+								 	<td>3.11</td>
+								 	<td>3.54</td>
+								 	<td>3.95</td>
+								 	<td>0.00</td>
+								 	<td>32.00</td>
+								 	<td>68.00</td>
 								 </tr>
 								 <tr>
 								 	<td>TS-2</td>
+								 	<td>65</td>
+								 	<td>992</td>
+								 	<td>45</td>
+								 	<td>43</td>
+								 	<td>0</td>
+								 	<td>201</td>
+								 	<td>0</td>
+								 	<td>37</td>
+								 	<td>0</td>
+								 	<td>3.13</td>
+								 	<td>3.71</td>
+								 	<td>3.91</td>
+								 	<td>0.00</td>
+								 	<td>6.00</td>
+								 	<td>94.00</td>
 								 </tr>
 								 <tr>
 								 	<td>TS-1</td>
+								 	<td>65</td>
+								 	<td>1014</td>
+								 	<td>40</td>
+								 	<td>39</td>
+								 	<td>0</td>
+								 	<td>139</td>
+								 	<td>0</td>
+								 	<td>41</td>
+								 	<td>0</td>
+								 	<td>3.46</td>
+								 	<td>3.64</td>
+								 	<td>3.87</td>
+								 	<td>0.00</td>
+								 	<td>5.00</td>
+								 	<td>95.00</td>
 								 </tr>	
 								 <tr>
 								 	<td>TS</td>
+								 	<td>65</td>
+								 	<td>1016</td>
+								 	<td>60</td>
+								 	<td>59</td>
+								 	<td>0</td>
+								 	<td>139</td>
+								 	<td>0</td>
+								 	<td>41</td>
+								 	<td>0</td>
+								 	<td>2.96</td>
+								 	<td>3.57</td>
+								 	<td>3.85</td>
+								 	<td>0.00</td>
+								 	<td>24.00</td>
+								 	<td>76.00</td>
 								 </tr>	
 								 <tr>
 								 	<td>Jumlah</td>
+								 	<td>310</td>
+								 	<td>6982</td>
+								 	<td>256</td>
+								 	<td>248</td>
+								 	<td>0</td>
+								 	<td>892</td>
+								 	<td>0</td>
+								 	<td>177.0</td>
+								 	<td>0</td>
 								 </tr>	
 								 <tr>
 								 	<td>Rataan</td>
+								 	<td colspan="15">3.59</td>
 								 </tr>
-		
 							</tbody>
 							</table>
+							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+								<a href="#">
 									<button id="sample_editable_1_new" class="btn green">
-											Ubah 
+										Ubah 
 									</button>
 								</a>
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+								<a href="#">
 									<button id="sample_editable_1_new" class="btn green">
-											Hapus 
+										Hapus 
 									</button>
 								</a>
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a311_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Apd_a431_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn green">
-											Export ke Excel 
+										Export ke Excel 
 									</button>
 								</a>
 							</div>

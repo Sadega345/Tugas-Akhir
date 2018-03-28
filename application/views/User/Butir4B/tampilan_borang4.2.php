@@ -182,64 +182,63 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td>Pustakawan *</td>
 							 	<td></td>
 							 	<td></td>
+							 	<td>1</td>
 							 	<td></td>
+							 	<td>1</td>
+							 	<td>1</td>
 							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td bgcolor="gray"></td>
+							 	<td>Universitas</td>
 							 </tr>
 							 <tr>
 							 	<td>2</td>
 							 	<td>Laboran/ Teknisi/ Analis/ Operator/ Programer</td>
 							 	<td></td>
 							 	<td></td>
+							 	<td>2</td>
+							 	<td></td>
+							 	<td>2</td>
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>Program Studi</td>
 							 </tr>
 							 <tr>
 							 	<td>3</td>
 							 	<td>Administrasi</td>
 							 	<td></td>
 							 	<td></td>
+							 	<td>2</td>
+							 	<td></td>
+							 	<td>3</td>
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>Program Studi</td>
 							 </tr>
 							 <tr>
 							 	<td>4</td>
 							 	<td>Lainnya</td>
 							 	<td></td>
 							 	<td></td>
+							 	<td>1</td>
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>7</td>
+							 	<td>Universitas</td>
 							 </tr>
 							 <tr>
 							 	<td colspan="2">Total</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>0</td>
+							 	<td>0</td>
+							 	<td>6</td>
+							 	<td>0</td>
+							 	<td>6</td>
+							 	<td>1</td>
+							 	<td>0</td>
+							 	<td>7</td>
 							 </tr>	
 							</tbody>
 							</table>

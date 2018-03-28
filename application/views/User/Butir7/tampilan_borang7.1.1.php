@@ -160,42 +160,42 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
-							 	<td></td>
+							 	<td>0</td>
 							 </tr>
 							 <tr>
 							 	<td>PT yang bersangkutan</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>4</td>
+							 	<td>4</td>
+							 	<td>5</td>
+							 	<td>13</td>
 							 </tr>
 							 <tr>
 							 	<td>Kemristekdikti</td>
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
-							 	<td></td>
+							 	<td>0</td>
 							 </tr>
 							  <tr>
 							 	<td>Institusi dalam negeri di luar Kemristekdikti</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>6</td>
+							 	<td>5</td>
+							 	<td>4</td>
+							 	<td>15</td>
 							 </tr>
 							 <tr>
 							 	<td>Institusi luar negeri</td>
 							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>1</td>
+							 	<td>2</td>
+							 	<td>3</td>
 							 </tr>
 							 <tr>
 							 	<td>Jumlah</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>10</td>
+							 	<td>10</td>
+							 	<td>11</td>
+							 	<td>31</td>
 							 </tr>
 		
 							</tbody>

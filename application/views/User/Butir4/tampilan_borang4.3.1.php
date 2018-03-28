@@ -125,7 +125,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</div>
 							<div style="overflow-x:auto;">
-								
 							
 							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 							<thead>
@@ -198,18 +197,18 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tr>
 							<?php } ?> -->
 							<tr>
+							 	<td>1</td>
+							 	<td>ERNA HIKMAWATI</td>
+							 	<td>0421089201</td>
+							 	<td>21/08/1992</td>
 							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>Tidak</td>
+							 	<td>S.Kom</td>
+							 	<td>Universitas Nasional Pasim</td>
+							 	<td>Teknik Informatika</td>
+							 	<td>M.Kom</td>
+							 	<td>STMIK Likmi</td>
+							 	<td>Sistem Informasi</td>
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>

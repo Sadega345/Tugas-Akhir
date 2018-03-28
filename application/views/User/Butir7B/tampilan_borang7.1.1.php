@@ -163,24 +163,24 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tr>
 							<?php } ?> -->
 							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
+								<td>1</td>
+								<td>Manajemen Informatika D3</td>
+								<td>10</td>
+								<td>10</td>
+								<td>11</td>
+								<td>59.8</td>
+								<td>59.2</td>
+								<td>65.6</td>
 							</tr>
 							<tr>
 								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
+								<td>Total</td>
+								<td>10</td>
+								<td>10</td>
+								<td>11</td>
+								<td>59.8</td>
+								<td>59.2</td>
+								<td>65.6</td>
 							</tr>
 							</tbody>
 							</table>

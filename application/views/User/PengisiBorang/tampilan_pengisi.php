@@ -157,25 +157,25 @@ License: You must have a valid license purchased only from themeforest(the above
 							<?php } ?> -->
 							<tr align="center">
 								 	<tr>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
+									 	<td>1</td>
+									 	<td>Erna Hikmawati, S. Kom., M. Kom</td>
+									 	<td>421089201421089201</td>
+									 	<td>Ketua Program Studi D3 Manajemen Informatika</td>
+									 	<td>08-09-2017</td>
 									 </tr>
 									  <tr>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
+									 	<td>2</td>
+									 	<td>Soleh Sabarudin, S. Kom., M. Kom</td>
+									 	<td>408097207</td>
+									 	<td>Sekretaris Program Studi D3 Manajemen Informatika</td>
+									 	<td>08-09-2017</td>
 									 </tr>
 									  <tr>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
+									 	<td>3</td>
+									 	<td>Endang Mulyani, SE</td>
+									 	<td>122002078</td>
+									 	<td>Bagian HRD</td>
+									 	<td>08-09-2017</td>
 									 </tr>
 							</tbody>
 							</table>

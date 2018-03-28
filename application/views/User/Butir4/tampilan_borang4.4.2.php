@@ -170,27 +170,18 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tr>
 							<?php } ?> -->
 							<tr>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr>
-							 <tr>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>1</td>
+							 	<td>JUHRIDIN</td>
+							 	<td>MIMKU03</td>
+							 	<td>PENDIDIKAN AGAMA</td>
+							 	<td>2</td>
+							 	<td>16</td>
+							 	<td>16</td>
 							 </tr>
 							 <tr>
 							 	<td colspan="5">Jumlah*</td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>16</td>
+							 	<td>16</td>
 							 </tr>
 							</tbody>
 							</table>

@@ -81,7 +81,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>IDENTITAS PENGISI BORANG PROGRAM STUDI
+								<i class="fa fa-edit"></i>Butir 4.3.1 : DOSEN TETAP YANG BIDANG KEAHLIANNYA SESUAI BIDANG PS
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -124,7 +124,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
-							<table class="table table-striped table-bordered table-hover" id="sample_1">
+							<div style="overflow-x:auto;">
+							
+							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 							<thead>
 								<tr>
 									 <th rowspan="2">No</th>
@@ -187,32 +189,32 @@ License: You must have a valid license purchased only from themeforest(the above
 							<?php } ?> -->
 							<tr align="center">
 								 	<tr>
+									 	<td>1</td>
+									 	<td>Erna Hikmawati</td>
+									 	<td>0421089201</td>
+									 	<td>21/08/1992</td>
 									 	<td></td>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
+									 	<td>S. Kom</td>
+									 	<td>Universitas Nasional Pasim</td>
+									 	<td>Teknik Informatika</td>
+									 	<td>M. Kom</td>
+									 	<td>STMIK Likmi</td>
+									 	<td>Sistem Informasi</td>
 									 	<td></td>
 									 	<td></td>
 									 	<td></td>
 									 </tr>
 									  <tr>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
+									 	<td>2</td>
+									 	<td>Soleh Sabarudin</td>
+									 	<td>0408097207</td>
+									 	<td>08/09/1972</td>
+									 	<td>S. Kom</td>
+									 	<td>Universitas Nasional Pasim</td>
+									 	<td>Teknik Informatika</td>
+									 	<td>M. Kom</td>
+									 	<td>STMIK Likmi</td>
+									 	<td>Sistem Informasi</td>
 									 	<td></td>
 									 	<td></td>
 									 	<td></td>
@@ -220,24 +222,25 @@ License: You must have a valid license purchased only from themeforest(the above
 									 </tr>
 							</tbody>
 							</table>
+							</div>
 							<div class="btn-group">
 								<a href="#">
 									<button id="sample_editable_1_new" class="btn green">
-											Ubah 
+										Ubah 
 									</button>
 								</a>
 							</div>
 							<div class="btn-group">
 								<a href="#">
 									<button id="sample_editable_1_new" class="btn green">
-											Hapus 
+										Hapus 
 									</button>
 								</a>
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Data_dosen_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Apd_a431_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn green">
-											Export ke Excel 
+										Export ke Excel 
 									</button>
 								</a>
 							</div>

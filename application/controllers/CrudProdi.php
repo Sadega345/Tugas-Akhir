@@ -1,4 +1,3 @@
-<title>Pembangunan Aplikasi Pelaporan Data Kuantitatif Borang Akreditasi</title>
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class CrudProdi extends CI_Controller {

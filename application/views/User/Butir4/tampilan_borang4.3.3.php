@@ -177,62 +177,38 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tr>
 							<?php } ?> -->
 							<tr>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr>
-							 <tr>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr>
-							 <tr>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>1</td>
+							 	<td>ERNA HIKMAWATI</td>
+							 	<td>9</td>
+							 	<td>0</td>
+							 	<td>0</td>
+							 	<td>1</td>
+							 	<td>1</td>
+							 	<td>6</td>
+							 	<td>0</td>
+							 	<td>17</td>
 							 </tr>
 							 <tr>
 							 	<td colspan="2">Jumlah</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>68</td>
+							 	<td>0</td>
+							 	<td>0</td>
+							 	<td>8</td>
+							 	<td>8</td>
+							 	<td>22</td>
+							 	<td>0</td>
+							 	<td>106</td>
 							 </tr>
 							  <tr>
 							 	<td colspan="2">Rata-rata</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>8.50</td>
+							 	<td>0.00</td>
+							 	<td>0.00</td>
+							 	<td>1.00</td>
+							 	<td>1.00</td>
+							 	<td>2.75</td>
+							 	<td>0.00</td>
+							 	<td>13.25</td>
 			 </tr>
 							</tbody>
 							</table>

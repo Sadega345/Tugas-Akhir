@@ -124,7 +124,6 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
-							<h3>Diisi oleh PS D4</h3>
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -168,170 +167,13 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tr>
 							<?php } ?> -->
 								<tr>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 </tr>
-								 <tr>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 </tr>
-							</tbody>
-							</table>
-
-							<h3>Diisi oleh PS D3</h3>
-							<table class="table table-striped table-bordered table-hover" id="sample_1">
-							<thead>
-								<tr>
-									 <th rowspan="2">Tahun Masuk</th>
-									 <th colspan="5">Jumlah Mahasiswa Reguler per Angkatan pada Tahun<br>
-									 (tidak memasukkan mahasiswa transfer)</th>
-									 <th rowspan="2">Jumlah Lulusan<br>s.d. TS</th>
-								 </tr>
-								 <tr>
-								 	<th>TS-4</th>
-								 	<th>TS-3</th>
-								 	<th>TS-2</th>
-								 	<th>TS-1</th>
-								 	<th>TS</th>
-								 </tr>
-							</thead>
-							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
-								<tr>
-								 	<td>TS-4</td>
-								 </tr>
-								 <tr>
-								 	<td>TS-3</td>
-								 </tr>
-								 <tr>
-								 	<td>TS-2</td>
-								 </tr>
-								 <tr>
-								 	<td>TS-1</td>
-								 </tr>	
-								 <tr>
-								 	<td>TS</td>
-								 </tr>
-							</tbody>
-							</table>
-
-							<h3>Diisi oleh PS D2</h3>
-							<table class="table table-striped table-bordered table-hover" id="sample_1">
-							<thead>
-								<tr>
-									 <th rowspan="2">Tahun Masuk</th>
-									 <th colspan="3">Jumlah Mahasiswa Reguler per Angkatan pada Tahun<br>
-									 (tidak memasukkan mahasiswa transfer)</th>
-									 <th rowspan="2">Jumlah Lulusan<br>s.d. TS</th>
-								 </tr>
-								 <tr>
-								 	<th>TS-2</th>
-								 	<th>TS-1</th>
-								 	<th>TS</th>
-								 </tr>
-							</thead>
-							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
-								<tr>
-								 	<td>TS-2</td>
-								 </tr>
-								 <tr>
-								 	<td>TS-1</td>
-								 </tr>	
-								 <tr>
-								 	<td>TS</td>
-								 </tr>
-							</tbody>
-							</table>
-
-							<h3>Diisi oleh PS D1</h3>
-							<table class="table table-striped table-bordered table-hover" id="sample_1">
-							<thead>
-								<tr>
-									 <th rowspan="2">Tahun Masuk</th>
-									 <th colspan="2">Jumlah Mahasiswa Reguler per Angkatan pada Tahun<br>
-									 (tidak memasukkan mahasiswa transfer)</th>
-									 <th rowspan="2">Jumlah Lulusan<br>s.d. TS</th>
-								 </tr>
-								 <tr>
-								 	<th>TS-1</th>
-								 	<th>TS</th>
-								 </tr>
-							</thead>
-							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
-								 <tr>
-								 	<td>TS-1</td>
-								 </tr>	
-								 <tr>
-								 	<td>TS</td>
+								 	<td>1</td>
+								 	<td>Eko Travada</td>
+								 	<td>S3</td>
+								 	<td>Elektro dan Informatika</td>
+								 	<td>Institut Teknologi Bandung</td>
+								 	<td>Indonesia</td>
+								 	<td>2017</td>
 								 </tr>
 							</tbody>
 							</table>

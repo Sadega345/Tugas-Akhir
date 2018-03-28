@@ -164,37 +164,17 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tr>
 							<?php } ?> -->
 								<tr>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 </tr>
-								 <tr>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								 	<td>1</td>
+								 	<td>Manajemen Informatika D3</td>
+								 	<td>3.2</td>
+								 	<td>3.59</td>
 								 	<td></td>
 								 </tr>
-								 <tr>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 </tr>
-								  <tr>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 </tr>
+								 
 								 <tr>
 								 	<td colspan="2">Rata-rata di Unit Pengelola**</td>
-								 	<td></td>
-								 	<td></td>
+								 	<td>3.20</td>
+								 	<td>3.59</td>
 								 	<td></td>
 								 </tr>
 							</tbody>

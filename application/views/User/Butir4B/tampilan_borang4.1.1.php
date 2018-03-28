@@ -190,8 +190,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							 <tr>
 							 	<td>1</td>
 							 	<td>Asisten Ahli</td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>5</td>
+							 	<td>5</td>
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
@@ -202,8 +202,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							 <tr>
 							 	<td>2</td>
 							 	<td>Lektor</td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>1</td>
+							 	<td>1</td>
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
@@ -214,7 +214,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 <tr>
 							 	<td>3</td>
 							 	<td>Lektor Kepala</td>
-							 	<td></td>
+							 	<td>0</td>
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
@@ -226,7 +226,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							  <tr>
 							 	<td>4</td>
 							 	<td>Guru Besar/Profesor</td>
-							 	<td></td>
+							 	<td>0</td>
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
@@ -238,14 +238,14 @@ License: You must have a valid license purchased only from themeforest(the above
 							 <tr>
 							 	<td></td>
 							 	<td>Total</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>6</td>
+							 	<td>6</td>
+							 	<td>0</td>
+							 	<td>0</td>
+							 	<td>0</td>
+							 	<td>0</td>
+							 	<td>0</td>
+							 	<td>0</td>
 							 </tr>
 							 <tr>
 							 	<th>B</th>
@@ -262,8 +262,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							  <tr>
 							 	<td>1</td>
 							 	<td>S1</td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>1</td>
+							 	<td>1</td>
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
@@ -274,8 +274,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							 <tr>
 							 	<td>2</td>
 							 	<td>S2/Profesi/Sp-1</td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>7</td>
+							 	<td>7</td>
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
@@ -286,7 +286,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 <tr>
 							 	<td>3</td>
 							 	<td>S3/Sp-2</td>
-							 	<td></td>
+							 	<td>0</td>
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
@@ -298,14 +298,14 @@ License: You must have a valid license purchased only from themeforest(the above
 							 <tr>
 							 	<td></td>
 							 	<td>Total</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>8</td>
+							 	<td>8</td>
+							 	<td>0</td>
+							 	<td>0</td>
+							 	<td>0</td>
+							 	<td>0</td>
+							 	<td>0</td>
+							 	<td>0</td>
 							 </tr>
 							</tbody>
 							</table>

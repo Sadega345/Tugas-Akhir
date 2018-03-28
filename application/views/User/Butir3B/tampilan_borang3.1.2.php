@@ -186,6 +186,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							<tr>
 							 	<td>1</td>
 							 	<td>Mhs. baru bukan transfer</td>
+							 	<td>59</td>
+							 	<td>59</td>
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
@@ -195,13 +197,12 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>59</td>
 							 </tr>
 							 <tr>
 							 	<td>2</td>
 							 	<td>Mhs. baru transfer</td>
+							 	<td>0</td>
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
@@ -212,12 +213,13 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>0</td>
 							 </tr>
 							 <tr>
 							 	<td>3</td>
 							 	<td>Total mhs. regular (Student Body)</td>
+							 	<td>139</td>
+							 	<td>139</td>
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
@@ -227,9 +229,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>139</td>
 							 </tr>
 							</tbody>
 							</table>

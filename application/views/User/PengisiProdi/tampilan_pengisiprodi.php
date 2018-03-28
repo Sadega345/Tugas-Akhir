@@ -136,24 +136,27 @@ License: You must have a valid license purchased only from themeforest(the above
 								<tr>
 									<th>1.</th>
 									<th>Program Studi</th>
-									<th><input type="text" name="programstudi"> <input type="" name=""></th>
+									<th>
+										<input type="text" name="programstudi" value="Diploma Tiga (D3)"> 
+										<input type="" name="" value="57401">
+									</th>
 									<!-- <th><input type="text" name="ppdt"></th> -->
 								 </tr>
 								 <tr>
 								 	<th>2.</th>
 									<th>Jurusan/Departemen</th>
-									<th><input type="text" name="departemen"></th>
+									<th><input type="text" name="departemen" value="Manajemen Informatika"></th>
 								 </tr>
 								 <tr>
 								 	<th>3.</th>
 									<th>Fakultas</th>
-									<th><input type="text" name="fakultas"></th>
+									<th><input type="text" name="fakultas" value="Ilmu Komputer"></th>
 								 </tr>
 								 <tr>
 								 	<th>4.</th>
 									<th>Perguruan Tinggi</th>
-									<th><input type="text" name="perguruan"></th>
-									<th><input type="text" name=""></th>
+									<th><input type="text" name="perguruan" value="Universitas Nasional PASIM"></th>
+									<th><input type="text" name="" value="41031"></th>
 								 </tr>
 								  <tr>
 								  	 <th>5.</th>
@@ -162,23 +165,26 @@ License: You must have a valid license purchased only from themeforest(the above
 								 <tr>
 								 	<th></th>
 									<th>Nomor SK</th>
-									<th><input type="text" name="nosk"></th>
+									<th><input type="text" name="nosk" value="114/D/O/2001"></th>
 								 </tr>
 								 <tr>
 								 	<th></th>
 									<th>Tanggal SK</th>
-									<th><input type="text" name="tanggal"></th>
+									<th><input type="text" name="tanggal" value="02/08/2001"></th>
 								 </tr>
 								 <tr>
 								 	<th></th>
 									<th>Pejabat penandatangan</th>
-									<th><input type="text" name="pejabat"></th>
+									<th><input type="text" name="pejabat" value="A.n. Menteri Pendidikan Nasional Direktur Jenderal Pendidikan Tinggi"></th>
 								 </tr>
 								 <tr>
 								 	<th>6.</th>
 									<th>Bulan dan tahun dimulainya penyelenggaraan PS</th>
 									<th>
-										<select>
+										<input type="text" name="" value=" Agustus">
+										<input type="text" name="" value="2001">
+
+										<!-- <select>
 											<option>Januari</option>
 											<option>Februari</option>
 											<option>Maret</option>
@@ -187,7 +193,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<option>Juni</option>
 											<option>Juli</option>
 											<option>Agustus</option>
-										</select>
+										</select> -->
 									</th>
 								 </tr>
 								 <tr>
@@ -197,12 +203,12 @@ License: You must have a valid license purchased only from themeforest(the above
 								 <tr>
 								 	<th></th>
 									<th>Nomor SK</th>
-									<th><input type="text" name="nosk"></th>
+									<th><input type="text" name="nosk" value="2248/D/T/K-IV/2009"></th>
 								 </tr>
 								 <tr>
 								 	<th></th>
 									<th>Tanggal SK</th>
-									<th><input type="text" name="tanggalsk"></th>
+									<th><input type="text" name="tanggalsk" value="20 Mei 2009"></th>
 								 </tr>
 								 <tr>
 								 	<th>8.</th>
@@ -211,32 +217,42 @@ License: You must have a valid license purchased only from themeforest(the above
 								 <tr>
 								 	<th></th>
 									<th>Peringkat</th>
-									<th><input type="text" name="peringkat"></th>
+									<th><input type="text" name="peringkat" value="C"></th>
 								 </tr>
 								 <tr>
 								 	<th></th>
 									<th>Nilai</th>
-									<th><input type="text" name="nilai"></th>
+									<th><input type="text" name="nilai" value="C"></th>
 								 </tr>
 								 <tr>
 								 	<th></th>
 									<th>Nomor SK BAN-PT</th>
-									<th><input type="text" name="noskban"></th>
+									<th><input type="text" name="noskban" value="047/SK/BAN-PT/Ak-XII/Dpl-III/II/2013"></th>
 								 </tr>
 								 <tr>
 								 	<th>9.</th>
 									<th>Alamat PS</th>
-									<th><textarea rows="4" cols="50"></textarea></th>
+									<th><textarea rows="4" cols="50">Jalan Dakota No. 8A Sukaraja-Bandung</textarea></th>
 								 </tr>
 								 <tr>
 								 	<th>10.</th>
 									<th>No telepon PS</th>
-									<th><input type="text" name="notelponps"></th>
+									<th><input type="text" name="notelponps" value="022 - 6072803"></th>
 								 </tr>
 								 <tr>
 								 	<th>11.</th>
 									<th>Nomor Faksimili PS</th>
-									<th><input type="text" name="nofaksimili"></th>
+									<th><input type="text" name="nofaksimili" value="022-20565099"></th>
+								 </tr>
+								 <tr>
+								 	<th>12.</th>
+									<th>Homepage PS</th>
+									<th><input type="text" name="nofaksimili" value="www.pasim.ac.id"></th>
+								 </tr>
+								 <tr>
+								 	<th>13.</th>
+									<th>Email PS</th>
+									<th><input type="text" name="nofaksimili" value="mi@pasim.ac.id"></th>
 								 </tr>
 							</thead>
 							</table>

@@ -182,18 +182,19 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tr>
 							<?php } ?> -->
 							<tr>
+								<td>1</td>
+							 	<td>MKB1001</td>
+							 	<td>Komputer Grafis</td>
 							 	<td></td>
+							 	<td>2</td>
+							 	<td>v</td>
 							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>v</td>
+							 	<td>v</td>
+							 	<td>v</td>
+							 	<td>v</td>
+							 	
+							 	<td>Jurusan</td>
 							 </tr>
 							</tbody>
 							</table>

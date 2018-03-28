@@ -172,29 +172,19 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tr>
 							<?php } ?> -->
 							 <tr>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>1</td>
+							 	<td>ERNA HIKMAWATI</td>
+							 	<td>Analisis dan Perancangan</td>
+							 	<td>MIMKL24</td>
+							 	<td>Rekayasa Perangkat Lunak</td>
+							 	<td>1</td>
+							 	<td>16</td>
+							 	<td>16</td>
 							 </tr>
 							 <tr>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr
-							 <tr>
-							 	<td colspan="6">Jumlah*</td>
-							 	<td></td>
-							 	<td></td>
+							 	<td colspan="6"><center>Jumlah*</center></td>
+							 	<td>400</td>
+							 	<td>400</td>
 							 </tr>
 							</tbody>
 							</table>

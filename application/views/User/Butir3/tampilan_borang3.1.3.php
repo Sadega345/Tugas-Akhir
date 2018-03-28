@@ -166,24 +166,80 @@ License: You must have a valid license purchased only from themeforest(the above
 							<?php } ?> -->
 								<tr>
 								 	<td>TS-6</td>
+								 	<td ></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
 								 </tr>	
 								 <tr>
 								 	<td>TS-5</td>
+								 	<td bgcolor="black"></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
 								 </tr>
 								 <tr>
 								 	<td>TS-4</td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
 								 </tr>
 								 <tr>
 								 	<td>TS-3</td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
 								 </tr>
 								 <tr>
 								 	<td>TS-2</td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	
 								 </tr>
 								 <tr>
 								 	<td>TS-1</td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td></td>
+								 	<td></td>
+								 	
 								 </tr>	
 								 <tr>
 								 	<td>TS</td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td></td>
+								 	
 								 </tr>
 							</tbody>
 							</table>
@@ -228,18 +284,47 @@ License: You must have a valid license purchased only from themeforest(the above
 							<?php } ?> -->
 								<tr>
 								 	<td>TS-4</td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
 								 </tr>
 								 <tr>
 								 	<td>TS-3</td>
+								 	<td bgcolor="black"></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
 								 </tr>
 								 <tr>
 								 	<td>TS-2</td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td ></td>
+								 	<td ></td>
+								 	<td></td>
+								 	<td></td>
 								 </tr>
 								 <tr>
 								 	<td>TS-1</td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td></td>
+								 	<td></td>
+								 	
 								 </tr>	
 								 <tr>
 								 	<td>TS</td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td></td>
 								 </tr>
 							</tbody>
 							</table>
@@ -282,12 +367,26 @@ License: You must have a valid license purchased only from themeforest(the above
 							<?php } ?> -->
 								<tr>
 								 	<td>TS-2</td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
 								 </tr>
 								 <tr>
 								 	<td>TS-1</td>
+								 	<td bgcolor="black"></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	
 								 </tr>	
 								 <tr>
 								 	<td>TS</td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td></td>
+								 	
+								 	
 								 </tr>
 							</tbody>
 							</table>
@@ -329,9 +428,15 @@ License: You must have a valid license purchased only from themeforest(the above
 							<?php } ?> -->
 								 <tr>
 								 	<td>TS-1</td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
 								 </tr>	
 								 <tr>
 								 	<td>TS</td>
+								 	<td bgcolor="black"></td>
+								 	<td></td>
+								 	<td></td>
 								 </tr>
 							</tbody>
 							</table>

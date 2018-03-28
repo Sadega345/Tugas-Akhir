@@ -128,22 +128,22 @@ License: You must have a valid license purchased only from themeforest(the above
 							<thead>
 								<tr>
 									 <td>Teori</td>
-									 <td><input type="text" name="" readonly=""></td>
+									 <td><input type="text" name="" readonly="" value="613"></td>
 									 <td>Jam per paket program</td>
 								 </tr>
 								 <tr>
 									 <td>Praktek</td>
-									 <td><input type="text" name="" readonly=""></td>
+									 <td><input type="text" name="" readonly="" value="1600"></td>
 									 <td>Jam per paket program</td>
 								 </tr>
 								 <tr>
 									 <td>Praktikum</td>
-									 <td><input type="text" name="" readonly=""></td>
+									 <td><input type="text" name="" readonly="" value="293"></td>
 									 <td>Jam per paket program</td>
 								 </tr>
 								 <tr>
 									 <td>Praktek Kerja lapangan</td>
-									 <td><input type="text" name="" readonly=""></td>
+									 <td><input type="text" name="" readonly="" value="180"></td>
 									 <td>Jam per paket program</td>
 								 </tr>
 							</thead>

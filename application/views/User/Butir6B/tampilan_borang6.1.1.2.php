@@ -163,71 +163,71 @@ License: You must have a valid license purchased only from themeforest(the above
 								<tr>
 								 	<td>1</td>
 								 	<td>Pendidikan</td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								 	<td>2298266,46</td>
+								 	<td>2466829,158</td>
+								 	<td>2920170,734</td>
+								 	<td>7685266.352</td>
 								 </tr>
 								 <tr>
 								 	<td>2</td>
 								 	<td>Penelitian</td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								 	<td>59800</td>
+								 	<td>59200</td>
+								 	<td>65600</td>
+								 	<td>184600</td>
 								 </tr>
 								 <tr>
 								 	<td>3</td>
 								 	<td>Pengabdian kepada Masyarakat</td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								 	<td>40200</td>
+								 	<td>41300</td>
+								 	<td>50600</td>
+								 	<td>132100</td>
 								 </tr>
 								  <tr>
 								 	<td colspan="2">Jumlah Dana Operasional</td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								 	<td>2398266.46</td>
+								 	<td>2567329.158</td>
+								 	<td>3036370.734</td>
+								 	<td>8001966.352</td>
 								 </tr>
 								 <tr>
 								 	<td>4</td>
 								 	<td>Investasi Prasarana</td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								 	<td>1969942,68</td>
+								 	<td>2114424,993</td>
+								 	<td>2503003,486</td>
+								 	<td>6587371.159</td>
 								 </tr>
 								 <tr>
 								 	<td>5</td>
 								 	<td>Investasi Sarana</td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								 	<td>1313295,12</td>
+								 	<td>1409616,662</td>
+								 	<td>1668668,991</td>
+								 	<td>4391580.773</td>
 								 </tr>
 								  <tr>
 								 	<td>6</td>
 								 	<td>Investasi SDM</td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								 	<td>656647,56</td>
+								 	<td>704808,331</td>
+								 	<td>834334,495</td>
+								 	<td>2195790.386</td>
 								 </tr>
 								 <tr>
 								 	<td colspan="2">Jumlah Dana Investasi</td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								 	<td>3939885.36</td>
+								 	<td>4228849.986</td>
+								 	<td>5006006.972</td>
+								 	<td>13174742.32</td>
 								 </tr>
 								 <tr>
 								 	<td colspan="2">Jumlah Dana (Operasional + Investasi)</td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								 	<td>6338151.82</td>
+								 	<td>6796179.144</td>
+								 	<td>8042377.706</td>
+								 	<td>21176708.67</td>
 								 </tr>
 							</tbody>
 							</table>

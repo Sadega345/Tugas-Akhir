@@ -161,16 +161,10 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tr>
 							<?php } ?> -->
 							 <tr>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr>
-							 <tr>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>2014</td>
+							 	<td>Pelatihan Penggunaan Microsoft Word pada Ibu-Ibu PKK Desa Cileunyi Wetan</td>
+							 	<td>PT. Pasim Sentra Utama</td>
+							 	<td>5.6</td>
 							 </tr>
 							 <tr>
 							 	<td colspan="3">Total</td>
