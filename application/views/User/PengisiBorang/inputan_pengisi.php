@@ -81,7 +81,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>PENGISI DATA BORANG
+								<i class="fa fa-edit"></i>Inputan Pengisi Borang
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -99,11 +99,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudBorang/tambah";?>">
-											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
-											</button>
-											</a>
+											
 										</div>
 									</div>
 									<!-- <div class="col-md-6">
@@ -124,82 +120,40 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
-							<table class="table table-striped table-bordered table-hover" id="sample_1">
-							<thead>
-								<tr>
-									 <th>No</th>
-									 <th>Nama</th>
-									 <th>NIDN</th>
-									 <th>Jabatan</th>
-									 <th>Tanggal Pengisian (dd/mm/yyyy)</th>
-								 </tr>
-							</thead>
-							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
-							<tr align="center">
-								 	<tr>
-									 	<td>1</td>
-									 	<td>Erna Hikmawati, S. Kom., M. Kom</td>
-									 	<td>421089201421089201</td>
-									 	<td>Ketua Program Studi D3 Manajemen Informatika</td>
-									 	<td>08-09-2017</td>
-									 </tr>
-									  <tr>
-									 	<td>2</td>
-									 	<td>Soleh Sabarudin, S. Kom., M. Kom</td>
-									 	<td>408097207</td>
-									 	<td>Sekretaris Program Studi D3 Manajemen Informatika</td>
-									 	<td>08-09-2017</td>
-									 </tr>
-									  <tr>
-									 	<td>3</td>
-									 	<td>Endang Mulyani, SE</td>
-									 	<td>122002078</td>
-									 	<td>Bagian HRD</td>
-									 	<td>08-09-2017</td>
-									 </tr>
-							</tbody>
-							</table>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-										Ubah 
-									</button>
-								</a>
+							<form action="<?php echo base_url()."index.php/CrudDosen/do_tambah"; ?>" method="POST">
+							<div class="container">
+								<div class="col-md-10">
+									<div class="row">
+										<div class="form-group">
+											<label>Nama</label>
+											<input type="text" class="form-control" name="nama">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>NIDN</label>
+											<input type="text" class="form-control" name="nidn">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Jabatan</label>
+											<input type="text" class="form-control" name="jabatan">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Tanggal lahir (dd/mm/yyyy)</label>
+											<input type="date" class="form-control" name="tgllahir">
+										</div>
+									</div>
+									<div class="row">
+										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+									</div>
+								</div>
 							</div>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-										Hapus 
-									</button>
-								</a>
-							</div>
-							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Pengisi_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
-											Export ke Excel 
-									</button>
-								</a>
-							</div>
+							</form>
+							
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->
