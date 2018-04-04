@@ -15,6 +15,10 @@ public function index() {
  $this->load->view('User/Butir3/tampilan_borang3.1.1.php',$data);
  }
 
+ public function ubah(){
+ 	$this->load->view('User/Butir3/edit_borang3.1.1.php');
+ }
+
 public function export_excel(){
  $data = array( 'title' => 'TABEL DATA BUTIR 3.1 : PROFIL MAHASISWA DAN LULUSAN',
  'a311' => $this->apd_a311_model->listing());

@@ -81,7 +81,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Butir 4.3.1 : DOSEN TETAP YANG BIDANG KEAHLIANNYA SESUAI BIDANG PS
+								<i class="fa fa-edit"></i>Data Dosen
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -97,15 +97,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="portlet-body">
 							<div class="table-toolbar">
 								<div class="row">
-									<div class="col-md-6">
-										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
-											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
-											</button>
-											</a>
-										</div>
-									</div>
+									
 									<!-- <div class="col-md-6">
 										<div class="btn-group pull-right">
 											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
@@ -193,13 +185,13 @@ License: You must have a valid license purchased only from themeforest(the above
 									 	<td>Erna Hikmawati</td>
 									 	<td>0421089201</td>
 									 	<td>21/08/1992</td>
-									 	<td></td>
 									 	<td>S. Kom</td>
 									 	<td>Universitas Nasional Pasim</td>
 									 	<td>Teknik Informatika</td>
 									 	<td>M. Kom</td>
 									 	<td>STMIK Likmi</td>
 									 	<td>Sistem Informasi</td>
+									 	<td></td>
 									 	<td></td>
 									 	<td></td>
 									 	<td></td>
@@ -226,14 +218,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="btn-group">
 								<a href="#">
 									<button id="sample_editable_1_new" class="btn green">
-										Ubah 
-									</button>
-								</a>
-							</div>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-										Hapus 
+										Load 
 									</button>
 								</a>
 							</div>

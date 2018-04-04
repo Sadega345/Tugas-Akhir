@@ -132,6 +132,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th>NIDN</th>
 									 <th>Jabatan</th>
 									 <th>Tanggal Pengisian (dd/mm/yyyy)</th>
+									 <th>Aksi</th>
 								 </tr>
 							</thead>
 							<tbody>
@@ -162,6 +163,10 @@ License: You must have a valid license purchased only from themeforest(the above
 									 	<td>421089201421089201</td>
 									 	<td>Ketua Program Studi D3 Manajemen Informatika</td>
 									 	<td>08-09-2017</td>
+									 	<td>
+									 		<a href="">Edit</a>||<a href="">Hapus</a>
+									 		
+									 	</td>
 									 </tr>
 									  <tr>
 									 	<td>2</td>
@@ -169,6 +174,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									 	<td>408097207</td>
 									 	<td>Sekretaris Program Studi D3 Manajemen Informatika</td>
 									 	<td>08-09-2017</td>
+									 	<td>
+									 		<a href="">Edit</a>||<a href="">Hapus</a>
+									 	</td>
 									 </tr>
 									  <tr>
 									 	<td>3</td>
@@ -176,23 +184,12 @@ License: You must have a valid license purchased only from themeforest(the above
 									 	<td>122002078</td>
 									 	<td>Bagian HRD</td>
 									 	<td>08-09-2017</td>
+									 	<td>
+									 		<a href="">Edit</a>||<a href="">Hapus</a>
+									 	</td>
 									 </tr>
 							</tbody>
 							</table>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-										Ubah 
-									</button>
-								</a>
-							</div>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-										Hapus 
-									</button>
-								</a>
-							</div>
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Pengisi_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn green">

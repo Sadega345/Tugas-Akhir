@@ -7,6 +7,11 @@ class EdeUser extends CI_Controller {
 		$this->load->view('Admin/tampilan_gantipassword.php',array('data'=>$data));
 	}
 
+	public function ganti_pwdUser(){
+		$this->load->view('User/GantiPassword/tampilan_gantipassword.php');
+		// echo "Jalan";
+	}
+
 	public function do_hapus($id){
 		$where=array('id'=>$id);
 		$res=$this->model_user->Delete('users',$where);

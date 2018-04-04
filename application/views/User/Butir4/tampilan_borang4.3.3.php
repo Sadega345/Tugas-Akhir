@@ -98,13 +98,13 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="table-toolbar">
 								<div class="row">
 									<div class="col-md-6">
-										<div class="btn-group">
+										<!-- <div class="btn-group">
 											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
+											Load 
 											</button>
 											</a>
-										</div>
+										</div> -->
 									</div>
 									<!-- <div class="col-md-6">
 										<div class="btn-group pull-right">
@@ -124,6 +124,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -209,27 +210,21 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td>2.75</td>
 							 	<td>0.00</td>
 							 	<td>13.25</td>
-			 </tr>
+			 				</tr>
 							</tbody>
 							</table>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-											Ubah 
-									</button>
-								</a>
 							</div>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-											Hapus 
+								<a href="<?php echo base_url()."index.php/Apd_a433_excel/ubah";?>">
+									<button id="sample_editable_1_new" class="btn blue">
+										Ubah 
 									</button>
 								</a>
-							</div>
+							</div>							
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a433_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
-											Export ke Excel 
+									<button id="sample_editable_1_new" class="btn red">
+										Export To Excel
 									</button>
 								</a>
 							</div>

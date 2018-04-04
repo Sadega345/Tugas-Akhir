@@ -99,9 +99,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="#">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
+											Load 
 											</button>
 											</a>
 										</div>
@@ -166,14 +166,14 @@ License: You must have a valid license purchased only from themeforest(the above
 							<?php } ?> -->
 								<tr>
 								 	<td>TS-6</td>
-								 	<td ></td>
+								 	<td>40</td>
 								 	<td></td>
 								 	<td></td>
 								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								 	<td>></td>
+								 	<td>></td>
+								 	<td>2</td>
+								 	<td>30</td>
 								 </tr>	
 								 <tr>
 								 	<td>TS-5</td>
@@ -202,11 +202,11 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td bgcolor="black"></td>
 								 	<td bgcolor="black"></td>
 								 	<td bgcolor="black"></td>
+								 	<td>40</td>
 								 	<td></td>
 								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								 	<td>10</td>
+								 	<td>30</td>
 								 </tr>
 								 <tr>
 								 	<td>TS-2</td>
@@ -284,37 +284,37 @@ License: You must have a valid license purchased only from themeforest(the above
 							<?php } ?> -->
 								<tr>
 								 	<td>TS-4</td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								 	<td>45</td>
+								 	<td>42</td>
+								 	<td>42</td>
+								 	<td>4</td>
+								 	<td>4</td>
+								 	<td>38</td>
 								 </tr>
 								 <tr>
 								 	<td>TS-3</td>
 								 	<td bgcolor="black"></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								 	<td>62</td>
+								 	<td>61</td>
+								 	<td>61</td>
+								 	<td>0</td>
+								 	<td>41</td>
 								 </tr>
 								 <tr>
 								 	<td>TS-2</td>
 								 	<td bgcolor="black"></td>
 								 	<td bgcolor="black"></td>
-								 	<td ></td>
-								 	<td ></td>
-								 	<td></td>
-								 	<td></td>
+								 	<td >43</td>
+								 	<td >41</td>
+								 	<td>37</td>
+								 	<td>27</td>
 								 </tr>
 								 <tr>
 								 	<td>TS-1</td>
 								 	<td bgcolor="black"></td>
 								 	<td bgcolor="black"></td>
 								 	<td bgcolor="black"></td>
-								 	<td></td>
+								 	<td>59</td>
 								 	<td></td>
 								 	
 								 </tr>	
@@ -441,23 +441,16 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tbody>
 							</table>
 							<div class="btn-group">
-								<a href="#>
+								<a href="<?php echo base_url().'index.php/Apd_a313_excel/ubah'; ?>">
 									<button id="sample_editable_1_new" class="btn green">
-											Ubah 
-									</button>
-								</a>
-							</div>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-											Hapus 
+										Ubah 
 									</button>
 								</a>
 							</div>
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a313_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn green">
-											Export ke Excel 
+										Export ke Excel 
 									</button>
 								</a>
 							</div>

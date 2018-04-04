@@ -81,7 +81,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>IDENTITAS PROGRAM STUDI
+								<i class="fa fa-edit"></i>Edit PROGRAM STUDI
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -97,15 +97,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="portlet-body">
 							<div class="table-toolbar">
 								<div class="row">
-									<div class="col-md-6">
-										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
-											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
-											</button>
-											</a>
-										</div>
-									</div>
+									
 									<!-- <div class="col-md-6">
 										<div class="btn-group pull-right">
 											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
@@ -124,23 +116,24 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
-							<table  id="sample_1">
+							<table id="sample_1">
 							<thead>
 								<tr>
 									<th></th>
 									<th></th>
 									<th></th>
-									<th>Kode sesuai kode PPDT</th>
-									<th>Keterangan</th>
+									<!-- <th>Kode sesuai kode PPDT</th> -->
+									<!-- <th>Keterangan</th> -->
+									
 								</tr>
 								<tr>
 									<th>1.</th>
 									<th>Program Studi</th>
 									<th>
-										<input type="text" name="programstudi" value="Diploma Tiga (D3)"> 
-										<input type="" name="" value="57401">
+										<input type="text" name="programstudi" value="Diploma Tiga (D3)" > 
+										Kode sesuai kode PPDT <input type="text" name=""  value="57401" >
 									</th>
-									<!-- <th><input type="text" name="ppdt"></th> -->
+
 								 </tr>
 								 <tr>
 								 	<th>2.</th>
@@ -155,8 +148,11 @@ License: You must have a valid license purchased only from themeforest(the above
 								 <tr>
 								 	<th>4.</th>
 									<th>Perguruan Tinggi</th>
-									<th><input type="text" name="perguruan" value="Universitas Nasional PASIM"></th>
-									<th><input type="text" name="" value="41031"></th>
+									<th>
+										<input type="text" name="perguruan" value="Universitas Nasional PASIM">
+										Kode sesuai kode PPDT<input type="text" name="" readonly="" value="41031" >
+									</th>
+									
 								 </tr>
 								  <tr>
 								  	 <th>5.</th>
@@ -179,7 +175,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 								 <tr>
 								 	<th>6.</th>
-									<th>Bulan dan tahun dimulainya penyelenggaraan PS</th>
+									<th>Bulan dan tahun dimulainya <br>penyelenggaraan PS</th>
 									<th>
 										<input type="text" name="" value=" Agustus">
 										<input type="text" name="" value="2001">
@@ -222,7 +218,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 <tr>
 								 	<th></th>
 									<th>Nilai</th>
-									<th><input type="text" name="nilai" value="C"></th>
+									<th><input type="text" name="nilai" value="265"></th>
 								 </tr>
 								 <tr>
 								 	<th></th>
@@ -232,7 +228,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 <tr>
 								 	<th>9.</th>
 									<th>Alamat PS</th>
-									<th><textarea rows="4" cols="50">Jalan Dakota No. 8A Sukaraja-Bandung</textarea></th>
+									<th><textarea rows="4" cols="20">Jalan Dakota No. 8A Sukaraja-Bandung</textarea></th>
 								 </tr>
 								 <tr>
 								 	<th>10.</th>
@@ -258,22 +254,16 @@ License: You must have a valid license purchased only from themeforest(the above
 							</table>
 							<div class="btn-group">
 								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-										Ubah 
+									<button id="sample_editable_1_new" class="btn blue">
+										Simpan 
 									</button>
 								</a>
 							</div>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-										Hapus 
-									</button>
-								</a>
-							</div>
+							
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Prodi_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
-										Export ke Excel 
+									<button id="sample_editable_1_new" class="btn red">
+										Batal
 									</button>
 								</a>
 							</div>

@@ -126,7 +126,8 @@ License: You must have a valid license purchased only from themeforest(the above
 											<input type="text" class="form-control" name="password">
 										</div>
 									</div>
-									<!-- <div class="row">
+									
+									<div class="row">
 										<div class="form-group">
 											<label>Level</label>
 											<select name="level" class="form-control">
@@ -136,7 +137,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									            <?php } ?>
 											</select>
 										</div>
-									</div> -->
+									</div> 
 									<div class="row">
 										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 									</div>

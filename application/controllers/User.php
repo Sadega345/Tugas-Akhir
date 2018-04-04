@@ -16,4 +16,8 @@ class User extends CI_Controller {
 		redirect('login');
 	}
 
+	function ganti_pwd(){
+		redirect('EdeUser/ganti_pwdUser');
+	}
+
 }

@@ -15,6 +15,10 @@ public function index() {
  $this->load->view('User/Butir4/tampilan_borang4.4.2.php',$data);
  }
 
+ public function ubah(){
+ 	$this->load->view('User/Butir4/edit_borang4.4.2.php');	
+ }
+
 public function export_excel(){
  $data = array( 'title' => ' TABEL DATA BUTIR 4.4.2 : AKTIVITAS MENGAJAR DATA DOSEN TIDAK TETAP ',
  'a442' => $this->apd_a442_model->listing());

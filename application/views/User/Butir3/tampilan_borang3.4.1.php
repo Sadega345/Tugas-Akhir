@@ -99,9 +99,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="#">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
+											Load 
 											</button>
 											</a>
 										</div>
@@ -124,6 +124,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -167,9 +168,11 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td>15.24</td>
 							 	<td>0.00</td>
 							 	<td>0.00</td>
-							 	<td>- memberikan muatan etika dan moral pada materi kurikulum program studi (mata kuliah etika profesi)
-								- menyelenggarakan kegiatan pembinaan oleh koordinator beasiswa PUB
-								- menyelenggaraakan mentoring setiap minggu
+							 	<td>
+							 		<textarea cols="150" width="150">memberikan muatan etika dan moral pada materi kurikulum program studi (mata kuliah etika profesi),
+								menyelenggarakan kegiatan pembinaan oleh koordinator beasiswa PUB,
+								menyelenggaraakan mentoring setiap minggu
+									</textarea>
 								</td>
 							 </tr>
 							 <tr>
@@ -179,8 +182,10 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td>8.57</td>
 							 	<td>0.00</td>
 							 	<td>0.00</td>
-							 	<td>- mengadakan pelatihan yang berkaitan dengan pemrograman
-								- Mengadakan bootcamp (pelatihan) untuk persiapan dunia kerja
+							 	<td>
+							 		<textarea cols="150" width="150">mengadakan pelatihan yang berkaitan dengan pemrograman,
+								Mengadakan bootcamp (pelatihan) untuk persiapan dunia kerja
+								</textarea>
 								</td>
 							 </tr>
 							 <tr>
@@ -190,10 +195,12 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td>17.14</td>
 							 	<td>16.19</td>
 							 	<td>0.00</td>
-							 	<td>- menyelenggarakan mata kuliah TOEFL
-								- Mengadakan kegiatan English club
-								- Mengadakan pelatihan public speaking
-								- Mengadakan kegiatan pelatihan bahasa inggris yang bekerja sama dengan program studi D3 Bahasa Inggris
+							 	<td>
+							 		<textarea cols="150" width="150">menyelenggarakan mata kuliah TOEFL,
+								Mengadakan kegiatan English club,
+								Mengadakan pelatihan public speaking,
+								Mengadakan kegiatan pelatihan bahasa inggris yang bekerja sama dengan program studi D3 Bahasa Inggris
+								</textarea>
 								</td>
 							 </tr>
 							 <tr>
@@ -203,9 +210,11 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td>14.29</td>
 							 	<td>0.00</td>
 							 	<td>0.00</td>
-							 	<td>- penyediaan sarana laboratorium komputer yang memadai
-								- mendorong dosen untuk memanfaatkan teknologi informasi dalam proses pembelajaran
-								- penggunaan aplikasi IT untuk layanan mahasiswa (digital campus)
+							 	<td>
+							 		<textarea cols="150" width="150">penyediaan sarana laboratorium komputer yang memadai,
+								mendorong dosen untuk memanfaatkan teknologi informasi dalam proses pembelajaran,
+								penggunaan aplikasi IT untuk layanan mahasiswa (digital campus)
+								</textarea>
 								</td>
 							 </tr>
 							 <tr>
@@ -215,9 +224,11 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td>12.38</td>
 							 	<td>6.67</td>
 							 	<td>0.00</td>
-							 	<td>- mengadakan pelatihan public speaking
-								- Memperbanyak tugas pembuatan laporan ilmiah (untuk meningkatkan kemampuan komunikasi tertulis)
-								- Memperbanyak presentasi/diskusi dalam kelas (untuk meningkatkan kemampuan komunikasi secara lisan)
+							 	<td>
+							 		<textarea cols="150" width="150">mengadakan pelatihan public speaking,
+								,Memperbanyak tugas pembuatan laporan ilmiah (untuk meningkatkan kemampuan komunikasi tertulis),
+								Memperbanyak presentasi/diskusi dalam kelas (untuk meningkatkan kemampuan komunikasi secara lisan)
+								</textarea>
 								</td>
 							 </tr>	
 							 <tr>
@@ -227,8 +238,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td>11.43</td>
 							 	<td>9.52</td>
 							 	<td>0.00</td>
-							 	<td>- memperbanyak pemberian tugas yang harus dikerjakan dan dipresentasikan secara kelompok
-								- Mengadakan kegiatan Latihan Dasar Kepemimpinan Mahasiswa (LDKM)
+							 	<td>
+							 		<textarea cols="150" width="150">memperbanyak pemberian tugas yang harus dikerjakan dan dipresentasikan secara kelompok,
+								Mengadakan kegiatan Latihan Dasar Kepemimpinan Mahasiswa (LDKM)</textarea>
 								</td>
 							 </tr>	
 							 <tr>
@@ -238,7 +250,11 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td>8.57</td>
 							 	<td>0.00</td>
 							 	<td>0.00</td>
-							 	<td>Mengikutsertakan mahasiswa dalam berbagai kegiatan UKM dan kepengurusan PUB sehingga dapat mengembangkan potensi yang dimiliki oleh mahasiswa tersebut.</td>
+							 	<td>
+							 	<textarea cols="150" width="150">
+							 		Mengikutsertakan mahasiswa dalam berbagai kegiatan UKM dan kepengurusan PUB sehingga dapat mengembangkan potensi yang dimiliki oleh mahasiswa tersebut.
+							 		</textarea>
+							 	</td>
 							 </tr>	
 							 <tr>
 							 	<td colspan="2">Total</td>
@@ -249,24 +265,18 @@ License: You must have a valid license purchased only from themeforest(the above
 							 </tr>
 							</tbody>
 							</table>
+							</div>
 							<div class="btn-group">
-								<a href="#">
+								<a href="<?php echo base_url().'index.php/Apd_a341_excel/ubah'; ?>">
 									<button id="sample_editable_1_new" class="btn green">
 										Ubah 
 									</button>
 								</a>
 							</div>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-										Hapus 
-									</button>
-								</a>
-							</div>
-							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a341_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn green">
-											Export ke Excel 
+										Export To Excel 
 									</button>
 								</a>
 							</div>

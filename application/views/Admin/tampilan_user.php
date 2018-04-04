@@ -136,9 +136,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<th>
 									 Username
 								</th>
-								<th>
+								<!-- <th>
 									 Password
-								</th>
+								</th> -->
 								<th>
 									 Level
 								</th>
@@ -162,9 +162,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td>
 									<?php echo $d['username']; ?>
 								</td>
-								<td>
+								<!-- <td>
 									<?php echo $d['password']; ?>
-								</td>
+								</td> -->
 								<td>
 									<?php echo $d['level']; ?>
 								</td>

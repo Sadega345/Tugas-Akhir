@@ -15,6 +15,10 @@ public function index() {
  $this->load->view('User/Butir3/tampilan_borang3.4.5.php',$data);
  }
 
+ public function ubah(){
+ 	$this->load->view('User/Butir3/edit_borang345.php');
+ }
+
 public function export_excel(){
  $data = array( 'title' => '  TABEL DATA BUTIR 3.4 : EVALUASI LULUSAN',
  'a345' => $this->apd_a345_model->listing());

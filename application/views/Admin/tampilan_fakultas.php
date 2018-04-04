@@ -157,8 +157,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									<?php echo $d['nama_fakultas']; ?>
 								</td>
 								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
+									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>" >Edit</a> ||
+         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>" id="alerthapus">Delete</a>
 								</td>
 							</tr>
 							<?php } ?>

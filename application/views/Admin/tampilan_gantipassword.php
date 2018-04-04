@@ -81,7 +81,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Data User
+								<i class="fa fa-edit"></i>Ganti Password
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -115,58 +115,27 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
-							<table class="table table-striped table-bordered table-hover" id="sample_1">
-							<thead>
-							<tr>
-								<th>
-									No
-								</th>
-								<th>
-									 Id
-								</th>
-								<th>
-									 Username
-								</th>
-								<th>
-									 Password
-								</th>
-								<th>
-									 Level
-								</th>
-								<th>
-									 Aksi
-								</th>
-							</tr>
-							</thead>
-							<tbody>
-							<?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?>
-							<tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['id']; ?>
-								</td>
-								<td>
-									<?php echo $d['username']; ?>
-								</td>
-								<td>
-									<?php echo $d['password']; ?>
-								</td>
-								<td>
-									<?php echo $d['level']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/EdeUser/edit_data/".$d['id'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/EdeUser/do_hapus/".$d['id'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?>
-							</tbody>
-							</table>
+							<form action="" method="POST">
+							<div class="container">
+								<div class="col-md-10">
+									<div class="row">
+										<div class="form-group">
+											<label>Password Lama</label>
+											<input type="password" class="form-control" name="pwdlama">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Password Baru</label>
+											<input type="password" class="form-control" name="pwdbaru">
+										</div>
+									</div>
+									<div class="row">
+										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+									</div>
+								</div>
+							</div>
+							</form>
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

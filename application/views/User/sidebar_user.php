@@ -293,9 +293,30 @@ BEGIN CONTAINER -->
 						</li>
 					</ul>
 				</li>
+				<li>
+					<a href="javascript:;">
+					<i class="icon-settings"></i>
+					<span class="title">Pengaturan User</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="<?php echo base_url(); ?>/index.php/EdeUser/ganti_pwdUser">
+							<span class="badge badge-roundless badge-danger"></span>Ganti Password<br>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li >
+					<a href="javascript:;">
+					<a href="<?php echo base_url(); ?>index.php/Data_dosen_excel">
+						<i class="icon-briefcase"></i>
+						<span class="title">Export Excel</span>
+					</a>
+				</li>
 			</ul>
 		</li>
-
+		
 				
 			
 			<!-- END SIDEBAR MENU -->

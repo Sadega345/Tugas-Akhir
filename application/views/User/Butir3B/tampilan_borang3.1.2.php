@@ -99,9 +99,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="#">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
+											Load 
 											</button>
 											</a>
 										</div>
@@ -124,6 +124,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -224,7 +225,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
-							 	<td></td>
+							 	<td</td>
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
@@ -233,24 +234,18 @@ License: You must have a valid license purchased only from themeforest(the above
 							 </tr>
 							</tbody>
 							</table>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-											Ubah 
-									</button>
-								</a>
 							</div>
 							<div class="btn-group">
-								<a href="#">
+								<a href="<?php echo base_url()'index.php/Apd_a345_excel/ubah'; ?>">
 									<button id="sample_editable_1_new" class="btn green">
-											Hapus 
+										Ubah
 									</button>
 								</a>
 							</div>
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_b312_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn green">
-											Export ke Excel 
+										Export To Excel 
 									</button>
 								</a>
 							</div>
