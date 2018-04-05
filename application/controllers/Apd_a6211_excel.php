@@ -15,6 +15,10 @@ public function index() {
  $this->load->view('User/Butir6/tampilan_borang6.2.1.1.php',$data);
  }
 
+  public function ubah(){
+ 	$this->load->view('User/Butir6/tampilan_borang6.2.1.1.php');
+ }
+
 public function export_excel(){
  $data = array( 'title' => 'TABEL DATA BUTIR 6.2.1 : PEROLEHAN DAN ALOKASI DANA',
  'a6211' => $this->apd_a6211_model->listing());

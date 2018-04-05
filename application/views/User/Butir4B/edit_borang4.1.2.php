@@ -217,7 +217,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</table>
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+								<a href="#">
 									<button id="sample_editable_1_new" class="btn blue">
 										Simpan 
 									</button>

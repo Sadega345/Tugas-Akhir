@@ -170,90 +170,90 @@ License: You must have a valid license purchased only from themeforest(the above
 							<tr>
 							 	<td>1</td>
 							 	<td>Mahasiswa</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="checkbox" name="" class="form-control"></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
 							 </tr>
 							 <tr>
 							 	<td>2</td>
 							 	<td>Kartu Rencana Studi (KRS)</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="checkbox" name="" class="form-control"></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
 							 </tr>
 							  <tr>
 							 	<td>3</td>
 							 	<td>Jadwal Mata Kuliah</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="checkbox" name="" class="form-control"></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
 							 </tr>
 							 <tr>
 							 	<td>4</td>
 							 	<td>Nilai Mata Kuliah</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="checkbox" name="" class="form-control"></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
 							 </tr>
 							 <tr>
 							 	<td>5</td>
 							 	<td>Transkrip Akademik</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="checkbox" name="" class="form-control"></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
 							 </tr>
 							 <tr>
 							 	<td>6</td>
 							 	<td>Lulusan</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="checkbox" name="" class="form-control"></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
 							 </tr>
 							  <tr>
 							 	<td>7</td>
 							 	<td>Dosen</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="checkbox" name="" class="form-control"></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
 							 </tr>
 							  <tr>
 							 	<td>8</td>
 							 	<td>Pegawai</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="checkbox" name="" class="form-control"></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
 							 </tr>
 							  <tr>
 							 	<td>9</td>
 							 	<td>Keuangan</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
 							 	<td>v</td>
 							 </tr>
 							  <tr>
 							 	<td>10</td>
 							 	<td>Inventaris</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="checkbox" name="" class="form-control"></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
 							 </tr>
 							 <tr>
 							 	<td>11</td>
 							 	<td>Perpustakaan</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="checkbox" name="" class="form-control"></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
 							 </tr>
 							 <tr>
 							 	<td colspan="2"></td>
@@ -266,17 +266,17 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tbody>
 							</table>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
+								<a href="<?php echo base_url()."index.php/Apd_a652_excel/ubah";?>">
+									<button id="sample_editable_1_new" class="btn green">
+										Ubah 
 									</button>
 								</a>
 							</div>
 							
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a652_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn red">
-										Batal
+									<button id="sample_editable_1_new" class="btn green">
+										Export To Excel
 									</button>
 								</a>
 							</div>

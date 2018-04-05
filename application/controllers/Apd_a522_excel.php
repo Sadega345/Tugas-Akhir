@@ -15,6 +15,10 @@ public function index() {
  $this->load->view('User/Butir5/tampilan_borang5.2.2.php',$data);
  }
 
+ public function ubah(){
+ 	$this->load->view('User/Butir5/tampilan_borang5.2.2.php');	
+ }
+
 public function export_excel(){
  $data = array( 'title' => ' TABEL DATA BUTIR 5.2.2 : Waktu Pelaksanaan Real Proses Belajar Mengajar',
  'a522' => $this->apd_a522_model->listing());

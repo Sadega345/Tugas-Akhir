@@ -15,6 +15,10 @@ public function index() {
  $this->load->view('User/Butir7B/tampilan_borang7.2.1.php',$data);
  }
 
+  public function ubah(){
+ 	$this->load->view('User/Butir7B/tampilan_borang7.2.1.php');
+ }
+
 public function export_excel(){
  $data = array( 'title' => 'TABEL DATA BUTIR 7.2.1 : KEGIATAN PELAYANAN/PENGABDIAN KEPADA MASYARAKAT',
  'b721' => $this->apd_b721_model->listing());

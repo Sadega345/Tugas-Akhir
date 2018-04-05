@@ -181,53 +181,53 @@ License: You must have a valid license purchased only from themeforest(the above
 							<tr>
 							 	<td>1</td>
 							 	<td>Pustakawan *</td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll" value="1"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll" value="1"></td>
-							 	<td><input type="text" name="" class="form-controll" value="1"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td>1</td>
+							 	<td></td>
+							 	<td>1</td>
+							 	<td>1</td>
+							 	<td></td>
 							 	<td bgcolor="gray"></td>
 							 	<td>Universitas</td>
 							 </tr>
 							 <tr>
 							 	<td>2</td>
 							 	<td>Laboran/ Teknisi/ Analis/ Operator/ Programer</td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll" value="2"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll" value="2"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td>2</td>
+							 	<td></td>
+							 	<td>2</td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
 							 	<td>Program Studi</td>
 							 </tr>
 							 <tr>
 							 	<td>3</td>
 							 	<td>Administrasi</td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll" value="2"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll" value="3"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td>2</td>
+							 	<td></td>
+							 	<td>3</td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
 							 	<td>Program Studi</td>
 							 </tr>
 							 <tr>
 							 	<td>4</td>
 							 	<td>Lainnya</td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll" value="1"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll" value="7"></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td>1</td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td>7</td>
 							 	<td>Universitas</td>
 							 </tr>
 							 <tr>
@@ -245,17 +245,17 @@ License: You must have a valid license purchased only from themeforest(the above
 							</table>
 							</div>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
+								<a href="<?php echo base_url()."index.php/Apd_b42_excel/ubah";?>">
+									<button id="sample_editable_1_new" class="btn green">
+										Ubah 
 									</button>
 								</a>
 							</div>
 							
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_b42_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn red">
-										Batal 
+									<button id="sample_editable_1_new" class="btn green">
+										Export To Export 
 									</button>
 								</a>
 							</div>

@@ -155,23 +155,23 @@ License: You must have a valid license purchased only from themeforest(the above
 							<?php } ?> -->
 							<tr>
 							 	<td>Satu ruang untuk lebih dari 4 dosen</td>
-							 	<td><input type="text" name="" class="form-control" ></td>
-							 	<td><input type="text" name="" class="form-control" ></td>
+							 	<td></td>
+							 	<td></td>
 							 </tr>
 							 <tr>
 							 	<td>Satu ruang untuk 3-4 dosen</td>
-							 	<td><input type="text" name="" class="form-control" ></td>
-							 	<td><input type="text" name="" class="form-control" ></td>
+							 	<td></td>
+							 	<td></td>
 							 </tr>
 							  <tr>
 							 	<td>Satu ruang untuk 2 dosen</td>
-							 	<td><input type="text" name="" class="form-control" ></td>
-							 	<td><input type="text" name="" class="form-control" ></td>
+							 	<td></td>
+							 	<td></td>
 							 </tr>
 							 <tr>
 							 	<td>Satu ruang untuk 1 dosen (bukan pejabat struktural)</td>
-							 	<td><input type="text" name="" class="form-control" value="16"></td>
-							 	<td><input type="text" name="" class="form-control" value="64"></td>
+							 	<td>16</td>
+							 	<td>64</td>
 							 </tr>
 							 <tr>
 							 	<td colspan="2">Total</td>
@@ -181,17 +181,17 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tbody>
 							</table>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
+								<a href="<?php echo base_url()."index.php/Apd_a631_excel/ubah";?>">
+									<button id="sample_editable_1_new" class="btn green">
+										Ubah 
 									</button>
 								</a>
 							</div>
 							
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a631_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn red">
-										Batal 
+									<button id="sample_editable_1_new" class="btn green">
+										Export To Excel 
 									</button>
 								</a>
 							</div>

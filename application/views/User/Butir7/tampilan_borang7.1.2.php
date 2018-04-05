@@ -177,9 +177,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>Nur Achadi, Selly Meliana</td>
 								 	<td>Jurnal Ilmu Komputer Vol. 6 No. 1</td>
 								 	<td>2015</td>
-								 	<td><input type="checkbox" name="" class="form-control"></td>
-								 	<td><input type="checkbox" name="" class="form-control"></td>
-								 	<td><input type="checkbox" name="" class="form-control"></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
 								 </tr>
 								 <tr>
 								 	<td colspan="5" readonly=""></td>
@@ -190,17 +190,17 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tbody>
 							</table>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
+								<a href="<?php echo base_url()."index.php/Apd_a712_excel/ubah";?>">
+									<button id="sample_editable_1_new" class="btn green">
+										Ubah 
 									</button>
 								</a>
 							</div>
 							
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a712_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn red">
-										Batal
+									<button id="sample_editable_1_new" class="btn green">
+										Export To Excel
 									</button>
 								</a>
 							</div>

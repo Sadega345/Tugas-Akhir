@@ -15,6 +15,10 @@ public function index() {
  $this->load->view('User/Butir4/tampilan_borang4.6.1.php',$data);
  }
 
+ public function ubah(){
+ 	$this->load->view('User/Butir4/edit_borang4.6.1.php');	
+ }
+
 public function export_excel(){
  $data = array( 'title' => ' TABEL DATA BUTIR 4.6.1 : STATISTIK TENAGA KEPENDIDIKAN',
  'a461' => $this->apd_a461_model->listing());

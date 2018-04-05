@@ -161,23 +161,23 @@ License: You must have a valid license purchased only from themeforest(the above
 								<tr>
 								 	<td>1</td>
 								 	<td>Pendidikan</td>
-								 	<td><input type="text" name="" class="form-control" value="2298266,46"></td>
-								 	<td><input type="text" name="" class="form-control" value="2466829,158"></td>
-								 	<td><input type="text" name="" class="form-control" value="2920170,734"></td>
+								 	<td>2298266,46</td>
+								 	<td>2466829,158</td>
+								 	<td>2920170,734</td>
 								 </tr>
 								 <tr>
 								 	<td>2</td>
 								 	<td>Penelitian</td>
-								 	<td><input type="text" name="" class="form-control" value="59800"></td>
-								 	<td><input type="text" name="" class="form-control" value="60700"></td>
-								 	<td><input type="text" name="" class="form-control" value="65600"></td>
+								 	<td>59800</td>
+								 	<td>60700</td>
+								 	<td>65600</td>
 								 </tr>
 								 <tr>
 								 	<td>3</td>
 								 	<td>Pengabdian Kepada Masyarakat</td>
-								 	<td><input type="text" name="" class="form-control" value="40200"></td>
-								 	<td><input type="text" name="" class="form-control" value="41300"></td>
-								 	<td><input type="text" name="" class="form-control" value="50600"></td>
+								 	<td>40200</td>
+								 	<td>41300</td>
+								 	<td>50600</td>
 								 </tr>
 								 <tr>
 								 	<td colspan="2">Jumlah Dana Operasional</td>
@@ -188,30 +188,30 @@ License: You must have a valid license purchased only from themeforest(the above
 								  <tr>
 								 	<td>4</td>
 								 	<td>Investasi Prasarana</td>
-								 	<td><input type="text" name="" class="form-control" value="1969942,68"></td>
-								 	<td><input type="text" name="" class="form-control" value="2114424,993"></td>
-								 	<td><input type="text" name="" class="form-control" value="2503003,486"></td>
+								 	<td>1969942,68</td>
+								 	<td>2114424,993</td>
+								 	<td>2503003,486</td>
 								 </tr>
 								 <tr>
 								 	<td>5</td>
 								 	<td>Investasi Sarana</td>
-								 	<td><input type="text" name="" class="form-control" value="1313295,12"></td>
-								 	<td><input type="text" name="" class="form-control" value="1409616,662"></td>
-								 	<td><input type="text" name="" class="form-control" value="1668668,991"></td>
+								 	<td>1313295,12</td>
+								 	<td>1409616,662</td>
+								 	<td>1668668,991</td>
 								 </tr>
 								 <tr>
 								 	<td>6</td>
 								 	<td>Investasi SDM</td>
-								 	<td><input type="text" name="" class="form-control" value="656647,56"></td>
-								 	<td><input type="text" name="" class="form-control" value="704808,331"></td>
-								 	<td><input type="text" name="" class="form-control" value="834334,495"></td>
+								 	<td>656647,56</td>
+								 	<td>704808,331</td>
+								 	<td>834334,495</td>
 								 </tr>
 								 <tr>
 								 	<td>7</td>
 								 	<td>Lain-lain</td>
-								 	<td><input type="text" name="" class="form-control"></td>
-								 	<td><input type="text" name="" class="form-control"></td>
-								 	<td><input type="text" name="" class="form-control"></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
 								 </tr>
 								  <tr>
 								 	<td colspan="2">Jumlah Dana untuk Investasi</td>
@@ -234,17 +234,17 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tbody>
 							</table>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
+								<a href="<?php echo base_url()."index.php/Apd_a6212_excel/ubah";?>">
+									<button id="sample_editable_1_new" class="btn green">
+										Ubah 
 									</button>
 								</a>
 							</div>
 							
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a6212_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn red">
-										Batal 
+									<button id="sample_editable_1_new" class="btn green">
+										Export To Excel 
 									</button>
 								</a>
 							</div>

@@ -179,56 +179,56 @@ License: You must have a valid license purchased only from themeforest(the above
 							<?php } ?> -->
 							<tr>
 							 	<td>1</td>
-							 	<td><input type="text" name="" value="Pustakawan*" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control" value="1"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control" value="1"></td>
-							 	<td><input type="text" name="" class="form-control" value="1"></td>
-							 	<td><input type="text" name="" class="form-control" ></td>
+							 	<td>Pustakawan</td>
+							 	<td></td>
+							 	<td></td>
+							 	<td>1</td>
+							 	<td></td>
+							 	<td>1</td>
+							 	<td>1</td>
+							 	<td></td>
 							 	<td bgcolor="gray"></td>
-							 	<td><input type="text" name="" class="form-control" value="Universitas"></td>
+							 	<td>Universitas</td>
 							 </tr>
 							 <tr>
 							 	<td>2</td>
-							 	<td><input type="text" name="" value="Laboran/Teknisi/Analisis/Operator/Programer" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control" value="2"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control" value="2"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control" value="Program Studi"></td>
+							 	<td>Laboran/Teknisi/Analisis/Operator/Programer</td>
+							 	<td></td>
+							 	<td></td>
+							 	<td>2</td>
+							 	<td></td>
+							 	<td>2</td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td>Program Studi</td>
 							 </tr>
 							 <tr>
 							 	<td>3</td>
-							 	<td><input type="text" name="" class="form-control" value="Administrasi"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control" value="3"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control" value="3"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control" value="Program Studi"></td>
+							 	<td>Administrasi</td>
+							 	<td></td>
+							 	<td></td>
+							 	<td>3</td>
+							 	<td></td>
+							 	<td>3</td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td>Program Studi</td>
 							 </tr>
 							 </tr>
 							 <tr>
 							 	<td>4</td>
-							 	<td><input type="text" name="" class="form-control" value="Lainnya"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control" value="1"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control" value="7"></td>
-							 	<td><input type="text" name="" class="form-control" value="Universitas"></td>
+							 	<td><input type="text" name="" class="form-control" value="">Lainnya</td>
+							 	<td></td>
+							 	<td></td>
+							 	<td>1</td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td>7</td>
+							 	<td>Universitas</td>
 							 </tr>
 							 <tr>
 							 	<td colspan="2">Total</td>
@@ -245,16 +245,16 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tbody>
 							</table>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
+								<a href="<?php echo base_url()."index.php/Apd_a461_excel/ubah";?>">
+									<button id="sample_editable_1_new" class="btn green">
+										Ubah 
 									</button>
 								</a>
 							</div>
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a461_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn red">
-										Batal 
+									<button id="sample_editable_1_new" class="btn green">
+										Export To Excel 
 									</button>
 								</a>
 							</div>

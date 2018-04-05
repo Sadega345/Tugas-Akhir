@@ -155,33 +155,33 @@ License: You must have a valid license purchased only from themeforest(the above
 							<?php } ?> -->
 								<tr>
 								 	<td>Buku Teks dan handbook</td>
-								 	<td><input type="text" name="" class="form-control" value="620"></td>
-								 	<td><input type="text" name="" class="form-control" value="670"></td>
+								 	<td>620</td>
+								 	<td>670</td>
 								 </tr>
 								 <tr>
 								 	<td>Modul Praktikum / Praktek</td>
-								 	<td><input type="text" name="" class="form-control" value="30"></td>
-								 	<td><input type="text" name="" class="form-control" value="60"></td>
+								 	<td>30</td>
+								 	<td>60</td>
 								 </tr>
 								  <tr>
 								 	<td>Jurnal yang terakreditasi oleh lembaga resmi (Dikti. LIPI, dll).</td>
-								 	<td><input type="text" name="" class="form-control" value="4"></td>
-								 	<td><input type="text" name="" class="form-control" value="4"></td>
+								 	<td>4</td>
+								 	<td>4</td>
 								 </tr>
 								 <tr>
 								 	<td>Jurnal Internasional (termasuk e-journal)</td>
-								 	<td><input type="text" name="" class="form-control" value="2"></td>
-								 	<td><input type="text" name="" class="form-control" ></td>
+								 	<td>2</td>
+								 	<td></td>
 								 </tr>
 								 <tr>
 								 	<td>Majalah Ilmiah</td>
-								 	<td><input type="text" name="" class="form-control" value="12"></td>
-								 	<td><input type="text" name="" class="form-control" ></td>
+								 	<td>12</td>
+								 	<td></td>
 								 </tr>
 								  <tr>
 								 	<td>Prosiding</td>
-								 	<td><input type="text" name="" class="form-control" value="12"></td>
-								 	<td><input type="text" name="" class="form-control" ></td>
+								 	<td>12</td>
+								 	<td></td>
 								 </tr>
 								 <tr>
 								 	<td>Total</td>
@@ -191,17 +191,17 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tbody>
 							</table>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
+								<a href="<?php echo base_url()."index.php/Apd_a641_excel/ubah";?>">
+									<button id="sample_editable_1_new" class="btn green">
+										Ubah 
 									</button>
 								</a>
 							</div>
 							
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a641_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn red">
-										Batal
+									<button id="sample_editable_1_new" class="btn green">
+										Export To Excel
 									</button>
 								</a>
 							</div>

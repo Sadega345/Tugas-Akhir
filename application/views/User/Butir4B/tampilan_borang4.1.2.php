@@ -184,50 +184,50 @@ License: You must have a valid license purchased only from themeforest(the above
 								<tr>
 								 	<td>1</td>
 								 	<td>Banyaknya dosen tugas belajar S2/Sp-1</td>
-								 	<td><input type="text" name="" class="form-controll" value="3"></td>
-								 	<td><input type="text" name="" class="form-controll" value="3"></td>
-								 	<td><input type="text" name="" class="form-controll"></td>
-								 	<td><input type="text" name="" class="form-controll"></td>
-								 	<td><input type="text" name="" class="form-controll"></td>
-								 	<td><input type="text" name="" class="form-controll"></td>
-								 	<td><input type="text" name="" class="form-controll"></td>
-								 	<td><input type="text" name="" class="form-controll"></td>
-								 	<td><input type="text" name="" class="form-controll"></td>
-								 	<td><input type="text" name="" class="form-controll"></td>
-								 	<td><input type="text" name="" class="form-controll"></td>
+								 	<td>3</td>
+								 	<td>3</td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
 								 	<td>3</td>
 								 </tr>
 								  <tr>
 								 	<td>2</td>
 								 	<td>Banyaknya dosen tugas belajar S3/Sp-2</td>
-								 	<td><input type="text" name="" class="form-controll" value="1"></td>
-								 	<td><input type="text" name="" class="form-controll" value="1"></td>
-								 	<td><input type="text" name="" class="form-controll"></td>
-								 	<td><input type="text" name="" class="form-controll"></td>
-								 	<td><input type="text" name="" class="form-controll"></td>
-								 	<td><input type="text" name="" class="form-controll"></td>
-								 	<td><input type="text" name="" class="form-controll"></td>
-								 	<td><input type="text" name="" class="form-controll"></td>
-								 	<td><input type="text" name="" class="form-controll"></td>
-								 	<td><input type="text" name="" class="form-controll"></td>
-								 	<td><input type="text" name="" class="form-controll"></td>
+								 	<td>1</td>
+								 	<td>1</td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
+								 	<td></td>
 								 	<td>1</td>
 								 </tr>
 							</tbody>
 							</table>
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
+								<a href="<?php echo base_url()."index.php/Apd_b412_excel/ubah";?>">
+									<button id="sample_editable_1_new" class="btn green">
+										Ubah 
 									</button>
 								</a>
 							</div>
 							
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_b412_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn red">
-										Batal 
+									<button id="sample_editable_1_new" class="btn green">
+										Export To Excel 
 									</button>
 								</a>
 							</div>

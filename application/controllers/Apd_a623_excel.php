@@ -15,6 +15,10 @@ public function index() {
  $this->load->view('User/Butir6/tampilan_borang6.2.3.php',$data);
  }
 
+public function ubah(){
+ 	$this->load->view('User/Butir6/tampilan_borang6.2.3.php');
+ }
+
 public function export_excel(){
  $data = array( 'title' => 'TABEL DATA BUTIR 6.2.3 : DANA PELAYANAN/PENGABDIAN KEPADA MASYARAKAT',
  'a623' => $this->apd_a623_model->listing());

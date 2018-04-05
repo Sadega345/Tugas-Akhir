@@ -161,24 +161,24 @@ License: You must have a valid license purchased only from themeforest(the above
 							<tr>
 							 	<td>1</td>
 							 	<td>Manajemen Informatika</td>
-							 	<td><input type="text" name="" class="form-control" value="2398266,46"></td>
-							 	<td><input type="text" name="" class="form-control" value="2567329,15"></td>
-							 	<td><input type="text" name="" class="form-control" value="3036370,73"></td>
+							 	<td>2398266,46</td>
+							 	<td>2567329,15</td>
+							 	<td>3036370,73</td>
 							 </tr>
 							</tbody>
 							</table>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
+								<a href="<?php echo base_url()."index.php/Apd_b6113_excel/ubah";?>">
+									<button id="sample_editable_1_new" class="btn green">
+										Ubah 
 									</button>
 								</a>
 							</div>
 							
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_b6113_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn red">
-										Batal
+									<button id="sample_editable_1_new" class="btn green">
+										Export To Excel
 									</button>
 								</a>
 							</div>

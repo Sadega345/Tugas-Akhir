@@ -162,17 +162,17 @@ License: You must have a valid license purchased only from themeforest(the above
 							<?php } ?> -->
 							<tr>
 							 	<td>1</td>
-							 	<td><input type="text" name="" class="form-control" value="ERNA HIKMAWATI"></td>
-							 	<td><input type="text" name="" value="18" class="form-control"></td>
-							 	<td><input type="text" name="" value="3" class="form-control"></td>
+							 	<td>ERNA HIKMAWATI</td>
+							 	<td>18</td>
+							 	<td>3</td>
 							 	
 							 </tr>
 							</tbody>
 							</table>
 							<div class="btn-group">
-								<a href="#">
+								<a href="<?php echo base_url()."index.php/Apd_a541_excel/ubah";?>">
 									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
+										Ubah 
 									</button>
 								</a>
 							</div>
@@ -180,7 +180,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a541_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
-										Batal 
+										Export To Excel 
 									</button>
 								</a>
 							</div>

@@ -191,50 +191,50 @@ License: You must have a valid license purchased only from themeforest(the above
 							 <tr>
 							 	<td>1</td>
 							 	<td>Asisten Ahli</td>
-							 	<td><input type="text" name="" value="5" class="form-controll"></td>
-							 	<td><input type="text" name="" value="5" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
+							 	<td>5</td>
+							 	<td>5</td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
 							 </tr>
 							 <tr>
 							 	<td>2</td>
 							 	<td>Lektor</td>
-							 	<td><input type="text" name="" value="1" class="form-controll"></td>
-							 	<td><input type="text" name="" value="1" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
+							 	<td>1</td>
+							 	<td>1</td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
 							 </tr>
 							 <tr>
 							 	<td>3</td>
 							 	<td>Lektor Kepala</td>
-							 	<td><input type="text" name="" value="0" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
+							 	<td>0</td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
 							 </tr>
 							  <tr>
 							 	<td>4</td>
 							 	<td>Guru Besar/Profesor</td>
-							 	<td><input type="text" name="" value="0" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
+							 	<td>0</td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
 							 </tr>
 							 <tr>
 							 	<td></td>
@@ -263,38 +263,38 @@ License: You must have a valid license purchased only from themeforest(the above
 							  <tr>
 							 	<td>1</td>
 							 	<td>S1</td>
-							 	<td><input type="text" name="" class="form-controll" value="1"></td>
-							 	<td><input type="text" name="" class="form-controll" value="1"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
+							 	<td>1</td>
+							 	<td>1</td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
 							 </tr>
 							 <tr>
 							 	<td>2</td>
 							 	<td>S2/Profesi/Sp-1</td>
-							 	<td><input type="text" name="" class="form-controll" value="7"></td>
-							 	<td><input type="text" name="" class="form-controll" value="7"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
+							 	<td>7</td>
+							 	<td>7</td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
 							 </tr>
 							 <tr>
 							 	<td>3</td>
 							 	<td>S3/Sp-2</td>
-							 	<td><input type="text" name="" value="0"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
+							 	<td>0</td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
 							 </tr>
 							 <tr>
 							 	<td></td>
@@ -312,17 +312,17 @@ License: You must have a valid license purchased only from themeforest(the above
 							</table>
 							</div>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
+								<a href="<?php echo base_url()."index.php/Apd_b411_excel/ubah";?>">
+									<button id="sample_editable_1_new" class="btn green">
+										Ubah 
 									</button>
 								</a>
 							</div>
 							
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_b411_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn red">
-										Batal 
+									<button id="sample_editable_1_new" class="btn green">
+										Export To Excel 
 									</button>
 								</a>
 							</div>

@@ -162,23 +162,23 @@ License: You must have a valid license purchased only from themeforest(the above
 							<tr>
 							 	<td rowspan="4">Usaha Sendiri</td>
 							 	<td>Beasiswa Yayasan</td>
-							 	<td><input type="text" name="" class="form-control" value="823200"></td>
-							 	<td><input type="text" name="" class="form-control" value="537600"></td>
-							 	<td><input type="text" name="" class="form-control" value="529200"></td>
+							 	<td>823200</td>
+							 	<td>537600</td>
+							 	<td>529200</td>
 							 	<td>1890000</td>
 							 </tr>
 							 <tr>
 							 	<td>Hibah Yayasan</td>
-							 	<td><input type="text" name="" class="form-control" value="5000000"></td>
-							 	<td><input type="text" name="" class="form-control" value="5000000"></td>
-							 	<td><input type="text" name="" class="form-control" value="0"></td>
+							 	<td>5000000</td>
+							 	<td>5000000</td>
+							 	<td>0</td>
 							 	<td>10000000</td>
 							 </tr>
 							 <tr>
 							 	<td>Hibah Unit Usaha(PT. Pasim Sentra Utama)</td>
-							 	<td><input type="text" name="" class="form-control" value="5000000"></td>
-							 	<td><input type="text" name="" class="form-control" value="5000000"></td>
-							 	<td><input type="text" name="" class="form-control" value="0"></td>
+							 	<td>5000000</td>
+							 	<td>5000000</td>
+							 	<td>0</td>
 							 	<td>10000000</td>
 							 </tr>
 							  <tr>
@@ -191,23 +191,23 @@ License: You must have a valid license purchased only from themeforest(the above
 							 <tr>
 							 	<td rowspan="4">Mahasiswa</td>
 							 	<td>Pendaftaran</td>
-							 	<td><input type="text" name="" class="form-control" value="1250"></td>
-							 	<td><input type="text" name="" class="form-control" value="2750"></td>
-							 	<td><input type="text" name="" class="form-control" value="3250"></td>
+							 	<td>1250</td>
+							 	<td>2750</td>
+							 	<td>3250</td>
 							 	<td>7250</td>
 							 </tr>
 							 <tr>
 							 	<td>Biaya Registrasi</td>
-							 	<td><input type="text" name="" class="form-control" value="10750"></td>
-							 	<td><input type="text" name="" class="form-control" value="23650"></td>
-							 	<td><input type="text" name="" class="form-control" value="27950"></td>
+							 	<td>10750</td>
+							 	<td>23650</td>
+							 	<td>27950</td>
 							 	<td>62350</td>
 							 </tr>
 							 <tr>
 							 	<td>Biaya Kuliah</td>
-							 	<td><input type="text" name="" class="form-control" value="21000"></td>
-							 	<td><input type="text" name="" class="form-control" value="46200"></td>
-							 	<td><input type="text" name="" class="form-control" value="54600"></td>
+							 	<td>21000</td>
+							 	<td>46200</td>
+							 	<td>54600</td>
 							 	<td>121800</td>
 							 </tr>
 							  <tr>
@@ -219,10 +219,10 @@ License: You must have a valid license purchased only from themeforest(the above
 							 </tr>
 							 <tr>
 							 	<td rowspan="2">Pemerintah</td>
-							 	<td><input type="text" name="" class="form-control" ></td>
-							 	<td><input type="text" name="" class="form-control" ></td>
-							 	<td><input type="text" name="" class="form-control" ></td>
-							 	<td><input type="text" name="" class="form-control" ></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
 							 	<td>0</td>
 							 </tr>
 							  <tr>
@@ -235,16 +235,16 @@ License: You must have a valid license purchased only from themeforest(the above
 							 <tr>
 							 	<td rowspan="3">Sumber Lain</td>
 							 	<td>Alumni</td>
-							 	<td><input type="text" name="" class="form-control" value="1288884"></td>
-							 	<td><input type="text" name="" class="form-control" value="1166953.67"></td>
-							 	<td><input type="text" name="" class="form-control" value="1062653,78"></td>
+							 	<td>1288884</td>
+							 	<td>1166953.67</td>
+							 	<td>1062653,78</td>
 							 	<td>3518491.45</td>
 							 </tr>
 							 <tr>
 							 	<td>Hibah Penelitian</td>
-							 	<td><input type="text" name="" class="form-control" value="35800"></td>
-							 	<td><input type="text" name="" class="form-control" value="39700"></td>
-							 	<td><input type="text" name="" class="form-control" value="44600"></td>
+							 	<td>35800</td>
+							 	<td>39700</td>
+							 	<td>44600</td>
 							 	<td>120100</td>
 							 </tr>
 							  <tr>
@@ -264,8 +264,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tbody>
 							</table>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
+								<a href="<?php echo base_url()."index.php/Apd_a6211_excel/ubah";?>">
+									<button id="sample_editable_1_new" class="btn green">
 										Ubah 
 									</button>
 								</a>
@@ -273,7 +273,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a6211_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn red">
+									<button id="sample_editable_1_new" class="btn green">
 										Batal
 									</button>
 								</a>

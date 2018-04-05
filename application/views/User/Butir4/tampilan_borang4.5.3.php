@@ -171,27 +171,27 @@ License: You must have a valid license purchased only from themeforest(the above
 							<?php } ?> -->
 							<tr>
 							 	<td>1</td>
-							 	<td><input type="text" name="" value="Erna Hikmawati" class="form-control"></td>
-							 	<td><input type="text" name="" value="Peningkatan Kemampuan Kapasitas Manajemen Keuangan Koperasi Tunas Harapan Berbasis Aplikasi Komputer" class="form-control"></td>
-							 	<td><input type="text" name="" value="Kec. Sindang Kerta Kab. Bandung Barat" class="form-control"></td>
-							 	<td><input type="text" name="" value="2014" class="form-control"></td>
-							 	<td><input type="checkbox" name="" class="form-control"></td>
-							 	<td><input type="checkbox" name="" class="form-control"></td>
+							 	<td>Erna Hikmawati</td>
+							 	<td>Peningkatan Kemampuan Kapasitas Manajemen Keuangan Koperasi Tunas Harapan Berbasis Aplikasi Komputer</td>
+							 	<td>Kec. Sindang Kerta Kab. Bandung Barat</td>
+							 	<td>2014</td>
+							 	<td></td>
+							 	<td></td>
 							 </tr>
 							</tbody>
 							</table>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
+								<a href="<?php echo base_url()."index.php/Apd_a453_excel/ubah";?>">
+									<button id="sample_editable_1_new" class="btn green">
+										Ubah 
 									</button>
 								</a>
 							</div>
 							
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a453_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn red">
-										Batal 
+									<button id="sample_editable_1_new" class="btn green">
+										Export To Excel 
 									</button>
 								</a>
 							</div>

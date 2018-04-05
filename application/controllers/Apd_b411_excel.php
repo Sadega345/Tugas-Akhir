@@ -15,6 +15,10 @@ public function index() {
  $this->load->view('User/Butir4B/tampilan_borang4.1.1.php',$data);
  }
 
+ public function ubah(){
+ 	$this->load->view('User/Butir4B/tampilan_borang4.1.1.php');
+ }
+
 public function export_excel(){
  $data = array( 'title' => 'TABEL DATA BUTIR 4.1.1 : SUMBER DAYA MANUSIA',
  'b411' => $this->apd_b411_model->listing());

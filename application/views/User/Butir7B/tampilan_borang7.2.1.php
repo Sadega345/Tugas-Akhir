@@ -166,11 +166,11 @@ License: You must have a valid license purchased only from themeforest(the above
 								<tr>
 								 	<td>1</td>
 								 	<td>Manajemen Informatika D3</td>
-								 	<td><input type="text" name="" class="form-control" value="6"></td>
-								 	<td><input type="text" name="" class="form-control" value="6"></td>
-								 	<td><input type="text" name="" class="form-control" value="6"></td>
-								 	<td><input type="text" name="" class="form-control" value="40.2"></td>
-								 	<td><input type="text" name="" class="form-control" value="41.3"></td>
+								 	<td>6</td>
+								 	<td>6</td>
+								 	<td>6</td>
+								 	<td>40.2</td>
+								 	<td>41.3</td>
 								 	<td>50.6</td>
 								 </tr>	
 								  <tr>
@@ -186,9 +186,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tbody>
 							</table>
 							<div class="btn-group">
-								<a href="#">
+								<a href="<?php echo base_url()."index.php/Apd_b721_excel/ubah";?>">
 									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
+										Ubah 
 									</button>
 								</a>
 							</div>
@@ -196,7 +196,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_b721_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
-										Batal
+										Export To Excel
 									</button>
 								</a>
 							</div>

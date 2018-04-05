@@ -15,6 +15,10 @@ public function index() {
  $this->load->view('User/Butir5/tampilan_borang5.5.2.php',$data);
  }
 
+  public function ubah(){
+ 	$this->load->view('User/Butir5/tampilan_borang5.5.2.php');	
+ }
+
 public function export_excel(){
  $data = array( 'title' => 'TABEL DATA BUTIR 5.5.2 : Pelaksanaan pembimbingan karya/tugas akhir',
  'a552' => $this->apd_a552_model->listing());

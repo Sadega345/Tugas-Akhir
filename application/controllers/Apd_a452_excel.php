@@ -15,6 +15,10 @@ public function index() {
  $this->load->view('User/Butir4/tampilan_borang4.5.2.php',$data);
  }
 
+ public function ubah(){
+ 	$this->load->view('User/Butir4/edit_borang4.5.2.php');	
+ }
+
 public function export_excel(){
  $data = array( 'title' => ' TABEL DATA BUTIR 4.5.2 : PENINGKATAN KEMAMPUAN DOSEN TETAP MELALUI TUGAS BELAJAR',
  'a452' => $this->apd_a452_model->listing());

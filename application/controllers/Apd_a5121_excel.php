@@ -15,6 +15,10 @@ public function index() {
  $this->load->view('User/Butir5/tampilan_borang5.1.2.1.php',$data);
  }
 
+ public function ubah(){
+ 	$this->load->view('User/Butir5/tampilan_borang5.1.2.1.php');	
+ }
+
 public function export_excel(){
  $data = array( 'title' => ' TABEL DATA BUTIR 5.1.2.1 : STRUKTUR KURIKULUM BERDASARKAN URUTAN MK',
  'a5121' => $this->apd_a5121_model->listing());

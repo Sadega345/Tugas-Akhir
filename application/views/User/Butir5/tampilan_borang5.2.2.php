@@ -128,39 +128,39 @@ License: You must have a valid license purchased only from themeforest(the above
 							<thead>
 								<tr>
 									 <td>Teori</td>
-									 <td><input type="text" name="" value="613"></td>
+									 <td>613</td>
 									 <td>Jam per paket program</td>
 								 </tr>
 								 <tr>
 									 <td>Praktek</td>
-									 <td><input type="text" name=""  value="1600"></td>
+									 <td>1600</td>
 									 <td>Jam per paket program</td>
 								 </tr>
 								 <tr>
 									 <td>Praktikum</td>
-									 <td><input type="text" name=""  value="293"></td>
+									 <td>293</td>
 									 <td>Jam per paket program</td>
 								 </tr>
 								 <tr>
 									 <td>Praktek Kerja lapangan</td>
-									 <td><input type="text" name=""  value="180"></td>
+									 <td>180</td>
 									 <td>Jam per paket program</td>
 								 </tr>
 							</thead>
 							</table>
 							<br><br>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
+								<a href="<?php echo base_url()."index.php/Apd_a522_excel/ubah";?>">
+									<button id="sample_editable_1_new" class="btn green">
+										Ubah 
 									</button>
 								</a>
 							</div>
 							
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a522_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn red">
-										Batal
+									<button id="sample_editable_1_new" class="btn green">
+										Export To Excel
 									</button>
 								</a>
 							</div>
