@@ -171,7 +171,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td class="center">
 									<a href="<?php echo base_url()."index.php/CrudUser/edit_data/".$d['id'];?>">Edit</a> ||
          							<a href="<?php echo base_url()."index.php/CrudUser/do_hapus/".$d['id'];?>">Delete</a> ||
-         							<a href="#">Edit Permission</a>
+         							<a href="<?php echo base_url()."index.php/CrudRole/tambah/".$d['id'];?>">Tambah Role</a>
 								</td>
 							</tr>
 							<?php } ?>

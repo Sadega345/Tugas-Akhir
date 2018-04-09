@@ -81,7 +81,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Data User
+								<i class="fa fa-edit"></i>Data Permission
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -105,60 +105,27 @@ License: You must have a valid license purchased only from themeforest(the above
 									
 								</div>
 							</div>
-							<form action="<?php echo base_url()."index.php/CrudUser/do_tambah"; ?>" method="POST">
+							<form action="<?php echo base_url()."index.php/CrudRole/do_tambah"; ?>" method="POST">
 							<div class="container">
 								<div class="col-md-10">
 									<div class="row">
 										<div class="form-group">
-											<label>Id</label>
-											<input type="text" class="form-control" name="id">
+											<label>Id Permission</label>
+											<input type="text" class="form-control" name="idrole">
 										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Username</label>
-											<input type="text" class="form-control" name="username">
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Password</label>
-											<input type="text" class="form-control" name="password">
-										</div>
-									</div>
-									
-									<div class="row">
-										<div class="form-group">
-											<label>Level</label>
-											<select name="level" class="form-control">
-												<option disabled selected>Level</option>
-												<?php foreach($data as $d) { ?>
-									                <option value="<?php echo $d['level'];?>"><?php echo $d['level'];?></option>
-									            <?php } ?>
-											</select>
-										</div>
-									</div> 
-									<!-- <div class="caption">
-										<i class="fa fa-edit"></i>Permission
-									</div>
-									<div class="row">
 										<div class="form-group">
 											<label>Butir 3</label>
 											<input type="checkbox" class="form-control" value="akses1" name="butir[]">
 										</div>
-									</div>
-									<div class="row">
 										<div class="form-group">
 											<label>Butir 4</label>
 											<input type="checkbox" class="form-control" value="akses2" name="butir[]">
 										</div>
-									</div>
-									<div class="row">
 										<div class="form-group">
 											<label>Butir 5</label>
 											<input type="checkbox" class="form-control" value="akses3" name="butir[]">
 										</div>
-									</div> -->
+									</div>
 									<div class="row">
 										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 									</div>

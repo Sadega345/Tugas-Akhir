@@ -16,7 +16,10 @@ class CrudUser extends CI_Controller {
 		$id=$_POST['id'];
 		$username=$_POST['username'];
 		$password=$_POST['password'];
-		$level='user';
+		// $permission=$_POST['butir'];
+		// $roleid=implode(',', $permission);
+		$level=$_POST['user'];
+		$idrole=$_POST['idrole'];
 		$data_insert=array(
 			'id'=>$id,
 			'username'=>$username,
@@ -29,6 +32,9 @@ class CrudUser extends CI_Controller {
 		}else {
 			alert('Gagal Insert');
 		}
+		print_r($_POST['butir']);
+		
+		echo $roleid;
 	}
 
 	public function do_hapus($id){
