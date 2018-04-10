@@ -16,21 +16,16 @@ class Model_login extends CI_model {
 		$return = $this->db->get('');
 		if($return->num_rows() > 0 ){
 			foreach ($return->result() as $row) {
-				if($row->level=="admin"){
+				if($row->username=="admin" || $row->password=="admin"){
 					$sess = array('username' => $row->username,
 					   			'password' => $row->password);
 					$this->session->set_userdata( $sess );
 					redirect('Admin');
-				}else if($row->level=="user"){
+				}else if($row->username=="akademik" || $row->password=="akademik"){
 					$sess = array('username' => $row->username,
 					   			'password' => $row->password);
 					$this->session->set_userdata( $sess );
 					redirect('User');
-				}else if($row->level=="users"){
-					$sess = array('username' => $row->username,
-					   			'password' => $row->password);
-					$this->session->set_userdata( $sess );
-					redirect('Users');
 				}
 				
 			}
