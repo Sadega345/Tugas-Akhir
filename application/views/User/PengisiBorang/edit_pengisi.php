@@ -102,64 +102,51 @@ License: You must have a valid license purchased only from themeforest(the above
 											
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
+									
 								</div>
 							</div>
-							<form action="" method="POST">
+							<form action="<?php echo base_url().'index.php/Pengisi_excel/do_edit'; ?>" method="POST">
 							<div class="container">
 								<div class="col-md-10">
 									<div class="row">
 										<div class="form-group">
 											<label>Id</label>
-											<input type="text" class="form-control" name="id">
+											<input type="text" class="form-control" name="id"  value="<?php echo $id; ?>" readonly="">
 										</div>
 									</div>
 									<div class="row">
 										<div class="form-group">
 											<label>Nama</label>
-											<input type="text" class="form-control" name="nama">
+											<input type="text" class="form-control" name="nama" value="<?php echo $nama; ?>">
 										</div>
 									</div>
 									<div class="row">
 										<div class="form-group">
 											<label>NIDN</label>
-											<input type="text" class="form-control" name="nidn">
+											<input type="text" class="form-control" name="nidn" value="<?php echo $nidn; ?>">
 										</div>
 									</div>
 									<div class="row">
 										<div class="form-group">
 											<label>Jabatan</label>
-											<input type="text" class="form-control" name="jabatan">
+											<input type="text" class="form-control" name="jabatan" value="<?php echo $jabatan; ?>">
 										</div>
 									</div>
 									<div class="row">
 										<div class="form-group">
-											<label>Tanggal lahir (dd/mm/yyyy)</label>
-											<input type="date" class="form-control" name="tgllahir">
+											<label>Tanggal Pengisian</label>
+											<input type="date" class="form-control" name="tglpengisian" value="<?php echo $tgl_pengisian; ?>">
 										</div>
 									</div>
 									<div class="row">
 										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+										<form action="<?php echo base_url()."index.php/Pengisi_excel"; ?>" method="POST">
+											<button type="submit" class="btn btn-danger" name="back">Cancel</button>
+										</form>
 									</div>
 								</div>
 							</div>
 							</form>
-							
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->
