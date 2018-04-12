@@ -159,28 +159,59 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<?php 
+							<!-- <?php 
 								$no=1; 
 								foreach ($data as $d ) { 
-							?>
+							?> -->
+							<!-- <tr class="odd gradeX">
+								<td>
+									<?php echo $no++; ?>
+								</td>
+								<td>
+									 <?php echo $d['kode_fakultas']; ?>
+								</td>
+								<td>
+									<?php echo $d['nama_fakultas']; ?>
+								</td>
+								<td class="center">
+									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
+         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
+								</td>
+							</tr>
+							<?php } ?> -->
 							<tr align="center">
 								 	<tr>
-									 	<td><?php echo $no++; ?></td>
-									 	<td><?php echo $d['NAMA_DOSEN']; ?></td>
-									 	<td><?php echo $d['NIDN']; ?></td>
-									 	<td><?php echo $d['TGL_LHR']; ?></td>
-									 	<td><?php echo $d['NM_JAB_AKD']; ?></td>
-									 	<td><?php echo $d['GELAR_S1']; ?></td>
-									 	<td><?php echo $d['ASAL_PT_S1']; ?></td>
-									 	<td><?php echo $d['BID_KEAHLIAN_S1']; ?></td>
-									 	<td><?php echo $d['GELAR_S2']; ?></td>
-									 	<td><?php echo $d['ASAL_PT_S2']; ?></td>
-									 	<td><?php echo $d['BID_KEAHLIAN_S2']; ?></td>
-									 	<td><?php echo $d['GELAR_S3']; ?></td>
-									 	<td><?php echo $d['ASAL_PT_S3']; ?></td>
-									 	<td><?php echo $d['BID_KEAHLIAN_S3']; ?></td>
+									 	<td>1</td>
+									 	<td>Erna Hikmawati</td>
+									 	<td>0421089201</td>
+									 	<td>21/08/1992</td>
+									 	<td>S. Kom</td>
+									 	<td>Universitas Nasional Pasim</td>
+									 	<td>Teknik Informatika</td>
+									 	<td>M. Kom</td>
+									 	<td>STMIK Likmi</td>
+									 	<td>Sistem Informasi</td>
+									 	<td></td>
+									 	<td></td>
+									 	<td></td>
+									 	<td></td>
 									 </tr>
-							<?php } ?>
+									  <tr>
+									 	<td>2</td>
+									 	<td>Soleh Sabarudin</td>
+									 	<td>0408097207</td>
+									 	<td>08/09/1972</td>
+									 	<td>S. Kom</td>
+									 	<td>Universitas Nasional Pasim</td>
+									 	<td>Teknik Informatika</td>
+									 	<td>M. Kom</td>
+									 	<td>STMIK Likmi</td>
+									 	<td>Sistem Informasi</td>
+									 	<td></td>
+									 	<td></td>
+									 	<td></td>
+									 	<td></td>
+									 </tr>
 							</tbody>
 							</table>
 							</div>
@@ -192,7 +223,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</a>
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Data_Dosen_Excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Apd_a431_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn green">
 										Export ke Excel 
 									</button>
