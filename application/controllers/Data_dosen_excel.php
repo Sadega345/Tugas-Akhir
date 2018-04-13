@@ -4,21 +4,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Data_dosen_excel extends CI_Controller {
 
 // Load database
- public function __construct() {
- parent::__construct();
- $this->load->model('data_dosen_model');
- }
+ // public function __construct() {
+ // parent::__construct();
+ // $this->load->model('data_dosen_model');
+ // }
 
-public function index() {
- $data = array( 'title' => 'IDENTITAS PENGISI BORANG PROGRAM STUDI',
- 'dosen' => $this->data_dosen_model->listing());
- $this->load->view('User/DataDosen/tampilan_dosen.php',$data);
- }
+public function index() { 
+	// $data = array( 'title' => ' TABEL DATA DOSEN',
+ // 'dosen_tbl' => $this->Data_dosen_model->listing());
+ // $this->load->view('User/DataDosen/tampilan_dosen.php',array('data'=>$data));
+ $data = $this->Data_dosen_model->listing();
+ $this->load->view('User/DataDosen/tampilan_dosen.php',array('data'=>$data));
+}
 
 public function export_excel(){
- $data = array( 'title' => 'IDENTITAS PENGISI BORANG PROGRAM STUDI',
- 'dosen' => $this->data_dosen_model->listing());
- $this->load->view('User/DataDosen/tampilan_dosen_excel.php',$data);
+ $data = $this->Data_dosen_model->listing();
+ $this->load->view('User/DataDosen/tampilan_dosen_excel.php',array('data'=>$data));
  }
 
 }
