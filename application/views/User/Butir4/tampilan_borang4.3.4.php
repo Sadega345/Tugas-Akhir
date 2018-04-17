@@ -151,41 +151,36 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
+							<?php 
 								$no=1; 
 								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+							?>
+							
 							 <tr>
-							 	<td>1</td>
-							 	<td>ERNA HIKMAWATI</td>
-							 	<td>Analisis dan Perancangan</td>
-							 	<td>MIMKL24</td>
-							 	<td>Rekayasa Perangkat Lunak</td>
-							 	<td>1</td>
-							 	<td>16</td>
-							 	<td>16</td>
+							 	<td><?php echo $no++; ?></td>
+							 	<td><?php echo $d['nama_dosen']; ?></td>
+							 	<td><?php echo $d['bid_keahlian']; ?></td>
+							 	<td><?php echo $d['kode_mk']; ?></td>
+							 	<td><?php echo $d['nama_mk']; ?></td>
+							 	<td><?php echo $d['jum_kls']; ?></td>
+							 	<td><?php echo $d['jp_rencana']; ?></td>
+							 	<td><?php echo $d['jp_dilaksanakan']; ?></td>
 							 </tr>
+							 <?php } ?>
+							 <?php 
+							 	foreach ($jumlah as $jum) {
+							 ?>
 							 <tr>
 							 	<td colspan="6"><center>Jumlah*</center></td>
-							 	<td>400</td>
-							 	<td>400</td>
+							 	<td><?php echo $jum['jumper_d']; ?></td>
+							 <?php } ?>
+							 <?php 
+							 	foreach ($jumlah2 as $jum2) {
+							 ?>
+							 	<td><?php echo $jum2['jumlahpertemuan_dilaksanakan']; ?></td>
+							 <?php } ?>
 							 </tr>
+
 							</tbody>
 							</table>
 							<div class="btn-group">

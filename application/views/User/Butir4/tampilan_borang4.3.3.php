@@ -157,49 +157,69 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
+							<?php 
 								$no=1; 
 								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+							?>
 							<tr>
-							 	<td>1</td>
-							 	<td>ERNA HIKMAWATI</td>
-							 	<td>9</td>
-							 	<td>0</td>
-							 	<td>0</td>
-							 	<td>1</td>
-							 	<td>1</td>
-							 	<td>6</td>
-							 	<td>0</td>
-							 	<td>17</td>
+							 	<td><?php echo $no++; ?></td>
+							 	<td><?php echo $d['NAMA_DOSEN']; ?></td>
+							 	<td><?php echo $d['SKS_PSS']; ?></td>
+							 	<td><?php echo $d['SKS_PSL_PTS']; ?></td>
+							 	<td><?php echo $d['SKS_PTL']; ?></td>
+							 	<td><?php echo $d['SKS_PENELITIAN']; ?></td>
+							 	<td><?php echo $d['SKS_PP_MAS']; ?></td>
+							 	<td><?php echo $d['SKS_MAN_PTS']; ?></td>
+							 	<td><?php echo $d['SKS_MAN_PTL']; ?></td>
+							 	<td><?php echo $d['total']; ?></td>
 							 </tr>
+							 <?php } ?>
+
+							 
 							 <tr>
 							 	<td colspan="2">Jumlah</td>
-							 	<td>68</td>
-							 	<td>0</td>
-							 	<td>0</td>
-							 	<td>8</td>
-							 	<td>8</td>
-							 	<td>22</td>
-							 	<td>0</td>
-							 	<td>106</td>
+							 	<?php 
+									foreach ($hitung as $h ) { 
+							  	?>
+							 	<td><?php echo $h['jml']; ?></td>
+							 	<?php } ?>
+							 	<?php 
+									foreach ($pt as $p ) { 
+							  	?>
+							 	<td><?php echo $p['jml']; ?></td>
+							 	<?php } ?>
+							 	<?php 
+									foreach ($lain as $l ) { 
+							  	?>
+							 	<td><?php echo $l['jml']; ?></td>
+							 	<?php } ?>
+							 	<?php 
+									foreach ($penelitian as $p ) { 
+							  	?>
+							 	<td><?php echo $p['jml']; ?></td>
+							 	<?php } ?>
+							 	<?php 
+									foreach ($pengabdian as $p ) { 
+							  	?>
+							 	<td><?php echo $p['jml']; ?></td>
+							 	<?php } ?>
+							 	<?php 
+									foreach ($jumsks as $j ) { 
+							  	?>
+							 	<td><?php echo $j['jml']; ?></td>
+							 	<?php } ?>
+							 	<?php 
+									foreach ($manptlain as $man ) { 
+							  	?>
+							 	<td><?php echo $man['jml']; ?></td>
+							 	<?php } ?>
+							 	<?php 
+									foreach ($totsks as $tot ) { 
+							  	?>
+							 	<td><?php echo $tot['jml']; ?></td>
+							 	<?php } ?>
 							 </tr>
+							 
 							  <tr>
 							 	<td colspan="2">Rata-rata</td>
 							 	<td>8.50</td>
@@ -212,6 +232,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td>13.25</td>
 			 				</tr>
 							</tbody>
+							
 							</table>
 							</div>
 							<div class="btn-group">
