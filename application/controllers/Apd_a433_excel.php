@@ -21,6 +21,16 @@ public function index() {
  $jumsks=$this->Apd_a433_model->jum_sks();
  $manptlain=$this->Apd_a433_model->man_ptlain();
  $totsks=$this->Apd_a433_model->tot_sks();
+ $ratapssendiri=$this->Apd_a433_model->rata_ps_sendiri();
+ $rataprlain=$this->Apd_a433_model->rata_prlain();
+ $rataptlain=$this->Apd_a433_model->rata_ptlain();
+ $ratapenelitian=$this->Apd_a433_model->rata_penelitian();
+ $ratapengmas=$this->Apd_a433_model->rata_pengmas();
+
+ $rataman=$this->Apd_a433_model->rata_manptsendiri();
+ 
+ $ratamanlain=$this->Apd_a433_model->rata_manptlain();
+ $ratajum=$this->Apd_a433_model->rata_jumsks();
  $this->load->view('User/Butir4/tampilan_borang4.3.3.php',array('data'=>$data,
  																'hitung'=>$hitung,
  																'pt'=>$ptsendiri,
@@ -29,7 +39,15 @@ public function index() {
  																'pengabdian'=>$pengabdian,
  																'jumsks'=>$jumsks,
  																'manptlain'=>$manptlain,
- 																'totsks'=>$totsks));
+ 																'totsks'=>$totsks,
+ 																'rata'=>$ratapssendiri,
+ 																'prlain'=>$rataprlain,
+ 																'ptlain'=>$rataptlain,
+ 																'ratapenelitian'=>$ratapenelitian,
+ 																'pengmas'=>$ratapengmas,
+ 																'man'=>$rataman,
+ 																'manlain'=>$ratamanlain,
+ 																'ratajumsks'=>$ratajum));
  // $this->load->view('User/Butir4/tampilan_borang4.3.3.php',array('data'=>$jum));
  }
 

@@ -222,14 +222,54 @@ License: You must have a valid license purchased only from themeforest(the above
 							 
 							  <tr>
 							 	<td colspan="2">Rata-rata</td>
-							 	<td>8.50</td>
-							 	<td>0.00</td>
-							 	<td>0.00</td>
-							 	<td>1.00</td>
-							 	<td>1.00</td>
-							 	<td>2.75</td>
-							 	<td>0.00</td>
-							 	<td>13.25</td>
+							 	<?php 
+									foreach ($rata as $r ) { 
+							  	?>
+							 	<td><?php echo $r['rata']; ?></td>
+							 	<?php } ?>
+
+							 	<?php 
+									foreach ($prlain as $pr ) { 
+							  	?>
+							 	<td><?php echo $pr['rata']; ?></td>
+							 	<?php } ?>
+
+							 	<?php 
+									foreach ($ptlain as $pt ) { 
+							  	?>
+							 	<td><?php echo $pt['rata']; ?></td>
+							 	<?php } ?>
+
+							 	<?php 
+									foreach ($ratapenelitian as $rp ) { 
+							  	?>
+							 	<td><?php echo $rp['rata']; ?></td>
+							 	<?php } ?>
+
+							 	<?php 
+									foreach ($pengmas as $peng ) { 
+							  	?>
+							 	<td><?php echo $peng['rata']; ?></td>
+							 	<?php } ?>
+
+							 	<?php 
+									foreach ($man as $ma ) { 
+							  	?>
+							 	<td><?php echo $ma['rata']; ?></td>
+							 	<?php } ?>
+
+							 	<?php 
+									foreach ($manlain as $ml ) { 
+							  	?>
+							 	<td><?php echo $ml['rata']; ?></td>
+							 	<?php } ?>
+
+							 	<?php 
+									foreach ($ratajumsks as $ratasks ) { 
+							  	?>
+							 	<td><?php echo $ratasks['rata']; ?></td>
+							 	<?php } ?>
+							 	
 			 				</tr>
 							</tbody>
 							
