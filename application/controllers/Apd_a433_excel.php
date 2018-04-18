@@ -45,7 +45,7 @@ public function index() {
  																'ptlain'=>$rataptlain,
  																'ratapenelitian'=>$ratapenelitian,
  																'pengmas'=>$ratapengmas,
- 																'man'=>$rataman,
+ 																'rataman'=>$rataman,
  																'manlain'=>$ratamanlain,
  																'ratajumsks'=>$ratajum));
  // $this->load->view('User/Butir4/tampilan_borang4.3.3.php',array('data'=>$jum));

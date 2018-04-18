@@ -253,9 +253,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<?php } ?>
 
 							 	<?php 
-									foreach ($man as $ma ) { 
+									foreach ($rataman as $m ) { 
 							  	?>
-							 	<td><?php echo $ma['rata']; ?></td>
+							 	<td><?php echo $m['rata']; ?></td>
 							 	<?php } ?>
 
 							 	<?php 
