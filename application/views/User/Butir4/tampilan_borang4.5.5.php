@@ -173,15 +173,20 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tr>
 							<?php } ?> -->
 							<tr>
-							 	<td>1</td>
-							 	<td>Erna Hikmawati</td>
-							 	<td>APTIKOM</td>
-							 	<td>2018</td>
-							 	<td>2019</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							<?php 
+								$no=1; 
+								foreach ($data as $d ) { 
+							?>
+							 	<td><?php echo $no++; ?></td>
+							 	<td><?php echo $d['nama_dosen']; ?></td>
+							 	<td><?php echo $d['nm_organisasi']; ?></td>
+							 	<td><?php echo $d['thn_awal']; ?></td>
+							 	<td><?php echo $d['thn_akhir']; ?></td>
+							 	<td><?php echo $d['internasional']; ?></td>
+							 	<td><?php echo $d['nasional']; ?></td>
+							 	<td><?php echo $d['lokal']; ?></td>
 							 </tr>
+							 <?php } ?>
 							</tbody>
 							</table>
 							<div class="btn-group">

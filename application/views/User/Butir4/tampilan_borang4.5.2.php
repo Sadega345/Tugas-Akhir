@@ -167,15 +167,20 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tr>
 							<?php } ?> -->
 								<tr>
-								 	<td>1</td>
-								 	<td>Eko Travada</td>
-								 	<td>S3</td>
-								 	<td>Elektro dan Informatika</td>
-								 	<td>Institut Teknologi Bandung</td>
-								 	<td>Indonesia</td>
-								 	<td>2017</td>
+								<?php 
+									$no=1; 
+									foreach ($data as $d ) { 
+								?>
+								 	<td><?php echo $no++; ?></td>
+								 	<td><?php echo $d['nama_dosen']; ?></td>
+								 	<td><?php echo $d['jenjang_pend']; ?></td>
+								 	<td><?php echo $d['bid_studi']; ?></td>
+								 	<td><?php echo $d['perguruan_tinggi']; ?></td>
+								 	<td><?php echo $d['negara']; ?></td>
+								 	<td><?php echo $d['thn_mulai_std']; ?></td>
 								 </tr>
 							</tbody>
+							<?php } ?>
 							</table>
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a452_excel/ubah";?>">

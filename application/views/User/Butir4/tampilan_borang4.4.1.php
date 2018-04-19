@@ -168,43 +168,29 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
-								<tr>
-								 	<td>1</td>
-								 	<td>JUHRIDIN</td>
-								 	<td></td>
-								 	<td>09-03-1980</td>
-								 	<td</td>
-								 	<td>Tidak</td>
-								 	<td>STAI Siliwangi Bandung</td>
-								 	<td>Bahasa Inggris</td>
-								 	<td>S.Pd</td>
-								 	<td>Pasca Sarjana UIN SGD Bandng</td>
-								 	<td>PAI</td>
-								 	<td>M.Ag</td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+							
+							<tr>
+								<?php 
+									$no=1; 
+									foreach ($data as $d ) { 
+								?>
+								 	<td><?php echo $no++; ?></td>
+								 	<td><?php echo $d['nama_dosen']; ?></td>
+								 	<td><?php echo $d['nidn']; ?></td>
+								 	<td><?php echo $d['tgl_lhr']; ?></td>
+								 	<td><?php echo $d['NM_JAB_AKD']; ?></td>
+								 	<td><?php echo $d['sertifikasi']; ?></td>
+								 	<td><?php echo $d['GELAR_S1']; ?></td>
+								 	<td><?php echo $d['ASAL_PT_S1']; ?></td>
+								 	<td><?php echo $d['BID_KEAHLIAN_S1']; ?></td>
+								 	<td><?php echo $d['GELAR_S2']; ?></td>
+								 	<td><?php echo $d['ASAL_PT_S2']; ?></td>
+								 	<td><?php echo $d['BID_KEAHLIAN_S2']; ?></td>
+								 	<td><?php echo $d['GELAR_S3']; ?></td>
+								 	<td><?php echo $d['ASAL_PT_S3']; ?></td>
+								 	<td><?php echo $d['BID_KEAHLIAN_S3']; ?></td>
 								 </tr>
+								 <?php } ?>
 							</tbody>
 							</table>
 							</div>

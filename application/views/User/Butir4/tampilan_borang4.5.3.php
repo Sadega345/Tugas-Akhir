@@ -170,14 +170,19 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tr>
 							<?php } ?> -->
 							<tr>
-							 	<td>1</td>
-							 	<td>Erna Hikmawati</td>
-							 	<td>Peningkatan Kemampuan Kapasitas Manajemen Keuangan Koperasi Tunas Harapan Berbasis Aplikasi Komputer</td>
-							 	<td>Kec. Sindang Kerta Kab. Bandung Barat</td>
-							 	<td>2014</td>
-							 	<td></td>
-							 	<td></td>
+							<?php 
+								$no=1; 
+								foreach ($data as $d ) { 
+							?>
+							 	<td><?php echo $no++; ?></td>
+							 	<td><?php echo $d['nama_dosen']; ?></td>
+							 	<td><?php echo $d['jenis_kegiatan']; ?></td>
+							 	<td><?php echo $d['tempat']; ?></td>
+							 	<td><?php echo $d['tahun']; ?></td>
+							 	<td><?php echo $d['sbg_penyaji']; ?></td>
+							 	<td><?php echo $d['sbg_peserta']; ?></td>
 							 </tr>
+							 <?php } ?>
 							</tbody>
 							</table>
 							<div class="btn-group">

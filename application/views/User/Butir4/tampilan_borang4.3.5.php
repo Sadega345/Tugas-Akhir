@@ -149,39 +149,35 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
+							
+							<tr>
+							<?php 
 								$no=1; 
 								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
-							<tr>
-							 	<td>1</td>
-							 	<td>LUCKY HANDAYANI</td>
-							 	<td>MIMKL23</td>
-							 	<td>Matematika Diskrit</td>
-							 	<td>3</td>
-							 	<td>16</td>
-							 	<td>16</td>
+							?>
+							 	<td><?php echo $no++; ?></td>
+							 	<td><?php echo $d['nama_dosen']; ?></td>
+							 	<td><?php echo $d['kode_mk']; ?></td>
+							 	<td><?php echo $d['nama_mk']; ?></td>
+							 	<td><?php echo $d['jml_sks']; ?></td>
+							 	<td><?php echo $d['jp_rencana']; ?></td>
+							 	<td><?php echo $d['jp_dilaksanakan']; ?></td>
 							 </tr>
+							 <?php } ?>
+
 							 <tr>
 							 	<td colspan="5"><center>Jumlah</center></td>
-							 	<td>272</td>
-							 	<td>272</td>
+							 	<?php 
+							 		foreach ($total as $tot ) {
+							 	 ?>
+							 	<td><?php echo $tot['total_rencana']; ?></td>
+							 	<?php } ?>
+
+							 	<?php 
+							 		foreach ($totdilaksanakan as $totlaksana ) {
+							 	 ?>
+							 	<td><?php echo $totlaksana['total_laksana']; ?></td>
+							 	<?php } ?>
 							 </tr>
 		
 							</tbody>

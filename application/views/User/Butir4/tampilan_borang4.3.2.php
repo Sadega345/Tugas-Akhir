@@ -196,25 +196,30 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tr>
 							<?php } ?> -->
 								<tr>
-								 	<td>1</td>
-								 	<td>LUCKY HANDAYANI</td>
-								 	<td>0428097402</td>
-								 	<td>28/09/1974</td>
-								 	<td></td>
-								 	<td>Tidak</td>
-								 	<td>Universitas Jenderal Achmad Yani</td>
-								 	<td>Teknik Mesin</td>
-								 	<td>S.T</td>
-								 	<td>Institut Teknologi Bandung</td>
-								 	<td>Teknik Mesin</td>
-								 	<td>M.T</td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								<?php 
+									$no=1; 
+									foreach ($data as $d ) { 
+								?>
+								 	<td><?php echo $no++; ?></td>
+								 	<td><?php echo $d['nama_dosen']; ?></td>
+								 	<td><?php echo $d['nidn']; ?></td>
+								 	<td><?php echo $d['tgl_lhr']; ?></td>
+								 	<td><?php echo $d['NM_JAB_AKD']; ?></td>
+								 	<td><?php echo $d['sertifikasi']; ?></td>
+								 	<td><?php echo $d['GELAR_S1']; ?></td>
+								 	<td><?php echo $d['ASAL_PT_S1']; ?></td>
+								 	<td><?php echo $d['BID_KEAHLIAN_S1']; ?></td>
+								 	<td><?php echo $d['GELAR_S2']; ?></td>
+								 	<td><?php echo $d['ASAL_PT_S2']; ?></td>
+								 	<td><?php echo $d['BID_KEAHLIAN_S2']; ?></td>
+								 	<td><?php echo $d['GELAR_S3']; ?></td>
+								 	<td><?php echo $d['ASAL_PT_S3']; ?></td>
+								 	<td><?php echo $d['BID_KEAHLIAN_S3']; ?></td>
+								 	<td><?php echo $d['GELAR']; ?></td>
+								 	<td><?php echo $d['PENGAKUAN']; ?></td>
+								 	<td><?php echo $d['BID_KEAHLIAN']; ?></td>
 								 </tr>
+								 <?php } ?>
 							</tbody>
 							</table>
 							</div>

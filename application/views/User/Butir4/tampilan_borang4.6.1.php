@@ -219,7 +219,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 </tr>
 							 <tr>
 							 	<td>4</td>
-							 	<td><input type="text" name="" class="form-control" value="">Lainnya</td>
+							 	<td>Lainnya</td>
 							 	<td></td>
 							 	<td></td>
 							 	<td>1</td>

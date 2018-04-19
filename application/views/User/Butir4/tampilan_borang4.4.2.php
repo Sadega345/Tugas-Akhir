@@ -131,6 +131,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2">Nama Dosen Tidak Tetap</th>
 									 <th rowspan="2">Kode Mata Kuliah</th>
 									 <th rowspan="2">Nama Mata Kuliah</th>
+									 
 									 <th rowspan="2">Jumlah SKS</th>
 									 <th colspan="2">Jumlah Pertemuan</th>
 								 </tr>
@@ -170,18 +171,32 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tr>
 							<?php } ?> -->
 							<tr>
-							 	<td>1</td>
-							 	<td>JUHRIDIN</td>
-							 	<td>MIMKU03</td>
-							 	<td>PENDIDIKAN AGAMA</td>
-							 	<td>2</td>
-							 	<td>16</td>
-							 	<td>16</td>
+							<?php 
+								$no=1; 
+								foreach ($data as $d ) { 
+							?>
+							 	<td><?php echo $no++; ?></td>
+							 	<td><?php echo $d['nama_dosen']; ?></td>
+							 	<td><?php echo $d['kode_mk']; ?></td>
+							 	<td><?php echo $d['nama_mk']; ?></td>
+							 	<td><?php echo $d['jml_sks']; ?></td>
+							 	<td><?php echo $d['jp_rencana']; ?></td>
+							 	<td><?php echo $d['jp_dilaksanakan']; ?></td>
 							 </tr>
+							 <?php } ?>
 							 <tr>
 							 	<td colspan="5">Jumlah*</td>
-							 	<td>16</td>
-							 	<td>16</td>
+							 	<?php 
+							 		foreach ($total as $tot ) {
+							 	 ?>
+							 	<td><?php echo $tot['total_rencana']; ?></td>
+							 	<?php } ?>
+
+							 	<?php 
+							 		foreach ($totdilaksanakan as $totlaksana ) {
+							 	 ?>
+							 	<td><?php echo $totlaksana['total_laksana']; ?></td>
+							 	<?php } ?>
 							 </tr>
 							</tbody>
 							</table>

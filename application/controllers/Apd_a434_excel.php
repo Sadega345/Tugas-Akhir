@@ -15,7 +15,9 @@ public function index() {
 $data=$this->Apd_a434_model->listing();
 $jumlah=$this->Apd_a434_model->hitung();
 $jumlah2=$this->Apd_a434_model->hitung2();
- $this->load->view('User/Butir4/tampilan_borang4.3.4.php',array('data'=>$data,'jumlah'=>$jumlah,'jumlah2'=>$jumlah2));
+ $this->load->view('User/Butir4/tampilan_borang4.3.4.php',array('data'=>$data,
+ 																'jumlah'=>$jumlah,
+ 																'jumlah2'=>$jumlah2));
  }
 
  public function ubah(){

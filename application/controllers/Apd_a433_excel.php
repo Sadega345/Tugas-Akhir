@@ -26,9 +26,7 @@ public function index() {
  $rataptlain=$this->Apd_a433_model->rata_ptlain();
  $ratapenelitian=$this->Apd_a433_model->rata_penelitian();
  $ratapengmas=$this->Apd_a433_model->rata_pengmas();
-
  $rataman=$this->Apd_a433_model->rata_manptsendiri();
- 
  $ratamanlain=$this->Apd_a433_model->rata_manptlain();
  $ratajum=$this->Apd_a433_model->rata_jumsks();
  $this->load->view('User/Butir4/tampilan_borang4.3.3.php',array('data'=>$data,
