@@ -15,4 +15,44 @@ class Apd_a461_model extends CI_Model {
  return $data->result_array();
  }
 
+ public function tots3() {
+ $data=$this->db->query('select sum(s3)as tots3 from tenaga_kepend where kode_prodi="p001"');
+ return $data->result_array();
+ }
+
+ public function tots2() {
+ $data=$this->db->query('select sum(s2)as tots2 from tenaga_kepend where kode_prodi="p001"');
+ return $data->result_array();
+ }
+
+ public function tots1() {
+ $data=$this->db->query('select sum(s1)as tots1 from tenaga_kepend where kode_prodi="p001"');
+ return $data->result_array();
+ }
+
+ public function totd4() {
+ $data=$this->db->query('select sum(d4)as totd4 from tenaga_kepend where kode_prodi="p001"');
+ return $data->result_array();
+ }
+
+ public function totd3() {
+ $data=$this->db->query('select sum(d3)as totd3 from tenaga_kepend where kode_prodi="p001"');
+ return $data->result_array();
+ }
+
+ public function totd2() {
+ $data=$this->db->query('select sum(d2)as totd2 from tenaga_kepend where kode_prodi="p001"');
+ return $data->result_array();
+ }
+
+ public function totd1() {
+ $data=$this->db->query('select sum(d1)as totd1 from tenaga_kepend where kode_prodi="p001"');
+ return $data->result_array();
+ }
+
+ public function totsma() {
+ $data=$this->db->query('select sum(sma)as totsma from tenaga_kepend where kode_prodi="p001"');
+ return $data->result_array();
+ }
+
 }

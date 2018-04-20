@@ -132,4 +132,4 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('model_login','model_squrity','model_fakultas','model_prodi','model_instrumen','model_user','model_admin','Data_dosen_model','Data_dosens_model','Pengisi_model','Pengisis_model','Prodi_model','Prodis_model','model_role','Apd_a431_model','Apd_a432_model','Apd_a433_model','Apd_a434_model','Apd_a435_model','Apd_a441_model','Apd_a442_model','Apd_a451_model','Apd_a452_model','Apd_a453_model','Apd_a455_model','Apd_a461_model');
+$autoload['model'] = array('model_login','model_squrity','model_fakultas','model_prodi','model_instrumen','model_user','model_admin','Data_dosen_model','Data_dosens_model','Pengisi_model','Pengisis_model','Prodi_model','Prodis_model','model_role','Apd_a431_model','Apd_a432_model','Apd_a433_model','Apd_a434_model','Apd_a435_model','Apd_a441_model','Apd_a442_model','Apd_a451_model','Apd_a452_model','Apd_a453_model','Apd_a455_model','Apd_a461_model','Apd_a5121_model','Apd_a522_model','Apd_a541_model','Apd_a552_model');
