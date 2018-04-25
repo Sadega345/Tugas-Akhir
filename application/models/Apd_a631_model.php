@@ -10,11 +10,9 @@ public function __construct()
  }
 
 // Listing
- public function listing() {
- $this->db->select('*');
- $this->db->from('apd_a631');
- $query = $this->db->get();
- return $query->result();
+ public function totluas() {
+ $data=$this->db->query('SELECT SUM(JML_LUAS)AS Tot_Luas FROM dt_ruang_dosen WHERE KD_PRODI="p001"');
+ return $data->result_array();
  }
 
 }

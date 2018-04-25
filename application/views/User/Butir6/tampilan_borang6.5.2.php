@@ -256,11 +256,27 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td></td>
 							 </tr>
 							 <tr>
-							 	<td colspan="2"></td>
-							 	<td>0</td>
-							 	<td>0</td>
-							 	<td>0</td>
-							 	<td>11</td>
+							 	<td colspan="2">Total</td>
+							 <?php 
+								foreach ($totmanual as $d ) { 
+							 ?>
+							 	<td><?php echo $d['Tot_Manual']; ?></td>
+							 <?php } ?>
+							 	<?php 
+								foreach ($totkomp as $d ) { 
+							 ?>
+							 	<td><?php echo $d['Tot_Komp']; ?></td>
+							 <?php } ?>
+							 	<?php 
+								foreach ($totlan as $d ) { 
+							 ?>
+							 	<td><?php echo $d['Tot_Lan']; ?></td>
+							 <?php } ?>
+							 	<?php 
+								foreach ($totwan as $d ) { 
+							 ?>
+							 	<td><?php echo $d['Tot_Wan']; ?></td>
+							 <?php } ?>
 							 	
 							 </tr>
 							</tbody>

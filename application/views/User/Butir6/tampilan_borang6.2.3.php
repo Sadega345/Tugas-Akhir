@@ -140,35 +140,25 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
+							
+							 <?php 
+								
 								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
-							 <tr>
-							 	<td>2014</td>
-							 	<td>Pelatihan Penggunaan Microsoft Word pada Ibu-Ibu PKK Desa Cileunyi Wetan</td>
-							 	<td>PT. Pasim Sentra Utama</td>
-							 	<td>5.6</td>
+							?>
+							<tr>
+							 	<td><?php echo $d['TAHUN']; ?></td>
+							 	<td><?php echo $d['judul_kegiatan']; ?></td>
+							 	<td><?php echo $d['SUMBER_DANA']; ?></td>
+							 	<td><?php echo $d['JUMLAH_DANA']; ?></td>
 							 </tr>
+							 <?php } ?>
 							 <tr>
-							 	<td colspan="3">Total</td>
-							 	<td></td>
+							 	<td colspan="3">Total**</td>
+							 <?php 
+								foreach ($totdana as $d ) { 
+							 ?>
+							 	<td><?php echo $d['Tot_Dana']; ?></td>
+							 <?php } ?>
 							 </tr>
 							</tbody>
 							</table>

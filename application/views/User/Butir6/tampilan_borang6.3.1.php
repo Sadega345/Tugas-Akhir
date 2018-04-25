@@ -175,7 +175,11 @@ License: You must have a valid license purchased only from themeforest(the above
 							 </tr>
 							 <tr>
 							 	<td colspan="2">Total</td>
-							 	<td>64</td>
+							 	<?php 
+								foreach ($totluas as $d ) { 
+							 ?>
+							 	<td><?php echo $d['Tot_Luas']; ?></td>
+							 <?php } ?>
 							 </tr>
 		
 							</tbody>

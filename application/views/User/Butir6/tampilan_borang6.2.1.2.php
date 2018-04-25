@@ -138,27 +138,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+								
 								<tr>
+
 								 	<td>1</td>
 								 	<td>Pendidikan</td>
 								 	<td>2298266,46</td>
@@ -181,9 +163,21 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 								 <tr>
 								 	<td colspan="2">Jumlah Dana Operasional</td>
-								 	<td>2398266.46</td>
-								 	<td>2568829.158</td>
-								 	<td>3036370.734</td>
+								 	<?php 
+								 		foreach ($totsp2 as $d ) { 
+								 	 ?>
+								 	<td><?php echo $d['Tot_PS2']; ?></td>
+								 	<?php } ?>
+								 	<?php 
+								 		foreach ($totps1 as $d ) { 
+								 	 ?>
+								 	<td><?php echo $d['Tot_PS1']; ?></td>
+								 	<?php } ?>
+								 	<?php 
+								 		foreach ($totps as $d ) { 
+								 	 ?>
+								 	<td><?php echo $d['Tot_PS']; ?></td>
+								 	<?php } ?>
 								 </tr>
 								  <tr>
 								 	<td>4</td>
@@ -215,15 +209,39 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 								  <tr>
 								 	<td colspan="2">Jumlah Dana untuk Investasi</td>
-								 	<td>3939885.36</td>
-								 	<td>4228849.986</td>
-								 	<td>5006006.972</td>
+								 	<?php 
+								 		foreach ($totinves2 as $d ) { 
+								 	 ?>
+								 	<td><?php echo $d['Tot_PS2']; ?></td>
+								 	<?php } ?>
+								 	<?php 
+								 		foreach ($totinves1 as $d ) { 
+								 	 ?>
+								 	<td><?php echo $d['Tot_PS1']; ?></td>
+								 	<?php } ?>
+								 	<?php 
+								 		foreach ($totinvests as $d ) { 
+								 	 ?>
+								 	<td><?php echo $d['Tot_PS']; ?></td>
+								 	<?php } ?>
 								 </tr>
 								  <tr>
 								 	<td colspan="2">Jumlah Dana (Operasional+Investasi)</td>
-								 	<td>6338151.82</td>
-								 	<td>6797679.144</td>
-								 	<td>8042377.706</td>
+								 	<?php 
+								 		foreach ($totdana2 as $d ) { 
+								 	 ?>
+								 	<td><?php echo $d['Tot_TS2']; ?></td>
+								 	<?php } ?>
+								 	<?php 
+								 		foreach ($totdana1 as $d ) { 
+								 	 ?>
+								 	<td><?php echo $d['Tot_TS1']; ?></td>
+								 	<?php } ?>
+								 	<?php 
+								 		foreach ($totdanats as $d ) { 
+								 	 ?>
+								 	<td><?php echo $d['Tot_TS']; ?></td>
+								 	<?php } ?>
 								 </tr>
 								  <tr>
 								 	<td colspan="2">Jumlah Mahasiswa Aktif (Student Body)</td>

@@ -185,8 +185,16 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 								 <tr>
 								 	<td>Total</td>
-								 	<td>680</td>
-								 	<td>734</td>
+								 	<?php 
+										foreach ($totjudul as $d ) { 
+							 		?>
+							 		<td><?php echo $d['Tot_judul']; ?></td>
+							 		<?php } ?>
+								 	<?php 
+										foreach ($totkopi as $d ) { 
+							 		?>
+							 		<td><?php echo $d['Tot_Kopi']; ?></td>
+							 		<?php } ?>
 								 </tr>
 							</tbody>
 							</table>

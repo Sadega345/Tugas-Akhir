@@ -10,9 +10,13 @@ class Apd_a623_excel extends CI_Controller {
  }
 
 public function index() {
- $data = array( 'title' => 'TABEL DATA BUTIR 6.2.3 : DANA PELAYANAN/PENGABDIAN KEPADA MASYARAKAT',
- 'a623' => $this->apd_a623_model->listing());
- $this->load->view('User/Butir6/tampilan_borang6.2.3.php',$data);
+ // $data = array( 'title' => 'TABEL DATA BUTIR 6.2.3 : DANA PELAYANAN/PENGABDIAN KEPADA MASYARAKAT',
+ // 'a623' => $this->apd_a623_model->listing());
+ $data=$this->Apd_a623_model->listing();
+ $totaldana=$this->Apd_a623_model->totdana();
+ $this->load->view('User/Butir6/tampilan_borang6.2.3.php',array('data'=>$data,
+																'totdana'=>$totaldana));
+ 
  }
 
 public function ubah(){

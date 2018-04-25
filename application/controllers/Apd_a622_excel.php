@@ -10,9 +10,12 @@ class Apd_a622_excel extends CI_Controller {
  }
 
 public function index() {
- $data = array( 'title' => 'TABEL DATA BUTIR 6.2.2 : DANA UNTUK KEGIATAN PENELITIAN',
- 'a622' => $this->apd_a622_model->listing());
- $this->load->view('User/Butir6/tampilan_borang6.2.2.php',$data);
+ // $data = array( 'title' => 'TABEL DATA BUTIR 6.2.2 : DANA UNTUK KEGIATAN PENELITIAN',
+ // 'a622' => $this->apd_a622_model->listing());
+ $data=$this->Apd_a622_model->listing();
+ $totaldana=$this->Apd_a622_model->totdana();
+ $this->load->view('User/Butir6/tampilan_borang6.2.2.php',array('data'=>$data,
+																'totdana'=>$totaldana));
  }
 
  public function ubah(){
