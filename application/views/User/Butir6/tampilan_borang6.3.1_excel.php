@@ -2,7 +2,7 @@
 
 header("Content-type: application/octet-stream");
 
-header("Content-Disposition: attachment; filename=$title.xls");
+// header("Content-Disposition: attachment; filename=$title.xls");
 
 header("Pragma: no-cache");
 
@@ -41,7 +41,11 @@ header("Expires: 0");
 			 </tr>
 			 <tr>
 			 	<td colspan="2">Total</td>
-			 	<td></td>
+			 	<?php 
+					foreach ($totluas as $d ) { 
+			 	?>
+			 	<td><?php echo $d['Tot_Luas']; ?></td>
+			 <?php } ?>
 			 </tr>
 		</tbody>
 	</table>

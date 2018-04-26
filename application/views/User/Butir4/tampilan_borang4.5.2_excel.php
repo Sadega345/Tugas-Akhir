@@ -2,7 +2,7 @@
 
 header("Content-type: application/octet-stream");
 
-header("Content-Disposition: attachment; filename=$title.xls");
+// header("Content-Disposition: attachment; filename=$title.xls");
 
 header("Pragma: no-cache");
 
@@ -32,23 +32,19 @@ header("Expires: 0");
 			 </tr>
 		</thead>
 		<tbody>
-			 <tr>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-			 <tr>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-		</tbody>
+			<tr>
+				<?php 
+					$no=1; 
+					foreach ($data as $d ) { 
+				?>
+				 	<td><?php echo $no++; ?></td>
+				 	<td><?php echo $d['nama_dosen']; ?></td>
+				 	<td><?php echo $d['jenjang_pend']; ?></td>
+				 	<td><?php echo $d['bid_studi']; ?></td>
+				 	<td><?php echo $d['perguruan_tinggi']; ?></td>
+				 	<td><?php echo $d['negara']; ?></td>
+				 	<td><?php echo $d['thn_mulai_std']; ?></td>
+				 </tr>
+			</tbody>
+		<?php } ?>
 	</table>

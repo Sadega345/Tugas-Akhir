@@ -128,22 +128,39 @@ License: You must have a valid license purchased only from themeforest(the above
 							<thead>
 								<tr>
 									 <td>Teori</td>
-									 <td>613</td>
+									<?php 
+										foreach ($data as $d ) { 
+									?>
+									 <td><?php echo $d['teori']; ?></td>
+									 <?php } ?>
+									 
 									 <td>Jam per paket program</td>
 								 </tr>
 								 <tr>
 									 <td>Praktek</td>
-									 <td>1600</td>
+									 <?php 
+										foreach ($data as $d ) { 
+									?>
+									 <td><?php echo $d['praktek']; ?></td>
+									 <?php } ?>
 									 <td>Jam per paket program</td>
 								 </tr>
 								 <tr>
 									 <td>Praktikum</td>
-									 <td>293</td>
+									 <?php 
+										foreach ($data as $d ) { 
+									?>
+									 <td><?php echo $d['praktikum']; ?></td>
+									 <?php } ?>
 									 <td>Jam per paket program</td>
 								 </tr>
 								 <tr>
 									 <td>Praktek Kerja lapangan</td>
-									 <td>180</td>
+									 <?php 
+										foreach ($data as $d ) { 
+									?>
+									 <td><?php echo $d['pkl']; ?></td>
+									 <?php } ?>
 									 <td>Jam per paket program</td>
 								 </tr>
 							</thead>

@@ -142,7 +142,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							
 							<tr>
 							<?php 
 								$no=1; 

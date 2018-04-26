@@ -2,7 +2,7 @@
 
 header("Content-type: application/octet-stream");
 
-header("Content-Disposition: attachment; filename=$title.xls");
+// header("Content-Disposition: attachment; filename=$title.xls");
 
 header("Pragma: no-cache");
 
@@ -25,22 +25,25 @@ header("Expires: 0");
 			 	<td>(4)</td>
 			 </tr>
 		</thead>
-		<tbody>
-			 <tr>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
+		<tbody>			
+			 <?php 
+				
+				foreach ($data as $d ) { 
+			?>
+			<tr>
+			 	<td><?php echo $d['TAHUN']; ?></td>
+			 	<td><?php echo $d['judul_kegiatan']; ?></td>
+			 	<td><?php echo $d['SUMBER_DANA']; ?></td>
+			 	<td><?php echo $d['JUMLAH_DANA']; ?></td>
 			 </tr>
+			 <?php } ?>
 			 <tr>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
+			 	<td colspan="3">Total**</td>
+			 <?php 
+				foreach ($totdana as $d ) { 
+			 ?>
+			 	<td><?php echo $d['Tot_Dana']; ?></td>
+			 <?php } ?>
 			 </tr>
-			 <tr>
-			 	<td colspan="3">Total</td>
-			 	<td></td>
-			 </tr>
-		</tbody>
+			</tbody>
 		</table>

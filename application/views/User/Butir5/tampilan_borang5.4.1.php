@@ -140,33 +140,34 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
+							<?php 
 								$no=1; 
 								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+							?>
 							<tr>
-							 	<td>1</td>
-							 	<td>ERNA HIKMAWATI</td>
-							 	<td>18</td>
-							 	<td>3</td>
-							 	
+							 	<td><?php echo $no++; ?></td>
+							 	<td><?php echo $d['nama_dosen'] ?></td>
+							 	<td><?php echo $d['j_mhs_bimbingan'] ?></td>
+							 	<td><?php echo $d['rata2_pertemuan'] ?></td>
 							 </tr>
+							 <?php } ?>	
+
+							 
+							 <tr>
+							 	<td colspan="2"><center>Jumlah*</center></td>
+							 	<?php 
+							 		foreach ($totpertemuan as $jum) {
+							 	?>
+							 		<td><?php echo $jum['jum_bimbingan']; ?></td>
+							 	<?php } ?>
+
+							 <?php 
+							 	foreach ($bertemu as $temu) {
+							 ?>
+							 	
+							 	<td><?php echo $temu['rata_pertemuan']; ?></td>
+							 <?php } ?>
+
 							</tbody>
 							</table>
 							<div class="btn-group">

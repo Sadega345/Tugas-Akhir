@@ -161,41 +161,25 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
 							<tr>
-								<td>1</td>
-							 	<td>MKB1001</td>
-							 	<td>Komputer Grafis</td>
-							 	<td></td>
-							 	<td>2</td>
-							 	<td>v</td>
-							 	<td></td>
-							 	<td>v</td>
-							 	<td>v</td>
-							 	<td>v</td>
-							 	<td>v</td>
-							 	
-							 	<td>Jurusan</td>
+							<?php 
+								
+								foreach ($data as $d ) { 
+							?>
+								<td><?php echo $d['smt']; ?></td>
+							 	<td><?php echo $d['kode_mk']; ?></td>
+							 	<td><?php echo $d['nama_mk']; ?></td>
+							 	<td><?php echo $d['sks_kuliah']; ?></td>
+							 	<td><?php echo $d['sks_praktek']; ?></td>
+							 	<td><?php echo $d['sks_inti']; ?></td>
+							 	<td><?php echo $d['sks_institusi']; ?></td>
+							 	<td><?php echo $d['bobot_tgs']; ?></td>
+							 	<td><?php echo $d['deskripsi']; ?></td>
+							 	<td><?php echo $d['silabus']; ?></td>
+							 	<td><?php echo $d['sap']; ?></td>
+							 	<td><?php echo $d['penyelenggara']; ?></td>
 							 </tr>
+							 <?php } ?>
 							</tbody>
 							</table>
 							<div class="btn-group">

@@ -2,7 +2,7 @@
 
 header("Content-type: application/octet-stream");
 
-header("Content-Disposition: attachment; filename=$title.xls");
+// header("Content-Disposition: attachment; filename=$title.xls");
 
 header("Pragma: no-cache");
 
@@ -96,16 +96,55 @@ header("Expires: 0");
 			 	<td></td>
 			 </tr>
 			 <tr>
-			 	<td>Total</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
+			 	<td colspan="2">Total</td>
+			 	<?php 
+					foreach ($tots3 as $s3 ) { 
+				?>
+			 	<td><?php echo $s3['tots3']; ?></td>
+			 	<?php } ?>
+
+			 	<?php 
+					foreach ($tots2 as $s2 ) { 
+				?>
+			 	<td><?php echo $s2['tots2']; ?></td>
+			 	<?php } ?>
+
+			 	<?php 
+					foreach ($tots1 as $s1 ) { 
+				?>
+			 	<td><?php echo $s1['tots1']; ?></td>
+			 	<?php } ?>
+
+			 	<?php 
+					foreach ($totd4 as $d4 ) { 
+				?>
+			 	<td><?php echo $d4['totd4']; ?></td>
+			 	<?php } ?>
+
+			 	<?php 
+					foreach ($totd3 as $d3 ) { 
+				?>
+			 	<td><?php echo $d3['totd3']; ?></td>
+			 	<?php } ?>
+
+			 	<?php 
+					foreach ($totd2 as $d2 ) { 
+				?>
+			 	<td><?php echo $d2['totd2']; ?></td>
+			 	<?php } ?>
+
+			 	<?php 
+					foreach ($totd1 as $d1 ) { 
+				?>
+			 	<td><?php echo $d1['totd1']; ?></td>
+			 	<?php } ?>
+
+			 	<?php 
+					foreach ($totsma as $sma ) { 
+				?>
+			 	<td><?php echo $sma['totsma']; ?></td>
+			 	<?php } ?>
+			 	
 			 </tr>
 		</tbody>
 	</table>

@@ -23,9 +23,13 @@ public function index() {
  }
 
 public function export_excel(){
- $data = array( 'title' => 'TABEL DATA BUTIR 6.2.2 : DANA UNTUK KEGIATAN PENELITIAN',
- 'a622' => $this->apd_a622_model->listing());
- $this->load->view('User/Butir6/tampilan_borang6.2.2_excel.php',$data);
+ // $data = array( 'title' => 'TABEL DATA BUTIR 6.2.2 : DANA UNTUK KEGIATAN PENELITIAN',
+ // 'a622' => $this->apd_a622_model->listing());
+ $data=$this->Apd_a622_model->listing();
+ $totaldana=$this->Apd_a622_model->totdana();
+ $this->load->view('User/Butir6/tampilan_borang6.2.2_excel.php',array('data'=>$data,
+																'totdana'=>$totaldana));
+ 
  }
 
 }

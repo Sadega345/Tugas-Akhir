@@ -23,9 +23,13 @@ public function index() {
  }
 
 public function export_excel(){
- $data = array( 'title' => 'TABEL DATA BUTIR 5.5.2 : Pelaksanaan pembimbingan karya/tugas akhir',
- 'a552' => $this->apd_a552_model->listing());
- $this->load->view('User/Butir5/tampilan_borang5.5.2_excel.php',$data);
+ // $data = array( 'title' => 'TABEL DATA BUTIR 5.5.2 : Pelaksanaan pembimbingan karya/tugas akhir',
+ // 'a552' => $this->apd_a552_model->listing());
+ $data=$this->Apd_a552_model->listing();
+ $totalmahasiswa=$this->Apd_a552_model->totmahasiswa();
+ $this->load->view('User/Butir5/tampilan_borang5.5.2_excel.php',array('data'=>$data,
+																'totmahasiswa'=>$totalmahasiswa));
+ 
  }
 
 }

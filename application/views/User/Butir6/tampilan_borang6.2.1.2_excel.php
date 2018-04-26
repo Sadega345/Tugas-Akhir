@@ -2,7 +2,7 @@
 
 header("Content-type: application/octet-stream");
 
-header("Content-Disposition: attachment; filename=$title.xls");
+// header("Content-Disposition: attachment; filename=$title.xls");
 
 header("Pragma: no-cache");
 
@@ -47,9 +47,21 @@ header("Expires: 0");
 			 </tr>
 			 <tr>
 			 	<td colspan="2">Jumlah Dana Operasional</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
+			 	<?php 
+			 		foreach ($totsp2 as $d ) { 
+			 	 ?>
+			 	<td><?php echo $d['Tot_PS2']; ?></td>
+			 	<?php } ?>
+			 	<?php 
+			 		foreach ($totps1 as $d ) { 
+			 	 ?>
+			 	<td><?php echo $d['Tot_PS1']; ?></td>
+			 	<?php } ?>
+			 	<?php 
+			 		foreach ($totps as $d ) { 
+			 	 ?>
+			 	<td><?php echo $d['Tot_PS']; ?></td>
+			 	<?php } ?>
 			 </tr>
 			  <tr>
 			 	<td>4</td>
@@ -81,21 +93,45 @@ header("Expires: 0");
 			 </tr>
 			  <tr>
 			 	<td colspan="2">Jumlah Dana untuk Investasi</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
+			 	<?php 
+			 		foreach ($totinves2 as $d ) { 
+			 	 ?>
+			 	<td><?php echo $d['Tot_PS2']; ?></td>
+			 	<?php } ?>
+			 	<?php 
+			 		foreach ($totinves1 as $d ) { 
+			 	 ?>
+			 	<td><?php echo $d['Tot_PS1']; ?></td>
+			 	<?php } ?>
+			 	<?php 
+			 		foreach ($totinvests as $d ) { 
+			 	 ?>
+			 	<td><?php echo $d['Tot_PS']; ?></td>
+			 	<?php } ?>
 			 </tr>
 			  <tr>
 			 	<td colspan="2">Jumlah Dana (Operasional+Investasi)</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
+			 	<?php 
+			 		foreach ($totdana2 as $d ) { 
+			 	 ?>
+			 	<td><?php echo $d['Tot_TS2']; ?></td>
+			 	<?php } ?>
+			 	<?php 
+			 		foreach ($totdana1 as $d ) { 
+			 	 ?>
+			 	<td><?php echo $d['Tot_TS1']; ?></td>
+			 	<?php } ?>
+			 	<?php 
+			 		foreach ($totdanats as $d ) { 
+			 	 ?>
+			 	<td><?php echo $d['Tot_TS']; ?></td>
+			 	<?php } ?>
 			 </tr>
 			  <tr>
 			 	<td colspan="2">Jumlah Mahasiswa Aktif (Student Body)</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
+			 	<td>201</td>
+			 	<td>139</td>
+			 	<td>139</td>
 			 </tr>
 		</tbody>
 		</table>

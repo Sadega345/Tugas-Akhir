@@ -2,7 +2,7 @@
 
 header("Content-type: application/octet-stream");
 
-header("Content-Disposition: attachment; filename=$title.xls");
+// header("Content-Disposition: attachment; filename=$title.xls");
 
 header("Pragma: no-cache");
 
@@ -47,19 +47,24 @@ header("Expires: 0");
 			 </tr>
 		</thead>
 		<tbody>
-			 <tr>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
+			<tr>
+			<?php 
+				
+				foreach ($data as $d ) { 
+			?>
+				<td><?php echo $d['smt']; ?></td>
+			 	<td><?php echo $d['kode_mk']; ?></td>
+			 	<td><?php echo $d['nama_mk']; ?></td>
+			 	<td><?php echo $d['sks_kuliah']; ?></td>
+			 	<td><?php echo $d['sks_praktek']; ?></td>
+			 	<td><?php echo $d['sks_inti']; ?></td>
+			 	<td><?php echo $d['sks_institusi']; ?></td>
+			 	<td><?php echo $d['bobot_tgs']; ?></td>
+			 	<td><?php echo $d['deskripsi']; ?></td>
+			 	<td><?php echo $d['silabus']; ?></td>
+			 	<td><?php echo $d['sap']; ?></td>
+			 	<td><?php echo $d['penyelenggara']; ?></td>
 			 </tr>
-		</tbody>
+			 <?php } ?>
+			</tbody>
 		</table>

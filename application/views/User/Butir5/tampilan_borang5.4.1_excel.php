@@ -2,7 +2,7 @@
 
 header("Content-type: application/octet-stream");
 
-header("Content-Disposition: attachment; filename=$title.xls");
+// header("Content-Disposition: attachment; filename=$title.xls");
 
 header("Pragma: no-cache");
 
@@ -26,11 +26,32 @@ header("Expires: 0");
 			 </tr>
 		</thead>
 		<tbody>
-			 <tr>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
+			 <?php 
+				$no=1; 
+				foreach ($data as $d ) { 
+			?>
+			<tr>
+			 	<td><?php echo $no++; ?></td>
+			 	<td><?php echo $d['nama_dosen'] ?></td>
+			 	<td><?php echo $d['j_mhs_bimbingan'] ?></td>
+			 	<td><?php echo $d['rata2_pertemuan'] ?></td>
 			 </tr>
+			 <?php } ?>	
+
+			 
+			 <tr>
+			 	<td colspan="2"><center>Jumlah*</center></td>
+			 	<?php 
+			 		foreach ($totpertemuan as $jum) {
+			 	?>
+			 		<td><?php echo $jum['jum_bimbingan']; ?></td>
+			 	<?php } ?>
+
+			 <?php 
+			 	foreach ($bertemu as $temu) {
+			 ?>
+			 	
+			 	<td><?php echo $temu['rata_pertemuan']; ?></td>
+			 <?php } ?>
 		</tbody>
-		</table>
+</table>
