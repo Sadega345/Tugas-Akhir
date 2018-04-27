@@ -2,14 +2,14 @@
 
 header("Content-type: application/octet-stream");
 
-// header("Content-Disposition: attachment; filename=$title.xls");
+header("Content-Disposition: attachment; filename=TABEL DATA BUTIR 4.3.5 : AKTIVITAS MENGAJAR DOSEN TETAP YANG BIDANG KEAHLIANNYA DI LUAR PS.xls");
 
 header("Pragma: no-cache");
 
 header("Expires: 0");
 
 ?>
-<p> TABEL DATA BUTIR 4.3.5 : AKTIVITAS MENGAJAR DOSEN TETAP YANG BIDANG KEAHLIANNYA DI LUAR PS    </p>
+<p> TABEL DATA BUTIR 4.3.5 : AKTIVITAS MENGAJAR DOSEN TETAP YANG BIDANG KEAHLIANNYA DI LUAR PS</p>
 <table border="1" width="50%">
 		<thead>
 			 <tr>

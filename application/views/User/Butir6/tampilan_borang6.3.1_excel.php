@@ -2,7 +2,7 @@
 
 header("Content-type: application/octet-stream");
 
-// header("Content-Disposition: attachment; filename=$title.xls");
+header("Content-Disposition: attachment; filename=TABEL DATA BUTIR 6.3.1 : DATA RUANG KERJA DOSEN TETAP.xls");
 
 header("Pragma: no-cache");
 

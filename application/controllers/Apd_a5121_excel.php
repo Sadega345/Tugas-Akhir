@@ -32,9 +32,22 @@ public function index() {
  }
 
 public function export_excel(){
- $data = array( 'title' => ' TABEL DATA BUTIR 5.1.2.1 : STRUKTUR KURIKULUM BERDASARKAN URUTAN MK',
- 'a5121' => $this->apd_a5121_model->listing());
- $this->load->view('User/Butir5/tampilan_borang5.1.2.1_excel.php',$data);
+ // $data = array( 'title' => ' TABEL DATA BUTIR 5.1.2.1 : STRUKTUR KURIKULUM BERDASARKAN URUTAN MK',
+ // 'a5121' => $this->apd_a5121_model->listing());
+ $data=$this->Apd_a5121_model->listing();
+ $totalkuliah=$this->Apd_a5121_model->totkuliah();
+ $totalpraktikum=$this->Apd_a5121_model->totpraktikum();
+ $totaltugas=$this->Apd_a5121_model->tottugas();
+ $totalskripsi=$this->Apd_a5121_model->totskripsi();
+ $totalsilabus=$this->Apd_a5121_model->totsilabus();
+ $totalsap=$this->Apd_a5121_model->totsap();
+ $this->load->view('User/Butir5/tampilan_borang5.1.2.1_excel.php',array('data'=>$data,
+																  'totkuliah'=>$totalkuliah,
+																  'totpraktikum'=>$totalpraktikum,
+																  'tottugas'=>$totaltugas,
+																  'totskripsi'=>$totalskripsi,
+																  'totalsap'=>$totalsap));
+ 
  }
 
 }
