@@ -8,9 +8,9 @@ class CrudRole extends CI_Controller {
 	}
 
 	public function tambah($id){
-		$res=$this->model_role->GetUser("where id='$id'");
+		$res=$this->model_role->GetUser("where role_id='$id'");
 		$data=array(
-			"id"=>$res[0]['id']
+			"role_id"=>$res[0]['role_id']
 		);
 		// $data=$this->model_role->GetUser();
 		$this->load->view('Admin/inputan_role.php',$data);

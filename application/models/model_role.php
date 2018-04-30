@@ -4,7 +4,7 @@ class Model_Role extends CI_Model {
 	
 	public function GetUser($where="")
 	{
-		$data=$this->db->query("select * from role ".$where);
+		$data=$this->db->query("select * from permission ".$where);
 		return $data->result_array();
 	}
 
