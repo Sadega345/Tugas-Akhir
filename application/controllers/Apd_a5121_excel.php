@@ -47,7 +47,6 @@ public function export_excel(){
 																  'tottugas'=>$totaltugas,
 																  'totskripsi'=>$totalskripsi,
 																  'totalsap'=>$totalsap));
- 
  }
 
 }
