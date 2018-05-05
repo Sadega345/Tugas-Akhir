@@ -18,13 +18,14 @@ class CrudUser extends CI_Controller {
 		$password=$_POST['password'];
 		// $permission=$_POST['butir'];
 		// $roleid=implode(',', $permission);
-		$level=$_POST['user'];
-		$idrole=$_POST['idrole'];
+		// $level=$_POST['user'];
+		// $roleid=$_POST['role_id'];
 		$data_insert=array(
 			'id'=>$id,
 			'username'=>$username,
 			'password'=>$password,
-			'level'=>$level
+			// 'role_id'=>$roleid,
+			// 'level'=>$level
 		);
 		$res=$this->model_user->insert('users',$data_insert);
 		if ($res>=1) {

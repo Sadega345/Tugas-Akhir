@@ -156,7 +156,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							
 							 <tr>
 							 	<td>1</td>
-							 	<td><input type="text" name="" value="<?php echo $nama_dosen; ?>" readonly></td>
+							 	<td><input type="text" name="nama_dosen" value="<?php echo $nama_dosen; ?>" readonly></td>
 							 	<td><input type="text" name="bid_keahlian" value="<?php echo $bid_keahlian; ?>"></td>
 							 	<td><input type="text" name="kode_mk" value="<?php echo $kode_mk; ?>" readonly></td>
 							 	<td><input type="text" name="nama_mk" value="<?php echo $nama_mk; ?>"></td>

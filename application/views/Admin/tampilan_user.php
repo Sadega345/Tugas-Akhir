@@ -127,21 +127,19 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 							<tr>
-								<th>
-									No
-								</th>
+								
 								<th>
 									 Id
 								</th>
 								<th>
-									 Username
+									 Nama Role
 								</th>
 								<!-- <th>
 									 Password
 								</th> -->
-								<th>
+								<!-- <th>
 									 Level
-								</th>
+								</th> -->
 								<th>
 									 Aksi
 								</th>
@@ -152,26 +150,17 @@ License: You must have a valid license purchased only from themeforest(the above
 								$no=1; 
 								foreach ($data as $d ) { 
 							?>
-							<tr class="odd gradeX">
+							<tr class="odd gradeX">								
 								<td>
-									<?php echo $no++; ?>
+									 <?php echo $d['r_id']; ?>
 								</td>
 								<td>
-									 <?php echo $d['id']; ?>
-								</td>
-								<td>
-									<?php echo $d['username']; ?>
-								</td>
-								<!-- <td>
-									<?php echo $d['password']; ?>
-								</td> -->
-								<td>
-									<?php echo $d['level']; ?>
+									<?php echo $d['nama_role']; ?>
 								</td>
 								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudUser/edit_data/".$d['id'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudUser/do_hapus/".$d['id'];?>">Delete</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudRole/tambah/".$d['id'];?>">Tambah Role</a>
+									<a href="<?php echo base_url()."index.php/CrudUser/edit_data/".$d['r_id'];?>">Edit</a> ||
+         							<a href="<?php echo base_url()."index.php/CrudUser/do_hapus/".$d['r_id'];?>">Delete</a> ||
+         							<a href="<?php echo base_url()."index.php/CrudRole/perm/".$d['r_id'];?>">Edit Role</a>
 								</td>
 							</tr>
 							<?php } ?>
@@ -252,6 +241,20 @@ Demo.init(); // init demo features
    Tasks.initDashboardWidget();
 });
 </script>
+
+<script type="text/javascript">
+function view(id){
+    $.ajax({
+      url:'CrudRole/get_data_by_id/'+id,     
+      type: "GET",
+      success : function(data){
+        obj = JSON.parse(data);
+        console.log(obj.datas);
+        $("#r_id").val(obj.datas.r_id);
+        $("#nama_role").val(obj.datas.nama);
+      }
+    });
+  }
 <!-- END JAVASCRIPTS -->
 </body>
 <!-- END BODY -->

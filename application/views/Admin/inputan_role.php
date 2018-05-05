@@ -105,27 +105,71 @@ License: You must have a valid license purchased only from themeforest(the above
 									
 								</div>
 							</div>
-							<form action="<?php echo base_url()."index.php/CrudRole/do_tambah"; ?>" method="POST">
-							<div class="container">
-								<div class="col-md-10">
-									<div class="row">
-										<div class="form-group">
-											<label>Id Permission</label>
-											<input type="text" class="form-control" name="idrole">
-										</div>
-										<div class="form-group">
-											<label>Butir 3</label>
-											<input type="checkbox" class="form-control" value="akses1" name="butir[]">
-										</div>
-										<div class="form-group">
-											<label>Butir 4</label>
-											<input type="checkbox" class="form-control" value="akses2" name="butir[]">
-										</div>
-										<div class="form-group">
-											<label>Butir 5</label>
-											<input type="checkbox" class="form-control" value="akses3" name="butir[]">
-										</div>
-									</div>
+							<div class="col-lg-4">
+			                    <?php 
+			                        foreach ($datas as $row) 
+			                        {
+			                        echo '<input type="hidden" class="form-control" name="rid" value="'.$row->r_id.'" size="14"/>';
+			                        }
+			                    ?>
+			                </div>
+							<form action="<?php echo base_url()."index.php/CrudRole/edit_perm"; ?>" method="POST">
+							<table class="table table-striped table-bordered table-hover" id="sample_1" >
+								<thead>
+			                        <tr>
+			                            <th>Permission</th>
+			                            <th>Action</th>
+			                        </tr>
+			                    </thead>
+			                    <tbody>
+			                    	<tr>
+			                    		<td>
+			                    			<label>Butir 3</label>
+											
+			                    		</td>
+			                    		<td>
+			                    			<input type="checkbox" class="form-control" value="butir3" name="nama_permission[]" <?php print (in_array('butir3', $perms) ? "checked": ""); ?>>
+			                    		</td>
+			                    	</tr>
+			                    	<tr>
+			                    		<td>
+			                    			<label>Butir 4</label>
+											
+			                    		</td>
+			                    		<td>
+			                    			<input type="checkbox" class="form-control" value="butir4" name="nama_permission[]" <?php print (in_array('butir4', $perms) ? "checked": ""); ?>>
+			                    		</td>
+			                    	</tr>
+			                    	<tr>
+			                    		<td>
+			                    			<label>Butir 5</label>
+											
+			                    		</td>
+			                    		<td>
+			                    			<input type="checkbox" class="form-control" value="butir5" name="nama_permission[]" <?php print (in_array('butir5', $perms) ? "checked": ""); ?>>
+			                    		</td>
+			                    	</tr>
+			                    	<tr>
+			                    		<td>
+			                    			<label>Butir 6</label>
+											
+			                    		</td>
+			                    		<td>
+			                    			<input type="checkbox" class="form-control" value="butir3" name="nama_permission[]" <?php print (in_array('butir6', $perms) ? "checked": ""); ?>>
+			                    		</td>
+			                    	</tr>
+			                    	<tr>
+			                    		<td>
+			                    			<label>Butir 7</label>
+											
+			                    		</td>
+			                    		<td>
+			                    			<input type="checkbox" class="form-control" value="butir3" name="nama_permission[]" <?php print (in_array('butir7', $perms) ? "checked": ""); ?>>
+			                    		</td>
+			                    	</tr>
+			                    </tbody>
+							</table>
+							<div class="container">		
 									<div class="row">
 										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 									</div>
@@ -192,6 +236,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <script src="<?php echo base_url()."assets/";?>admin/pages/scripts/index.js" type="text/javascript"></script>
 <script src="<?php echo base_url()."assets/";?>admin/pages/scripts/tasks.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
+
 <script>
 jQuery(document).ready(function() {    
    Metronic.init(); // init metronic core componets
@@ -207,6 +252,9 @@ Demo.init(); // init demo features
    Index.initMiniCharts();
    Tasks.initDashboardWidget();
 });
+</script>
+
+  
 </script>
 <!-- END JAVASCRIPTS -->
 </body>

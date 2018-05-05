@@ -27,6 +27,10 @@ class Admin extends CI_Controller {
 		redirect('CrudUser');
 	}
 
+	function table_role(){
+		redirect('CrudRole');
+	}
+
 	function table_admin(){
 		redirect('CrudUser');
 	}

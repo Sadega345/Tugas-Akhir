@@ -133,10 +133,12 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2">Nama Mata Kuliah</th>
 									 <th rowspan="2">Jumlah SKS</th>
 									 <th colspan="2">Jumlah Pertemuan</th>
+									 <th rowspan="2">Aksi</th>
 								 </tr>
 								 <tr>
 								 	<th>Direncanakan</th>
 								 	<th>Dilaksanakan</th>
+								 	
 								 </tr>
 								 <tr align="center">
 								 	<td>(1)</td>
@@ -146,6 +148,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>(5)</td>
 								 	<td>(6)</td>
 								 	<td>(7)</td>
+								 	<td>(8)</td>
 								 </tr>
 							</thead>
 							<tbody>
@@ -162,6 +165,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['jml_sks']; ?></td>
 							 	<td><?php echo $d['jp_rencana']; ?></td>
 							 	<td><?php echo $d['jp_dilaksanakan']; ?></td>
+							 	<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a435_excel/ubah/".$d['kode_mk'];?>" >Edit</a>
+								</td>
 							 </tr>
 							 <?php } ?>
 

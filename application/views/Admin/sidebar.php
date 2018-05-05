@@ -85,7 +85,7 @@
 				</li>
 				<li>
 					<a href="javascript:;">
-					<a href="<?php echo base_url(); ?>index.php/Admin/table_user">
+					<a href="<?php echo base_url(); ?>index.php/Admin/table_role">
 					<i class="icon-briefcase"></i>
 					Kelola Permission Role </a>
 				</li>

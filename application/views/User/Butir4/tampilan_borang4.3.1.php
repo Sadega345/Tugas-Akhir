@@ -124,7 +124,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
-							<div style="overflow-x:auto;">
+							<div style="overflow-x:auto;" class="col-md-20">
 							
 							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 							<thead>
@@ -139,6 +139,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th colspan="3">S2*</th>
 									 <th colspan="3">S3*</th>
 									 <th colspan="3">Keahlian Praktis***</th>
+									 <th colspan="3">Aksi</th>
 								 </tr>
 								 <tr>
 								 	<td>Gelar</td>
@@ -153,6 +154,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>Gelar</td>
 								 	<td>Pengakuan</td>
 								 	<td>Bidang Keahlian</td>
+								 	<td></td>
 								 </tr>
 								 <tr align="center">
 								 	<td>(1)</td>
@@ -173,6 +175,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>(16)</td>
 								 	<td>(17)</td>
 								 	<td>(18)</td>
+								 	<td>(19)</td>
 								 </tr>
 							</thead>
 							<tbody>
@@ -201,6 +204,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['GELAR']; ?></td>
 							 	<td><?php echo $d['PENGAKUAN']; ?></td>
 							 	<td><?php echo $d['BID_KEAHLIAN']; ?></td>
+							 	<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a431_excel/ubah/".$d['nidn'];?>" >Edit</a>
+								</td>
 							 </tr>
 							<?php } ?>
 							</tbody>

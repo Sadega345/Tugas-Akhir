@@ -123,11 +123,11 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="row">
 										<div class="form-group">
 											<label>Password</label>
-											<input type="text" class="form-control" name="password">
+											<input type="password" class="form-control" name="password">
 										</div>
 									</div>
 									
-									<div class="row">
+									<!-- <div class="row">
 										<div class="form-group">
 											<label>Level</label>
 											<select name="level" class="form-control">
@@ -137,7 +137,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									            <?php } ?>
 											</select>
 										</div>
-									</div> 
+									</div> --> 
 									<!-- <div class="caption">
 										<i class="fa fa-edit"></i>Permission
 									</div>
