@@ -17,8 +17,19 @@ SUM(A.SKS_PSS+a.SKS_PSL_PTS+a.SKS_PTL+a.SKS_PENELITIAN+a.sks_pp_mas+a.sks_man_pt
 FROM aktivitas_dosen A INNER JOIN dosen_tbl D ON A.id_dosen=D.id_dosen WHERE D.STS_AHLI="YA" and d.kd_jns_dosen=1 group by a.id_dosen');
  
  return $data->result_array();
- 
  }
+
+ public function update($where="") {
+ $data= $this->db->query('SELECT D.NAMA_DOSEN, A.SKS_PSS,A.SKS_PSL_PTS,A.SKS_PTL,A.SKS_PENELITIAN,A.SKS_PP_MAS,A.SKS_MAN_PTS,A.SKS_MAN_PTL,
+SUM(A.SKS_PSS+a.SKS_PSL_PTS+a.SKS_PTL+a.SKS_PENELITIAN+a.sks_pp_mas+a.sks_man_pts+a.sks_man_ptl)as total
+FROM aktivitas_dosen A INNER JOIN dosen_tbl D ON A.id_dosen=D.id_dosen '.$where);
+ return $data->result_array();
+ }
+
+ public function rubah($tablename,$data,$where){
+		$res=$this->db->update($tablename,$data,$where);
+		return $res;
+	}
 
  public function hitung(){
  	$data=$this->db->query('select sum(a.sks_pss)as jml from aktivitas_dosen a inner join dosen_tbl d on a.id_dosen=d.id_dosen where d.sts_ahli="ya" and d.kd_jns_dosen=1');

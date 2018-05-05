@@ -29,13 +29,13 @@ ON D.kd_jab=J.kd_jab '.$where);
 		return $res;
 	}
 
-	public function tampil(){
-    $this->db->select('D.nama_dosen,D.nidn,D.tgl_lhr,J.NM_JAB_AKD,D.sertifikasi,D.GELAR_S1,D.ASAL_PT_S1,D.BID_KEAHLIAN_S1,D.GELAR_S2,D.ASAL_PT_S2,D.BID_KEAHLIAN_S2,
-D.GELAR_S3,D.ASAL_PT_S3,D.BID_KEAHLIAN_S3,D.GELAR,D.PENGAKUAN,D.BID_KEAHLIAN'); //mengambil semua data dari tabel data_users dan users
-    $this->db->from('dosen_tbl D'); //dari tabel data_users
-    $this->db->join('jab_akademik J', 'D.kd_jab=J.kd_jab', 'LEFT'); //menyatukan tabel users menggunakan left join
-    $data = $this->db->get(); //mengambil seluruh data
-    return $data->result(); //mengembalikan data
-  }
+// 	public function tampil(){
+//     $this->db->select('D.nama_dosen,D.nidn,D.tgl_lhr,J.NM_JAB_AKD,D.sertifikasi,D.GELAR_S1,D.ASAL_PT_S1,D.BID_KEAHLIAN_S1,D.GELAR_S2,D.ASAL_PT_S2,D.BID_KEAHLIAN_S2,
+// D.GELAR_S3,D.ASAL_PT_S3,D.BID_KEAHLIAN_S3,D.GELAR,D.PENGAKUAN,D.BID_KEAHLIAN'); //mengambil semua data dari tabel data_users dan users
+//     $this->db->from('dosen_tbl D'); //dari tabel data_users
+//     $this->db->join('jab_akademik J', 'D.kd_jab=J.kd_jab', 'LEFT'); //menyatukan tabel users menggunakan left join
+//     $data = $this->db->get(); //mengambil seluruh data
+//     return $data->result(); //mengembalikan data
+//   }
 
 }

@@ -45,7 +45,7 @@ public function index() {
 		$nama_dosen=$_POST['nama_dosen'];
 		$nidn=$_POST['nidn'];
 		$tgl_lhr=$_POST['tgl_lhr'];
-		$NM_JAB_AKD=$_POST['NM_JAB_AKD'];
+		// $NM_JAB_AKD=$_POST['NM_JAB_AKD'];
 		$sertifikasi=$_POST['sertifikasi'];
 		$GELAR_S1=$_POST['GELAR_S1'];
 		$ASAL_PT_S1=$_POST['ASAL_PT_S1'];
@@ -63,7 +63,7 @@ public function index() {
 			"nama_dosen"=>$nama_dosen,
 			"nidn"=>$nidn,
 			"tgl_lhr"=>$tgl_lhr,
-			"NM_JAB_AKD"=>$NM_JAB_AKD,
+			// "NM_JAB_AKD"=>$NM_JAB_AKD,
 			"sertifikasi"=>$sertifikasi,
 			"GELAR_S1"=>$GELAR_S1,
 			"ASAL_PT_S1"=>$ASAL_PT_S1,
