@@ -124,6 +124,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Apd_a434_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								  <tr>
@@ -151,59 +153,32 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+							
 							 <tr>
 							 	<td>1</td>
-							 	<td><input type="text" name="" value="ERNA HIKMAWATI"></td>
-							 	<td><input type="text" name="" value="Analisis dan Perancangan"></td>
-							 	<td><input type="text" name="" value="MIMKL24"></td>
-							 	<td><input type="text" name="" value="Rekayasa Perangkat Lunak"></td>
-							 	<td><input type="text" name="" value="1"></td>
-							 	<td><input type="text" name="" value="16"></td>
-							 	<td><input type="text" name="" value="16"></td>
-							 </tr>
-							 <tr>
-							 	<td colspan="6"><center>Jumlah*</center></td>
-							 	<td>400</td>
-							 	<td>400</td>
+							 	<td><input type="text" name="" value="<?php echo $nama_dosen; ?>" readonly></td>
+							 	<td><input type="text" name="bid_keahlian" value="<?php echo $bid_keahlian; ?>"></td>
+							 	<td><input type="text" name="kode_mk" value="<?php echo $kode_mk; ?>" readonly></td>
+							 	<td><input type="text" name="nama_mk" value="<?php echo $nama_mk; ?>"></td>
+							 	<td><input type="text" name="jum_kls" value="<?php echo $jum_kls; ?>"></td>
+							 	<td><input type="text" name="jp_rencana" value="<?php echo $jp_rencana; ?>"></td>
+							 	<td><input type="text" name="jp_dilaksanakan" value="<?php echo $jp_dilaksanakan; ?>"></td>
 							 </tr>
 							</tbody>
 							</table>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
-									</button>
-								</a>
 							</div>
-							
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a434_excel/export_excel";?>">
+								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+							</div>
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Apd_a434_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal 
 									</button>
 								</a>
 							</div>
-						</div>
+							</form>
+						
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->
 				</div>

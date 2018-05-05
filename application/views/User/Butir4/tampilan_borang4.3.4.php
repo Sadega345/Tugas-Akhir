@@ -124,6 +124,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;" class="col-md-20">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								  <tr>
@@ -134,6 +135,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2">Nama Mata Kuliah</th>
 									 <th rowspan="2">Jumlah Kelas</th>
 									 <th colspan="2">Jumlah Pertemuan</th>
+									 <th colspan="2">Aksi</th>
 								 </tr>
 								 <tr>
 								 	<th>Direncanakan</th>
@@ -148,6 +150,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>(6)</td>
 								 	<td>(7)</td>
 								 	<td>(8)</td>
+								 	<td>(9)</td>
 								 </tr>
 							</thead>
 							<tbody>
@@ -155,7 +158,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								$no=1; 
 								foreach ($data as $d ) { 
 							?>
-							
 							 <tr>
 							 	<td><?php echo $no++; ?></td>
 							 	<td><?php echo $d['nama_dosen']; ?></td>
@@ -165,6 +167,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['jum_kls']; ?></td>
 							 	<td><?php echo $d['jp_rencana']; ?></td>
 							 	<td><?php echo $d['jp_dilaksanakan']; ?></td>
+							 	<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a434_excel/ubah/".$d['kode_mk'];?>" >Edit</a>
+								</td>
 							 </tr>
 							 <?php } ?>
 							 <?php 
@@ -183,6 +188,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 							</tbody>
 							</table>
+							</div>
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a434_excel/ubah";?>">
 									<button id="sample_editable_1_new" class="btn green">
