@@ -137,6 +137,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th colspan="3">S1*</th>
 									 <th colspan="3">S2*</th>
 									 <th colspan="3">S3*</th>
+									 <th rowspan="2">Aksi</th>
 								 </tr>
 								 <tr>
 								 	<th>PT Asal</th>
@@ -165,6 +166,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>(13)</td>
 								 	<td>(14)</td>
 								 	<td>(15)</td>
+								 	<td>(16)</td>
 								 </tr>
 							</thead>
 							<tbody>
@@ -189,6 +191,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td><?php echo $d['GELAR_S3']; ?></td>
 								 	<td><?php echo $d['ASAL_PT_S3']; ?></td>
 								 	<td><?php echo $d['BID_KEAHLIAN_S3']; ?></td>
+								 	<td class="center">
+										<a href="<?php echo base_url()."index.php/Apd_a441_excel/ubah/".$d['nidn'];?>" >Edit</a>
+									</td>
 								 </tr>
 								 <?php } ?>
 							</tbody>

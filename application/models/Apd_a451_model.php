@@ -15,4 +15,14 @@ class Apd_a451_model extends CI_Model {
  return $data->result_array();
  }
 
+ public function update($where="") {
+ $data= $this->db->query('SELECT nama_pakar,instansi,judul_keg,pelaksanaan FROM kegiatan_ahli '.$where);
+ return $data->result_array();
+ }
+
+ public function rubah($tablename,$data,$where){
+		$res=$this->db->update($tablename,$data,$where);
+		return $res;
+	}
+
 }

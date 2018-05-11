@@ -134,6 +134,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th>Perguruan Tinggi</th>
 									 <th>Negara</th>
 									 <th>Tahun Mulai Studi</th>
+									 <th>Aksi</th>
 								 </tr>
 								 <tr align="center">
 								 	<td>(1)</td>
@@ -143,6 +144,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>(5)</td>
 								 	<td>(6)</td>
 								 	<td>(7)</td>
+								 	<td>(8)</td>
 								 </tr>
 							</thead>
 							<tbody>
@@ -158,6 +160,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td><?php echo $d['perguruan_tinggi']; ?></td>
 								 	<td><?php echo $d['negara']; ?></td>
 								 	<td><?php echo $d['thn_mulai_std']; ?></td>
+								 	<td class="center">
+										<a href="<?php echo base_url()."index.php/Apd_a452_excel/ubah/".$d['jenjang_pend'];?>" >Edit</a>
+									</td>
 								 </tr>
 							</tbody>
 							<?php } ?>

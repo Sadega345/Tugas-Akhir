@@ -132,6 +132,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2">Nama Organisasi Keilmuan atau Organisasi Profesi</th>
 									 <th colspan="2">Kurun Waktu</th>
 									 <th colspan="3">Tingkat*</th>
+									 <th rowspan="2">Aksi</th>
 								 </tr>
 								 <tr>
 								 	<th>Tahun Awal</th>
@@ -149,29 +150,10 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>(6)</td>
 								 	<td>(7)</td>
 								 	<td>(8)</td>
+								 	<td>(9)</td>
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
 							<tr>
 							<?php 
 								$no=1; 
@@ -185,6 +167,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['internasional']; ?></td>
 							 	<td><?php echo $d['nasional']; ?></td>
 							 	<td><?php echo $d['lokal']; ?></td>
+							 	<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a455_excel/ubah/".$d['thn_awal'];?>" >Edit</a>
+								</td>
 							 </tr>
 							 <?php } ?>
 							</tbody>

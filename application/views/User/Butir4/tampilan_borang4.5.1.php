@@ -132,6 +132,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th>Instansi/Jabatan</th>
 									 <th>Nama dan Judul Kegiatan</th>
 									 <th>Tahun Pelaksanaan</th>
+									 <th>Aksi</th>
 								 </tr>
 								 <tr align="center">
 								 	<td>(1)</td>
@@ -139,6 +140,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>(3)</td>
 								 	<td>(4)</td>
 								 	<td>(5)</td>
+								 	<td>(6)</td>
 								 </tr>
 							</thead>
 							<tbody>
@@ -152,6 +154,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['instansi']; ?></td>
 							 	<td><?php echo $d['judul_keg']; ?></td>
 							 	<td><?php echo $d['pelaksanaan']; ?></td>
+							 	<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a451_excel/ubah/".$d['nama_pakar'];?>">Edit</a>
+								</td>
 							 </tr>
 							 <?php } ?>
 							</tbody>

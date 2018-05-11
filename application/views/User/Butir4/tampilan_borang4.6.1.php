@@ -131,6 +131,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2">Jenis Tenaga Kependidikan</th>
 									 <th colspan="8">Jumlah Tenaga Kependidikan dengan</th>
 									 <th rowspan="2">Unit Kerja</th>
+									 <th rowspan="2">Aksi</th>
 								 </tr>
 								 <tr>
 								 	<th>S3</th>
@@ -154,29 +155,10 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>(9)</td>
 								 	<td>(10)</td>
 								 	<td>(11)</td>
+								 	<td>(12)</td>
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
 							<tr>
 							 	<td>1</td>
 							 	<td>Pustakawan</td>
@@ -279,6 +261,10 @@ License: You must have a valid license purchased only from themeforest(the above
 								?>
 							 	<td><?php echo $sma['totsma']; ?></td>
 							 	<?php } ?>
+
+							 	<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a461_excel/ubah/".$d['tots1'];?>" >Edit</a>
+								</td>
 							 	
 							 </tr>
 							</tbody>

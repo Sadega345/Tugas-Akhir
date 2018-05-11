@@ -124,6 +124,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Apd_a453_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -149,52 +151,29 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
 							<tr>
 							 	<td>1</td>
-							 	<td><input type="text" name="" value="Erna Hikmawati" class="form-control"></td>
-							 	<td><input type="text" name="" value="Peningkatan Kemampuan Kapasitas Manajemen Keuangan Koperasi Tunas Harapan Berbasis Aplikasi Komputer" class="form-control"></td>
-							 	<td><input type="text" name="" value="Kec. Sindang Kerta Kab. Bandung Barat" class="form-control"></td>
-							 	<td><input type="text" name="" value="2014" class="form-control"></td>
-							 	<td><input type="checkbox" name="" class="form-control"></td>
-							 	<td><input type="checkbox" name="" class="form-control"></td>
+							 	<td><input type="text" name="" value="<?php echo $nama_dosen; ?>" class="form-control"></td>
+							 	<td><input type="text" name="jenis_kegiatan" value="<?php echo $jenis_kegiatan; ?>"></td>
+							 	<td><input type="text" name="tempat" value="<?php echo $tempat; ?>" ></td>
+							 	<td><input type="text" name="tahun" value="<?php echo $tahun; ?>" ></td>
+							 	<td><input type="checkbox" name="sbg_penyaji" value="<?php echo $sbg_penyaji; ?>" ></td>
+							 	<td><input type="checkbox" name="sbg_peserta" value="<?php echo $sbg_peserta; ?>" ></td>
 							 </tr>
 							</tbody>
 							</table>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
-									</button>
-								</a>
+								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 							</div>
-							
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a453_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Apd_a453_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal 
 									</button>
 								</a>
 							</div>
+						</form>
+						</div>
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

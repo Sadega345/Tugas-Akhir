@@ -124,6 +124,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Apd_a451_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								 <tr>
@@ -142,49 +144,28 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+							
 							<tr>
 							 	<td>1</td>
-							 	<td><input type="text" name="" value="Kwon Young Choi"></td>
-							 	<td><input type="text" name="" value="ARES, Co.Ltd"></td>
-							 	<td><input type="text" name="" value="Workshop Visual Basic .Net"></td>
-							 	<td><input type="text" name="" value="18 Desember 2014"></td>
+							 	<td><input type="text" name="nama_pakar" value="<?php echo $nama_pakar; ?>"></td>
+							 	<td><input type="text" name="instansi" value="<?php echo $instansi; ?>" readonly></td>
+							 	<td><input type="text" name="judul_keg" value="<?php echo $judul_keg; ?>"></td>
+							 	<td><input type="text" name="pelaksanaan" value="<?php echo $pelaksanaan; ?>"></td>
 							 </tr>
 							</tbody>
 							</table>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
-									</button>
-								</a>
+								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a451_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Apd_a451_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal 
 									</button>
 								</a>
 							</div>
+						</form>
+						</div>
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

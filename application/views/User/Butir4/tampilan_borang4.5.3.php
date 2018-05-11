@@ -133,6 +133,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2">Tempat</th>
 									 <th rowspan="2">Tahun</th>
 									 <th colspan="2">Sebagai**</th>
+									 <th rowspan="2">Aksi</th>
 								 </tr>
 								 <tr>
 								 	<th>Peyaji</th>
@@ -146,6 +147,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>(5)</td>
 								 	<td>(6)</td>
 								 	<td>(7)</td>
+								 	<td>(8)</td>
 								 </tr>
 							</thead>
 							<tbody>
@@ -161,6 +163,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['tahun']; ?></td>
 							 	<td><?php echo $d['sbg_penyaji']; ?></td>
 							 	<td><?php echo $d['sbg_peserta']; ?></td>
+							 	<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a453_excel/ubah/".$d['tahun'];?>" >Edit</a>
+								</td>
 							 </tr>
 							 <?php } ?>
 							</tbody>

@@ -15,4 +15,14 @@ class Apd_a453_model extends CI_Model {
  return $data->result_array();
  }
 
+ public function update($where="") {
+ $data= $this->db->query('SELECT d.nama_dosen,k.jenis_kegiatan,k.tempat,k.tahun,k.sbg_penyaji,k.sbg_peserta FROM kegiatan_dsn_ttp k INNER JOIN dosen_tbl d ON k.id_dosen=d.id_dosen '.$where);
+ return $data->result_array();
+ }
+
+ public function rubah($tablename,$data,$where){
+		$res=$this->db->update($tablename,$data,$where);
+		return $res;
+	}
+
 }
