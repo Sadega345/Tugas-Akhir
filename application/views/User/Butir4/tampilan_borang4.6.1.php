@@ -261,10 +261,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								?>
 							 	<td><?php echo $sma['totsma']; ?></td>
 							 	<?php } ?>
-
-							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Apd_a461_excel/ubah/".$d['tots1'];?>" >Edit</a>
-								</td>
+							 	
 							 	
 							 </tr>
 							</tbody>
