@@ -129,6 +129,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th colspan="3">S1</th>
 									 <th colspan="3">S2</th>
 									 <th colspan="3">S3</th>
+									 <th rowspan="2">Aksi</th>
 								 </tr>
 								 <tr>
 								 	<td>Gelar Akademik</td>
@@ -156,6 +157,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<th>(12)</th>
 								 	<th>(13)</th>
 								 	<th>(14)</th>
+								 	<th>(15)</th>
 								 </tr>
 							</thead>
 							<tbody>
@@ -179,6 +181,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									 	<td><?php echo $d['GELAR_S3']; ?></td>
 									 	<td><?php echo $d['ASAL_PT_S3']; ?></td>
 									 	<td><?php echo $d['BID_KEAHLIAN_S3']; ?></td>
+									 	<td class="center">
+											<a href="<?php echo base_url()."index.php/Data_dosen_excel/ubah/".$d['NIDN'];?>" >Edit</a>
+										</td>
 									 </tr>
 							<?php } ?>
 							</tbody>

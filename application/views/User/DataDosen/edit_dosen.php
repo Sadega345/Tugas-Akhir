@@ -117,7 +117,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</div>
 							<div style="overflow-x:auto;">
-							
+							<form action="<?php echo base_url()."index.php/Data_dosen_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 							<thead>
 								<tr>
@@ -159,76 +159,40 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
-							<tr align="center">
-								 	<tr>
-									 	<td>1</td>
-									 	<td>Erna Hikmawati</td>
-									 	<td>0421089201</td>
-									 	<td>21/08/1992</td>
-									 	<td>S. Kom</td>
-									 	<td>Universitas Nasional Pasim</td>
-									 	<td>Teknik Informatika</td>
-									 	<td>M. Kom</td>
-									 	<td>STMIK Likmi</td>
-									 	<td>Sistem Informasi</td>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
-									 </tr>
-									  <tr>
-									 	<td>2</td>
-									 	<td>Soleh Sabarudin</td>
-									 	<td>0408097207</td>
-									 	<td>08/09/1972</td>
-									 	<td>S. Kom</td>
-									 	<td>Universitas Nasional Pasim</td>
-									 	<td>Teknik Informatika</td>
-									 	<td>M. Kom</td>
-									 	<td>STMIK Likmi</td>
-									 	<td>Sistem Informasi</td>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
-									 	<td></td>
-									 </tr>
+								<tr>
+								 	<td>1</td>
+								 	<td><input type="text" name="NAMA_DOSEN" value="<?php echo $NAMA_DOSEN; ?>"></td>
+								 	<td><input type="text" name="NIDN" value="<?php echo $NIDN; ?>" readonly></td>
+								 	<td><input type="text" name="TGL_LHR" value="<?php echo $TGL_LHR; ?>"></td>
+								 	<td><input type="text" name="NM_JAB_AKD" value="<?php echo $NM_JAB_AKD; ?>"></td>
+
+								 	<td><input type="text" name="GELAR_S1" value="<?php echo $GELAR_S1; ?>"></td>
+								 	<td><input type="text" name="ASAL_PT_S1" value="<?php echo $ASAL_PT_S1; ?>"></td>
+								 	<td><input type="text" name="BID_KEAHLIAN_S1" value="<?php echo $BID_KEAHLIAN_S1; ?>"></td>
+
+								 	<td><input type="text" name="GELAR_S2" value="<?php echo $GELAR_S2; ?>"></td>
+								 	<td><input type="text" name="ASAL_PT_S2" value="<?php echo $ASAL_PT_S2; ?>"></td>
+								 	<td><input type="text" name="BID_KEAHLIAN_S2" value="<?php echo $BID_KEAHLIAN_S2; ?>"></td>
+
+								 	<td><input type="text" name="GELAR_S3" value="<?php echo $GELAR_S3; ?>"></td>
+								 	<td><input type="text" name="ASAL_PT_S3" value="<?php echo $ASAL_PT_S3; ?>"></td>
+								 	<td><input type="text" name="BID_KEAHLIAN_S3" value="<?php echo $BID_KEAHLIAN_S3; ?>"></td>
+							 	</tr>
 							</tbody>
 							</table>
 							</div>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-										Load 
-									</button>
-								</a>
+								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a431_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
-										Export ke Excel 
+								<a href="<?php echo base_url()."index.php/Data_dosen_excel";?>">
+									<button id="sample_editable_1_new" class="btn red">
+										Batal 
 									</button>
 								</a>
 							</div>
+						</form>
+						</div>
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->
