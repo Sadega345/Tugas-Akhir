@@ -106,14 +106,15 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</div>
 							<div class="col-lg-4">
-			                    <?php 
+			                    
+			                </div>
+							<form action="<?php echo base_url()."index.php/CrudRole/edit_perm"; ?>" method="POST">
+								<?php 
 			                        foreach ($datas as $row) 
 			                        {
 			                        echo '<input type="hidden" class="form-control" name="rid" value="'.$row->r_id.'" size="14"/>';
 			                        }
 			                    ?>
-			                </div>
-							<form action="<?php echo base_url()."index.php/CrudRole/edit_perm"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 								<thead>
 			                        <tr>
