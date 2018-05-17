@@ -53,7 +53,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- END SIDEBAR TOGGLER BUTTON -->
 <!-- BEGIN LOGO -->
 <div class="logo">
-	<h1 align="center">Aplikai Pengolah Format Data Borang Akreditasi <br>Universitas Nasional PASIM</h1> 		
+	<h1 align="center">Aplikasi Pengolah Format Data Borang Akreditasi <br>Universitas Nasional PASIM</h1> 		
 </div>
 	<center><img alt="" src="<?php echo base_url()."assets/";?>frontend/layout/img/universitas nasional pasim.png" width="120px" height="120px"/></center>
 <!-- END LOGO -->
@@ -93,7 +93,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!-- END REGISTRATION FORM -->
 </div>
 <div class="copyright">
-	 2018 © Tugas Akhir
+	 2018 © Universitas Nasional Pasim
 </div>
 <!-- END LOGIN -->
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
