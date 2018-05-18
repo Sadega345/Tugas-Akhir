@@ -1,5 +1,5 @@
 /*
-SQLyog Enterprise - MySQL GUI v8.05 
+SQLyog Enterprise - MySQL GUI v7.02 
 MySQL - 5.6.16 : Database - db_borangakreditasi
 *********************************************************************
 */
@@ -317,7 +317,7 @@ CREATE TABLE `fakultas_tbl` (
 
 /*Data for the table `fakultas_tbl` */
 
-insert  into `fakultas_tbl`(`kode_fakultas`,`nama_fakultas`) values ('F001','Ilmu Komputer');
+insert  into `fakultas_tbl`(`kode_fakultas`,`nama_fakultas`) values ('F001','Ilmu Komputer'),('F002','Ekonomi');
 
 /*Table structure for table `hak_intelektual` */
 
@@ -355,15 +355,15 @@ insert  into `instansi_lulusan`(`id`,`id_ts`,`instansi`,`j_lulusan_psn`,`j_lulus
 DROP TABLE IF EXISTS `instrumen`;
 
 CREATE TABLE `instrumen` (
-  `id` int(3) NOT NULL,
-  `instrumen` varchar(30) NOT NULL,
-  `file` varchar(30) NOT NULL,
+  `id` varchar(4) NOT NULL,
+  `instrumen` varchar(100) NOT NULL,
+  `file` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `instrumen` */
 
-insert  into `instrumen`(`id`,`instrumen`,`file`) values (1,'tes3','Problem_Set_2.docx'),(3,'tes9','Absence.xlsx'),(123,'tes','LAPORAN_MINGGAN_DIVISI_PENDIDI');
+insert  into `instrumen`(`id`,`instrumen`,`file`) values ('1','tes3','Problem_Set_2.docx'),('123','tes','LAPORAN_MINGGAN_DIVISI_PENDIDI'),('I001','Excel 1','evaluasi_lulusan.xlsx');
 
 /*Table structure for table `jab_akademik` */
 
