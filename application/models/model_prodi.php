@@ -8,9 +8,9 @@ class Model_Prodi extends CI_Model {
 		return $data->result_array();
 	}
 
-	public function GetFakultas($where="")
+	public function GetFakultas()
 	{
-		$data=$this->db->query("select kode_fakultas from prodi_tbl ".$where);
+		$data=$this->db->query("select kode_fakultas from prodi_tbl ");
 		return $data->result_array();
 	}
 
@@ -28,4 +28,5 @@ class Model_Prodi extends CI_Model {
 		$res=$this->db->delete($tablename,$where);
 		return $res;
 	}
+
 }

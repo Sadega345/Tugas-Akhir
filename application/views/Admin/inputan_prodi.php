@@ -120,15 +120,23 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
-							<form action="<?php echo base_url()."index.php/CrudProdi/do_tambah"; ?>" method="POST">
+							<form action="<?php echo base_url()."index.php/CrudProdi/do_tambah"; ?>" method="POST" enctype="multipart/form-data">
 							<div class="container">
 								<div class="col-md-10">
+									<div class="row">
+										<div class="form-group">
+											<label>Kode Perguruan Tinggi</label>
+											<input type="text" class="form-control" name="kode_pt" readonly="">
+										</div>
+									</div>
 									<div class="row">
 										<div class="form-group">
 											<label>Kode Fakultas</label>
 											<select name="kode_fakultas" class="form-control">
 												<option disabled selected>-- Kode Fakultas --</option>
-												<?php foreach($data as $d) { ?>
+												<?php 
+													$data=$this->model_prodi->GetFakultas();
+													foreach($data as $d) { ?>
 									                <option value="<?php echo $d['kode_fakultas'];?>"><?php echo $d['kode_fakultas'];?></option>
 									            <?php } ?>
 											</select>
@@ -142,10 +150,119 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 									<div class="row">
 										<div class="form-group">
-											<label>Nama Prodi</label>
+											<label>Prodi</label>
 											<input type="text" class="form-control" name="prodi">
 										</div>
 									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Jurusan</label>
+											<input type="text" class="form-control" name="jurusan">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>No SK Prodi</label>
+											<input type="text" class="form-control" name="no_sk_ps">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Tgl SK Prodi</label>
+											<input type="date" class="form-control" name="tgl_sk_ps">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Pejabat Penandatangan</label>
+											<input type="text" class="form-control" name="pejabat_ttd">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Foto SK Prodi</label>
+											<input type="file" name="foto_sk">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Bulan dimulainya penyelenggaraan PS</label>
+											<input type="text" class="form-control" name="bln_mulai_ps">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Tahun dimulainya penyelenggaraan PS</label>
+											<input type="text" class="form-control" name="thn_mulai_ps">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>No SK Operasional</label>
+											<input type="text" class="form-control" name="no_sk_opr">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Tgl SK Operasional</label>
+											<input type="date" class="form-control" name="tgl_sk_opr">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Foto SK Operasional</label>
+											<input type="file" name="foto_sk_opr">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Peringkat Akreditasi</label>
+											<input type="text" class="form-control" name="peringkat">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Nilai Akreditasi</label>
+											<input type="text" class="form-control" name="nilai">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>No SK BAN-PT</label>
+											<input type="text" class="form-control" name="no_sk_ban_pt">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Alamat PS</label>
+											<input type="text" class="form-control" name="alamat_ps">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>No Telepon PS</label>
+											<input type="text" class="form-control" name="no_telp_ps">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>No Faksimile PS</label>
+											<input type="text" class="form-control" name="no_fax_ps">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Homepage PS</label>
+											<input type="text" class="form-control" name="homepage_ps">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Email PS</label>
+											<input type="text" class="form-control" name="email_ps">
+										</div>
+									</div>
+
 									<div class="row">
 										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 									</div>

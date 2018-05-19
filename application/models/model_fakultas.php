@@ -22,4 +22,6 @@ class Model_Fakultas extends CI_Model {
 		$res=$this->db->delete($tablename,$where);
 		return $res;
 	}
+
+
 }
