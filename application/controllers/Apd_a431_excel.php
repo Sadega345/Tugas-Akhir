@@ -92,7 +92,7 @@ public function export_excel(){
  // $data = array( 'title' => ' TABEL DATA BUTIR 4.3.1 : DOSEN TETAP YANG BIDANG KEAHLIANNYA SESUAI BIDANG PS',
  // 'a431' => $this->apd_a431_model->listing());
  $data=$this->Apd_a431_model->listing();		
- $this->load->view('User/Butir4/tampilan_borang4.3.1.php',array('data'=>$data));
+ $this->load->view('User/Butir4/tampilan_borang4.3.1_excel.php',array('data'=>$data));
  }
 
 }

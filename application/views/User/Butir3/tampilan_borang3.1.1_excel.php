@@ -59,27 +59,79 @@ header("Expires: 0");
 			 	<td>(15)</td>
 			 	<td>(16)</td>
 			 </tr>
-			 <tr>
-			 	<td>TS-4</td>
-			 </tr>
-			 <tr>
-			 	<td>TS-3</td>
-			 </tr>
-			 <tr>
-			 	<td>TS-2</td>
-			 </tr>
-			 <tr>
-			 	<td>TS-1</td>
-			 </tr>	
-			 <tr>
-			 	<td>TS</td>
-			 </tr>	
-			 <tr>
-			 	<td>Jumlah</td>
-			 </tr>	
-			 <tr>
-			 	<td>Rataan</td>
-			 </tr>
+			 <?php 
+									$no=4; 
+									foreach ($data as $d ) { 
+								?>
+								 <tr>
+								 	<td>TS- <?php echo $no--; ?></td>
+								 	<td><?php echo $d['dy_tampung']; ?></td>
+								 	<td><?php echo $d['jc_mhs_ikt_seleksi']; ?></td>
+								 	<td><?php echo $d['jc_mhs_lls_seleksi']; ?></td>
+								 	<td><?php echo $d['j_maba_reg_bkn_trf']; ?></td>
+								 	<td><?php echo $d['j_maba_trf']; ?></td>
+								 	<td><?php echo $d['j_tot_reg_bkn_trf']; ?></td>
+								 	<td><?php echo $d['j_tot_trf']; ?></td>
+								 	<td><?php echo $d['j_llsn_reg_bkn_trf']; ?></td>
+								 	<td><?php echo $d['j_llsn_trf']; ?></td>
+								 	<td><?php echo $d['ipk_min']; ?></td>
+								 	<td><?php echo $d['ipk_rat']; ?></td>
+								 	<td><?php echo $d['ipk_mak']; ?></td>
+								 	<td><?php echo $d['PRSN_IPK1']; ?></td>
+								 	<td><?php echo $d['PRSN_IPK2']; ?></td>
+								 	<td><?php echo $d['PRSN_IPK3']; ?></td>
+								 </tr>
+			
+								<?php } ?>
+								 <tr>
+								 	<td>Jumlah</td>
+								 	<?php 
+							 			foreach ($jumdtampung as $jum) {
+							 		?>
+								 	<td><?php echo $jum['Daya_Tampung']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
+							 			foreach ($iseleksi as $i) {
+							 		?>
+								 	<td><?php echo $i['Ikut_seleksi']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
+							 			foreach ($barutransfer as $i) {
+							 		?>
+								 	<td><?php echo $i['Baru_transfer']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
+							 			foreach ($totbukantransfer as $i) {
+							 		?>
+								 	<td><?php echo $i['Tot_BukanTransfer']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
+							 			foreach ($tottransfer as $i) {
+							 		?>
+								 	<td><?php echo $i['Tot_transfer']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
+							 			foreach ($lulusanregbukantransfer as $i) {
+							 		?>
+								 	<td><?php echo $i['Lulusan_RegBukanTransfer']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
+							 			foreach ($jumlulusantransfer as $i) {
+							 		?>
+								 	<td><?php echo $i['Jumlah_LulusanTransfer']; ?></td>
+								 	<?php } ?>
+
+								 </tr>	
+								 <tr>
+								 	<td>Rataan</td>
+								 	<td colspan="15">3.59</td>
+								 </tr>
 		</tbody>
 	</table>
 	<p>Catatan:

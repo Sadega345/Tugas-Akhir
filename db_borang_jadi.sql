@@ -1,5 +1,5 @@
 /*
-SQLyog Enterprise - MySQL GUI v7.02 
+SQLyog Enterprise - MySQL GUI v8.05 
 MySQL - 5.6.16 : Database - db_borangakreditasi
 *********************************************************************
 */
@@ -294,6 +294,7 @@ CREATE TABLE `evaluasi_lulusan` (
   `cukup` double(10,2) DEFAULT NULL,
   `kurang` double(10,2) DEFAULT NULL,
   `rencana` tinytext,
+  `jenis_kemampuan` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_evaluasi_lulusan` (`id_kemampuan`),
   KEY `FK_prodi_lulusan` (`id_prodi`),
@@ -303,7 +304,7 @@ CREATE TABLE `evaluasi_lulusan` (
 
 /*Data for the table `evaluasi_lulusan` */
 
-insert  into `evaluasi_lulusan`(`id`,`id_prodi`,`id_kemampuan`,`sangat_baik`,`baik`,`cukup`,`kurang`,`rencana`) values (1,'P001',1,84.76,15.24,0.00,0.00,'memberikan muatan etika dan moral pada materi kurikulum program studi (mata kuliah etika profesi),\r\nmenyelenggarakan kegiatan pembinaan oleh koordinator beasiswa PUB,\r\nmenyelenggaraakan mentoring setiap minggu'),(2,'P001',2,91.43,8.57,0.00,0.00,'Mengadakan pelatihan yang berkaitan dengan pemrograman,Mengadakan bootcamp (pelatihan) untuk persiapan dunia kerja'),(3,'P001',3,66.67,17.14,16.19,0.00,'Mnyelenggarakan mata kuliah TOEFL, Mengadakan kegiatan English club, Mengadakan pelatihan public speaking, Mengadakan kegiatan pelatihan bahasa inggris yang bekerja sama dengan program studi D3 Bahasa Inggris'),(4,'P001',4,85.71,14.29,0.00,0.00,'Penyediaan sarana laboratorium komputer yang memadai, Mendorong dosen untuk memanfaatkan teknologi informasi dalam proses pembelajaran, Penggunaan aplikasi IT untuk layanan mahasiswa (digital campus)'),(5,'P001',5,80.95,12.38,6.67,0.00,'Mengadakan pelatihan public speaking, Memperbanyak tugas pembuatan laporan ilmiah (untuk meningkatkan kemampuan komunikasi tertulis), Memperbanyak presentasi/diskusi dalam kelas (untuk meningkatkan kemampuan komunikasi secara lisan)'),(6,'P001',6,79.05,11.43,9.52,0.00,'Memperbanyak pemberian tugas yang harus dikerjakan dan dipresentasikan secara kelompok, Mengadakan kegiatan Latihan Dasar Kepemimpinan Mahasiswa (LDKM)'),(7,'P001',7,91.43,8.57,0.00,0.00,'Mengikutsertakan mahasiswa dalam berbagai kegiatan UKM dan kepengurusan PUB sehingga dapat mengembangkan potensi yang dimiliki oleh mahasiswa tersebut');
+insert  into `evaluasi_lulusan`(`id`,`id_prodi`,`id_kemampuan`,`sangat_baik`,`baik`,`cukup`,`kurang`,`rencana`,`jenis_kemampuan`) values (1,'P001',1,84.76,15.24,0.00,0.00,'memberikan muatan etika dan moral pada materi kurikulum program studi (mata kuliah etika profesi),\r\nmenyelenggarakan kegiatan pembinaan oleh koordinator beasiswa PUB,\r\nmenyelenggaraakan mentoring setiap minggu','Integritas (etika dan moral)'),(2,'P001',2,91.43,8.57,0.00,0.00,'Mengadakan pelatihan yang berkaitan dengan pemrograman,Mengadakan bootcamp (pelatihan) untuk persiapan dunia kerja','Keahlian berdasarkan bidang ilmu (profesionalisme)'),(3,'P001',3,66.67,17.14,16.19,0.00,'Mnyelenggarakan mata kuliah TOEFL, Mengadakan kegiatan English club, Mengadakan pelatihan public speaking, Mengadakan kegiatan pelatihan bahasa inggris yang bekerja sama dengan program studi D3 Bahasa Inggris','Bahasa Inggris'),(4,'P001',4,85.71,14.29,0.00,0.00,'Penyediaan sarana laboratorium komputer yang memadai, Mendorong dosen untuk memanfaatkan teknologi informasi dalam proses pembelajaran, Penggunaan aplikasi IT untuk layanan mahasiswa (digital campus)','Penggunaan Teknologi Informasi'),(5,'P001',5,80.95,12.38,6.67,0.00,'Mengadakan pelatihan public speaking, Memperbanyak tugas pembuatan laporan ilmiah (untuk meningkatkan kemampuan komunikasi tertulis), Memperbanyak presentasi/diskusi dalam kelas (untuk meningkatkan kemampuan komunikasi secara lisan)','Komunikasi'),(6,'P001',6,79.05,11.43,9.52,0.00,'Memperbanyak pemberian tugas yang harus dikerjakan dan dipresentasikan secara kelompok, Mengadakan kegiatan Latihan Dasar Kepemimpinan Mahasiswa (LDKM)','Kerjasama Tim'),(7,'P001',7,91.43,8.57,0.00,0.00,'Mengikutsertakan mahasiswa dalam berbagai kegiatan UKM dan kepengurusan PUB sehingga dapat mengembangkan potensi yang dimiliki oleh mahasiswa tersebut','Pengembangan Diri');
 
 /*Table structure for table `fakultas_tbl` */
 

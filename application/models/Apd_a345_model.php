@@ -11,10 +11,8 @@ public function __construct()
 
 // Listing
  public function listing() {
- $this->db->select('*');
- $this->db->from('apd_a345');
- $query = $this->db->get();
- return $query->result();
+ $data= $this->db->query('SELECT instansi,j_lulusan_psn,j_lulusan_terima FROM instansi_lulusan');
+ return $data->result_array();
  }
 
 }

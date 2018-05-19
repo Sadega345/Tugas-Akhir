@@ -144,103 +144,23 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+								<?php 
+									$no=5; 
+									foreach ($data as $d ) { 
+								?>
 								<tr>
-								 	<td>TS-6</td>
-								 	<td>40</td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td>></td>
-								 	<td>></td>
-								 	<td>2</td>
-								 	<td>30</td>
+								 	<td>TS- <?php echo $no--; ?></td>
+								 	<td ><?php echo$d['ts_6']; ?></td>
+								 	<td><?php echo$d['ts_5']; ?></td>
+								 	<td><?php echo$d['ts_4']; ?></td>
+								 	<td><?php echo$d['ts_3']; ?></td>
+								 	<td><?php echo$d['ts_2']; ?></td>
+								 	<td><?php echo$d['ts_1']; ?></td>
+								 	<td><?php echo$d['ts']; ?></td>
+								 	<td><?php echo$d['jml_ts_llsan']; ?></td>
 								 </tr>	
-								 <tr>
-								 	<td>TS-5</td>
-								 	<td bgcolor="black"></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 </tr>
-								 <tr>
-								 	<td>TS-4</td>
-								 	<td bgcolor="black"></td>
-								 	<td bgcolor="black"></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 </tr>
-								 <tr>
-								 	<td>TS-3</td>
-								 	<td bgcolor="black"></td>
-								 	<td bgcolor="black"></td>
-								 	<td bgcolor="black"></td>
-								 	<td>40</td>
-								 	<td></td>
-								 	<td></td>
-								 	<td>10</td>
-								 	<td>30</td>
-								 </tr>
-								 <tr>
-								 	<td>TS-2</td>
-								 	<td bgcolor="black"></td>
-								 	<td bgcolor="black"></td>
-								 	<td bgcolor="black"></td>
-								 	<td bgcolor="black"></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	
-								 </tr>
-								 <tr>
-								 	<td>TS-1</td>
-								 	<td bgcolor="black"></td>
-								 	<td bgcolor="black"></td>
-								 	<td bgcolor="black"></td>
-								 	<td bgcolor="black"></td>
-								 	<td bgcolor="black"></td>
-								 	<td></td>
-								 	<td></td>
-								 	
-								 </tr>	
-								 <tr>
-								 	<td>TS</td>
-								 	<td bgcolor="black"></td>
-								 	<td bgcolor="black"></td>
-								 	<td bgcolor="black"></td>
-								 	<td bgcolor="black"></td>
-								 	<td bgcolor="black"></td>
-								 	<td bgcolor="black"></td>
-								 	<td></td>
-								 	
-								 </tr>
+								<?php } ?>
+								 
 							</tbody>
 							</table>
 
@@ -262,70 +182,22 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+								<?php 
+									$no=4; 
+									foreach ($data3 as $d ) { 
+								?>
 								<tr>
-								 	<td>TS-4</td>
-								 	<td>45</td>
-								 	<td>42</td>
-								 	<td>42</td>
-								 	<td>4</td>
-								 	<td>4</td>
-								 	<td>38</td>
-								 </tr>
-								 <tr>
-								 	<td>TS-3</td>
-								 	<td bgcolor="black"></td>
-								 	<td>62</td>
-								 	<td>61</td>
-								 	<td>61</td>
-								 	<td>0</td>
-								 	<td>41</td>
-								 </tr>
-								 <tr>
-								 	<td>TS-2</td>
-								 	<td bgcolor="black"></td>
-								 	<td bgcolor="black"></td>
-								 	<td >43</td>
-								 	<td >41</td>
-								 	<td>37</td>
-								 	<td>27</td>
-								 </tr>
-								 <tr>
-								 	<td>TS-1</td>
-								 	<td bgcolor="black"></td>
-								 	<td bgcolor="black"></td>
-								 	<td bgcolor="black"></td>
-								 	<td>59</td>
-								 	<td></td>
-								 	
+								 	<tr>
+								 	<td>TS- <?php echo $no--; ?></td>
+								 	<td><?php echo$d['ts_4']; ?></td>
+								 	<td><?php echo$d['ts_3']; ?></td>
+								 	<td><?php echo$d['ts_2']; ?></td>
+								 	<td><?php echo$d['ts_1']; ?></td>
+								 	<td><?php echo$d['ts']; ?></td>
+								 	<td><?php echo$d['jml_ts_llsan']; ?></td>
 								 </tr>	
-								 <tr>
-								 	<td>TS</td>
-								 	<td bgcolor="black"></td>
-								 	<td bgcolor="black"></td>
-								 	<td bgcolor="black"></td>
-								 	<td bgcolor="black"></td>
-								 	<td></td>
-								 </tr>
+								 <?php } ?>
+								 
 							</tbody>
 							</table>
 
@@ -345,49 +217,20 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+								<?php 
+									$no=5; 
+									foreach ($data3 as $d ) { 
+								?>
 								<tr>
-								 	<td>TS-2</td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 </tr>
-								 <tr>
-								 	<td>TS-1</td>
-								 	<td bgcolor="black"></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	
+								 	<tr>
+								 	<td>TS- <?php echo $no--; ?></td>
+								 	<td><?php echo$d['ts_2']; ?></td>
+								 	<td><?php echo$d['ts_1']; ?></td>
+								 	<td><?php echo$d['ts']; ?></td>
+								 	<td><?php echo$d['jml_ts_llsan']; ?></td>
 								 </tr>	
-								 <tr>
-								 	<td>TS</td>
-								 	<td bgcolor="black"></td>
-								 	<td bgcolor="black"></td>
-								 	<td></td>
-								 	
-								 	
-								 </tr>
+								 <?php } ?>
+								 
 							</tbody>
 							</table>
 
@@ -406,38 +249,18 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+								<?php 
+									$no=5; 
+									foreach ($data3 as $d ) { 
+								?>
 								 <tr>
-								 	<td>TS-1</td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								 	<tr>
+								 	<td>TS- <?php echo $no--; ?></td>
+								 	<td><?php echo$d['ts_1']; ?></td>
+								 	<td><?php echo$d['ts']; ?></td>
+								 	<td><?php echo$d['jml_ts_llsan']; ?></td>
 								 </tr>	
-								 <tr>
-								 	<td>TS</td>
-								 	<td bgcolor="black"></td>
-								 	<td></td>
-								 	<td></td>
-								 </tr>
+								 <?php } ?>
 							</tbody>
 							</table>
 							<div class="btn-group">

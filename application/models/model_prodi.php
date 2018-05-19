@@ -2,7 +2,13 @@
 
 class Model_Prodi extends CI_Model {
 	
-	public function GetProdi($where="")
+	public function GetProdi()
+	{
+		$data=$this->db->query("select * from prodi_tbl");
+		return $data->result_array();
+	}
+
+	public function GetEditProdi($where="")
 	{
 		$data=$this->db->query("select * from prodi_tbl ".$where);
 		return $data->result_array();
@@ -10,7 +16,7 @@ class Model_Prodi extends CI_Model {
 
 	public function GetFakultas()
 	{
-		$data=$this->db->query("select kode_fakultas from prodi_tbl ");
+		$data=$this->db->query("select kode_fakultas from fakultas_tbl ");
 		return $data->result_array();
 	}
 

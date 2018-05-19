@@ -26,75 +26,47 @@ header("Expires: 0");
 			 </tr>
 		</thead>
 		<tbody>
-			 <tr>
-			 	<td>1</td>
-			 	<td>Integritas (etika dan moral)</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-			 <tr>
-			 	<td>2</td>
-			 	<td>Keahlian berdasarkan bidang ilmu (profesionalisme)</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-			 <tr>
-			 	<td>3</td>
-			 	<td>Bahasa Inggris</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-			 <tr>
-			 	<td>4</td>
-			 	<td>Penggunaan Teknologi Informasi</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-			 <tr>
-			 	<td>5</td>
-			 	<td>Komunikasi</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>	
-			 <tr>
-			 	<td>6</td>
-			 	<td>Kerjasama Tim</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>	
-			 <tr>
-			 	<td>7</td>
-			 	<td>Pengembangan Diri</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>	
-			 <tr>
-			 	<td colspan="2">Total</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
+			<?php 
+				$no=1; 
+				foreach ($data as $d ) { 
+			?>
+		<tr>
+			
+		 	<td><?php echo $no++; ?></td>
+		 	<td><?php echo $d['jenis_kemampuan']; ?></td>
+		 	<td><?php echo $d['sangat_baik']; ?></td>
+		 	<td><?php echo $d['baik']; ?></td>
+		 	<td><?php echo $d['cukup']; ?></td>
+		 	<td><?php echo $d['kurang']; ?></td>
+		 	<td><?php echo $d['rencana']; ?></td>
+		 </tr>
+		<?php } ?>
+		 
+		 <tr>
+		 	<td colspan="2">Total</td>
+		 	<?php 
+				foreach ($sangatbaik as $d ) { 
+			?>
+		 		<td><?php echo $d['Sangat_baik']; ?></td>
+		 	<?php } ?>
+
+		 	<?php 
+				foreach ($baik as $d ) { 
+			?>
+		 		<td><?php echo $d['Baik']; ?></td>
+		 	<?php } ?>
+
+		 	<?php 
+				foreach ($cukup as $d ) { 
+			?>
+		 		<td><?php echo $d['Cukup']; ?></td>
+		 	<?php } ?>
+
+		 	<?php 
+				foreach ($kurang as $d ) { 
+			?>
+		 		<td><?php echo $d['Kurang']; ?></td>
+		 	<?php } ?>
+		 </tr>
 		</tbody>
 	</table>

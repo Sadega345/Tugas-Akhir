@@ -156,26 +156,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+							
 							<tr align="center">
 								 	<td>(1)</td>
 								 	<td>(2)</td>
@@ -194,107 +175,74 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>(15)</td>
 								 	<td>(16)</td>
 								 </tr>
+								 <?php 
+									$no=4; 
+									foreach ($data as $d ) { 
+								?>
 								 <tr>
-								 	<td>TS-4</td>
-								 	<td>50</td>
-								 	<td>1160</td>
-								 	<td>46</td>
-								 	<td>45</td>
-								 	<td>0</td>
-								 	<td>192</td>
-								 	<td>0</td>
-								 	<td>33</td>
-								 	<td>0</td>
-								 	<td>2.81</td>
-								 	<td>3.44</td>
-								 	<td>3.78</td>
-								 	<td>0.00</td>
-								 	<td>39.00</td>
-								 	<td>61.00</td>
+								 	<td>TS- <?php echo $no--; ?></td>
+								 	<td><?php echo $d['dy_tampung']; ?></td>
+								 	<td><?php echo $d['jc_mhs_ikt_seleksi']; ?></td>
+								 	<td><?php echo $d['jc_mhs_lls_seleksi']; ?></td>
+								 	<td><?php echo $d['j_maba_reg_bkn_trf']; ?></td>
+								 	<td><?php echo $d['j_maba_trf']; ?></td>
+								 	<td><?php echo $d['j_tot_reg_bkn_trf']; ?></td>
+								 	<td><?php echo $d['j_tot_trf']; ?></td>
+								 	<td><?php echo $d['j_llsn_reg_bkn_trf']; ?></td>
+								 	<td><?php echo $d['j_llsn_trf']; ?></td>
+								 	<td><?php echo $d['ipk_min']; ?></td>
+								 	<td><?php echo $d['ipk_rat']; ?></td>
+								 	<td><?php echo $d['ipk_mak']; ?></td>
+								 	<td><?php echo $d['PRSN_IPK1']; ?></td>
+								 	<td><?php echo $d['PRSN_IPK2']; ?></td>
+								 	<td><?php echo $d['PRSN_IPK3']; ?></td>
 								 </tr>
-								 <tr>
-								 	<td>TS-3</td>
-								 	<td>65</td>
-								 	<td>2800</td>
-								 	<td>65</td>
-								 	<td>62</td>
-								 	<td>0</td>
-								 	<td>221</td>
-								 	<td>0</td>
-								 	<td>25</td>
-								 	<td>0</td>
-								 	<td>3.11</td>
-								 	<td>3.54</td>
-								 	<td>3.95</td>
-								 	<td>0.00</td>
-								 	<td>32.00</td>
-								 	<td>68.00</td>
-								 </tr>
-								 <tr>
-								 	<td>TS-2</td>
-								 	<td>65</td>
-								 	<td>992</td>
-								 	<td>45</td>
-								 	<td>43</td>
-								 	<td>0</td>
-								 	<td>201</td>
-								 	<td>0</td>
-								 	<td>37</td>
-								 	<td>0</td>
-								 	<td>3.13</td>
-								 	<td>3.71</td>
-								 	<td>3.91</td>
-								 	<td>0.00</td>
-								 	<td>6.00</td>
-								 	<td>94.00</td>
-								 </tr>
-								 <tr>
-								 	<td>TS-1</td>
-								 	<td>65</td>
-								 	<td>1014</td>
-								 	<td>40</td>
-								 	<td>39</td>
-								 	<td>0</td>
-								 	<td>139</td>
-								 	<td>0</td>
-								 	<td>41</td>
-								 	<td>0</td>
-								 	<td>3.46</td>
-								 	<td>3.64</td>
-								 	<td>3.87</td>
-								 	<td>0.00</td>
-								 	<td>5.00</td>
-								 	<td>95.00</td>
-								 </tr>	
-								 <tr>
-								 	<td>TS</td>
-								 	<td>65</td>
-								 	<td>1016</td>
-								 	<td>60</td>
-								 	<td>59</td>
-								 	<td>0</td>
-								 	<td>139</td>
-								 	<td>0</td>
-								 	<td>41</td>
-								 	<td>0</td>
-								 	<td>2.96</td>
-								 	<td>3.57</td>
-								 	<td>3.85</td>
-								 	<td>0.00</td>
-								 	<td>24.00</td>
-								 	<td>76.00</td>
-								 </tr>	
+			
+								<?php } ?>
 								 <tr>
 								 	<td>Jumlah</td>
-								 	<td>310</td>
-								 	<td>6982</td>
-								 	<td>256</td>
-								 	<td>248</td>
-								 	<td>0</td>
-								 	<td>892</td>
-								 	<td>0</td>
-								 	<td>177.0</td>
-								 	<td>0</td>
+								 	<?php 
+							 			foreach ($jumdtampung as $jum) {
+							 		?>
+								 	<td><?php echo $jum['Daya_Tampung']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
+							 			foreach ($iseleksi as $i) {
+							 		?>
+								 	<td><?php echo $i['Ikut_seleksi']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
+							 			foreach ($barutransfer as $i) {
+							 		?>
+								 	<td><?php echo $i['Baru_transfer']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
+							 			foreach ($totbukantransfer as $i) {
+							 		?>
+								 	<td><?php echo $i['Tot_BukanTransfer']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
+							 			foreach ($tottransfer as $i) {
+							 		?>
+								 	<td><?php echo $i['Tot_transfer']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
+							 			foreach ($lulusanregbukantransfer as $i) {
+							 		?>
+								 	<td><?php echo $i['Lulusan_RegBukanTransfer']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
+							 			foreach ($jumlulusantransfer as $i) {
+							 		?>
+								 	<td><?php echo $i['Jumlah_LulusanTransfer']; ?></td>
+								 	<?php } ?>
+
 								 </tr>	
 								 <tr>
 								 	<td>Rataan</td>

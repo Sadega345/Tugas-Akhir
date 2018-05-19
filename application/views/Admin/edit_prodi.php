@@ -109,22 +109,144 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="col-md-10">
 									<div class="row">
 										<div class="form-group">
+											<label>Kode Perguruan Tinggi</label>
+											<input type="text" class="form-control" name="kode_pt" readonly="">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
 											<label>Kode Fakultas</label>
-											<input type="text" class="form-control" name="kode_fakultas" value="<?php echo $kode_fakultas; ?>" readonly>
+											<select name="kode_fakultas" class="form-control">
+												<option disabled selected>-- Kode Fakultas --</option>
+												<?php 
+													$data=$this->model_prodi->GetFakultas();
+													foreach($data as $d) { ?>
+									                <option value="<?php echo $d['kode_fakultas'];?>"><?php echo $d['kode_fakultas'];?></option>
+									            <?php } ?>
+											</select>
 										</div>
 									</div>
 									<div class="row">
 										<div class="form-group">
-											<label>Kode Program Studi</label>
-											<input type="text" class="form-control" name="kode_prodi" value="<?php echo $kode_prodi; ?>" readonly>
+											<label>Kode Prodi</label>
+											<input type="text" class="form-control" name="kode_prodi" readonly="">
 										</div>
 									</div>
 									<div class="row">
 										<div class="form-group">
-											<label>Nama Program Studi</label>
-											<input type="text" class="form-control" name="nama_prodi" value="<?php echo $prodi; ?>">
+											<label>Prodi</label>
+											<input type="text" class="form-control" name="prodi">
 										</div>
 									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Jurusan</label>
+											<input type="text" class="form-control" name="jurusan">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>No SK Prodi</label>
+											<input type="text" class="form-control" name="no_sk_ps">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Tgl SK Prodi</label>
+											<input type="date" class="form-control" name="tgl_sk_ps">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Pejabat Penandatangan</label>
+											<input type="text" class="form-control" name="pejabat_ttd">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Foto SK Prodi</label>
+											<input type="file" name="foto_sk_ps">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Bulan dimulainya penyelenggaraan PS</label>
+											<input type="text" class="form-control" name="bln_mulai_ps">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Tahun dimulainya penyelenggaraan PS</label>
+											<input type="text" class="form-control" name="thn_mulai_ps">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>No SK Operasional</label>
+											<input type="text" class="form-control" name="no_sk_opr">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Tgl SK Operasional</label>
+											<input type="date" class="form-control" name="tgl_sk_opr">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Foto SK Operasional</label>
+											<input type="file" name="foto_sk_opr">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Peringkat Akreditasi</label>
+											<input type="text" class="form-control" name="peringkat">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Nilai Akreditasi</label>
+											<input type="text" class="form-control" name="nilai">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>No SK BAN-PT</label>
+											<input type="text" class="form-control" name="no_sk_ban_pt">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Alamat PS</label>
+											<input type="text" class="form-control" name="alamat_ps">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>No Telepon PS</label>
+											<input type="text" class="form-control" name="no_telp_ps">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>No Faksimile PS</label>
+											<input type="text" class="form-control" name="no_fax_ps">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Homepage PS</label>
+											<input type="text" class="form-control" name="homepage_ps">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Email PS</label>
+											<input type="text" class="form-control" name="email_ps">
+										</div>
+									</div>
+
 									<div class="row">
 										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 										<form action="<?php echo base_url()."index.php/CrudProdi"; ?>" method="POST">
@@ -134,46 +256,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</div>
 							</form>
-							<!-- <table class="table table-striped table-bordered table-hover" id="sample_1">
-							<thead>
-							<tr>
-								<th>
-									 No
-								</th>
-								<th>
-									 Kode Fakultas
-								</th>
-								<th>
-									 Nama Fakultas
-								</th>
-								<th>
-									 Aksi
-								</th>
-							</tr>
-							</thead>
-							<tbody>
-							<?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?>
-							<tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?>
-							</tbody>
-							</table> -->
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

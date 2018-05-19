@@ -124,10 +124,12 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="container">
 								<div class="col-md-10">
 									<div class="row">
+										
 										<div class="form-group">
 											<label>Kode Perguruan Tinggi</label>
-											<input type="text" class="form-control" name="kode_pt" readonly="">
+											<input type="text" class="form-control" name="kode_pt" >
 										</div>
+										
 									</div>
 									<div class="row">
 										<div class="form-group">
@@ -145,7 +147,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="row">
 										<div class="form-group">
 											<label>Kode Prodi</label>
-											<input type="text" class="form-control" name="kode_prodi">
+											<input type="text" class="form-control" name="kode_prodi" >
 										</div>
 									</div>
 									<div class="row">
@@ -181,7 +183,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="row">
 										<div class="form-group">
 											<label>Foto SK Prodi</label>
-											<input type="file" name="foto_sk">
+											<input type="file" name="foto_sk_ps">
 										</div>
 									</div>
 									<div class="row">
