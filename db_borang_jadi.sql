@@ -1065,11 +1065,11 @@ CREATE TABLE `users` (
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 /*Data for the table `users` */
 
-insert  into `users`(`id`,`username`,`password`) values (1,'admin','21232f297a57a5a743894a0e4a801fc3'),(2,'akademik','0b5652714faf87700d60a912f753cc55'),(3,'kaprodi','3c13922905d2bc454cc35e665335e2fd'),(4,'GeneralAffair','32d7508fe69220cb40af28441ef746d9');
+insert  into `users`(`id`,`username`,`password`) values (1,'admin','admin'),(2,'d3mi','d3mi');
 
 /*Table structure for table `waktu_prpbm` */
 
