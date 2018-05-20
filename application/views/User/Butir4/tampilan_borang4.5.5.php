@@ -127,19 +127,19 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								 <tr>
-									 <th rowspan="2">No</th>
-									 <th rowspan="2">Nama Dosen</th>
-									 <th rowspan="2">Nama Organisasi Keilmuan atau Organisasi Profesi</th>
-									 <th colspan="2">Kurun Waktu</th>
-									 <th colspan="3">Tingkat*</th>
-									 <th rowspan="2">Aksi</th>
+									 <th rowspan="2"><center>No</center></th>
+									 <th rowspan="2"><center>Nama Dosen</center></th>
+									 <th rowspan="2"><center>Nama Organisasi Keilmuan atau Organisasi Profesi</center></th>
+									 <th colspan="2"><center>Kurun Waktu</center></th>
+									 <th colspan="3"><center>Tingkat*</center></th>
+									 <th rowspan="2"><center>Aksi</center></th>
 								 </tr>
 								 <tr>
-								 	<th>Tahun Awal</th>
-								 	<th>Tahun Akhir</th>
-								 	<th>Internasional</th>
-								 	<th>Nasional</th>
-								 	<th>Lokal</th>
+								 	<th><center>Tahun Awal</center></th>
+								 	<th><center>Tahun Akhir</center></th>
+								 	<th><center>Internasional</center></th>
+								 	<th><center>Nasional</center></th>
+								 	<th><center>Lokal</center></th>
 								 </tr>
 								 <tr align="center">
 								 	<td>(1)</td>

@@ -136,7 +136,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2">Tanggal Lahir<br> (dd/mm/yyyy)</th>
 									 <th rowspan="2">Jabatan Akademik</th>
 									 <th rowspan="2">Sertifikasi**<br>(Ya/Tidak)</th>
-									 <th colspan="3">S1*</th>
+									 <th colspan="3" align="center">S1</th>
 									 <th colspan="3">S2*</th>
 									 <th colspan="3">S3*</th>
 									 <th colspan="3">Keahlian Praktis***</th>

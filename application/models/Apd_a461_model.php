@@ -15,6 +15,16 @@ class Apd_a461_model extends CI_Model {
  return $data->result_array();
  }
 
+ public function update($where="") {
+ $data= $this->db->query('SELECT s3,s2,s1,d4,d3,d2,d1,sma,unit_kerja FROM tenaga_kepend '.$where);
+ return $data->result_array();
+ }
+
+ public function rubah($tablename,$data,$where){
+		$res=$this->db->update($tablename,$data,$where);
+		return $res;
+	}
+
  public function tots3() {
  $data=$this->db->query('select sum(s3)as tots3 from tenaga_kepend where kode_prodi="p001"');
  return $data->result_array();

@@ -128,27 +128,27 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th rowspan="2">No</th>
-									 <th rowspan="2">Nama Dosen Tidak Tetap</th>
-									 <th rowspan="2">NIDN (Nomor Induk Dosen Nasional)</th>
-									 <th rowspan="2">Tanggal Lahir<br> (dd/mm/yyyy)</th>
-									 <th rowspan="2">Jabatan Akademik</th>
-									 <th rowspan="2">Sertifikasi**<br>(Ya/Tidak)</th>
-									 <th colspan="3">S1*</th>
-									 <th colspan="3">S2*</th>
-									 <th colspan="3">S3*</th>
-									 <th rowspan="2">Aksi</th>
+									 <th rowspan="2"><center>No</center></th>
+									 <th rowspan="2"><center>Nama Dosen Tidak Tetap</center></th>
+									 <th rowspan="2"><center>NIDN (Nomor Induk Dosen Nasional)</center></th>
+									 <th rowspan="2"><center>Tanggal Lahir</center><br> <center>(dd/mm/yyyy)</center></th>
+									 <th rowspan="2"><center>Jabatan Akademik</center></th>
+									 <th rowspan="2"><center>Sertifikasi**</center><br><center>(Ya/Tidak)</center></th>
+									 <th colspan="3"><center>S1*</center></th>
+									 <th colspan="3"><center>S2*</center></th>
+									 <th colspan="3"><center>S3*</center></th>
+									 <th rowspan="2"><center>Aksi</center></th>
 								 </tr>
 								 <tr>
-								 	<th>PT Asal</th>
-								 	<th>Bidang Keahlian</th>
-								 	<th>Gelar</th>
-								 	<th>PT Asal</th>
-								 	<th>Bidang Keahlian</th>
-								 	<th>Gelar</th>
-								 	<th>PT Asal</th>
-								 	<th>Bidang Keahlian</th>
-								 	<th>Gelar</th>
+								 	<th><center>PT Asal</center></th>
+								 	<th><center>Bidang Keahlian</center></th>
+								 	<th><center>Gelar</center></th>
+								 	<th><center>PT Asal</center></th>
+								 	<th><center>Bidang Keahlian</center></th>
+								 	<th><center>Gelar</center></th>
+								 	<th><center>PT Asal</center></th>
+								 	<th><center>Bidang Keahlian</center></th>
+								 	<th><center>Gelar</center></th>
 								 </tr>
 								 <tr align="center">
 								 	<td>(1)</td>

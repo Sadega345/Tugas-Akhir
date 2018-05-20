@@ -128,20 +128,20 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th rowspan="2">No</th>
-									 <th rowspan="2">Nama Dosen Tetap</th>
-									 <th colspan="3">SKS Pengajaran pada</th>
-									 <th rowspan="2">SKS Penelitian</th>
-									 <th rowspan="2">SKS Pengabdian Masyarakat</th>
-									 <th colspan="2">SKS Manajemen</th>
-									 <th rowspan="2">Jumlah SKS</th>
+									 <th rowspan="2"><center>No</center></th>
+									 <th rowspan="2"><center>Nama Dosen Tetap</center></th>
+									 <th colspan="3"><center>SKS Pengajaran pada</center></th>
+									 <th rowspan="2"><center>SKS Penelitian</center></th>
+									 <th rowspan="2"><center>SKS Pengabdian Masyarakat</center></th>
+									 <th colspan="2"><center>SKS Manajemen</center></th>
+									 <th rowspan="2"><center>Jumlah SKS</center></th>
 								 </tr>
 								 <tr>
-								 	<th>PS Sendiri</th>
-								 	<th>PS Lain, PT Sendiri</th>
-								 	<th>PT Lain</th>
-								 	<th>PS Sendiri</th>
-								 	<th>PT Lain</th>
+								 	<th><center>PS Sendiri</center></th>
+								 	<th><center>PS Lain, PT Sendiri</center></th>
+								 	<th><center>PT Lain</center></th>
+								 	<th><center>PS Sendiri</center></th>
+								 	<th><center>PT Lain</center></th>
 								 </tr>
 								 <tr align="center">
 								 	<td>(1)</td>

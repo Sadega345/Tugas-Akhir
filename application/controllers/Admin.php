@@ -36,7 +36,7 @@ class Admin extends CI_Controller {
 	}
 
 	function ganti_pwd(){
-		redirect('EdeUser');
+		redirect('CrudPassword');
 	}
 
 	function tampilan()

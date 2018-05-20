@@ -127,18 +127,18 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th rowspan="2">No</th>
-									 <th rowspan="2">Nama Dosen Tidak Tetap</th>
-									 <th rowspan="2">Kode Mata Kuliah</th>
-									 <th rowspan="2">Nama Mata Kuliah</th>
+									 <th rowspan="2"><center>No</center></th>
+									 <th rowspan="2"><center>Nama Dosen Tidak Tetap</center></th>
+									 <th rowspan="2"><center>Kode Mata Kuliah</center></th>
+									 <th rowspan="2"><center>Nama Mata Kuliah</center></th>
 									 
-									 <th rowspan="2">Jumlah SKS</th>
-									 <th colspan="2">Jumlah Pertemuan</th>
-									 <th rowspan="2">Aksi</th>
+									 <th rowspan="2"><center>Jumlah SKS</center></th>
+									 <th colspan="2"><center>Jumlah Pertemuan</center></th>
+									 <th rowspan="2"><center>Aksi</center></th>
 								 </tr>
 								 <tr>
-								 	<th>Direncanakan</th>
-								 	<th>Dilaksanakan</th>
+								 	<th><center>Direncanakan</center></th>
+								 	<th><center>Dilaksanakan</center></th>
 								 </tr>
 								 <tr align="center">
 								 	<td>(1)</td>

@@ -81,7 +81,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Edit PROGRAM STUDI
+								<i class="fa fa-edit"></i>Identitas Program Studi
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -125,7 +125,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<!-- <th>Kode sesuai kode PPDT</th> -->
 									<!-- <th>Keterangan</th> -->
 								<?php 
-									// $no=1;
+									
 									foreach ($data as $d ) { 
 								?>
 								</tr>
@@ -141,7 +141,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 <tr>
 								 	<th>2.</th>
 									<th>Jurusan/Departemen</th>
-									<th><input type="text" name="departemen" value="<?php echo $d['JURUSAN']; ?>" readonly=""></th>
+									<th><input type="text" name="departemen" value="<?php echo $d['jurusan']; ?>" readonly=""></th>
 								 </tr>
 								 <tr>
 								 	<th>3.</th>

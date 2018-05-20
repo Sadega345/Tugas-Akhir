@@ -12,7 +12,7 @@ class Model_login extends CI_model {
 	public function login($username, $password){
 		$this->db->select('*');
 		$this->db->from('users');
-		$this->db->where(['username'=>$username, 'password'=>md5($password)]); 
+		$this->db->where(['username'=>$username, 'password'=>$password]); 
 		$return = $this->db->get('');
 		if($return->num_rows() > 0 ){
 			foreach ($return->result() as $row) {
@@ -21,7 +21,7 @@ class Model_login extends CI_model {
 					   			'password' => $row->password);
 					$this->session->set_userdata( $sess );
 					redirect('Admin');
-				}else if($row->username=="akademik" || $row->password=="akademik"){
+				}else if($row->username=="d3mi" || $row->password=="mi"){
 					$sess = array('username' => $row->username,
 					   			'password' => $row->password);
 					$this->session->set_userdata( $sess );

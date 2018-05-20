@@ -18,7 +18,7 @@ class CrudRole extends CI_Controller {
 	}
 
 	public function do_tambah(){
-		$id_role=$_POST['idrole'];
+		$id_role=$_POST['rid'];
 		$permission=$_POST['butir'];
 		$roleid=implode(',', $permission);
 		$data_insert=array(
@@ -63,14 +63,14 @@ class CrudRole extends CI_Controller {
         // $rid = 1;
         $nama_permission = $this->input->post('nama_permission');
         $data = array(
-            'permission' => implode(",", $nama_permission),
-            'role_id'=>$rid
+            'permission' => implode(",", $nama_permission)
         );
         try {
             if($this->model_role->get_perm_by_id($rid) == NULL) {
                 $data['role_id'] = $this->input->post('rid');
                 $res = $this->model_role->insert_perm($data);
-            } else {
+            } 
+            else {
                 $r_id = $this->input->post('rid');
                 $res = $this->model_role->update_perm($r_id, $data);
             }

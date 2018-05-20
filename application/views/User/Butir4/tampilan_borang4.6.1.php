@@ -127,21 +127,21 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								 <tr>
-									 <th rowspan="2">No</th>
-									 <th rowspan="2">Jenis Tenaga Kependidikan</th>
-									 <th colspan="8">Jumlah Tenaga Kependidikan dengan</th>
-									 <th rowspan="2">Unit Kerja</th>
-									 <th rowspan="2">Aksi</th>
+									 <th rowspan="2"><center>No</center></th>
+									 <th rowspan="2"><center>Jenis Tenaga Kependidikan</center></th>
+									 <th colspan="8"><center>Jumlah Tenaga Kependidikan dengan</center></th>
+									 <th rowspan="2"><center>Unit Kerja</center></th>
+									 <th rowspan="2"><center>Aksi</center></th>
 								 </tr>
 								 <tr>
-								 	<th>S3</th>
-								 	<th>S2</th>
-								 	<th>S1</th>
-								 	<th>D4</th>
-								 	<th>D3</th>
-								 	<th>D2</th>
-								 	<th>D1</th>
-								 	<th>SMA/SMK</th>
+								 	<th><center>S3</center></th>
+								 	<th><center>S2</center></th>
+								 	<th><center>S1</center></th>
+								 	<th><center>D4</center></th>
+								 	<th><center>D3</center></th>
+								 	<th><center>D2</center></th>
+								 	<th><center>D1</center></th>
+								 	<th><center>SMA/SMK</center></th>
 								 </tr>
 								 <tr align="center">
 								 	<td>(1)</td>

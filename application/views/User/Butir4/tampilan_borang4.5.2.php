@@ -127,14 +127,14 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th>No</th>
-									 <th>Nama Dosen Tetap</th>
-									 <th>Jenjang Pendidikan</th>
-									 <th>Bidang Studi</th>
-									 <th>Perguruan Tinggi</th>
-									 <th>Negara</th>
-									 <th>Tahun Mulai Studi</th>
-									 <th>Aksi</th>
+									 <th><center>No</center></th>
+									 <th><center>Nama Dosen Tetap</center></th>
+									 <th><center>Jenjang Pendidikan</center></th>
+									 <th><center>Bidang Studi</center></th>
+									 <th><center>Perguruan Tinggi</center></th>
+									 <th><center>Negara</center></th>
+									 <th><center>Tahun Mulai Studi</center></th>
+									 <th><center>Aksi</center></th>
 								 </tr>
 								 <tr align="center">
 								 	<td>(1)</td>

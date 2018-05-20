@@ -115,13 +115,15 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
-							<form action="" method="POST">
+							<form action="<?php echo base_url().'index.php/CrudPassword/gantipassword'; ?>" method="POST">
 							<div class="container">
 								<div class="col-md-10">
 									<div class="row">
 										<div class="form-group">
 											<label>Password Lama</label>
-											<input type="password" class="form-control" name="pwdlama">
+											<?php foreach ($data as $d) { ?>
+											<input type="text" class="form-control" name="pwdlama" value="<?php echo $d['password']; ?>">
+											<?php } ?>
 										</div>
 									</div>
 									<div class="row">
@@ -130,6 +132,18 @@ License: You must have a valid license purchased only from themeforest(the above
 											<input type="password" class="form-control" name="pwdbaru">
 										</div>
 									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Konfirmasi Password Baru</label>
+											<input type="password" class="form-control" name="repwdbaru">
+										</div>
+									</div>
+									<?php 
+										$info = $this->session->flashdata('info');
+										if (!empty($info)) {
+											echo $info;
+										}
+									 ?>
 									<div class="row">
 										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 									</div>
