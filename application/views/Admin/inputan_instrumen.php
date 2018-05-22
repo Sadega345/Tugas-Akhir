@@ -126,7 +126,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="row">
 										<div class="form-group">
 											<label>Id</label>
-											<input type="text" class="form-control" name="id">
+											<input type="text" class="form-control" name="id" readonly="" value="<?php echo $convert; ?>">
 										</div>
 									</div>
 									<div class="row">

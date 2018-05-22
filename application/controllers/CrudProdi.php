@@ -9,7 +9,18 @@ class CrudProdi extends CI_Controller {
 
 	public function tambah(){
 		$data=$this->model_prodi->GetFakultas();
-		$this->load->view('Admin/inputan_prodi.php',array('data' => $data));
+		$datapt=$this->model_prodi->GetPerguruanTinggi();
+
+		$kd_prodi = count($data)+1;
+		$kd_perguruan = count($datapt)+1;
+
+		$convert = "P".str_pad($kd_prodi,3,"0",STR_PAD_LEFT);
+		$convertpt = "PT".str_pad($kd_perguruan,3,"0",STR_PAD_LEFT);
+		// echo $convert."Perguruan Tinggi : ".$convertpt; die;
+
+		
+		$this->load->view('Admin/inputan_prodi.php',array('convert' => $convert,
+															'convertpt' => $convertpt));
 	}
 
 	public function do_tambah(){

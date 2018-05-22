@@ -110,13 +110,13 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="row">
 										<div class="form-group">
 											<label>Kode Fakultas</label>
-											<input type="text" class="form-control" name="kode" value="<?php echo $kode_fakultas; ?>" readonly>
+											<input type="text" class="form-control" name="kode" value="<?php echo $kode_fakultas; ?>" readonly="">
 										</div>
 									</div>
 									<div class="row">
 										<div class="form-group">
 											<label>Nama Fakultas</label>
-											<input type="text" class="form-control" name="fakultas" value="<?php echo $nama_fakultas; ?>">
+											<input type="text" class="form-control" name="fakultas" value="<?php echo $nama_fakultas; ?>" reqired="">
 										</div>
 									</div>
 									<div class="row">

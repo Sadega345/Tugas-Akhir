@@ -69,7 +69,7 @@
 					<a href="javascript:;">
 					<a href="<?php echo base_url(); ?>index.php/Admin/table">
 					<i class="icon-briefcase"></i>
-					Kelola data Fakultas</a>
+					Kelola Data Fakultas</a>
 				</li>
 				<li>
 					<a href="javascript:;">

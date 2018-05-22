@@ -3,6 +3,9 @@
 class CrudPassword extends CI_Controller {
 	
 	public function index(){
+		// $this->load->library('session');
+		// echo $this->session->userdata("username");die;
+		// print_r($this->session->userdata());die;
 		$data=$this->Model_password->getpassword();
 		$this->load->view('Admin/tampilan_gantipassword.php',array('data'=>$data));
 	}
@@ -11,19 +14,26 @@ class CrudPassword extends CI_Controller {
 		$pwdlama=$_POST['pwdlama'];
 		$pwdbaru=$_POST['pwdbaru'];
 		$repwdbaru=$_POST['repwdbaru'];
+		$key_username = $this->session->userdata("username");
 
-		if ($pwdbaru!=$pwdbaru) {
+		if ($repwdbaru != $pwdbaru) {
 			echo "Gagal";
 			$this->session->set_flashdata('info','Password baru tidak sesuai dengn password lama');
 		}
 		else{
-			$where=array('password'=>$pwdlama);
-			$data_update=array(
-				'password'=>$repwdbaru
+			//set data update
+			$databaru = array( 
+			    'password' => $repwdbaru
 			);
-			$res=$this->Model_password->update('users',$data_update,$where);
-			if ($res > 0) {
-				redirect('Admin','refresh');
+			$this->db->where('username', $key_username);
+			$response = $this->db->update('users', $databaru);
+
+			if ($response) {
+				$sess = array(
+					   		'password' => $repwdbaru
+					   	);
+				$this->session->set_userdata( $sess );
+				redirect('Login','refresh');
 			}else{
 				$this->session->set_flashdata('info','Password baru tidak sesuai dengn password lama');
 			}

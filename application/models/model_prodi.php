@@ -20,6 +20,12 @@ class Model_Prodi extends CI_Model {
 		return $data->result_array();
 	}
 
+	public function GetPerguruanTinggi()
+	{
+		$data=$this->db->query("SELECT kode_pt FROM perguruan_tinggi ");
+		return $data->result_array();
+	}
+
 	public function insert($tablename,$data){
 		$res=$this->db->insert($tablename,$data);
 		return $res;

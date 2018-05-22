@@ -9,7 +9,13 @@ class CrudInstrumen extends CI_Controller {
 
 	public function tambah(){
 		$data=$this->model_instrumen->GetInstrumen();
-		$this->load->view('Admin/inputan_instrumen.php',array('data' => $data));
+		
+		$kd_instrumen = count($data)+1;
+		
+		$convert = "I".str_pad($kd_instrumen,3,"0",STR_PAD_LEFT);
+		
+		// echo $convert;die;
+		$this->load->view('Admin/inputan_instrumen.php',array('convert' => $convert));
 	}
 
 	public function input(){

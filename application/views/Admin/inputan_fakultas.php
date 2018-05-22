@@ -126,13 +126,14 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="row">
 										<div class="form-group">
 											<label>Kode Fakultas</label>
-											<input type="text" class="form-control" name="kode">
+											<input type="text" class="form-control" name="kode" readonly="" value="<?php echo $convert; ?>">
+										
 										</div>
 									</div>
 									<div class="row">
 										<div class="form-group">
 											<label>Nama Fakultas</label>
-											<input type="text" class="form-control" name="fakultas" required>
+											<input type="text" class="form-control" name="fakultas" required id="nama_fakultas" >
 										</div>
 									</div>
 									<div class="row">
@@ -216,6 +217,14 @@ Demo.init(); // init demo features
    Index.initMiniCharts();
    Tasks.initDashboardWidget();
 });
+
+</script>
+
+<script type="text/javascript">
+$('#nama_fakultas').bind('keyup blur',function(){ 
+    var node = $(this);
+    node.val(node.val().replace(/[^a-z]/g,'') ); }
+);
 </script>
 <!-- END JAVASCRIPTS -->
 </body>

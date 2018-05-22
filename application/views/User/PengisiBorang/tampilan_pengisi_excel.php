@@ -3,6 +3,7 @@
 header("Content-type: application/octet-stream");
 
 
+header("Content-Disposition: attachment; filename=PENGISI DATA BORANG : PENGISI DATA BORANG.xls");
 
 header("Pragma: no-cache");
 

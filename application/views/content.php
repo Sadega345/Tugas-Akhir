@@ -18,7 +18,7 @@
 			</div>
 			<!-- END PAGE HEADER-->
 			<!-- BEGIN DASHBOARD STATS -->
-			<h1>Selamat datang di aplikasi borang akreditasi </h1>
+			<h1>Selamat datang di Aplikasi Pengolahan Format Data Borang Akreditasi </h1>
 			<!-- <div class="row">
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 					<div class="dashboard-stat blue-madison">

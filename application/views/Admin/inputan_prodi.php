@@ -127,7 +127,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										
 										<div class="form-group">
 											<label>Kode Perguruan Tinggi</label>
-											<input type="text" class="form-control" name="kode_pt" >
+											<input type="text" class="form-control" name="kode_pt" value="<?php echo $convertpt; ?>" readonly="">
 										</div>
 										
 									</div>
@@ -147,7 +147,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="row">
 										<div class="form-group">
 											<label>Kode Prodi</label>
-											<input type="text" class="form-control" name="kode_prodi" >
+											<input type="text" class="form-control" name="kode_prodi" value="<?php echo $convert; ?>" readonly="">
 										</div>
 									</div>
 									<div class="row">

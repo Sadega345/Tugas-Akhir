@@ -13,7 +13,7 @@ class Login extends CI_Controller {
 	
 	public function index()
 	{
-
+		// print_r($this->session());die;
 		$this->load->view("login");
 
 	}
