@@ -117,7 +117,20 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</div>
 							<div style="overflow-x:auto;">
-							
+							<div class="btn-group">
+								<a href="#">
+									<button id="sample_editable_1_new" class="btn green">
+										Load 
+									</button>
+								</a>
+							</div>
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Data_Dosen_Excel/export_excel";?>">
+									<button id="sample_editable_1_new" class="btn green">
+										Export ke Excel 
+									</button>
+								</a>
+							</div>
 							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 							<thead>
 								<tr>
@@ -126,9 +139,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2">NIDN</th>
 									 <th rowspan="2">Tanggal lahir (dd/mm/yyyy)</th>
 									 <th rowspan="2">Jabatan Akademik</th>
-									 <th colspan="3">S1</th>
-									 <th colspan="3">S2</th>
-									 <th colspan="3">S3</th>
+									 <th colspan="3"><center>S1</center></th>
+									 <th colspan="3"><center>S2</center></th>
+									 <th colspan="3"><center>S3</center></th>
 									 <th rowspan="2">Aksi</th>
 								 </tr>
 								 <tr>
@@ -189,7 +202,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tbody>
 							</table>
 							</div>
-							<div class="btn-group">
+							<!-- <div class="btn-group">
 								<a href="#">
 									<button id="sample_editable_1_new" class="btn green">
 										Load 
@@ -202,7 +215,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										Export ke Excel 
 									</button>
 								</a>
-							</div>
+							</div> -->
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

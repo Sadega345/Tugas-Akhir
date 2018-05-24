@@ -117,13 +117,13 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="row">
 										<div class="form-group">
 											<label>Nama</label>
-											<input type="text" class="form-control" name="nama" value="<?php echo $nama; ?>">
+											<input type="text" class="form-control" name="nama" value="<?php echo $nama; ?>" id="nama_pengisi">
 										</div>
 									</div>
 									<div class="row">
 										<div class="form-group">
 											<label>NIDN</label>
-											<input type="text" class="form-control" name="nidn" value="<?php echo $nidn; ?>">
+											<input type="text" class="form-control" name="nidn" value="<?php echo $nidn; ?>" id="nidn">
 										</div>
 									</div>
 									<div class="row">
@@ -141,7 +141,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="row">
 										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 										<form action="<?php echo base_url()."index.php/Pengisi_excel"; ?>" method="POST">
-											<button type="submit" class="btn btn-danger" name="back">Cancel</button>
+											<button type="submit" class="btn btn-danger" name="back">Kembali</button>
 										</form>
 									</div>
 								</div>
@@ -221,6 +221,20 @@ Demo.init(); // init demo features
    Index.initMiniCharts();
    Tasks.initDashboardWidget();
 });
+</script>
+
+<script type="text/javascript">
+$('#nama_pengisi').bind('keyup blur',function(){ 
+    var node = $(this);
+    node.val(node.val().replace(/[^a-z]/g,'') ); }
+);
+</script>
+
+<script type="text/javascript">
+$('#nidn').bind('keyup blur',function(){ 
+    var node = $(this);
+    node.val(node.val().replace(/[^0-9]/g,'') ); }
+);
 </script>
 <!-- END JAVASCRIPTS -->
 </body>

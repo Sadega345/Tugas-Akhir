@@ -92,6 +92,7 @@ BEGIN CONTAINER -->
 				<!-- END ANGULARJS LINK -->
 				<li>
 					<a href="javascript:;">
+					<i class="icon-briefcase"></i>
 					<span class="title">Standar 3</span>
 					<span class="arrow "></span>
 					<ul class="sub-menu">
@@ -124,6 +125,7 @@ BEGIN CONTAINER -->
 
 				<li>
 					<a href="javascript:;">
+					<i class="icon-briefcase"></i>
 					<span class="title">Standar 4</span>
 					<span class="arrow "></span>
 					<ul class="sub-menu">
@@ -192,6 +194,7 @@ BEGIN CONTAINER -->
 						
 				<li>
 					<a href="javascript:;">
+					<i class="icon-briefcase"></i>
 					<span class="title">Standar 5</span>
 					<span class="arrow "></span>
 					<ul class="sub-menu">
@@ -216,6 +219,7 @@ BEGIN CONTAINER -->
 
 				<li>
 					<a href="javascript:;">
+					<i class="icon-briefcase"></i>
 					<span class="title">Standar 6</span>
 					<span class="arrow "></span>
 					<ul class="sub-menu">
@@ -268,6 +272,7 @@ BEGIN CONTAINER -->
 
 				<li>
 					<a href="javascript:;">
+					<i class="icon-briefcase"></i>
 					<span class="title">Standar 7</span>
 					<span class="arrow "></span>
 					<ul class="sub-menu">

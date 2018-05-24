@@ -47,7 +47,7 @@ BEGIN CONTAINER -->
 					<a href="javascript:;">
 					<a href="<?php echo base_url(); ?>index.php/User">
 					<i class="icon-home"></i>
-					<span class="title">Dashboard</span>
+					<span class="title">Dashboard Teguh</span>
 					</a>
 					<!-- <span class="selected"></span> -->
 					<!-- <span class="arrow "></span> -->
