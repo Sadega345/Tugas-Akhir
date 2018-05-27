@@ -125,7 +125,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="col-md-10">
 									<div class="row">
 										<div class="form-group">
-											<label>id</label>
+											<label>Id</label>
 											<input type="text" class="form-control" name="id">
 										</div>
 									</div>

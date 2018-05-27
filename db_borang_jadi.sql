@@ -1,5 +1,5 @@
 /*
-SQLyog Enterprise - MySQL GUI v8.05 
+SQLyog Enterprise - MySQL GUI v7.02 
 MySQL - 5.6.16 : Database - db_borangakreditasi
 *********************************************************************
 */
@@ -318,7 +318,7 @@ CREATE TABLE `fakultas_tbl` (
 
 /*Data for the table `fakultas_tbl` */
 
-insert  into `fakultas_tbl`(`kode_fakultas`,`nama_fakultas`) values ('F001','Ilmu Komputer'),('F002','Ekonomi');
+insert  into `fakultas_tbl`(`kode_fakultas`,`nama_fakultas`) values ('F001','Ilmu Komputer'),('F002','Ekonomi'),('F003','Psikologi');
 
 /*Table structure for table `hak_intelektual` */
 
@@ -364,7 +364,7 @@ CREATE TABLE `instrumen` (
 
 /*Data for the table `instrumen` */
 
-insert  into `instrumen`(`id`,`instrumen`,`file`) values ('1','tes3','Problem_Set_2.docx'),('123','tes','LAPORAN_MINGGAN_DIVISI_PENDIDI'),('I001','Excel 1','evaluasi_lulusan.xlsx');
+insert  into `instrumen`(`id`,`instrumen`,`file`) values ('I001','Excel 1','evaluasi_lulusan.xlsx');
 
 /*Table structure for table `jab_akademik` */
 
@@ -1065,7 +1065,7 @@ CREATE TABLE `users` (
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 /*Data for the table `users` */
 
