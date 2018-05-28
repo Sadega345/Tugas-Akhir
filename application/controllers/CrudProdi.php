@@ -8,7 +8,7 @@ class CrudProdi extends CI_Controller {
 	}
 
 	public function tambah(){
-		$data=$this->model_prodi->GetFakultas();
+		$data=$this->model_prodi->GetProdi();
 		$datapt=$this->model_prodi->GetPerguruanTinggi();
 
 		$kd_prodi = count($data)+1;
@@ -24,6 +24,7 @@ class CrudProdi extends CI_Controller {
 	}
 
 	public function do_tambah(){
+		
 		$kode_prodi=$_POST['kode_prodi'];
 		$kode_fakultas=$_POST['kode_fakultas'];
 		$kode_pt=$_POST['kode_pt'];
@@ -33,15 +34,15 @@ class CrudProdi extends CI_Controller {
 		$no_sk_ps=$_POST['no_sk_ps'];
 
 		$tgl_sk_ps=$_POST['tgl_sk_ps'];
-		$pejabat_ttd=$_POST['foto_skpejabat_ttd'];
-		$foto_sk_ps=$_POST['foto_sk_ps'];
+		$pejabat_ttd=$_POST['pejabat_ttd'];
+		// $foto_sk_ps=$_POST['foto_sk_ps'];
 
 		$bln_mulai_ps=$_POST['bln_mulai_ps'];
 		$thn_mulai_ps=$_POST['thn_mulai_ps'];
 		$no_sk_opr=$_POST['no_sk_opr'];
 
 		$tgl_sk_opr=$_POST['tgl_sk_opr'];
-		$foto_sk_opr=$_POST['foto_sk_opr'];
+		// $foto_sk_opr=$_POST['foto_sk_opr'];
 		$peringkat=$_POST['peringkat'];
 
 		$nilai=$_POST['nilai'];
@@ -53,36 +54,51 @@ class CrudProdi extends CI_Controller {
 		$homepage_ps=$_POST['homepage_ps'];
 		$email_ps=$_POST['email_ps'];
 
-		$data_insert=array(
-			'kode_prodi'=>$kode_prodi,
-			'kode_fakultas'=>$kode_fakultas,
-			'kode_pt'=>$kode_pt,
+		$config = [
+	        'upload_path' => './assets/prodi/',
+	        'allowed_types' => 'jpg|gif|png',
+	    ];
 
-			'prodi'=>$prodi,
-			'jurusan'=>$jurusan,
-			'no_sk_ps'=>$no_sk_ps,
+	    $this->load->library('upload', $config);
+		if (!$this->upload->do_upload('file')) //jika gagal upload
+	    {
+	    	// echo "Masuk sini";die;
+          $error = array('error' => $this->upload->display_errors()); //tampilkan error
+          redirect('Admin/CrudProdi', $error);
+	    }
+		else{
+			$file = $this->upload->data();
+			$data_insert=array(
+				'kode_prodi'=>$kode_prodi,
+				'kode_fakultas'=>$kode_fakultas,
+				'kode_pt'=>$kode_pt,
 
-			'tgl_sk_ps'=>$tgl_sk_ps,
-			'pejabat_ttd'=>$pejabat_ttd,
-			'foto_sk_ps'=>$foto_sk_ps,
+				'prodi'=>$prodi,
+				'jurusan'=>$jurusan,
+				'no_sk_ps'=>$no_sk_ps,
 
-			'bln_mulai_ps'=>$bln_mulai_ps,
-			'thn_mulai_ps'=>$thn_mulai_ps,
-			'no_sk_opr'=>$no_sk_opr,
+				'tgl_sk_ps'=>$tgl_sk_ps,
+				'pjbt_ttd'=>$pejabat_ttd,
+				'foto_sk_ps'=>$file['file_name'],
 
-			'tgl_sk_opr'=>$tgl_sk_opr,
-			'foto_sk_opr'=>$foto_sk_opr,
-			'peringkat'=>$peringkat,
+				'bln_mulai_ps'=>$bln_mulai_ps,
+				'thn_mulai_ps'=>$thn_mulai_ps,
+				'no_sk_opr'=>$no_sk_opr,
 
-			'nilai'=>$nilai,
-			'no_sk_ban_pt'=>$no_sk_ban_pt,
-			'alamat_ps'=>$alamat_ps,
+				'tgl_sk_opr'=>$tgl_sk_opr,
+				'foto_sk_opr'=>$file['file_name'],
+				'peringkat'=>$peringkat,
 
-			'no_telp_ps'=>$no_telp_ps,
-			'no_fax_ps'=>$no_fax_ps,
-			'homepage_ps'=>$homepage_ps,
-			'email_ps'=>$email_ps,
-		);
+				'nilai'=>$nilai,
+				'no_sk_ban_pt'=>$no_sk_ban_pt,
+				'alamat_ps'=>$alamat_ps,
+
+				'no_telp_ps'=>$no_telp_ps,
+				'no_fax_ps'=>$no_fax_ps,
+				'homepage_ps'=>$homepage_ps,
+				'email_ps'=>$email_ps,
+			);
+		}
 		$res=$this->model_prodi->insert('prodi_tbl',$data_insert);
 		if ($res>=1) {
 			redirect('Admin/table_prodi');
@@ -148,7 +164,7 @@ class CrudProdi extends CI_Controller {
 		$no_sk_ps=$_POST['no_sk_ps'];
 
 		$tgl_sk_ps=$_POST['tgl_sk_ps'];
-		$pejabat_ttd=$_POST['foto_skpejabat_ttd'];
+		$pejabat_ttd=$_POST['pejabat_ttd'];
 		$foto_sk_ps=$_POST['foto_sk_ps'];
 
 		$bln_mulai_ps=$_POST['bln_mulai_ps'];

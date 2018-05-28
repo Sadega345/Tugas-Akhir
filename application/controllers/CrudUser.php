@@ -54,7 +54,7 @@ class CrudUser extends CI_Controller {
 			"id"=>$res[0]['id'],
 			"username"=>$res[0]['username'],
 			"password"=>$res[0]['password'],
-			"level"=>$res[0]['level']
+			// "level"=>$res[0]['level']
 		);
 		$this->load->view('Admin/edit_user',$data);
 	}
@@ -69,7 +69,7 @@ class CrudUser extends CI_Controller {
 			'id'=>$id,
 			'username'=>$username,
 			'password'=>$password,
-			'level'=>$level
+			// 'level'=>$level
 		);
 		$where=array('id'=>$id);
 		$res=$this->model_user->update('users',$data_update,$where);

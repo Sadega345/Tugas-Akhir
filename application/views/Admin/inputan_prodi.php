@@ -153,19 +153,19 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="row">
 										<div class="form-group">
 											<label>Prodi</label>
-											<input type="text" class="form-control" name="prodi">
+											<input type="text" class="form-control" name="prodi" id="nama_prodi">
 										</div>
 									</div>
 									<div class="row">
 										<div class="form-group">
 											<label>Jurusan</label>
-											<input type="text" class="form-control" name="jurusan">
+											<input type="text" class="form-control" name="jurusan" id="nama_jurusan">
 										</div>
 									</div>
 									<div class="row">
 										<div class="form-group">
 											<label>No SK Prodi</label>
-											<input type="text" class="form-control" name="no_sk_ps">
+											<input type="text" class="form-control" name="no_sk_ps" id="nos_sk">
 										</div>
 									</div>
 									<div class="row">
@@ -195,7 +195,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="row">
 										<div class="form-group">
 											<label>Tahun dimulainya penyelenggaraan PS</label>
-											<input type="text" class="form-control" name="thn_mulai_ps">
+											<input type="text" class="form-control" name="thn_mulai_ps" id="thn_mulai_ps">
 										</div>
 									</div>
 									<div class="row">
@@ -236,8 +236,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 									<div class="row">
 										<div class="form-group">
-											<label>Alamat PS</label>
-											<input type="text" class="form-control" name="alamat_ps">
+											<label>Alamat PS</label><br>
+											<!-- <input type="text" class="form-control" name="alamat_ps"> -->
+											<textarea rows="5" cols="130" name="alamat_ps"></textarea>
 										</div>
 									</div>
 									<div class="row">
@@ -346,6 +347,29 @@ Demo.init(); // init demo features
    Index.initMiniCharts();
    Tasks.initDashboardWidget();
 });
+</script>
+
+<!-- Buat Validasi  Nama Jurusan-->
+<script type="text/javascript">
+$('#nama_jurusan').bind('keyup blur',function(){ 
+    var node = $(this);
+    node.val(node.val().replace(/[^a-zA-Z]/g,'') ); }
+);
+</script>
+
+<!-- Buat Validasi  No Sk Prodi-->
+<script type="text/javascript">
+$('#nos_sk').bind('keyup blur',function(){ 
+    var node = $(this);
+    node.val(node.val().replace(/[^0-9]/g,'') ); }
+);
+</script>
+
+<script type="text/javascript">
+$('#thn_mulai_ps').bind('keyup blur',function(){ 
+    var node = $(this);
+    node.val(node.val().replace(/[^0-9]/g,'') ); }
+);
 </script>
 <!-- END JAVASCRIPTS -->
 </body>

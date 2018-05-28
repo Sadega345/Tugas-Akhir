@@ -125,61 +125,27 @@ License: You must have a valid license purchased only from themeforest(the above
 											<input type="text" class="form-control" name="password" value="<?php echo $password; ?>">
 										</div>
 									</div>
-									<div class="row">
+									<!-- <div class="row">
 										<div class="form-group">
 											<label>Level</label>
 											<input type="text" class="form-control" name="level" value="<?php echo $level; ?>">
 										</div>
-									</div>
+									</div> -->
 									<div class="row">
 										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
-										<form action="<?php echo base_url()."index.php/CrudUser"; ?>" method="POST">
-											<button type="submit" class="btn btn-danger" name="back">Cancel</button>
-										</form>	
+										<!-- <a href="<?php echo base_url()."index.php/CrudRole";?>">
+											<button id="sample_editable_1_new" class="btn red">
+												Batal 
+											</button>
+										</a> -->
 									</div>
+									
+									<!-- <form action="<?php echo base_url()."index.php/CrudRole"; ?>" method="POST">
+										<button type="submit" class="btn btn-danger" name="back">Cancel</button>
+									</form>	 -->
 								</div>
 							</div>
 							</form>
-							<!-- <table class="table table-striped table-bordered table-hover" id="sample_1">
-							<thead>
-							<tr>
-								<th>
-									 No
-								</th>
-								<th>
-									 Kode Fakultas
-								</th>
-								<th>
-									 Nama Fakultas
-								</th>
-								<th>
-									 Aksi
-								</th>
-							</tr>
-							</thead>
-							<tbody>
-							<?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?>
-							<tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?>
-							</tbody>
-							</table> -->
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

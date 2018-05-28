@@ -219,11 +219,11 @@ Demo.init(); // init demo features
 });
 
 </script>
-
+<!-- Buat Validasi Nama Fakultas -->
 <script type="text/javascript">
 $('#nama_fakultas').bind('keyup blur',function(){ 
     var node = $(this);
-    node.val(node.val().replace(/[^a-z]/g,'') ); }
+    node.val(node.val().replace(/[^a-zA-Z]/g,'') ); }
 );
 </script>
 <!-- END JAVASCRIPTS -->
