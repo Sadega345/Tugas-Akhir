@@ -182,7 +182,16 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><input type="text" name="nama_dosen" value="<?php echo $nama_dosen; ?>"></td>
 							 	<td><input type="text" name="nidn" value="<?php echo $nidn; ?>"></td>
 							 	<td><input type="text" name="tgl_lhr" value="<?php echo $tgl_lhr; ?>"></td>
-							 	<td><input type="text" name="NM_JAB_AKD" value="<?php echo $NM_JAB_AKD; ?>"></td>
+							 	<td>
+							 		<select name="kd_jab" >
+										<option disabled selected>-- Nama Jabatan --</option>
+										<?php 
+											$data=$this->Apd_a431_model->JabAkademik();
+											foreach($data as $d) { ?>
+							                <option value="<?php echo $d['kd_jab'];?>"><?php echo $d['nm_jab_akd'];?></option>
+							            <?php } ?>
+									</select>
+							 	</td>
 							 	<td><input type="text" name="sertifikasi" value="<?php echo $sertifikasi; ?>"></td>
 							 	<td><input type="text" name="GELAR_S1" value="<?php echo $GELAR_S1; ?>"></td>
 							 	<td><input type="text" name="ASAL_PT_S1" value="<?php echo $ASAL_PT_S1; ?>"></td>
