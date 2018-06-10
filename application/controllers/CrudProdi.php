@@ -62,14 +62,14 @@ class CrudProdi extends CI_Controller {
 	    $this->load->library('upload', $config);
 		if (!$this->upload->do_upload('foto_sk_opr')) //jika gagal upload
 	    {
-	    	echo "Masuk sini";die;
+	    	// echo "Masuk sini";die;
           	$error = array('error' => $this->upload->display_errors()); //tampilkan error
           	redirect('Admin/CrudProdi', $error);
 	    }
 	    $this->load->library('upload', $config);
 	    if (!$this->upload->do_upload('foto_sk_ps')) 
 	    {
-	    	echo "Masuk sini";die;
+	    	// echo "Masuk sini";die;
 	        $error = array('error' => $this->upload->display_errors()); //tampilkan error
 	        redirect('Admin/CrudProdi', $error);
 	    }
