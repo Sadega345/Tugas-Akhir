@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Butir 6.2.2 : DANA UNTUK KEGIATAN PENELITIAN</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0

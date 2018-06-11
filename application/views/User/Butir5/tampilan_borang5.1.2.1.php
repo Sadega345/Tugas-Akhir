@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Butir 5.1.2.1 : STRUKTUR KURIKULUM BERDASARKAN URUTAN MK</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -180,6 +181,19 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['penyelenggara']; ?></td>
 							 </tr>
 							 <?php } ?>
+							 <tr>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 </tr>
 							</tbody>
 							</table>
 							<div class="btn-group">

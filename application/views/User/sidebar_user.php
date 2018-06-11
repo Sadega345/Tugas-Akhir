@@ -306,7 +306,7 @@ BEGIN CONTAINER -->
 					</a>
 					<ul class="sub-menu">
 						<li>
-							<a href="<?php echo base_url(); ?>/index.php/EdeUser/ganti_pwdUser">
+							<a href="<?php echo base_url(); ?>/index.php/EdeUser">
 							<span class="badge badge-roundless badge-danger"></span>Ganti Password<br>
 							</a>
 						</li>

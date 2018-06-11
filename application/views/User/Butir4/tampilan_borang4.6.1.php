@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Butir 4.6.1 : STATISTIK TENAGA KEPENDIDIKAN</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -131,7 +132,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2"><center>Jenis Tenaga Kependidikan</center></th>
 									 <th colspan="8"><center>Jumlah Tenaga Kependidikan dengan</center></th>
 									 <th rowspan="2"><center>Unit Kerja</center></th>
-									 <th rowspan="2"><center>Aksi</center></th>
+									 <!-- <th rowspan="2"><center>Aksi</center></th> -->
 								 </tr>
 								 <tr>
 								 	<th><center>S3</center></th>
@@ -155,7 +156,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>(9)</td>
 								 	<td>(10)</td>
 								 	<td>(11)</td>
-								 	<td>(12)</td>
+								 	<!-- <td>(12)</td> -->
 								 </tr>
 							</thead>
 							<tbody>

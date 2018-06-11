@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Butir 5.2.2 : Waktu Pelaksanaan Real Proses Belajar Mengajar</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
