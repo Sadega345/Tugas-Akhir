@@ -20,21 +20,23 @@ USE `db_borangakreditasi`;
 DROP TABLE IF EXISTS `aksesbilitas_data`;
 
 CREATE TABLE `aksesbilitas_data` (
+  `id` int(200) NOT NULL AUTO_INCREMENT,
   `kd_jns` int(2) DEFAULT NULL,
   `kd_prodi` varchar(6) NOT NULL,
   `manual` varchar(1) DEFAULT NULL,
   `komp_tnp_jar` varchar(1) DEFAULT NULL,
   `lan` varchar(1) DEFAULT NULL,
   `wan` varchar(1) DEFAULT NULL,
+  PRIMARY KEY (`id`),
   KEY `FK_aksesbilitas_data` (`kd_jns`),
   KEY `FK_aksesbilitas_prodi` (`kd_prodi`),
   CONSTRAINT `FK_aksesbilitas_data` FOREIGN KEY (`kd_jns`) REFERENCES `jns_data` (`kd_jns`),
   CONSTRAINT `FK_aksesbilitas_prodi` FOREIGN KEY (`kd_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 /*Data for the table `aksesbilitas_data` */
 
-insert  into `aksesbilitas_data`(`kd_jns`,`kd_prodi`,`manual`,`komp_tnp_jar`,`lan`,`wan`) values (1,'P001',NULL,NULL,NULL,'v'),(2,'P001',NULL,NULL,NULL,'v'),(3,'P001',NULL,NULL,NULL,'v'),(4,'P001',NULL,NULL,NULL,'v'),(5,'P001',NULL,NULL,NULL,'v'),(6,'P001',NULL,NULL,NULL,'v'),(7,'P001',NULL,NULL,NULL,'v'),(8,'P001',NULL,NULL,NULL,'v'),(9,'P001',NULL,NULL,NULL,'v'),(10,'P001',NULL,NULL,NULL,'v'),(11,'P001',NULL,NULL,NULL,'v');
+insert  into `aksesbilitas_data`(`id`,`kd_jns`,`kd_prodi`,`manual`,`komp_tnp_jar`,`lan`,`wan`) values (1,1,'P001',NULL,NULL,NULL,'v'),(2,2,'P001',NULL,NULL,NULL,'v'),(3,3,'P001',NULL,NULL,NULL,'v'),(4,4,'P001',NULL,NULL,NULL,'v'),(5,5,'P001',NULL,NULL,NULL,'v'),(6,6,'P001',NULL,NULL,NULL,'v'),(7,7,'P001',NULL,NULL,NULL,'v'),(8,8,'P001',NULL,NULL,NULL,'v'),(9,9,'P001',NULL,NULL,NULL,'v'),(10,10,'P001',NULL,NULL,NULL,'v'),(11,11,'P001',NULL,NULL,NULL,'v');
 
 /*Table structure for table `aktivitas_dosen` */
 
@@ -84,20 +86,22 @@ DROP TABLE IF EXISTS `artikel_ilmiah`;
 
 CREATE TABLE `artikel_ilmiah` (
   `id` int(4) NOT NULL AUTO_INCREMENT,
-  `kd_prodi` varchar(6) NOT NULL,
+  `kd_prodi` varchar(6) DEFAULT NULL,
   `judul` text,
   `nama_dosen` varchar(50) DEFAULT NULL,
-  `dipublikasikan` varchar(100) DEFAULT NULL,
+  `publikasi` varchar(1000) DEFAULT NULL,
   `thn_publikasi` int(4) DEFAULT NULL,
-  `lokal` varchar(1) DEFAULT NULL,
-  `nasional` varchar(1) DEFAULT NULL,
-  `internasional` varchar(1) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+  `lokal` char(1) DEFAULT NULL,
+  `nasional` char(1) DEFAULT NULL,
+  `internasional` char(1) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_artikel_prodi` (`kd_prodi`),
+  CONSTRAINT `FK_artikel_prodi` FOREIGN KEY (`kd_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 /*Data for the table `artikel_ilmiah` */
 
-insert  into `artikel_ilmiah`(`id`,`kd_prodi`,`judul`,`nama_dosen`,`dipublikasikan`,`thn_publikasi`,`lokal`,`nasional`,`internasional`) values (1,'','Pembangunan Sistem Informasi Konsumsi Tunas Raharja di MAN 1 Cirebon','Nur Achadi, Selly Meliana','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(2,'','Pembangunan Aplikasi Bursa Kerja Khusus di SMK Negeri 1 Kota Sukabumi berbasis Web','Sriwisnu','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(3,'','Pembangunan Aplikasi Informasi Pajak Bumi dan Bangunan Berbasis Android dan Google Cloud Messanginges di Desa','Yudhistira','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(4,'','Pembangunan Aplikasi E-Learning SMA Negeri 1 Ciranjang','Eko Travada, Erna Hikmawati','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(5,'','Pembangunan Aplikasi Profil Pahlawan Nasional Indonesia Berbasis Android dan Google Map','Soleh Sabarudin, Eni Triningsih','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(6,'','Sistem Informasi Wisata Berbasis Android dan GIS Studi Kasus Pulau Biawak Indramayu','Soleh Sabarudin, Selly Meliana','Jurnal Ilmu Komputer Vol. 6 No. 2',2015,'v',NULL,NULL),(7,'','Implementasi K-Means Cluster Untuk Menentukan Strategi Marketing di Universitas Nasional Pasim ','Eko Travada, Sriwisnu','Jurnal Ilmu Komputer Vol. 6 No. 2',2015,'v',NULL,NULL),(8,'','Pembangunan Aplikasi Pembobotan Parameter Tes Potensi Akademik (TPA) Penerimaan Mahasiswa / Mahasiswi Pemberdayaan Umat Berkelanjutan (PUB) dengan Metode Analitycal Hierarchy Process (AHP)','Eni Triningsih','Jurnal Ilmu Komputer Vol. 6 No. 2',2015,'v',NULL,NULL),(9,'','Sistem Pendukung Keputusan Pemilihan Vendor Layanan Jaringan dengan Menggunakan Metode AHP dan TOPSIS \r\n','Erna Hikmawati','Jurnal Ilmu Komputer Vol. 6 No. 2',2015,'v',NULL,NULL),(10,'','Arsitektur Enterprise Sistem Informasi Centralized Traffic Control (CTC) Kereta Api\r\n','Yudhistira, Nur Achadi','Jurnal Ilmu Komputer Vol. 6 No. 2',2015,'v',NULL,NULL),(11,'','Penerapan Algoritma Ant Colony Optimization (ACO) Untuk Perhitungan Jarak Terpendek Lokal Wisata di Kota Bandung','Erna Hikmawati, Sriwisnu','Jurnal Ilmu Komputer Vol. 7 No. 1',2016,'v',NULL,NULL),(12,'','Perbandingan Web Service REST dan SOAP (Studi Kasus PT. Dinamika Mitra Sukses Makmur)','Yudhistira, Selly Meliana','Jurnal Ilmu Komputer Vol. 7 No. 1',2016,'v',NULL,NULL),(13,'','Implementasi Algoritma Minimum Edit Distance dalam Pembangunan Aplikasi Pendeteksi Plagiarisme Dokumen Bahasa Indonesia ','Nur Achadi','Jurnal Ilmu Komputer Vol. 7 No. 1',2016,'v',NULL,NULL),(14,'','Pembangunan Aplikasi Penjadwalan Mata Kuliah Menggunakan Algoritma Genetika (Studi Kasus ada Universitas Nasional Pasim Bandung)','Eko Travada, Soleh Sabarudin','Jurnal Ilmu Komputer Vol. 7 No. 1',2016,'v',NULL,NULL),(15,'','Sistem Pendukung Keputusan Seleksi Beasiswa dengan Metode SAW (Simple Additive Weighting) Berbasis Web (Studi Kasus di SMA Negeri 1 Ciranjang)','Eni Triningsih','Jurnal Ilmu Komputer Vol. 7 No. 1',2016,'v',NULL,NULL),(16,'','Penerapan Market Basket Analysis Pada Aplikasi Book Recomender System Menggunakan Frequent Pattern Growth','Erna Hikmawati, Selly Meliana','Jurnal Ilmu Komputer Vol. 7 No. 2',2016,'v',NULL,NULL);
+insert  into `artikel_ilmiah`(`id`,`kd_prodi`,`judul`,`nama_dosen`,`publikasi`,`thn_publikasi`,`lokal`,`nasional`,`internasional`) values (1,'P001','Pembangunan Sistem Informasi Konsumsi Tunas Raharja di MAN 1 Cirebon\r\n','Nur Achadi, Selly Meliana','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(2,'P001','Pembangunan Aplikasi Bursa Kerja Khusus di SMK Negeri 1 Kota Sukabumi berbasis Web','Sriwisnu','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(3,'P001','Pembangunan Aplikasi Informasi Pajak Bumi dan Bangunan Berbasis Android dan Google Cloud Messanginges di Desa','Yudhistira','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(4,'P001','Pembangunan Aplikasi E-Learning SMA Negeri 1 Ciranjang','Eko Travada, Erna Hikmawati','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(5,'P001','Pembangunan Aplikasi Profil Pahlawan Nasional Indonesia Berbasis Android dan Google Map','Soleh Sabarudin, Eni Triningsih','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL);
 
 /*Table structure for table `dana_penelitian` */
 
@@ -253,32 +257,33 @@ CREATE TABLE `dosen_tbl` (
   KEY `FK_jns` (`kd_jns_dosen`),
   KEY `FK_jab` (`kd_jab`),
   KEY `FK_prodi_dosen` (`kd_prodi`),
+  CONSTRAINT `FK_jab` FOREIGN KEY (`kd_jab`) REFERENCES `jab_akademik` (`kd_jab`),
   CONSTRAINT `FK_jns` FOREIGN KEY (`kd_jns_dosen`) REFERENCES `jns_dosen` (`kd_jns`),
   CONSTRAINT `FK_prodi_dosen` FOREIGN KEY (`kd_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `dosen_tbl` */
 
-insert  into `dosen_tbl`(`id_dosen`,`kd_prodi`,`nidn`,`nama_dosen`,`tgl_lhr`,`kd_jab`,`kd_jns_dosen`,`sertifikasi`,`gelar_s1`,`asal_pt_s1`,`bid_keahlian_s1`,`gelar_s2`,`asal_pt_s2`,`bid_keahlian_s2`,`gelar_s3`,`asal_pt_s3`,`bid_keahlian_s3`,`gelar`,`pengakuan`,`bid_keahlian`,`sts_ahli`) values ('1','P001','0421089201','Erna Hikmawatiai','1992-08-21','',1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M. Kom','STMIK Likmi','Sistem Informasi','','','','OCA, OCP, MOS','Oracle, Microsoft','Java, Microsoft Access','YA'),('11','P001','0418106603','Tjandra Tjahyarini gg','1966-10-18','2',1,'Tidak','Ir','Institut Teknologi Bandung','Geofisika','','(Sedang Studi Lanjut) STMIK LIKMI','Sistem Informasi','','','','','Sololearn','','YA'),('17','P001',NULL,'','0000-00-00',NULL,2,'',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'TIDAK'),('2','P001','0408097207','Soleh Sabarudinu','1972-09-08','',1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M. Kom','STMIK Likmi','Sistem Informasi','','','','','Sololearn','HTML, PHP','YA'),('3','P001','8863350017','Eni Triningsih','1989-09-24','',1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M.T','Institut Teknologi Bandung','Sistem Informasi','','','','','Sololearn','SQL','YA'),('4','P001','0408047305','Eko Travada SP','1973-01-23','',1,'Tidak','S.T','Universitas Kristen Maranatha','Teknik Elektro','M.T','Institut Teknologi Bandung','Teknik Elektro','','Sedang Studi Lanjut (S3 STEI ITB)','Elektro dan Informatika','','Sololearn','C++','YA'),('5','P001','8891700016','Yudhistira Sulaeman','1973-07-03','',1,'Tidak','S.Si','Institut Teknologi Bandung','Matematika','M.Kom','STMIK Likmi','Sistem Informasi','','','','','','','YA'),('9','P001','0428097402','Lucky Handayani','1974-09-28',NULL,1,'Tidak','S.T','Universitas Jenderal Ahmad Yani','Teknik Mesin','M.T','Institut Teknologi Bandung ','Teknik Mesin','','','','','','','TIDAK');
+insert  into `dosen_tbl`(`id_dosen`,`kd_prodi`,`nidn`,`nama_dosen`,`tgl_lhr`,`kd_jab`,`kd_jns_dosen`,`sertifikasi`,`gelar_s1`,`asal_pt_s1`,`bid_keahlian_s1`,`gelar_s2`,`asal_pt_s2`,`bid_keahlian_s2`,`gelar_s3`,`asal_pt_s3`,`bid_keahlian_s3`,`gelar`,`pengakuan`,`bid_keahlian`,`sts_ahli`) values ('1','P001','0421089201','Erna Hikmawati','1992-08-21',NULL,1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M. Kom','STMIK Likmi','Sistem Informasi',NULL,NULL,NULL,'OCA, OCP, MOS','Oracle, Microsoft','Java, Microsoft Access','YA'),('11','P001','0418106603','Tjandra Tjahyarini','1966-10-18','2',1,'Tidak','Ir','Institut Teknologi Bandung','Geofisika','','(Sedang Studi Lanjut) STMIK LIKMI','Sistem Informasi','','','','','Sololearn','','TIDAK'),('17','P001',NULL,'JUHRIDIN','1980-03-09',NULL,2,'Tidak','S.Pd','STAI Siliwangi Bandung','Bahasa Inggris','M.Ag','Pasca Sarjana UIN SGD Bandng','PAI',NULL,NULL,NULL,NULL,NULL,NULL,'TIDAK'),('2','P001','0408097207','Soleh Sabarudin','1972-09-08',NULL,1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M. Kom','STMIK Likmi','Sistem Informasi',NULL,NULL,NULL,NULL,'Sololearn','HTML, PHP','YA'),('3','P001','8863350017','Eni Triningsih','1989-09-24',NULL,1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M.T','Institut Teknologi Bandung','Sistem Informasi',NULL,NULL,NULL,NULL,'Sololearn','SQL','YA'),('4','P001','0408047305','Eko Travada SP','1973-01-23','1',1,'Tidak','S.T','Universitas Kristen Maranatha','Teknik Elektro','M.T','Institut Teknologi Bandung','Teknik Elektro','','Sedang Studi Lanjut (S3 STEI ITB)','Elektro dan Informatika','','Sololearn','C++','YA'),('5','P001','8891700016','Yudhistira Sulaeman','1973-07-03',NULL,1,'Tidak','S.Si','Institut Teknologi Bandung','Matematika','M.Kom','STMIK Likmi','Sistem Informasi',NULL,NULL,NULL,NULL,NULL,NULL,'YA'),('9','P001','0428097402','Lucky Handayani','1974-09-28',NULL,1,'Tidak','S.T','Universitas Jenderal Ahmad Yani','Teknik Mesin','M.T','Institut Teknologi Bandung ','Teknik Mesin','','','','','','','TIDAK');
 
 /*Table structure for table `dt_ruang_dosen` */
 
 DROP TABLE IF EXISTS `dt_ruang_dosen`;
 
 CREATE TABLE `dt_ruang_dosen` (
-  `id_jns` int(2) NOT NULL AUTO_INCREMENT,
-  `kd_prodi` varchar(6) NOT NULL,
+  `id` int(200) NOT NULL AUTO_INCREMENT,
+  `id_jns` int(2) DEFAULT NULL,
+  `kd_prodi` varchar(6) DEFAULT NULL,
   `jml_ruang` int(3) DEFAULT NULL,
   `jml_luas` int(3) DEFAULT NULL,
-  UNIQUE KEY `id_jns` (`id_jns`),
-  KEY `FK_dt_ruang_prodi` (`kd_prodi`),
-  CONSTRAINT `FK_dt_ruang_dosen` FOREIGN KEY (`id_jns`) REFERENCES `jns_ruang` (`kd_jns`),
-  CONSTRAINT `FK_dt_ruang_prodi` FOREIGN KEY (`kd_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`)
+  PRIMARY KEY (`id`),
+  KEY `FK_jns_ruang` (`id_jns`),
+  CONSTRAINT `FK_jns_ruang` FOREIGN KEY (`id_jns`) REFERENCES `jns_ruang` (`kd_jns`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 /*Data for the table `dt_ruang_dosen` */
 
-insert  into `dt_ruang_dosen`(`id_jns`,`kd_prodi`,`jml_ruang`,`jml_luas`) values (1,'P001',NULL,NULL),(2,'P001',NULL,NULL),(3,'P001',NULL,NULL),(4,'P001',16,64);
+insert  into `dt_ruang_dosen`(`id`,`id_jns`,`kd_prodi`,`jml_ruang`,`jml_luas`) values (1,1,'P001',NULL,NULL),(2,2,'P001',NULL,NULL),(3,3,'P001',NULL,NULL),(4,4,'P001',16,64);
 
 /*Table structure for table `evaluasi_lulusan` */
 
@@ -600,18 +605,20 @@ insert  into `kegiatan_ahli`(`id`,`kd_prodi`,`nama_pakar`,`instansi`,`judul_keg`
 DROP TABLE IF EXISTS `kegiatan_dsn_ttp`;
 
 CREATE TABLE `kegiatan_dsn_ttp` (
+  `id` int(200) NOT NULL AUTO_INCREMENT,
   `id_dosen` varchar(6) DEFAULT NULL,
   `jenis_kegiatan` varchar(100) DEFAULT NULL,
   `tempat` varchar(50) DEFAULT NULL,
   `tahun` varchar(4) DEFAULT NULL,
   `sbg_penyaji` varchar(1) DEFAULT NULL,
   `sbg_peserta` varchar(1) DEFAULT NULL,
+  PRIMARY KEY (`id`),
   KEY `FK_kegiatan_dsn_ttp` (`id_dosen`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=160 DEFAULT CHARSET=latin1;
 
 /*Data for the table `kegiatan_dsn_ttp` */
 
-insert  into `kegiatan_dsn_ttp`(`id_dosen`,`jenis_kegiatan`,`tempat`,`tahun`,`sbg_penyaji`,`sbg_peserta`) values ('1','Peningkatan Kemampuan Kapasitas Manajemen Keuangan Koperasi Tunas Harapan Berbasis Aplikasi Komputer','Kec. Sindang Kerta Kab. Bandung Barat','2014','v',NULL),('1','Workshop Visual Basic .Net','Universitas Nasional Pasim','2014',NULL,'v'),('1','Pelatihan Penggunaan Microsoft Word Pada Ibu-Ibu PKK Desa Cileunyi Wetan','Kec. Cileunyi, Kab.Bandung','2014','v',NULL),('1','Pelatihan Penggunaan Microsoft Excel Pada Ibu-Ibu PKK Desa Cileunyi Wetan','Kec. Cileunyi, Kab.Bandung','2014','v',NULL),('1','Penggunaan Sistem Informasi Akuntansi Pada Koperasi Bako Wangun','Kec. Sindang Kerta Kab. Bandung Barat','2015','v',NULL),('1','Implementasi Sistem Informasi Pencatatan Data Keuanga Untuk Pengembang Koperasi Giri Waluya','Kec. Sindang Kerta Kab. Bandung Barat','2015','v',NULL),('1','Seminar Simulation Logic for Electronic ','Universitas Nasional Pasim','2015',NULL,'v'),('1','Wargame Trainning Concept','Universitas Nasional Pasim','2015',NULL,'v'),('1','Seminar DEVS-based Modelling and ','Universitas Nasional Pasim','2015',NULL,'v'),('1','Workshop How to Make 3D Object Models','Universitas Nasional Pasim','2015',NULL,'v'),('1','Workshop Computer Graphics','Universitas Nasional Pasim','2015',NULL,'v'),('1','Peningkatan Efektivitas Pembuatan Surat dengan Menggunakan Microsoft Word Pada Ibu-Ibu PKK Desa Cile','Kec. Cileunyi, Kab.Bandung','2015','v',NULL),('1',' Peningkatan Efektivitas Pengolahan Data dengan Menggunakan Microsoft Excel Pada Ibu-Ibu PKK Desa Ci',NULL,NULL,NULL,NULL),('1','Pelatihan Pembuatan Surat dengan Mnggunakan Microsoft Word Pada Ibu-Ibu PKK Desa Cimekar','Kec. Cileunyi, Kab.Bandung','2015','v',NULL),('1','Implementasi Sistem Informasi Berbasis Komputer Untuk Pengembangan Koperasi Produsen Kopi Marga Muly','Kec. Sindang Kerta Kab. Bandung Barat','2016','v',NULL),('1','Pelatihan Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),('1','Workshop Wargame Knowledge and Animation','Universitas Nasional Pasim','2016',NULL,'v'),('1','Penerapan Sistem Informasi Akuntansi Dalam Kegiatan Operasional Pada Koperasi Pilar Jaya','Kec. Sindang Kerta Kab. Bandung Barat','2016','v',NULL),('1','Menyongsong Kurikulum Berbasis KKNI','Universitas Nasional Pasim','2016',NULL,'v'),('1','Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),('1','Seminar 3D Visualization with VR-Vantage','Universitas Nasional Pasim','2016',NULL,'v'),('1','Seminar Management Information System','Universitas Nasional Pasim','2016',NULL,'v'),('1','Workshop Angular JS','Universitas Nasional Pasim','2016',NULL,'v'),('1','Pelatihan Pengolahan Data dengan Menggunakan Microsoft Excel Pada Ibu-Ibu PKK Desa Cimekar','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),('1','Peningkatan Kemampuan Pembuatan Surat  Ibu-Ibu PKK Desa Cinunuk','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),('1','Kegiatan Peningkatan Kemampuan Pengolahan Data Ibu-Ibu PKK Desa Cinunuk dengan Menggunakan Microsoft','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),('1','Penerapan Microsoft Excel dalam Kegiatan Pengolahan Data pada ','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),('1','Peningkatan Kemampuan Akuntansi Koperasi Wening Rahayu Berbasis Sistem Informasi','Kec. Sindang Kerta Kab. Bandung Barat','2017','v',NULL),('1','Seminar Cyber Security','Universitas Nasional Pasim','2017',NULL,'v'),('1','Workshop Robotic','Universitas Nasional Pasim','2017',NULL,'v'),('1',' Pelatihan Penggunaan Microsoft Word Untuk Peningkatan Efektivitas Pembuatan Surat Pada Ibu-Ibu PKK ','Kec. Cileunyi, Kab.Bandung','2017','v',NULL),('1','Pelatihan Penggunaan Microsoft Excel Untuk Peningkatan Evektifitas Pengolahan Data pada Ibu-Ibu PKK ','Kec. Cileunyi, Kab.Bandung','2017','v',NULL),('2','Workshop Visual Basic .Net','Universitas Nasional Pasim','2014',NULL,'v'),('2','Seminar Simulation Logic for Electronic ','Universitas Nasional Pasim','2015',NULL,'v'),('2','Wargame Trainning Concept','Universitas Nasional Pasim','2015',NULL,'v'),('2','Seminar DEVS-based Modelling and Simulation','Universitas Nasional Pasim','2015',NULL,'v'),('2','Workshop How to Make 3D Object Models','Universitas Nasional Pasim','2015',NULL,'v'),('2','Workshop Computer Graphics','Universitas Nasional Pasim','2015',NULL,'v'),('2','Peningkatan Efektivitas Pembuatan Surat dengan Menggunakan Microsoft Word Pada Ibu-Ibu PKK Desa Cile','Kec. Cileunyi, Kab.Bandung','2015','v',NULL),('2','Kegiatan Peningkatan Kemampuan Pengolahan Data Ibu-Ibu PKK Desa Cinunuk dengan Menggunakan Microsoft','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),('2','Menyongsong Kurikulum Berbasis KKNI','Universitas Nasional Pasim','2016',NULL,'v'),('2','Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),('2','Seminar 3D Visualization with VR-Vantage','Universitas Nasional Pasim','2016',NULL,'v'),('2','Seminar Management Information System','Universitas Nasional Pasim','2016',NULL,'v'),('2','Workshop Angular JS','Universitas Nasional Pasim','2016',NULL,'v'),('2',' Pelatihan Penggunaan Microsoft Word Untuk Peningkatan Efektivitas Pembuatan Surat Pada Ibu-Ibu PKK ','Kec. Cileunyi, Kab.Bandung','2017','v',NULL),('2','Seminar Cyber Security','Universitas Nasional Pasim','2017',NULL,'v'),('2','Workshop Robotic','Universitas Nasional Pasim','2017',NULL,'v'),('4','Workshop Visual Basic .Net','Universitas Nasional Pasim','2014',NULL,'v'),('4','Pelatihan Penggunaan Microsoft Excel Pada Ibu-Ibu PKK Desa Cileunyi Wetan','Kec. Cileunyi, Kab.Bandung','2014','v',NULL),('4','Pelatihan Pembuatan Surat dengan Mnggunakan Microsoft Word Pada Ibu-Ibu PKK Desa Cimekar','Kec. Cileunyi, Kab.Bandung','2015','v',NULL),('4','Seminar Simulation Logic for Electronic Warfare','Universitas Nasional Pasim','2015',NULL,'v'),('4','Wargame Trainning Concept','Universitas Nasional Pasim','2015',NULL,'v'),('4','Seminar DEVS-based Modelling and Simulation','Universitas Nasional Pasim','2015',NULL,'v'),('4','Workshop How to Make 3D Object Models','Universitas Nasional Pasim','2015',NULL,'v'),('4','Workshop Computer Graphics','Universitas Nasional Pasim','2015',NULL,'v'),('4','Menyongsong Kurikulum Berbasis KKNI','Universitas Nasional Pasim','2016',NULL,'v'),('4','Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),('4','Seminar 3D Visualization with VR-Vantage','Universitas Nasional Pasim','2016',NULL,'v'),('4','Seminar Management Information System','Universitas Nasional Pasim','2016',NULL,'v'),('4','Workshop Angular JS','Universitas Nasional Pasim','2016',NULL,'v'),('4','Seminar Cyber Security','Universitas Nasional Pasim','2017',NULL,'v'),('4','Workshop Robotic','Universitas Nasional Pasim','2017',NULL,'v'),('3','Workshop Visual Basic .Net','Universitas Nasional Pasim','2014',NULL,'v'),('3','Peningkatan Efektivitas Pengolahan Data dengan Menggunakan Microsoft Excel Pada Ibu-Ibu PKK Desa Cil',NULL,NULL,NULL,NULL),('3','Seminar Simulation Logic for Electronic Warfare','Universitas Nasional Pasim','2015',NULL,'v'),('3','Wargame Trainning Concept','Universitas Nasional Pasim','2015',NULL,'v'),('3','Seminar DEVS-based Modelling and Simulation','Universitas Nasional Pasim','2015',NULL,'v'),('3','Workshop How to Make 3D Object Models','Universitas Nasional Pasim','2015',NULL,'v'),('3','Workshop Computer Graphics','Universitas Nasional Pasim','2015',NULL,'v'),('3','Peningkatan Kemampuan Pengolahan Data Ibu-Ibu PKK Desa Cinunuk dengan Menggunakan Microsoft Excel','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),('3','Penerapan Microsoft Word dalam Kegiatan Pembuatan Surat pada Ibu-Ibu PKK Desa Cibiru Wetan','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),('3','Pelatihan Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),('3','Workshop Wargame Knowledge and Animation','Universitas Nasional Pasim','2016',NULL,'v'),('3','Smart City For Advancing Society','Surabaya','2016',NULL,'v'),('3','International Conference On Ict For Smart Society','Surabaya','2016',NULL,'v'),('3','Menyongsong Kurikulum Berbasis KKNI','Universitas Nasional Pasim','2016',NULL,'v'),('3','Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),('3','Seminar 3D Visualization with VR-Vantage','Universitas Nasional Pasim','2016',NULL,'v'),('3','Seminar Management Information System','Universitas Nasional Pasim','2016',NULL,'v'),('3','Workshop Angular JS','Universitas Nasional Pasim','2016',NULL,'v'),('3','Certified Information Systems Security Professional (CISSP)','Jakarta','2017',NULL,'v'),('3','Seminar Cyber Security','Universitas Nasional Pasim','2017',NULL,'v'),('3','Workshop Robotic','Universitas Nasional Pasim','2017',NULL,'v'),('5','Missile and Technical Site Equipment (TSE) under the Transfer of Technology Program of C705 Missile ','China','2014',NULL,'v'),('5','Workshop Visual Basic .Net','Universitas Nasional Pasim','2014',NULL,'v'),('5','Radar Fundamentals','Bandung','2015',NULL,'v'),('5',' Peningkatan Efektivitas Pengolahan Data dengan Menggunakan Microsoft Excel Pada Ibu-Ibu PKK Desa Ci','Kec. Cileunyi, Kab.Bandung','2015','v',NULL),('5','Seminar Simulation Logic for Electronic Warfare','Universitas Nasional Pasim','2015',NULL,'v'),('5','Wargame Trainning Concept','Universitas Nasional Pasim','2015',NULL,'v'),('5','Seminar DEVS-based Modelling and Simulation','Universitas Nasional Pasim','2015',NULL,'v'),('5','Workshop How to Make 3D Object Models','Universitas Nasional Pasim','2015',NULL,'v'),('5','Workshop Computer Graphics','Universitas Nasional Pasim','2015',NULL,'v'),('5','Peningkatan Kemampuan Pengolahan Data Ibu-Ibu PKK Desa Cinunuk dengan Menggunakan Microsoft Excel','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),('5','Workshop Wargame Knowledge and Animation','Universitas Nasional Pasim','2016',NULL,'v'),('5','Workshop Sosialisasi Pengembangan Software','PT. Pasim Sentra Utama','2016','v',NULL),('5','Pelatihan Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),('5','Having Duly Satisfied the C705 Missile Pratical Training and Having Fulfilled All Other Requirements','China','2016',NULL,'v'),('5','Military Avionics and Main Data Bus Interface Training','Boulogne-Billancourt','2016',NULL,'v'),('5','Menyongsong Kurikulum Berbasis KKNI','Universitas Nasional Pasim','2016',NULL,'v'),('5','Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),('5','Seminar 3D Visualization with VR-Vantage','Universitas Nasional Pasim','2016',NULL,'v'),('5','Seminar Management Information System','Universitas Nasional Pasim','2016',NULL,'v'),('5','Workshop Angular JS','Universitas Nasional Pasim','2016',NULL,'v'),('5','Peningkatan Kemampuan Akuntansi Koperasi Wening Rahayu Berbasis Sistem Informasi ','Kec. Sindang Kerta Kab. Bandung Barat','2017','v',NULL),('5','Seminar Cyber Security','Universitas Nasional Pasim','2017',NULL,'v'),('5','Workshop Robotic','Universitas Nasional Pasim','2017',NULL,'v'),('6','Workshop Visual Basic .Net','Universitas Nasional Pasim','2014',NULL,'v'),('6','Peningkatan Efektivitas Pengolahaan Data dengan Menggunakan Microsoft Excel pada Ibu-Ibu PKK Desa Ci','Kec. Cileunyi, Kab.Bandung','2015','v',NULL),('6','Seminar Simulation Logic for Electronic Warfare','Universitas Nasional Pasim','2015',NULL,'v'),('6','Wargame Trainning Concept','Universitas Nasional Pasim','2015',NULL,'v'),('6','Seminar DEVS-based Modelling and Simulation','Universitas Nasional Pasim','2015',NULL,'v'),('6','Workshop How to Make 3D Object Models','Universitas Nasional Pasim','2015',NULL,'v'),('6','Workshop Computer Graphics','Universitas Nasional Pasim','2015',NULL,'v'),('6','Penerapan Microsoft Excel dalam Kegiatan Pengolahan Data pada ','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),('6','Pelatihan Pengolahan Data dengan Menggunakan Microsoft Excel Pada Ibu-Ibu PKK Desa Cimekar','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),('6','Pelatihan Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),('6','Workshop Wargame Knowledge and Animation','Universitas Nasional Pasim','2016',NULL,'v'),('6','Menyongsong Kurikulum Berbasis KKNI','Universitas Nasional Pasim','2016',NULL,'v'),('6','Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),('6','Seminar 3D Visualization with VR-Vantage','Universitas Nasional Pasim','2016',NULL,'v'),('6','Seminar Management Information System','Universitas Nasional Pasim','2016',NULL,'v'),('6','Workshop Angular JS','Universitas Nasional Pasim','2016',NULL,'v'),('6','Seminar Cyber Security','Universitas Nasional Pasim','2017',NULL,'v'),('6','Workshop Robotic','Universitas Nasional Pasim','2017',NULL,'v'),('7','Workshop Visual Basic .Net','Universitas Nasional Pasim','2014',NULL,'v'),('7','Pelatihan Penggunaan Microsoft Word Pada Ibu-Ibu PKK Desa Cileunyi Wetan','Kec. Cileunyi, Kab.Bandung','2014','v',''),('7','Seminar Simulation Logic for Electronic Warfare','Universitas Nasional Pasim','2015',NULL,'v'),('7','Wargame Trainning Concept','Universitas Nasional Pasim','2015',NULL,'v'),('7','Seminar DEVS-based Modelling and Simulation','Universitas Nasional Pasim','2015',NULL,'v'),('7','Workshop How to Make 3D Object Models','Universitas Nasional Pasim','2015',NULL,'v'),('7','Workshop Computer Graphics','Universitas Nasional Pasim','2015',NULL,'v'),('7','Workshop Wargame Knowledge and Animation','Universitas Nasional Pasim','2016',NULL,'v'),('7','Pelatihan Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),('7','Menyongsong Kurikulum Berbasis KKNI','Universitas Nasional Pasim','2016',NULL,'v'),('7','Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),('7','Seminar 3D Visualization with VR-Vantage','Universitas Nasional Pasim','2016',NULL,'v'),('7','Seminar Management Information System','Universitas Nasional Pasim','2016',NULL,'v'),('7','Workshop Angular JS','Universitas Nasional Pasim','2016',NULL,'v'),('7','Peningkatan Kemampuan Pembuatan Surat  Ibu-Ibu PKK Desa Cinunuk','Kec. Cileunyi, Kab.Bandung','2016','v',''),('7','Pelatihan Penggunaan Microsoft Excel Untuk Peningkatan Evektifitas Pengolahan Data pada Ibu-Ibu PKK ',NULL,NULL,NULL,NULL),('7','Seminar Cyber Security','Universitas Nasional Pasim','2017',NULL,'v'),('7','Workshop Robotic','Universitas Nasional Pasim','2017',NULL,'v'),('8','Workshop Visual Basic .Net','Universitas Nasional Pasim','2014',NULL,'v'),('8','Penggunaan Sistem Informasi Akuntansi Pada Koperasi Bako Wangun','Kec. Sindang Kerta Kab. Bandung Barat','2015','v',NULL),('8','Seminar Simulation Logic for Electronic Warfare','Universitas Nasional Pasim','2015',NULL,'v'),('8','Wargame Trainning Concept','Universitas Nasional Pasim','2015',NULL,'v'),('8','Seminar DEVS-based Modelling and Simulation','Universitas Nasional Pasim','2015',NULL,'v'),('8','Workshop How to Make 3D Object Models','Universitas Nasional Pasim','2015',NULL,'v'),('8','Workshop Computer Graphics','Universitas Nasional Pasim','2015',NULL,'v'),('8','Peningkatan Kemampuan Pembuatan Surat Ibu-Ibu PKK Desa Cinunuk dengan Menggunakan Microsoft Word','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),('8','Menyongsong Kurikulum Berbasis KKNI','Universitas Nasional Pasim','2016',NULL,'v'),('8','Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),('8','Seminar 3D Visualization with VR-Vantage','Universitas Nasional Pasim','2016',NULL,'v'),('8','Seminar Management Information System','Universitas Nasional Pasim','2016',NULL,'v'),('8','Workshop Angular JS','Universitas Nasional Pasim','2016',NULL,'v'),('8','Pelatihan Penggunaan Microsoft Excel Untuk Peningkatan Evektifitas Pengolahan Data pada Ibu-Ibu PKK ','Kec. Cileunyi, Kab.Bandung','2017','v',NULL),('8','Seminar Cyber Security','Universitas Nasional Pasim','2017',NULL,'v'),('8','Workshop Robotic','Universitas Nasional Pasim','2017',NULL,'v');
+insert  into `kegiatan_dsn_ttp`(`id`,`id_dosen`,`jenis_kegiatan`,`tempat`,`tahun`,`sbg_penyaji`,`sbg_peserta`) values (1,'1','Peningkatan Kemampuan Kapasitas Manajemen Keuangan Koperasi Tunas Harapan Berbasis Aplikasi Komputer','Kec. Sindang Kerta Kab. Bandung Barat','2014','v',NULL),(2,'1','Workshop Visual Basic .Net','Universitas Nasional Pasim','2014',NULL,'v'),(3,'1','Pelatihan Penggunaan Microsoft Word Pada Ibu-Ibu PKK Desa Cileunyi Wetan','Kec. Cileunyi, Kab.Bandung','2014','v',NULL),(4,'1','Pelatihan Penggunaan Microsoft Excel Pada Ibu-Ibu PKK Desa Cileunyi Wetan','Kec. Cileunyi, Kab.Bandung','2014','v',NULL),(5,'1','Penggunaan Sistem Informasi Akuntansi Pada Koperasi Bako Wangun','Kec. Sindang Kerta Kab. Bandung Barat','2015','v',NULL),(6,'1','Implementasi Sistem Informasi Pencatatan Data Keuanga Untuk Pengembang Koperasi Giri Waluya','Kec. Sindang Kerta Kab. Bandung Barat','2015','v',NULL),(7,'1','Seminar Simulation Logic for Electronic ','Universitas Nasional Pasim','2015',NULL,'v'),(8,'1','Wargame Trainning Concept','Universitas Nasional Pasim','2015',NULL,'v'),(9,'1','Seminar DEVS-based Modelling and ','Universitas Nasional Pasim','2015',NULL,'v'),(10,'1','Workshop How to Make 3D Object Models','Universitas Nasional Pasim','2015',NULL,'v'),(11,'1','Workshop Computer Graphics','Universitas Nasional Pasim','2015',NULL,'v'),(12,'1','Peningkatan Efektivitas Pembuatan Surat dengan Menggunakan Microsoft Word Pada Ibu-Ibu PKK Desa Cile','Kec. Cileunyi, Kab.Bandung','2015','v',NULL),(13,'1',' Peningkatan Efektivitas Pengolahan Data dengan Menggunakan Microsoft Excel Pada Ibu-Ibu PKK Desa Ci',NULL,NULL,NULL,NULL),(14,'1','Pelatihan Pembuatan Surat dengan Mnggunakan Microsoft Word Pada Ibu-Ibu PKK Desa Cimekar','Kec. Cileunyi, Kab.Bandung','2015','v',NULL),(15,'1','Implementasi Sistem Informasi Berbasis Komputer Untuk Pengembangan Koperasi Produsen Kopi Marga Muly','Kec. Sindang Kerta Kab. Bandung Barat','2016','v',NULL),(16,'1','Pelatihan Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),(17,'1','Workshop Wargame Knowledge and Animation','Universitas Nasional Pasim','2016',NULL,'v'),(18,'1','Penerapan Sistem Informasi Akuntansi Dalam Kegiatan Operasional Pada Koperasi Pilar Jaya','Kec. Sindang Kerta Kab. Bandung Barat','2016','v',NULL),(19,'1','Menyongsong Kurikulum Berbasis KKNI','Universitas Nasional Pasim','2016',NULL,'v'),(20,'1','Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),(21,'1','Seminar 3D Visualization with VR-Vantage','Universitas Nasional Pasim','2016',NULL,'v'),(22,'1','Seminar Management Information System','Universitas Nasional Pasim','2016',NULL,'v'),(23,'1','Workshop Angular JS','Universitas Nasional Pasim','2016',NULL,'v'),(24,'1','Pelatihan Pengolahan Data dengan Menggunakan Microsoft Excel Pada Ibu-Ibu PKK Desa Cimekar','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),(25,'1','Peningkatan Kemampuan Pembuatan Surat  Ibu-Ibu PKK Desa Cinunuk','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),(26,'1','Kegiatan Peningkatan Kemampuan Pengolahan Data Ibu-Ibu PKK Desa Cinunuk dengan Menggunakan Microsoft','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),(27,'1','Penerapan Microsoft Excel dalam Kegiatan Pengolahan Data pada ','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),(28,'1','Peningkatan Kemampuan Akuntansi Koperasi Wening Rahayu Berbasis Sistem Informasi','Kec. Sindang Kerta Kab. Bandung Barat','2017','v',NULL),(29,'1','Seminar Cyber Security','Universitas Nasional Pasim','2017',NULL,'v'),(30,'1','Workshop Robotic','Universitas Nasional Pasim','2017',NULL,'v'),(31,'1',' Pelatihan Penggunaan Microsoft Word Untuk Peningkatan Efektivitas Pembuatan Surat Pada Ibu-Ibu PKK ','Kec. Cileunyi, Kab.Bandung','2017','v',NULL),(32,'1','Pelatihan Penggunaan Microsoft Excel Untuk Peningkatan Evektifitas Pengolahan Data pada Ibu-Ibu PKK ','Kec. Cileunyi, Kab.Bandung','2017','v',NULL),(33,'2','Workshop Visual Basic .Net','Universitas Nasional Pasim','2014',NULL,'v'),(34,'2','Seminar Simulation Logic for Electronic ','Universitas Nasional Pasim','2015',NULL,'v'),(35,'2','Wargame Trainning Concept','Universitas Nasional Pasim','2015',NULL,'v'),(36,'2','Seminar DEVS-based Modelling and Simulation','Universitas Nasional Pasim','2015',NULL,'v'),(37,'2','Workshop How to Make 3D Object Models','Universitas Nasional Pasim','2015',NULL,'v'),(38,'2','Workshop Computer Graphics','Universitas Nasional Pasim','2015',NULL,'v'),(39,'2','Peningkatan Efektivitas Pembuatan Surat dengan Menggunakan Microsoft Word Pada Ibu-Ibu PKK Desa Cile','Kec. Cileunyi, Kab.Bandung','2015','v',NULL),(40,'2','Kegiatan Peningkatan Kemampuan Pengolahan Data Ibu-Ibu PKK Desa Cinunuk dengan Menggunakan Microsoft','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),(41,'2','Menyongsong Kurikulum Berbasis KKNI','Universitas Nasional Pasim','2016',NULL,'v'),(42,'2','Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),(43,'2','Seminar 3D Visualization with VR-Vantage','Universitas Nasional Pasim','2016',NULL,'v'),(44,'2','Seminar Management Information System','Universitas Nasional Pasim','2016',NULL,'v'),(45,'2','Workshop Angular JS','Universitas Nasional Pasim','2016',NULL,'v'),(46,'2',' Pelatihan Penggunaan Microsoft Word Untuk Peningkatan Efektivitas Pembuatan Surat Pada Ibu-Ibu PKK ','Kec. Cileunyi, Kab.Bandung','2017','v',NULL),(47,'2','Seminar Cyber Security','Universitas Nasional Pasim','2017',NULL,'v'),(48,'2','Workshop Robotic','Universitas Nasional Pasim','2017',NULL,'v'),(49,'4','Workshop Visual Basic .Net','Universitas Nasional Pasim','2014',NULL,'v'),(50,'4','Pelatihan Penggunaan Microsoft Excel Pada Ibu-Ibu PKK Desa Cileunyi Wetan','Kec. Cileunyi, Kab.Bandung','2014','v',NULL),(51,'4','Pelatihan Pembuatan Surat dengan Mnggunakan Microsoft Word Pada Ibu-Ibu PKK Desa Cimekar','Kec. Cileunyi, Kab.Bandung','2015','v',NULL),(52,'4','Seminar Simulation Logic for Electronic Warfare','Universitas Nasional Pasim','2015',NULL,'v'),(53,'4','Wargame Trainning Concept','Universitas Nasional Pasim','2015',NULL,'v'),(54,'4','Seminar DEVS-based Modelling and Simulation','Universitas Nasional Pasim','2015',NULL,'v'),(55,'4','Workshop How to Make 3D Object Models','Universitas Nasional Pasim','2015',NULL,'v'),(56,'4','Workshop Computer Graphics','Universitas Nasional Pasim','2015',NULL,'v'),(57,'4','Menyongsong Kurikulum Berbasis KKNI','Universitas Nasional Pasim','2016',NULL,'v'),(58,'4','Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),(59,'4','Seminar 3D Visualization with VR-Vantage','Universitas Nasional Pasim','2016',NULL,'v'),(60,'4','Seminar Management Information System','Universitas Nasional Pasim','2016',NULL,'v'),(61,'4','Workshop Angular JS','Universitas Nasional Pasim','2016',NULL,'v'),(62,'4','Seminar Cyber Security','Universitas Nasional Pasim','2017',NULL,'v'),(63,'4','Workshop Robotic','Universitas Nasional Pasim','2017',NULL,'v'),(64,'3','Workshop Visual Basic .Net','Universitas Nasional Pasim','2014',NULL,'v'),(65,'3','Peningkatan Efektivitas Pengolahan Data dengan Menggunakan Microsoft Excel Pada Ibu-Ibu PKK Desa Cil',NULL,NULL,NULL,NULL),(66,'3','Seminar Simulation Logic for Electronic Warfare','Universitas Nasional Pasim','2015',NULL,'v'),(67,'3','Wargame Trainning Concept','Universitas Nasional Pasim','2015',NULL,'v'),(68,'3','Seminar DEVS-based Modelling and Simulation','Universitas Nasional Pasim','2015',NULL,'v'),(69,'3','Workshop How to Make 3D Object Models','Universitas Nasional Pasim','2015',NULL,'v'),(70,'3','Workshop Computer Graphics','Universitas Nasional Pasim','2015',NULL,'v'),(71,'3','Peningkatan Kemampuan Pengolahan Data Ibu-Ibu PKK Desa Cinunuk dengan Menggunakan Microsoft Excel','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),(72,'3','Penerapan Microsoft Word dalam Kegiatan Pembuatan Surat pada Ibu-Ibu PKK Desa Cibiru Wetan','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),(73,'3','Pelatihan Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),(74,'3','Workshop Wargame Knowledge and Animation','Universitas Nasional Pasim','2016',NULL,'v'),(75,'3','Smart City For Advancing Society','Surabaya','2016',NULL,'v'),(76,'3','International Conference On Ict For Smart Society','Surabaya','2016',NULL,'v'),(77,'3','Menyongsong Kurikulum Berbasis KKNI','Universitas Nasional Pasim','2016',NULL,'v'),(78,'3','Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),(79,'3','Seminar 3D Visualization with VR-Vantage','Universitas Nasional Pasim','2016',NULL,'v'),(80,'3','Seminar Management Information System','Universitas Nasional Pasim','2016',NULL,'v'),(81,'3','Workshop Angular JS','Universitas Nasional Pasim','2016',NULL,'v'),(82,'3','Certified Information Systems Security Professional (CISSP)','Jakarta','2017',NULL,'v'),(83,'3','Seminar Cyber Security','Universitas Nasional Pasim','2017',NULL,'v'),(84,'3','Workshop Robotic','Universitas Nasional Pasim','2017',NULL,'v'),(85,'5','Missile and Technical Site Equipment (TSE) under the Transfer of Technology Program of C705 Missile ','China','2014',NULL,'v'),(86,'5','Workshop Visual Basic .Net','Universitas Nasional Pasim','2014',NULL,'v'),(87,'5','Radar Fundamentals','Bandung','2015',NULL,'v'),(88,'5',' Peningkatan Efektivitas Pengolahan Data dengan Menggunakan Microsoft Excel Pada Ibu-Ibu PKK Desa Ci','Kec. Cileunyi, Kab.Bandung','2015','v',NULL),(89,'5','Seminar Simulation Logic for Electronic Warfare','Universitas Nasional Pasim','2015',NULL,'v'),(90,'5','Wargame Trainning Concept','Universitas Nasional Pasim','2015',NULL,'v'),(91,'5','Seminar DEVS-based Modelling and Simulation','Universitas Nasional Pasim','2015',NULL,'v'),(92,'5','Workshop How to Make 3D Object Models','Universitas Nasional Pasim','2015',NULL,'v'),(93,'5','Workshop Computer Graphics','Universitas Nasional Pasim','2015',NULL,'v'),(94,'5','Peningkatan Kemampuan Pengolahan Data Ibu-Ibu PKK Desa Cinunuk dengan Menggunakan Microsoft Excel','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),(95,'5','Workshop Wargame Knowledge and Animation','Universitas Nasional Pasim','2016',NULL,'v'),(96,'5','Workshop Sosialisasi Pengembangan Software','PT. Pasim Sentra Utama','2016','v',NULL),(97,'5','Pelatihan Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),(98,'5','Having Duly Satisfied the C705 Missile Pratical Training and Having Fulfilled All Other Requirements','China','2016',NULL,'v'),(99,'5','Military Avionics and Main Data Bus Interface Training','Boulogne-Billancourt','2016',NULL,'v'),(100,'5','Menyongsong Kurikulum Berbasis KKNI','Universitas Nasional Pasim','2016',NULL,'v'),(101,'5','Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),(102,'5','Seminar 3D Visualization with VR-Vantage','Universitas Nasional Pasim','2016',NULL,'v'),(103,'5','Seminar Management Information System','Universitas Nasional Pasim','2016',NULL,'v'),(104,'5','Workshop Angular JS','Universitas Nasional Pasim','2016',NULL,'v'),(105,'5','Peningkatan Kemampuan Akuntansi Koperasi Wening Rahayu Berbasis Sistem Informasi ','Kec. Sindang Kerta Kab. Bandung Barat','2017','v',NULL),(106,'5','Seminar Cyber Security','Universitas Nasional Pasim','2017',NULL,'v'),(107,'5','Workshop Robotic','Universitas Nasional Pasim','2017',NULL,'v'),(108,'6','Workshop Visual Basic .Net','Universitas Nasional Pasim','2014',NULL,'v'),(109,'6','Peningkatan Efektivitas Pengolahaan Data dengan Menggunakan Microsoft Excel pada Ibu-Ibu PKK Desa Ci','Kec. Cileunyi, Kab.Bandung','2015','v',NULL),(110,'6','Seminar Simulation Logic for Electronic Warfare','Universitas Nasional Pasim','2015',NULL,'v'),(111,'6','Wargame Trainning Concept','Universitas Nasional Pasim','2015',NULL,'v'),(112,'6','Seminar DEVS-based Modelling and Simulation','Universitas Nasional Pasim','2015',NULL,'v'),(113,'6','Workshop How to Make 3D Object Models','Universitas Nasional Pasim','2015',NULL,'v'),(114,'6','Workshop Computer Graphics','Universitas Nasional Pasim','2015',NULL,'v'),(115,'6','Penerapan Microsoft Excel dalam Kegiatan Pengolahan Data pada ','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),(116,'6','Pelatihan Pengolahan Data dengan Menggunakan Microsoft Excel Pada Ibu-Ibu PKK Desa Cimekar','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),(117,'6','Pelatihan Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),(118,'6','Workshop Wargame Knowledge and Animation','Universitas Nasional Pasim','2016',NULL,'v'),(119,'6','Menyongsong Kurikulum Berbasis KKNI','Universitas Nasional Pasim','2016',NULL,'v'),(120,'6','Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),(121,'6','Seminar 3D Visualization with VR-Vantage','Universitas Nasional Pasim','2016',NULL,'v'),(122,'6','Seminar Management Information System','Universitas Nasional Pasim','2016',NULL,'v'),(123,'6','Workshop Angular JS','Universitas Nasional Pasim','2016',NULL,'v'),(124,'6','Seminar Cyber Security','Universitas Nasional Pasim','2017',NULL,'v'),(125,'6','Workshop Robotic','Universitas Nasional Pasim','2017',NULL,'v'),(126,'7','Workshop Visual Basic .Net','Universitas Nasional Pasim','2014',NULL,'v'),(127,'7','Pelatihan Penggunaan Microsoft Word Pada Ibu-Ibu PKK Desa Cileunyi Wetan','Kec. Cileunyi, Kab.Bandung','2014','v',''),(128,'7','Seminar Simulation Logic for Electronic Warfare','Universitas Nasional Pasim','2015',NULL,'v'),(129,'7','Wargame Trainning Concept','Universitas Nasional Pasim','2015',NULL,'v'),(130,'7','Seminar DEVS-based Modelling and Simulation','Universitas Nasional Pasim','2015',NULL,'v'),(131,'7','Workshop How to Make 3D Object Models','Universitas Nasional Pasim','2015',NULL,'v'),(132,'7','Workshop Computer Graphics','Universitas Nasional Pasim','2015',NULL,'v'),(133,'7','Workshop Wargame Knowledge and Animation','Universitas Nasional Pasim','2016',NULL,'v'),(134,'7','Pelatihan Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),(135,'7','Menyongsong Kurikulum Berbasis KKNI','Universitas Nasional Pasim','2016',NULL,'v'),(136,'7','Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),(137,'7','Seminar 3D Visualization with VR-Vantage','Universitas Nasional Pasim','2016',NULL,'v'),(138,'7','Seminar Management Information System','Universitas Nasional Pasim','2016',NULL,'v'),(139,'7','Workshop Angular JS','Universitas Nasional Pasim','2016',NULL,'v'),(140,'7','Peningkatan Kemampuan Pembuatan Surat  Ibu-Ibu PKK Desa Cinunuk','Kec. Cileunyi, Kab.Bandung','2016','v',''),(141,'7','Pelatihan Penggunaan Microsoft Excel Untuk Peningkatan Evektifitas Pengolahan Data pada Ibu-Ibu PKK ',NULL,NULL,NULL,NULL),(142,'7','Seminar Cyber Security','Universitas Nasional Pasim','2017',NULL,'v'),(143,'7','Workshop Robotic','Universitas Nasional Pasim','2017',NULL,'v'),(144,'8','Workshop Visual Basic .Net','Universitas Nasional Pasim','2014',NULL,'v'),(145,'8','Penggunaan Sistem Informasi Akuntansi Pada Koperasi Bako Wangun','Kec. Sindang Kerta Kab. Bandung Barat','2015','v',NULL),(146,'8','Seminar Simulation Logic for Electronic Warfare','Universitas Nasional Pasim','2015',NULL,'v'),(147,'8','Wargame Trainning Concept','Universitas Nasional Pasim','2015',NULL,'v'),(148,'8','Seminar DEVS-based Modelling and Simulation','Universitas Nasional Pasim','2015',NULL,'v'),(149,'8','Workshop How to Make 3D Object Models','Universitas Nasional Pasim','2015',NULL,'v'),(150,'8','Workshop Computer Graphics','Universitas Nasional Pasim','2015',NULL,'v'),(151,'8','Peningkatan Kemampuan Pembuatan Surat Ibu-Ibu PKK Desa Cinunuk dengan Menggunakan Microsoft Word','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),(152,'8','Menyongsong Kurikulum Berbasis KKNI','Universitas Nasional Pasim','2016',NULL,'v'),(153,'8','Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),(154,'8','Seminar 3D Visualization with VR-Vantage','Universitas Nasional Pasim','2016',NULL,'v'),(155,'8','Seminar Management Information System','Universitas Nasional Pasim','2016',NULL,'v'),(156,'8','Workshop Angular JS','Universitas Nasional Pasim','2016',NULL,'v'),(157,'8','Pelatihan Penggunaan Microsoft Excel Untuk Peningkatan Evektifitas Pengolahan Data pada Ibu-Ibu PKK ','Kec. Cileunyi, Kab.Bandung','2017','v',NULL),(158,'8','Seminar Cyber Security','Universitas Nasional Pasim','2017',NULL,'v'),(159,'8','Workshop Robotic','Universitas Nasional Pasim','2017',NULL,'v');
 
 /*Table structure for table `kegiatan_pkm` */
 
@@ -619,23 +626,26 @@ DROP TABLE IF EXISTS `kegiatan_pkm`;
 
 CREATE TABLE `kegiatan_pkm` (
   `kd_jns` int(2) NOT NULL AUTO_INCREMENT,
-  `kd_prodi` varchar(6) NOT NULL,
+  `kd_prodi` varchar(6) DEFAULT NULL,
   `ts_2` int(3) DEFAULT NULL,
   `ts_1` int(3) DEFAULT NULL,
   `ts` int(3) DEFAULT NULL,
   PRIMARY KEY (`kd_jns`),
-  CONSTRAINT `FK_kegiatan_pkm` FOREIGN KEY (`kd_jns`) REFERENCES `sumber_biaya` (`kd_jns`)
+  KEY `FK_pkm_prodi` (`kd_prodi`),
+  CONSTRAINT `FK_pkm_prodi` FOREIGN KEY (`kd_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`),
+  CONSTRAINT `FK_jns_pkm` FOREIGN KEY (`kd_jns`) REFERENCES `sumber_biaya` (`kd_jns`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 /*Data for the table `kegiatan_pkm` */
 
-insert  into `kegiatan_pkm`(`kd_jns`,`kd_prodi`,`ts_2`,`ts_1`,`ts`) values (1,'',0,0,0),(2,'',NULL,NULL,0),(3,'',NULL,NULL,NULL),(4,'',6,6,5),(5,'',NULL,NULL,1);
+insert  into `kegiatan_pkm`(`kd_jns`,`kd_prodi`,`ts_2`,`ts_1`,`ts`) values (1,'P001',NULL,NULL,NULL),(2,'P001',NULL,NULL,NULL),(3,'P001',NULL,NULL,NULL),(4,'P001',6,6,6),(5,NULL,NULL,NULL,1);
 
 /*Table structure for table `keikutsertaan_org` */
 
 DROP TABLE IF EXISTS `keikutsertaan_org`;
 
 CREATE TABLE `keikutsertaan_org` (
+  `id` int(200) NOT NULL AUTO_INCREMENT,
   `id_dosen` varchar(6) DEFAULT NULL,
   `nm_organisasi` varchar(100) DEFAULT NULL,
   `thn_awal` int(4) DEFAULT NULL,
@@ -643,13 +653,14 @@ CREATE TABLE `keikutsertaan_org` (
   `internasional` char(1) DEFAULT NULL,
   `nasional` char(1) DEFAULT NULL,
   `lokal` char(1) DEFAULT NULL,
+  PRIMARY KEY (`id`),
   KEY `FK_keikutsertaan_org` (`id_dosen`),
   CONSTRAINT `FK_keikutsertaan_org` FOREIGN KEY (`id_dosen`) REFERENCES `dosen_tbl` (`id_dosen`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 /*Data for the table `keikutsertaan_org` */
 
-insert  into `keikutsertaan_org`(`id_dosen`,`nm_organisasi`,`thn_awal`,`thn_akhir`,`internasional`,`nasional`,`lokal`) values ('1','APTIKOM',2018,2019,NULL,'v',NULL),('2','APTIKOM',2018,2019,NULL,'v',NULL),('3','APTIKOM',2018,2019,NULL,'v',NULL),('4','APTIKOM',2018,2019,NULL,'v',NULL),('4','Ikatan Ahli Informatika Indonesia (IAII)',2016,2018,NULL,'v',NULL),('5','APTIKOM',2018,2019,NULL,'v',NULL);
+insert  into `keikutsertaan_org`(`id`,`id_dosen`,`nm_organisasi`,`thn_awal`,`thn_akhir`,`internasional`,`nasional`,`lokal`) values (1,'1','APTIKOM',2018,2019,NULL,'v',NULL),(2,'2','APTIKOM',2018,2019,NULL,'v',NULL),(3,'3','APTIKOM',2018,2019,NULL,'v',NULL),(4,'4','APTIKOM',2018,2019,NULL,'v',NULL),(5,'4','Ikatan Ahli Informatika Indonesia (IAII)',2016,2018,NULL,'v',NULL),(6,'5','APTIKOM',2018,2019,NULL,'v',NULL);
 
 /*Table structure for table `masastudi_ipk` */
 
@@ -692,77 +703,85 @@ CREATE TABLE `mhs_reg_nonreg` (
 DROP TABLE IF EXISTS `pembimbing_akd`;
 
 CREATE TABLE `pembimbing_akd` (
+  `Id` int(200) NOT NULL AUTO_INCREMENT,
   `id_dosen` varchar(6) DEFAULT NULL,
   `kd_prodi` varchar(6) NOT NULL,
   `j_mhs_bimbingan` int(3) DEFAULT NULL,
   `rata2_pertemuan` int(3) DEFAULT NULL,
+  PRIMARY KEY (`Id`),
   KEY `FK_dsn_pembimbing_akd` (`id_dosen`),
   KEY `FK_pembimbing_akd` (`kd_prodi`),
   CONSTRAINT `FK_pembimbing_akd` FOREIGN KEY (`kd_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`),
   CONSTRAINT `FK_pembimbing_dosen` FOREIGN KEY (`id_dosen`) REFERENCES `dosen_tbl` (`id_dosen`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 /*Data for the table `pembimbing_akd` */
 
-insert  into `pembimbing_akd`(`id_dosen`,`kd_prodi`,`j_mhs_bimbingan`,`rata2_pertemuan`) values ('1','P001',18,3),('2','P001',18,3),('4','P001',18,3),('5','P001',17,3),('3','P001',17,3);
+insert  into `pembimbing_akd`(`Id`,`id_dosen`,`kd_prodi`,`j_mhs_bimbingan`,`rata2_pertemuan`) values (1,'1','P001',18,3),(2,'2','P001',18,3),(3,'4','P001',18,3),(4,'5','P001',17,3),(5,'3','P001',17,3);
 
 /*Table structure for table `pembimbing_skripsi` */
 
 DROP TABLE IF EXISTS `pembimbing_skripsi`;
 
 CREATE TABLE `pembimbing_skripsi` (
+  `id` int(200) NOT NULL AUTO_INCREMENT,
   `id_dosen` varchar(6) DEFAULT NULL,
   `kd_prodi` varchar(6) NOT NULL,
   `jml_mhs` int(4) DEFAULT NULL,
+  PRIMARY KEY (`id`),
   KEY `FK_pembimbing_skripsi` (`id_dosen`),
   KEY `FK_pembimbing_prodi` (`kd_prodi`),
   CONSTRAINT `FK_pembimbing` FOREIGN KEY (`id_dosen`) REFERENCES `dosen_tbl` (`id_dosen`),
   CONSTRAINT `FK_pembimbing_prodi` FOREIGN KEY (`kd_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 /*Data for the table `pembimbing_skripsi` */
 
-insert  into `pembimbing_skripsi`(`id_dosen`,`kd_prodi`,`jml_mhs`) values ('1','P001',5),('2','P001',5),('4','P001',4),('5','P001',6),('3','P001',6);
+insert  into `pembimbing_skripsi`(`id`,`id_dosen`,`kd_prodi`,`jml_mhs`) values (1,'1','P001',5),(2,'2','P001',5),(3,'4','P001',4),(4,'5','P001',6),(5,'3','P001',6);
 
 /*Table structure for table `penelitian_dosen` */
 
 DROP TABLE IF EXISTS `penelitian_dosen`;
 
 CREATE TABLE `penelitian_dosen` (
+  `id` int(200) NOT NULL AUTO_INCREMENT,
   `kd_jns` int(2) DEFAULT NULL,
   `kd_prodi` varchar(6) NOT NULL,
   `ts_2` int(3) DEFAULT NULL,
   `ts_1` int(3) DEFAULT NULL,
   `ts` int(3) DEFAULT NULL,
+  PRIMARY KEY (`id`),
   KEY `FK_penelitian_prodi` (`kd_prodi`),
   KEY `FK_penelitian_jns` (`kd_jns`),
   CONSTRAINT `FK_penelitian_jns` FOREIGN KEY (`kd_jns`) REFERENCES `sumber_biaya` (`kd_jns`),
   CONSTRAINT `FK_penelitian_prodi` FOREIGN KEY (`kd_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 /*Data for the table `penelitian_dosen` */
 
-insert  into `penelitian_dosen`(`kd_jns`,`kd_prodi`,`ts_2`,`ts_1`,`ts`) values (1,'P001',NULL,NULL,NULL),(2,'P001',4,4,5),(3,'P001',NULL,NULL,NULL),(4,'P001',6,5,4),(5,'P001',NULL,1,2);
+insert  into `penelitian_dosen`(`id`,`kd_jns`,`kd_prodi`,`ts_2`,`ts_1`,`ts`) values (1,1,'P001',NULL,NULL,NULL),(2,2,'P001',4,4,5),(3,3,'P001',NULL,NULL,NULL),(4,4,'P001',6,5,4),(5,5,'P001',NULL,1,2);
 
 /*Table structure for table `penggunaan_dana` */
 
 DROP TABLE IF EXISTS `penggunaan_dana`;
 
 CREATE TABLE `penggunaan_dana` (
+  `id` int(200) NOT NULL AUTO_INCREMENT,
   `kd_jns` int(2) DEFAULT NULL,
   `kd_prodi` varchar(6) NOT NULL,
   `ts_2` double(10,2) DEFAULT NULL,
   `ts_1` double(10,2) DEFAULT NULL,
   `ts` double(10,2) DEFAULT NULL,
+  PRIMARY KEY (`id`),
   KEY `FK_penggunaan_dana` (`kd_jns`),
   KEY `FK_penggunaan_prodi` (`kd_prodi`),
   CONSTRAINT `FK_penggunaan_dana` FOREIGN KEY (`kd_jns`) REFERENCES `jns_penggunaan` (`kd_jns`),
   CONSTRAINT `FK_penggunaan_prodi` FOREIGN KEY (`kd_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 /*Data for the table `penggunaan_dana` */
 
-insert  into `penggunaan_dana`(`kd_jns`,`kd_prodi`,`ts_2`,`ts_1`,`ts`) values (1,'P001',2298266.46,2466829.16,2920170.73),(2,'P001',59800.00,60700.00,65600.00),(3,'P001',40200.00,41300.00,50600.00),(4,'P001',1969942.68,2114424.99,2503003.49),(5,'P001',1313295.12,1409616.66,1668668.99),(6,'P001',656647.56,704808.33,834334.49),(7,'P001',NULL,NULL,NULL);
+insert  into `penggunaan_dana`(`id`,`kd_jns`,`kd_prodi`,`ts_2`,`ts_1`,`ts`) values (1,1,'P001',2298266.46,2466829.16,2920170.73),(2,2,'P001',59800.00,60700.00,65600.00),(3,3,'P001',40200.00,41300.00,50600.00),(4,4,'P001',1969942.68,2114424.99,2503003.49),(5,5,'P001',1313295.12,1409616.66,1668668.99),(6,6,'P001',656647.56,704808.33,834334.49),(7,7,'P001',NULL,NULL,NULL);
 
 /*Table structure for table `pengisi_borang` */
 
@@ -810,28 +829,28 @@ CREATE TABLE `permission` (
 
 /*Data for the table `permission` */
 
-insert  into `permission`(`role_id`,`permission`) values (1,'butir3,butir4');
-
 /*Table structure for table `perolehan_dana` */
 
 DROP TABLE IF EXISTS `perolehan_dana`;
 
 CREATE TABLE `perolehan_dana` (
+  `id` int(200) NOT NULL AUTO_INCREMENT,
   `id_dana` int(4) DEFAULT NULL,
   `kd_prodi` varchar(6) NOT NULL,
   `jenis_dana` varchar(50) DEFAULT NULL,
   `ts_2` double(10,2) DEFAULT NULL,
   `ts_1` double(10,2) DEFAULT NULL,
   `ts` double(10,2) DEFAULT NULL,
+  PRIMARY KEY (`id`),
   KEY `FK_perolehan_prodi` (`kd_prodi`),
   KEY `FK_perolehan_dana` (`id_dana`),
   CONSTRAINT `FK_perolehan_dana` FOREIGN KEY (`id_dana`) REFERENCES `sumber_dana` (`id_dana`),
   CONSTRAINT `FK_perolehan_prodi` FOREIGN KEY (`kd_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 /*Data for the table `perolehan_dana` */
 
-insert  into `perolehan_dana`(`id_dana`,`kd_prodi`,`jenis_dana`,`ts_2`,`ts_1`,`ts`) values (1,'P001','Beasiswa Yayasan',823200.00,537600.00,529200.00),(1,'P001','Hibah Yayasan',5000000.00,5000000.00,0.00),(1,'P001','Hibah Unit Usaha ',75000.00,973050.00,7497529.50),(2,'P001','Pendaftaran',1250.00,2750.00,3250.00),(2,'P001','Biaya Registrasi',10750.00,23650.00,27950.00),(2,'P001','Biaya Kuliah',21000.00,46200.00,54600.00),(4,'P001','Alumni',1288884.00,1166953.00,1062653.00),(4,'P001','Hibah Penelitian',35800.00,39700.00,44600.00),(4,'P001','Hibah Pengabdian',40200.00,41300.00,50600.00);
+insert  into `perolehan_dana`(`id`,`id_dana`,`kd_prodi`,`jenis_dana`,`ts_2`,`ts_1`,`ts`) values (1,1,'P001','Beasiswa Yayasan',823200.00,537600.00,529200.00),(2,1,'P001','Hibah Yayasan',5000000.00,5000000.00,0.00),(3,1,'P001','Hibah Unit Usaha ',75000.00,973050.00,7497529.50),(4,2,'P001','Pendaftaran',1250.00,2750.00,3250.00),(5,2,'P001','Biaya Registrasi',10750.00,23650.00,27950.00),(6,2,'P001','Biaya Kuliah',21000.00,46200.00,54600.00),(7,4,'P001','Alumni',1288884.00,1166953.00,1062653.00),(8,4,'P001','Hibah Penelitian',35800.00,39700.00,44600.00),(9,4,'P001','Hibah Pengabdian',40200.00,41300.00,50600.00);
 
 /*Table structure for table `persentase_llsn` */
 
@@ -912,31 +931,35 @@ CREATE TABLE `prodi_tbl` (
   `email_ps` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`kode_prodi`),
   KEY `FK_fakultas` (`kode_fakultas`),
-  KEY `FK_pt` (`kode_pt`)
+  KEY `FK_pt` (`kode_pt`),
+  CONSTRAINT `FK_fakultas` FOREIGN KEY (`kode_fakultas`) REFERENCES `fakultas_tbl` (`kode_fakultas`) ON DELETE NO ACTION,
+  CONSTRAINT `FK_pt` FOREIGN KEY (`kode_pt`) REFERENCES `perguruan_tinggi` (`kode_pt`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `prodi_tbl` */
 
-insert  into `prodi_tbl`(`kode_prodi`,`kode_fakultas`,`kode_pt`,`prodi`,`jurusan`,`no_sk_ps`,`tgl_sk_ps`,`pjbt_ttd`,`foto_sk_ps`,`bln_mulai_ps`,`thn_mulai_ps`,`no_sk_opr`,`tgl_sk_opr`,`foto_sk_opr`,`peringkat`,`nilai`,`no_sk_ban_pt`,`alamat_ps`,`no_telp_ps`,`no_fax_ps`,`homepage_ps`,`email_ps`) values ('P001','F001','PT001','D3','Manajemen Informatika','114/D/O/2001','2001-10-02','A.n. Menteri Pendidikan Nasion',NULL,' Agustus',2001,'2248/D/T/K-IV/2009','2009-05-20','','C',265,'047/SK/BAN-PT/Ak-XII/Dpl-III/II/201','Jalan Dakota No. 8A Sukaraja-Bandung','022 - 6072803','022-20565099','www.pasim.ac.id ','mi@pasim.ac.id'),('P002','F002','P001','Manajemen','sManajemen','0123','2018-06-15','Teguh Prabowo ','nama dashboard.PNG','Mei',1998,'0912','2018-06-12','Resolve Home.PNG','1',0,'1213','eqw','13','eq','www','www');
+insert  into `prodi_tbl`(`kode_prodi`,`kode_fakultas`,`kode_pt`,`prodi`,`jurusan`,`no_sk_ps`,`tgl_sk_ps`,`pjbt_ttd`,`foto_sk_ps`,`bln_mulai_ps`,`thn_mulai_ps`,`no_sk_opr`,`tgl_sk_opr`,`foto_sk_opr`,`peringkat`,`nilai`,`no_sk_ban_pt`,`alamat_ps`,`no_telp_ps`,`no_fax_ps`,`homepage_ps`,`email_ps`) values ('P001','F001','PT001','D3','Manajemen Informatika','114/D/O/2001','2001-10-02','A.n. Menteri Pendidikan Nasion',NULL,' Agustus',2001,'2248/D/T/K-IV/2009','2009-05-20','','C',265,'047/SK/BAN-PT/Ak-XII/Dpl-III/II/201','Jalan Dakota No. 8A Sukaraja-Bandung','022 - 6072803','022-20565099','www.pasim.ac.id ','mi@pasim.ac.id');
 
 /*Table structure for table `pustaka` */
 
 DROP TABLE IF EXISTS `pustaka`;
 
 CREATE TABLE `pustaka` (
+  `id` int(200) NOT NULL AUTO_INCREMENT,
   `kd_jns` int(2) DEFAULT NULL,
   `jml_judul` int(4) DEFAULT NULL,
   `jml_copy` int(4) DEFAULT NULL,
   `kd_prodi` varchar(6) NOT NULL,
+  PRIMARY KEY (`id`),
   KEY `FK_pustaka` (`kd_jns`),
   KEY `FK_pustaka_prodi` (`kd_prodi`),
   CONSTRAINT `FK_pustaka` FOREIGN KEY (`kd_jns`) REFERENCES `jns_pustaka` (`kd_jns`),
   CONSTRAINT `FK_pustaka_prodi` FOREIGN KEY (`kd_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 /*Data for the table `pustaka` */
 
-insert  into `pustaka`(`kd_jns`,`jml_judul`,`jml_copy`,`kd_prodi`) values (1,620,670,'P001'),(2,20,60,'P001'),(3,4,4,'P001'),(4,2,NULL,'P001'),(5,12,NULL,'P001'),(6,12,NULL,'P001');
+insert  into `pustaka`(`id`,`kd_jns`,`jml_judul`,`jml_copy`,`kd_prodi`) values (1,1,620,670,'P001'),(2,2,20,60,'P001'),(3,3,4,4,'P001'),(4,4,2,NULL,'P001'),(5,5,12,NULL,'P001'),(6,6,12,NULL,'P001');
 
 /*Table structure for table `role` */
 
