@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Ganti Password</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -115,21 +116,37 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
-							<form action="" method="POST">
+							<form action="<?php echo base_url().'index.php/EdeUser/gantipassword'; ?>" method="POST" id="myform">
 							<div class="container">
 								<div class="col-md-10">
 									<div class="row">
 										<div class="form-group">
 											<label>Password Lama</label>
-											<input type="password" class="form-control" name="pwdlama">
+											<?php foreach ($data as $d) { ?>
+											<input type="text" class="form-control" name="pwdlama" value="<?php echo $d['password']; ?>" readonly>
+											<?php } ?>
 										</div>
 									</div>
 									<div class="row">
 										<div class="form-group">
 											<label>Password Baru</label>
-											<input type="password" class="form-control" name="pwdbaru">
+											<input type="password" class="form-control" name="pwdbaru" id="pwdbaru">
 										</div>
 									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Konfirmasi Password Baru</label>
+											<input type="password" class="form-control" name="repwdbaru" id="repwdbaru">
+										</div>
+									</div>
+									<div id="alert_retype" style="color:red">
+									</div><br>
+									<?php 
+										$info = $this->session->flashdata('info');
+										if (!empty($info)) {
+											echo $info;
+										}
+									 ?>
 									<div class="row">
 										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 									</div>
@@ -209,6 +226,19 @@ Demo.init(); // init demo features
    Index.initChat();
    Index.initMiniCharts();
    Tasks.initDashboardWidget();
+});
+</script>
+
+<script type="text/javascript">
+$('#myform').submit(function(event){   
+    event.preventDefault(); //this will prevent the default submit
+    var node = $('#pwdbaru').val();
+    var node2 = $('#repwdbaru').val();
+    if (node2 != node ) {
+    	$("#alert_retype").html("data retype password yg anda masukan berbeda<br>");	
+    }else{
+     	$(this).unbind('submit').submit(); // continue the submit unbind preventDefault	
+    }
 });
 </script>
 <!-- END JAVASCRIPTS -->

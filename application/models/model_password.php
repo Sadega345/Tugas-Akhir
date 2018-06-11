@@ -16,6 +16,13 @@ class Model_password extends CI_model {
 		
 	}
 
+	public function getpasswordUser(){
+		
+		$data=$this->db->query('SELECT * FROM users WHERE id="2" ');
+		return $data->result_array();
+		
+	}
+
 	public function update($tablename,$data,$where){
 		// $data=$this->db->query('UPDATE users SET PASSWORD = '."$data".' WHERE id = 1; ');
 		// $data=$this->db->query('UPDATE users SET PASSWORD = "teguh" WHERE id = 1; ');

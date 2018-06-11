@@ -3,55 +3,40 @@
 class EdeUser extends CI_Controller {
 	
 	public function index(){
-		$data=$this->model_user->GetUser();
-		$this->load->view('Admin/tampilan_gantipassword.php',array('data'=>$data));
+		$data=$this->Model_password->getpasswordUser();
+		$this->load->view('User/GantiPassword/tampilan_gantipassword.php',array('data'=>$data));
 	}
 
-	public function ganti_pwdUser(){
-		$this->load->view('User/GantiPassword/tampilan_gantipassword.php');
-		// echo "Jalan";
-	}
+	public function gantipassword(){
+		$pwdlama=$_POST['pwdlama'];
+		$pwdbaru=$_POST['pwdbaru'];
+		$repwdbaru=$_POST['repwdbaru'];
+		$key_username = $this->session->userdata("username");
 
-	public function do_hapus($id){
-		$where=array('id'=>$id);
-		$res=$this->model_user->Delete('users',$where);
-		if($res>=1){
-			redirect('Admin/ganti_pwd');
-		}else {
-			alert('Gagal Hapus');
+		if ($repwdbaru != $pwdbaru) {
+			echo "Gagal";
+			$this->session->set_flashdata('info','Password baru tidak sesuai dengn password lama');
 		}
-	}
+		else{
+			//set data update
+			$databaru = array( 
+				'username' => $key_username,
+			    'password' => $repwdbaru
+			);
+			$this->db->where('username', $key_username);
+			// print_r($databaru);die;
+			// echo $key_username;die;
+			$response = $this->db->update('users', $databaru);
 
-	public function edit_data($id){
-		$res=$this->model_user->GetUser("where id='$id'");
-		$data=array(
-			"id"=>$res[0]['id'],
-			"username"=>$res[0]['username'],
-			"password"=>$res[0]['password'],
-			"level"=>$res[0]['level']
-		);
-		$this->load->view('Admin/edit_gantipassword.php',$data);
-	}
-
-	public function do_edit(){
-
-		$id=$_POST['id'];
-		$username=$_POST['username'];
-		$password=$_POST['password'];
-		$level=$_POST['level'];
-		$data_update=array(
-			'id'=>$id,
-			'username'=>$username,
-			'password'=>$password,
-			'level'=>$level
-		);
-		$where=array('id'=>$id);
-		$res=$this->model_user->update('users',$data_update,$where);
-		if ($res>=1) {
-			redirect('Admin/ganti_pwd');
-		}
-		else {
-			alert("Gagal Update") ;
+			if ($response) {
+				$sess = array(
+					   		'password' => $repwdbaru
+					   	);
+				$this->session->set_userdata( $sess );
+				redirect('Login','refresh');
+			}else{
+				$this->session->set_flashdata('info','Password baru tidak sesuai dengn password lama');
+			}
 		}
 	}
 
