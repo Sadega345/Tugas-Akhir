@@ -125,7 +125,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</div>
 							<div style="overflow-x:auto;">
-							
+							<form action="<?php echo base_url()."index.php/Apd_a311_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 							<thead>
 								<tr>
@@ -150,32 +150,12 @@ License: You must have a valid license purchased only from themeforest(the above
 									<td>Min</td>
 									<td>Rat</td>
 									<td>Max</td>
-									<td><2.75</td>
+									<td>2.75</td>
 									<td>2.75-3.50</td>
 									<td>>3.50</td>
 								</tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
 							<tr align="center">
 								 	<td>(1)</td>
 								 	<td>(2)</td>
@@ -194,107 +174,76 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>(15)</td>
 								 	<td>(16)</td>
 								 </tr>
+								<?php 
+									$no=4; 
+									$counter=1;
+									foreach ($data as $d ) { 
+								?>
 								 <tr>
-								 	<td>TS-4</td>
-								 	<td><input type="text" name="" value="50" length="2"></td>
-								 	<td><input type="text" name="" value="1160"></td>
-								 	<td><input type="text" name="" value="46"></td>
-								 	<td><input type="text" name="" value="45"></td>
-								 	<td><input type="text" name="" value="0"></td>
-								 	<td><input type="text" name="" value="192"></td>
-								 	<td><input type="text" name="" value="0"></td>
-								 	<td><input type="text" name="" value="33"></td>
-								 	<td><input type="text" name="" value="0"></td>
-								 	<td><input type="text" name="" value="2.81"></td>
-								 	<td><input type="text" name="" value="3.44"></td>
-								 	<td><input type="text" name="" value="3.78"></td>
-								 	<td><input type="text" name="" value="0.00"></td>
-								 	<td><input type="text" name="" value="39.00"></td>
-								 	<td><input type="text" name="" value="61.00"></td>
+								 	<td>TS- <?php echo $no--; ?></td>
+								 	<td><input type="text" name="<?php echo "dy_tampung".$counter; ?>" value="<?php echo $d['dy_tampung']; ?>"></td>
+								 	<td><input type="text" name="jc_mhs_ikt_seleksi" value="<?php echo $d['jc_mhs_ikt_seleksi']; ?>">
+								 	<td><input type="text" name="jc_mhs_lls_seleksi" value="<?php echo $d['jc_mhs_lls_seleksi']; ?>"></td>
+								 	<td><input type="text" name="j_maba_reg_bkn_trf" value="<?php echo $d['j_maba_reg_bkn_trf']; ?>"></td>
+								 	<td><input type="text" name="j_maba_trf" value="<?php echo $d['j_maba_trf']; ?>"></td>
+								 	<td><input type="text" name="j_tot_reg_bkn_trf" value="<?php echo $d['j_tot_reg_bkn_trf']; ?>"></td>
+								 	<td><input type="text" name="j_tot_trf" value="<?php echo $d['j_tot_trf']; ?>"></td>
+								 	<td><input type="text" name="j_llsn_reg_bkn_trf" value="<?php echo $d['j_llsn_reg_bkn_trf']; ?>"></td>
+								 	<td><input type="text" name="j_llsn_trf" value="<?php echo $d['j_llsn_trf']; ?>"></td>
+								 	<td><input type="text" name="ipk_min" value="<?php echo $d['ipk_min']; ?>"></td>
+								 	<td><input type="text" name="ipk_rat" value="<?php echo $d['ipk_rat']; ?>"></td>
+								 	<td><input type="text" name="ipk_mak" value="<?php echo $d['ipk_mak']; ?>"></td>
+								 	<td><input type="text" name="PRSN_IPK1" value="<?php echo $d['PRSN_IPK1']; ?>"></td>
+								 	<td><input type="text" name="PRSN_IPK2" value="<?php echo $d['PRSN_IPK2']; ?>"></td>
+								 	<td><input type="text" name="PRSN_IPK3" value="<?php echo $d['PRSN_IPK3']; ?>"></td>
 								 </tr>
-								 <tr>
-								 	<td>TS-3</td>
-								 	<td><input type="text" name="" value="65"></td>
-								 	<td><input type="text" name="" value="2800"></td>
-								 	<td><input type="text" name="" value="65"></td>
-								 	<td><input type="text" name="" value="62"></td>
-								 	<td><input type="text" name="" value="0"></td>
-								 	<td><input type="text" name="" value="221"> </td>
-								 	<td><input type="text" name="" value="0"> </td>
-								 	<td><input type="text" name="" value="25"> </td>
-								 	<td><input type="text" name="" value="0"></td>
-								 	<td><input type="text" name="" value="3.11"> </td>
-								 	<td><input type="text" name="" value="3.54"> </td>
-								 	<td><input type="text" name="" value="3.95"> </td>
-								 	<td><input type="text" name="" value="0.00"> </td>
-								 	<td><input type="text" name="" value="32.00"> </td>
-								 	<td><input type="text" name="" value="68.00"> </td>
-								 </tr>
-								 <tr>
-								 	<td>TS-2</td>
-								 	<td><input type="text" name="" value="65"> </td>
-								 	<td><input type="text" name="" value="992"> </td>
-								 	<td><input type="text" name="" value="45"> </td>
-								 	<td><input type="text" name="" value="43"> </td>
-								 	<td><input type="text" name="" value="0"> </td>
-								 	<td><input type="text" name="" value="201"> </td>
-								 	<td><input type="text" name="" value="0"> </td>
-								 	<td><input type="text" name="" value="37"> </td>
-								 	<td><input type="text" name="" value="0"> </td>
-								 	<td><input type="text" name="" value="3.13"> </td>
-								 	<td><input type="text" name="" value="3.71"></td>
-								 	<td><input type="text" name="" value="3.91"></td>
-								 	<td><input type="text" name="" value="0.00"> </td>
-								 	<td><input type="text" name="" value="6.00"></td>
-								 	<td><input type="text" name="" value="94.00"> </td>
-								 </tr>
-								 <tr>
-								 	<td>TS-1</td>
-								 	<td><input type="text" name="" value="65"> </td>
-								 	<td><input type="text" name="" value="1014"> </td>
-								 	<td><input type="text" name="" value="40"> </td>
-								 	<td><input type="text" name="" value="39"> </td>
-								 	<td><input type="text" name="" value="0"> </td>
-								 	<td><input type="text" name="" value="139"> </td>
-								 	<td><input type="text" name="" value="0"></td>
-								 	<td><input type="text" name="" value="41"> </td>
-								 	<td><input type="text" name="" value="0"> </td>
-								 	<td><input type="text" name="" value="3.46"> </td>
-								 	<td><input type="text" name="" value="3.64"> </td>
-								 	<td><input type="text" name="" value="3.87"> </td>
-								 	<td><input type="text" name="" value="0.00"> </td>
-								 	<td><input type="text" name="" value="5.00"> </td>
-								 	<td><input type="text" name="" value="95.00"> </td>
-								 </tr>	
-								 <tr>
-								 	<td>TS</td>
-								 	<td><input type="text" name="" value="65"></td>
-								 	<td><input type="text" name="" value="1016"></td>
-								 	<td><input type="text" name="" value="60"></td>
-								 	<td><input type="text" name="" value="59"></td>
-								 	<td><input type="text" name="" value="0"></td>
-								 	<td><input type="text" name="" value="139"></td>
-								 	<td><input type="text" name="" value="0"></td>
-								 	<td><input type="text" name="" value="41"></td>
-								 	<td><input type="text" name="" value="0"></td>
-								 	<td><input type="text" name="" value="2.96"></td>
-								 	<td><input type="text" name="" value="3.57"></td>
-								 	<td><input type="text" name="" value="3.85"></td>
-								 	<td><input type="text" name="" value="0.00"></td>
-								 	<td><input type="text" name="" value="24.00"></td>
-								 	<td><input type="text" name="" value="76.00"></td>
-								 </tr>	
+							
+								<?php $counter++;} ?>
+
 								 <tr>
 								 	<td>Jumlah</td>
-								 	<td>310</td>
-								 	<td>6982</td>
-								 	<td>256</td>
-								 	<td>248</td>
-								 	<td>0</td>
-								 	<td>892</td>
-								 	<td>0</td>
-								 	<td>177.0</td>
-								 	<td>0</td>
+								 	<?php 
+							 			foreach ($jumdtampung as $jum) {
+							 		?>
+								 	<td><?php echo $jum['Daya_Tampung']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
+							 			foreach ($iseleksi as $i) {
+							 		?>
+								 	<td><?php echo $i['Ikut_seleksi']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
+							 			foreach ($barutransfer as $i) {
+							 		?>
+								 	<td><?php echo $i['Baru_transfer']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
+							 			foreach ($totbukantransfer as $i) {
+							 		?>
+								 	<td><?php echo $i['Tot_BukanTransfer']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
+							 			foreach ($tottransfer as $i) {
+							 		?>
+								 	<td><?php echo $i['Tot_transfer']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
+							 			foreach ($lulusanregbukantransfer as $i) {
+							 		?>
+								 	<td><?php echo $i['Lulusan_RegBukanTransfer']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
+							 			foreach ($jumlulusantransfer as $i) {
+							 		?>
+								 	<td><?php echo $i['Jumlah_LulusanTransfer']; ?></td>
+								 	<?php } ?>
+
 								 </tr>	
 								 <tr>
 								 	<td>Rataan</td>
@@ -304,11 +253,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							</table>
 							</div>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
-									</button>
-								</a>
+								<input type="hidden" name="totData" value="<?php echo count($data); ?>">
+								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 							</div>
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a311_excel";?>">
@@ -317,6 +263,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</button>
 								</a>
 							</div>
+						</form>
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

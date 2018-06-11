@@ -253,14 +253,13 @@ CREATE TABLE `dosen_tbl` (
   KEY `FK_jns` (`kd_jns_dosen`),
   KEY `FK_jab` (`kd_jab`),
   KEY `FK_prodi_dosen` (`kd_prodi`),
-  CONSTRAINT `FK_jab` FOREIGN KEY (`kd_jab`) REFERENCES `jab_akademik` (`kd_jab`),
   CONSTRAINT `FK_jns` FOREIGN KEY (`kd_jns_dosen`) REFERENCES `jns_dosen` (`kd_jns`),
   CONSTRAINT `FK_prodi_dosen` FOREIGN KEY (`kd_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `dosen_tbl` */
 
-insert  into `dosen_tbl`(`id_dosen`,`kd_prodi`,`nidn`,`nama_dosen`,`tgl_lhr`,`kd_jab`,`kd_jns_dosen`,`sertifikasi`,`gelar_s1`,`asal_pt_s1`,`bid_keahlian_s1`,`gelar_s2`,`asal_pt_s2`,`bid_keahlian_s2`,`gelar_s3`,`asal_pt_s3`,`bid_keahlian_s3`,`gelar`,`pengakuan`,`bid_keahlian`,`sts_ahli`) values ('1','P001','0421089201','Erna Hikmawati','1992-08-21',NULL,1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M. Kom','STMIK Likmi','Sistem Informasi',NULL,NULL,NULL,'OCA, OCP, MOS','Oracle, Microsoft','Java, Microsoft Access','YA'),('11','P001','0418106603','Tjandra Tjahyarini','1966-10-18','2',1,'Tidak','Ir','Institut Teknologi Bandung','Geofisika','','(Sedang Studi Lanjut) STMIK LIKMI','Sistem Informasi','','','','','Sololearn','','TIDAK'),('17','P001',NULL,'JUHRIDIN','1980-03-09',NULL,2,'Tidak','S.Pd','STAI Siliwangi Bandung','Bahasa Inggris','M.Ag','Pasca Sarjana UIN SGD Bandng','PAI',NULL,NULL,NULL,NULL,NULL,NULL,'TIDAK'),('2','P001','0408097207','Soleh Sabarudin','1972-09-08',NULL,1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M. Kom','STMIK Likmi','Sistem Informasi',NULL,NULL,NULL,NULL,'Sololearn','HTML, PHP','YA'),('3','P001','8863350017','Eni Triningsih','1989-09-24',NULL,1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M.T','Institut Teknologi Bandung','Sistem Informasi',NULL,NULL,NULL,NULL,'Sololearn','SQL','YA'),('4','P001','0408047305','Eko Travada SP','1973-01-23','1',1,'Tidak','S.T','Universitas Kristen Maranatha','Teknik Elektro','M.T','Institut Teknologi Bandung','Teknik Elektro','','Sedang Studi Lanjut (S3 STEI ITB)','Elektro dan Informatika','','Sololearn','C++','YA'),('5','P001','8891700016','Yudhistira Sulaeman','1973-07-03',NULL,1,'Tidak','S.Si','Institut Teknologi Bandung','Matematika','M.Kom','STMIK Likmi','Sistem Informasi',NULL,NULL,NULL,NULL,NULL,NULL,'YA'),('9','P001','0428097402','Lucky Handayani','1974-09-28',NULL,1,'Tidak','S.T','Universitas Jenderal Ahmad Yani','Teknik Mesin','M.T','Institut Teknologi Bandung ','Teknik Mesin','','','','','','','TIDAK');
+insert  into `dosen_tbl`(`id_dosen`,`kd_prodi`,`nidn`,`nama_dosen`,`tgl_lhr`,`kd_jab`,`kd_jns_dosen`,`sertifikasi`,`gelar_s1`,`asal_pt_s1`,`bid_keahlian_s1`,`gelar_s2`,`asal_pt_s2`,`bid_keahlian_s2`,`gelar_s3`,`asal_pt_s3`,`bid_keahlian_s3`,`gelar`,`pengakuan`,`bid_keahlian`,`sts_ahli`) values ('1','P001','0421089201','Erna Hikmawatiai','1992-08-21','',1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M. Kom','STMIK Likmi','Sistem Informasi','','','','OCA, OCP, MOS','Oracle, Microsoft','Java, Microsoft Access','YA'),('11','P001','0418106603','Tjandra Tjahyarini gg','1966-10-18','2',1,'Tidak','Ir','Institut Teknologi Bandung','Geofisika','','(Sedang Studi Lanjut) STMIK LIKMI','Sistem Informasi','','','','','Sololearn','','YA'),('17','P001',NULL,'','0000-00-00',NULL,2,'',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'TIDAK'),('2','P001','0408097207','Soleh Sabarudinu','1972-09-08','',1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M. Kom','STMIK Likmi','Sistem Informasi','','','','','Sololearn','HTML, PHP','YA'),('3','P001','8863350017','Eni Triningsih','1989-09-24','',1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M.T','Institut Teknologi Bandung','Sistem Informasi','','','','','Sololearn','SQL','YA'),('4','P001','0408047305','Eko Travada SP','1973-01-23','',1,'Tidak','S.T','Universitas Kristen Maranatha','Teknik Elektro','M.T','Institut Teknologi Bandung','Teknik Elektro','','Sedang Studi Lanjut (S3 STEI ITB)','Elektro dan Informatika','','Sololearn','C++','YA'),('5','P001','8891700016','Yudhistira Sulaeman','1973-07-03','',1,'Tidak','S.Si','Institut Teknologi Bandung','Matematika','M.Kom','STMIK Likmi','Sistem Informasi','','','','','','','YA'),('9','P001','0428097402','Lucky Handayani','1974-09-28',NULL,1,'Tidak','S.T','Universitas Jenderal Ahmad Yani','Teknik Mesin','M.T','Institut Teknologi Bandung ','Teknik Mesin','','','','','','','TIDAK');
 
 /*Table structure for table `dt_ruang_dosen` */
 
@@ -811,6 +810,8 @@ CREATE TABLE `permission` (
 
 /*Data for the table `permission` */
 
+insert  into `permission`(`role_id`,`permission`) values (1,'butir3,butir4');
+
 /*Table structure for table `perolehan_dana` */
 
 DROP TABLE IF EXISTS `perolehan_dana`;
@@ -911,14 +912,12 @@ CREATE TABLE `prodi_tbl` (
   `email_ps` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`kode_prodi`),
   KEY `FK_fakultas` (`kode_fakultas`),
-  KEY `FK_pt` (`kode_pt`),
-  CONSTRAINT `FK_fakultas` FOREIGN KEY (`kode_fakultas`) REFERENCES `fakultas_tbl` (`kode_fakultas`) ON DELETE NO ACTION,
-  CONSTRAINT `FK_pt` FOREIGN KEY (`kode_pt`) REFERENCES `perguruan_tinggi` (`kode_pt`)
+  KEY `FK_pt` (`kode_pt`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `prodi_tbl` */
 
-insert  into `prodi_tbl`(`kode_prodi`,`kode_fakultas`,`kode_pt`,`prodi`,`jurusan`,`no_sk_ps`,`tgl_sk_ps`,`pjbt_ttd`,`foto_sk_ps`,`bln_mulai_ps`,`thn_mulai_ps`,`no_sk_opr`,`tgl_sk_opr`,`foto_sk_opr`,`peringkat`,`nilai`,`no_sk_ban_pt`,`alamat_ps`,`no_telp_ps`,`no_fax_ps`,`homepage_ps`,`email_ps`) values ('P001','F001','PT001','D3','Manajemen Informatika','114/D/O/2001','2001-10-02','A.n. Menteri Pendidikan Nasion',NULL,' Agustus',2001,'2248/D/T/K-IV/2009','2009-05-20','','C',265,'047/SK/BAN-PT/Ak-XII/Dpl-III/II/201','Jalan Dakota No. 8A Sukaraja-Bandung','022 - 6072803','022-20565099','www.pasim.ac.id ','mi@pasim.ac.id');
+insert  into `prodi_tbl`(`kode_prodi`,`kode_fakultas`,`kode_pt`,`prodi`,`jurusan`,`no_sk_ps`,`tgl_sk_ps`,`pjbt_ttd`,`foto_sk_ps`,`bln_mulai_ps`,`thn_mulai_ps`,`no_sk_opr`,`tgl_sk_opr`,`foto_sk_opr`,`peringkat`,`nilai`,`no_sk_ban_pt`,`alamat_ps`,`no_telp_ps`,`no_fax_ps`,`homepage_ps`,`email_ps`) values ('P001','F001','PT001','D3','Manajemen Informatika','114/D/O/2001','2001-10-02','A.n. Menteri Pendidikan Nasion',NULL,' Agustus',2001,'2248/D/T/K-IV/2009','2009-05-20','','C',265,'047/SK/BAN-PT/Ak-XII/Dpl-III/II/201','Jalan Dakota No. 8A Sukaraja-Bandung','022 - 6072803','022-20565099','www.pasim.ac.id ','mi@pasim.ac.id'),('P002','F002','P001','Manajemen','sManajemen','0123','2018-06-15','Teguh Prabowo ','nama dashboard.PNG','Mei',1998,'0912','2018-06-12','Resolve Home.PNG','1',0,'1213','eqw','13','eq','www','www');
 
 /*Table structure for table `pustaka` */
 

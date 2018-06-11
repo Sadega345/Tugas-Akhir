@@ -61,12 +61,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <body class="page-header-fixed page-quick-sidebar-over-content">
 	<!-- BEGIN HEADER -->
 		<?php 
-			$this->load->view('Admin/header.php');
+			$this->load->view('User/header_user.php');
 		?>
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('Admin/sidebar.php');
+			$this->load->view('User/sidebar_user.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 
@@ -81,7 +81,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Form Edit Program Studi
+								<i class="fa fa-edit"></i>Butir 4.3.1 : DOSEN TETAP YANG BIDANG KEAHLIANNYA SESUAI BIDANG PS
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -99,165 +99,162 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											
+											<!-- <a href="#">
+											<button id="sample_editable_1_new" class="btn green">
+											Load 
+											</button>
+											</a> -->
 										</div>
 									</div>
+									<!-- <div class="col-md-6">
+										<div class="btn-group pull-right">
+											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+											</button>
+											<ul class="dropdown-menu pull-right">
+												<li>
+													<a href="javascript:;">
+													Print </a>
+												</li>
+												<li>
+													<a href="javascript:;">
+													Export to Excel </a>
+												</li>
+											</ul>
+										</div>
+									</div> -->
 								</div>
 							</div>
-							<form action="<?php echo base_url()."index.php/CrudProdi/do_edit"; ?>" method="POST">
-							<div class="container">
-								<div class="col-md-10">
-									<div class="row">
-										<div class="form-group">
-											<label>Kode Perguruan Tinggi</label>
-											<input type="text" class="form-control" name="kode_pt" value="PT001" readonly="">
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Kode Fakultas</label>
-											<select name="kode_fakultas" class="form-control">
-												<option disabled >-- Kode Fakultas --</option>
-												<?php 
-													$data=$this->model_prodi->GetFakultas();
-													foreach($data as $d) { 
-														if ($kode_fakultas==$d['kode_fakultas']) {	
-												?>
-									                <option value="<?php echo $d['kode_fakultas'];?>" selected><?php echo $d['kode_fakultas'];?></option>
-									            <?php }else{ ?>
-									            	<option value="<?php echo $d['kode_fakultas'];?>"><?php echo $d['kode_fakultas'];?></option>
-									            <?php } }?>
-											</select>
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Kode Prodi</label>
-											<input type="text" class="form-control" value="<?php echo $kode_prodi; ?>" name="kode_prodi" readonly="">
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Prodi</label>
-											<input type="text" class="form-control" name="prodi" value="<?php echo $prodi; ?>">
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Jurusan</label>
-											<input type="text" class="form-control" name="jurusan" value="<?php echo $jurusan; ?>">
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>No SK Prodi</label>
-											<input type="text" class="form-control" name="no_sk_ps" value="<?php echo $no_sk_ps; ?>">
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Tgl SK Prodi</label>
-											<input type="date" class="form-control" name="tgl_sk_ps" value="<?php echo $tgl_sk_ps; ?>">
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Pejabat Penandatangan</label>
-											<input type="text" class="form-control" name="pejabat_ttd" value="<?php echo $pjbt_ttd; ?>">
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Foto SK Prodi</label>
-											<input type="file" name="foto_sk_ps" value="<?php echo $foto_sk_ps; ?>">
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Bulan dimulainya penyelenggaraan PS</label>
-											<input type="text" class="form-control" name="bln_mulai_ps" value="<?php echo $bln_mulai_ps; ?>">
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Tahun dimulainya penyelenggaraan PS</label>
-											<input type="text" class="form-control" name="thn_mulai_ps" value="<?php echo $thn_mulai_ps; ?>">
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>No SK Operasional</label>
-											<input type="text" class="form-control" name="no_sk_opr" value="<?php echo $no_sk_opr; ?>">
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Tgl SK Operasional</label>
-											<input type="date" class="form-control" name="tgl_sk_opr" value="<?php echo $tgl_sk_opr; ?>">
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Foto SK Operasional</label>
-											<input type="file" name="foto_sk_opr" value="<?php echo $foto_sk_opr; ?>">
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Peringkat Akreditasi</label>
-											<input type="text" class="form-control" name="peringkat" value="<?php echo $peringkat; ?>">
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Nilai Akreditasi</label>
-											<input type="text" class="form-control" name="nilai" value="<?php echo $nilai; ?>">
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>No SK BAN-PT</label>
-											<input type="text" class="form-control" name="no_sk_ban_pt" value="<?php echo $no_sk_ban_pt; ?>">
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Alamat PS</label>
-											<input type="text" class="form-control" name="alamat_ps" value="<?php echo $alamat_ps; ?>">
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>No Telepon PS</label>
-											<input type="text" class="form-control" name="no_telp_ps" value="<?php echo $no_telp_ps; ?>">
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>No Faksimile PS</label>
-											<input type="text" class="form-control" name="no_fax_ps" value="<?php echo $no_fax_ps; ?>">
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Homepage PS</label>
-											<input type="text" class="form-control" name="homepage_ps" value="<?php echo $homepage_ps; ?>">
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Email PS</label>
-											<input type="text" class="form-control" name="email_ps" value="<?php echo $email_ps; ?>">
-										</div>
-									</div>
+							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Apd_a431_excel/do_rubah"; ?>" method="POST">
 
-									<div class="row">
-										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
-										<form action="<?php echo base_url()."index.php/CrudProdi"; ?>" method="POST">
-											<button type="submit" class="btn btn-danger" name="back">Cancel</button>
-										</form>
-									</div>
-								</div>
+							<table class="table table-striped table-bordered table-hover" id="sample_1" >
+							<thead>
+								<tr>
+									 <th rowspan="2">No</th>
+									 <th rowspan="2">Nama Dosen Tetap</th>
+									 <th rowspan="2">NIDN (Nomor Induk Dosen Nasional)</th>
+									 <th rowspan="2">Tanggal Lahir<br> (dd/mm/yyyy)</th>
+									 <th rowspan="2">Jabatan Akademik</th>
+									 <th rowspan="2">Sertifikasi**<br>(Ya/Tidak)</th>
+									 <th colspan="3"><center>S1</center></th>
+									 <th colspan="3"><center>S2</center></th>
+									 <th colspan="3"><center>S3</center></th>
+									 <th colspan="3">Keahlian Praktis***</th>
+									 
+								 </tr>
+								 <tr>
+								 	<td>Gelar</td>
+								 	<td>PT Asal</td>
+								 	<td>Bidang Keahlian</td>
+								 	<td>Gelar</td>
+								 	<td>PT Asal</td>
+								 	<td>Bidang Keahlian</td>
+								 	<td>Gelar</td>
+								 	<td>PT Asal</td>
+								 	<td>Bidang Keahlian</td>
+								 	<td>Gelar</td>
+								 	<td>Pengakuan</td>
+								 	<td>Bidang Keahlian</td>
+								 </tr>
+								 <tr align="center">
+								 	<td>(1)</td>
+								 	<td>(2)</td>
+								 	<td>(3)</td>
+								 	<td>(4)</td>
+								 	<td>(5)</td>
+								 	<td>(6)</td>
+								 	<td>(7)</td>
+								 	<td>(8)</td>
+								 	<td>(9)</td>
+								 	<td>(10)</td>
+								 	<td>(11)</td>
+								 	<td>(12)</td>
+								 	<td>(13)</td>
+								 	<td>(14)</td>
+								 	<td>(15)</td>
+								 	<td>(16)</td>
+								 	<td>(17)</td>
+								 	<td>(18)</td>
+								 	
+								 </tr>
+							</thead>
+							<tbody>
+							<?php 
+
+								$no=1; 
+								$counter=1;
+								foreach ($data['data'] as $d ) { 
+									$nama_dosen = 'nama_dosen'.$counter;
+									$nidn = 'nidn'.$counter;
+									$tgl_lhr = 'tgl_lhr'.$counter;
+									$NM_JAB_AKD = 'NM_JAB_AKD'.$counter;
+									$kd_jab = 'kd_jab'.$counter;
+									
+									$sertifikasi = 'sertifikasi'.$counter;
+									$GELAR_S1 = 'GELAR_S1'.$counter;
+									$ASAL_PT_S1 = 'ASAL_PT_S1'.$counter;
+									$BID_KEAHLIAN_S1 = 'BID_KEAHLIAN_S1'.$counter;
+									$GELAR_S2 = 'GELAR_S2'.$counter;
+									$ASAL_PT_S2 = 'ASAL_PT_S2'.$counter;
+									$BID_KEAHLIAN_S2 = 'BID_KEAHLIAN_S2'.$counter;
+									$GELAR_S3 = 'GELAR_S3'.$counter;
+									$ASAL_PT_S3 = 'ASAL_PT_S3'.$counter;
+									$BID_KEAHLIAN_S3 = 'BID_KEAHLIAN_S3'.$counter;
+									$GELAR = 'GELAR'.$counter;
+									$PENGAKUAN = 'PENGAKUAN'.$counter;
+									$BID_KEAHLIAN = 'BID_KEAHLIAN'.$counter;
+							?>
+							
+							
+							<tr>
+							 	<td><?php echo $no; ?></td>
+							 	<td><input type="text" name="<?php echo $nama_dosen; ?>" value="<?php echo $d['nama_dosen']; ?>"></td>
+							 	<td><input type="text" name="<?php echo $nidn; ?>" value="<?php echo $d['nidn']; ?>" readonly></td>
+							 	<td><input type="text" name="<?php echo $tgl_lhr; ?>" value="<?php echo $d['tgl_lhr']; ?>"></td>
+							 	<td>
+							 		<select name="<?php echo $kd_jab; ?>" >
+										<option>-- Nama Jabatan --</option>
+										<?php foreach ($data['list'] as $value) { ?>
+											<option value="<?php echo $value['kd_jab']; ?>">
+												<?php echo $value['nm_jab_akd'];?>
+											</option>
+										<?php } ?>
+									</select>
+							 	</td>
+							 	<!-- <td><input type="text" name="<?php echo $NM_JAB_AKD; ?>" value="<?php echo $d['NM_JAB_AKD']; ?>"></td> -->
+							 	<!-- <td><input type="hidden" name="<?php echo $kd_jab; ?>" value="<?php echo $d['kd_jab']; ?>"></td> -->
+							 	<td><input type="text" name="<?php echo $sertifikasi; ?>" value="<?php echo $d['sertifikasi']; ?>"></td>
+							 	<td><input type="text" name="<?php echo $GELAR_S1; ?>" value="<?php echo $d['GELAR_S1']; ?>"></td>
+							 	<td><input type="text" name="<?php echo $ASAL_PT_S1; ?>" value="<?php echo $d['ASAL_PT_S1']; ?>"></td>
+							 	<td><input type="text" name="<?php echo $BID_KEAHLIAN_S1; ?>" value="<?php echo $d['BID_KEAHLIAN_S1']; ?>"></td>
+							 	<td><input type="text" name="<?php echo $GELAR_S2; ?>" value="<?php echo $d['GELAR_S2']; ?>"></td>
+							 	<td><input type="text" name="<?php echo $ASAL_PT_S2; ?>" value="<?php echo $d['ASAL_PT_S2']; ?>"></td>
+							 	<td><input type="text" name="<?php echo $BID_KEAHLIAN_S2; ?>" value="<?php echo $d['BID_KEAHLIAN_S2']; ?>"></td>
+							 	<td><input type="text" name="<?php echo $GELAR_S3; ?>" value="<?php echo $d['GELAR_S3']; ?>"></td>
+							 	<td><input type="text" name="<?php echo $ASAL_PT_S3; ?>" value="<?php echo $d['ASAL_PT_S3']; ?>"></td>
+							 	<td><input type="text" name="<?php echo $BID_KEAHLIAN_S3; ?>" value="<?php echo $d['BID_KEAHLIAN_S3']; ?>"></td>
+							 	<td><input type="text" name="<?php echo $GELAR; ?>" value="<?php echo $d['GELAR']; ?>"></td>
+							 	<td><input type="text" name="<?php echo $PENGAKUAN; ?>" value="<?php echo $d['PENGAKUAN']; ?>"></td>
+							 	<td><input type="text" name="<?php echo $BID_KEAHLIAN; ?>" value="<?php echo $d['BID_KEAHLIAN']; ?>">
+							 		<input type="hidden" name="<?php echo $kd_jab; ?>" value="<?php echo $d['kd_jab']; ?>">
+							 	</td>
+							 	
+
+							 </tr>
+							<?php $no++; $counter++; } ?>
+							<input type="hidden" name="TotData" value="<?php echo count($data); ?>">
+							</tbody>
+							</table>
+							</div>
+							<div class="btn-group">
+								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+							</div>
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Apd_a431_excel";?>">
+									<button id="sample_editable_1_new" class="btn red">
+										Batal 
+									</button>
+								</a>
 							</div>
 							</form>
 						</div>

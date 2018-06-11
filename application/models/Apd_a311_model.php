@@ -18,6 +18,11 @@ ORDER BY tahun
  return $data->result_array();
  }
 
+ public function insert($tablename,$data){
+	$res=$this->db->insert($tablename,$data);
+	return $res;
+ }
+
  public function jumdtampung(){
  	$data= $this->db->query('SELECT SUM(dy_tampung)AS Daya_Tampung FROM data_mhs');
  	return $data->result_array();
