@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Fakultas Universitas Nasional PASIM</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -120,25 +121,31 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
-							<form action="<?php echo base_url()."index.php/CrudFakultas/do_tambah"; ?>" method="POST">
+
+							<form action="<?php echo base_url()."index.php/CrudFakultas/do_tambah"; ?>" method="POST" >
 							<div class="container">
 								<div class="col-md-10">
 									<div class="row">
 										<div class="form-group">
 											<label>Kode Fakultas</label>
 											<input type="text" class="form-control" name="kode" readonly="" value="<?php echo $convert; ?>">
-										
 										</div>
 									</div>
+
 									<div class="row">
 										<div class="form-group">
 											<label>Nama Fakultas</label>
-											<input type="text" class="form-control" name="fakultas" required id="nama_fakultas" >
+											<input type="text" class="form-control" name="fakultas" id="fakultas" >
 										</div>
 									</div>
+
 									<div class="row">
 										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+										<form action="<?php echo base_url()."index.php/CrudFakultas"; ?>" method="POST">
+											<button type="submit" class="btn btn-danger" name="back">Kembali</button>
+										</form>
 									</div>
+
 								</div>
 							</div>
 							</form>

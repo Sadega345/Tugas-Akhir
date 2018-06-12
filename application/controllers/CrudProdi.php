@@ -3,6 +3,7 @@
 class CrudProdi extends CI_Controller {
 	
 	public function index(){
+		// echo "Masuk sini ";die;
 		$data=$this->model_prodi->GetProdi();
 		$this->load->view('Admin/tampilan_prodi.php',array('data'=>$data));
 	}
@@ -52,7 +53,15 @@ class CrudProdi extends CI_Controller {
 		$no_telp_ps=$_POST['no_telp_ps'];
 		$no_fax_ps=$_POST['no_fax_ps'];
 		$homepage_ps=$_POST['homepage_ps'];
-		$email_ps=$_POST['email_ps'];
+		$email_ps= $_POST["email_ps"];
+		// $email_ps= test_input($_POST["email_ps"]);
+
+		// if (!filter_var($email_ps, FILTER_VALIDATE_EMAIL)) {
+		//   echo "Invalid email format"; 
+		//   $this->form_validation->set_error_delimiters('<span class="text-danger">','</span>');
+		//   $this->session->set_flashdata('info','Email yang di inputkan salah<br/>');die;
+		// }
+		
 
 		$config = [
 	        'upload_path' => './assets/prodi/',

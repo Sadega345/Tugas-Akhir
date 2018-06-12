@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Data User</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -161,6 +162,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 									<div class="row">
 										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+										<form action="<?php echo base_url()."index.php/CrudRole"; ?>" method="POST">
+											<button type="submit" class="btn btn-danger" name="back">Kembali</button>
+										</form>
 									</div>
 								</div>
 							</div>

@@ -3,7 +3,7 @@
 class CrudUser extends CI_Controller {
 	
 	public function index(){
-		$data=$this->model_user->GetUser();
+		$data=$this->model_role->GetUser();
 		$this->load->view('Admin/tampilan_user.php',array('data'=>$data));
 	}
 

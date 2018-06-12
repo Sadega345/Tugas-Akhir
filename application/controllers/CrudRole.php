@@ -94,6 +94,10 @@ class CrudRole extends CI_Controller {
         print json_encode($data_role);
     }
 
+    public function mau(){
+    	echo "Masuk Sini brat";die;
+    }
+
 	// public function do_hapus($id){
 	// 	$where=array('id'=>$id);
 	// 	$res=$this->model_user->Delete('users',$where);

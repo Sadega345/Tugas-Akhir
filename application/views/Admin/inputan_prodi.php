@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Prodi Universitas Nasional PASIM</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -120,7 +121,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
-							<form action="<?php echo base_url()."index.php/CrudProdi/do_tambah"; ?>" method="POST" enctype="multipart/form-data">
+							<form action="<?php echo base_url()."index.php/CrudProdi/do_tambah"; ?>" method="POST" enctype="multipart/form-data" >
 							<div class="container">
 								<div class="col-md-10">
 									<div class="row">
@@ -256,18 +257,30 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="row">
 										<div class="form-group">
 											<label>Homepage PS</label>
-											<input type="text" class="form-control" name="homepage_ps">
+											<input type="text" class="form-control" name="homepage_ps" id="homepage">
 										</div>
 									</div>
 									<div class="row">
 										<div class="form-group">
 											<label>Email PS</label>
-											<input type="text" class="form-control" name="email_ps">
+											<input type="text" class="form-control" name="email_ps" id="email">
 										</div>
 									</div>
 
+									<!-- <div id="alert_retype" style="color:red">
+									</div><br> -->
+									<?php 
+										$info = $this->session->flashdata('info');
+										if (!empty($info)) {
+											echo $info;
+										}
+									 ?> 
+
 									<div class="row">
-										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+										<button type="submit" class="btn btn-primary" name="simpan" >Simpan</button>
+										<form action="<?php echo base_url()."index.php/CrudProdi"; ?>" method="POST">
+											<button type="submit" class="btn btn-danger" name="back">Kembali</button>
+										</form>
 									</div>
 								</div>
 							</div>
@@ -371,6 +384,32 @@ $('#thn_mulai_ps').bind('keyup blur',function(){
     node.val(node.val().replace(/[^0-9]/g,'') ); }
 );
 </script>
+
+<!-- Buat Email & URL -->
+<script type="text/javascript">
+	function validateEmail(email) {
+  		var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  		return re.test(email);
+	}
+
+	function validate() {
+	  var $result = $("#result");
+	  var email = $("#email").val();
+	  $result.text("");
+
+	  if (validateEmail(email)) {
+	    $result.text(email + " is valid :)");
+	    $result.css("color", "green");
+	  } else {
+	    $result.text(email + " is not valid :(");
+	    $result.css("color", "red");
+	  }
+	  return false;
+	}
+
+	$("#validate").bind("click", validate);
+</script>
+
 <!-- END JAVASCRIPTS -->
 </body>
 <!-- END BODY -->

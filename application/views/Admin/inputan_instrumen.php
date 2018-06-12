@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Instrumen Borang</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -129,21 +130,32 @@ License: You must have a valid license purchased only from themeforest(the above
 											<input type="text" class="form-control" name="id" readonly="" value="<?php echo $convert; ?>">
 										</div>
 									</div>
+
 									<div class="row">
 										<div class="form-group">
 											<label>Nama Instrumen</label>
-											<input type="text" class="form-control" name="instrumen">
+											<input type="text" class="form-control" name="instrumen" id="instrumen">
 										</div>
 									</div>
+
 									<div class="row">
 										<div class="form-group">
 											<label>File</label>
 											<input type="file" name="file">
 										</div>
 									</div>
+
 									<div class="row">
 										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+										<div class="btn-group">
+											<a href="<?php echo base_url()."index.php/CrudInstrumen";?>">
+												<button id="sample_editable_1_new" class="btn red">
+													Batal 
+												</button>
+											</a>
+										</div>
 									</div>
+
 								</div>
 							</div>
 							</form>
@@ -222,6 +234,13 @@ Demo.init(); // init demo features
    Index.initMiniCharts();
    Tasks.initDashboardWidget();
 });
+</script>
+<!-- Buat Validasi Nama Fakultas -->
+<script type="text/javascript">
+$('#instrumen').bind('keyup blur',function(){ 
+    var node = $(this);
+    node.val(node.val().replace(/[^a-zA-Z]/g,'') ); }
+);
 </script>
 <!-- END JAVASCRIPTS -->
 </body>

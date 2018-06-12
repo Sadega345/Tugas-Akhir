@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Prodi Universitas Nasional PASIM</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -250,6 +251,16 @@ License: You must have a valid license purchased only from themeforest(the above
 											<input type="text" class="form-control" name="email_ps" value="<?php echo $email_ps; ?>">
 										</div>
 									</div>
+
+									
+									<div id="alert_retype" style="color:red">
+									</div><br>
+									<?php 
+										$info = $this->session->flashdata('info');
+										if (!empty($info)) {
+											echo $info;
+										}
+									 ?> 
 
 									<div class="row">
 										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>

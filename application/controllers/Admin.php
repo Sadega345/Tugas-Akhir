@@ -19,6 +19,10 @@ class Admin extends CI_Controller {
 		redirect('CrudProdi');
 	}
 
+	function CrudProdi(){
+		redirect('CrudProdi');
+	}
+
 	function table_instrumen(){
 		redirect('CrudInstrumen');
 	}

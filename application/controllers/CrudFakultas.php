@@ -1,4 +1,3 @@
-<title>Pembangunan Aplikasi Pelaporan Data Kuantitatif Borang Akreditasi</title>
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class CrudFakultas extends CI_Controller {
@@ -23,6 +22,7 @@ class CrudFakultas extends CI_Controller {
 		$this->model_squrity->getsqurity();
 		$kode=$_POST['kode'];
 		$fakultas=$_POST['fakultas'];
+		$this->form_validation->set_rules('fakultas', 'Nama Fakultas', 'required');
 		$data_insert=array(
 			'kode_fakultas'=>$kode,
 			'nama_fakultas'=>$fakultas
