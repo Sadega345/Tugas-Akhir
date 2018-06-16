@@ -126,6 +126,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</div>
 							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Apd_a433_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -158,70 +159,28 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+							
 							<tr>
 							 	<td>1</td>
-							 	<td><input type="text" name="" value="ERNA HIKMAWATI"></td>
-							 	<td><input type="text" name="" value="9"></td>
-							 	<td><input type="text" name="" value="0"></td>
-							 	<td><input type="text" name="" value="0"></td>
-							 	<td><input type="text" name="" value="1"></td>
-							 	<td><input type="text" name="" value="1"></td>
-							 	<td><input type="text" name="" value="6"></td>
-							 	<td><input type="text" name="" value="0"></td>
-							 	<td><input type="text" name="" value="17"></td>
-							 </tr>
-							 <tr>
-							 	<td colspan="2">Jumlah</td>
-							 	<td>68</td>
-							 	<td>0</td>
-							 	<td>0</td>
-							 	<td>8</td>
-							 	<td>8</td>
-							 	<td>22</td>
-							 	<td>0</td>
-							 	<td>106</td>
-							 </tr>
-							  <tr>
-							 	<td colspan="2">Rata-rata</td>
-							 	<td>8.50</td>
-							 	<td>0.00</td>
-							 	<td>0.00</td>
-							 	<td>1.00</td>
-							 	<td>1.00</td>
-							 	<td>2.75</td>
-							 	<td>0.00</td>
-							 	<td>13.25</td>
-			 				</tr>
+							 	<td><?php echo $NAMA_DOSEN; ?></td>
+							 	<td><input type="text" name="SKS_PSS" value="<?php echo $SKS_PSS; ?>" ></td>
+							 	<td><input type="text" name="SKS_PSL_PTS" value="<?php echo $SKS_PSL_PTS; ?>"></td>
+							 	<td><input type="text" name="SKS_PTL" value="<?php echo $SKS_PTL; ?>"></td>
+							 	<td><input type="text" name="SKS_PENELITIAN" value="<?php echo $SKS_PENELITIAN; ?>"></td>
+							 	<td><input type="text" name="SKS_PP_MAS" value="<?php echo $SKS_PP_MAS; ?>"></td>
+							 	<td><input type="text" name="SKS_MAN_PTS" value="<?php echo $SKS_MAN_PTS; ?>"></td>
+							 	<td><input type="text" name="SKS_MAN_PTL" value="<?php echo $SKS_MAN_PTL; ?>"></td>
+							</tr>
 							</tbody>
 							</table>
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							</div>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
-									</button>
-								</a>
-							</div>							
+								<button id="sample_editable_1_new" class="btn blue">
+									Simpan 
+								</button>
+							</div>		
+							</form>					
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a433_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">

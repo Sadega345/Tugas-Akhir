@@ -157,9 +157,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							
 							 <tr>
 							 	<td>1</td>
-							 	<td><input type="text" name="nama_dosen" value="<?php echo $nama_dosen; ?>" readonly></td>
+							 	<td><?php echo $nama_dosen; ?></td>
 							 	<td><input type="text" name="bid_keahlian" value="<?php echo $bid_keahlian; ?>"></td>
-							 	<td><input type="text" name="kode_mk" value="<?php echo $kode_mk; ?>" readonly></td>
+							 	<td><?php echo $kode_mk; ?></td>
 							 	<td><input type="text" name="nama_mk" value="<?php echo $nama_mk; ?>"></td>
 							 	<td><input type="text" name="jum_kls" value="<?php echo $jum_kls; ?>"></td>
 							 	<td><input type="text" name="jp_rencana" value="<?php echo $jp_rencana; ?>"></td>
@@ -167,10 +167,12 @@ License: You must have a valid license purchased only from themeforest(the above
 							 </tr>
 							</tbody>
 							</table>
+							<input type="hidden" name="kode_mk" value="<?php echo $kode_mk; ?>">
 							</div>
 							<div class="btn-group">
 								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 							</div>
+							</form>
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a434_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
@@ -178,7 +180,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</button>
 								</a>
 							</div>
-							</form>
+							
 						
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

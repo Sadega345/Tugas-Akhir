@@ -18,26 +18,26 @@ public function index() {
 
  public function ubah($nidn){
  	$this->model_squrity->getsqurity();
-		$res=$this->Apd_a432_model->update("where nidn='$nidn'");
-		$data=array(
-			"nama_dosen"=>$res[0]['nama_dosen'],
-			"nidn"=>$res[0]['nidn'],
-			"tgl_lhr"=>$res[0]['tgl_lhr'],
-			"NM_JAB_AKD"=>$res[0]['NM_JAB_AKD'],
-			"sertifikasi"=>$res[0]['sertifikasi'],
-			"GELAR_S1"=>$res[0]['GELAR_S1'],
-			"ASAL_PT_S1"=>$res[0]['ASAL_PT_S1'],
-			"BID_KEAHLIAN_S1"=>$res[0]['BID_KEAHLIAN_S1'],
-			"GELAR_S2"=>$res[0]['GELAR_S2'],
-			"ASAL_PT_S2"=>$res[0]['ASAL_PT_S2'],
-			"BID_KEAHLIAN_S2"=>$res[0]['BID_KEAHLIAN_S2'],
-			"GELAR_S3"=>$res[0]['GELAR_S3'],
-			"ASAL_PT_S3"=>$res[0]['ASAL_PT_S3'],
-			"BID_KEAHLIAN_S3"=>$res[0]['BID_KEAHLIAN_S3'],
-			"GELAR"=>$res[0]['GELAR'],
-			"PENGAKUAN"=>$res[0]['PENGAKUAN'],
-			"BID_KEAHLIAN"=>$res[0]['BID_KEAHLIAN'],
-		);
+	$res=$this->Apd_a432_model->update("where nidn='$nidn'");
+	$data=array(
+		"nama_dosen"=>$res[0]['nama_dosen'],
+		"nidn"=>$res[0]['nidn'],
+		"tgl_lhr"=>$res[0]['tgl_lhr'],
+		"NM_JAB_AKD"=>$res[0]['NM_JAB_AKD'],
+		"sertifikasi"=>$res[0]['sertifikasi'],
+		"GELAR_S1"=>$res[0]['GELAR_S1'],
+		"ASAL_PT_S1"=>$res[0]['ASAL_PT_S1'],
+		"BID_KEAHLIAN_S1"=>$res[0]['BID_KEAHLIAN_S1'],
+		"GELAR_S2"=>$res[0]['GELAR_S2'],
+		"ASAL_PT_S2"=>$res[0]['ASAL_PT_S2'],
+		"BID_KEAHLIAN_S2"=>$res[0]['BID_KEAHLIAN_S2'],
+		"GELAR_S3"=>$res[0]['GELAR_S3'],
+		"ASAL_PT_S3"=>$res[0]['ASAL_PT_S3'],
+		"BID_KEAHLIAN_S3"=>$res[0]['BID_KEAHLIAN_S3'],
+		"GELAR"=>$res[0]['GELAR'],
+		"PENGAKUAN"=>$res[0]['PENGAKUAN'],
+		"BID_KEAHLIAN"=>$res[0]['BID_KEAHLIAN'],
+	);
  	$this->load->view('User/Butir4/edit_borang4.3.2.php',$data);
  }
 
@@ -61,7 +61,7 @@ public function index() {
 		$BID_KEAHLIAN=$_POST['BID_KEAHLIAN'];
 		$data_update=array(
 			"nama_dosen"=>$nama_dosen,
-			"nidn"=>$nidn,
+			// "nidn"=>$nidn,
 			"tgl_lhr"=>$tgl_lhr,
 			// "NM_JAB_AKD"=>$NM_JAB_AKD,
 			"sertifikasi"=>$sertifikasi,

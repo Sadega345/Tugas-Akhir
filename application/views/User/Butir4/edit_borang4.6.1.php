@@ -125,12 +125,13 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<form action="<?php echo base_url()."index.php/Apd_a461_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								 <tr>
 									 <th rowspan="2">No</th>
 									 <th rowspan="2">Jenis Tenaga Kependidikan</th>
-									 <th colspan="8">Jumlah Tenaga Kependidikan dengan</th>
+									 <th colspan="8" >Jumlah Tenaga Kependidikan dengan</th>
 									 <th rowspan="2">Unit Kerja</th>
 								 </tr>
 								 <tr>
@@ -158,107 +159,37 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+							
 							<tr>
 							 	<td>1</td>
-							 	<td><input type="text" name="" value="Pustakawan*" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control" value="1"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control" value="1"></td>
-							 	<td><input type="text" name="" class="form-control" value="1"></td>
-							 	<td><input type="text" name="" class="form-control" ></td>
-							 	<td bgcolor="gray"></td>
-							 	<td><input type="text" name="" class="form-control" value="Universitas"></td>
-							 </tr>
-							 <tr>
-							 	<td>2</td>
-							 	<td><input type="text" name="" value="Laboran/Teknisi/Analisis/Operator/Programer" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control" value="2"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control" value="2"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control" value="Program Studi"></td>
-							 </tr>
-							 <tr>
-							 	<td>3</td>
-							 	<td><input type="text" name="" class="form-control" value="Administrasi"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control" value="3"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control" value="3"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control" value="Program Studi"></td>
-							 </tr>
-							 </tr>
-							 <tr>
-							 	<td>4</td>
-							 	<td><input type="text" name="" class="form-control" value="Lainnya"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control" value="1"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control" value="7"></td>
-							 	<td><input type="text" name="" class="form-control" value="Universitas"></td>
-							 </tr>
-							 <tr>
-							 	<td colspan="2">Total</td>
-							 	<td>0</td>
-							 	<td>0</td>
-							 	<td>6</td>
-							 	<td>0</td>
-							 	<td>6</td>
-							 	<td>1</td>
-							 	<td>0</td>
-							 	<td>7</td>
-							 	
+							 	<td><?php echo $jns_tng_kepend; ?></td>
+							 	<td><input type="text" name="s3" class="form-control" value="<?php echo $s3; ?>"></td>
+							 	<td><input type="text" name="s2" class="form-control" value="<?php echo $s2; ?>"></td>
+							 	<td><input type="text" name="s1" class="form-control" value="<?php echo $s1; ?>"></td>
+							 	<td><input type="text" name="d4" class="form-control" value="<?php echo $d4; ?>"></td>
+							 	<td><input type="text" name="d3" class="form-control" value="<?php echo $d3; ?>"></td>
+							 	<td><input type="text" name="d2" class="form-control" value="<?php echo $d2; ?>"></td>
+							 	<td><input type="text" name="d1" class="form-control" value="<?php echo $d1; ?>"></td>
+							 	<!-- <td bgcolor="gray"></td> -->
+							 	<td><input type="text" name="sma" class="form-control" value="<?php echo $sma; ?>"></td>
+							 	<td><input type="text" name="unit_kerja" class="form-control" value="<?php echo $unit_kerja; ?>"></td>
 							 </tr>
 							</tbody>
 							</table>
+							<input type="hidden" name="kd_jns" value="<?php echo $kd_jns; ?>">
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
-									</button>
-								</a>
+								<button id="sample_editable_1_new" class="btn blue">
+									Simpan 
+								</button>
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a461_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Apd_a461_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal 
 									</button>
 								</a>
 							</div>
+							</form>
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

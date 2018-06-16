@@ -15,6 +15,11 @@ class CrudPassword extends CI_Controller {
 		$pwdbaru=$_POST['pwdbaru'];
 		$repwdbaru=$_POST['repwdbaru'];
 		$key_username = $this->session->userdata("username");
+		$key_password = $this->session->userdata("password");
+
+		if ($pwdlama != $key_password) {
+			$this->session->set_flashdata('info','Password baru tidak sesuai dengn password lama');
+		}
 
 		if ($repwdbaru != $pwdbaru) {
 			echo "Gagal";

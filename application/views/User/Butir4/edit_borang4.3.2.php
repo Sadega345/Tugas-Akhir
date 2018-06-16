@@ -126,6 +126,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</div >
 							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Apd_a432_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -176,45 +177,27 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+							
 								<tr>
 								 	<td>1</td>
-								 	<td><input type="text" name="" value="LUCKY HANDAYANI"></td>
-								 	<td><input type="text" name="" value="0428097402"></td>
-								 	<td><input type="text" name="" value="28/09/1974"></td>
-								 	<td><input type="text" name="" ></td>
-								 	<td><input type="text" name="" value="Tidak"></td>
-								 	<td><input type="text" name="" value="Universitas Jenderal Achmad Yani"></td>
-								 	<td><input type="text" name="" value="Teknik Mesin"></td>
-								 	<td><input type="text" name="" value="S.T"></td>
-								 	<td><input type="text" name="" value="Institut Teknologi Bandung"></td>
-								 	<td><input type="text" name="" value="Teknik Mesin"></td>
-								 	<td><input type="text" name="" value="M.T">M.T</td>
-								 	<td><input type="text" name="" ></td>
-								 	<td><input type="text" name="" ></td>
-								 	<td><input type="text" name="" ></td>
-								 	<td><input type="text" name="" ></td>
-								 	<td><input type="text" name="" ></td>
-								 	<td><input type="text" name="" ></td>
+								 	<td><input type="text" name="nama_dosen" value="<?php echo $nama_dosen; ?>"></td>
+								 	<td><input type="text" name="nidn" value="<?php echo $nidn; ?>" readonly="" ></td>
+								 	<td><input type="text" name="tgl_lhr" value="<?php echo $tgl_lhr; ?>"></td>
+								 	<td><input type="text" name="NM_JAB_AKD" value="<?php echo $NM_JAB_AKD; ?>"></td>
+								 	<td><input type="text" name="sertifikasi" value="<?php echo $sertifikasi; ?>"></td>
+								 	<td><input type="text" name="GELAR_S1" value="<?php echo $GELAR_S1; ?>"></td>
+								 	<td><input type="text" name="ASAL_PT_S1" value="<?php echo $ASAL_PT_S1; ?>"></td>
+								 	<td><input type="text" name="BID_KEAHLIAN_S1" value="<?php echo $BID_KEAHLIAN_S1; ?>"></td>
+								 	<td><input type="text" name="GELAR_S2" value="<?php echo $GELAR_S2; ?>"></td>
+								 	<td><input type="text" name="ASAL_PT_S2" value="<?php echo $ASAL_PT_S2; ?>"></td>
+								 	<td><input type="text" name="BID_KEAHLIAN_S2" value="<?php echo $BID_KEAHLIAN_S2; ?>"></td>
+								 	<td><input type="text" name="GELAR_S3" value="<?php echo $GELAR_S3; ?>"></td>
+								 	<td><input type="text" name="ASAL_PT_S3" value="<?php echo $ASAL_PT_S3; ?>"></td>
+								 	<td><input type="text" name="BID_KEAHLIAN_S3" value="<?php echo $BID_KEAHLIAN_S3; ?>"></td>
+								 	<td><input type="text" name="GELAR" value="<?php echo $GELAR; ?>"></td>
+								 	<td><input type="text" name="PENGAKUAN" value="<?php echo $PENGAKUAN; ?>"></td>
+								 	<td><input type="text" name="BID_KEAHLIAN" value="<?php echo $BID_KEAHLIAN; ?>"></td>
+								 	
 								 </tr>
 							</tbody>
 							</table>
@@ -226,13 +209,15 @@ License: You must have a valid license purchased only from themeforest(the above
 									</button>
 								</a>
 							</div>
+							</form>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a432_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Apd_a432_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal 
 									</button>
 								</a>
 							</div>
+						
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

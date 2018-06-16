@@ -52,6 +52,7 @@ $jumlah2=$this->Apd_a434_model->hitung2();
 			"jp_rencana"=>$jp_rencana,
 			"jp_dilaksanakan"=>$jp_dilaksanakan,
 		);
+		// print_r($data_update);die;
 		$where=array('kode_mk'=>$kode_mk);
 		$res=$this->Apd_a434_model->rubah('aktivitas_mengajar',$data_update,$where);
 		if ($res>=1) {

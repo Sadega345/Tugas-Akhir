@@ -46,12 +46,13 @@ public function index() {
  																'rataman'=>$rataman,
  																'manlain'=>$ratamanlain,
  																'ratajumsks'=>$ratajum));
+ // print_r($data);die;
  // $this->load->view('User/Butir4/tampilan_borang4.3.3.php',array('data'=>$jum));
  }
 
-public function ubah($namadosen){
+public function ubah($id){
  	$this->model_squrity->getsqurity();
-		$res=$this->Apd_a433_model->update("where NAMA_DOSEN='$namadosen'");
+		$res=$this->Apd_a433_model->update("where id='$id'");
 		$data=array(
 			"NAMA_DOSEN"=>$res[0]['NAMA_DOSEN'],
 			"SKS_PSS"=>$res[0]['SKS_PSS'],
@@ -62,6 +63,7 @@ public function ubah($namadosen){
 			"SKS_MAN_PTS"=>$res[0]['SKS_MAN_PTS'],
 			"SKS_MAN_PTL"=>$res[0]['SKS_MAN_PTL'],
 			"total"=>$res[0]['total'],
+			"id"=>$res[0]['id'],
 		);
  	$this->load->view('User/Butir4/edit_borang4.3.3.php',$data);
  }
@@ -75,10 +77,10 @@ public function ubah($namadosen){
 		$SKS_PP_MAS=$_POST['SKS_PP_MAS'];
 		$SKS_MAN_PTS=$_POST['SKS_MAN_PTS'];
 		$SKS_MAN_PTL=$_POST['SKS_MAN_PTL'];
-		$total=$_POST['total'];
+		$id=$_POST['id'];
 		
 		$data_update=array(
-			"NAMA_DOSEN"=>$NAMA_DOSEN,
+			// "NAMA_DOSEN"=>$NAMA_DOSEN,
 			"SKS_PSS"=>$SKS_PSS,
 			"SKS_PSL_PTS"=>$SKS_PSL_PTS,
 			"SKS_PTL"=>$SKS_PTL,
@@ -86,9 +88,9 @@ public function ubah($namadosen){
 			"SKS_PP_MAS"=>$SKS_PP_MAS,
 			"SKS_MAN_PTS"=>$SKS_MAN_PTS,
 			"SKS_MAN_PTL"=>$SKS_MAN_PTL,
-			"total"=>$total
+			
 		);
-		$where=array('NAMA_DOSEN'=>$NAMA_DOSEN);
+		$where=array('id'=>$id);
 		$res=$this->Apd_a433_model->rubah('aktivitas_dosen',$data_update,$where);
 		if ($res>=1) {
 			redirect('Apd_a433_excel');

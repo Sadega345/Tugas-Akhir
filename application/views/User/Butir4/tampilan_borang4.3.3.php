@@ -136,6 +136,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2"><center>SKS Pengabdian Masyarakat</center></th>
 									 <th colspan="2"><center>SKS Manajemen</center></th>
 									 <th rowspan="2"><center>Jumlah SKS</center></th>
+									 <th rowspan="2"><center>Aksi</center></th>
 								 </tr>
 								 <tr>
 								 	<th><center>PS Sendiri</center></th>
@@ -155,6 +156,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>(8)</td>
 								 	<td>(9)</td>
 								 	<td>(10)</td>
+								 	<td>(11)</td>
 								 </tr>
 							</thead>
 							<tbody>
@@ -162,7 +164,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								$no=1; 
 								foreach ($data as $d ) { 
 							?>
+
 							<tr>
+
 							 	<td><?php echo $no++; ?></td>
 							 	<td><?php echo $d['NAMA_DOSEN']; ?></td>
 							 	<td><?php echo $d['SKS_PSS']; ?></td>
@@ -173,7 +177,11 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['SKS_MAN_PTS']; ?></td>
 							 	<td><?php echo $d['SKS_MAN_PTL']; ?></td>
 							 	<td><?php echo $d['total']; ?></td>
+							 	<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a433_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>
 							 </tr>
+							 <input type="hidden" name="id" value="<?php echo $d['id']; ?>">
 							 <?php } ?>
 
 							 

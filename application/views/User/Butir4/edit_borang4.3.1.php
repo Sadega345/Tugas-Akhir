@@ -181,7 +181,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<tr>
 							 	<td>1</td>
 							 	<td><input type="text" name="nama_dosen" value="<?php echo $nama_dosen; ?>"></td>
-							 	<td><input type="text" name="nidn" value="<?php echo $nidn; ?>"></td>
+							 	<td><input type="text" name="nidn" value="<?php echo $nidn; ?>" readonly=""></td>
 							 	<td><input type="text" name="tgl_lhr" value="<?php echo $tgl_lhr; ?>"></td>
 							 	<td>
 							 		<select name="kd_jab" >

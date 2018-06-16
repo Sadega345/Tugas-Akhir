@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Ganti Password</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -121,11 +122,20 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="row">
 										<div class="form-group">
 											<label>Password Lama</label>
-											<?php foreach ($data as $d) { ?>
+											<!-- <?php foreach ($data as $d) { ?>
 											<input type="text" class="form-control" name="pwdlama" value="<?php echo $d['password']; ?>" readonly>
-											<?php } ?>
+											<?php } ?> -->
+											<input type="password" class="form-control" name="pwdlama" id="pwdlama">
 										</div>
 									</div>
+									<div id="alert_tidakcocok" style="color:red">
+									</div><br>
+									<?php 
+										$info = $this->session->flashdata('info');
+										if (!empty($info)) {
+											echo $info;
+										}
+									 ?>
 									<div class="row">
 										<div class="form-group">
 											<label>Password Baru</label>
@@ -233,8 +243,12 @@ Demo.init(); // init demo features
 <script type="text/javascript">
 $('#myform').submit(function(event){   
     event.preventDefault(); //this will prevent the default submit
+    var pwdlama = $('#pwdlama').val();
     var node = $('#pwdbaru').val();
     var node2 = $('#repwdbaru').val();
+    if (!pwdlama.value) {
+    	$("#alert_tidakcocok").html("Password lama salah <br>");
+    }
     if (node2 != node ) {
     	$("#alert_retype").html("data retype password yg anda masukan berbeda<br>");	
     }else{

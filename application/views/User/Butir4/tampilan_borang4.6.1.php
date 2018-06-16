@@ -132,7 +132,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2"><center>Jenis Tenaga Kependidikan</center></th>
 									 <th colspan="8"><center>Jumlah Tenaga Kependidikan dengan</center></th>
 									 <th rowspan="2"><center>Unit Kerja</center></th>
-									 <!-- <th rowspan="2"><center>Aksi</center></th> -->
+									 <th rowspan="2"><center>Aksi</center></th>
 								 </tr>
 								 <tr>
 								 	<th><center>S3</center></th>
@@ -143,6 +143,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<th><center>D2</center></th>
 								 	<th><center>D1</center></th>
 								 	<th><center>SMA/SMK</center></th>
+
 								 </tr>
 								 <tr align="center">
 								 	<td>(1)</td>
@@ -156,63 +157,34 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>(9)</td>
 								 	<td>(10)</td>
 								 	<td>(11)</td>
-								 	<!-- <td>(12)</td> -->
+								 	<td>(12)</td>
 								 </tr>
 							</thead>
 							<tbody>
+							<?php 
+								$no=1; 
+								foreach ($data as $d ) { 
+							?>
 							<tr>
-							 	<td>1</td>
-							 	<td>Pustakawan</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td>1</td>
-							 	<td></td>
-							 	<td>1</td>
-							 	<td>1</td>
-							 	<td></td>
-							 	<td bgcolor="gray"></td>
-							 	<td>Universitas</td>
+							 	<td><?php echo $no++; ?></td>
+							 	<td><?php echo $d['jns_tng_kepend']; ?></td>
+							 	<td><?php echo $d['s3']; ?></td>
+							 	<td><?php echo $d['s2']; ?></td>
+							 	<td><?php echo $d['s1']; ?></td>
+							 	<td><?php echo $d['d4']; ?></td>
+							 	<td><?php echo $d['d3']; ?></td>
+							 	<td><?php echo $d['d2']; ?></td>
+							 	<td><?php echo $d['d1']; ?></td>
+							 	<td><?php echo $d['sma']; ?></td>
+							 	<td><?php echo $d['unit_kerja']; ?></td>
+
+							 	<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a461_excel/ubah/".$d['kd_jns'];?>" >Edit</a>
+								</td>
 							 </tr>
-							 <tr>
-							 	<td>2</td>
-							 	<td>Laboran/Teknisi/Analisis/Operator/Programer</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td>2</td>
-							 	<td></td>
-							 	<td>2</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td>Program Studi</td>
-							 </tr>
-							 <tr>
-							 	<td>3</td>
-							 	<td>Administrasi</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td>3</td>
-							 	<td></td>
-							 	<td>3</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td>Program Studi</td>
-							 </tr>
-							 </tr>
-							 <tr>
-							 	<td>4</td>
-							 	<td>Lainnya</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td>1</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td>7</td>
-							 	<td>Universitas</td>
-							 </tr>
+							 
+							 <input type="hidden" name="kd_jns" value="<?php echo $d['kd_jns']; ?>">
+							<?php } ?>
 							 <tr>
 							 	<td colspan="2">Total</td>
 							 	<?php 
