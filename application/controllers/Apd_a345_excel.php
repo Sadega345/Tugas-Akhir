@@ -13,6 +13,7 @@ public function index() {
  $data = array( 'title' => '  TABEL DATA BUTIR 3.4 : EVALUASI LULUSAN',
  'a345' => $this->apd_a345_model->listing());
  $this->load->view('User/Butir3/tampilan_borang3.4.5.php',$data);
+ $jmllulusan_wsd=$this->Apd_a345_model->jmllulusan_wsd();
  }
 
  public function ubah(){

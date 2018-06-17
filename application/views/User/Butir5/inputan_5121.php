@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Butir 5.1.2.1 : STRUKTUR KURIKULUM BERDASARKAN URUTAN MK
+								<i class="fa fa-edit"></i>Inputan Butir 5.1.2.1 : STRUKTUR KURIKULUM BERDASARKAN URUTAN MK
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -100,11 +100,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/Apd_a5121_excel/tambah";?>">
-											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
-											</button>
-											</a>
+											
 										</div>
 									</div>
 									<!-- <div class="col-md-6">
@@ -125,91 +121,112 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
-							<table class="table table-striped table-bordered table-hover" id="sample_1">
-							<thead>
-								<tr>
-									 <th rowspan="2">Smt</th>
-									 <th rowspan="2">Kode MK</th>
-									 <th rowspan="2">Nama Mata Kuliah</th>
-									 <th colspan="2">Bobot SKS untuk</th>
-									 <th colspan="2">SKS MK dalam Kurikulum</th>
-									 <th rowspan="2">Bobot Tugas***</th>
-									 <th colspan="3">Kelengkapan***</th>
-									 <th rowspan="2">Unit/Jur/Fak Penyelenggara</th>
-								 </tr>
-								 <tr>
-								 	<th>Kuliah</th>
-								 	<th>Praktikum/Praktek</th>
-								 	<th>Inti**</th>
-								 	<th>Institusional</th>
-								 	<th>Deskripsi</th>
-								 	<th>Silabus</th>
-								 	<th>SAP</th>
-								 </tr>
-								 <tr align="center">
-								 	<td>(1)</td>
-								 	<td>(2)</td>
-								 	<td>(3)</td>
-								 	<td>(4)</td>
-								 	<td>(5)</td>
-								 	<td>(6)</td>
-								 	<td>(7)</td>
-								 	<td>(8)</td>
-								 	<td>(9)</td>
-								 	<td>(10)</td>
-								 	<td>(11)</td>
-								 	<td>(12)</td>
-								 </tr>
-							</thead>
-							<tbody>
-							<tr>
-							<?php 
-								
-								foreach ($data as $d ) { 
-							?>
-								<td><?php echo $d['smt']; ?></td>
-							 	<td><?php echo $d['kode_mk']; ?></td>
-							 	<td><?php echo $d['nama_mk']; ?></td>
-							 	<td><?php echo $d['sks_kuliah']; ?></td>
-							 	<td><?php echo $d['sks_praktek']; ?></td>
-							 	<td><?php echo $d['sks_inti']; ?></td>
-							 	<td><?php echo $d['sks_institusi']; ?></td>
-							 	<td><?php echo $d['bobot_tgs']; ?></td>
-							 	<td><?php echo $d['deskripsi']; ?></td>
-							 	<td><?php echo $d['silabus']; ?></td>
-							 	<td><?php echo $d['sap']; ?></td>
-							 	<td><?php echo $d['penyelenggara']; ?></td>
-							 </tr>
-							 <?php } ?>
-							 <tr>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr>
-							</tbody>
-							</table>
-							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a5121_excel/ubah";?>">
-									<button id="sample_editable_1_new" class="btn green">
-										Ubah 
-									</button>
-								</a>
+							<form action="<?php echo base_url()."index.php/Apd_a5121_excel/do_tambah"; ?>" method="POST">
+							<div class="container">
+								<div class="col-md-10">
+									<div class="row">
+										<div class="form-group">
+											<label>Semester</label>
+											<select name="smt" class="form-control">
+												<option disabled selected>-- Pilih Semester --</option>
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+											</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Jenis Mata Kuliah</label>
+											<select name="jns_mk" class="form-control">
+												<option disabled selected>-- Pilih Jenis Matkul --</option>
+												<?php 
+													$data=$this->Apd_a5121_model->GetJenis();
+													foreach($data as $d) { ?>
+									                <option value="<?php echo $d['jns_matkul'];?>"><?php echo $d['jns_matkul'];?></option>
+									            <?php } ?>
+									            <!-- <option value="1">WAJIB</option>
+												<option value="2">PILIHAN</option> -->
+											</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Kode Mata Kuliah</label>
+											<input type="text" class="form-control" name="kode_mk">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Mata Kuliah</label>
+											<input type="text" class="form-control" name="nama_mk">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>SKS Kuliah</label>
+											<input type="text" class="form-control" name="sks_kuliah">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>SKS Praktek</label>
+											<input type="text" class="form-control" name="sks_praktek">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>SKS Inti</label>
+											<input type="checkbox" class="form-control" name="sks_inti" value="v">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>SKS Institusi</label>
+											<input type="text" class="form-control" name="sks_institusi">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Bobot Tugas</label>
+											<input type="checkbox" class="form-control" name="bobot_tgs" value="v">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Deskripsi</label>
+											<input type="checkbox" class="form-control" name="deskripsi" value="v">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Silabus</label>
+											<input type="checkbox" class="form-control" name="silabus" value="v">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>SAP</label>
+											<input type="checkbox" class="form-control" name="sap" value="v">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Penyelenggara</label>
+											<input type="text" class="form-control" name="penyelenggara">
+										</div>
+									</div>
+									<div class="row">
+										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+										<button type="submit" class="btn btn-danger" name="simpan">Batal</button>
+									</div>
+								</div>
 							</div>
-							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a5121_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
-										Export ke Excel 
-									</button>
-								</a>
-							</div>
+							</form>
+							
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

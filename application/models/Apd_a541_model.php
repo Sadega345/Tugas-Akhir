@@ -15,7 +15,16 @@ class Apd_a541_model extends CI_Model {
  dosen_tbl d ON p.id_dosen=d.id_dosen WHERE p.kd_prodi="p001"');
  return $data->result_array();
  }
-
+ 
+ public function insert($tablename,$data){
+	$res=$this->db->insert($tablename,$data);
+	return $res;
+}
+public function GetDosen()
+	{
+		$data=$this->db->query("select nama_dosen from dosen_tbl ");
+		return $data->result_array();
+	}
  public function totbimbingan() {
  $data=$this->db->query('SELECT SUM(j_mhs_bimbingan)AS jum_bimbingan FROM pembimbing_akd WHERE kd_prodi="p001"');
  return $data->result_array();

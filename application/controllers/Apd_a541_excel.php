@@ -19,6 +19,30 @@ public function index() {
 																'totpertemuan'=>$totalbimbingan,
 																'bertemu'=>$pertemuan));
  }
+public function tambah(){
+	$this->load->view('User/Butir5/inputan_a541.php');
+}
+public function do_tambah(){
+		$this->model_squrity->getsqurity();
+		$id_dosen=$_POST['id_dosen'];
+		$j_mhs_bimbingan=$_POST['j_mhs_bimbingan'];
+		$rata2_pertemuan=$_POST['rata2_pertemuan'];
+		$data_insert=array(
+			'id' => '',
+			'id_dosen'=>$id_dosen,
+			'kd_prodi'=>'P001',
+			'j_mhs_bimbingan' => $j_mhs_bimbingan,
+			'rata2_pertemuan' => $rata2_pertemuan,
+
+		);
+		$res=$this->Apd_a541_model->insert('pembimbing_akd',$data_insert);
+		if ($res>=1) {
+			redirect('Apd_a541_excel');
+		}else {
+			alert('Gagal Insert');
+		}
+}
+
 
   public function ubah(){
  	$this->load->view('User/Butir5/tampilan_borang5.4.1.php');	

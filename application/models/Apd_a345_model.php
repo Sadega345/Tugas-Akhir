@@ -15,4 +15,9 @@ public function __construct()
  return $data->result_array();
  }
 
+ public function jmllulusan_wsd(){
+ 	$data= $this->db->query("select sum(j_llsn_reg_bkn_trf+j_llsn_trf) from data_mhs where id_prodi='p001'");
+ 	return $data->result_array();
+ }
+
 }

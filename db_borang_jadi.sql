@@ -1,5 +1,5 @@
 /*
-SQLyog Enterprise - MySQL GUI v8.05 
+SQLyog Enterprise - MySQL GUI v7.02 
 MySQL - 5.6.16 : Database - db_borangakreditasi
 *********************************************************************
 */
@@ -73,13 +73,15 @@ CREATE TABLE `aktivitas_mengajar` (
   `jml_sks` int(4) NOT NULL,
   `jp_rencana` int(3) DEFAULT NULL,
   `jp_dilaksanakan` int(3) DEFAULT NULL,
+  `id` int(4) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`),
   KEY `FK_aktivitas_mengajar` (`id_dosen`),
   CONSTRAINT `FK_aktivitas_mengajar` FOREIGN KEY (`id_dosen`) REFERENCES `dosen_tbl` (`id_dosen`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 /*Data for the table `aktivitas_mengajar` */
 
-insert  into `aktivitas_mengajar`(`id_dosen`,`bid_keahlian`,`kode_mk`,`nama_mk`,`jum_kls`,`jml_sks`,`jp_rencana`,`jp_dilaksanakan`) values ('1','Analisis dan Perancangan','MIMKL24','Rekayasa Perangkat Lunak',7,0,16,18),('2','Pemrograman Web dan Networking','MIMKL14','Pemrograman Internet I (WEB)',1,0,16,16),('9',NULL,'MIMKL23','Matematika Diskrit',NULL,113,16,16),('11',NULL,'MIMKD10','Kalkulus',NULL,3,16,16),('17',NULL,'MIMKU03','PENDIDIKAN AGAMA',NULL,2,16,16);
+insert  into `aktivitas_mengajar`(`id_dosen`,`bid_keahlian`,`kode_mk`,`nama_mk`,`jum_kls`,`jml_sks`,`jp_rencana`,`jp_dilaksanakan`,`id`) values ('1','Analisis dan Perancangan','MIMKL24','Rekayasa Perangkat Lunak',7,0,16,18,1),('2','Pemrograman Web dan Networking','MIMKL14','Pemrograman Internet I (WEB)',1,0,16,16,2),('9',NULL,'MIMKL23','Matematika Diskrit',NULL,113,16,16,3),('11',NULL,'MIMKD10','Kalkulus',NULL,3,16,16,4),('17',NULL,'MIMKU03','PENDIDIKAN AGAMA',NULL,2,16,16,5);
 
 /*Table structure for table `artikel_ilmiah` */
 
@@ -384,6 +386,23 @@ CREATE TABLE `jab_akademik` (
 /*Data for the table `jab_akademik` */
 
 insert  into `jab_akademik`(`kd_jab`,`nm_jab_akd`) values ('1','Lektor'),('2','Asisten Ahli');
+
+/*Table structure for table `jns_dana` */
+
+DROP TABLE IF EXISTS `jns_dana`;
+
+CREATE TABLE `jns_dana` (
+  `kd_jns` int(3) NOT NULL AUTO_INCREMENT,
+  `sumber_dana` int(2) DEFAULT NULL,
+  `jns_dana` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`kd_jns`),
+  KEY `FK_jns_dana` (`sumber_dana`),
+  CONSTRAINT `FK_jns_dana` FOREIGN KEY (`sumber_dana`) REFERENCES `sumber_dana` (`id_dana`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+/*Data for the table `jns_dana` */
+
+insert  into `jns_dana`(`kd_jns`,`sumber_dana`,`jns_dana`) values (1,1,'Beasiswa Yayasan'),(2,1,'Hibah Yayasan'),(3,1,'Hibah Unit Usaha '),(4,2,'Pendaftaran'),(5,2,'Biaya Registrasi'),(6,2,'Biaya Kuliah'),(7,4,'Biaya Kuliah'),(8,4,'Hibah Penelitian'),(9,4,'Hibah Pengabdian');
 
 /*Table structure for table `jns_data` */
 
@@ -714,7 +733,7 @@ CREATE TABLE `pembimbing_akd` (
   KEY `FK_pembimbing_akd` (`kd_prodi`),
   CONSTRAINT `FK_pembimbing_akd` FOREIGN KEY (`kd_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`),
   CONSTRAINT `FK_pembimbing_dosen` FOREIGN KEY (`id_dosen`) REFERENCES `dosen_tbl` (`id_dosen`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 /*Data for the table `pembimbing_akd` */
 

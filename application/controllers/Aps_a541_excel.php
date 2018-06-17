@@ -15,6 +15,7 @@ public function index() {
  $this->load->view('Users/Butir5/tampilan_borang5.4.1.php',$data);
  }
 
+
 public function export_excel(){
  $data = array( 'title' => ' TABEL DATA BUTIR 5.4.1 : NAMA DOSEN PEMBIMBING DAN JUMLAH MAHASISWA',
  'a541' => $this->aps_a541_model->listing());

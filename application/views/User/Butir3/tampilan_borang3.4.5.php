@@ -143,69 +143,26 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
-							<tr>
-							 	<td>TS-4</td>
-							 	<td>33</td>
-							 	<td>PT. Pasim Sentra Utama</td>
-							 	<td>5</td>
-							 	<td>5</td>
-							 </tr>
-							 <tr>
-							 	<td>TS-3</td>
-							 	<td>25</td>
-							 	<td>PT. Pasim Sentra Utama</td>
-							 	<td>5</td>
-							 	<td>4</td>
-							 </tr>
-							 <tr>
-							 	<td>TS-2</td>
-							 	<td>37</td>
-							 	<td>PT. Pasim Sentra Utama</td>
-							 	<td>5</td>
-							 	<td>3</td>
-							 </tr>
-							 <tr>
-							 	<td>TS-1</td>
-							 	<td>41</td>
-							 	<td>PT. Pasim Sentra Utama</td>
-							 	<td>8</td>
-							 	<td>8</td>
-							 </tr>	
-							 <tr>
-							 	<td>TS</td>
-							 	<td>41</td>
-							 	<td>PT. Pasim Sentra Utama</td>
-							 	<td>5</td>
-							 	<td>4</td>
-							 </tr>	
-							 <tr>
-							 	<td>Total</td>
-							 	<td>177</td>
-							 	<td></td>
-							 	<td>72</td>
-							 	<td>62</td>
-							 </tr>	
-							</tbody>
+								 <?php 
+									$no=4; 
+									foreach ($data as $d ) { 
+								?>
+								<tr>
+								 	<td>TS- <?php echo $no--; ?></td>
+								 	<td><?php echo $d['instansi']; ?></td>
+								 	<td><?php echo $d['j_lulusan_psn']; ?></td>
+								 	<td><?php echo $d['j_lulusan_terima']; ?></td>
+								 </tr>
+								<?php } ?>
+								<tr>
+									<td>Total</td>
+									<?php 
+							 			foreach ($jmllulusan_wsd as $jum) {
+							 		?>
+								 	<td><?php echo $jum['jmllulusan_wsd']; ?></td>
+								 	<?php } ?>
+								</tr>
+							</tbody> 
 							</table>
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a345_excel/ubah";?>">
