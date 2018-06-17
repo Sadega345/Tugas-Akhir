@@ -151,7 +151,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<tbody>
 								<tr>
 								 	<td>1</td>
-								 	<td><input type="text" name="" value="<?php echo $nama_dosen; ?>"></td>
+								 	<td><?php echo $nama_dosen; ?></td>
 								 	<td><input type="text" name="jenjang_pend" value="<?php echo $jenjang_pend; ?>"></td>
 								 	<td><input type="text" name="bid_studi" value="<?php echo $bid_studi; ?>"></td>
 								 	<td><input type="text" name="perguruan_tinggi" value="<?php echo $perguruan_tinggi; ?>"></td>
@@ -160,6 +160,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</tbody>
 							</table>
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							<div class="btn-group">
 								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 							</div>

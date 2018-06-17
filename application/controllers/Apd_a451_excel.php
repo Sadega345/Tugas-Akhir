@@ -16,34 +16,36 @@ public function index() {
  $this->load->view('User/Butir4/tampilan_borang4.5.1.php',array('data'=>$data));
  }
 
- public function ubah($nama_pakar){
+ public function ubah($id){
  	$this->model_squrity->getsqurity();
-		$res=$this->Apd_a451_model->update("where nama_pakar='$nama_pakar'");
+		$res=$this->Apd_a451_model->update("where id='$id'");
 		$data=array(
 			"nama_pakar"=>$res[0]['nama_pakar'],
 			"instansi"=>$res[0]['instansi'],
 			"judul_keg"=>$res[0]['judul_keg'],
 			"pelaksanaan"=>$res[0]['pelaksanaan'],
+			"id"=>$res[0]['id'],
 			
 		);
  	$this->load->view('User/Butir4/edit_borang4.5.1.php',$data);
  }
 
  public function do_edit(){
-		// $nama_dosen=$_POST['nama_dosen'];
+		$nama_dosen=$_POST['nama_dosen'];
 		$nama_pakar=$_POST['nama_pakar'];
 		$instansi=$_POST['instansi'];
 		$judul_keg=$_POST['judul_keg'];
 		$pelaksanaan=$_POST['pelaksanaan'];
+		$id=$_POST['id'];
 		
 		$data_update=array(
-			"nama_pakar"=>$nama_pakar,
+			// "nama_pakar"=>$nama_pakar,
 			"instansi"=>$instansi,
 			"judul_keg"=>$judul_keg,
 			"pelaksanaan"=>$pelaksanaan
 			
 		);
-		$where=array('nama_pakar'=>$nama_pakar);
+		$where=array('id'=>$id);
 		$res=$this->Apd_a451_model->rubah('kegiatan_ahli',$data_update,$where);
 		if ($res>=1) {
 			redirect('Apd_a451_excel');

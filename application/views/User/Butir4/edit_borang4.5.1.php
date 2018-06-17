@@ -148,13 +148,14 @@ License: You must have a valid license purchased only from themeforest(the above
 							
 							<tr>
 							 	<td>1</td>
-							 	<td><input type="text" name="nama_pakar" value="<?php echo $nama_pakar; ?>"></td>
+							 	<td><?php echo $nama_pakar; ?></td>
 							 	<td><input type="text" name="instansi" value="<?php echo $instansi; ?>" readonly></td>
 							 	<td><input type="text" name="judul_keg" value="<?php echo $judul_keg; ?>"></td>
 							 	<td><input type="text" name="pelaksanaan" value="<?php echo $pelaksanaan; ?>"></td>
 							 </tr>
 							</tbody>
 							</table>
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							<div class="btn-group">
 								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 							</div>

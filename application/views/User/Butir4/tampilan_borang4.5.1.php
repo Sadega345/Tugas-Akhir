@@ -156,9 +156,10 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['judul_keg']; ?></td>
 							 	<td><?php echo $d['pelaksanaan']; ?></td>
 							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Apd_a451_excel/ubah/".$d['nama_pakar'];?>">Edit</a>
+									<a href="<?php echo base_url()."index.php/Apd_a451_excel/ubah/".$d['id'];?>">Edit</a>
 								</td>
 							 </tr>
+							 <input type="hidden" name="id" value="<?php echo $d['id']; ?>">
 							 <?php } ?>
 							</tbody>
 							</table>

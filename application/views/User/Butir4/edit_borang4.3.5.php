@@ -155,7 +155,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<tr>
 							 	<td>1</td>
 							 	<td><?php echo $nama_dosen;  ?></td>
-							 	<td><input type="" name="kode_mk" value="<?php echo $kode_mk; ?>"></td>
+							 	<td><?php echo $kode_mk; ?></td>
 							 	<td><input type="text" name="nama_mk" value="<?php echo $nama_mk; ?>"></td>
 							 	<td><input type="text" name="jml_sks" value="<?php echo $jml_sks; ?>"></td>
 							 	<td><input type="text" name="jp_rencana" value="<?php echo $jp_rencana; ?>"></td>
@@ -164,6 +164,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 
 							</tbody>
 							</table>
+							<input type="hidden" name="kode_mk" value="<?php echo $kode_mk; ?>">
 							<div class="btn-group">
 								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 							</div>

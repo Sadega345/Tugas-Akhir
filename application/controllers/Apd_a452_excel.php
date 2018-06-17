@@ -16,9 +16,9 @@ public function index() {
  $this->load->view('User/Butir4/tampilan_borang4.5.2.php',array('data'=>$data));
  }
 
- public function ubah($jenjang_pend){
+ public function ubah($id){
  	$this->model_squrity->getsqurity();
-		$res=$this->Apd_a452_model->update("where jenjang_pend='$jenjang_pend'");
+		$res=$this->Apd_a452_model->update("where id='$id'");
 		$data=array(
 			"nama_dosen"=>$res[0]['nama_dosen'],
 			"jenjang_pend"=>$res[0]['jenjang_pend'],
@@ -26,8 +26,10 @@ public function index() {
 			"perguruan_tinggi"=>$res[0]['perguruan_tinggi'],
 			"negara"=>$res[0]['negara'],
 			"thn_mulai_std"=>$res[0]['thn_mulai_std'],
+			"id"=>$res[0]['id'],
 			
 		);
+		// print_r($data);die;
  	$this->load->view('User/Butir4/edit_borang4.5.2.php',$data);
 
  }
@@ -39,6 +41,7 @@ public function index() {
 		$perguruan_tinggi=$_POST['perguruan_tinggi'];
 		$negara=$_POST['negara'];
 		$thn_mulai_std=$_POST['thn_mulai_std'];
+		$id=$_POST['id'];
 		
 		$data_update=array(
 			"jenjang_pend"=>$jenjang_pend,
@@ -48,7 +51,7 @@ public function index() {
 			"thn_mulai_std"=>$thn_mulai_std
 			
 		);
-		$where=array('jenjang_pend'=>$jenjang_pend);
+		$where=array('id'=>$id);
 		$res=$this->Apd_a452_model->rubah('pkdt_tgs_belajar',$data_update,$where);
 		if ($res>=1) {
 			redirect('Apd_a452_excel');

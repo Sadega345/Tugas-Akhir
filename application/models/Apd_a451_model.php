@@ -11,12 +11,12 @@ class Apd_a451_model extends CI_Model {
 
 // Listing
  public function listing() {
- $data=$this->db->query('SELECT nama_pakar,instansi,judul_keg,pelaksanaan FROM kegiatan_ahli WHERE kd_prodi="p001"');
+ $data=$this->db->query('SELECT nama_pakar,instansi,judul_keg,pelaksanaan,id FROM kegiatan_ahli WHERE kd_prodi="p001"');
  return $data->result_array();
  }
 
  public function update($where="") {
- $data= $this->db->query('SELECT nama_pakar,instansi,judul_keg,pelaksanaan FROM kegiatan_ahli '.$where);
+ $data= $this->db->query('SELECT nama_pakar,instansi,judul_keg,pelaksanaan,id FROM kegiatan_ahli '.$where);
  return $data->result_array();
  }
 

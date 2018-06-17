@@ -190,29 +190,28 @@ License: You must have a valid license purchased only from themeforest(the above
 										</div>
 									</div>
 									<div class="row">
-										<div class="form-group">
-											<label>Bobot Tugas</label>
-											<input type="checkbox" class="form-control" name="bobot_tgs" value="v">
-										</div>
+									<div class="form-group">
+									<table>
+										<tr>
+											<td>Bobot Tugas</td>
+											<td><input type="checkbox" class="form-control" name="bobot_tgs" value="v"></td>
+										</tr>
+										<tr>
+											<td>Deskripsi</td>
+											<td><input type="checkbox" class="form-control" name="deskripsi" value="v"></td>
+										</tr>
+										<tr>
+											<td>Silabus</td>
+											<td><input type="checkbox" class="form-control" name="silabus" value="v"></td>
+										</tr>
+										<tr>
+											<td>SAP</td>
+											<td><input type="checkbox" class="form-control" name="sap" value="v"></td>
+										</tr>
+									</table>
 									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Deskripsi</label>
-											<input type="checkbox" class="form-control" name="deskripsi" value="v">
-										</div>
 									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Silabus</label>
-											<input type="checkbox" class="form-control" name="silabus" value="v">
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>SAP</label>
-											<input type="checkbox" class="form-control" name="sap" value="v">
-										</div>
-									</div>
+									
 									<div class="row">
 										<div class="form-group">
 											<label>Penyelenggara</label>

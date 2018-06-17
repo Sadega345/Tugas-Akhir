@@ -162,10 +162,11 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td><?php echo $d['negara']; ?></td>
 								 	<td><?php echo $d['thn_mulai_std']; ?></td>
 								 	<td class="center">
-										<a href="<?php echo base_url()."index.php/Apd_a452_excel/ubah/".$d['jenjang_pend'];?>" >Edit</a>
+										<a href="<?php echo base_url()."index.php/Apd_a452_excel/ubah/".$d['id'];?>" >Edit</a>
 									</td>
 								 </tr>
 							</tbody>
+							<input type="hidden" name="id" value="<?php echo $d['id']; ?>">
 							<?php } ?>
 							</table>
 							<div class="btn-group">
