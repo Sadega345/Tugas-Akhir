@@ -218,13 +218,28 @@ License: You must have a valid license purchased only from themeforest(the above
 											<input type="text" class="form-control" name="penyelenggara">
 										</div>
 									</div>
-									<div class="row">
-										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
-										<button type="submit" class="btn btn-danger" name="simpan">Batal</button>
-									</div>
+									<div class="btn-group">
+										<button id="sample_editable_1_new" class="btn blue">
+											Simpan 
+										</button>
+									</div>		
+									</form>					
+									<!-- <div class="btn-group">
+										<a href="<?php echo base_url()."index.php/Apd_a5121_excel";?>">
+											<button id="sample_editable_1_new" class="btn red">
+												Batal
+											</button>
+										</a>
+									</div> -->
 								</div>
 							</div>
-							</form>
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Apd_a5121_excel";?>">
+									<button id="sample_editable_1_new" class="btn red">
+										Batal
+									</button>
+								</a>
+							</div>
 							
 						</div>
 					</div>

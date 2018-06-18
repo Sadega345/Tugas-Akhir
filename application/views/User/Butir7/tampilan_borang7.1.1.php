@@ -136,69 +136,18 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
+							<?php 
 								$no=1; 
 								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+							?>
 							<tr>
-							 	<td>Pembiayaan sendiri oleh peneliti</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td>0</td>
-							 </tr>
-							 <tr>
-							 	<td>PT yang bersangkutan</td>
-							 	<td>4</td>
-							 	<td>4</td>
-							 	<td>5</td>
-							 	<td>13</td>
-							 </tr>
-							 <tr>
-							 	<td>Kemristekdikti</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td>0</td>
-							 </tr>
-							  <tr>
-							 	<td>Institusi dalam negeri di luar Kemristekdikti</td>
-							 	<td>6</td>
-							 	<td>5</td>
-							 	<td>4</td>
-							 	<td>15</td>
-							 </tr>
-							 <tr>
-							 	<td>Institusi luar negeri</td>
-							 	<td></td>
-							 	<td>1</td>
-							 	<td>2</td>
-							 	<td>3</td>
-							 </tr>
-							 <tr>
-							 	<td>Jumlah</td>
-							 	<td>10</td>
-							 	<td>10</td>
-							 	<td>11</td>
-							 	<td>31</td>
-							 </tr>
-		
+								<td><?php echo $d['sumber_pembiayaan']; ?></td>
+								<td><?php echo $d['TS_2']; ?></td>
+								<td><?php echo $d['TS_1']; ?></td>
+								<td><?php echo $d['TS']; ?></td>
+							</tr>
+							<?php } ?>
+							
 							</tbody>
 							</table>
 							<div class="btn-group">

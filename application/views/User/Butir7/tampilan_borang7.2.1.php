@@ -136,60 +136,65 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
 							<tr>
 							 	<td>Pembiayaan sendiri oleh dosen</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td>0</td>
+							 	<?php 
+									$no=1; 
+									foreach ($data as $d ) { 
+								?>
+								<td><?php echo $d['JML']; ?></td>
+								<td><?php echo $d['JML']; ?></td>
+								<td><?php echo $d['JML']; ?></td>
+							 	<td><?php echo $d['JML']; ?></td>
+							 	<?php } ?>
 							 </tr>
 							 <tr>
 							 	<td>PT yang bersangkutan</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td>0</td>
+							 	<?php 
+									$no=1; 
+									foreach ($bersangkutan as $b ) { 
+								?>
+								<td><?php echo $b['JML']; ?></td>
+								<td><?php echo $b['JML']; ?></td>
+								<td><?php echo $b['JML']; ?></td>
+							 	<td><?php echo $b['JML']; ?></td>
+							 	<?php } ?>
 							 </tr>
 							 <tr>
 							 	<td>Kemristekdikti</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td>0</td>
+							 	<?php 
+									$no=1; 
+									foreach ($kemristekdikti as $k ) { 
+								?>
+								<td><?php echo $k['JML']; ?></td>
+								<td><?php echo $k['JML']; ?></td>
+								<td><?php echo $k['JML']; ?></td>
+							 	<td><?php echo $k['JML']; ?></td>
+							 	<?php } ?>
 							 </tr>
 							  <tr>
 							 	<td>Institusi dalam negeri di luar Kemristekdikti</td>
-							 	<td>6</td>
-							 	<td>6</td>
-							 	<td>5</td>
-							 	<td>17</td>
+							 	<?php 
+									$no=1; 
+									foreach ($luarkemristekdikti as $lk ) { 
+								?>
+								<td><?php echo $lk['JML']; ?></td>
+								<td><?php echo $lk['JML']; ?></td>
+								<td><?php echo $lk['JML']; ?></td>
+							 	<td><?php echo $lk['JML']; ?></td>
+							 	<?php } ?>
 							 </tr>
 							 <tr>
 							 	<td>Institusi luar negeri</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td>1</td>
-							 	<td>1</td>
+							 	<?php 
+									$no=1; 
+									foreach ($luarnegeri as $l ) { 
+								?>
+								<td><?php echo $l['JML']; ?></td>
+								<td><?php echo $l['JML']; ?></td>
+								<td><?php echo $l['JML']; ?></td>
+							 	<td><?php echo $l['JML']; ?></td>
+							 	<?php } ?>
 							 </tr>
 							 <tr>
 							 	<td>Jumlah</td>

@@ -21,47 +21,72 @@ header("Expires: 0");
 			 </tr>
 		</thead>
 		<tbody>
-			 <tr>
-			 	<td>Pembiayaan sendiri oleh peneliti</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
+			<tr>
+			 	<td>Pembiayaan sendiri oleh dosen</td>
+			 	<?php 
+					$no=1; 
+					foreach ($data as $d ) { 
+				?>
+				<td><?php echo $d['JML']; ?></td>
+				<td><?php echo $d['JML']; ?></td>
+				<td><?php echo $d['JML']; ?></td>
+			 	<td><?php echo $d['JML']; ?></td>
+			 	<?php } ?>
 			 </tr>
 			 <tr>
 			 	<td>PT yang bersangkutan</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
+			 	<?php 
+					$no=1; 
+					foreach ($bersangkutan as $b ) { 
+				?>
+				<td><?php echo $b['JML']; ?></td>
+				<td><?php echo $b['JML']; ?></td>
+				<td><?php echo $b['JML']; ?></td>
+			 	<td><?php echo $b['JML']; ?></td>
+			 	<?php } ?>
 			 </tr>
 			 <tr>
 			 	<td>Kemristekdikti</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
+			 	<?php 
+					$no=1; 
+					foreach ($kemristekdikti as $k ) { 
+				?>
+				<td><?php echo $k['JML']; ?></td>
+				<td><?php echo $k['JML']; ?></td>
+				<td><?php echo $k['JML']; ?></td>
+			 	<td><?php echo $k['JML']; ?></td>
+			 	<?php } ?>
 			 </tr>
 			  <tr>
 			 	<td>Institusi dalam negeri di luar Kemristekdikti</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
+			 	<?php 
+					$no=1; 
+					foreach ($luarkemristekdikti as $lk ) { 
+				?>
+				<td><?php echo $lk['JML']; ?></td>
+				<td><?php echo $lk['JML']; ?></td>
+				<td><?php echo $lk['JML']; ?></td>
+			 	<td><?php echo $lk['JML']; ?></td>
+			 	<?php } ?>
 			 </tr>
 			 <tr>
 			 	<td>Institusi luar negeri</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
+			 	<?php 
+					$no=1; 
+					foreach ($luarnegeri as $l ) { 
+				?>
+				<td><?php echo $l['JML']; ?></td>
+				<td><?php echo $l['JML']; ?></td>
+				<td><?php echo $l['JML']; ?></td>
+			 	<td><?php echo $l['JML']; ?></td>
+			 	<?php } ?>
 			 </tr>
 			 <tr>
 			 	<td>Jumlah</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
+			 	<td>6</td>
+			 	<td>6</td>
+			 	<td>6</td>
+			 	<td>18</td>
 			 </tr>
-		</tbody>
+			</tbody>
 	</table>

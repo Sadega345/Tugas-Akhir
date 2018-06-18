@@ -125,6 +125,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -134,6 +135,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2">Dihasilkan/dipublikasikan pada</th>
 									 <th rowspan="2">Tahun penyajian/publikasi</th>
 									 <th colspan="3">Banyaknya dosen</th>
+									 <th rowspan="2">Aksi</th>
 								 </tr>
 								 <tr>
 								 	<th>Lokal</th>
@@ -149,47 +151,55 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>(6)</td>
 								 	<td>(7)</td>
 								 	<td>(8)</td>
+								 	<td>(9)</td>
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+								<?php 
+									$no=1; 
+									foreach ($data as $d ) { 
+								?>
 								<tr>
-								 	<td>1</td>
-								 	<td>Pembangunan Sistem Informasi Konsumsi Tunas Raharja di MAN 1 Cirebon</td>
-								 	<td>Nur Achadi, Selly Meliana</td>
-								 	<td>Jurnal Ilmu Komputer Vol. 6 No. 1</td>
-								 	<td>2015</td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								 	<td><?php echo $no++; ?></td>
+								 	<td><?php echo $d['JUDUL']; ?></td>
+								 	<td><?php echo $d['nama_dosen']; ?></td>
+								 	<td><?php echo $d['publikasi']; ?></td>
+								 	<td><?php echo $d['thn_publikasi']; ?></td>
+								 	<td><?php echo $d['lokal']; ?></td>
+								 	<td><?php echo $d['nasional']; ?></td>
+								 	<td><?php echo $d['internasional']; ?></td>
+								 	<td class="center">
+										<a href="<?php echo base_url()."index.php/Apd_a712_excel/ubah/".$d['id'];?>" >Edit</a>
+									</td>
 								 </tr>
+								 <input type="hidden" name="id" value="<?php echo $d['id']; ?>">
+								<?php } ?>
 								 <tr>
 								 	<td colspan="5" readonly=""></td>
-								 	<td>1</td>
-								 	<td>0</td>
-								 	<td>0</td>
+								 	<?php 
+										
+										foreach ($lokal as $l ) { 
+									?>
+								 	<td><?php echo $l['JML']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
+										
+										foreach ($nasional as $n ) { 
+									?>
+								 	<td><?php echo $n['JML']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
+										
+										foreach ($internasional as $in ) { 
+									?>
+								 	<td><?php echo $in['JML']; ?></td>
+								 	<?php } ?>
 								 </tr>
 							</tbody>
 							</table>
+							</div>
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a712_excel/ubah";?>">
 									<button id="sample_editable_1_new" class="btn green">

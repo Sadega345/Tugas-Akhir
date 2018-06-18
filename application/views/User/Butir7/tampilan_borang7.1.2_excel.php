@@ -37,25 +37,45 @@ header("Expires: 0");
 			 </tr>
 		</thead>
 		<tbody>
-			 <tr>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
+			<?php 
+				$no=1; 
+				foreach ($data as $d ) { 
+			?>
+			<tr>
+			 	<td><?php echo $no++; ?></td>
+			 	<td><?php echo $d['JUDUL']; ?></td>
+			 	<td><?php echo $d['nama_dosen']; ?></td>
+			 	<td><?php echo $d['publikasi']; ?></td>
+			 	<td><?php echo $d['thn_publikasi']; ?></td>
+			 	<td><?php echo $d['lokal']; ?></td>
+			 	<td><?php echo $d['nasional']; ?></td>
+			 	<td><?php echo $d['internasional']; ?></td>
+			 	
 			 </tr>
+			 
+			<?php } ?>
 			 <tr>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
+			 	<td colspan="5" readonly=""></td>
+			 	<?php 
+					
+					foreach ($lokal as $l ) { 
+				?>
+			 	<td><?php echo $l['JML']; ?></td>
+			 	<?php } ?>
+
+			 	<?php 
+					
+					foreach ($nasional as $n ) { 
+				?>
+			 	<td><?php echo $n['JML']; ?></td>
+			 	<?php } ?>
+
+			 	<?php 
+					
+					foreach ($internasional as $in ) { 
+				?>
+			 	<td><?php echo $in['JML']; ?></td>
+			 	<?php } ?>
 			 </tr>
 		</tbody>
 	</table>

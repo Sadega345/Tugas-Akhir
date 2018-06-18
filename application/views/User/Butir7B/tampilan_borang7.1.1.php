@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Butir 7.1.1 : PENELITIAN</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -142,46 +143,35 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
+							<?php 
 								$no=1; 
 								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+							?>
 							<tr>
-								<td>1</td>
-								<td>Manajemen Informatika D3</td>
-								<td>10</td>
-								<td>10</td>
-								<td>11</td>
-								<td>59.8</td>
-								<td>59.2</td>
-								<td>65.6</td>
+								<td><?php echo $no++; ?></td>
+								<td><?php echo $d['jurusan']; ?></td>
+								<td><?php echo $d['Tot_Ts2']; ?></td>
+								<td><?php echo $d['Tot_Ts1']; ?></td>
+								<td><?php echo $d['Tot_Ts']; ?></td>
+								<td><?php echo $d['Dana_penelitian']; ?></td>
+								<td><?php echo $d['Jum_Dana2015']; ?></td>
+								<td><?php echo $d['Jum_Dana2016']; ?></td>
 							</tr>
+							<?php } ?>
 							<tr>
-								<td></td>
-								<td>Total</td>
-								<td>10</td>
-								<td>10</td>
-								<td>11</td>
-								<td>59.8</td>
-								<td>59.2</td>
-								<td>65.6</td>
+								<td colspan="2">Total</td>
+								<?php 
+									$no=1; 
+									foreach ($total as $t ) { 
+								?>
+								<td><?php echo $t['Tot_Ts2']; ?></td>
+								<td><?php echo $t['Tot_Ts1']; ?></td>
+								<td><?php echo $t['Tot_Ts']; ?></td>
+								<td><?php echo $t['Jum_dana2014']; ?></td>
+								<td><?php echo $t['Jum_dana2015']; ?></td>
+								<td><?php echo $t['Jum_dana2016']; ?></td>
 							</tr>
+							<?php } ?>
 							</tbody>
 							</table>
 							<div class="btn-group">
