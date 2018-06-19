@@ -10,9 +10,8 @@ class Apd_b6113_excel extends CI_Controller {
  }
 
 public function index() {
- $data = array( 'title' => 'TABEL DATA BUTIR 6.1.1.3 : PENGGUNAAN DANA UNTUK TRIDARMA',
- 'b6113' => $this->apd_b6113_model->listing());
- $this->load->view('User/Butir6B/tampilan_borang6.1.1.3.php',$data);
+  $data=$this->Apd_b6113_model->listing();
+  $this->load->view('User/Butir6B/tampilan_borang6.1.1.3.php',array('data'=>$data));
  }
 
  public function ubah(){

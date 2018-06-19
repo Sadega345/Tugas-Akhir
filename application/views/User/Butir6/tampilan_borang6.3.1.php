@@ -100,29 +100,13 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<!-- <a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="<?php echo base_url()."index.php/";?>">
 											<button id="sample_editable_1_new" class="btn green">
-											Load
+											Tambah <i class="fa fa-plus"></i>
 											</button>
-											</a> -->
+											</a>
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
@@ -136,26 +120,42 @@ License: You must have a valid license purchased only from themeforest(the above
 							<tbody>
 							<tr>
 							 	<td>Satu ruang untuk lebih dari 4 dosen</td>
-							 	<td></td>
-							 	<td></td>
+							 	<?php 
+									foreach ($ruang1 as $r) {
+							 	?>
+							 	<td><?php echo $r['jml_ruang']; ?></td>
+							 	<td><?php echo $r['jml_luas']; ?></td>
+							 	<?php } ?>
 							 </tr>
 							 <tr>
 							 	<td>Satu ruang untuk 3-4 dosen</td>
-							 	<td></td>
-							 	<td></td>
+							 	<?php 
+									foreach ($ruang2 as $r) {
+							 	?>
+							 	<td><?php echo $r['jml_ruang']; ?></td>
+							 	<td><?php echo $r['jml_luas']; ?></td>
+							 	<?php } ?>
 							 </tr>
 							  <tr>
 							 	<td>Satu ruang untuk 2 dosen</td>
-							 	<td></td>
-							 	<td></td>
+							 	<?php 
+									foreach ($ruang3 as $r) {
+							 	?>
+							 	<td><?php echo $r['jml_ruang']; ?></td>
+							 	<td><?php echo $r['jml_luas']; ?></td>
+							 	<?php } ?>
 							 </tr>
 							 <tr>
 							 	<td>Satu ruang untuk 1 dosen (bukan pejabat struktural)</td>
-							 	<td>16</td>
-							 	<td>64</td>
+							 	<?php 
+									foreach ($ruang4 as $r) {
+							 	?>
+							 	<td><?php echo $r['jml_ruang']; ?></td>
+							 	<td><?php echo $r['jml_luas']; ?></td>
+							 	<?php } ?>
 							 </tr>
 							 <tr>
-							 	<td colspan="2">Total</td>
+							 	<td colspan="2"><center><strong>Total</strong></center></td>
 							 	<?php 
 								foreach ($totluas as $d ) { 
 							 ?>
@@ -175,7 +175,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a631_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
+									<button id="sample_editable_1_new" class="btn blue">
 										Export To Excel 
 									</button>
 								</a>

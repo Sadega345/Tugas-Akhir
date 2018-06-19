@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>BUTIR 6.1.1.3 : PENGGUNAAN DANA UNTUK TRIDARMA</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -99,29 +100,13 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<!-- <a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="<?php echo base_url()."index.php/";?>">
 											<button id="sample_editable_1_new" class="btn green">
-											Load
+											Tambah <i class="fa fa-plus"></i>
 											</button>
-											</a> -->
+											</a>
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
@@ -138,32 +123,17 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
 							<tr>
-							 	<td>1</td>
+							<?php  
+								$no=1;
+							 	foreach ($data as $d) {
+							 ?>
+							 	<td>$no++</td>
 							 	<td>Manajemen Informatika</td>
-							 	<td>2398266,46</td>
-							 	<td>2567329,15</td>
-							 	<td>3036370,73</td>
+							 	<td><?php echo $d['ts_2'] ?></td>
+							 	<td><?php echo $d['ts_1'] ?></td>
+							 	<td><?php echo $d['ts'] ?></td>
+							 <?php } ?>
 							 </tr>
 							</tbody>
 							</table>
@@ -177,7 +147,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_b6113_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
+									<button id="sample_editable_1_new" class="btn blue">
 										Export To Excel
 									</button>
 								</a>

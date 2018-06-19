@@ -10,10 +10,16 @@ class Apd_a631_excel extends CI_Controller {
  // }
 
 public function index() {
- // $data = array( 'title' => 'TABEL DATA BUTIR 6.3.1 : DATA RUANG KERJA DOSEN TETAP',
- // 'a631' => $this->apd_a631_model->listing());
+ $ruang1=$this->Apd_a631_model->listing1();
+ $ruang2=$this->Apd_a631_model->listing2();
+ $ruang3=$this->Apd_a631_model->listing3();
+ $ruang4=$this->Apd_a631_model->listing4();
  $totalluas=$this->Apd_a631_model->totluas();
- $this->load->view('User/Butir6/tampilan_borang6.3.1.php',array('totluas'=>$totalluas));
+ $this->load->view('User/Butir6/tampilan_borang6.3.1.php',array('ruang1'=>$ruang1,
+ 																'ruang2'=>$ruang2,
+ 																'ruang3'=>$ruang3,
+ 																'ruang4'=>$ruang4,
+ 																'totluas'=>$totalluas));
  }
 
  public function ubah(){

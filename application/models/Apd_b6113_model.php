@@ -11,10 +11,8 @@ public function __construct()
 
 // Listing
  public function listing() {
- $this->db->select('*');
- $this->db->from('apd_b6113');
- $query = $this->db->get();
- return $query->result();
+ $data=$this->db->query('select ts_2,ts_1,ts from dana_tridarma where kd_prodi="p001"');
+ return $data->result_array();
  }
 
 }

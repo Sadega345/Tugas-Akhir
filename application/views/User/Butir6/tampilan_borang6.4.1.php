@@ -100,29 +100,13 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<!-- <a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="<?php echo base_url()."index.php/";?>">
 											<button id="sample_editable_1_new" class="btn green">
-											Load
+											Tambah <i class="fa fa-plus"></i>
 											</button>
-											</a> -->
+											</a>
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
@@ -134,55 +118,59 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
 								<tr>
 								 	<td>Buku Teks dan handbook</td>
-								 	<td>620</td>
-								 	<td>670</td>
+								 	<?php 
+								 		foreach ($pustaka1 as $p) {
+								 	 ?>
+								 	 <td><?php echo $p['jml_judul'] ?></td>
+								 	 <td><?php echo $p['jml_copy'] ?></td>
+								 	 <?php } ?>
 								 </tr>
 								 <tr>
 								 	<td>Modul Praktikum / Praktek</td>
-								 	<td>30</td>
-								 	<td>60</td>
+								 	<?php 
+								 		foreach ($pustaka2 as $p) {
+								 	 ?>
+								 	 <td><?php echo $p['jml_judul'] ?></td>
+								 	 <td><?php echo $p['jml_copy'] ?></td>
+								 	 <?php } ?>
 								 </tr>
 								  <tr>
 								 	<td>Jurnal yang terakreditasi oleh lembaga resmi (Dikti. LIPI, dll).</td>
-								 	<td>4</td>
-								 	<td>4</td>
+								 	<?php 
+								 		foreach ($pustaka3 as $p) {
+								 	 ?>
+								 	 <td><?php echo $p['jml_judul'] ?></td>
+								 	 <td><?php echo $p['jml_copy'] ?></td>
+								 	 <?php } ?>
 								 </tr>
 								 <tr>
 								 	<td>Jurnal Internasional (termasuk e-journal)</td>
-								 	<td>2</td>
-								 	<td></td>
+								 	<?php 
+								 		foreach ($pustaka4 as $p) {
+								 	 ?>
+								 	 <td><?php echo $p['jml_judul'] ?></td>
+								 	 <td><?php echo $p['jml_copy'] ?></td>
+								 	 <?php } ?>
 								 </tr>
 								 <tr>
 								 	<td>Majalah Ilmiah</td>
-								 	<td>12</td>
-								 	<td></td>
+								 	<?php 
+								 		foreach ($pustaka5 as $p) {
+								 	 ?>
+								 	 <td><?php echo $p['jml_judul'] ?></td>
+								 	 <td><?php echo $p['jml_copy'] ?></td>
+								 	 <?php } ?>
 								 </tr>
 								  <tr>
 								 	<td>Prosiding</td>
-								 	<td>12</td>
-								 	<td></td>
+								 	<?php 
+								 		foreach ($pustaka6 as $p) {
+								 	 ?>
+								 	 <td><?php echo $p['jml_judul'] ?></td>
+								 	 <td><?php echo $p['jml_copy'] ?></td>
+								 	 <?php } ?>
 								 </tr>
 								 <tr>
 								 	<td>Total</td>
@@ -209,7 +197,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a641_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
+									<button id="sample_editable_1_new" class="btn blue">
 										Export To Excel
 									</button>
 								</a>

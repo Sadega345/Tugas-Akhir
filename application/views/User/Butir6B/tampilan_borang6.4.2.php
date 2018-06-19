@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>BUTIR 6.4.2 : AKSESIBILITAS TIAP JENIS DATA</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -27,7 +28,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <link href="<?php echo base_url()."assets/";?>global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 <link href="<?php echo base_url()."assets/";?>global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
 <link href="<?php echo base_url()."assets/";?>global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-<link href="<?php echo base_url()."assets/";?>global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+<link href="<?php echo base_url()."assets/";?>glob al/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
 <link href="<?php echo base_url()."assets/";?>global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css"/>
 <!-- END GLOBAL MANDATORY STYLES -->
 <!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
@@ -106,30 +107,13 @@ License: You must have a valid license purchased only from themeforest(the above
 											</a>
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								 <tr>
-									 <th rowspan="2">No.</th>
 									 <th rowspan="2">Jenis Data</th>
-									 <th colspan="4">Sistem Pengolahan Data</th>
+									 <th colspan="4"><center>Sistem Pengolahan Data</center></th>
 								 </tr>
 								 <tr>
 								 	<th>Secara Manual</th>
@@ -137,138 +121,162 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<th>Dengan Komputer Jaringan Lokal (LAN)</th>
 								 	<th>Dengan Komputer Jaringan Luas (WAN)</th>
 								 </tr>
-								 <tr>
-								 	<th></th>
-								 	<th>(1)</th>
-								 	<th>(2)</th>
-								 	<th>(3)</th>
-								 	<th>(4)</th>
-								 	<th>(5)</th>
-								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
 							<tr>
-							 	<td>1</td>
 							 	<td>Mahasiswa</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<?php 
+							 		foreach ($data1 as $d) {
+							 	 ?>
+							 	 <td><?php echo $d['manual'] ?></td>
+							 	 <td><?php echo $d['komp_tnp_jar'] ?></td>
+							 	 <td><?php echo $d['lan'] ?></td>
+							 	 <td><?php echo $d['wan'] ?></td>
+							 	 <?php } ?>
 							 </tr>
 							 <tr>
-							 	<td>2</td>
 							 	<td>Kartu Rencana Studi (KRS)</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<?php 
+							 		foreach ($data2 as $d) {
+							 	 ?>
+							 	 <td><?php echo $d['manual'] ?></td>
+							 	 <td><?php echo $d['komp_tnp_jar'] ?></td>
+							 	 <td><?php echo $d['lan'] ?></td>
+							 	 <td><?php echo $d['wan'] ?></td>
+							 	 <?php } ?>
 							 </tr>
 							 <tr>
-							 	<td>3</td>
-							 	<td>BJadwal Mata Kuliah</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>Jadwal Mata Kuliah</td>
+							 	<?php 
+							 		foreach ($data3 as $d) {
+							 	 ?>
+							 	 <td><?php echo $d['manual'] ?></td>
+							 	 <td><?php echo $d['komp_tnp_jar'] ?></td>
+							 	 <td><?php echo $d['lan'] ?></td>
+							 	 <td><?php echo $d['wan'] ?></td>
+							 	 <?php } ?>
 							 </tr>
 							 <tr>
-							 	<td>4</td>
 							 	<td>Nilai Mata Kuliah</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<?php 
+							 		foreach ($data4 as $d) {
+							 	 ?>
+							 	 <td><?php echo $d['manual'] ?></td>
+							 	 <td><?php echo $d['komp_tnp_jar'] ?></td>
+							 	 <td><?php echo $d['lan'] ?></td>
+							 	 <td><?php echo $d['wan'] ?></td>
+							 	 <?php } ?>
 							 </tr>
 							 <tr>
-							 	<td>5</td>
 							 	<td>Transkrip Akademik</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<?php 
+							 		foreach ($data5 as $d) {
+							 	 ?>
+							 	 <td><?php echo $d['manual'] ?></td>
+							 	 <td><?php echo $d['komp_tnp_jar'] ?></td>
+							 	 <td><?php echo $d['lan'] ?></td>
+							 	 <td><?php echo $d['wan'] ?></td>
+							 	 <?php } ?>
 							 </tr>	
 							 <tr>
-							 	<td>6</td>
 							 	<td>Lulusan</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<?php 
+							 		foreach ($data6 as $d) {
+							 	 ?>
+							 	 <td><?php echo $d['manual'] ?></td>
+							 	 <td><?php echo $d['komp_tnp_jar'] ?></td>
+							 	 <td><?php echo $d['lan'] ?></td>
+							 	 <td><?php echo $d['wan'] ?></td>
+							 	 <?php } ?>
 							 </tr>	
 							 <tr>
-							 	<td>7</td>
 							 	<td>Dosen</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<?php 
+							 		foreach ($data7 as $d) {
+							 	 ?>
+							 	 <td><?php echo $d['manual'] ?></td>
+							 	 <td><?php echo $d['komp_tnp_jar'] ?></td>
+							 	 <td><?php echo $d['lan'] ?></td>
+							 	 <td><?php echo $d['wan'] ?></td>
+							 	 <?php } ?>
 							 </tr>	
 							 <tr>
-							 	<td>8</td>
 							 	<td>Pegawai</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<?php 
+							 		foreach ($data8 as $d) {
+							 	 ?>
+							 	 <td><?php echo $d['manual'] ?></td>
+							 	 <td><?php echo $d['komp_tnp_jar'] ?></td>
+							 	 <td><?php echo $d['lan'] ?></td>
+							 	 <td><?php echo $d['wan'] ?></td>
+							 	 <?php } ?>
 							 </tr>
 							 <tr>
-							 	<td>9</td>
 							 	<td>Keuangan</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<?php 
+							 		foreach ($data9 as $d) {
+							 	 ?>
+							 	 <td><?php echo $d['manual'] ?></td>
+							 	 <td><?php echo $d['komp_tnp_jar'] ?></td>
+							 	 <td><?php echo $d['lan'] ?></td>
+							 	 <td><?php echo $d['wan'] ?></td>
+							 	 <?php } ?>
 							 </tr>
 							 <tr>
-							 	<td>10</td>
 							 	<td>Inventaris</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<?php 
+							 		foreach ($data10 as $d) {
+							 	 ?>
+							 	 <td><?php echo $d['manual'] ?></td>
+							 	 <td><?php echo $d['komp_tnp_jar'] ?></td>
+							 	 <td><?php echo $d['lan'] ?></td>
+							 	 <td><?php echo $d['wan'] ?></td>
+							 	 <?php } ?>
 							 </tr>
 							  <tr>
-							 	<td>11</td>
 							 	<td>Pembayaran SPP</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+								<?php 
+							 		foreach ($data11 as $d) {
+							 	 ?>
+							 	 <td><?php echo $d['manual'] ?></td>
+							 	 <td><?php echo $d['komp_tnp_jar'] ?></td>
+							 	 <td><?php echo $d['lan'] ?></td>
+							 	 <td><?php echo $d['wan'] ?></td>
+							 	 <?php } ?>
 							 </tr>
 							  <tr>
-							 	<td>12</td>
 							 	<td>Perpustakaan</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<?php 
+							 		foreach ($data11 as $d) {
+							 	 ?>
+							 	 <td><?php echo $d['manual'] ?></td>
+							 	 <td><?php echo $d['komp_tnp_jar'] ?></td>
+							 	 <td><?php echo $d['lan'] ?></td>
+							 	 <td><?php echo $d['wan'] ?></td>
+							 	 <?php } ?>
 							 </tr>
-							 <tr>
-							 	<td colspan="2"></td>
-							 	<td>0</td>
-							 	<td>0</td>
-							 	<td>0</td>
-							 	<td>11</td>
+							 <tr colspan="2"></td>
+							 <td></td>
+							 	<?php 
+								foreach ($totmanual as $d ) { 
+							 ?>
+							 	<td><?php echo $d['Tot_Manual']; ?></td>
+							 <?php } ?>
+							 	<?php 
+								foreach ($totkomp as $d ) { 
+							 ?>
+							 	<td><?php echo $d['Tot_Komp']; ?></td>
+							 <?php } ?>
+							 	<?php 
+								foreach ($totlan as $d ) { 
+							 ?>
+							 	<td><?php echo $d['Tot_Lan']; ?></td>
+							 <?php } ?>
+							 	<?php 
+								foreach ($totwan as $d ) { 
+							 ?>
+							 	<td><?php echo $d['Tot_Wan']; ?></td>
+							 <?php } ?>
 							 </tr>
 							</tbody>
 							</table>
@@ -282,7 +290,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_b642_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
+									<button id="sample_editable_1_new" class="btn blue">
 										Export To Excel
 									</button>
 								</a>

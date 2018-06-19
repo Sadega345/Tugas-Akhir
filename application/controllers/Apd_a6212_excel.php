@@ -12,26 +12,45 @@ class Apd_a6212_excel extends CI_Controller {
 public function index() {
  // $data = array( 'title' => 'TABEL DATA BUTIR 6.2.1 : PEROLEHAN DAN ALOKASI DANA',
  // 'a6212' => $this->apd_a6212_model->listing());
- $data=$this->Apd_a6212_model->listing();
- $totalps2=$this->Apd_a6212_model->tots2();
- $totalps1=$this->Apd_a6212_model->totps1();
- $totalps=$this->Apd_a6212_model->totps();
- $totalinves2=$this->Apd_a6212_model->totinves2();
- $totalinves1=$this->Apd_a6212_model->totinves1();
- $totalinvests=$this->Apd_a6212_model->totinvests();
- $totaldana2=$this->Apd_a6212_model->totdana2();
- $totaldana1=$this->Apd_a6212_model->totdana1();
- $totaldanats=$this->Apd_a6212_model->totdanats();
- $this->load->view('User/Butir6/tampilan_borang6.2.1.2.php',array('data'=>$data,
-																  'totsp2'=>$totalps2,
-																  'totps1'=>$totalps1,
-																  'totps'=>$totalps,
-																  'totinves2'=>$totalinves2,
-																  'totinves1'=>$totalinves1,
-																  'totinvests'=>$totalinvests,
-																  'totdana2'=>$totaldana2,
-																  'totdana1'=>$totaldana1,
-																  'totdanats'=>$totaldanats));
+ $data1=$this->Apd_a6212_model->listing1();
+ $data2=$this->Apd_a6212_model->listing2();
+ $data3=$this->Apd_a6212_model->listing3();
+ $data4=$this->Apd_a6212_model->listing4();
+ $data5=$this->Apd_a6212_model->listing5();
+ $data6=$this->Apd_a6212_model->listing6();
+ $data7=$this->Apd_a6212_model->listing7();
+ $jmlopr2=$this->Apd_a6212_model->jmlopr2();
+ $jmlopr1=$this->Apd_a6212_model->jmlopr1();
+ $jmlopr=$this->Apd_a6212_model->jmlopr();
+ $jmlinv2=$this->Apd_a6212_model->jmlinv2();
+ $jmlinv1=$this->Apd_a6212_model->jmlinv1();
+ $jmlinv=$this->Apd_a6212_model->jmlinv();
+ $jmloprinv2=$this->Apd_a6212_model->jmloprinv2();
+ $jmloprinv1=$this->Apd_a6212_model->jmloprinv1();
+ $jmloprinv=$this->Apd_a6212_model->jmloprinv();
+ $jmlmhs2=$this->Apd_a6212_model->jmlmhs2();
+ $jmlmhs1=$this->Apd_a6212_model->jmlmhs1();
+ $jmlmhs=$this->Apd_a6212_model->jmlmhs();
+ $this->load->view('User/Butir6/tampilan_borang6.2.1.2.php',array('data1'=>$data1,
+ 																  'data2'=>$data2,
+ 																  'data3'=>$data3,
+ 																  'data4'=>$data4,
+ 																  'data5'=>$data5,
+ 																  'data6'=>$data6,
+ 																  'data7'=>$data7,
+ 																  'jmlopr2'=>$jmlopr2,
+ 																  'jmlopr1'=>$jmlopr1,
+ 																  'jmlopr'=>$jmlopr,
+ 																  'jmlinv2'=>$jmlinv2,
+ 																  'jmlinv1'=>$jmlinv1,
+ 																  'jmlinv'=>$jmlinv,
+ 																  'jmloprinv2'=>$jmloprinv2,
+ 																  'jmloprinv1'=>$jmloprinv1,
+ 																  'jmloprinv'=>$jmloprinv,
+ 																  'jmlmhs2'=>$jmlmhs2,
+ 																  'jmlmhs1'=>$jmlmhs1,
+ 																  'jmlmhs'=>$jmlmhs
+																  ));
  }
 
 public function ubah(){

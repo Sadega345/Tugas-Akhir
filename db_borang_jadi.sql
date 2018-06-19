@@ -1,5 +1,5 @@
 /*
-SQLyog Enterprise - MySQL GUI v8.05 
+SQLyog Enterprise - MySQL GUI v7.02 
 MySQL - 5.6.16 : Database - db_borangakreditasi
 *********************************************************************
 */
@@ -158,16 +158,16 @@ DROP TABLE IF EXISTS `dana_tridarma`;
 
 CREATE TABLE `dana_tridarma` (
   `kd_prodi` varchar(6) DEFAULT NULL,
-  `ts_2` decimal(2,0) DEFAULT NULL,
-  `ts_1` decimal(2,0) DEFAULT NULL,
-  `ts` decimal(2,0) DEFAULT NULL,
+  `ts_2` decimal(11,2) DEFAULT NULL,
+  `ts_1` decimal(11,2) DEFAULT NULL,
+  `ts` decimal(11,2) DEFAULT NULL,
   KEY `FK_dana_tridarma` (`kd_prodi`),
   CONSTRAINT `FK_dana_tridarma` FOREIGN KEY (`kd_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `dana_tridarma` */
 
-insert  into `dana_tridarma`(`kd_prodi`,`ts_2`,`ts_1`,`ts`) values ('P001','99','99','99');
+insert  into `dana_tridarma`(`kd_prodi`,`ts_2`,`ts_1`,`ts`) values ('P001','2398266.00','2567329.00','3036370.00');
 
 /*Table structure for table `data_mhs` */
 
@@ -286,7 +286,7 @@ CREATE TABLE `dt_ruang_dosen` (
 
 /*Data for the table `dt_ruang_dosen` */
 
-insert  into `dt_ruang_dosen`(`id`,`id_jns`,`kd_prodi`,`jml_ruang`,`jml_luas`) values (1,1,'P001',NULL,NULL),(2,2,'P001',NULL,NULL),(3,3,'P001',NULL,NULL),(4,4,'P001',16,64);
+insert  into `dt_ruang_dosen`(`id`,`id_jns`,`kd_prodi`,`jml_ruang`,`jml_luas`) values (1,1,'P001',0,0),(2,2,'P001',0,0),(3,3,'P001',0,0),(4,4,'P001',16,64);
 
 /*Table structure for table `evaluasi_lulusan` */
 
@@ -325,7 +325,7 @@ CREATE TABLE `fakultas_tbl` (
 
 /*Data for the table `fakultas_tbl` */
 
-insert  into `fakultas_tbl`(`kode_fakultas`,`nama_fakultas`) values ('F001','Ilmu Komputer'),('F002','Ekonomi'),('F003','Psikologi');
+insert  into `fakultas_tbl`(`kode_fakultas`,`nama_fakultas`) values ('F001','Ilmu Komputer'),('F002','Ekonomi'),('F003','Psikologi'),('F004','');
 
 /*Table structure for table `hak_intelektual` */
 
@@ -412,11 +412,11 @@ CREATE TABLE `jns_data` (
   `kd_jns` int(2) NOT NULL AUTO_INCREMENT,
   `jns_data` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`kd_jns`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 /*Data for the table `jns_data` */
 
-insert  into `jns_data`(`kd_jns`,`jns_data`) values (1,'Mahasiswa'),(2,'Kartu Rencana Studi (KRS)'),(3,'Jadwal Mata Kuliah'),(4,'Nilai Mata Kuliah'),(5,'Transkrip Akademik'),(6,'Lulusan'),(7,'Dosen'),(8,'Pegawai'),(9,'Keuangan'),(10,'Inventaris'),(11,'Perpustakaan');
+insert  into `jns_data`(`kd_jns`,`jns_data`) values (1,'Mahasiswa'),(2,'Kartu Rencana Studi (KRS)'),(3,'Jadwal Mata Kuliah'),(4,'Nilai Mata Kuliah'),(5,'Transkrip Akademik'),(6,'Lulusan'),(7,'Dosen'),(8,'Pegawai'),(9,'Keuangan'),(10,'Inventaris'),(11,'Perpustakaan'),(12,'Pembayaran SPP');
 
 /*Table structure for table `jns_dosen` */
 
@@ -680,7 +680,7 @@ CREATE TABLE `keikutsertaan_org` (
 
 /*Data for the table `keikutsertaan_org` */
 
-insert  into `keikutsertaan_org`(`id`,`id_dosen`,`nm_organisasi`,`thn_awal`,`thn_akhir`,`internasional`,`nasional`,`lokal`) values (1,'1','APTIKOM',2018,2019,NULL,'v',NULL),(2,'2','APTIKOM',2018,2019,NULL,'v',NULL),(3,'3','APTIKOM',2018,2019,NULL,'v',NULL),(4,'4','APTIKOM',2018,2019,NULL,'v',NULL),(5,'4','Ikatan Ahli Informatika Indonesia (IAII)',2016,2018,NULL,'v',NULL),(6,'5','APTIKOM',2018,2019,NULL,'v',NULL);
+insert  into `keikutsertaan_org`(`id`,`id_dosen`,`nm_organisasi`,`thn_awal`,`thn_akhir`,`internasional`,`nasional`,`lokal`) values (1,'1','APTIKOM',2018,2019,'',NULL,NULL),(2,'2','APTIKOM',2018,2019,'',NULL,NULL),(3,'3','APTIKOM',2018,2019,'',NULL,NULL),(4,'4','APTIKOM',2018,2019,'',NULL,NULL),(5,'4','Ikatan Ahli Informatika Indonesia (IAII)',2016,2018,NULL,'v',NULL),(6,'5','APTIKOM',2018,2019,'',NULL,NULL);
 
 /*Table structure for table `masastudi_ipk` */
 
@@ -727,17 +727,17 @@ CREATE TABLE `pembimbing_akd` (
   `id_dosen` varchar(6) DEFAULT NULL,
   `kd_prodi` varchar(6) NOT NULL,
   `j_mhs_bimbingan` int(3) DEFAULT NULL,
-  `rata2_pertemuan` int(3) DEFAULT NULL,
+  `rata2_pertemuan` decimal(2,1) DEFAULT NULL,
   PRIMARY KEY (`Id`),
   KEY `FK_dsn_pembimbing_akd` (`id_dosen`),
   KEY `FK_pembimbing_akd` (`kd_prodi`),
   CONSTRAINT `FK_pembimbing_akd` FOREIGN KEY (`kd_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`),
   CONSTRAINT `FK_pembimbing_dosen` FOREIGN KEY (`id_dosen`) REFERENCES `dosen_tbl` (`id_dosen`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 /*Data for the table `pembimbing_akd` */
 
-insert  into `pembimbing_akd`(`Id`,`id_dosen`,`kd_prodi`,`j_mhs_bimbingan`,`rata2_pertemuan`) values (1,'1','P001',18,3),(2,'2','P001',18,3),(3,'4','P001',18,3),(4,'5','P001',17,3),(5,'3','P001',17,3);
+insert  into `pembimbing_akd`(`Id`,`id_dosen`,`kd_prodi`,`j_mhs_bimbingan`,`rata2_pertemuan`) values (1,'1','P001',18,'3.0'),(2,'2','P001',18,'3.0'),(3,'4','P001',18,'3.0'),(4,'5','P001',17,'3.0'),(5,'3','P001',17,'3.0');
 
 /*Table structure for table `pembimbing_skripsi` */
 
@@ -801,7 +801,7 @@ CREATE TABLE `penggunaan_dana` (
 
 /*Data for the table `penggunaan_dana` */
 
-insert  into `penggunaan_dana`(`id`,`kd_jns`,`kd_prodi`,`ts_2`,`ts_1`,`ts`) values (1,1,'P001',2298266.46,2466829.16,2920170.73),(2,2,'P001',59800.00,60700.00,65600.00),(3,3,'P001',40200.00,41300.00,50600.00),(4,4,'P001',1969942.68,2114424.99,2503003.49),(5,5,'P001',1313295.12,1409616.66,1668668.99),(6,6,'P001',656647.56,704808.33,834334.49),(7,7,'P001',NULL,NULL,NULL);
+insert  into `penggunaan_dana`(`id`,`kd_jns`,`kd_prodi`,`ts_2`,`ts_1`,`ts`) values (1,1,'P001',2298266.46,2466829.16,2920170.73),(2,2,'P001',59800.00,59200.00,65600.00),(3,3,'P001',40200.00,41300.00,50600.00),(4,4,'P001',1969942.68,2114424.99,2503003.49),(5,5,'P001',1313295.12,1409616.66,1668668.99),(6,6,'P001',656647.56,704808.33,834334.49),(7,7,'P001',NULL,NULL,NULL);
 
 /*Table structure for table `pengisi_borang` */
 
@@ -979,7 +979,7 @@ CREATE TABLE `pustaka` (
 
 /*Data for the table `pustaka` */
 
-insert  into `pustaka`(`id`,`kd_jns`,`jml_judul`,`jml_copy`,`kd_prodi`) values (1,1,620,670,'P001'),(2,2,20,60,'P001'),(3,3,4,4,'P001'),(4,4,2,NULL,'P001'),(5,5,12,NULL,'P001'),(6,6,12,NULL,'P001');
+insert  into `pustaka`(`id`,`kd_jns`,`jml_judul`,`jml_copy`,`kd_prodi`) values (1,1,620,670,'P001'),(2,2,20,60,'P001'),(3,3,4,4,'P001'),(4,4,2,0,'P001'),(5,5,12,0,'P001'),(6,6,12,0,'P001');
 
 /*Table structure for table `role` */
 
