@@ -116,27 +116,33 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
-							<form action="<?php echo base_url().'index.php/EdeUser/gantipassword'; ?>" method="POST" id="myform">
+							<form action="<?php echo base_url().'index.php/EdeUser/gantipassword'; ?>" method="POST" >
 							<div class="container">
 								<div class="col-md-10">
-									<div class="row">
+									<!-- <div class="row">
 										<div class="form-group">
 											<label>Password Lama</label>
 											<?php foreach ($data as $d) { ?>
 											<input type="text" class="form-control" name="pwdlama" value="<?php echo $d['password']; ?>" readonly>
 											<?php } ?>
 										</div>
+									</div> -->
+									<div class="row">
+										<div class="form-group">
+											<label>Password Sekarang</label>
+											<input type="password" class="form-control" name="pwdlama" >
+										</div>
 									</div>
 									<div class="row">
 										<div class="form-group">
 											<label>Password Baru</label>
-											<input type="password" class="form-control" name="pwdbaru" id="pwdbaru">
+											<input type="password" class="form-control" name="pwdbaru" >
 										</div>
 									</div>
 									<div class="row">
 										<div class="form-group">
 											<label>Konfirmasi Password Baru</label>
-											<input type="password" class="form-control" name="repwdbaru" id="repwdbaru">
+											<input type="password" class="form-control" name="repwd" >
 										</div>
 									</div>
 									<div id="alert_retype" style="color:red">
