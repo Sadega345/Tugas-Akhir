@@ -51,8 +51,8 @@ public function index() {
  }
 
 public function ubah($id){
- 	$this->model_squrity->getsqurity();
-		$res=$this->Apd_a433_model->update("where id='$id'");
+	$this->model_squrity->getsqurity();
+	$res=$this->Apd_a433_model->update("where id='$id'");
 		$data=array(
 			"NAMA_DOSEN"=>$res[0]['NAMA_DOSEN'],
 			"SKS_PSS"=>$res[0]['SKS_PSS'],

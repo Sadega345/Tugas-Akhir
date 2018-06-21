@@ -16,6 +16,17 @@ artikel_ilmiah WHERE kd_prodi="p001"');
  return $data->result_array();
  }
 
+ public function update($where="") {
+ $data= $this->db->query('SELECT JUDUL,nama_dosen,publikasi,thn_publikasi,lokal,nasional,internasional,id FROM
+artikel_ilmiah '.$where);
+ return $data->result_array();
+ }
+
+ public function rubah($tablename,$data,$where){
+		$res=$this->db->update($tablename,$data,$where);
+		return $res;
+	}
+
  public function lokal() {
  $data=$this->db->query('SELECT COUNT(IF(LOKAL LIKE "v%",LOKAL,NULL))AS JML FROM artikel_ilmiah WHERE kd_prodi="p001"');
  return $data->result_array();

@@ -124,6 +124,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<form action="<?php echo base_url()."index.php/Apd_b711_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -142,63 +143,34 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+							
 							<tr>
-								<td>1</td>
-								<td>Manajemen Informatika D3</td>
-								<td><input type="text" name="" class="form-control" value="10"></td>
-								<td><input type="text" name="" class="form-control" value="10"></td>
-								<td><input type="text" name="" class="form-control" value="11"></td>
-								<td><input type="text" name="" class="form-control" value="59.8"></td>
-								<td><input type="text" name="" class="form-control" value="59.2"></td>
-								<td>65.6</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td>Total</td>
-								<td>10</td>
-								<td>10</td>
-								<td>11</td>
-								<td>59.8</td>
-								<td>59.2</td>
-								<td>65.6</td>
+								<td><?php echo $id; ?></td>
+								<td><?php echo $judul; ?></td>
+								<td><input type="text" name="TS_2" class="form-control" value="<?php echo $TS_2; ?>"></td>
+								<td><input type="text" name="TS_1" class="form-control" value="<?php echo $TS_1; ?>"></td>
+								<td><input type="text" name="TS" class="form-control" value="<?php echo $TS; ?>"></td>
+								<td><input type="text" name="dana_penelitian" class="form-control" value="<?php echo $dana_penelitian; ?>"></td>
+								<td><input type="text" name="Jum_Dana2015" class="form-control" value="<?php echo $Jum_Dana2015; ?>"></td>
+								<td><input type="text" name="Jum_Dana2016" class="form-control" value="<?php echo $Jum_Dana2016; ?>"></td>
 							</tr>
 							</tbody>
 							</table>
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
-									</button>
-								</a>
+								<button id="sample_editable_1_new" class="btn blue">
+									Simpan 
+								</button>
 							</div>
 							
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_b711_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Apd_b711_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal
 									</button>
 								</a>
 							</div>
+							</form>
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

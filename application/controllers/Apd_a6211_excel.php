@@ -4,10 +4,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Apd_a6211_excel extends CI_Controller {
 
 // Load database
- public function __construct() {
- parent::__construct();
- $this->load->model('apd_a6211_model');
- }
+ // public function __construct() {
+ // parent::__construct();
+ // $this->load->model('apd_a6211_model');
+ // }
 
 public function index() {
  $dana1=$this->Apd_a6211_model->listing1();

@@ -25,9 +25,45 @@ public function index() {
 																'luarnegeri'=>$luarnegeri));
  }
 
- public function ubah(){
- 	$this->load->view('User/Butir7/tampilan_borang7.2.1.php');
+ public function ubah($KD_JNS){
+ 	$this->model_squrity->getsqurity();
+ 	$res=$this->Apd_a721_model->update("where KD_JNS='$KD_JNS'");
+ 	$data=array(
+			"TS_2"=>$res[0]['TS_2'],
+			"TS_1"=>$res[0]['TS_1'],
+			"TS"=>$res[0]['TS'],
+			"JML"=>$res[0]['JML'],
+			"KD_JNS"=>$res[0]['KD_JNS'],
+			
+		);
+ 	$this->load->view('User/Butir7/edit_borang7.2.1.php',$data);
  }
+
+ public function do_edit(){
+		$TS_2=$_POST['TS_2'];
+		$TS_1=$_POST['TS_1'];
+		$TS=$_POST['TS'];
+		$JML=$_POST['JML'];
+		$KD_JNS=$_POST['KD_JNS'];
+		
+		$data_update=array(
+			// "NAMA_DOSEN"=>$NAMA_DOSEN,
+			"TS_2"=>$TS_2,
+			"TS_1"=>$TS_1,
+			"TS"=>$TS,
+			"KD_JNS"=>$KD_JNS,
+			
+		);
+		$where=array('KD_JNS'=>$KD_JNS);
+		$res=$this->Apd_a721_model->rubah('kegiatan_pkm',$data_update,$where);
+		if ($res>=1) {
+			redirect('Apd_a721_excel');
+		}
+		// else {
+		// 	alert("Gagal Update") ;
+		// }
+	}
+
 
 public function export_excel(){
  $data=$this->Apd_a721_model->dosen();

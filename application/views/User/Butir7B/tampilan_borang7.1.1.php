@@ -132,6 +132,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2">Nama Program Studi</th>
 									 <th colspan="3">Jumlah Judul Penelitian</th>
 									 <th colspan="3">Total Dana Penelitian (Juta Rupiah)</th>
+									 <th rowspan="2">Edit</th>
 								 </tr>
 								 <tr>
 								 	<th>TS-2</th>
@@ -156,6 +157,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $d['Dana_penelitian']; ?></td>
 								<td><?php echo $d['Jum_Dana2015']; ?></td>
 								<td><?php echo $d['Jum_Dana2016']; ?></td>
+								<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_b711_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>
 							</tr>
 							<?php } ?>
 							<tr>

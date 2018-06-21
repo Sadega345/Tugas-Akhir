@@ -133,6 +133,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th>TS-1</th>
 									 <th>TS</th>
 									 <th>Jumlah</th>
+									 <th>Aksi</th>
 								 </tr>
 							</thead>
 							<tbody>
@@ -146,6 +147,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $d['JML']; ?></td>
 								<td><?php echo $d['JML']; ?></td>
 							 	<td><?php echo $d['JML']; ?></td>
+							 	<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a721_excel/ubah/".$d['KD_JNS'];?>" >Edit</a>
+								</td>
 							 	<?php } ?>
 							 </tr>
 							 <tr>
@@ -158,6 +162,10 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $b['JML']; ?></td>
 								<td><?php echo $b['JML']; ?></td>
 							 	<td><?php echo $b['JML']; ?></td>
+							 	<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a721_excel/ubah/".$b['KD_JNS'];?>" >Edit</a>
+								</td>
+							 	
 							 	<?php } ?>
 							 </tr>
 							 <tr>
@@ -170,6 +178,10 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $k['JML']; ?></td>
 								<td><?php echo $k['JML']; ?></td>
 							 	<td><?php echo $k['JML']; ?></td>
+							 	<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a721_excel/ubah/".$k['KD_JNS'];?>" >Edit</a>
+								</td>
+							 	
 							 	<?php } ?>
 							 </tr>
 							  <tr>
@@ -182,6 +194,10 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $lk['JML']; ?></td>
 								<td><?php echo $lk['JML']; ?></td>
 							 	<td><?php echo $lk['JML']; ?></td>
+							 	<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a721_excel/ubah/".$lk['KD_JNS'];?>" >Edit</a>
+								</td>
+							 	
 							 	<?php } ?>
 							 </tr>
 							 <tr>
@@ -194,6 +210,10 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $l['JML']; ?></td>
 								<td><?php echo $l['JML']; ?></td>
 							 	<td><?php echo $l['JML']; ?></td>
+							 	<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a721_excel/ubah/".$l['KD_JNS'];?>" >Edit</a>
+								</td>
+							 	
 							 	<?php } ?>
 							 </tr>
 							 <tr>
