@@ -140,46 +140,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</div>
 							</form>
-							<!-- <table class="table table-striped table-bordered table-hover" id="sample_1">
-							<thead>
-							<tr>
-								<th>
-									 No
-								</th>
-								<th>
-									 Kode Fakultas
-								</th>
-								<th>
-									 Nama Fakultas
-								</th>
-								<th>
-									 Aksi
-								</th>
-							</tr>
-							</thead>
-							<tbody>
-							<?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?>
-							<tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?>
-							</tbody>
-							</table> -->
+							
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

@@ -125,6 +125,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Apd_a622_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -141,48 +143,24 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
 							<tr>
-							 	<td>2014</td>
-							 	<td>Pembangunan Sistem Informasi Konsumsi Tunas Raharja di MAN 1 Cirebon</td>
-							 	<td><input type="text" name="" class="form-control" value="PS Sendiri"></td>
-							 	<td><input type="text" name="" class="form-control" value="6"></td>
-							 </tr>
-							 <tr>
-							 	<td colspan="3">Total**</td>
-							 	<td>6</td>
+							 	<td><?php echo $tahun; ?></td>
+							 	<td><?php echo $judul_penelitian; ?></td>
+							 	<td><input type="text" name="sumber_dana" class="form-control" value="<?php echo $sumber_dana; ?>"></td>
+							 	<td><input type="text" name="jml_dana" class="form-control" value="<?php echo $jml_dana; ?>"></td>
 							 </tr>
 							</tbody>
 							</table>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
-									</button>
-								</a>
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							</div>
-							
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a622_excel/export_excel";?>">
+								<button id="sample_editable_1_new" class="btn blue">
+									Simpan 
+								</button>
+							</div>
+							</form>
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Apd_a622_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal
 									</button>

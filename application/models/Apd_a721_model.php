@@ -36,7 +36,7 @@ class Apd_a721_model extends CI_Model {
  }
 
  public function update($where="") {
-	$data= $this->db->query('SELECT TS_2,TS_1,TS,SUM(TS_2+TS_1+TS) AS JML,KD_JNS FROM kegiatan_pkm '.$where);
+	$data= $this->db->query('SELECT TS_2,TS_1,TS,SUM(TS_2+TS_1+TS) AS JML,KD_JNS,id FROM kegiatan_pkm '.$where);
 	return $data->result_array();
  }
 

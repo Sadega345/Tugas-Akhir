@@ -11,9 +11,19 @@ class Apd_a623_model extends CI_Model {
 
 // Listing
  public function listing() {
- $data=$this->db->query('SELECT TAHUN,judul_kegiatan,SUMBER_DANA,JUMLAH_DANA FROM dana_pengmas WHERE kd_prodi="p001"');
+ $data=$this->db->query('SELECT TAHUN,judul_kegiatan,SUMBER_DANA,JUMLAH_DANA,id FROM dana_pengmas WHERE kd_prodi="p001"');
  return $data->result_array();
  }
+
+ public function update($where="") {
+ $data= $this->db->query('SELECT TAHUN,judul_kegiatan,SUMBER_DANA,JUMLAH_DANA,id FROM dana_pengmas '.$where);
+ return $data->result_array();
+ }
+
+ 	public function rubah($tablename,$data,$where){
+		$res=$this->db->update($tablename,$data,$where);
+		return $res;
+	}
 
  public function totdana() {
  $data=$this->db->query('SELECT SUM(JUMLAH_DANA)AS Tot_Dana FROM dana_pengmas WHERE kd_prodi="p001"');

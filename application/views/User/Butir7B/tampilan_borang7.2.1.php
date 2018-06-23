@@ -133,6 +133,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2">Nama Program Studi</th>
 									 <th colspan="3">Jumlah Judul Kegiatan Pelayanan / Pengabdian Kepada Masyarakat</th>
 									 <th colspan="3">Total Dana  Kegiatan Pelayanan / Pengabdian Kepada Masyarakat(Juta Rupiah)</th>
+									 <th rowspan="2">Aksi</th>
 								 </tr>
 								 <tr align="center">
 								 	<td>TS-2</td>
@@ -157,6 +158,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $d['Jum_dana2014']; ?></td>
 								<td><?php echo $d['Jum_dana2015']; ?></td>
 								<td><?php echo $d['Jum_dana2016']; ?></td>
+								<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_b721_excel/ubah/".$d['KD_JNS'];?>" >Edit</a>
+								</td>
 							</tr>
 							<?php } ?>
 							<tr>

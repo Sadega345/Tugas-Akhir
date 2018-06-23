@@ -116,12 +116,14 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th>Nama Dosen Pembimbing Akademik</th>
 									 <th>Jumlah Mahasiswa Bimbingan</th>
 									 <th>Rata-rata banyaknya Pertemuan/mhs/semester</th>
+									 <th rowspan="2">Aksi</th>
 								 </tr>
 								 <tr align="center">
 								 	<td>(1)</td>
 								 	<td>(2)</td>
 								 	<td>(3)</td>
 								 	<td>(4)</td>
+								 	
 								 </tr>
 							</thead>
 							<tbody>
@@ -134,6 +136,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['nama_dosen'] ?></td>
 							 	<td><?php echo $d['j_mhs_bimbingan'] ?></td>
 							 	<td><?php echo $d['rata2_pertemuan'] ?></td>
+							 	<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a541_excel/ubah/".$d['Id'];?>" >Edit</a>
+								</td>
 							 </tr>
 							 <?php } ?>	
 

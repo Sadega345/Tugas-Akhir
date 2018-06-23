@@ -19,26 +19,16 @@ header("Expires: 0");
 			 </tr>
 		</thead>
 		<tbody>
-			 <tr>
-			 	<td>Satu ruang untuk lebih dari 4 dosen</td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-			 <tr>
-			 	<td>Satu ruang untuk 3-4 dosen</td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-			  <tr>
-			 	<td>Satu ruang untuk 2 dosen</td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-			 <tr>
-			 	<td>Satu ruang untuk 1 dosen (bukan pejabat struktural)</td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
+			 <?php 
+				foreach ($ruang1 as $r ) { 
+			?>
+			<tr>
+				<td><?php echo $r['r_kerja_dosen']; ?></td>
+				<td><?php echo $r['jml_ruang']; ?></td>
+				<td><?php echo $r['jml_luas']; ?></td>
+				
+			</tr>
+			<?php } ?>
 			 <tr>
 			 	<td colspan="2">Total</td>
 			 	<?php 

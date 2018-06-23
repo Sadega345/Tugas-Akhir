@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>Butir 4.5.2 : PENINGKATAN KEMAMPUAN DOSEN TETAP MELALUI TUGAS BELAJAR/title>
+<title>Butir 4.5.2 : PENINGKATAN KEMAMPUAN DOSEN TETAP MELALUI TUGAS BELAJAR</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -100,9 +100,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<!-- <a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<!-- <a href="#">
 											<button id="sample_editable_1_new" class="btn green">
-											Load
+											Load 
 											</button>
 											</a> -->
 										</div>
@@ -127,16 +127,17 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							<div style="overflow-x:auto;">
 							<form action="<?php echo base_url()."index.php/Apd_a452_excel/do_edit"; ?>" method="POST">
-							<table class="table table-striped table-bordered table-hover" id="sample_1">
+							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 							<thead>
 								<tr>
-									 <th>No</th>
-									 <th>Nama Dosen Tetap</th>
-									 <th>Jenjang Pendidikan</th>
-									 <th>Bidang Studi</th>
-									 <th>Perguruan Tinggi</th>
-									 <th>Negara</th>
-									 <th>Tahun Mulai Studi</th>
+									 <th><center>No</center></th>
+									 <th><center>Nama Dosen Tetap</center></th>
+									 <th><center>Jenjang Pendidikan</center></th>
+									 <th><center>Bidang Studi</center></th>
+									 <th><center>Perguruan Tinggi</center></th>
+									 <th><center>Negara</center></th>
+									 <th><center>Tahun Mulai Studi</center></th>
+									 
 								 </tr>
 								 <tr align="center">
 								 	<td>(1)</td>
@@ -146,33 +147,36 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>(5)</td>
 								 	<td>(6)</td>
 								 	<td>(7)</td>
+								 	
 								 </tr>
 							</thead>
 							<tbody>
-								<tr>
-								 	<td>1</td>
-								 	<td><?php echo $nama_dosen; ?></td>
-								 	<td><input type="text" name="jenjang_pend" value="<?php echo $jenjang_pend; ?>"></td>
-								 	<td><input type="text" name="bid_studi" value="<?php echo $bid_studi; ?>"></td>
-								 	<td><input type="text" name="perguruan_tinggi" value="<?php echo $perguruan_tinggi; ?>"></td>
-								 	<td><input type="text" name="negara" value="<?php echo $negara; ?>"></td>
-								 	<td><input type="text" name="thn_mulai_std" value="<?php echo $thn_mulai_std; ?>"></td>
-								 </tr>
+							
+							<tr>
+							 	<td>1</td>
+							 	<td><?php echo $nama_dosen; ?></td>
+							 	<td><input type="text" name="jenjang_pend" value="<?php echo $jenjang_pend; ?>" ></td>
+							 	<td><input type="text" name="bid_studi" value="<?php echo $bid_studi; ?>"></td>
+							 	<td><input type="text" name="perguruan_tinggi" value="<?php echo $perguruan_tinggi; ?>"></td>
+							 	<td><input type="text" name="negara" value="<?php echo $negara; ?>"></td>
+							 	<td><input type="text" name="thn_mulai_std" value="<?php echo $thn_mulai_std; ?>"></td>
+							 </tr>
+		
 							</tbody>
 							</table>
 							<input type="hidden" name="id" value="<?php echo $id; ?>">
+							</div>
 							<div class="btn-group">
 								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a452_excel";?>">
+								<a href="<?php echo base_url()."index.php/Apd_a431_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal 
 									</button>
 								</a>
 							</div>
-						</form>
-						</div>
+							</form>
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

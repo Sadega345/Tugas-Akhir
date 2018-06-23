@@ -125,6 +125,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;" class="col-md-20">
+							<form action="<?php echo base_url()."index.php/Apd_a5121_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -162,57 +164,39 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+							
 							<tr>
-								<td>1</td>
-							 	<td>MKB1001</td>
-							 	<td>Komputer Grafis</td>
-							 	<td></td>
-							 	<td>2</td>
-							 	<td>v</td>
-							 	<td></td>
-							 	<td>v</td>
-							 	<td>v</td>
-							 	<td>v</td>
-							 	<td>v</td>
-							 	
-							 	<td>Jurusan</td>
+								<td><?php echo $smt; ?></td>
+							 	<td><?php echo $kode_mk; ?></td>
+							 	<td><input type="text" name="nama_mk" value="<?php echo $nama_mk; ?>"></td>
+							 	<td><input type="text" name="sks_kuliah" value="<?php echo $sks_kuliah; ?>"></td>
+							 	<td><input type="text" name="sks_praktek" value="<?php echo $sks_praktek; ?>"></td>
+							 	<td><input type="checkbox" name="sks_inti[]" class="form-control" value="v"></td>
+							 	<td><input type="checkbox" name="sks_institusi[]" class="form-control" value="v"></td>
+							 	<td><input type="checkbox" name="bobot_tgs[]" class="form-control" value="v"></td>
+							 	<td><input type="checkbox" name="deskripsi[]" class="form-control" value="v"></td>
+							 	<td><input type="checkbox" name="silabus[]" class="form-control" value="v"></td>
+							 	<td><input type="checkbox" name="sap[]" class="form-control" value="v"></td>
+							 	<td><input type="text" name="penyelenggara" value="<?php echo $penyelenggara; ?>"></td>
 							 </tr>
 							</tbody>
 							</table>
+							<input type="hidden" name="kode_mk" value="<?php echo $kode_mk ?>">
+							</div>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-											Ubah 
+								<button id="sample_editable_1_new" class="btn blue">
+									Simpan 
+								</button>
+							</div>
+							</form>
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Apd_a5121_excel/";?>">
+									<button id="sample_editable_1_new" class="btn red">
+										Batal
 									</button>
 								</a>
 							</div>
-							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a5121_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
-											Export ke Excel 
-									</button>
-								</a>
-							</div>
+
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

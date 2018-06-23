@@ -136,6 +136,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2">Bobot Tugas***</th>
 									 <th colspan="3">Kelengkapan***</th>
 									 <th rowspan="2">Unit/Jur/Fak Penyelenggara</th>
+									 <th rowspan="2">Aksi</th>
 								 </tr>
 								 <tr>
 								 	<th>Kuliah</th>
@@ -179,6 +180,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['silabus']; ?></td>
 							 	<td><?php echo $d['sap']; ?></td>
 							 	<td><?php echo $d['penyelenggara']; ?></td>
+							 	<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a5121_excel/ubah/".$d['kode_mk'];?>" >Edit</a>
+								</td>
 							 </tr>
 							 <?php } ?>
 							 <tr>

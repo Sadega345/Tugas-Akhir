@@ -10,26 +10,56 @@ class Apd_a631_excel extends CI_Controller {
  // }
 
 public function index() {
- $ruang1=$this->Apd_a631_model->listing1();
- $ruang2=$this->Apd_a631_model->listing2();
- $ruang3=$this->Apd_a631_model->listing3();
- $ruang4=$this->Apd_a631_model->listing4();
+ $ruang1=$this->Apd_a631_model->listing();
  $totalluas=$this->Apd_a631_model->totluas();
  $this->load->view('User/Butir6/tampilan_borang6.3.1.php',array('ruang1'=>$ruang1,
- 																'ruang2'=>$ruang2,
- 																'ruang3'=>$ruang3,
- 																'ruang4'=>$ruang4,
  																'totluas'=>$totalluas));
  }
 
- public function ubah(){
- 	$this->load->view('User/Butir6/tampilan_borang6.3.1.php');
+ public function ubah($id){
+ 	$this->model_squrity->getsqurity();
+	$res=$this->Apd_a631_model->update("where id='$id'");
+	$data=array(
+		"r_kerja_dosen"=>$res[0]['r_kerja_dosen'],
+		"id"=>$res[0]['id'],
+		"jml_ruang"=>$res[0]['jml_ruang'],
+		"jml_luas"=>$res[0]['jml_luas'],
+	);
+ 	$this->load->view('User/Butir6/edit_borang6.3.1.php',$data);
  }
 
+ public function do_edit(){
+		
+		$id=$_POST['id'];
+		$jml_ruang=$_POST['jml_ruang'];
+		$jml_luas=$_POST['jml_luas'];
+		
+		$data_update=array(
+			"id"=>$id,
+			"jml_ruang"=>$jml_ruang,
+			"jml_luas"=>$jml_luas,
+			
+		);
+		$where=array('id'=>$id);
+		$res=$this->Apd_a631_model->rubah('dt_ruang_dosen',$data_update,$where);
+		// print_r($data_update);die;
+		if ($res>=1) {
+			redirect('Apd_a631_excel');
+		}
+		// else {
+		// 	alert("Gagal Update") ;
+		// }
+	}
+
+
 public function export_excel(){
- $data = array( 'title' => 'TABEL DATA BUTIR 6.3.1 : DATA RUANG KERJA DOSEN TETAP',
- 'a631' => $this->apd_a631_model->listing());
- $this->load->view('User/Butir6/tampilan_borang6.3.1_excel.php',$data);
+ // $data = array( 'title' => 'TABEL DATA BUTIR 6.3.1 : DATA RUANG KERJA DOSEN TETAP',
+ // 'a631' => $this->apd_a631_model->listing());
+	$ruang1=$this->Apd_a631_model->listing();
+ 	$totalluas=$this->Apd_a631_model->totluas();
+ $this->load->view('User/Butir6/tampilan_borang6.3.1_excel.php',array('ruang1'=>$ruang1,
+ 																	'totluas'=>$totalluas
+ 																));
  }
 
 }

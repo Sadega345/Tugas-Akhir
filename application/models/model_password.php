@@ -9,10 +9,14 @@ class Model_password extends CI_model {
 	// 	$this->load->database();
 	// }
 
-	public function getpassword(){
+	public function getpassword($userid=""){
 		
-		$data=$this->db->query('SELECT * FROM users WHERE id="1" ');
-		return $data->result_array();
+		$data=$this->db->query('SELECT * FROM users '.$userid);
+		if ($data->num_rows() > 0) {
+			// return $data->result_array();
+			return $data->row();
+		}
+		// return $data->result_array();
 		
 	}
 
@@ -22,11 +26,6 @@ class Model_password extends CI_model {
 	// 	return $data->result_array();
 		
 	// }
-
-	public function update($tablename,$data,$where){
-		$res=$this->db->insert($tablename,$data,$where);
-		return $data;
-	}
 
 	public function data($userid=""){
 		$data=$this->db->query('SELECT * FROM users '.$userid);

@@ -1,5 +1,5 @@
 /*
-SQLyog Enterprise - MySQL GUI v7.02 
+SQLyog Enterprise - MySQL GUI v8.05 
 MySQL - 5.6.16 : Database - db_borangakreditasi
 *********************************************************************
 */
@@ -104,7 +104,7 @@ CREATE TABLE `artikel_ilmiah` (
 
 /*Data for the table `artikel_ilmiah` */
 
-insert  into `artikel_ilmiah`(`id`,`kd_prodi`,`judul`,`nama_dosen`,`publikasi`,`thn_publikasi`,`lokal`,`nasional`,`internasional`) values (1,'P001','Pembangunan Sistem Informasi Konsumsi Tunas Raharja di MAN 1 Cirebon\r\n','Nur Achadi, Selly Meliana','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(2,'P001','Pembangunan Aplikasi Bursa Kerja Khusus di SMK Negeri 1 Kota Sukabumi berbasis Web','Sriwisnu','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(3,'P001','Pembangunan Aplikasi Informasi Pajak Bumi dan Bangunan Berbasis Android dan Google Cloud Messanginges di Desa','Yudhistira','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(4,'P001','Pembangunan Aplikasi E-Learning SMA Negeri 1 Ciranjang','Eko Travada, Erna Hikmawati','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(5,'P001','Pembangunan Aplikasi Profil Pahlawan Nasional Indonesia Berbasis Android dan Google Map','Soleh Sabarudin, Eni Triningsih','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL);
+insert  into `artikel_ilmiah`(`id`,`kd_prodi`,`judul`,`nama_dosen`,`publikasi`,`thn_publikasi`,`lokal`,`nasional`,`internasional`) values (1,'P001','Pembangunan Sistem Informasi Konsumsi Tunas Raharja di MAN 1 Cirebon\r\n','Nur Achadi, Selly Meliana','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(2,'P001','Pembangunan Aplikasi Bursa Kerja Khusus di SMK Negeri 1 Kota Sukabumi berbasis Web','Sriwisnu','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,NULL,'v',NULL),(3,'P001','Pembangunan Aplikasi Informasi Pajak Bumi dan Bangunan Berbasis Android dan Google Cloud Messanginges di Desa','Yudhistira','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(4,'P001','Pembangunan Aplikasi E-Learning SMA Negeri 1 Ciranjang','Eko Travada, Erna Hikmawati','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(5,'P001','Pembangunan Aplikasi Profil Pahlawan Nasional Indonesia Berbasis Android dan Google Map','Soleh Sabarudin, Eni Triningsih','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL);
 
 /*Table structure for table `dana_penelitian` */
 
@@ -127,7 +127,7 @@ CREATE TABLE `dana_penelitian` (
 
 /*Data for the table `dana_penelitian` */
 
-insert  into `dana_penelitian`(`id`,`kd_prodi`,`jns_dana`,`sumber_dana`,`tahun`,`judul_penelitian`,`jml_dana`) values (1,'P001',1,'PS Sendiri',2014,'Pembangunan Sistem Informasi Konsumsi Tunas Raharja di MAN 1 Cirebon',6.0),(2,'P001',1,'PS Sendiri',2014,'Pembangunan Aplikasi Bursa Kerja Khusus di SMK Negeri 1 Kota Sukabumi berbasis Web',6.0),(3,'P001',4,'PT. Pasim Sentra Utama',2014,'Pembangunan Aplikasi Informasi Pajak Bumi dan Bangunan Berbasis Android dan Google Cloud Messanginge',4.5),(4,'P001',1,'PS Sendiri',2014,'Pembangunan Aplikasi E-Learning SMA Negeri 1 Ciranjang',6.0),(5,'P001',4,'PT. Pasim Sentra Utama',2015,'Pembangunan Aplikasi Profil Pahlawan Nasional Indonesia Berbasis Android dan Google Map',6.5),(6,'P001',4,'PT. Stafalindo',2015,'Sistem Informasi Wisata Berbasis Android dan GIS Studi Kasus Pulau Biawak Indramayu',7.3);
+insert  into `dana_penelitian`(`id`,`kd_prodi`,`jns_dana`,`sumber_dana`,`tahun`,`judul_penelitian`,`jml_dana`) values (2,'P001',1,'PS Sendirian',2014,'Pembangunan Aplikasi Bursa Kerja Khusus di SMK Negeri 1 Kota Sukabumi berbasis Web',8.0),(3,'P001',4,'PT. Pasim Sentra Utama',2014,'Pembangunan Aplikasi Informasi Pajak Bumi dan Bangunan Berbasis Android dan Google Cloud Messanginge',4.5),(4,'P001',1,'PS Sendiri',2014,'Pembangunan Aplikasi E-Learning SMA Negeri 1 Ciranjang',6.0),(5,'P001',4,'PT. Pasim Sentra Utama',2015,'Pembangunan Aplikasi Profil Pahlawan Nasional Indonesia Berbasis Android dan Google Map',6.5),(6,'P001',4,'PT. Stafalindo',2015,'Sistem Informasi Wisata Berbasis Android dan GIS Studi Kasus Pulau Biawak Indramayu',7.3);
 
 /*Table structure for table `dana_pengmas` */
 
@@ -150,7 +150,7 @@ CREATE TABLE `dana_pengmas` (
 
 /*Data for the table `dana_pengmas` */
 
-insert  into `dana_pengmas`(`id`,`kd_prodi`,`jns_dana`,`sumber_dana`,`tahun`,`judul_kegiatan`,`jumlah_dana`) values (1,'P001',4,'PT. Pasim Sentra Utama',2014,'Pelatihan Penggunaan Microsoft Word pada Ibu-Ibu PKK Desa Cileunyi Wetan',5.6),(2,'P001',4,'PT. Pasim Sentra Utama',2014,'Pelatihan Penggunaan Microsoft Excel pada Ibu-Ibu PKK Desa Cileunyi Wetan',5.8),(3,'P001',3,'Dinas Koprasi dan UKM Kab. Bandung Barat',2014,'Peningkatan Kemampuan Kapasitas Manajemen Keuangan Koperasi   Tunas Harapan berbasis Aplikasi Komput',8.0),(4,'P001',4,'PT. Valanino',2015,'Peningkatan Efektivitas Pembuatan Surat dengan Menggunakan ',6.1),(5,'P001',4,'PT. Valanino',2015,'Peningkatan Efektifitas Pengolahan Data dengan Menggunakan ',6.2);
+insert  into `dana_pengmas`(`id`,`kd_prodi`,`jns_dana`,`sumber_dana`,`tahun`,`judul_kegiatan`,`jumlah_dana`) values (1,'P001',4,'PT. Pasim Sentra Utama Duit',2014,'Pelatihan Penggunaan Microsoft Word pada Ibu-Ibu PKK Desa Cileunyi Wetan',10.0),(2,'P001',4,'PT. Pasim Sentra Utama',2014,'Pelatihan Penggunaan Microsoft Excel pada Ibu-Ibu PKK Desa Cileunyi Wetan',5.8),(3,'P001',3,'Dinas Koprasi dan UKM Kab. Bandung Barat',2014,'Peningkatan Kemampuan Kapasitas Manajemen Keuangan Koperasi   Tunas Harapan berbasis Aplikasi Komput',8.0),(4,'P001',4,'PT. Valanino',2015,'Peningkatan Efektivitas Pembuatan Surat dengan Menggunakan ',6.1),(5,'P001',4,'PT. Valanino',2015,'Peningkatan Efektifitas Pengolahan Data dengan Menggunakan ',6.2);
 
 /*Table structure for table `dana_tridarma` */
 
@@ -279,6 +279,7 @@ CREATE TABLE `dt_ruang_dosen` (
   `kd_prodi` varchar(6) DEFAULT NULL,
   `jml_ruang` int(3) DEFAULT NULL,
   `jml_luas` int(3) DEFAULT NULL,
+  `r_kerja_dosen` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_jns_ruang` (`id_jns`),
   CONSTRAINT `FK_jns_ruang` FOREIGN KEY (`id_jns`) REFERENCES `jns_ruang` (`kd_jns`)
@@ -286,7 +287,7 @@ CREATE TABLE `dt_ruang_dosen` (
 
 /*Data for the table `dt_ruang_dosen` */
 
-insert  into `dt_ruang_dosen`(`id`,`id_jns`,`kd_prodi`,`jml_ruang`,`jml_luas`) values (1,1,'P001',0,0),(2,2,'P001',0,0),(3,3,'P001',0,0),(4,4,'P001',16,64);
+insert  into `dt_ruang_dosen`(`id`,`id_jns`,`kd_prodi`,`jml_ruang`,`jml_luas`,`r_kerja_dosen`) values (1,1,'P001',4,500,'Satu ruang untuk lebih dari 4 dosen'),(2,2,'P001',0,0,'Satu ruang untuk 3-4 dosen'),(3,3,'P001',0,0,'Satu ruang untuk 2 dosen'),(4,4,'P001',16,64,'Satu ruang untuk 1 dosen (bukan pejabat struktural)');
 
 /*Table structure for table `evaluasi_lulusan` */
 
@@ -737,7 +738,7 @@ CREATE TABLE `pembimbing_akd` (
 
 /*Data for the table `pembimbing_akd` */
 
-insert  into `pembimbing_akd`(`Id`,`id_dosen`,`kd_prodi`,`j_mhs_bimbingan`,`rata2_pertemuan`) values (1,'1','P001',18,'3.0'),(2,'2','P001',18,'3.0'),(3,'4','P001',18,'3.0'),(4,'5','P001',17,'3.0'),(5,'3','P001',17,'3.0');
+insert  into `pembimbing_akd`(`Id`,`id_dosen`,`kd_prodi`,`j_mhs_bimbingan`,`rata2_pertemuan`) values (1,'1','P001',50,'3.0'),(2,'2','P001',18,'3.0'),(3,'4','P001',18,'3.0'),(4,'5','P001',17,'3.0'),(5,'3','P001',17,'3.0');
 
 /*Table structure for table `pembimbing_skripsi` */
 
@@ -757,7 +758,7 @@ CREATE TABLE `pembimbing_skripsi` (
 
 /*Data for the table `pembimbing_skripsi` */
 
-insert  into `pembimbing_skripsi`(`id`,`id_dosen`,`kd_prodi`,`jml_mhs`) values (1,'1','P001',5),(2,'2','P001',5),(3,'4','P001',4),(4,'5','P001',6),(5,'3','P001',6);
+insert  into `pembimbing_skripsi`(`id`,`id_dosen`,`kd_prodi`,`jml_mhs`) values (1,'1','P001',70),(2,'2','P001',5),(3,'4','P001',4),(4,'5','P001',6),(5,'3','P001',6);
 
 /*Table structure for table `penelitian_dosen` */
 
@@ -906,7 +907,7 @@ CREATE TABLE `pkdt_tgs_belajar` (
 
 /*Data for the table `pkdt_tgs_belajar` */
 
-insert  into `pkdt_tgs_belajar`(`id_dosen`,`jenjang_pend`,`bid_studi`,`perguruan_tinggi`,`negara`,`thn_mulai_std`,`id`) values ('4','S3','Elektro dan Informatika','Institut Teknologi Bandung','Indonesia','2017',1);
+insert  into `pkdt_tgs_belajar`(`id_dosen`,`jenjang_pend`,`bid_studi`,`perguruan_tinggi`,`negara`,`thn_mulai_std`,`id`) values ('4','S1','Elektro dan Informatika','Institut Teknologi Bandung','Indonesia','2017',1);
 
 /*Table structure for table `prestasi_dosen` */
 
@@ -1042,7 +1043,7 @@ CREATE TABLE `struktur_kurikulum` (
 
 /*Data for the table `struktur_kurikulum` */
 
-insert  into `struktur_kurikulum`(`kd_prodi`,`kode_mk`,`jns_mk`,`smt`,`nama_mk`,`sks_kuliah`,`sks_praktek`,`sks_inti`,`sks_institusi`,`bobot_tgs`,`deskripsi`,`silabus`,`sap`,`penyelenggara`) values ('P001','MKB1001',1,1,'Komputer Grafis',NULL,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB1002',1,1,'Logika dan Algoritma',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB1003',1,1,'Pengelolaan Instalasi Komputer',1,1,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB1004',1,1,'Pengenalan Pengolahan Data Elektronik',1,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB2005',1,2,'Basis Data ',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB2006',1,2,'Pemrograman C ',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB2007',1,2,'Pemrograman VB.Net',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB2008',1,2,'Struktur Data',1,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB3009',1,3,'Animasi ',NULL,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB3010',1,3,'Pemrograman C++ ',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB3011',1,3,'Pemrograman .Net Lanjutan',NULL,3,'v','','v','v','v','v','Jurusan'),('P001','MKB4012',1,4,'Web Interface Design',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB4013',1,4,'Sistem Operasi ',1,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB5014',1,5,'Web Database Development',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB5015',1,5,'Pemrograman Java',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB5016',1,5,'Kerja Praktek',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB6017',1,6,'Kewirausahaan',1,1,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB6018',1,6,'Mobile Programming',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB6019',1,6,'Tugas Akhir',NULL,4,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB6020',1,6,'Networking',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK1001',1,1,'Dasar Akuntansi I',3,NULL,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK1002',1,1,'Kalkulus',3,NULL,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK1003',1,1,'Pengantar Bisnis ',2,NULL,'v','','v','v','v','v','Jurusan'),('P001','MKK2004',1,2,'Aljabar Linier',3,NULL,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK2005',1,2,'Dasar Akuntansi II',1,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK3006',1,3,'Manajemen Umum ',1,NULL,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK3007',1,3,'Rekayasa Perangkat Lunak',1,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK3008',1,3,'Manajemen Keuangan',3,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK4009',1,4,'Matematika Diskrit',3,0,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK4010',1,4,'Sistem Informasi Manajemen',1,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK4011',1,4,'Interaksi Manusia dan Komputer',1,2,NULL,'v','v','v','v','v','Jurusan'),('P001','MKK5012',1,5,'Analisis dan Perancangan Sistem ',1,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK5013',1,5,'Statistika Deskriptif',3,NULL,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK5014',1,5,'Teknik Proyeksi Bisnis ',1,1,NULL,'v','v','v','v','v','Jurusan'),('P001','MKK6015',1,6,'Topik Khusus SIM',2,NULL,NULL,'v','v','v','v','v','Jurusan'),('P001','MPB1001',1,2,'Etika Profesi',2,NULL,'v','','v','v','v','v','Jurusan'),('P001','MPK1001',1,1,'Bahasa Indonesia',2,NULL,NULL,'v','v','v','v','v','Jurusan'),('P001','MPK2002',1,2,'Pendidikan Pancasila dan Kewarganegaraan',2,NULL,'v',NULL,'v','v','v','v','Jurusan'),('P001','MPK3003',1,3,'General English ',2,NULL,NULL,'v','v','v','v','v','Jurusan'),('P001','MPK3004',1,3,'Pendidikan Agama',2,NULL,'v',NULL,'v','v','v','v','Jurusan'),('P001','MPK4005',1,4,'Ilmu Budaya Dasar',2,NULL,NULL,'v','v','v','v','v','Jurusan'),('P001','MPK4006',1,4,'Writing for Business Letter',NULL,2,NULL,'v','v','v','v','v','Jurusan'),('P001','MPK5007',1,5,'Speaking for Presentation',NULL,2,NULL,'v','v','v','v','v','Jurusan'),('P001','MPK6008',1,6,'TOEFL',NULL,2,NULL,'v','v','v','v','v','Jurusan');
+insert  into `struktur_kurikulum`(`kd_prodi`,`kode_mk`,`jns_mk`,`smt`,`nama_mk`,`sks_kuliah`,`sks_praktek`,`sks_inti`,`sks_institusi`,`bobot_tgs`,`deskripsi`,`silabus`,`sap`,`penyelenggara`) values ('P001','MKB1001',1,1,'Komputer Grafiss',8,8,'v','v','v','v','v','v','Jurusans'),('P001','MKB1002',1,1,'Logika dan Algoritma',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB1003',1,1,'Pengelolaan Instalasi Komputer',1,1,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB1004',1,1,'Pengenalan Pengolahan Data Elektronik',1,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB2005',1,2,'Basis Data ',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB2006',1,2,'Pemrograman C ',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB2007',1,2,'Pemrograman VB.Net',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB2008',1,2,'Struktur Data',1,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB3009',1,3,'Animasi ',NULL,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB3010',1,3,'Pemrograman C++ ',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB3011',1,3,'Pemrograman .Net Lanjutan',NULL,3,'v','','v','v','v','v','Jurusan'),('P001','MKB4012',1,4,'Web Interface Design',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB4013',1,4,'Sistem Operasi ',1,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB5014',1,5,'Web Database Development',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB5015',1,5,'Pemrograman Java',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB5016',1,5,'Kerja Praktek',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB6017',1,6,'Kewirausahaan',1,1,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB6018',1,6,'Mobile Programming',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB6019',1,6,'Tugas Akhir',NULL,4,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB6020',1,6,'Networking',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK1001',1,1,'Dasar Akuntansi I',3,NULL,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK1002',1,1,'Kalkulus',3,NULL,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK1003',1,1,'Pengantar Bisnis ',2,NULL,'v','','v','v','v','v','Jurusan'),('P001','MKK2004',1,2,'Aljabar Linier',3,NULL,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK2005',1,2,'Dasar Akuntansi II',1,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK3006',1,3,'Manajemen Umum ',1,NULL,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK3007',1,3,'Rekayasa Perangkat Lunak',1,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK3008',1,3,'Manajemen Keuangan',3,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK4009',1,4,'Matematika Diskrit',3,0,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK4010',1,4,'Sistem Informasi Manajemen',1,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK4011',1,4,'Interaksi Manusia dan Komputer',1,2,NULL,'v','v','v','v','v','Jurusan'),('P001','MKK5012',1,5,'Analisis dan Perancangan Sistem ',1,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK5013',1,5,'Statistika Deskriptif',3,NULL,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK5014',1,5,'Teknik Proyeksi Bisnis ',1,1,NULL,'v','v','v','v','v','Jurusan'),('P001','MKK6015',1,6,'Topik Khusus SIM',2,NULL,NULL,'v','v','v','v','v','Jurusan'),('P001','MPB1001',1,2,'Etika Profesi',2,NULL,'v','','v','v','v','v','Jurusan'),('P001','MPK1001',1,1,'Bahasa Indonesia',2,NULL,NULL,'v','v','v','v','v','Jurusan'),('P001','MPK2002',1,2,'Pendidikan Pancasila dan Kewarganegaraan',2,NULL,'v',NULL,'v','v','v','v','Jurusan'),('P001','MPK3003',1,3,'General English ',2,NULL,NULL,'v','v','v','v','v','Jurusan'),('P001','MPK3004',1,3,'Pendidikan Agama',2,NULL,'v',NULL,'v','v','v','v','Jurusan'),('P001','MPK4005',1,4,'Ilmu Budaya Dasar',2,NULL,NULL,'v','v','v','v','v','Jurusan'),('P001','MPK4006',1,4,'Writing for Business Letter',NULL,2,NULL,'v','v','v','v','v','Jurusan'),('P001','MPK5007',1,5,'Speaking for Presentation',NULL,2,NULL,'v','v','v','v','v','Jurusan'),('P001','MPK6008',1,6,'TOEFL',NULL,2,NULL,'v','v','v','v','v','Jurusan');
 
 /*Table structure for table `sumber_biaya` */
 
@@ -1112,7 +1113,7 @@ CREATE TABLE `users` (
 
 /*Data for the table `users` */
 
-insert  into `users`(`id`,`username`,`password`) values (1,'admin','admin'),(2,'d3mi','d3mi'),(3,'','');
+insert  into `users`(`id`,`username`,`password`) values (1,'admin','teguh'),(2,'d3mi','d3mi'),(3,'','');
 
 /*Table structure for table `waktu_prpbm` */
 
@@ -1132,7 +1133,7 @@ CREATE TABLE `waktu_prpbm` (
 
 /*Data for the table `waktu_prpbm` */
 
-insert  into `waktu_prpbm`(`id`,`kd_prodi`,`teori`,`praktek`,`praktikum`,`pkl`) values (1,'P001',613,1600,293,180);
+insert  into `waktu_prpbm`(`id`,`kd_prodi`,`teori`,`praktek`,`praktikum`,`pkl`) values (1,'P001',613,1650,297,180);
 
 /*Table structure for table `wkt_tunggu_llsn` */
 

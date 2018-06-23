@@ -125,41 +125,41 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<form action="<?php echo base_url()."index.php/Apd_a522_excel/do_edit"; ?>" method="POST">
 							<table >
 							<thead>
 								<tr>
 									 <td>Teori</td>
-									 <td><input type="text" name="" value="613"></td>
+									 <td><input type="text" name="teori" value="<?php echo $teori; ?>"></td>
 									 <td>Jam per paket program</td>
 								 </tr>
 								 <tr>
 									 <td>Praktek</td>
-									 <td><input type="text" name=""  value="1600"></td>
+									 <td><input type="text" name="praktek"  value="<?php echo $praktek; ?>"></td>
 									 <td>Jam per paket program</td>
 								 </tr>
 								 <tr>
 									 <td>Praktikum</td>
-									 <td><input type="text" name=""  value="293"></td>
+									 <td><input type="text" name="praktikum"  value="<?php echo $praktikum; ?>"></td>
 									 <td>Jam per paket program</td>
 								 </tr>
 								 <tr>
 									 <td>Praktek Kerja lapangan</td>
-									 <td><input type="text" name=""  value="180"></td>
+									 <td><input type="text" name="pkl"  value="<?php echo $pkl; ?>"></td>
 									 <td>Jam per paket program</td>
 								 </tr>
 							</thead>
 							</table>
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							<br><br>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
-									</button>
-								</a>
+								<button id="sample_editable_1_new" class="btn blue">
+									Simpan 
+								</button>
 							</div>
-							
+							</form>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a522_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Apd_a522_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal
 									</button>

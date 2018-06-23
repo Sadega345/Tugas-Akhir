@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<TITLE>Butir 7.2.1 : KEGIATAN PELAYANAN/PENGABDIAN KEPADA MASYARAKAT</TITLE>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -124,7 +125,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
-							
+							<form action="<?php echo base_url()."index.php/Apd_b721_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -143,63 +144,34 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
-								<tr>
-								 	<td>1</td>
-								 	<td>Manajemen Informatika D3</td>
-								 	<td><input type="text" name="" class="form-control" value="6"></td>
-								 	<td><input type="text" name="" class="form-control" value="6"></td>
-								 	<td><input type="text" name="" class="form-control" value="6"></td>
-								 	<td><input type="text" name="" class="form-control" value="40.2"></td>
-								 	<td><input type="text" name="" class="form-control" value="41.3"></td>
-								 	<td>50.6</td>
-								 </tr>	
-								  <tr>
-								 	<td></td>
-								 	<td>Total</td>
-								 	<td>6</td>
-								 	<td>6</td>
-								 	<td>6</td>
-								 	<td>40.2</td>
-								 	<td>41.3</td>
-								 	<td>50.6</td>
-								 </tr>
+							
+							<tr>
+							 	<td><?php echo $KD_JNS; ?></td>
+							 	<td><?php echo $jurusan; ?></td>
+							 	<td><input type="text" name="Tot_Ts2" class="form-control" value="<?php echo $Tot_Ts2; ?>"></td>
+							 	<td><input type="text" name="Tot_Ts1" class="form-control" value="<?php echo $Tot_Ts1; ?>"></td>
+							 	<td><input type="text" name="Tot_Ts" class="form-control" value="<?php echo $Tot_Ts; ?>"></td>
+							 	<td><input type="text" name="Jum_dana2014" class="form-control" value="<?php echo $Jum_dana2014; ?>"></td>
+							 	<td><input type="text" name="Jum_dana2015" class="form-control" value="<?php echo $Jum_dana2015; ?>"></td>
+							 	<td><input type="text" name="Jum_dana2016" class="form-control" value="<?php echo $Jum_dana2016; ?>"></td>
+							 </tr>	
 							</tbody>
 							</table>
+							<input type="hidden" name="KD_JNS" value="<?php echo $KD_JNS; ?>">
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
-									</button>
-								</a>
+								<button id="sample_editable_1_new" class="btn blue">
+									Simpan 
+								</button>
 							</div>
-							
+							</form>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_b721_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Apd_b721_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal
 									</button>
 								</a>
 							</div>
+							
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

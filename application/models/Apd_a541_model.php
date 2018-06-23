@@ -11,10 +11,21 @@ class Apd_a541_model extends CI_Model {
 
 // Listing
  public function listing() {
- $data=$this->db->query('SELECT d.nama_dosen, p.j_mhs_bimbingan,p.rata2_pertemuan FROM pembimbing_akd p INNER JOIN
+ $data=$this->db->query('SELECT d.nama_dosen, p.j_mhs_bimbingan,p.rata2_pertemuan,p.Id FROM pembimbing_akd p INNER JOIN
  dosen_tbl d ON p.id_dosen=d.id_dosen WHERE p.kd_prodi="p001"');
  return $data->result_array();
  }
+
+ public function update($where="") {
+ $data= $this->db->query('SELECT d.nama_dosen, p.j_mhs_bimbingan,p.rata2_pertemuan,p.Id FROM pembimbing_akd p INNER JOIN
+ dosen_tbl d ON p.id_dosen=d.id_dosen '.$where);
+ return $data->result_array();
+ }
+
+	public function rubah($tablename,$data,$where){
+		$res=$this->db->update($tablename,$data,$where);
+		return $res;
+	}
  
  public function insert($tablename,$data){
 	$res=$this->db->insert($tablename,$data);

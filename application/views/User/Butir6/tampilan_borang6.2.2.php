@@ -116,6 +116,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th>Judul Penelitian</th>
 									 <th>Sumber dan Jenis Data</th>
 									 <th>Jumlah Dana* (dalam juta rupiah)</th>
+									 <th>Aksi</th>
 								 </tr>
 							</thead>
 							<tbody>
@@ -129,6 +130,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['judul_penelitian']; ?></td>
 							 	<td><?php echo $d['sumber_dana']; ?></td>
 							 	<td><?php echo $d['jml_dana']; ?></td>
+							 	<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a622_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>
 							 </tr>
 							 <?php } ?>
 							 <tr>

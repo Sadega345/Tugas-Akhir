@@ -131,6 +131,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th>No</th>
 									 <th>Nama Dosen Pembimbing</th>
 									 <th>Jumlah Mahasiswa</th>
+									 <th rowspan="2">Aksi</th>
 								 </tr>
 								 <tr align="center">
 								 	<td>(1)</td>
@@ -147,6 +148,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $no++; ?></td>
 							 	<td><?php echo $d['nama_dosen']; ?></td>
 							 	<td><?php echo $d['jml_mhs']; ?></td>
+							 	<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a552_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>
 							 </tr>	
 							 <?php } ?>
 							</tbody>

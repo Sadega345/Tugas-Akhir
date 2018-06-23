@@ -125,6 +125,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Apd_a631_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -134,63 +136,25 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+
 							<tr>
-							 	<td>Satu ruang untuk lebih dari 4 dosen</td>
-							 	<td><input type="text" name="" class="form-control" ></td>
-							 	<td><input type="text" name="" class="form-control" ></td>
-							 </tr>
-							 <tr>
-							 	<td>Satu ruang untuk 3-4 dosen</td>
-							 	<td><input type="text" name="" class="form-control" ></td>
-							 	<td><input type="text" name="" class="form-control" ></td>
-							 </tr>
-							  <tr>
-							 	<td>Satu ruang untuk 2 dosen</td>
-							 	<td><input type="text" name="" class="form-control" ></td>
-							 	<td><input type="text" name="" class="form-control" ></td>
-							 </tr>
-							 <tr>
-							 	<td>Satu ruang untuk 1 dosen (bukan pejabat struktural)</td>
-							 	<td><input type="text" name="" class="form-control" value="16"></td>
-							 	<td><input type="text" name="" class="form-control" value="64"></td>
-							 </tr>
-							 <tr>
-							 	<td colspan="2">Total</td>
-							 	<td>64</td>
-							 </tr>
-		
+							 	<td><?php echo $r_kerja_dosen; ?></td>
+							 	<td><input type="text" name="jml_ruang" class="form-control" value="<?php echo $jml_ruang; ?>"></td>
+							 	<td><input type="text" name="jml_luas" class="form-control" value="<?php echo $jml_luas; ?>"></td>
+							</tr>
+
 							</tbody>
 							</table>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
-									</button>
-								</a>
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							</div>
-							
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a631_excel/export_excel";?>">
+								<button id="sample_editable_1_new" class="btn blue">
+									Simpan 
+								</button>
+							</div>
+							</form>
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Apd_a631_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal 
 									</button>

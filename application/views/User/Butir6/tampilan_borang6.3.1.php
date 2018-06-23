@@ -115,56 +115,28 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th>Ruang Kerja Dosen</th>
 									 <th>Jumlah Ruang</th>
 									 <th>Jumlah Luas(m2)</th>
+									 <th>Aksi</th>
 								 </tr>
 							</thead>
 							<tbody>
+							<?php 
+								 
+								foreach ($ruang1 as $r ) { 
+							?>
 							<tr>
-							 	<td>Satu ruang untuk lebih dari 4 dosen</td>
-							 	<?php 
-									foreach ($ruang1 as $r) {
-							 	?>
-							 	<td><?php echo $r['jml_ruang']; ?></td>
-							 	<td><?php echo $r['jml_luas']; ?></td>
-							 	<?php } ?>
-							 </tr>
-							 <tr>
-							 	<td>Satu ruang untuk 3-4 dosen</td>
-							 	<?php 
-									foreach ($ruang2 as $r) {
-							 	?>
-							 	<td><?php echo $r['jml_ruang']; ?></td>
-							 	<td><?php echo $r['jml_luas']; ?></td>
-							 	<?php } ?>
-							 </tr>
-							  <tr>
-							 	<td>Satu ruang untuk 2 dosen</td>
-							 	<?php 
-									foreach ($ruang3 as $r) {
-							 	?>
-							 	<td><?php echo $r['jml_ruang']; ?></td>
-							 	<td><?php echo $r['jml_luas']; ?></td>
-							 	<?php } ?>
-							 </tr>
-							 <tr>
-							 	<td>Satu ruang untuk 1 dosen (bukan pejabat struktural)</td>
-							 	<?php 
-									foreach ($ruang4 as $r) {
-							 	?>
-							 	<td><?php echo $r['jml_ruang']; ?></td>
-							 	<td><?php echo $r['jml_luas']; ?></td>
-							 	<?php } ?>
-							 </tr>
-							 <tr>
-							 	<td colspan="2"><center><strong>Total</strong></center></td>
-							 	<?php 
-								foreach ($totluas as $d ) { 
-							 ?>
-							 	<td><?php echo $d['Tot_Luas']; ?></td>
-							 <?php } ?>
-							 </tr>
-		
+								<td><?php echo $r['r_kerja_dosen']; ?></td>
+								<td><?php echo $r['jml_ruang']; ?></td>
+								<td><?php echo $r['jml_luas']; ?></td>
+								
+								<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a631_excel/ubah/".$r['id'];?>" >Edit</a>
+								</td>
+							</tr>
+							<?php } ?>
 							</tbody>
+							
 							</table>
+							
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a631_excel/ubah";?>">
 									<button id="sample_editable_1_new" class="btn green">

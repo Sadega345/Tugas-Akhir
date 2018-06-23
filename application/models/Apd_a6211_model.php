@@ -11,22 +11,22 @@ public function __construct()
 
 // Listing
  public function listing1() {
- $dana1=$this->db->query('select ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as total1 from perolehan_dana where id=1 and kd_prodi="p001"');
+ $dana1=$this->db->query('SELECT ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as total1 FROM perolehan_dana WHERE id=1 and kd_prodi="p001"');
  return $dana1->result_array();
  }
 
  public function listing2() {
- $dana2=$this->db->query('select ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as total2 from perolehan_dana where id=2 and kd_prodi="p001"');
+ $dana2=$this->db->query('SELECT ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as total2 FROM perolehan_dana WHERE id=2 and kd_prodi="p001"');
  return $dana2->result_array();
  }
 
  public function listing3() {
- $dana3=$this->db->query('select ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as total3 from perolehan_dana where id=3 and kd_prodi="p001"');
+ $dana3=$this->db->query('SELECT ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as total3 FROM perolehan_dana WHERE id=3 and kd_prodi="p001"');
  return $dana3->result_array();
  }
 
  public function jml1() {
- $jml1=$this->db->query('select sum(ts_2) as jum2,sum(ts_1) as jum1,sum(ts) as jum,sum(ts_2+ts_1+ts) as totals1 from perolehan_dana where id_dana=1 and kd_prodi="p001"');
+ $jml1=$this->db->query('SELECT sum(ts_2) as jum2,sum(ts_1) as jum1,sum(ts) as jum,sum(ts_2+ts_1+ts) as totals1 FROM perolehan_dana WHERE id_dana=1 and kd_prodi="p001"');
  return $jml1->result_array();
  }
 

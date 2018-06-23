@@ -14,6 +14,16 @@ class Apd_a5121_model extends CI_Model {
  $data=$this->db->query('SELECT smt,kode_mk,nama_mk,sks_kuliah,sks_praktek,sks_inti,sks_institusi,bobot_tgs,deskripsi,silabus,sap,penyelenggara FROM struktur_kurikulum WHERE kd_prodi="p001"');
  return $data->result_array();
  }
+
+ public function update($where="") {
+ $data= $this->db->query('SELECT smt,kode_mk,nama_mk,sks_kuliah,sks_praktek,sks_inti,sks_institusi,bobot_tgs,deskripsi,silabus,sap,penyelenggara FROM struktur_kurikulum  '.$where);
+ return $data->result_array();
+ }
+
+ public function rubah($tablename,$data,$where){
+	$res=$this->db->update($tablename,$data,$where);
+	return $res;
+ }
  
   public function insert($tablename,$data){
 	$res=$this->db->insert($tablename,$data);
