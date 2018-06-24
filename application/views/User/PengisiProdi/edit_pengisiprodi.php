@@ -117,6 +117,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Prodi_excel/do_edit"; ?>" method="POST">
 							<table id="sample_1">
 							<thead>
 								<tr>
@@ -131,27 +133,27 @@ License: You must have a valid license purchased only from themeforest(the above
 									<th>1.</th>
 									<th>Program Studi</th>
 									<th>
-										<input type="text" name="programstudi" value="Diploma Tiga (D3)" > 
-										Kode sesuai kode PPDT <input type="text" name=""  value="57401" >
+										<input type="text" name="PRODI" value="<?php echo $PRODI ?>" > 
+										Kode sesuai kode PPDT <input type="text" name="KODE_PRODI"  value="<?php echo $KODE_PRODI; ?>" readonly="">
 									</th>
 
 								 </tr>
 								 <tr>
 								 	<th>2.</th>
 									<th>Jurusan/Departemen</th>
-									<th><input type="text" name="departemen" value="Manajemen Informatika"></th>
+									<th><input type="text" name="jurusan" value="<?php echo $jurusan ?>"></th>
 								 </tr>
 								 <tr>
 								 	<th>3.</th>
 									<th>Fakultas</th>
-									<th><input type="text" name="fakultas" value="Ilmu Komputer"></th>
+									<th><input type="text" name="NAMA_FAKULTAS" value="<?php echo $NAMA_FAKULTAS; ?>"></th>
 								 </tr>
 								 <tr>
 								 	<th>4.</th>
 									<th>Perguruan Tinggi</th>
 									<th>
-										<input type="text" name="perguruan" value="Universitas Nasional PASIM">
-										Kode sesuai kode PPDT<input type="text" name="" readonly="" value="41031" >
+										<input type="text" name="NAMA_PT" value="<?php echo $NAMA_PT; ?>">
+										Kode sesuai kode PPDT<input type="text" name="kode_pt" readonly="" value="<?php echo $kode_pt; ?>" >
 									</th>
 									
 								 </tr>
@@ -162,24 +164,24 @@ License: You must have a valid license purchased only from themeforest(the above
 								 <tr>
 								 	<th></th>
 									<th>Nomor SK</th>
-									<th><input type="text" name="nosk" value="114/D/O/2001"></th>
+									<th><input type="text" name="NO_SK_PS" value="<?php echo $NO_SK_PS; ?>"></th>
 								 </tr>
 								 <tr>
 								 	<th></th>
 									<th>Tanggal SK</th>
-									<th><input type="text" name="tanggal" value="02/08/2001"></th>
+									<th><input type="text" name="TGL_SK_PS" value="<?php echo $TGL_SK_PS; ?>"></th>
 								 </tr>
 								 <tr>
 								 	<th></th>
 									<th>Pejabat penandatangan</th>
-									<th><input type="text" name="pejabat" value="A.n. Menteri Pendidikan Nasional Direktur Jenderal Pendidikan Tinggi"></th>
+									<th><input type="text" name="PJBT_TTD" value="<?php echo $PJBT_TTD; ?>"></th>
 								 </tr>
 								 <tr>
 								 	<th>6.</th>
 									<th>Bulan dan tahun dimulainya <br>penyelenggaraan PS</th>
 									<th>
-										<input type="text" name="" value=" Agustus">
-										<input type="text" name="" value="2001">
+										<input type="text" name="BLN_MULAI_PS" value="<?php echo $BLN_MULAI_PS; ?>">
+										<input type="text" name="THN_MULAI_PS" value="<?php echo $THN_MULAI_PS; ?>">
 
 										<!-- <select>
 											<option>Januari</option>
@@ -200,12 +202,12 @@ License: You must have a valid license purchased only from themeforest(the above
 								 <tr>
 								 	<th></th>
 									<th>Nomor SK</th>
-									<th><input type="text" name="nosk" value="2248/D/T/K-IV/2009"></th>
+									<th><input type="text" name="NO_SK_OPR" value="<?php echo $NO_SK_OPR; ?>"></th>
 								 </tr>
 								 <tr>
 								 	<th></th>
 									<th>Tanggal SK</th>
-									<th><input type="text" name="tanggalsk" value="20 Mei 2009"></th>
+									<th><input type="text" name="TGL_SK_OPR" value="<?php echo $TGL_SK_OPR; ?>"></th>
 								 </tr>
 								 <tr>
 								 	<th>8.</th>
@@ -214,55 +216,56 @@ License: You must have a valid license purchased only from themeforest(the above
 								 <tr>
 								 	<th></th>
 									<th>Peringkat</th>
-									<th><input type="text" name="peringkat" value="C"></th>
+									<th><input type="text" name="PERINGKAT" value="<?php echo $PERINGKAT; ?>"></th>
 								 </tr>
 								 <tr>
 								 	<th></th>
 									<th>Nilai</th>
-									<th><input type="text" name="nilai" value="265"></th>
+									<th><input type="text" name="NILAI" value="<?php echo $NILAI; ?>"></th>
 								 </tr>
 								 <tr>
 								 	<th></th>
 									<th>Nomor SK BAN-PT</th>
-									<th><input type="text" name="noskban" value="047/SK/BAN-PT/Ak-XII/Dpl-III/II/2013"></th>
+									<th><input type="text" name="NO_SK_BAN_PT" value="<?php echo $NO_SK_BAN_PT; ?>"></th>
 								 </tr>
 								 <tr>
 								 	<th>9.</th>
 									<th>Alamat PS</th>
-									<th><textarea rows="4" cols="20">Jalan Dakota No. 8A Sukaraja-Bandung</textarea></th>
+									<th><textarea rows="4" cols="20" name="ALAMAT_PS"><?php echo $ALAMAT_PS; ?></textarea></th>
 								 </tr>
 								 <tr>
 								 	<th>10.</th>
 									<th>No telepon PS</th>
-									<th><input type="text" name="notelponps" value="022 - 6072803"></th>
+									<th><input type="text" name="NO_TELP_PS" value="<?php echo $NO_TELP_PS; ?>"></th>
 								 </tr>
 								 <tr>
 								 	<th>11.</th>
 									<th>Nomor Faksimili PS</th>
-									<th><input type="text" name="nofaksimili" value="022-20565099"></th>
+									<th><input type="text" name="NO_FAX_PS" value="<?php echo $NO_FAX_PS; ?>"></th>
 								 </tr>
 								 <tr>
 								 	<th>12.</th>
 									<th>Homepage PS</th>
-									<th><input type="text" name="nofaksimili" value="www.pasim.ac.id"></th>
+									<th><input type="text" name="HOMEPAGE_PS" value="<?php echo $HOMEPAGE_PS; ?>"></th>
 								 </tr>
 								 <tr>
 								 	<th>13.</th>
 									<th>Email PS</th>
-									<th><input type="text" name="nofaksimili" value="mi@pasim.ac.id"></th>
+									<th><input type="text" name="EMAIL_PS" value="<?php echo $EMAIL_PS; ?>"></th>
 								 </tr>
 							</thead>
 							</table>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
-									</button>
-								</a>
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							</div>
-							
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Prodi_excel/export_excel";?>">
+								<button id="sample_editable_1_new" class="btn blue">
+									Simpan 
+								</button>
+								
+							</div>
+							</form>
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Prodi_excel/";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal
 									</button>

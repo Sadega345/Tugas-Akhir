@@ -117,6 +117,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Prodi_excel/ubah"; ?>" method="POST">
 							<table id="sample_1">
 							<thead>
 								<tr>
@@ -135,7 +137,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<th>Program Studi</th>
 									<th>
 										<input type="text" name="programstudi" value="<?php echo $d['PRODI']; ?>" readonly=""> 
-										Kode sesuai kode PPDT <input type="text" name=""   >
+										Kode sesuai kode PPDT <input type="text" name=""  value="<?php echo $d['KODE_PRODI']; ?>" readonly="">
 									</th>
 
 								 </tr>
@@ -154,7 +156,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<th>Perguruan Tinggi</th>
 									<th>
 										<input type="text" name="perguruan" value="<?php echo $d['NAMA_PT']; ?>" readonly="">
-										Kode sesuai kode PPDT<input type="text" name=""   >
+										Kode sesuai kode PPDT<input type="text" name=""  value="<?php echo $d['kode_pt']; ?>" readonly="" >
 									</th>
 								 </tr>
 								  <tr>
@@ -256,14 +258,14 @@ License: You must have a valid license purchased only from themeforest(the above
 								 <?php } ?>
 							</thead>
 							</table>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Edit 
-									</button>
-								</a>
 							</div>
-							
+							<div class="btn-group">
+								<button id="sample_editable_1_new" class="btn blue">
+									Edit 
+								</button>
+								
+							</div>
+							</form>
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Prodi_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn green">
