@@ -244,14 +244,14 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tbody>
 							</table>
 							</div>
-							<div class="btn-group">
+							<!-- <div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_b42_excel/ubah";?>">
 									<button id="sample_editable_1_new" class="btn green">
 										Ubah 
 									</button>
 								</a>
 							</div>
-							
+							 -->
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_b42_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn green">

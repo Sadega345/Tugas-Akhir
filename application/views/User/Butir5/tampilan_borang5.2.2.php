@@ -173,13 +173,13 @@ License: You must have a valid license purchased only from themeforest(the above
 							<input type="hidden" name="id" value="<?php echo $d['id']; ?>">
 							<?php } ?>
 							<br><br>
-							<div class="btn-group">
+							<!-- <div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a522_excel/ubah";?>">
 									<button id="sample_editable_1_new" class="btn green">
 										Ubah 
 									</button>
 								</a>
-							</div>
+							</div> -->
 							</form>
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a522_excel/export_excel";?>">
