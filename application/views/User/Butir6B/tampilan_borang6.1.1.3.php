@@ -115,6 +115,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2">No</th>
 									 <th rowspan="2">Nama Program Studi</th>
 									 <th colspan="3">Jumlah Dana (Juta Rupiah)</th>
+									 <th rowspan ="2">Aksi</th>
 								 </tr>
 								 <tr>
 								 	<th>TS-2</th>
@@ -128,11 +129,14 @@ License: You must have a valid license purchased only from themeforest(the above
 								$no=1;
 							 	foreach ($data as $d) {
 							 ?>
-							 	<td><?php echo $no++;  ?></td>
-							 	<td>Manajemen Informatika</td>
+							 	<td><?php echo $no++; ?></td>
+							 	<td><?php echo $d['nm_program_std'] ?></td>
 							 	<td><?php echo $d['ts_2'] ?></td>
 							 	<td><?php echo $d['ts_1'] ?></td>
 							 	<td><?php echo $d['ts'] ?></td>
+							 	<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_b6113_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>
 							 <?php } ?>
 							 </tr>
 							</tbody>

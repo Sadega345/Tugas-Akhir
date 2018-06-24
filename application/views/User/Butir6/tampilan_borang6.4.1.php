@@ -115,63 +115,23 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th>Jenis Pustaka</th>
 									 <th>Jumlah Judul</th>
 									 <th>Jumlah Copy</th>
+									 <th>Aksi</th>
 								 </tr>
 							</thead>
 							<tbody>
 								<tr>
-								 	<td>Buku Teks dan handbook</td>
 								 	<?php 
 								 		foreach ($pustaka1 as $p) {
 								 	 ?>
+								 	 <td><?php echo $p['jenis_pustaka'] ?></td>
 								 	 <td><?php echo $p['jml_judul'] ?></td>
 								 	 <td><?php echo $p['jml_copy'] ?></td>
-								 	 <?php } ?>
+								 	 <td class="center">
+										<a href="<?php echo base_url()."index.php/Apd_a641_excel/ubah/".$p['id'];?>" >Edit</a>
+									 </td>
+								 	 
 								 </tr>
-								 <tr>
-								 	<td>Modul Praktikum / Praktek</td>
-								 	<?php 
-								 		foreach ($pustaka2 as $p) {
-								 	 ?>
-								 	 <td><?php echo $p['jml_judul'] ?></td>
-								 	 <td><?php echo $p['jml_copy'] ?></td>
-								 	 <?php } ?>
-								 </tr>
-								  <tr>
-								 	<td>Jurnal yang terakreditasi oleh lembaga resmi (Dikti. LIPI, dll).</td>
-								 	<?php 
-								 		foreach ($pustaka3 as $p) {
-								 	 ?>
-								 	 <td><?php echo $p['jml_judul'] ?></td>
-								 	 <td><?php echo $p['jml_copy'] ?></td>
-								 	 <?php } ?>
-								 </tr>
-								 <tr>
-								 	<td>Jurnal Internasional (termasuk e-journal)</td>
-								 	<?php 
-								 		foreach ($pustaka4 as $p) {
-								 	 ?>
-								 	 <td><?php echo $p['jml_judul'] ?></td>
-								 	 <td><?php echo $p['jml_copy'] ?></td>
-								 	 <?php } ?>
-								 </tr>
-								 <tr>
-								 	<td>Majalah Ilmiah</td>
-								 	<?php 
-								 		foreach ($pustaka5 as $p) {
-								 	 ?>
-								 	 <td><?php echo $p['jml_judul'] ?></td>
-								 	 <td><?php echo $p['jml_copy'] ?></td>
-								 	 <?php } ?>
-								 </tr>
-								  <tr>
-								 	<td>Prosiding</td>
-								 	<?php 
-								 		foreach ($pustaka6 as $p) {
-								 	 ?>
-								 	 <td><?php echo $p['jml_judul'] ?></td>
-								 	 <td><?php echo $p['jml_copy'] ?></td>
-								 	 <?php } ?>
-								 </tr>
+								 <?php } ?>
 								 <tr>
 								 	<td>Total</td>
 								 	<?php 

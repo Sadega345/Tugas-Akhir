@@ -19,36 +19,15 @@ header("Expires: 0");
 			 </tr>
 		</thead>
 		<tbody>
-			 <tr>
-			 	<td>Buku Teks dan handbook</td>
-			 	<td></td>
-			 	<td></td>
+			<tr>
+			 	<?php 
+			 		foreach ($pustaka1 as $p) {
+			 	 ?>
+			 	 <td><?php echo $p['jenis_pustaka'] ?></td>
+			 	 <td><?php echo $p['jml_judul'] ?></td>
+			 	 <td><?php echo $p['jml_copy'] ?></td>
 			 </tr>
-			 <tr>
-			 	<td>Modul Praktikum / Praktek</td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-			  <tr>
-			 	<td>Jurnal yang terakreditasi oleh lembaga resmi (Dikti. LIPI, dll).</td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-			 <tr>
-			 	<td>Jurnal Internasional (termasuk e-journal)</td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-			 <tr>
-			 	<td>Majalah Ilmiah</td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-			  <tr>
-			 	<td>Prosiding</td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
+			 <?php } ?>
 			 <tr>
 			 	<td>Total</td>
 			 	<?php 

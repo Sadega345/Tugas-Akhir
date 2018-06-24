@@ -229,6 +229,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
+							 	<td></td>
 							 </tr>
 							 <tr>
 							 	<td rowspan="4">Sumber Lain</td>
@@ -298,7 +299,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_b6111_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn blue">
+									<button id="sample_editable_1_new" class="btn green">
 										Export To Excel
 									</button>
 								</a>

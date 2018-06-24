@@ -71,7 +71,6 @@ public function export_excel(){
  																  'jml4'=>$jml4,
  																  'total'=>$total,
 																  ));
- 
  }
 
 }

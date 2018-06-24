@@ -10,6 +10,8 @@ class Apd_a6212_excel extends CI_Controller {
  }
 
 public function index() {
+ // $data = array( 'title' => 'TABEL DATA BUTIR 6.2.1 : PEROLEHAN DAN ALOKASI DANA',
+ // 'a6212' => $this->apd_a6212_model->listing());
  $data1=$this->Apd_a6212_model->listing1();
  $data2=$this->Apd_a6212_model->listing2();
  $data3=$this->Apd_a6212_model->listing3();
@@ -56,6 +58,9 @@ public function ubah(){
  }
 
 public function export_excel(){
+ // $data = array( 'title' => 'TABEL DATA BUTIR 6.2.1 : PEROLEHAN DAN ALOKASI DANA',
+ // 'a6212' => $this->apd_a6212_model->listing());
+
  $data1=$this->Apd_a6212_model->listing1();
  $data2=$this->Apd_a6212_model->listing2();
  $data3=$this->Apd_a6212_model->listing3();

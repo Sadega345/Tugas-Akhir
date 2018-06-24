@@ -27,6 +27,7 @@ public function index() {
  public function ubah($id){
  	$this->model_squrity->getsqurity();
  	$res=$this->Apd_a712_model->update("where id='$id'");
+ 	
  	$data=array(
 			"JUDUL"=>$res[0]['JUDUL'],
 			"nama_dosen"=>$res[0]['nama_dosen'],
@@ -35,6 +36,7 @@ public function index() {
 			"lokal"=>$res[0]['lokal'],
 			"nasional"=>$res[0]['nasional'],
 			"internasional"=>$res[0]['internasional'],
+			
 			"id"=>$res[0]['id']
 		);
  	$this->load->view('User/Butir7/edit_borang7.1.2.php',$data);

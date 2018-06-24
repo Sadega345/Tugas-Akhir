@@ -125,6 +125,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Apd_a641_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -134,73 +136,25 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
-								<tr>
-								 	<td>Buku Teks dan handbook</td>
-								 	<td><input type="text" name="" class="form-control" value="620"></td>
-								 	<td><input type="text" name="" class="form-control" value="670"></td>
-								 </tr>
-								 <tr>
-								 	<td>Modul Praktikum / Praktek</td>
-								 	<td><input type="text" name="" class="form-control" value="30"></td>
-								 	<td><input type="text" name="" class="form-control" value="60"></td>
-								 </tr>
-								  <tr>
-								 	<td>Jurnal yang terakreditasi oleh lembaga resmi (Dikti. LIPI, dll).</td>
-								 	<td><input type="text" name="" class="form-control" value="4"></td>
-								 	<td><input type="text" name="" class="form-control" value="4"></td>
-								 </tr>
-								 <tr>
-								 	<td>Jurnal Internasional (termasuk e-journal)</td>
-								 	<td><input type="text" name="" class="form-control" value="2"></td>
-								 	<td><input type="text" name="" class="form-control" ></td>
-								 </tr>
-								 <tr>
-								 	<td>Majalah Ilmiah</td>
-								 	<td><input type="text" name="" class="form-control" value="12"></td>
-								 	<td><input type="text" name="" class="form-control" ></td>
-								 </tr>
-								  <tr>
-								 	<td>Prosiding</td>
-								 	<td><input type="text" name="" class="form-control" value="12"></td>
-								 	<td><input type="text" name="" class="form-control" ></td>
-								 </tr>
-								 <tr>
-								 	<td>Total</td>
-								 	<td>680</td>
-								 	<td>734</td>
-								 </tr>
+
+							<tr>
+							 	<td><?php echo $jenis_pustaka; ?></td>
+							 	<td><input type="text" name="jml_judul" class="form-control" value="<?php echo $jml_judul; ?>"></td>
+							 	<td><input type="text" name="jml_copy" class="form-control" value="<?php echo $jml_copy; ?>"></td>
+							 </tr>
+							 
 							</tbody>
 							</table>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
-									</button>
-								</a>
 							</div>
-							
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a641_excel/export_excel";?>">
+								<button id="sample_editable_1_new" class="btn blue">
+									Simpan 
+								</button>
+							</div>
+							</form>
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Apd_a641_excel/";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal
 									</button>

@@ -4,10 +4,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Apd_b6112_excel extends CI_Controller {
 
 // Load database
- // public function __construct() {
- // parent::__construct();
- // $this->load->model('apd_b6112_model');
- // }
+ public function __construct() {
+ parent::__construct();
+ $this->load->model('apd_b6112_model');
+ }
 
 public function index() {
  $dana1=$this->Apd_b6112_model->listing1();
@@ -38,7 +38,7 @@ public function index() {
 
 
 public function export_excel(){
-$dana1=$this->Apd_b6112_model->listing1();
+ $dana1=$this->Apd_b6112_model->listing1();
  $dana2=$this->Apd_b6112_model->listing2();
  $dana3=$this->Apd_b6112_model->listing3();
  $dana4=$this->Apd_b6112_model->listing4();

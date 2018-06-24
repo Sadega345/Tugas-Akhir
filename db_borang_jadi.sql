@@ -27,6 +27,7 @@ CREATE TABLE `aksesbilitas_data` (
   `komp_tnp_jar` varchar(1) DEFAULT NULL,
   `lan` varchar(1) DEFAULT NULL,
   `wan` varchar(1) DEFAULT NULL,
+  `jenis_data` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_aksesbilitas_data` (`kd_jns`),
   KEY `FK_aksesbilitas_prodi` (`kd_prodi`),
@@ -36,7 +37,7 @@ CREATE TABLE `aksesbilitas_data` (
 
 /*Data for the table `aksesbilitas_data` */
 
-insert  into `aksesbilitas_data`(`id`,`kd_jns`,`kd_prodi`,`manual`,`komp_tnp_jar`,`lan`,`wan`) values (1,1,'P001',NULL,NULL,NULL,'v'),(2,2,'P001',NULL,NULL,NULL,'v'),(3,3,'P001',NULL,NULL,NULL,'v'),(4,4,'P001',NULL,NULL,NULL,'v'),(5,5,'P001',NULL,NULL,NULL,'v'),(6,6,'P001',NULL,NULL,NULL,'v'),(7,7,'P001',NULL,NULL,NULL,'v'),(8,8,'P001',NULL,NULL,NULL,'v'),(9,9,'P001',NULL,NULL,NULL,'v'),(10,10,'P001',NULL,NULL,NULL,'v'),(11,11,'P001',NULL,NULL,NULL,'v');
+insert  into `aksesbilitas_data`(`id`,`kd_jns`,`kd_prodi`,`manual`,`komp_tnp_jar`,`lan`,`wan`,`jenis_data`) values (1,1,'P001','v','v','v','v','Mahasiswa'),(2,2,'P001','v',NULL,NULL,'v','Kartu Rencana Studi (KRS)'),(3,3,'P001',NULL,NULL,NULL,'v','Jadwal Mata Kuliah'),(4,4,'P001',NULL,NULL,NULL,'v','Nilai Mata Kuliah'),(5,5,'P001','v','v','v','v','Transkrip Akademik'),(6,6,'P001',NULL,NULL,NULL,'v','Lulusan'),(7,7,'P001',NULL,NULL,NULL,'v','Dosen'),(8,8,'P001',NULL,NULL,NULL,'v','Pegawai'),(9,9,'P001',NULL,NULL,NULL,'v','Keuangan'),(10,10,'P001',NULL,NULL,NULL,'v','Inventaris'),(11,11,'P001',NULL,NULL,NULL,'v','Perpustakaan');
 
 /*Table structure for table `aktivitas_dosen` */
 
@@ -104,7 +105,7 @@ CREATE TABLE `artikel_ilmiah` (
 
 /*Data for the table `artikel_ilmiah` */
 
-insert  into `artikel_ilmiah`(`id`,`kd_prodi`,`judul`,`nama_dosen`,`publikasi`,`thn_publikasi`,`lokal`,`nasional`,`internasional`) values (1,'P001','Pembangunan Sistem Informasi Konsumsi Tunas Raharja di MAN 1 Cirebon\r\n','Nur Achadi, Selly Meliana','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(2,'P001','Pembangunan Aplikasi Bursa Kerja Khusus di SMK Negeri 1 Kota Sukabumi berbasis Web','Sriwisnu','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,NULL,'v',NULL),(3,'P001','Pembangunan Aplikasi Informasi Pajak Bumi dan Bangunan Berbasis Android dan Google Cloud Messanginges di Desa','Yudhistira','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(4,'P001','Pembangunan Aplikasi E-Learning SMA Negeri 1 Ciranjang','Eko Travada, Erna Hikmawati','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(5,'P001','Pembangunan Aplikasi Profil Pahlawan Nasional Indonesia Berbasis Android dan Google Map','Soleh Sabarudin, Eni Triningsih','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL);
+insert  into `artikel_ilmiah`(`id`,`kd_prodi`,`judul`,`nama_dosen`,`publikasi`,`thn_publikasi`,`lokal`,`nasional`,`internasional`) values (1,'P001','Pembangunan Sistem Informasi Konsumsi Tunas Raharja di MAN 1 Cirebon\r\n','Nur Achadi, Selly Meliana','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(2,'P001','Pembangunan Aplikasi Bursa Kerja Khusus di SMK Negeri 1 Kota Sukabumi berbasis Web','Sriwisnu','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,NULL,'v',NULL),(3,'P001','Pembangunan Aplikasi Informasi Pajak Bumi dan Bangunan Berbasis Android dan Google Cloud Messanginges di Desa','Yudhistira','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v','v','v'),(4,'P001','Pembangunan Aplikasi E-Learning SMA Negeri 1 Ciranjang','Eko Travada, Erna Hikmawati','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(5,'P001','Pembangunan Aplikasi Profil Pahlawan Nasional Indonesia Berbasis Android dan Google Map','Soleh Sabarudin, Eni Triningsih','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL);
 
 /*Table structure for table `dana_penelitian` */
 
@@ -127,7 +128,7 @@ CREATE TABLE `dana_penelitian` (
 
 /*Data for the table `dana_penelitian` */
 
-insert  into `dana_penelitian`(`id`,`kd_prodi`,`jns_dana`,`sumber_dana`,`tahun`,`judul_penelitian`,`jml_dana`) values (2,'P001',1,'PS Sendirian',2014,'Pembangunan Aplikasi Bursa Kerja Khusus di SMK Negeri 1 Kota Sukabumi berbasis Web',8.0),(3,'P001',4,'PT. Pasim Sentra Utama',2014,'Pembangunan Aplikasi Informasi Pajak Bumi dan Bangunan Berbasis Android dan Google Cloud Messanginge',4.5),(4,'P001',1,'PS Sendiri',2014,'Pembangunan Aplikasi E-Learning SMA Negeri 1 Ciranjang',6.0),(5,'P001',4,'PT. Pasim Sentra Utama',2015,'Pembangunan Aplikasi Profil Pahlawan Nasional Indonesia Berbasis Android dan Google Map',6.5),(6,'P001',4,'PT. Stafalindo',2015,'Sistem Informasi Wisata Berbasis Android dan GIS Studi Kasus Pulau Biawak Indramayu',7.3);
+insert  into `dana_penelitian`(`id`,`kd_prodi`,`jns_dana`,`sumber_dana`,`tahun`,`judul_penelitian`,`jml_dana`) values (2,'P001',1,'OKelah',2014,'Pembangunan Aplikasi Bursa Kerja Khusus di SMK Negeri 1 Kota Sukabumi berbasis Web',9.0),(3,'P001',4,'PT. Pasim Sentra Utama',2014,'Pembangunan Aplikasi Informasi Pajak Bumi dan Bangunan Berbasis Android dan Google Cloud Messanginge',4.5),(4,'P001',1,'PS Sendiri',2014,'Pembangunan Aplikasi E-Learning SMA Negeri 1 Ciranjang',6.0),(5,'P001',4,'PT. Pasim Sentra Utama',2015,'Pembangunan Aplikasi Profil Pahlawan Nasional Indonesia Berbasis Android dan Google Map',6.5),(6,'P001',4,'PT. Stafalindo',2015,'Sistem Informasi Wisata Berbasis Android dan GIS Studi Kasus Pulau Biawak Indramayu',7.3);
 
 /*Table structure for table `dana_pengmas` */
 
@@ -161,13 +162,15 @@ CREATE TABLE `dana_tridarma` (
   `ts_2` decimal(11,2) DEFAULT NULL,
   `ts_1` decimal(11,2) DEFAULT NULL,
   `ts` decimal(11,2) DEFAULT NULL,
+  `nm_program_std` varchar(100) DEFAULT NULL,
+  `id` varchar(1) DEFAULT NULL,
   KEY `FK_dana_tridarma` (`kd_prodi`),
   CONSTRAINT `FK_dana_tridarma` FOREIGN KEY (`kd_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `dana_tridarma` */
 
-insert  into `dana_tridarma`(`kd_prodi`,`ts_2`,`ts_1`,`ts`) values ('P001','2398266.00','2567329.00','3036370.00');
+insert  into `dana_tridarma`(`kd_prodi`,`ts_2`,`ts_1`,`ts`,`nm_program_std`,`id`) values ('P001','3398266.00','4567329.00','3036370.00','Manajemen Informartika','1');
 
 /*Table structure for table `data_mhs` */
 
@@ -971,6 +974,7 @@ CREATE TABLE `pustaka` (
   `jml_judul` int(4) DEFAULT NULL,
   `jml_copy` int(4) DEFAULT NULL,
   `kd_prodi` varchar(6) NOT NULL,
+  `jenis_pustaka` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_pustaka` (`kd_jns`),
   KEY `FK_pustaka_prodi` (`kd_prodi`),
@@ -980,7 +984,7 @@ CREATE TABLE `pustaka` (
 
 /*Data for the table `pustaka` */
 
-insert  into `pustaka`(`id`,`kd_jns`,`jml_judul`,`jml_copy`,`kd_prodi`) values (1,1,620,670,'P001'),(2,2,20,60,'P001'),(3,3,4,4,'P001'),(4,4,2,0,'P001'),(5,5,12,0,'P001'),(6,6,12,0,'P001');
+insert  into `pustaka`(`id`,`kd_jns`,`jml_judul`,`jml_copy`,`kd_prodi`,`jenis_pustaka`) values (1,1,625,670,'P001','Buku Teks dan handbook'),(2,2,20,60,'P001','Modul Praktikum / Praktek'),(3,3,4,4,'P001','Jurnal yang terakreditasi oleh lembaga resmi (Dikti. LIPI, dll)'),(4,4,2,0,'P001','Jurnal Internasional (termasuk e-journal)'),(5,5,12,0,'P001','Majalah Ilmiah'),(6,6,15,0,'P001','Prosiding');
 
 /*Table structure for table `role` */
 

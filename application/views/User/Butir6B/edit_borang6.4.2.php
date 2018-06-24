@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>BUTIR 6.4.2 : AKSESIBILITAS TIAP JENIS DATA</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -124,10 +125,12 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Apd_b642_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
-								 <tr>
-									 <th rowspan="2">No.</th>
+								<tr>
+									 <th rowspan="2">No</th>
 									 <th rowspan="2">Jenis Data</th>
 									 <th colspan="4">Sistem Pengolahan Data</th>
 								 </tr>
@@ -137,151 +140,46 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<th>Dengan Komputer Jaringan Lokal (LAN)</th>
 								 	<th>Dengan Komputer Jaringan Luas (WAN)</th>
 								 </tr>
-								 <tr>
-								 	<th></th>
+								 <tr align="center">
 								 	<th>(1)</th>
 								 	<th>(2)</th>
 								 	<th>(3)</th>
 								 	<th>(4)</th>
 								 	<th>(5)</th>
-								 </tr>
+								 	<th>(6)</th>
+								 </tr>										
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+							
 							<tr>
-							 	<td>1</td>
-							 	<td>Mahasiswa</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="checkbox" name="" class="form-control"></td>
+							 	<td><?php echo $id; ?></td>
+							 	<td><?php echo $jenis_data; ?></td>
+							 	<td>
+	                    			<input type="checkbox" name="manual" class="form-control" value="v" >
+	                    			
+	                    		</td>
+							 	<td>
+	                    			<input type="checkbox" name="komp_tanpa_jaringan" class="form-control" value="v"  >
+	                    		</td>
+							 	<td>
+	                    			<input type="checkbox" name="lan" class="form-control" value="v"  >
+	                    		</td>
+							 	<td>
+	                    			<input type="checkbox" name="wan" class="form-control" value="v"  >
+	                    		</td>
 							 </tr>
-							 <tr>
-							 	<td>2</td>
-							 	<td>Kartu Rencana Studi (KRS)</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="checkbox" name="" class="form-control"></td>
-							 </tr>
-							 <tr>
-							 	<td>3</td>
-							 	<td>BJadwal Mata Kuliah</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="checkbox" name="" class="form-control"></td>
-							 </tr>
-							 <tr>
-							 	<td>4</td>
-							 	<td>Nilai Mata Kuliah</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="checkbox" name="" class="form-control"></td>
-							 </tr>
-							 <tr>
-							 	<td>5</td>
-							 	<td>Transkrip Akademik</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="checkbox" name="" class="form-control"></td>
-							 </tr>	
-							 <tr>
-							 	<td>6</td>
-							 	<td>Lulusan</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="checkbox" name="" class="form-control"></td>
-							 </tr>	
-							 <tr>
-							 	<td>7</td>
-							 	<td>Dosen</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="checkbox" name="" class="form-control"></td>
-							 </tr>	
-							 <tr>
-							 	<td>8</td>
-							 	<td>Pegawai</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="checkbox" name="" class="form-control"></td>
-							 </tr>
-							 <tr>
-							 	<td>9</td>
-							 	<td>Keuangan</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="checkbox" name="" class="form-control"></td>
-							 </tr>
-							 <tr>
-							 	<td>10</td>
-							 	<td>Inventaris</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="checkbox" name="" class="form-control"></td>
-							 </tr>
-							  <tr>
-							 	<td>11</td>
-							 	<td>Pembayaran SPP</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="checkbox" name="" class="form-control"></td>
-							 </tr>
-							  <tr>
-							 	<td>12</td>
-							 	<td>Perpustakaan</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="checkbox" name="" class="form-control"></td>
-							 </tr>
-							 <tr>
-							 	<td colspan="2"></td>
-							 	<td>0</td>
-							 	<td>0</td>
-							 	<td>0</td>
-							 	<td>11</td>
-							 </tr>
+							 
 							</tbody>
 							</table>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
-									</button>
-								</a>
 							</div>
-							
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_b642_excel/export_excel";?>">
+								<button id="sample_editable_1_new" class="btn blue">
+									Simpan 
+								</button>
+							</div>
+							</form>
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Apd_b642_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal
 									</button>

@@ -114,6 +114,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<tr>
 									 <th rowspan="2"><center>Jenis Data</center></th>
 									 <th colspan="4"><center>Sistem Pengolahan Data</center></th>
+									 <th rowspan="2">Aksi</th>
 								 </tr>
 								 <tr>
 								 	<th>Secara Manual</th>
@@ -124,128 +125,24 @@ License: You must have a valid license purchased only from themeforest(the above
 							</thead>
 							<tbody>
 							<tr>
-							 	<td>Mahasiswa</td>
+							 	
 							 	<?php 
 							 		foreach ($data1 as $d) {
 							 	 ?>
+							 	 <td><?php echo $d['jenis_data']; ?></td>
 							 	 <td><?php echo $d['manual'] ?></td>
 							 	 <td><?php echo $d['komp_tnp_jar'] ?></td>
 							 	 <td><?php echo $d['lan'] ?></td>
 							 	 <td><?php echo $d['wan'] ?></td>
-							 	 <?php } ?>
+							 	 <td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a652_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>
+							 	 
 							 </tr>
+							 <?php } ?>
+							 
 							 <tr>
-							 	<td>Kartu Rencana Studi (KRS)</td>
-							 	<?php 
-							 		foreach ($data2 as $d) {
-							 	 ?>
-							 	 <td><?php echo $d['manual'] ?></td>
-							 	 <td><?php echo $d['komp_tnp_jar'] ?></td>
-							 	 <td><?php echo $d['lan'] ?></td>
-							 	 <td><?php echo $d['wan'] ?></td>
-							 	 <?php } ?>
-							 </tr>
-							  <tr>
-							 	<td>Jadwal Mata Kuliah</td>
-							 	<?php 
-							 		foreach ($data3 as $d) {
-							 	 ?>
-							 	 <td><?php echo $d['manual'] ?></td>
-							 	 <td><?php echo $d['komp_tnp_jar'] ?></td>
-							 	 <td><?php echo $d['lan'] ?></td>
-							 	 <td><?php echo $d['wan'] ?></td>
-							 	 <?php } ?>
-							 </tr>
-							 <tr>
-							 	<td>Nilai Mata Kuliah</td>
-							 	<?php 
-							 		foreach ($data4 as $d) {
-							 	 ?>
-							 	 <td><?php echo $d['manual'] ?></td>
-							 	 <td><?php echo $d['komp_tnp_jar'] ?></td>
-							 	 <td><?php echo $d['lan'] ?></td>
-							 	 <td><?php echo $d['wan'] ?></td>
-							 	 <?php } ?>
-							 </tr>
-							 <tr>
-							 	<td>Transkrip Akademik</td>
-							 	<?php 
-							 		foreach ($data5 as $d) {
-							 	 ?>
-							 	 <td><?php echo $d['manual'] ?></td>
-							 	 <td><?php echo $d['komp_tnp_jar'] ?></td>
-							 	 <td><?php echo $d['lan'] ?></td>
-							 	 <td><?php echo $d['wan'] ?></td>
-							 	 <?php } ?>
-							 </tr>
-							 <tr>
-							 	<td>Lulusan</td>
-							 	<?php 
-							 		foreach ($data6 as $d) {
-							 	 ?>
-							 	 <td><?php echo $d['manual'] ?></td>
-							 	 <td><?php echo $d['komp_tnp_jar'] ?></td>
-							 	 <td><?php echo $d['lan'] ?></td>
-							 	 <td><?php echo $d['wan'] ?></td>
-							 	 <?php } ?>
-							 </tr>
-							  <tr>
-							 	<td>Dosen</td>
-							 	<?php 
-							 		foreach ($data7 as $d) {
-							 	 ?>
-							 	 <td><?php echo $d['manual'] ?></td>
-							 	 <td><?php echo $d['komp_tnp_jar'] ?></td>
-							 	 <td><?php echo $d['lan'] ?></td>
-							 	 <td><?php echo $d['wan'] ?></td>
-							 	 <?php } ?>
-							 </tr>
-							  <tr>
-							 	<td>Pegawai</td>
-							 	<?php 
-							 		foreach ($data8 as $d) {
-							 	 ?>
-							 	 <td><?php echo $d['manual'] ?></td>
-							 	 <td><?php echo $d['komp_tnp_jar'] ?></td>
-							 	 <td><?php echo $d['lan'] ?></td>
-							 	 <td><?php echo $d['wan'] ?></td>
-							 	 <?php } ?>
-							 </tr>
-							  <tr>
-							 	<td>Keuangan</td>
-							 	<?php 
-							 		foreach ($data9 as $d) {
-							 	 ?>
-							 	 <td><?php echo $d['manual'] ?></td>
-							 	 <td><?php echo $d['komp_tnp_jar'] ?></td>
-							 	 <td><?php echo $d['lan'] ?></td>
-							 	 <td><?php echo $d['wan'] ?></td>
-							 	 <?php } ?>
-							 </tr>
-							  <tr>
-							 	<td>Inventaris</td>
-							 	<?php 
-							 		foreach ($data10 as $d) {
-							 	 ?>
-							 	 <td><?php echo $d['manual'] ?></td>
-							 	 <td><?php echo $d['komp_tnp_jar'] ?></td>
-							 	 <td><?php echo $d['lan'] ?></td>
-							 	 <td><?php echo $d['wan'] ?></td>
-							 	 <?php } ?>
-							 </tr>
-							 <tr>
-							 	<td>Perpustakaan</td>
-							 	<?php 
-							 		foreach ($data11 as $d) {
-							 	 ?>
-							 	 <td><?php echo $d['manual'] ?></td>
-							 	 <td><?php echo $d['komp_tnp_jar'] ?></td>
-							 	 <td><?php echo $d['lan'] ?></td>
-							 	 <td><?php echo $d['wan'] ?></td>
-							 	 <?php } ?>
-							 </tr>
-							 <tr>
-							 	<td>Total</td>
+							 	<td >Total</td>
 							 <?php 
 								foreach ($totmanual as $d ) { 
 							 ?>
