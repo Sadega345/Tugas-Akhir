@@ -20,9 +20,8 @@ public function index() {
 
 
 public function export_excel(){
- $data = array( 'title' => 'TABEL DATA BUTIR 6.1.1.3 : PENGGUNAAN DANA UNTUK TRIDARMA',
- 'b6113' => $this->apd_b6113_model->listing());
- $this->load->view('User/Butir6B/tampilan_borang6.1.1.3.php',$data);
+ $data=$this->Apd_b6113_model->listing();
+  $this->load->view('User/Butir6B/tampilan_borang6.1.1.3_excel.php',array('data'=>$data));
  }
 
 }

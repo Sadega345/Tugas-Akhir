@@ -166,7 +166,6 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	 <td><?php echo $d['lan'] ?></td>
 							 	 <td><?php echo $d['wan'] ?></td>
 							 	 <?php } ?>
-							 	<td></td>
 							 </tr>
 							 <tr>
 							 	<td>Transkrip Akademik</td>
@@ -246,7 +245,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	 <?php } ?>
 							 </tr>
 							 <tr>
-							 	<td colspan="2">Total</td>
+							 	<td>Total</td>
 							 <?php 
 								foreach ($totmanual as $d ) { 
 							 ?>

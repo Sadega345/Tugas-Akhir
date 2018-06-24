@@ -128,7 +128,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								$no=1;
 							 	foreach ($data as $d) {
 							 ?>
-							 	<td>$no++</td>
+							 	<td><?php echo $no++;  ?></td>
 							 	<td>Manajemen Informatika</td>
 							 	<td><?php echo $d['ts_2'] ?></td>
 							 	<td><?php echo $d['ts_1'] ?></td>
