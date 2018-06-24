@@ -70,11 +70,13 @@ public function index() {
 public function export_excel(){
  // $data = array( 'title' => 'TABEL DATA BUTIR 6.5.2 : AKSESIBILITAS TIAP JENIS DATA',
  // 'a652' => $this->apd_a652_model->listing());
+ $data1=$this->Apd_a652_model->listing1();
  $totalmanual=$this->Apd_a652_model->totmanual();
  $totalkomp=$this->Apd_a652_model->totkomp();
  $totallan=$this->Apd_a652_model->totlan();
  $totalwan=$this->Apd_a652_model->totwan();
- $this->load->view('User/Butir6/tampilan_borang6.5.2_excel.php',array('totmanual'=>$totalmanual,
+ $this->load->view('User/Butir6/tampilan_borang6.5.2_excel.php',array('data1'=>$data1,
+ 																'totmanual'=>$totalmanual,
 																'totkomp'=>$totalkomp,
 																'totlan'=>$totallan,
 																'totwan'=>$totalwan));
