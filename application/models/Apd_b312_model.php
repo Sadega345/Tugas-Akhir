@@ -21,7 +21,7 @@ public function __construct()
  }
 
  public function listing1(){
- $data1=$this->db->query('select j_maba_reg_bkn_trf from data_mhs where id_prodi="p001" and tahun="2016"');
+ $data1=$this->db->query('select j_maba_reg_bkn_trf,id from data_mhs where id_prodi="p001" and tahun="2016"');
  return $data1->result_array();
  }
 
@@ -31,7 +31,7 @@ public function __construct()
  }
 
  public function listing2(){
- $data2=$this->db->query('select j_maba_trf from data_mhs where id_prodi="P001" and tahun="2016"');
+ $data2=$this->db->query('select j_maba_trf,id from data_mhs where id_prodi="P001" and tahun="2016"');
  return $data2->result_array();
  }
 
@@ -41,8 +41,17 @@ public function __construct()
  }
 
  public function listing3(){
- $data3=$this->db->query('select j_tot_reg_bkn_trf from data_mhs where id_prodi="P001" and tahun="2016"');
+ $data3=$this->db->query('select j_tot_reg_bkn_trf,id from data_mhs where id_prodi="P001" and tahun="2016"');
  return $data3->result_array();
  }
+ public function update($where="") {
+ $data= $this->db->query('select j_tot_reg_bkn_trf,j_maba_trf,j_maba_reg_bkn_trf,id from data_mhs '.$where);
+ return $data->result_array();
+ }
+
+ 	public function rubah($tablename,$data,$where){
+		$res=$this->db->update($tablename,$data,$where);
+		return $res;
+	}
 
 }

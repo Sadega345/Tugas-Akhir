@@ -11,7 +11,7 @@ class Apd_a345_model extends CI_Model {
 
 // Listing
  public function listing4() {
- $data4= $this->db->query('SELECT instansi,j_lulusan_psn,j_lulusan_terima FROM instansi_lulusan where id_ts=1');
+ $data4= $this->db->query('SELECT instansi,j_lulusan_psn,j_lulusan_terima,id,id_ts FROM instansi_lulusan where id_ts=1');
  return $data4->result_array();
  }
 
@@ -20,8 +20,18 @@ class Apd_a345_model extends CI_Model {
  return $jml4->result_array();
  }
 
+ public function update($where="") {
+ $data= $this->db->query('SELECT instansi,j_lulusan_psn,j_lulusan_terima,id,id_ts FROM instansi_lulusan '.$where);
+ return $data->result_array();
+ }
+
+ 	public function rubah($tablename,$data,$where){
+		$res=$this->db->update($tablename,$data,$where);
+		return $res;
+	}
+
 public function listing3() {
- $data3= $this->db->query('SELECT instansi,j_lulusan_psn,j_lulusan_terima FROM instansi_lulusan where id_ts=2');
+ $data3= $this->db->query('SELECT instansi,j_lulusan_psn,j_lulusan_terima,id,id_ts FROM instansi_lulusan where id_ts=2');
  return $data3->result_array();
  }
 
@@ -31,7 +41,7 @@ public function listing3() {
  }
 
  public function listing2() {
- $data2= $this->db->query('SELECT instansi,j_lulusan_psn,j_lulusan_terima FROM instansi_lulusan where id_ts=3');
+ $data2= $this->db->query('SELECT instansi,j_lulusan_psn,j_lulusan_terima,id,id_ts FROM instansi_lulusan where id_ts=3');
  return $data2->result_array();
  }
 
@@ -41,7 +51,7 @@ public function listing3() {
  }
 
  public function listing1() {
- $data1= $this->db->query('SELECT instansi,j_lulusan_psn,j_lulusan_terima FROM instansi_lulusan where id_ts=4');
+ $data1= $this->db->query('SELECT instansi,j_lulusan_psn,j_lulusan_terima,id,id_ts FROM instansi_lulusan where id_ts=4');
  return $data1->result_array();
  }
 
@@ -51,7 +61,7 @@ public function listing3() {
  }
 
 public function listing() {
- $data= $this->db->query('SELECT instansi,j_lulusan_psn,j_lulusan_terima FROM instansi_lulusan where id_ts=5');
+ $data= $this->db->query('SELECT instansi,j_lulusan_psn,j_lulusan_terima,id,id_ts FROM instansi_lulusan where id_ts=5');
  return $data->result_array();
  }
 

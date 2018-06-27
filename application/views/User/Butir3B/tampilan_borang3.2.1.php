@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Butir 3.2.1 : MAHASISWA DAN LULUSAN</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -106,11 +107,27 @@ License: You must have a valid license purchased only from themeforest(the above
 											</a>
 										</div>
 									</div>
-									</div>\
+									<!-- <div class="col-md-6">
+										<div class="btn-group pull-right">
+											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+											</button>
+											<ul class="dropdown-menu pull-right">
+												<li>
+													<a href="javascript:;">
+													Print </a>
+												</li>
+												<li>
+													<a href="javascript:;">
+													Export to Excel </a>
+												</li>
+											</ul>
+										</div>
+									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;" class="col-md-20">
 							
-							<table class="table table-striped table-bordered table-hover" id="sample_1">
+							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 							<thead>
 								<tr>
 									 <th>No.</th>
@@ -118,6 +135,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th>Rata-rata Masa Studi (tahun)*</th>
 									 <th>Rata-rata IPK Lulusan*</th>
 									 <th>Keterangan</th>
+									 <th rowspan="2">Aksi</th>
 								 </tr>
 								 <tr>
 								 	<td>(1)</td>
@@ -138,6 +156,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td><?php echo $m['rata_masa_std'] ?></td>
 								 	<td><?php echo $m['rata_ipk'] ?></td>
 								 	<td><?php echo $m['keterangan'] ?></td>
+								 	<td class="center">
+										<a href="<?php echo base_url()."index.php/Apd_b321_excel/ubah/".$m['id'];?>" >Edit</a>
+									</td>
 								 	<?php } ?>
 								 </tr>
 								 <tr>
@@ -154,14 +175,14 @@ License: You must have a valid license purchased only from themeforest(the above
 							</table>
 							</div>
 							<!-- <div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_b321_excel/ubah";?>">
+								<a href="<?php echo base_url()."index.php/Apd_a431_excel/rubah";?>">
 									<button id="sample_editable_1_new" class="btn green">
-										Ubah 
+										Ubah
 									</button>
 								</a>
 							</div> -->
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_b321_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Apd_a431_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn green">
 										Export To Excel 
 									</button>

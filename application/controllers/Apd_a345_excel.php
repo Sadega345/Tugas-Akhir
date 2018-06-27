@@ -38,9 +38,42 @@ public function index() {
  																 'jml'=>$jml));
  }
 
- public function ubah(){
- 	$this->load->view('User/Butir3/edit_borang345.php');
+ public function ubah($id){
+ 	$this->model_squrity->getsqurity();
+	$res=$this->Apd_a345_model->update("where id='$id'");
+	$data=array(
+		"j_lulusan_psn"=>$res[0]['j_lulusan_psn'],
+		"j_lulusan_terima"=>$res[0]['j_lulusan_terima'],
+		"id"=>$res[0]['id'],
+		"instansi"=>$res[0]['instansi'],
+		
+	);
+ 	$this->load->view('User/Butir3/edit_borang3.4.5.php',$data);
  }
+
+ public function do_edit(){
+		$instansi=$_POST['instansi'];
+		$j_lulusan_psn=$_POST['j_lulusan_psn'];
+		$j_lulusan_terima=$_POST['j_lulusan_terima'];
+		$id=$_POST['id'];
+		
+		$data_update=array(
+			"instansi"=>$instansi,
+			"j_lulusan_psn"=>$j_lulusan_psn,
+			"j_lulusan_terima"=>$j_lulusan_terima,
+			
+		);
+		$where=array('id'=>$id);
+		$res=$this->apd_a345_model->rubah('instansi_lulusan',$data_update,$where);
+		// print_r($data_update);die;
+		if ($res>=1) {
+			redirect('Apd_a345_excel');
+		}
+		// else {
+		// 	alert("Gagal Update") ;
+		// }
+	}
+
 
 public function export_excel(){
  $data = array( 'title' => '  TABEL DATA BUTIR 3.4 : EVALUASI LULUSAN',

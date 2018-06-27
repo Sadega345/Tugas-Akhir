@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Butir 3.2.1 : MAHASISWA DAN LULUSAN</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -124,70 +125,26 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
-							
+							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Apd_b321_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
-							<thead>
-								<tr>
-									 <th>No.</th>
-									 <th>Program Studi</th>
-									 <th>Rata-rata Masa Studi (tahun)*</th>
-									 <th>Rata-rata IPK Lulusan*</th>
-									 <th>Keterangan</th>
-								 </tr>
-								 <tr>
-								 	<td>(1)</td>
-								 	<td>(2)</td>
-								 	<td>(3)</td>
-								 	<td>(4)</td>
-								 	<td>(5)</td>
-								 </tr>
-							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
 								<tr>
-								 	<td>1</td>
-								 	<td><input type="text" name="" value="Manajemen Informatika D3"></td>
-								 	<td><input type="text" name="" value="3.2"></td>
-								 	<td><input type="text" name="" value="3.59"></td>
-								 	<td><input type="text" name="" ></td>
-								 </tr>
-								 
-								 <tr>
-								 	<td colspan="2">Rata-rata di Unit Pengelola**</td>
-								 	<td>3.20</td>
-								 	<td>3.59</td>
-								 	<td></td>
+								 	<td>Keterangan</td>
+								 	<td><input type="text" name="keterangan"></td>
 								 </tr>
 							</tbody>
 							</table>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
-									</button>
-								</a>
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_b321_excel/export_excel";?>">
+								<button id="sample_editable_1_new" class="btn blue">
+									Simpan 
+								</button>
+							</div>
+							</form>
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Apd_b321_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal 
 									</button>
