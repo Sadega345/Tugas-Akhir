@@ -175,88 +175,35 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>(15)</td>
 								 	<td>(16)</td>
 								 </tr>
-								<?php 
-									$no=4; 
-									$counter=1;
-									foreach ($data as $d ) { 
-								?>
+								
 								 <tr>
-								 	<td>TS- <?php echo $no--; ?></td>
-								 	<td><input type="text" name="<?php echo "dy_tampung".$counter; ?>" value="<?php echo $d['dy_tampung']; ?>"></td>
-								 	<td><input type="text" name="jc_mhs_ikt_seleksi" value="<?php echo $d['jc_mhs_ikt_seleksi']; ?>">
-								 	<td><input type="text" name="jc_mhs_lls_seleksi" value="<?php echo $d['jc_mhs_lls_seleksi']; ?>"></td>
-								 	<td><input type="text" name="j_maba_reg_bkn_trf" value="<?php echo $d['j_maba_reg_bkn_trf']; ?>"></td>
-								 	<td><input type="text" name="j_maba_trf" value="<?php echo $d['j_maba_trf']; ?>"></td>
-								 	<td><input type="text" name="j_tot_reg_bkn_trf" value="<?php echo $d['j_tot_reg_bkn_trf']; ?>"></td>
-								 	<td><input type="text" name="j_tot_trf" value="<?php echo $d['j_tot_trf']; ?>"></td>
-								 	<td><input type="text" name="j_llsn_reg_bkn_trf" value="<?php echo $d['j_llsn_reg_bkn_trf']; ?>"></td>
-								 	<td><input type="text" name="j_llsn_trf" value="<?php echo $d['j_llsn_trf']; ?>"></td>
-								 	<td><input type="text" name="ipk_min" value="<?php echo $d['ipk_min']; ?>"></td>
-								 	<td><input type="text" name="ipk_rat" value="<?php echo $d['ipk_rat']; ?>"></td>
-								 	<td><input type="text" name="ipk_mak" value="<?php echo $d['ipk_mak']; ?>"></td>
-								 	<td><input type="text" name="PRSN_IPK1" value="<?php echo $d['PRSN_IPK1']; ?>"></td>
-								 	<td><input type="text" name="PRSN_IPK2" value="<?php echo $d['PRSN_IPK2']; ?>"></td>
-								 	<td><input type="text" name="PRSN_IPK3" value="<?php echo $d['PRSN_IPK3']; ?>"></td>
+								 	<td>TS- <?php echo $id; ?></td>
+								 	<td><input type="text" name="dy_tampung" value="<?php echo $dy_tampung; ?>"></td>
+								 	<td><input type="text" name="jc_mhs_ikt_seleksi" value="<?php echo $jc_mhs_ikt_seleksi; ?>">
+								 	<td><input type="text" name="jc_mhs_lls_seleksi" value="<?php echo $jc_mhs_lls_seleksi; ?>"></td>
+								 	<td><input type="text" name="j_maba_reg_bkn_trf" value="<?php echo $j_maba_reg_bkn_trf; ?>"></td>
+								 	<td><input type="text" name="j_maba_trf" value="<?php echo $j_maba_trf; ?>"></td>
+								 	<td><input type="text" name="j_tot_reg_bkn_trf" value="<?php echo $j_tot_reg_bkn_trf; ?>"></td>
+								 	<td><input type="text" name="j_tot_trf" value="<?php echo $j_tot_trf; ?>"></td>
+								 	<td><input type="text" name="j_llsn_reg_bkn_trf" value="<?php echo $j_llsn_reg_bkn_trf; ?>"></td>
+								 	<td><input type="text" name="j_llsn_trf" value="<?php echo $j_llsn_trf; ?>"></td>
+								 	<td><input type="text" name="ipk_min" value="<?php echo $ipk_min; ?>"></td>
+								 	<td><input type="text" name="ipk_rat" value="<?php echo $ipk_rat; ?>"></td>
+								 	<td><input type="text" name="ipk_mak" value="<?php echo $ipk_mak; ?>"></td>
+								 	<td><input type="text" name="PRSN_IPK1" value="<?php echo $PRSN_IPK1; ?>"></td>
+								 	<td><input type="text" name="PRSN_IPK2" value="<?php echo $PRSN_IPK2; ?>"></td>
+								 	<td><input type="text" name="PRSN_IPK3" value="<?php echo $PRSN_IPK3; ?>"></td>
 								 </tr>
 							
-								<?php $counter++;} ?>
-
-								 <tr>
-								 	<td>Jumlah</td>
-								 	<?php 
-							 			foreach ($jumdtampung as $jum) {
-							 		?>
-								 	<td><?php echo $jum['Daya_Tampung']; ?></td>
-								 	<?php } ?>
-
-								 	<?php 
-							 			foreach ($iseleksi as $i) {
-							 		?>
-								 	<td><?php echo $i['Ikut_seleksi']; ?></td>
-								 	<?php } ?>
-
-								 	<?php 
-							 			foreach ($barutransfer as $i) {
-							 		?>
-								 	<td><?php echo $i['Baru_transfer']; ?></td>
-								 	<?php } ?>
-
-								 	<?php 
-							 			foreach ($totbukantransfer as $i) {
-							 		?>
-								 	<td><?php echo $i['Tot_BukanTransfer']; ?></td>
-								 	<?php } ?>
-
-								 	<?php 
-							 			foreach ($tottransfer as $i) {
-							 		?>
-								 	<td><?php echo $i['Tot_transfer']; ?></td>
-								 	<?php } ?>
-
-								 	<?php 
-							 			foreach ($lulusanregbukantransfer as $i) {
-							 		?>
-								 	<td><?php echo $i['Lulusan_RegBukanTransfer']; ?></td>
-								 	<?php } ?>
-
-								 	<?php 
-							 			foreach ($jumlulusantransfer as $i) {
-							 		?>
-								 	<td><?php echo $i['Jumlah_LulusanTransfer']; ?></td>
-								 	<?php } ?>
-
-								 </tr>	
-								 <tr>
-								 	<td>Rataan</td>
-								 	<td colspan="15">3.59</td>
-								 </tr>
 							</tbody>
 							</table>
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							</div>
 							<div class="btn-group">
-								<input type="hidden" name="totData" value="<?php echo count($data); ?>">
 								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 							</div>
+							</form>
+							
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a311_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
@@ -264,7 +211,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</button>
 								</a>
 							</div>
-						</form>
+						
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

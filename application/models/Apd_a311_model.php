@@ -12,11 +12,22 @@ class Apd_a311_model extends CI_Model {
 // Listing
   public function listing() {
  $data= $this->db->query('SELECT dy_tampung,jc_mhs_ikt_seleksi,jc_mhs_lls_seleksi,j_maba_reg_bkn_trf,j_maba_trf,j_tot_reg_bkn_trf,j_tot_trf,
-j_llsn_reg_bkn_trf,j_llsn_trf,ipk_min,ipk_rat,ipk_mak,PRSN_IPK1,PRSN_IPK2,PRSN_IPK3 FROM DATA_MHS WHERE id_prodi="p001"
+j_llsn_reg_bkn_trf,j_llsn_trf,ipk_min,ipk_rat,ipk_mak,PRSN_IPK1,PRSN_IPK2,PRSN_IPK3,id FROM DATA_MHS WHERE id_prodi="p001"
 ORDER BY tahun
 ');
  return $data->result_array();
  }
+
+ public function update($where="") {
+ $data= $this->db->query('SELECT dy_tampung,jc_mhs_ikt_seleksi,jc_mhs_lls_seleksi,j_maba_reg_bkn_trf,j_maba_trf,j_tot_reg_bkn_trf,j_tot_trf,
+j_llsn_reg_bkn_trf,j_llsn_trf,ipk_min,ipk_rat,ipk_mak,PRSN_IPK1,PRSN_IPK2,PRSN_IPK3,id FROM DATA_MHS '.$where);
+ return $data->result_array();
+ }
+
+ public function rubah($tablename,$data,$where){
+		$res=$this->db->update($tablename,$data,$where);
+		return $res;
+	}
 
  public function insert($tablename,$data){
 	$res=$this->db->insert($tablename,$data);

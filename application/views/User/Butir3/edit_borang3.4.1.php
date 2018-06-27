@@ -126,6 +126,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</div>
 							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Apd_a341_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -142,140 +143,31 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+								
 							<tr>
-							 	<td>1</td>
-							 	<td><input type="text" name="" value="Integritas (etika dan moral)"></td>
-							 	<td><input type="text" name="" value="8.46"></td>
-							 	<td><input type="text" name="" value="15.24"></td>
-							 	<td><input type="text" name="" value="0.00"></td>
-							 	<td><input type="text" name="" value="0.00"></td>
-							 	<td>
-							 		<textarea cols="150" width="150">memberikan muatan etika dan moral pada materi kurikulum program studi (mata kuliah etika profesi),
-								menyelenggarakan kegiatan pembinaan oleh koordinator beasiswa PUB,
-								menyelenggaraakan mentoring setiap minggu
-									</textarea>
-								</td>
+								
+							 	<td><?php echo $id; ?></td>
+							 	<td><?php echo $jenis_kemampuan; ?></td>
+							 	<td><?php echo $sangat_baik; ?></td>
+							 	<td><?php echo $baik; ?></td>
+							 	<td><?php echo $cukup; ?></td>
+							 	<td><?php echo $kurang; ?></td>
+							 	<td><textarea cols="100" rows="5" name="rencana"><?php echo $rencana; ?></textarea></td>
 							 </tr>
-							 <tr>
-							 	<td>2</td>
-							 	<td><input type="text" name="" value="Keahlian berdasarkan bidang ilmu (profesionalisme)"></td>
-							 	<td><input type="text" name="" value="91.43"></td>
-							 	<td><input type="text" name="" value="8.57"></td>
-							 	<td><input type="text" name="" value="0.00"></td>
-							 	<td><input type="text" name="" value="0.00"></td>
-							 	<td>
-							 		<textarea cols="150" width="150">mengadakan pelatihan yang berkaitan dengan pemrograman,
-								Mengadakan bootcamp (pelatihan) untuk persiapan dunia kerja
-								</textarea>
-								</td>
-							 </tr>
-							 <tr>
-							 	<td>3</td>
-							 	<td><input type="text" name="" value="Bahasa Inggris"></td>
-							 	<td><input type="text" name="" value="66.67"></td>
-							 	<td><input type="text" name="" value="17.14"></td>
-							 	<td><input type="text" name="" value="16.19"></td>
-							 	<td><input type="text" name="" value="0.00"></td>
-							 	<td>
-							 		<textarea cols="150" width="150">menyelenggarakan mata kuliah TOEFL,
-								Mengadakan kegiatan English club,
-								Mengadakan pelatihan public speaking,
-								Mengadakan kegiatan pelatihan bahasa inggris yang bekerja sama dengan program studi D3 Bahasa Inggris
-								</textarea>
-								</td>
-							 </tr>
-							 <tr>
-							 	<td>4</td>
-							 	<td><input type="text" name="" value="Penggunaan Teknologi Informasi"></td>
-							 	<td><input type="text" name="" value="85.71"></td>
-							 	<td><input type="text" name="" value="14.29"></td>
-							 	<td><input type="text" name="" value="0.00"></td>
-							 	<td><input type="text" name="" value="0.00"></td>
-							 	<td>
-							 		<textarea cols="150" width="150">penyediaan sarana laboratorium komputer yang memadai,
-								mendorong dosen untuk memanfaatkan teknologi informasi dalam proses pembelajaran,
-								penggunaan aplikasi IT untuk layanan mahasiswa (digital campus)
-								</textarea>
-								</td>
-							 </tr>
-							 <tr>
-							 	<td>5</td>
-							 	<td><input type="text" name="" value="Komunikasi"></td>
-							 	<td><input type="text" name="" value="80.95"></td>
-							 	<td><input type="text" name="" value="12.38"></td>
-							 	<td><input type="text" name="" value="6.67"></td>
-							 	<td><input type="text" name="" value="0.00"></td>
-							 	<td>
-							 		<textarea cols="150" width="150">mengadakan pelatihan public speaking,
-								,Memperbanyak tugas pembuatan laporan ilmiah (untuk meningkatkan kemampuan komunikasi tertulis),
-								Memperbanyak presentasi/diskusi dalam kelas (untuk meningkatkan kemampuan komunikasi secara lisan)
-								</textarea>
-								</td>
-							 </tr>	
-							 <tr>
-							 	<td>6</td>
-							 	<td><input type="text" name="" value="Kerjasama Tim"></td>
-							 	<td><input type="text" name="" value="79.05"></td>
-							 	<td><input type="text" name="" value="11.43"></td>
-							 	<td><input type="text" name="" value="9.52"></td>
-							 	<td><input type="text" name="" value="0.00"></td>
-							 	<td>
-							 		<textarea cols="150" width="150">memperbanyak pemberian tugas yang harus dikerjakan dan dipresentasikan secara kelompok,
-								Mengadakan kegiatan Latihan Dasar Kepemimpinan Mahasiswa (LDKM)</textarea>
-								</td>
-							 </tr>	
-							 <tr>
-							 	<td>7</td>
-							 	<td><input type="text" name="" value="Pengembangan Diri"></td>
-							 	<td><input type="text" name="" value="91.43"></td>
-							 	<td><input type="text" name="" value="8.57"></td>
-							 	<td><input type="text" name="" value="0.00"></td>
-							 	<td><input type="text" name="" value="0.00"></td>
-							 	<td>
-							 	<textarea cols="150" width="150">
-							 		Mengikutsertakan mahasiswa dalam berbagai kegiatan UKM dan kepengurusan PUB sehingga dapat mengembangkan potensi yang dimiliki oleh mahasiswa tersebut.
-							 		</textarea>
-							 	</td>
-							 </tr>	
-							 <tr>
-							 	<td colspan="2">Total</td>
-							 	<td>580.00</td>
-							 	<td>87.62</td>
-							 	<td>37.38</td>
-							 	<td>0.00</td>
-							 </tr>
+							
+							 
 							</tbody>
 							</table>
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							</div>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
-									</button>
-								</a>
+								<button id="sample_editable_1_new" class="btn blue">
+									Simpan 
+								</button>
 							</div>
+							</form>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a341_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Apd_a341_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 											Batal 
 									</button>

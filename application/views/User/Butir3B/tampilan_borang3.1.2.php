@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Butir 3.1.2 : MAHASISWA DAN LULUSAN</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -121,18 +122,21 @@ License: You must have a valid license purchased only from themeforest(the above
 								 <?php 
 								 	$no=1;
 								 	$num=4;
+								 	$num++;
 								 	foreach ($prodi as $p) {
 								 ?>
 								 	<th><center>PS- <?php echo $no++; ?> <br> <?php echo $p['jurusan'] ?></center></th>
+								 	<th>Aksi</th>
 								 <?php } ?>
 								 	<th>Total Mahasiswa</th>
 								 </tr>
+
 								 <tr align="center">
 								 	<td>(1)</td>
 								 	<td>(2)</td>
 								 	<td>(3)</td>
 								 	<td>(4)</td>
-								 	<td>(<?php echo $num++; ?>)</td>
+								 	<td>(<?php echo $num; ?>)</td>
 								 </tr>
 							</thead>
 							<tbody>
@@ -148,11 +152,15 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	 	foreach ($data1 as $d) {
 							 	  ?>
 							 	 <td><?php echo $d['j_maba_reg_bkn_trf']?></td>
+							 	 <td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_b312_excel/ubah/".$d['id'];?>" >Edit</a>
+								 </td>
 							 	 <?php } ?>
 							 	 <?php 
 							 		foreach ($total1 as $t) {
 							 	 ?>
 							 	 <td><?php echo $t['total1'] ?></td>
+
 							 	 <?php } ?>
 							 </tr>
 							 <tr>
@@ -167,6 +175,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	 	foreach ($data2 as $d) {
 							 	  ?>
 							 	 <td><?php echo $d['j_maba_trf']?></td>
+							 	 <td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_b312_excel/ubah/".$d['id'];?>" >Edit</a>
+								 </td>
 							 	 <?php } ?>
 							 	 <?php 
 							 		foreach ($total2 as $t) {
@@ -186,6 +197,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	 	foreach ($data3 as $d) {
 							 	  ?>
 							 	 <td><?php echo $d['j_tot_reg_bkn_trf']?></td>
+							 	 <td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_b312_excel/ubah/".$d['id'];?>" >Edit</a>
+								 </td>
 							 	 <?php } ?>
 							 	 <?php 
 							 		foreach ($total3 as $t) {

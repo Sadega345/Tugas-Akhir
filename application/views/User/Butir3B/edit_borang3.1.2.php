@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Butir 3.1.2 : MAHASISWA DAN LULUSAN</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -125,123 +126,34 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</div>
 							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Apd_b312_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th rowspan="2">No</th>
-									 <th rowspan="2"></th>
-									 <th rowspan="2">Total Mahasiswa pada Fakultas**l)</th>
-									 <th colspan="11">Jumlah Mahasiswa pada PS: *</th>
+									 
+									 <th colspan="11">Jumlah Mahasiswa pada PS:  *</th>
 								 </tr>
-								 <tr>
-								 	<th>PS-1 <br> Nama PS-1</th>
-								 	<th>PS-2 <br> Nama PS-2</th>
-								 	<th>PS-3 <br> Nama PS-3</th>
-								 	<th>PS-4 <br> Nama PS-4</th>
-								 	<th>PS-5 <br> Nama PS-5</th>
-								 	<th>PS-6 <br> Nama PS-6</th>
-								 	<th>PS-7 <br> Nama PS-7</th>
-								 	<th>PS-8 <br> Nama PS-8</th>
-								 	<th>PS-9 <br> Nama PS-9</th>
-								 	<th>PS-10 <br> Nama PS-dst</th>
-								 	<th>Total Mahasiswa</th>
-								 </tr>
-								 <tr align="center">
-								 	<td>(1)</td>
-								 	<td>(2)</td>
-								 	<td>(3)</td>
-								 	<td>(4)</td>
-								 	<td>(5)</td>
-								 	<td>(6)</td>
-								 	<td>(7)</td>
-								 	<td>(8)</td>
-								 	<td>(9)</td>
-								 	<td>(10)</td>
-								 	<td>(11)</td>
-								 	<td>(12)</td>
-								 	<td>(13)</td>
-								 	<td>(14)</td>
-								 </tr>
+								 
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+							
 							<tr>
-							 	<td>1</td>
-							 	<td>Mhs. baru bukan transfer</td>
-							 	<td><input type="text" name="" value="59"></td>
-							 	<td><input type="text" name="" value="59"></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name="" value="59"></td>
+							 	<td>PS - 1</td>
+							 	<td><input type="text" name="j_maba_reg_bkn_trf" value="<?php echo $j_maba_reg_bkn_trf; ?>" ></td>
+							 	
 							 </tr>
-							 <tr>
-							 	<td>2</td>
-							 	<td>Mhs. baru transfer</td>
-							 	<td><input type="text" name="" value="0"></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name="" value="0"></td>
-							 </tr>
-							 <tr>
-							 	<td>3</td>
-							 	<td>Total mhs. regular (Student Body)</td>
-							 	<td><input type="text" name="" value="139"></td>
-							 	<td><input type="text" name="" value="139"></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name=""></td>
-							 	<td><input type="text" name="" value="139"></td>
-							 </tr>
+							 
 							</tbody>
 							</table>
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
+							
 							</div>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan
-									</button>
-								</a>
+								<button id="sample_editable_1_new" class="btn blue">
+									Simpan
+								</button>
 							</div>
+							</form>
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_b312_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">

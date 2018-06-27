@@ -117,6 +117,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th>Nama Lembaga (Instansi/Industri)</th>
 									 <th>Jumlah Lulusan yang dipesan</th>
 									 <th>Jumlah Lulusan yang diterima</th>
+									 <th rowspan="2">Aksi</th>
 								 </tr>
 								 <tr align="center">
 								 	<td>(1)</td>
@@ -139,6 +140,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td><?php echo $d['instansi']; ?></td>
 								 	<td><?php echo $d['j_lulusan_psn']; ?></td>
 								 	<td><?php echo $d['j_lulusan_terima']; ?></td>
+								 	<td class="center">
+										<a href="<?php echo base_url()."index.php/Apd_a345_excel/ubah/".$d['id'];?>" >Edit</a>
+									</td>
 
 								 </tr>
 								 <?php } ?>
@@ -153,6 +157,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td><?php echo $d['instansi']; ?></td>
 								 	<td><?php echo $d['j_lulusan_psn']; ?></td>
 								 	<td><?php echo $d['j_lulusan_terima']; ?></td>
+								 	<td class="center">
+										<a href="<?php echo base_url()."index.php/Apd_a345_excel/ubah/".$d['id'];?>" >Edit</a>
+									</td>
 								 </tr>
 								 <?php } ?>
 								  <tr>
@@ -166,6 +173,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td><?php echo $d['instansi']; ?></td>
 								 	<td><?php echo $d['j_lulusan_psn']; ?></td>
 								 	<td><?php echo $d['j_lulusan_terima']; ?></td>
+								 	<td class="center">
+										<a href="<?php echo base_url()."index.php/Apd_a345_excel/ubah/".$d['id'];?>" >Edit</a>
+									</td>
 								 </tr>
 								 <?php } ?>
 								<tr>
@@ -179,6 +189,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td><?php echo $d['instansi']; ?></td>
 								 	<td><?php echo $d['j_lulusan_psn']; ?></td>
 								 	<td><?php echo $d['j_lulusan_terima']; ?></td>
+								 	<td class="center">
+										<a href="<?php echo base_url()."index.php/Apd_a345_excel/ubah/".$d['id'];?>" >Edit</a>
+									</td>
 								 </tr>
 								 <?php } ?>
 								 <tr>
@@ -192,6 +205,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td><?php echo $d['instansi']; ?></td>
 								 	<td><?php echo $d['j_lulusan_psn']; ?></td>
 								 	<td><?php echo $d['j_lulusan_terima']; ?></td>
+								 	<td class="center">
+										<a href="<?php echo base_url()."index.php/Apd_a345_excel/ubah/".$d['id'];?>" >Edit</a>
+									</td>
 								 </tr>
 								 <?php } ?>
 								<tr>

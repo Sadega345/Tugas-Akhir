@@ -28,9 +28,61 @@ public function index() {
 																'data3'=>$data3));
  }
 
- public function ubah(){
- 	$this->load->view('User/Butir3B/edit_borang3.1.2.php');
+ public function ubah($id){
+ 	$this->model_squrity->getsqurity();
+	$res=$this->apd_b312_model->update("where id='$id'");
+	
+	$data=array(
+		"j_tot_reg_bkn_trf"=>$res[0]['j_tot_reg_bkn_trf'],
+		"j_maba_trf"=>$res[0]['j_maba_trf'],
+		"j_maba_reg_bkn_trf"=>$res[0]['j_maba_reg_bkn_trf'],
+		"id"=>$res[0]['id'],
+		
+	);
+
+	// $data2=array(
+	// 	"j_maba_trf"=>$res[0]['j_maba_trf'],
+	// 	"id"=>$res[0]['id'],
+	// );
+
+	// $data3=array(
+	// 	"j_maba_reg_bkn_trf"=>$res[0]['j_maba_reg_bkn_trf'],
+	// 	"id"=>$res[0]['id'],
+	// );
+
+	if ($id==1) {
+		$this->load->view('User/Butir3B/edit_borang3.1.2.php',$data);
+	}else if ($id==5) {
+		$this->load->view('User/Butir3B/edit_borang3.1.2(2).php',$data);
+	}else if ($id==3) {
+		$this->load->view('User/Butir3B/edit_borang3.1.2(3).php',$data);
+	}
+ 	
  }
+
+ public function do_edit(){
+		$j_tot_reg_bkn_trf=$_POST['j_tot_reg_bkn_trf'];
+		$j_maba_reg_bkn_trf=$_POST['j_maba_reg_bkn_trf'];
+		$j_maba_trf=$_POST['j_maba_trf'];
+		$id=$_POST['id'];
+		
+		$data_update=array(
+			"j_tot_reg_bkn_trf"=>$j_tot_reg_bkn_trf,
+			"j_maba_reg_bkn_trf"=>$j_maba_reg_bkn_trf,
+			"j_maba_trf"=>$j_maba_trf,
+			
+		);
+		$where=array('id'=>$id);
+		$res=$this->apd_b312_model->rubah('data_mhs',$data_update,$where);
+		// print_r($data_update);die;
+		if ($res>=1) {
+			redirect('Apd_b312_excel');
+		}
+		// else {
+		// 	alert("Gagal Update") ;
+		// }
+	}
+
 
 public function export_excel(){
  $data = array( 'title' => 'TABEL DATA BUTIR 3.1.2 : MAHASISWA DAN LULUSAN',

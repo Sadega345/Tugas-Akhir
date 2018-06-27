@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>Butir 3.1.3 : PROFIL MAHASISWA DAN LULUSAN</title>
+<title>Butir 3.1.2 : MAHASISWA DAN LULUSAN</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Butir 3.1.3 : PROFIL MAHASISWA DAN LULUSAN
+								<i class="fa fa-edit"></i>Butir 3.1.2 : MAHASISWA DAN LULUSAN
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -100,11 +100,11 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="#">
+											<!-- <a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
 											Load 
 											</button>
-											</a>
+											</a> -->
 										</div>
 									</div>
 									<!-- <div class="col-md-6">
@@ -125,59 +125,39 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
-							<h3>Diisi oleh PS D3</h3>
+							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Apd_b312_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th rowspan="2">Tahun Masuk</th>
-									 <th colspan="5">Jumlah Mahasiswa Reguler per Angkatan pada Tahun<br>
-									 (tidak memasukkan mahasiswa transfer)</th>
-									 <th rowspan="2">Jumlah Lulusan<br>s.d. TS</th>
-									 <th rowspan="2">Aksi</th>
+									 
+									 <th colspan="11">Jumlah Mahasiswa pada PS:  *</th>
 								 </tr>
-								 <tr>
-								 	<th>TS-4</th>
-								 	<th>TS-3</th>
-								 	<th>TS-2</th>
-								 	<th>TS-1</th>
-								 	<th>TS</th>
-								 </tr>
+								 
 							</thead>
 							<tbody>
-								<?php 
-									$no=4; 
-									foreach ($data3 as $d ) { 
-								?>
-								<tr>
-								 	<tr>
-								 	<td>TS- <?php echo $no--; ?></td>
-								 	<td><?php echo$d['ts_4']; ?></td>
-								 	<td><?php echo$d['ts_3']; ?></td>
-								 	<td><?php echo$d['ts_2']; ?></td>
-								 	<td><?php echo$d['ts_1']; ?></td>
-								 	<td><?php echo$d['ts']; ?></td>
-								 	<td><?php echo$d['jml_ts_llsan']; ?></td>
-								 	<td class="center">
-										<a href="<?php echo base_url()."index.php/Apd_a313_excel/ubah/".$d['id'];?>" >Edit</a>
-									</td>
-								 </tr>	
-								 <?php } ?>
-								 
+							
+							<tr>
+							 	<td>PS - 1</td>
+							 	<td><input type="text" name="j_maba_trf" value="<?php echo $j_maba_trf; ?>" ></td>
+							 	
+							 </tr>
+							 
 							</tbody>
 							</table>
-
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							
-							<!-- <div class="btn-group">
-								<a href="<?php echo base_url().'index.php/Apd_a313_excel/ubah'; ?>">
-									<button id="sample_editable_1_new" class="btn green">
-										Ubah 
-									</button>
-								</a>
-							</div> -->
+							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a313_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn blue">
-										Export ke Excel 
+								<button id="sample_editable_1_new" class="btn blue">
+									Simpan
+								</button>
+							</div>
+							</form>
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Apd_b312_excel/export_excel";?>">
+									<button id="sample_editable_1_new" class="btn red">
+										Batal 
 									</button>
 								</a>
 							</div>

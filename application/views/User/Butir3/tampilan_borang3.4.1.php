@@ -133,6 +133,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2">Jenis Kemampuan</th>
 									 <th colspan="4">Tanggapan Pihak pengguna (%)</th>
 									 <th rowspan="2">Rencana Tindak Lanjut oleh Program Studi</th>
+									 <th rowspan="2">Aksi</th>
 								 </tr>
 								 <tr>
 								 	<th>Sangat Baik</th>
@@ -155,6 +156,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['cukup']; ?></td>
 							 	<td><?php echo $d['kurang']; ?></td>
 							 	<td><?php echo $d['rencana']; ?></td>
+							 	<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a341_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>
 							 </tr>
 							<?php } ?>
 							 

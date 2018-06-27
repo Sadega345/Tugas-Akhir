@@ -125,13 +125,12 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;">
 							<form action="<?php echo base_url()."index.php/Apd_a345_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								 <tr>
-									 <th>Tahun</th>
-									 <th>Jumlah Lulusan yang Diwisuda pada</th>
-									 <th>Nama Lembaga (Instansi/Industri)</th>
+								 	 <th>Nama Lembaga (Instansi/Industri)</th>
 									 <th>Jumlah Lulusan yang dipesan</th>
 									 <th>Jumlah Lulusan yang diterima</th>
 								 </tr>
@@ -139,82 +138,26 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>(1)</td>
 								 	<td>(2)</td>
 								 	<td>(3)</td>
-								 	<td>(4)</td>
-								 	<td>(5)</td>
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+							
 							<tr>
-							 	<td>TS-4</td>
-							 	<td><input type="text" name="" value="33"></td>
-							 	<td><input type="text" name="" value="PT. Pasim Sentra Utama"></td>
-							 	<td><input type="text" name="" value="5"></td>
-							 	<td><input type="text" name="" value="5"></td>
+								<td><input type="text" name="instansi" value="<?php echo $instansi; ?>"></td>
+							 	<td><input type="text" name="j_lulusan_psn" value="<?php echo $j_lulusan_psn; ?>"></td>
+							 	<td><input type="text" name="j_lulusan_terima" value="<?php echo $j_lulusan_terima; ?>"></td>
 							 </tr>
-							 <tr>
-							 	<td>TS-3</td>
-							 	<td><input type="text" name="" value="25"></td>
-							 	<td><input type="text" name="" value="PT. Pasim Sentra Utama"></td>
-							 	<td><input type="text" name="" value="5"></td>
-							 	<td><input type="text" name="" value="4"></td>
-							 </tr>
-							 <tr>
-							 	<td>TS-2</td>
-							 	<td><input type="text" name="" value="37"></td>
-							 	<td><input type="text" name="" value="PT. Pasim Sentra Utama"></td>
-							 	<td><input type="text" name="" value="5"></td>
-							 	<td><input type="text" name="" value="3"></td>
-							 </tr>
-							 <tr>
-							 	<td>TS-1</td>
-							 	<td><input type="text" name="" value="41"></td>
-							 	<td><input type="text" name="" value="PT. Pasim Sentra Utama"></td>
-							 	<td><input type="text" name="" value="8"></td>
-							 	<td><input type="text" name="" value="8"></td>
-							 </tr>	
-							 <tr>
-							 	<td>TS</td>
-							 	<td><input type="text" name="" value="41"></td>
-							 	<td><input type="text" name="" value="PT. Pasim Sentra Utama"></td>
-							 	<td><input type="text" name="" value="5"></td>
-							 	<td><input type="text" name="" value="4"></td>
-							 </tr>	
-							 <tr>
-							 	<td>Total</td>
-							 	<td>177</td>
-							 	<td></td>
-							 	<td>72</td>
-							 	<td>62</td>
-							 </tr>	
+							
 							</tbody>
 							</table>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
-									</button>
-								</a>
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							</div>
+							<div class="btn-group">
+								<button id="sample_editable_1_new" class="btn blue">
+									Simpan 
+								</button>
+							</div>
+							</form>
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a345_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
