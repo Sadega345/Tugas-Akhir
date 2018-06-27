@@ -138,6 +138,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<td colspan="2">Jumlah lulusan</td>
 									<td colspan="3">IPK Lulusan Reg</td>
 									<td colspan="3">Persen dengan lulusan dengan IPK</td>
+									<td rowspan="2">Aksi</td>
 								</tr>
 								<tr>
 									<td>Ikut seleksi</td>
@@ -175,6 +176,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>(14)</td>
 								 	<td>(15)</td>
 								 	<td>(16)</td>
+								 	<td>(17)</td>
 								 </tr>
 								 <?php 
 									$no=4; 
@@ -197,6 +199,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td><?php echo $d['PRSN_IPK1']; ?></td>
 								 	<td><?php echo $d['PRSN_IPK2']; ?></td>
 								 	<td><?php echo $d['PRSN_IPK3']; ?></td>
+								 	<td class="center">
+										<a href="<?php echo base_url()."index.php/Apd_a311_excel/ubah/".$d['id'];?>" >Edit</a>
+									</td>
 								 </tr>
 			
 								<?php } ?>

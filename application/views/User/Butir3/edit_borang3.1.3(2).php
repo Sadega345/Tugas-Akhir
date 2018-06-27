@@ -100,11 +100,11 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="#">
+											<!-- <a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
 											Load 
 											</button>
-											</a>
+											</a> -->
 										</div>
 									</div>
 									<!-- <div class="col-md-6">
@@ -125,6 +125,10 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							
+							
+							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Apd_a313_excel/do_edit"; ?>" method="POST">
 							<h3>Diisi oleh PS D3</h3>
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
@@ -133,7 +137,6 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th colspan="5">Jumlah Mahasiswa Reguler per Angkatan pada Tahun<br>
 									 (tidak memasukkan mahasiswa transfer)</th>
 									 <th rowspan="2">Jumlah Lulusan<br>s.d. TS</th>
-									 <th rowspan="2">Aksi</th>
 								 </tr>
 								 <tr>
 								 	<th>TS-4</th>
@@ -144,40 +147,66 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-								<?php 
-									$no=4; 
-									foreach ($data3 as $d ) { 
-								?>
-								<tr>
-								 	<tr>
-								 	<td>TS- <?php echo $no--; ?></td>
-								 	<td><?php echo$d['ts_4']; ?></td>
-								 	<td><?php echo$d['ts_3']; ?></td>
-								 	<td><?php echo$d['ts_2']; ?></td>
-								 	<td><?php echo$d['ts_1']; ?></td>
-								 	<td><?php echo$d['ts']; ?></td>
-								 	<td><?php echo$d['jml_ts_llsan']; ?></td>
-								 	<td class="center">
-										<a href="<?php echo base_url()."index.php/Apd_a313_excel/ubah/".$d['id'];?>" >Edit</a>
-									</td>
+							
+								<!-- <tr>
+								 	<td>TS-4</td>
+								 	<td><input type="text" name="ts_4" value="<?php echo $ts_4; ?>"></td>
+								 	<td><input type="text" name="ts_3" value="<?php echo $ts_3; ?>"></td>
+								 	<td><input type="text" name="ts_2" value="<?php echo $ts_2; ?>"></td>
+								 	<td><input type="text" name="ts_1" value="<?php echo $ts_1; ?>"></td>
+								 	<td><input type="text" name="ts" value="<?php echo $ts; ?>"></td>
+								 	<td><?php echo $jml_ts_llsan; ?></td>
+								 </tr> -->
+								 <!-- <tr>
+								 	<td>TS-3</td>
+								 	<td bgcolor="black"></td>
+								 	<td><input type="text" name="ts_3" value="<?php echo $ts_3; ?>"></td>
+								 	<td><input type="text" name="ts_2" value="<?php echo $ts_2; ?>"></td>
+								 	<td><input type="text" name="ts_1" value="<?php echo $ts_1; ?>"></td>
+								 	<td><input type="text" name="ts" value="<?php echo $ts; ?>"></td>
+								 	<td><?php echo $jml_ts_llsan; ?></td>
+								 </tr> -->
+								 <tr>
+								 	<td>TS-2</td>
+								 	<td ><input type="text" name="ts_4" value="<?php echo $ts_4; ?>" readonly=""></td>
+								 	<td ><input type="text" name="ts_3" value="<?php echo $ts_3; ?>" readonly=""></td>
+								 	<td><input type="text" name="ts_2" value="<?php echo $ts_2; ?>"></td>
+								 	<td><input type="text" name="ts_1" value="<?php echo $ts_1; ?>"></td>
+								 	<td><input type="text" name="ts" value="<?php echo $ts; ?>"></td>
+								 	<td><?php echo $jml_ts_llsan; ?></td>
+								 </tr>
+								 <!-- <tr>
+								 	<td>TS-1</td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td><input type="text" name="ts_1" value="<?php echo $ts_1; ?>"></td>
+								 	<td><input type="text" name="ts_1" value="<?php echo $ts; ?>"></td>
+								 	<td><?php echo $jml_ts_llsan; ?></td>
 								 </tr>	
-								 <?php } ?>
-								 
+								 <tr>
+								 	<td>TS</td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td bgcolor="black"></td>
+								 	<td><?php echo $jml_ts_llsan; ?></td>
+								 </tr> -->
 							</tbody>
 							</table>
-
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
+							</div>
 							
-							<!-- <div class="btn-group">
-								<a href="<?php echo base_url().'index.php/Apd_a313_excel/ubah'; ?>">
-									<button id="sample_editable_1_new" class="btn green">
-										Ubah 
-									</button>
-								</a>
-							</div> -->
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a313_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn blue">
-										Export ke Excel 
+								<button id="sample_editable_1_new" class="btn blue">
+									Simpan 
+								</button>
+							</div>
+							</form>
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Apd_a313_excel";?>">
+									<button id="sample_editable_1_new" class="btn red">
+										Batal
 									</button>
 								</a>
 							</div>

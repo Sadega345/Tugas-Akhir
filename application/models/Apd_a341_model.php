@@ -11,9 +11,19 @@ class Apd_a341_model extends CI_Model {
 
 // Listing
  public function listing() {
- $data= $this->db->query('SELECT sangat_baik,baik,cukup,kurang,rencana,jenis_kemampuan FROM evaluasi_lulusan WHERE id_prodi="p001" ORDER BY id_kemampuan');
+ $data= $this->db->query('SELECT sangat_baik,baik,cukup,kurang,rencana,jenis_kemampuan,id FROM evaluasi_lulusan WHERE id_prodi="p001" ORDER BY id_kemampuan');
  return $data->result_array();
  }
+
+ public function update($where="") {
+ $data= $this->db->query('SELECT sangat_baik,baik,cukup,kurang,rencana,jenis_kemampuan,id FROM evaluasi_lulusan '.$where);
+ return $data->result_array();
+ }
+
+ 	public function rubah($tablename,$data,$where){
+		$res=$this->db->update($tablename,$data,$where);
+		return $res;
+	}
 
  public function sangatbaik() {
  $data= $this->db->query('SELECT SUM(sangat_baik)AS Sangat_baik FROM evaluasi_lulusan WHERE id_prodi="p001"');
