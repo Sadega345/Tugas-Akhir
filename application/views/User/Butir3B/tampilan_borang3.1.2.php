@@ -106,22 +106,6 @@ License: You must have a valid license purchased only from themeforest(the above
 											</a>
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
 							<div style="overflow-x:auto;">
@@ -130,20 +114,17 @@ License: You must have a valid license purchased only from themeforest(the above
 								<tr>
 									 <th rowspan="2">No</th>
 									 <th rowspan="2"></th>
-									 <th rowspan="2">Total Mahasiswa pada Fakultas**l)</th>
-									 <th colspan="11">Jumlah Mahasiswa pada PS: *</th>
+									 <th rowspan="2">Total Mahasiswa pada Fakultas**</th>
+									 <th colspan="11"><center>Jumlah Mahasiswa pada PS: *</center></th>
 								 </tr>
 								 <tr>
-								 	<th>PS-1 <br> Nama PS-1</th>
-								 	<th>PS-2 <br> Nama PS-2</th>
-								 	<th>PS-3 <br> Nama PS-3</th>
-								 	<th>PS-4 <br> Nama PS-4</th>
-								 	<th>PS-5 <br> Nama PS-5</th>
-								 	<th>PS-6 <br> Nama PS-6</th>
-								 	<th>PS-7 <br> Nama PS-7</th>
-								 	<th>PS-8 <br> Nama PS-8</th>
-								 	<th>PS-9 <br> Nama PS-9</th>
-								 	<th>PS-10 <br> Nama PS-dst</th>
+								 <?php 
+								 	$no=1;
+								 	$num=4;
+								 	foreach ($prodi as $p) {
+								 ?>
+								 	<th><center>PS- <?php echo $no++; ?> <br> <?php echo $p['jurusan'] ?></center></th>
+								 <?php } ?>
 								 	<th>Total Mahasiswa</th>
 								 </tr>
 								 <tr align="center">
@@ -151,97 +132,70 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>(2)</td>
 								 	<td>(3)</td>
 								 	<td>(4)</td>
-								 	<td>(5)</td>
-								 	<td>(6)</td>
-								 	<td>(7)</td>
-								 	<td>(8)</td>
-								 	<td>(9)</td>
-								 	<td>(10)</td>
-								 	<td>(11)</td>
-								 	<td>(12)</td>
-								 	<td>(13)</td>
-								 	<td>(14)</td>
+								 	<td>(<?php echo $num++; ?>)</td>
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
 							<tr>
 							 	<td>1</td>
 							 	<td>Mhs. baru bukan transfer</td>
-							 	<td>59</td>
-							 	<td>59</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td>59</td>
+							 	<?php 
+							 		foreach ($total1 as $t) {
+							 	 ?>
+							 	 <td><?php echo $t['total1'] ?></td>
+							 	 <?php } ?>
+							 	 <?php 
+							 	 	foreach ($data1 as $d) {
+							 	  ?>
+							 	 <td><?php echo $d['j_maba_reg_bkn_trf']?></td>
+							 	 <?php } ?>
+							 	 <?php 
+							 		foreach ($total1 as $t) {
+							 	 ?>
+							 	 <td><?php echo $t['total1'] ?></td>
+							 	 <?php } ?>
 							 </tr>
 							 <tr>
 							 	<td>2</td>
 							 	<td>Mhs. baru transfer</td>
-							 	<td>0</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td>0</td>
+							 	<?php 
+							 		foreach ($total2 as $t) {
+							 	 ?>
+							 	 <td><?php echo $t['total2'] ?></td>
+							 	 <?php } ?>
+							 	 <?php 
+							 	 	foreach ($data2 as $d) {
+							 	  ?>
+							 	 <td><?php echo $d['j_maba_trf']?></td>
+							 	 <?php } ?>
+							 	 <?php 
+							 		foreach ($total2 as $t) {
+							 	 ?>
+							 	 <td><?php echo $t['total2'] ?></td>
+							 	 <?php } ?>
 							 </tr>
 							 <tr>
 							 	<td>3</td>
 							 	<td>Total mhs. regular (Student Body)</td>
-							 	<td>139</td>
-							 	<td>139</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td>139</td>
+							 	<?php 
+							 		foreach ($total3 as $t) {
+							 	 ?>
+							 	 <td><?php echo $t['total3'] ?></td>
+							 	 <?php } ?>
+							 	 <?php 
+							 	 	foreach ($data3 as $d) {
+							 	  ?>
+							 	 <td><?php echo $d['j_tot_reg_bkn_trf']?></td>
+							 	 <?php } ?>
+							 	 <?php 
+							 		foreach ($total3 as $t) {
+							 	 ?>
+							 	 <td><?php echo $t['total3'] ?></td>
+							 	 <?php } ?>
 							 </tr>
 							</tbody>
 							</table>
 							</div>
-							<!-- <div class="btn-group">
-								<a href="<?php echo base_url()'index.php/Apd_a345_excel/ubah'; ?>">
-									<button id="sample_editable_1_new" class="btn green">
-										Ubah
-									</button>
-								</a>
-							</div> -->
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_b312_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn green">

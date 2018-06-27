@@ -107,22 +107,6 @@ License: You must have a valid license purchased only from themeforest(the above
 											</a>
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
@@ -143,23 +127,84 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-								 <?php 
-									$no=4; 
-									foreach ($data as $d ) { 
-								?>
+								<?php 
+								foreach ($jml_wsd4 as $j) {?>
 								<tr>
-								 	<td>TS- <?php echo $no--; ?></td>
+								 	<td rowspan="2">TS-4</td>
+								 	<td rowspan="2"><?php echo $j['jml_wsd4'] ?></td>
+								 	<?php } ?>
+								 	<?php 
+										foreach ($data4 as $d ) { 
+									?>
+								 	<td><?php echo $d['instansi']; ?></td>
+								 	<td><?php echo $d['j_lulusan_psn']; ?></td>
+								 	<td><?php echo $d['j_lulusan_terima']; ?></td>
+
+								 </tr>
+								 <?php } ?>
+								 <tr>
+								 	<?php foreach ($jml_wsd3 as $j) {?>
+								 	<td rowspan="3">TS-3</td>
+								 	<td rowspan="3"><?php echo $j['jml_wsd3'] ?></td>
+								 	<?php } ?>
+								 	 <?php 
+										foreach ($data3 as $d ) { 
+									?>
 								 	<td><?php echo $d['instansi']; ?></td>
 								 	<td><?php echo $d['j_lulusan_psn']; ?></td>
 								 	<td><?php echo $d['j_lulusan_terima']; ?></td>
 								 </tr>
-								<?php } ?>
+								 <?php } ?>
+								  <tr>
+									<?php foreach ($jml_wsd2 as $j) {?>
+								 	<td rowspan="4">TS-2</td>
+								 	<td rowspan="4"><?php echo $j['jml_wsd2'] ?></td>
+								 	<?php } ?>
+								 	 <?php 
+										foreach ($data2 as $d ) { 
+									?>
+								 	<td><?php echo $d['instansi']; ?></td>
+								 	<td><?php echo $d['j_lulusan_psn']; ?></td>
+								 	<td><?php echo $d['j_lulusan_terima']; ?></td>
+								 </tr>
+								 <?php } ?>
+								<tr>
+									<?php foreach ($jml_wsd1 as $j) {?>
+								 	<td rowspan="5">TS-1</td>
+								 	<td rowspan="5"><?php echo $j['jml_wsd1'] ?></td>
+								 	<?php } ?>
+								 	 <?php 
+										foreach ($data1 as $d ) { 
+									?>
+								 	<td><?php echo $d['instansi']; ?></td>
+								 	<td><?php echo $d['j_lulusan_psn']; ?></td>
+								 	<td><?php echo $d['j_lulusan_terima']; ?></td>
+								 </tr>
+								 <?php } ?>
+								 <tr>
+									<?php foreach ($jml_wsd as $j) {?>
+								 	<td rowspan="6">TS</td>
+								 	<td rowspan="6"><?php echo $j['jml_wsd'] ?></td>
+								 	<?php } ?>
+								 	 <?php 
+										foreach ($data as $d ) { 
+									?>
+								 	<td><?php echo $d['instansi']; ?></td>
+								 	<td><?php echo $d['j_lulusan_psn']; ?></td>
+								 	<td><?php echo $d['j_lulusan_terima']; ?></td>
+								 </tr>
+								 <?php } ?>
 								<tr>
 									<td>Total</td>
 									<?php 
 							 			foreach ($jmllulusan_wsd as $jum) {
 							 		?>
 								 	<td><?php echo $jum['jmllulusan_wsd']; ?></td>
+								 	<?php } ?>
+								 	<td></td>
+								 	<?php foreach ($jml as $j) {?>
+								 	<td><?php echo $j['jmllulusan_psn'] ?></td>
+								 	<td><?php echo $j['jmllulusan_trm'] ?></td>
 								 	<?php } ?>
 								</tr>
 							</tbody> 

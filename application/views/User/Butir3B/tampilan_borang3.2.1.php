@@ -106,22 +106,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</a>
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
+									</div>\
 								</div>
 							</div>
 							
@@ -143,42 +128,31 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
 								<tr>
-								 	<td>1</td>
-								 	<td>Manajemen Informatika D3</td>
-								 	<td>3.2</td>
-								 	<td>3.59</td>
-								 	<td></td>
+								<?php 
+									$no=1;
+									foreach ($masastudi as $m) {
+								 ?>
+								 	<td><?php echo $no++; ?></td>
+								 	<td><?php echo $m['prodi'] ?></td>
+								 	<td><?php echo $m['rata_masa_std'] ?></td>
+								 	<td><?php echo $m['rata_ipk'] ?></td>
+								 	<td><?php echo $m['keterangan'] ?></td>
+								 	<?php } ?>
 								 </tr>
-								 
 								 <tr>
 								 	<td colspan="2">Rata-rata di Unit Pengelola**</td>
-								 	<td>3.20</td>
-								 	<td>3.59</td>
-								 	<td></td>
+								 	<?php 
+								 		foreach ($rata as $r) {
+								 	 ?>
+								 	 <td><?php echo $r['rata_mastud'] ?></td>
+								 	 <td><?php echo $r['rata2'] ?></td>
+								 	 <td></td>
+								 	 <?php } ?>
 								 </tr>
 							</tbody>
 							</table>
+							</div>
 							<!-- <div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_b321_excel/ubah";?>">
 									<button id="sample_editable_1_new" class="btn green">

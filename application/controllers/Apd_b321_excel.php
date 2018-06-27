@@ -10,9 +10,12 @@ class Apd_b321_excel extends CI_Controller {
  // }
 
 public function index() {
- $data = array( 'title' => 'TABEL DATA BUTIR 3.2.1 : MAHASISWA DAN LULUSAN',
- 'b321' => $this->Apd_b321_model->listing());
- $this->load->view('User/Butir3B/tampilan_borang3.2.1.php',$data);
+ // $data = array( 'title' => 'TABEL DATA BUTIR 3.2.1 : MAHASISWA DAN LULUSAN',
+ // 'b321' => $this->Apd_b321_model->listing());
+$masastudi=$this->Apd_b321_model->masastudi();
+$rata=$this->Apd_b321_model->rata();
+$this->load->view('User/Butir3B/tampilan_borang3.2.1.php',array('masastudi'=>$masastudi,
+																'rata'=>$rata));
  }
 
  public function ubah(){
