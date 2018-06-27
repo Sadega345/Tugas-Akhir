@@ -10,9 +10,9 @@ class Apd_b42_excel extends CI_Controller {
  }
 
 public function index() {
- $data = array( 'title' => ' TABEL DATA BUTIR 4.2 : TENAGA KEPENDIDIKAN',
- 'b42' => $this->apd_b42_model->listing());
- $this->load->view('User/Butir4B/tampilan_borang4.2.php',$data);
+ $data=$this->Apd_b42_model->getdata();
+ $total=$this->Apd_b42_model->gettotal();
+ $this->load->view('User/Butir4B/tampilan_borang4.2.php',array('data'=>$data, 'total'=>$total));
  }
 
 public function ubah(){

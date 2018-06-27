@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Butir 4.1.1 : SUMBER DAYA MANUSIA</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -99,11 +100,11 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<!-- <a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
 											Load
 											</button>
-											</a> -->
+											</a>
 										</div>
 									</div>
 								</div>
@@ -113,33 +114,17 @@ License: You must have a valid license purchased only from themeforest(the above
 							<thead>
 								<tr>
 									 <th rowspan="2">No</th>
-									 <th rowspan="2">Hal</th>
-									 <th rowspan="2">Total di Unit Pengelola**</th>
-									 <th colspan="7">Jumlah Dosen yang bertugas pada PS: *</th>
+									 <th rowspan="2"><center>Hal</center></th>
+									 <th rowspan="2"><center>Total di Unit Pengelola**</center></th>
+									 <th colspan="7"><center>Jumlah Dosen yang bertugas pada PS: *</center></th>
 								 </tr>
 								 <tr>
-								 <?php foreach ($prodi as $p) {
+								 <?php 
+								 	$no=1;
+								 	foreach ($prodi as $p) {
 								  ?>
-								 	<th>PS-1 <br><?php echo $p['prodi']; ?></th>
-								 	<th>PS-2 <br>Nama PS-2</th>
-								 	<th>PS-3 <br>Nama PS-3</th>
-								 	<th>PS-4 <br>Nama PS-4</th>
-								 	<th></th>
-								 	<th></th>
-								 	<th></th>
+								 	<th><center>PS-<?php echo $no++; ?> <br><?php echo $p['prodi']; ?></center></th>
 								 <?php } ?>
-								 </tr>
-								 <tr align="center">
-								 	<td>(1)</td>
-								 	<td>(2)</td>
-								 	<td>(3)</td>
-								 	<td>(4)</td>
-								 	<td>(5)</td>
-								 	<td>(6)</td>
-								 	<td>(7)</td>
-								 	<td>(8)</td>
-								 	<td>(9)</td>
-								 	<td>(10)</td>
 								 </tr>
 							</thead>
 							<tbody>
@@ -148,159 +133,138 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<th>Jabatan Fungsional :</th>
 							 	 <td></td>
 							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
 							 </tr>
 							 <tr>
 							 	<td>1</td>
 							 	<td>Asisten Ahli</td>
 							 	<?php 
+							 		foreach ($total1 as $t) {
+							 	 ?>
+							 	 <td><?php echo $t['total']; ?></td>
+							 	 <?php } ?>
+							 	 <?php 
 							 		foreach ($data1 as $d) {
 							 	 ?>
-							 	 <td><?php echo $d['total']; ?></td>
 							 	 <td><?php echo $d['jml']; ?></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
+							 	 <?php } ?>
 							 </tr>
 							 <tr>
 							 	<td>2</td>
 							 	<td>Lektor</td>
 							 	<?php 
+							 		foreach ($total2 as $t) {
+							 	 ?>
+							 	 <td><?php echo $t['total']; ?></td>
+							 	 <?php } ?>
+							 	 <?php 
 							 		foreach ($data2 as $d) {
 							 	 ?>
-							 	 <td><?php echo $d['total']; ?></td>
 							 	 <td><?php echo $d['jml']; ?></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
+							 	 <?php } ?>
 							 </tr>
 							 <tr>
 							 	<td>3</td>
 							 	<td>Lektor Kepala</td>
 							 	<?php 
+							 		foreach ($total3 as $t) {
+							 	 ?>
+							 	 <td><?php echo $t['total']; ?></td>
+							 	 <?php } ?>
+							 	 <?php 
 							 		foreach ($data3 as $d) {
 							 	 ?>
-							 	 <td><?php echo $d['total']; ?></td>
 							 	 <td><?php echo $d['jml']; ?></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
+							 	 <?php } ?>
 							 </tr>
 							  <tr>
 							 	<td>4</td>
 							 	<td>Guru Besar/Profesor</td>
 							 	<?php 
+							 		foreach ($total4 as $t) {
+							 	 ?>
+							 	 <td><?php echo $t['total']; ?></td>
+							 	 <?php } ?>
+							 	 <?php 
 							 		foreach ($data4 as $d) {
 							 	 ?>
-							 	 <td><?php echo $d['total']; ?></td>
 							 	 <td><?php echo $d['jml']; ?></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
+							 	 <?php } ?>
 							 </tr>
 							 <tr>
 							 	<td></td>
 							 	<td>Total</td>
 							 	<?php 
-							 		foreach ($total1 as $t) {
+							 		foreach ($totala as $t) {
 							 	 ?>
 							 	 <td><?php echo $t['totala']; ?></td>
-							 	 <td><?php echo $t['totalaps1']; ?></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
+							 	 <?php } ?>
+							 	 <?php 
+							 		foreach ($totalaps as $t) {
+							 	 ?>
+							 	 <td><?php echo $t['totalaps']; ?></td>
+							 	 <?php } ?>
 							 </tr>
 							 <tr>
 							 	<th>B</th>
 							 	<th>Pendidikan Tertinggi:</th>
 							 	<td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
+							 	<td></td>
 							 </tr>
 							  <tr>
 							 	<td>1</td>
 							 	<td>S1</td>
 							 	<?php 
+							 		foreach ($total5 as $t) {
+							 	 ?>
+							 	 <td><?php echo $t['total']; ?></td>
+							 	 <?php } ?>
+							 	 <?php 
 							 		foreach ($data5 as $d) {
 							 	 ?>
-							 	 <td><?php echo $d['total']; ?></td>
 							 	 <td><?php echo $d['jml']; ?></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
+							 	 <?php } ?>
 							 </tr>
 							 <tr>
 							 	<td>2</td>
 							 	<td>S2/Profesi/Sp-1</td>
 							 	<?php 
+							 		foreach ($total6 as $t) {
+							 	 ?>
+							 	 <td><?php echo $t['total']; ?></td>
+							 	 <?php } ?>
+							 	 <?php 
 							 		foreach ($data6 as $d) {
 							 	 ?>
-							 	 <td><?php echo $d['total']; ?></td>
 							 	 <td><?php echo $d['jml']; ?></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
+							 	 <?php } ?>
 							 </tr>
 							 <tr>
 							 	<td>3</td>
 							 	<td>S3/Sp-2</td>
 							 	<?php 
+							 		foreach ($total7 as $t) {
+							 	 ?>
+							 	 <td><?php echo $t['total']; ?></td>
+							 	 <?php } ?>
+							 	 <?php 
 							 		foreach ($data7 as $d) {
 							 	 ?>
-							 	 <td><?php echo $d['total']; ?></td>
 							 	 <td><?php echo $d['jml']; ?></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
+							 	 <?php } ?>
 							 </tr>
 							 <tr>
 							 	<td></td>
 							 	<td>Total</td>
 							 	<?php 
-							 		foreach ($total2 as $t) {
+							 		foreach ($totalb as $t) {
 							 	 ?>
 							 	 <td><?php echo $t['totalb']; ?></td>
-							 	 <td><?php echo $t['totalbps1']; ?></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
-							 	 <td></td>
+							 	 <?php } ?>
+							 	 <?php 
+							 		foreach ($totalbps as $t) {
+							 	 ?>
+							 	 <td><?php echo $t['totalbps']; ?></td>
+							 	 <?php } ?>
 							 </tr>
 							</tbody>
 							</table>
@@ -315,7 +279,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_b411_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
+									<button id="sample_editable_1_new" class="btn blue">
 										Export To Excel 
 									</button>
 								</a>
