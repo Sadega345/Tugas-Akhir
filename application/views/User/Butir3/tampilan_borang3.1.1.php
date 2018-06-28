@@ -107,22 +107,6 @@ License: You must have a valid license purchased only from themeforest(the above
 											</a>
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
 							<div style="overflow-x:auto;">
@@ -158,26 +142,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								</tr>
 							</thead>
 							<tbody>
-							
-							<tr align="center">
-								 	<td>(1)</td>
-								 	<td>(2)</td>
-								 	<td>(3)</td>
-								 	<td>(4)</td>
-								 	<td>(5)</td>
-								 	<td>(6)</td>
-								 	<td>(7)</td>
-								 	<td>(8)</td>
-								 	<td>(9)</td>
-								 	<td>(10)</td>
-								 	<td>(11)</td>
-								 	<td>(12)</td>
-								 	<td>(13)</td>
-								 	<td>(14)</td>
-								 	<td>(15)</td>
-								 	<td>(16)</td>
-								 	<td>(17)</td>
-								 </tr>
 								 <?php 
 									$no=4; 
 									foreach ($data as $d ) { 
@@ -252,7 +216,21 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>	
 								 <tr>
 								 	<td>Rataan</td>
-								 	<td colspan="15">3.59</td>
+								 	<?php 
+								 		foreach ($rata as $r) {
+								 	 ?>
+								 	 <td></td>
+								 	 <td></td>
+								 	 <td></td>
+								 	 <td></td>
+								 	 <td></td>
+								 	 <td></td>
+								 	 <td></td>
+								 	 <td></td>
+								 	 <td></td>
+								 	 <td></td>
+								 	<td colspan="15"><?php echo $r['rata']; ?></td>
+								 <?php } ?>
 								 </tr>
 							</tbody>
 							</table>

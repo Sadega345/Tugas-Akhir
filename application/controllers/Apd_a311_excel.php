@@ -24,6 +24,7 @@ $tottransfer=$this->Apd_a311_model->tottransfer();
 $lulusanregbukantransfer=$this->Apd_a311_model->lulusanregbukantransfer();
 
 $jumlulusantransfer=$this->Apd_a311_model->jumlulusantransfer();
+$rata=$this->Apd_a311_model->rata();
 
  $this->load->view('User/Butir3/tampilan_borang3.1.1.php',array('data'=>$data,
 
@@ -35,7 +36,8 @@ $jumlulusantransfer=$this->Apd_a311_model->jumlulusantransfer();
 
  																'tottransfer'=>$tottransfer,
  																'lulusanregbukantransfer'=>$lulusanregbukantransfer,
- 																'jumlulusantransfer'=>$jumlulusantransfer));
+ 																'jumlulusantransfer'=>$jumlulusantransfer,
+ 																'rata'=>$rata));
  }
 
  // public function ubah(){

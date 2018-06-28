@@ -17,12 +17,13 @@ public function index() {
  $kemristekdikti=$this->Apd_a721_model->kemristekdikti();
  $luarkemristekdikti=$this->Apd_a721_model->luarkemristekdikti();
  $luarnegeri=$this->Apd_a721_model->luarnegeri();
-
+ $jml=$this->Apd_a721_model->jml();
  $this->load->view('User/Butir7/tampilan_borang7.2.1.php',array('data'=>$data,
 																'bersangkutan'=>$bersangkutan,
 																'kemristekdikti'=>$kemristekdikti,
 																'luarkemristekdikti'=>$luarkemristekdikti,
-																'luarnegeri'=>$luarnegeri));
+																'luarnegeri'=>$luarnegeri,
+																'jml'=>$jml));
  }
 
  public function ubah($KD_JNS){
