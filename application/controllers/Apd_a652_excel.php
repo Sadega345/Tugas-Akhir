@@ -40,10 +40,10 @@ public function index() {
 		// $komp_tnp_jar=implode(',', $_POST['komp_tanpa_jaringan']);
 		// $lan = implode(',', $_POST['lan']);
 		// $wan =implode(',', $_POST['wan']) ;
- 		$manual = $_POST['manual'];
- 		$komp_tanpa_jaringan = $_POST['komp_tanpa_jaringan'];
- 		$lan = $_POST['lan'];
- 		$wan = $_POST['wan'];
+ 		$manual = implode(',', $_POST['manual']);
+ 		$komp_tanpa_jaringan = implode(',', $_POST['komp_tanpa_jaringan']);
+ 		$lan = implode(',', $_POST['lan']);
+ 		$wan = implode(',', $_POST['wan']);
 		$id=$_POST['id'];
 		
 		$data_update=array(
@@ -52,7 +52,6 @@ public function index() {
 			"komp_tnp_jar"=>$komp_tanpa_jaringan,
 			"lan"=>$lan,
 			"wan"=>$wan,
-			"id"=>$id,
 			
 		);
 		$where=array('id'=>$id);
