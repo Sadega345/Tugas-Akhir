@@ -125,6 +125,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;">
 							<form action="<?php echo base_url()."index.php/Apd_a721_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
@@ -144,38 +145,12 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><input type="text" name="TS" class="form-control" value="<?php echo $TS;?>"></td>
 							 	<td><?php echo $JML; ?></td>
 							 </tr>
-							 <tr>
-							 	<td>PT yang bersangkutan</td>
-							 	<td><input type="text" name="TS_2" class="form-control" value="<?php echo $TS_2;?>"></td>
-							 	<td><input type="text" name="TS_1" class="form-control" value="<?php echo $TS_1;?>"></td>
-							 	<td><input type="text" name="TS" class="form-control" value="<?php echo $TS;?>"></td>
-							 	<td><?php echo $JML; ?></td>
-							 </tr>
-							 <tr>
-							 	<td>Kemristekdikti</td>
-							 	<td><input type="text" name="TS_2" class="form-control" value="<?php echo $TS_2;?>"></td>
-							 	<td><input type="text" name="TS_1" class="form-control" value="<?php echo $TS_1;?>"></td>
-							 	<td><input type="text" name="TS" class="form-control" value="<?php echo $TS;?>"></td>
-							 	<td><?php echo $JML; ?></td>
-							 </tr>
-							  <tr>
-							 	<td>Institusi dalam negeri di luar Kemristekdikti</td>
-							 	<td><input type="text" name="TS_2" class="form-control" value="<?php echo $TS_2;?>"></td>
-							 	<td><input type="text" name="TS_1" class="form-control" value="<?php echo $TS_1;?>"></td>
-							 	<td><input type="text" name="TS" class="form-control" value="<?php echo $TS;?>"></td>
-							 	<td><?php echo $JML; ?></td>
-							 </tr>
-							 <tr>
-							 	<td>Institusi luar negeri</td>
-							 	<td><input type="text" name="TS_2" class="form-control" value="<?php echo $TS_2;?>"></td>
-							 	<td><input type="text" name="TS_1" class="form-control" value="<?php echo $TS_1;?>"></td>
-							 	<td><input type="text" name="TS" class="form-control" value="<?php echo $TS;?>"></td>
-							 	<td><?php echo $JML; ?></td>
-							 </tr>
+							 
 							 
 							</tbody>
 							</table>
 							<input type="hidden" name="KD_JNS" value="<?php echo $KD_JNS; ?>">
+							</div>
 							<div class="btn-group">
 								<button id="sample_editable_1_new" class="btn blue">
 									Simpan 

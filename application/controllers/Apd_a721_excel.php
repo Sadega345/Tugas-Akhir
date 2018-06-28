@@ -36,7 +36,18 @@ public function index() {
 			"KD_JNS"=>$res[0]['KD_JNS'],
 			
 		);
- 	$this->load->view('User/Butir7/edit_borang7.2.1.php',$data);
+ 	if ($KD_JNS == 1) {
+ 		$this->load->view('User/Butir7/edit_borang7.2.1.php',$data);
+ 	}else if ($KD_JNS == 2) {
+ 		$this->load->view('User/Butir7/edit_borang7.2.1(2).php',$data);
+ 	}else if ($KD_JNS == 3) {
+ 		$this->load->view('User/Butir7/edit_borang7.2.1(3).php',$data);
+ 	}else if ($KD_JNS == 4) {
+ 		$this->load->view('User/Butir7/edit_borang7.2.1(4).php',$data);
+ 	}else if ($KD_JNS == 5) {
+ 		$this->load->view('User/Butir7/edit_borang7.2.1(5).php',$data);
+ 	}
+ 	// $this->load->view('User/Butir7/edit_borang7.2.1.php',$data);
  }
 
  public function do_edit(){
@@ -47,7 +58,7 @@ public function index() {
 		$KD_JNS=$_POST['KD_JNS'];
 		
 		$data_update=array(
-			// "NAMA_DOSEN"=>$NAMA_DOSEN,
+			
 			"TS_2"=>$TS_2,
 			"TS_1"=>$TS_1,
 			"TS"=>$TS,

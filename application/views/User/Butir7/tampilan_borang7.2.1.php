@@ -143,9 +143,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									$no=1; 
 									foreach ($data as $d ) { 
 								?>
-								<td><?php echo $d['JML']; ?></td>
-								<td><?php echo $d['JML']; ?></td>
-								<td><?php echo $d['JML']; ?></td>
+								<td><?php echo $d['TS_2']; ?></td>
+								<td><?php echo $d['TS_1']; ?></td>
+								<td><?php echo $d['TS']; ?></td>
 							 	<td><?php echo $d['JML']; ?></td>
 							 	<td class="center">
 									<a href="<?php echo base_url()."index.php/Apd_a721_excel/ubah/".$d['KD_JNS'];?>" >Edit</a>
@@ -158,9 +158,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									$no=1; 
 									foreach ($bersangkutan as $b ) { 
 								?>
-								<td><?php echo $b['JML']; ?></td>
-								<td><?php echo $b['JML']; ?></td>
-								<td><?php echo $b['JML']; ?></td>
+								<td><?php echo $b['TS_2']; ?></td>
+								<td><?php echo $b['TS_1']; ?></td>
+								<td><?php echo $b['TS']; ?></td>
 							 	<td><?php echo $b['JML']; ?></td>
 							 	<td class="center">
 									<a href="<?php echo base_url()."index.php/Apd_a721_excel/ubah/".$b['KD_JNS'];?>" >Edit</a>
@@ -174,9 +174,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									$no=1; 
 									foreach ($kemristekdikti as $k ) { 
 								?>
-								<td><?php echo $k['JML']; ?></td>
-								<td><?php echo $k['JML']; ?></td>
-								<td><?php echo $k['JML']; ?></td>
+								<td><?php echo $k['TS_2']; ?></td>
+								<td><?php echo $k['TS_1']; ?></td>
+								<td><?php echo $k['TS']; ?></td>
 							 	<td><?php echo $k['JML']; ?></td>
 							 	<td class="center">
 									<a href="<?php echo base_url()."index.php/Apd_a721_excel/ubah/".$k['KD_JNS'];?>" >Edit</a>
@@ -190,9 +190,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									$no=1; 
 									foreach ($luarkemristekdikti as $lk ) { 
 								?>
-								<td><?php echo $lk['JML']; ?></td>
-								<td><?php echo $lk['JML']; ?></td>
-								<td><?php echo $lk['JML']; ?></td>
+								<td><?php echo $lk['TS_2']; ?></td>
+								<td><?php echo $lk['TS_1']; ?></td>
+								<td><?php echo $lk['TS']; ?></td>
 							 	<td><?php echo $lk['JML']; ?></td>
 							 	<td class="center">
 									<a href="<?php echo base_url()."index.php/Apd_a721_excel/ubah/".$lk['KD_JNS'];?>" >Edit</a>
@@ -206,9 +206,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									$no=1; 
 									foreach ($luarnegeri as $l ) { 
 								?>
-								<td><?php echo $l['JML']; ?></td>
-								<td><?php echo $l['JML']; ?></td>
-								<td><?php echo $l['JML']; ?></td>
+								<td><?php echo $l['TS_2']; ?></td>
+								<td><?php echo $l['TS_1']; ?></td>
+								<td><?php echo $l['TS']; ?></td>
 							 	<td><?php echo $l['JML']; ?></td>
 							 	<td class="center">
 									<a href="<?php echo base_url()."index.php/Apd_a721_excel/ubah/".$l['KD_JNS'];?>" >Edit</a>

@@ -21,7 +21,7 @@ class Login extends CI_Controller {
 	public function user_login()
 	{
 		$this->form_validation->set_rules('username', 'Username', 'required');
-		$this->form_validation->set_rules('password', 'Password', 'required|min_length[3]');
+		$this->form_validation->set_rules('password', 'Password', 'required|min_length[2]');
 		$this->form_validation->set_error_delimiters('<span class="text-danger">','</span>');
 		if($this->form_validation->run())
 		{

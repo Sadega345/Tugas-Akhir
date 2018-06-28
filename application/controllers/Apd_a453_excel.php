@@ -37,8 +37,9 @@ public function index() {
 		$jenis_kegiatan=$_POST['jenis_kegiatan'];
 		$tempat=$_POST['tempat'];
 		$tahun=$_POST['tahun'];
-		$sbg_penyaji=$_POST['sbg_penyaji'];
-		$sbg_peserta=$_POST['sbg_peserta'];
+		$sbg_penyaji=implode(',', $_POST['sbg_penyaji']);
+
+		$sbg_peserta=implode(',', $_POST['sbg_peserta']);
 		
 		$data_update=array(
 			"jenis_kegiatan"=>$jenis_kegiatan,

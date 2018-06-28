@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>Butir 4.5.3 : KEGIATAN DOSEN TETAP</title>
+<title>Butir 7.2.1 : KEGIATAN PELAYANAN/PENGABDIAN KEPADA MASYARAKAT (PKM)</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Butir 4.5.3 : KEGIATAN DOSEN TETAP
+								<i class="fa fa-edit"></i>Butir 7.2.1 : KEGIATAN PELAYANAN/PENGABDIAN KEPADA MASYARAKAT (PKM)
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -126,55 +126,46 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</div>
 							<div style="overflow-x:auto;">
-							<form action="<?php echo base_url()."index.php/Apd_a453_excel/do_edit"; ?>" method="POST">
+							<form action="<?php echo base_url()."index.php/Apd_a721_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th rowspan="2">No</th>
-									 <th rowspan="2">Nama Dosen Tetap</th>
-									 <th rowspan="2">Jenis Kegiatan*</th>
-									 <th rowspan="2">Tempat</th>
-									 <th rowspan="2">Tahun</th>
-									 <th colspan="2">Sebagai**</th>
-								 </tr>
-								 <tr>
-								 	<th>Peyaji</th>
-								 	<th>Peserta</th>
-								 </tr>
-								 <tr align="center">
-								 	<td>(1)</td>
-								 	<td>(2)</td>
-								 	<td>(3)</td>
-								 	<td>(4)</td>
-								 	<td>(5)</td>
-								 	<td>(6)</td>
-								 	<td>(7)</td>
+									 <th>Sumber Dana Kegiatan Pelayanan/Pengabdian kepada Masyarakat</th>
+									 <th>TS-2</th>
+									 <th>TS-1</th>
+									 <th>TS</th>
+									 <th>Jumlah</th>
 								 </tr>
 							</thead>
-							<tbody>
-							<tr>
-							 	<td>1</td>
-							 	<td><?php echo $nama_dosen; ?></td>
-							 	<td><input type="text" name="jenis_kegiatan" value="<?php echo $jenis_kegiatan; ?>"></td>
-							 	<td><input type="text" name="tempat" value="<?php echo $tempat; ?>" ></td>
-							 	<td><input type="text" name="tahun" value="<?php echo $tahun; ?>" ></td>
-							 	<td><input type="checkbox" name="sbg_penyaji[]" value="v" ></td>
-							 	<td><input type="checkbox" name="sbg_peserta[]" value="v" ></td>
+							<tbody>							
+							
+							 <tr>
+							 	<td>PT yang bersangkutan</td>
+							 	<td><input type="text" name="TS_2" class="form-control" value="<?php echo $TS_2;?>"></td>
+							 	<td><input type="text" name="TS_1" class="form-control" value="<?php echo $TS_1;?>"></td>
+							 	<td><input type="text" name="TS" class="form-control" value="<?php echo $TS;?>"></td>
+							 	<td><?php echo $JML; ?></td>
 							 </tr>
+							 
+							 
 							</tbody>
 							</table>
-							<div class="btn-group">
-								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+							<input type="hidden" name="KD_JNS" value="<?php echo $KD_JNS; ?>">
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a453_excel";?>">
+								<button id="sample_editable_1_new" class="btn blue">
+									Simpan 
+								</button>
+							</div>
+							</form>
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Apd_a721_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
-										Batal 
+										Batal
 									</button>
 								</a>
 							</div>
-						</form>
-						</div>
+
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->
