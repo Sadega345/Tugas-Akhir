@@ -45,4 +45,9 @@ class Apd_a721_model extends CI_Model {
 	return $res;
  }
 
+ public function jml(){
+ 	$jml=$this->db->query('Select sum(ts_2) as jmlts2,sum(ts_1) as jmlts1,sum(ts) as jmlts,sum(ts_2+ts_1+ts) as jmltotal from kegiatan_pkm where kd_prodi="p001"');
+ 	return $jml->result_array();
+ }
+
 }

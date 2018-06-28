@@ -107,22 +107,6 @@ License: You must have a valid license purchased only from themeforest(the above
 											</a> -->
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
@@ -218,11 +202,15 @@ License: You must have a valid license purchased only from themeforest(the above
 							 </tr>
 							 <tr>
 							 	<td>Jumlah</td>
-							 	<td>6</td>
-							 	<td>6</td>
-							 	<td>6</td>
-							 	<td>18</td>
-							 </tr>
+							 	<?php 
+							 		foreach ($jml as $j) {
+							 	 ?>
+							 	 <td><?php echo $j['jmlts2']; ?></td>
+							 	 <td><?php echo $j['jmlts1']; ?></td>
+							 	 <td><?php echo $j['jmlts']; ?></td>
+							 	 <td><?php echo $j['jmltotal']; ?></td>
+							 	<?php } ?>
+								 </tr>
 							</tbody>
 							</table>
 							<!-- <div class="btn-group">
