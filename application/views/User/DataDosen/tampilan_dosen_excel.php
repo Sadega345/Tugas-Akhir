@@ -4,12 +4,12 @@ header("Content-type: application/octet-stream");
 
 header("Pragma: no-cache");
 
-// header("Content-Disposition: attachment; filename=$title.xls");
+header("Content-Disposition: attachment; filename=DATA DOSEN.xls");
 
 header("Expires: 0");
 
 ?>
-<p>TABEL DATA Dosen</p>
+<p><center>DATA DOSEN</center></p>
 <table border="1" width="50%">
 		<thead>
 			 <tr>
@@ -23,31 +23,15 @@ header("Expires: 0");
 				 <th colspan="3">S3</th>
 			 </tr>
 			 <tr>
-			 	<td>Gelar Akademik</td>
-			 	<td>Asal PT</td>
-			 	<td>Bidang Keahlian</td>
-			 	<td>Gelar Akademik</td>
-			 	<td>Asal PT</td>
-			 	<td>Bidang Keahlian</td>
-			 	<td>Gelar Akademik</td>
-			 	<td>Asal PT</td>
-			 	<td>Bidang Keahlian</td>
-			 </tr>
-			 <tr>
-			 	<th>(1)</th>
-			 	<th>(2)</th>
-			 	<th>(3)</th>
-			 	<th>(4)</th>
-			 	<th>(5)</th>
-			 	<th>(6)</th>
-			 	<th>(7)</th>
-			 	<th>(8)</th>
-			 	<th>(9)</th>
-			 	<th>(10)</th>
-			 	<th>(11)</th>
-			 	<th>(12)</th>
-			 	<th>(13)</th>
-			 	<th>(14)</th>
+			 	<th>Gelar Akademik</th>
+				<th>Asal PT</th>
+				<th>Bidang Keahlian</th>
+				<th>Gelar Akademik</th>
+				<th>Asal PT</th>
+				<th>Bidang Keahlian</th>
+				<th>Gelar Akademik</th>
+				<th>Asal PT</th>
+				<th>Bidang Keahlian</th>
 			 </tr>
 		</thead>
 		<tbody>
@@ -56,7 +40,6 @@ header("Expires: 0");
 			foreach ($data as $d ) { 
 		?>
 		<tr align="center">
-		 	<tr>
 			 	<td><?php echo $no++; ?></td>
 			 	<td><?php echo $d['NAMA_DOSEN']; ?></td>
 			 	<td><?php echo $d['NIDN']; ?></td>

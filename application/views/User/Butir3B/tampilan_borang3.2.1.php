@@ -107,22 +107,6 @@ License: You must have a valid license purchased only from themeforest(the above
 											</a>
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
 							<div style="overflow-x:auto;" class="col-md-20">
@@ -136,13 +120,6 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th>Rata-rata IPK Lulusan*</th>
 									 <th>Keterangan</th>
 									 <th rowspan="2">Aksi</th>
-								 </tr>
-								 <tr>
-								 	<td>(1)</td>
-								 	<td>(2)</td>
-								 	<td>(3)</td>
-								 	<td>(4)</td>
-								 	<td>(5)</td>
 								 </tr>
 							</thead>
 							<tbody>

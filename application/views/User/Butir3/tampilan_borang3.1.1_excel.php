@@ -10,7 +10,6 @@ header("Expires: 0");
 
 ?>
 <p> TABEL DATA BUTIR 3.1 : PROFIL MAHASISWA DAN LULUSAN</p>
-<p>3.1.1 Tuliskan data seluruh mahasiswa reguler dan lulusannya dalam lima tahun terakhir pada tabel berikut:</p>
 <table border="1" width="50%">
 		<thead>
 			 <tr>
@@ -41,24 +40,6 @@ header("Expires: 0");
 			 </tr>
 		</thead>
 		<tbody>
-			 <tr align="center">
-			 	<td>(1)</td>
-			 	<td>(2)</td>
-			 	<td>(3)</td>
-			 	<td>(4)</td>
-			 	<td>(5)</td>
-			 	<td>(6)</td>
-			 	<td>(7)</td>
-			 	<td>(8)</td>
-			 	<td>(9)</td>
-			 	<td>(10)</td>
-			 	<td>(11)</td>
-			 	<td>(12)</td>
-			 	<td>(13)</td>
-			 	<td>(14)</td>
-			 	<td>(15)</td>
-			 	<td>(16)</td>
-			 </tr>
 			 <?php 
 									$no=4; 
 									foreach ($data as $d ) { 
@@ -126,18 +107,38 @@ header("Expires: 0");
 							 		?>
 								 	<td><?php echo $i['Jumlah_LulusanTransfer']; ?></td>
 								 	<?php } ?>
-
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
 								 </tr>	
 								 <tr>
 								 	<td>Rataan</td>
-								 	<td colspan="15">3.59</td>
+								 	<?php 
+								 		foreach ($rata as $r) {
+								 	 ?>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	<td><?php echo $r['rata']; ?></td>
+								 	<td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 <?php } ?>
 								 </tr>
 		</tbody>
 	</table>
-	<p>Catatan:
-	<br>TS:Tahun akademik penuh terakhir saat pengisian borang
-	<br>Min: IPK Minimum; Rat:IPK Rata-rata; Mak:IPK Maksimum
-	<br>Mahasiswa program reguler adalah mahasiswa yang mengikuti program pendidikan secara penuh waktu (baik kelas pagi, siang, sore, malam, dan di seluruh kampus)
-	<br>Mahasiswa program non-reguler adalah mahasiswa yang mengikuti program pendidikan secara paruh waktu
-	<br>Mahasiswa transfer adalah mahasiswa yang masuk ke program studi dengan mentransfer mata kuliah yang telah diperolehnya dari PS lain, baik dari dalam PT 
-	</p>
+

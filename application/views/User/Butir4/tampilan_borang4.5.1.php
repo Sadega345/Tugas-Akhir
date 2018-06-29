@@ -119,14 +119,6 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th><center>Tahun Pelaksanaan</center></th>
 									 <th><center>Aksi</center></th>
 								 </tr>
-								 <tr align="center">
-								 	<td>(1)</td>
-								 	<td>(2)</td>
-								 	<td>(3)</td>
-								 	<td>(4)</td>
-								 	<td>(5)</td>
-								 	<td>(6)</td>
-								 </tr>
 							</thead>
 							<tbody>
 							<tr>

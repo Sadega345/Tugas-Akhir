@@ -60,7 +60,7 @@ public function export_excel(){
  // $data = array( 'title' => ' TABEL DATA BUTIR 5.2.2 : Waktu Pelaksanaan Real Proses Belajar Mengajar',
  // 'a522' => $this->apd_a522_model->listing());
  $data=$this->Apd_a522_model->listing();
- $this->load->view('User/Butir5/tampilan_borang5.2.2_excel',array('data'=>$data));
+ $this->load->view('User/Butir5/tampilan_borang5.2.2_excel.php',array('data'=>$data));
  }
 
 }

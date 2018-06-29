@@ -19,13 +19,6 @@ header("Expires: 0");
 				 <th>Nama dan Judul Kegiatan</th>
 				 <th>Tahun Pelaksanaan</th>
 			 </tr>
-			 <tr align="center">
-			 	<td>(1)</td>
-			 	<td>(2)</td>
-			 	<td>(3)</td>
-			 	<td>(4)</td>
-			 	<td>(5)</td>
-			 </tr>
 		</thead>
 		<tbody>
 			<tr>

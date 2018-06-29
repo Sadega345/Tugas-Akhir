@@ -20,9 +20,9 @@ public function ubah(){
  }
 
 public function export_excel(){
- $data = array( 'title' => ' TABEL DATA BUTIR 4.2 : TENAGA KEPENDIDIKAN',
- 'b42' => $this->apd_b42_model->listing());
- $this->load->view('User/Butir4B/tampilan_borang4.2_excel.php',$data);
+ $data=$this->Apd_b42_model->getdata();
+ $total=$this->Apd_b42_model->gettotal();
+ $this->load->view('User/Butir4B/tampilan_borang4.2_excel.php',array('data'=>$data, 'total'=>$total));
  }
 
 }

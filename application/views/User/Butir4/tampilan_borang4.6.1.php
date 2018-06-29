@@ -129,20 +129,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<th><center>SMA/SMK</center></th>
 
 								 </tr>
-								 <tr align="center">
-								 	<td>(1)</td>
-								 	<td>(2)</td>
-								 	<td>(3)</td>
-								 	<td>(4)</td>
-								 	<td>(5)</td>
-								 	<td>(6)</td>
-								 	<td>(7)</td>
-								 	<td>(8)</td>
-								 	<td>(9)</td>
-								 	<td>(10)</td>
-								 	<td>(11)</td>
-								 	<td>(12)</td>
-								 </tr>
 							</thead>
 							<tbody>
 							<?php 
@@ -170,7 +156,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 <input type="hidden" name="kd_jns" value="<?php echo $d['kd_jns']; ?>">
 							<?php } ?>
 							 <tr>
-							 	<td colspan="2">Total</td>
+							 	<td colspan="2"><strong>Total</strong></td>
 							 	<?php 
 									foreach ($tots3 as $s3 ) { 
 								?>

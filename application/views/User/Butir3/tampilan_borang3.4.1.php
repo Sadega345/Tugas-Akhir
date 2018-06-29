@@ -107,33 +107,18 @@ License: You must have a valid license purchased only from themeforest(the above
 											</a>
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
 							<div style="overflow-x:auto;">
+							<p><strong>3.4.1 Evaluasi Kinerja lulusan oleh Pihak Pengguna Lulusan</strong></p>
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th rowspan="2">No.</th>
-									 <th rowspan="2">Jenis Kemampuan</th>
-									 <th colspan="4">Tanggapan Pihak pengguna (%)</th>
-									 <th rowspan="2">Rencana Tindak Lanjut oleh Program Studi</th>
-									 <th rowspan="2">Aksi</th>
+									 <th rowspan="2"><center>No.</center></th>
+									 <th rowspan="2"><center>Jenis Kemampuan</center></th>
+									 <th colspan="4"><center>Tanggapan Pihak pengguna (%)</center></th>
+									 <th rowspan="2"><center>Rencana Tindak Lanjut oleh Program Studi</center></th>
+									 <th rowspan="2"><center>Aksi</center></th>
 								 </tr>
 								 <tr>
 								 	<th>Sangat Baik</th>
@@ -163,7 +148,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<?php } ?>
 							 
 							 <tr>
-							 	<td colspan="2">Total</td>
+							 	<td colspan="2"><strong>Total</strong></td>
 							 	<?php 
 									foreach ($sangatbaik as $d ) { 
 								?>
@@ -190,6 +175,26 @@ License: You must have a valid license purchased only from themeforest(the above
 							 </tr>
 							</tbody>
 							</table>
+							<p><strong>3.4.3 Rata-rata waktu tunggu lulusan untuk memperoleh pekerjaan yang pertama</strong>
+								<table class="table table-striped table-bordered table-hover" id="sample_1">	
+									<tr>
+										<?php foreach ($waktu as $w ) {
+										 ?>
+										<td><?php echo $w['waktu'] ; ?></td>
+										<?php } ?>
+									</tr>
+								</table> bulan
+							</p>
+							<p><strong>3.4.4 Persentase lulusan yang bekerja pada bidang yang sesuai dengan keahliannya</strong>
+								<table class="table table-striped table-bordered table-hover" id="sample_1">	
+									<tr>
+										<?php foreach ($persen as $p ) {
+										 ?>
+										<td><?php echo $p['persen'] ; ?></td>
+										<?php } ?>
+									</tr>
+								</table>
+							</p>
 							</div>
 							<!-- <div class="btn-group">
 								<a href="<?php echo base_url().'index.php/Apd_a341_excel/ubah'; ?>">

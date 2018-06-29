@@ -70,3 +70,23 @@ header("Expires: 0");
 		 </tr>
 		</tbody>
 	</table>
+	<p><strong>3.4.3 Rata-rata waktu tunggu lulusan untuk memperoleh pekerjaan yang pertama</strong>
+								<table border="1px">	
+									<tr>
+										<?php foreach ($waktu as $w ) {
+										 ?>
+										<td><?php echo $w['waktu'] ; ?></td>
+										<?php } ?>
+									</tr>
+								</table> bulan
+							</p>
+							<p><strong>3.4.4 Persentase lulusan yang bekerja pada bidang yang sesuai dengan keahliannya</strong>
+								<table border="1px">	
+									<tr>
+										<?php foreach ($persen as $p ) {
+										 ?>
+										<td><?php echo $p['persen'] ; ?></td>
+										<?php } ?>
+									</tr>
+								</table>
+							</p>

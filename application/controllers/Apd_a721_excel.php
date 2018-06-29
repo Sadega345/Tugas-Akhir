@@ -83,13 +83,13 @@ public function export_excel(){
  $kemristekdikti=$this->Apd_a721_model->kemristekdikti();
  $luarkemristekdikti=$this->Apd_a721_model->luarkemristekdikti();
  $luarnegeri=$this->Apd_a721_model->luarnegeri();
-
+ $jml=$this->Apd_a721_model->jml();
  $this->load->view('User/Butir7/tampilan_borang7.2.1_excel.php',array('data'=>$data,
 																'bersangkutan'=>$bersangkutan,
 																'kemristekdikti'=>$kemristekdikti,
 																'luarkemristekdikti'=>$luarkemristekdikti,
-																'luarnegeri'=>$luarnegeri));
- 
+																'luarnegeri'=>$luarnegeri,
+																'jml'=>$jml)); 
  }
 
 }

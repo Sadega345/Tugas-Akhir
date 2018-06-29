@@ -155,17 +155,17 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $id; ?></td>
 							 	<td><?php echo $jenis_data; ?></td>
 							 	<td>
-	                    			<input type="checkbox" name="manual[]" class="form-control" value="v" >
+	                    			<input type="checkbox" name="manual" class="form-control" value="v" >
 	                    			
 	                    		</td>
 							 	<td>
-	                    			<input type="checkbox" name="komp_tanpa_jaringan[]" class="form-control" value="v"  >
+	                    			<input type="checkbox" name="komp_tanpa_jaringan" class="form-control" value="v"  >
 	                    		</td>
 							 	<td>
-	                    			<input type="checkbox" name="lan[]" class="form-control" value="v"  >
+	                    			<input type="checkbox" name="lan" class="form-control" value="v"  >
 	                    		</td>
 							 	<td>
-	                    			<input type="checkbox" name="wan[]" class="form-control" value="v"  >
+	                    			<input type="checkbox" name="wan" class="form-control" value="v"  >
 	                    		</td>
 							 </tr>
 							 

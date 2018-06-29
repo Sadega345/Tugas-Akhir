@@ -100,68 +100,67 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<!-- <a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
 											Load
 											</button>
-											</a> -->
+											</a>
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
 							<table >
+								<tr>
+									<th></th>
+									<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+									<th></th>
+									<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+									<th></th>
+								</tr>
+							
 							<thead>
 								<tr>
-									 <td>Teori</td>
+									<td>Teori</td>
+									<td></td>									 
 									<?php 
 										foreach ($data as $d ) { 
 									?>
-									 <td><?php echo $d['teori']; ?></td>
+									 <td bgcolor="yellow"><?php echo $d['teori']; ?></td>
 									 <?php } ?>
-									 
+									 <td></td>
 									 <td>Jam per paket program</td>
 								 </tr>
 								 <tr>
 									 <td>Praktek</td>
+									 <td></td>
 									 <?php 
 										foreach ($data as $d ) { 
 									?>
-									 <td><?php echo $d['praktek']; ?></td>
+									 <td bgcolor="yellow"><?php echo $d['praktek']; ?></td>
 									 <?php } ?>
+									 <td></td>
 									 <td>Jam per paket program</td>
 								 </tr>
 								 <tr>
 									 <td>Praktikum</td>
+									 <td></td>
 									 <?php 
 										foreach ($data as $d ) { 
 									?>
-									 <td><?php echo $d['praktikum']; ?></td>
+									 <td bgcolor="yellow"><?php echo $d['praktikum']; ?></td>
 									 <?php } ?>
+									 <td></td>
 									 <td>Jam per paket program</td>
 								 </tr>
 								 <tr>
 									 <td>Praktek Kerja lapangan</td>
+									 <td></td>
 									 <?php 
 										foreach ($data as $d ) { 
 									?>
-									 <td><?php echo $d['pkl']; ?></td>
+									 <td bgcolor="yellow"><?php echo $d['pkl']; ?></td>
 									 <?php } ?>
+									 <td></td>
 									 <td>Jam per paket program</td>
 								 </tr>
 							</thead>
@@ -183,7 +182,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</form>
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a522_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
+									<button id="sample_editable_1_new" class="btn blue">
 										Export To Excel
 									</button>
 								</a>

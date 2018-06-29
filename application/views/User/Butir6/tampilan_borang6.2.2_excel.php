@@ -18,12 +18,6 @@ header("Expires: 0");
 				 <th>Sumber dan Jenis Data</th>
 				 <th>Jumlah Dana* (dalam juta rupiah)</th>
 			 </tr>
-			 <tr align="center">
-			 	<th>(1)</th>
-			 	<th>(2)</th>
-			 	<th>(3)</th>
-			 	<th>(4)</th>
-			 </tr>
 		</thead>
 		<tbody>
 							

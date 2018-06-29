@@ -70,7 +70,7 @@ j_llsn_reg_bkn_trf,j_llsn_trf,ipk_min,ipk_rat,ipk_mak,PRSN_IPK1,PRSN_IPK2,PRSN_I
  }
 
  public function rata(){
- 	$rata=$this->db->query('select sum((ipk_rat*j_llsn_reg_bkn_trf)/(select sum(j_llsn_reg_bkn_trf)from data_mhs where id_prodi="p001" and tahun BETWEEN "2012" and "2016" )) as rata from data_mhs where id_prodi="p001" and tahun BETWEEN "2012" and "2016";');
+ 	$rata=$this->db->query('select round(sum((ipk_rat*j_llsn_reg_bkn_trf)/(select sum(j_llsn_reg_bkn_trf)from data_mhs where id_prodi="p001" and tahun BETWEEN "2012" and "2016" )),2) as rata from data_mhs where id_prodi="p001" and tahun BETWEEN "2012" and "2016";');
  	return $rata->result_array();
  }
 

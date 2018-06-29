@@ -17,12 +17,16 @@ public function index() {
 	$baik=$this->Apd_a341_model->baik();
 	$cukup=$this->Apd_a341_model->cukup();
 	$kurang=$this->Apd_a341_model->kurang();
+	$waktu=$this->Apd_a341_model->waktu();
+	$persen=$this->Apd_a341_model->persen();
 
  $this->load->view('User/Butir3/tampilan_borang3.4.1.php',array('data'=>$data,
 																'sangatbaik'=>$sangatbaik,
 																'baik'=>$baik,
 																'cukup'=>$cukup,
-																'kurang'=>$kurang));
+																'kurang'=>$kurang,
+																'waktu'=>$waktu,
+																'persen'=>$persen));
  }
 
  public function ubah($id){
@@ -68,12 +72,16 @@ public function export_excel(){
 	$baik=$this->Apd_a341_model->baik();
 	$cukup=$this->Apd_a341_model->cukup();
 	$kurang=$this->Apd_a341_model->kurang();
+	$waktu=$this->Apd_a341_model->waktu();
+	$persen=$this->Apd_a341_model->persen();
 
  $this->load->view('User/Butir3/tampilan_borang3.4.1_excel.php',array('data'=>$data,
 																'sangatbaik'=>$sangatbaik,
 																'baik'=>$baik,
 																'cukup'=>$cukup,
-																'kurang'=>$kurang));
+																'kurang'=>$kurang,
+																'waktu'=>$waktu,
+																'persen'=>$persen));
  }
 
 }

@@ -130,14 +130,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								 <?php } ?>
 								 	<th>Total Mahasiswa</th>
 								 </tr>
-
-								 <tr align="center">
-								 	<td>(1)</td>
-								 	<td>(2)</td>
-								 	<td>(3)</td>
-								 	<td>(4)</td>
-								 	<td>(<?php echo $num; ?>)</td>
-								 </tr>
 							</thead>
 							<tbody>
 							<tr>
@@ -152,10 +144,10 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	 	foreach ($data1 as $d) {
 							 	  ?>
 							 	 <td><?php echo $d['j_maba_reg_bkn_trf']?></td>
+							 	 <?php } ?>
 							 	 <td class="center">
 									<a href="<?php echo base_url()."index.php/Apd_b312_excel/ubah/".$d['id'];?>" >Edit</a>
 								 </td>
-							 	 <?php } ?>
 							 	 <?php 
 							 		foreach ($total1 as $t) {
 							 	 ?>
@@ -175,10 +167,10 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	 	foreach ($data2 as $d) {
 							 	  ?>
 							 	 <td><?php echo $d['j_maba_trf']?></td>
+							 	 <?php } ?>
 							 	 <td class="center">
 									<a href="<?php echo base_url()."index.php/Apd_b312_excel/ubah/".$d['id'];?>" >Edit</a>
 								 </td>
-							 	 <?php } ?>
 							 	 <?php 
 							 		foreach ($total2 as $t) {
 							 	 ?>
@@ -197,10 +189,10 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	 	foreach ($data3 as $d) {
 							 	  ?>
 							 	 <td><?php echo $d['j_tot_reg_bkn_trf']?></td>
+							 	 <?php } ?>
 							 	 <td class="center">
 									<a href="<?php echo base_url()."index.php/Apd_b312_excel/ubah/".$d['id'];?>" >Edit</a>
 								 </td>
-							 	 <?php } ?>
 							 	 <?php 
 							 		foreach ($total3 as $t) {
 							 	 ?>
@@ -212,7 +204,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_b312_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
+									<button id="sample_editable_1_new" class="btn blue">
 										Export To Excel 
 									</button>
 								</a>

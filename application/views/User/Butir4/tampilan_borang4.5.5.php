@@ -126,17 +126,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<th><center>Nasional</center></th>
 								 	<th><center>Lokal</center></th>
 								 </tr>
-								 <tr align="center">
-								 	<td>(1)</td>
-								 	<td>(2)</td>
-								 	<td>(3)</td>
-								 	<td>(4)</td>
-								 	<td>(5)</td>
-								 	<td>(6)</td>
-								 	<td>(7)</td>
-								 	<td>(8)</td>
-								 	<td>(9)</td>
-								 </tr>
 							</thead>
 							<tbody>
 							<tr>

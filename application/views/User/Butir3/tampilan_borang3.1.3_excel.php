@@ -33,7 +33,6 @@ header("Expires: 0");
 			$no=4; 
 			foreach ($data3 as $d ) { 
 		?>
-		<tr>
 		 	<tr>
 		 	<td>TS- <?php echo $no--; ?></td>
 		 	<td><?php echo$d['ts_4']; ?></td>

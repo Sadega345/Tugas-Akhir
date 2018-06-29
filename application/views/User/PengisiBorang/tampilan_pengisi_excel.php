@@ -10,7 +10,7 @@ header("Pragma: no-cache");
 header("Expires: 0");
 
 ?>
-<p>TABEL DATA Pengisi Borang</p>
+<p><center>TABEL DATA Pengisi Borang</center></p>
 <table border="1" width="50%">
 		<thead>
 			 <tr>
@@ -25,8 +25,7 @@ header("Expires: 0");
 		<?php 
 			$no=1; 
 			foreach ($data as $d ) { ?> 
-		<tr align="center">
-		 	 <tr>
+			<tr align="center">
 			 	<td><?php echo $no++; ?></td>
 			 	<td><?php echo $d['nama']; ?></td>
 			 	<td><?php echo $d['nidn'] ?></td>

@@ -107,33 +107,17 @@ License: You must have a valid license purchased only from themeforest(the above
 											</a>
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
 							<h3>Diisi oleh PS D3</h3>
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th rowspan="2">Tahun Masuk</th>
-									 <th colspan="5">Jumlah Mahasiswa Reguler per Angkatan pada Tahun<br>
-									 (tidak memasukkan mahasiswa transfer)</th>
-									 <th rowspan="2">Jumlah Lulusan<br>s.d. TS</th>
-									 <th rowspan="2">Aksi</th>
+									 <th rowspan="2"><center>Tahun Masuk</center></th>
+									 <th colspan="5"><center>Jumlah Mahasiswa Reguler per Angkatan pada Tahun<br>
+									 (tidak memasukkan mahasiswa transfer)</center></th>
+									 <th rowspan="2"><center>Jumlah Lulusan<br>s.d. TS</center></th>
+									 <th rowspan="2"><center>Aksi</center></th>
 								 </tr>
 								 <tr>
 								 	<th>TS-4</th>

@@ -116,7 +116,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2">No</th>
 									 <th rowspan="2"><center>Hal</center></th>
 									 <th rowspan="2"><center>Total di Unit Pengelola**</center></th>
-									 <th colspan="7"><center>Jumlah Dosen yang bertugas pada PS: *</center></th>
+									 <th><center>Jumlah Dosen yang bertugas pada PS: *</center></th>
 								 </tr>
 								 <tr>
 								 <?php 
@@ -192,7 +192,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 </tr>
 							 <tr>
 							 	<td></td>
-							 	<td>Total</td>
+							 	<td><strong>Total</strong></td>
 							 	<?php 
 							 		foreach ($totala as $t) {
 							 	 ?>
@@ -254,7 +254,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 </tr>
 							 <tr>
 							 	<td></td>
-							 	<td>Total</td>
+							 	<td><strong>Total</strong></td>
 							 	<?php 
 							 		foreach ($totalb as $t) {
 							 	 ?>

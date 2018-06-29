@@ -112,6 +112,7 @@ public function do_tambah(){
 		
 		$data_update=array(
 			
+			"kode_mk"=>$kode_mk,
 			"nama_mk"=>$nama_mk,
 			"sks_kuliah"=>$sks_kuliah,
 			"sks_praktek"=>$sks_praktek,

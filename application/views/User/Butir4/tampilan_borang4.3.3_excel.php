@@ -28,18 +28,6 @@ header("Expires: 0");
 			 	<th>PS Sendiri</th>
 			 	<th>PT Lain</th>
 			 </tr>
-			 <tr align="center">
-			 	<td>(1)</td>
-			 	<td>(2)</td>
-			 	<td>(3)</td>
-			 	<td>(4)</td>
-			 	<td>(5)</td>
-			 	<td>(6)</td>
-			 	<td>(7)</td>
-			 	<td>(8)</td>
-			 	<td>(9)</td>
-			 	<td>(10)</td>
-			 </tr>
 		</thead>
 		<tbody>
 			<?php 

@@ -40,7 +40,7 @@ header("Expires: 0");
 		 <?php } ?>
 		 
 		 <tr>
-		 	<td >Total</td>
+		 	<td><strong>Total</strong></td>
 		 <?php 
 			foreach ($totmanual as $d ) { 
 		 ?>

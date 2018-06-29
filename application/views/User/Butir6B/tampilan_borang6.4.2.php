@@ -142,7 +142,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 <?php } ?>
 							 
 							 <tr>
-							 	<td >Total</td>
+							 	<td ><strong>Total</strong></td>
 							 <?php 
 								foreach ($totmanual as $d ) { 
 							 ?>

@@ -98,23 +98,6 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="portlet-body">
 							<div class="table-toolbar">
 								<div class="row">
-									
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
 							<div style="overflow-x:auto;">
@@ -127,7 +110,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Data_Dosen_Excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
+									<button id="sample_editable_1_new" class="btn blue">
 										Export ke Excel 
 									</button>
 								</a>
@@ -146,32 +129,15 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2">Aksi</th>
 								 </tr>
 								 <tr>
-								 	<td>Gelar Akademik</td>
-								 	<td>Asal PT</td>
-								 	<td>Bidang Keahlian</td>
-								 	<td>Gelar Akademik</td>
-								 	<td>Asal PT</td>
-								 	<td>Bidang Keahlian</td>
-								 	<td>Gelar Akademik</td>
-								 	<td>Asal PT</td>
-								 	<td>Bidang Keahlian</td>
-								 </tr>
-								 <tr>
-								 	<th>(1)</th>
-								 	<th>(2)</th>
-								 	<th>(3)</th>
-								 	<th>(4)</th>
-								 	<th>(5)</th>
-								 	<th>(6)</th>
-								 	<th>(7)</th>
-								 	<th>(8)</th>
-								 	<th>(9)</th>
-								 	<th>(10)</th>
-								 	<th>(11)</th>
-								 	<th>(12)</th>
-								 	<th>(13)</th>
-								 	<th>(14)</th>
-								 	<th>(15)</th>
+								 	<th>Gelar Akademik</th>
+								 	<th>Asal PT</th>
+								 	<th>Bidang Keahlian</th>
+								 	<th>Gelar Akademik</th>
+								 	<th>Asal PT</th>
+								 	<th>Bidang Keahlian</th>
+								 	<th>Gelar Akademik</th>
+								 	<th>Asal PT</th>
+								 	<th>Bidang Keahlian</th>
 								 </tr>
 							</thead>
 							<tbody>

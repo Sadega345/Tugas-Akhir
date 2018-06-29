@@ -45,4 +45,14 @@ class Apd_a341_model extends CI_Model {
  return $data->result_array();
  }
 
+ public function waktu() {
+ $data=$this->db->query('SELECT waktu FROM wkt_tunggu_llsn WHERE id_prodi="p001"');
+ return $data->result_array();
+ }
+
+ public function persen() {
+ $data=$this->db->query('SELECT persen FROM persentase_llsn WHERE id_prodi="p001"');
+ return $data->result_array();
+ }
+
 }

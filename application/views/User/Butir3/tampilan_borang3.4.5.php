@@ -119,13 +119,6 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th>Jumlah Lulusan yang diterima</th>
 									 <th rowspan="2">Aksi</th>
 								 </tr>
-								 <tr align="center">
-								 	<td>(1)</td>
-								 	<td>(2)</td>
-								 	<td>(3)</td>
-								 	<td>(4)</td>
-								 	<td>(5)</td>
-								 </tr>
 							</thead>
 							<tbody>
 								<?php 
@@ -211,16 +204,16 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 								 <?php } ?>
 								<tr>
-									<td>Total</td>
+									<th>Total</th>
 									<?php 
 							 			foreach ($jmllulusan_wsd as $jum) {
 							 		?>
-								 	<td><?php echo $jum['jmllulusan_wsd']; ?></td>
+								 	<th><?php echo $jum['jmllulusan_wsd']; ?></th>
 								 	<?php } ?>
-								 	<td></td>
+								 	<th></th>
 								 	<?php foreach ($jml as $j) {?>
-								 	<td><?php echo $j['jmllulusan_psn'] ?></td>
-								 	<td><?php echo $j['jmllulusan_trm'] ?></td>
+								 	<th><?php echo $j['jmllulusan_psn'] ?></th>
+								 	<th><?php echo $j['jmllulusan_trm'] ?></th>
 								 	<?php } ?>
 								</tr>
 							</tbody> 

@@ -114,31 +114,31 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 							<thead>
 								<tr>
-									<td rowspan="2">Tahun <br> akademik</td>
-									<td rowspan="2">Daya <br> tampung</td>
-									<td colspan="2">Jumlah calon mahasiswa</td>
-									<td colspan="2">Jumlah mahasiswa baru</td>
-									<td colspan="2">Jumlah total mahasiswa baru</td>
-									<td colspan="2">Jumlah lulusan</td>
-									<td colspan="3">IPK Lulusan Reg</td>
-									<td colspan="3">Persen dengan lulusan dengan IPK</td>
-									<td rowspan="2">Aksi</td>
+									<th rowspan="2">Tahun <br> akademik</th>
+									<th rowspan="2">Daya <br> tampung</th>
+									<th colspan="2">Jumlah calon mahasiswa</th>
+									<th colspan="2">Jumlah mahasiswa baru</th>
+									<th colspan="2">Jumlah total mahasiswa baru</th>
+									<th colspan="2">Jumlah lulusan</th>
+									<th colspan="3">IPK Lulusan Reg</th>
+									<th colspan="3">Persen dengan lulusan dengan IPK</th>
+									<th rowspan="2">Aksi</th>
 								</tr>
 								<tr>
-									<td>Ikut seleksi</td>
-									<td>Lulus Seleksi</td>
-									<td>Ikut seleksi</td>
-									<td>Lulus Seleksi</td>
-									<td>Reg Bukan trf</td>
-									<td>Transfer</td>
-									<td>Reg Bukan trf</td>
-									<td>Transfer</td>
-									<td>Min</td>
-									<td>Rat</td>
-									<td>Max</td>
-									<td><2.75</td>
-									<td>2.75-3.50</td>
-									<td>>3.50</td>
+									<th>Ikut seleksi</th>
+									<th>Lulus Seleksi</th>
+									<th>Ikut seleksi</th>
+									<th>Lulus Seleksi</th>
+									<th>Reg Bukan trf</th>
+									<th>Transfer</th>
+									<th>Reg Bukan trf</th>
+									<th>Transfer</th>
+									<th>Min</th>
+									<th>Rat</th>
+									<th>Max</th>
+									<th><2.75</th>
+									<th>2.75-3.50</th>
+									<th>>3.50</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -212,24 +212,37 @@ License: You must have a valid license purchased only from themeforest(the above
 							 		?>
 								 	<td><?php echo $i['Jumlah_LulusanTransfer']; ?></td>
 								 	<?php } ?>
-
+									 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
 								 </tr>	
 								 <tr>
 								 	<td>Rataan</td>
 								 	<?php 
 								 		foreach ($rata as $r) {
 								 	 ?>
-								 	 <td></td>
-								 	 <td></td>
-								 	 <td></td>
-								 	 <td></td>
-								 	 <td></td>
-								 	 <td></td>
-								 	 <td></td>
-								 	 <td></td>
-								 	 <td></td>
-								 	 <td></td>
-								 	<td colspan="15"><?php echo $r['rata']; ?></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	<td><?php echo $r['rata']; ?></td>
+								 	<td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
 								 <?php } ?>
 								 </tr>
 							</tbody>

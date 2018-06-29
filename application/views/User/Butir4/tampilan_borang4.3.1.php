@@ -127,40 +127,19 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th colspan="3">Aksi</th>
 								 </tr>
 								 <tr>
-								 	<td>Gelar</td>
-								 	<td>PT Asal</td>
-								 	<td>Bidang Keahlian</td>
-								 	<td>Gelar</td>
-								 	<td>PT Asal</td>
-								 	<td>Bidang Keahlian</td>
-								 	<td>Gelar</td>
-								 	<td>PT Asal</td>
-								 	<td>Bidang Keahlian</td>
-								 	<td>Gelar</td>
-								 	<td>Pengakuan</td>
-								 	<td>Bidang Keahlian</td>
-								 	<td></td>
-								 </tr>
-								 <tr align="center">
-								 	<td>(1)</td>
-								 	<td>(2)</td>
-								 	<td>(3)</td>
-								 	<td>(4)</td>
-								 	<td>(5)</td>
-								 	<td>(6)</td>
-								 	<td>(7)</td>
-								 	<td>(8)</td>
-								 	<td>(9)</td>
-								 	<td>(10)</td>
-								 	<td>(11)</td>
-								 	<td>(12)</td>
-								 	<td>(13)</td>
-								 	<td>(14)</td>
-								 	<td>(15)</td>
-								 	<td>(16)</td>
-								 	<td>(17)</td>
-								 	<td>(18)</td>
-								 	<td>(19)</td>
+								 	<th>Gelar</th>
+								 	<th>PT Asal</th>
+								 	<th>Bidang Keahlian</th>
+								 	<th>Gelar</th>
+								 	<th>PT Asal</th>
+								 	<th>Bidang Keahlian</th>
+								 	<th>Gelar</th>
+								 	<th>PT Asal</th>
+								 	<th>Bidang Keahlian</th>
+								 	<th>Gelar</th>
+								 	<th>Pengakuan</th>
+								 	<th>Bidang Keahlian</th>
+								 	<th></th>
 								 </tr>
 							</thead>
 							<tbody>
