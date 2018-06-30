@@ -24,6 +24,11 @@ public function index() {
  $jml_wsd=$this->Apd_a345_model->jml_wsd();
  $jmllulusan_wsd=$this->Apd_a345_model->jmllulusan_wsd();
  $jml=$this->Apd_a345_model->jml();
+ $row1=$this->Apd_a345_model->row1();
+ $row2=$this->Apd_a345_model->row2();
+ $row3=$this->Apd_a345_model->row3();
+ $row4=$this->Apd_a345_model->row4();
+ $row5=$this->Apd_a345_model->row5();
  $this->load->view('User/Butir3/tampilan_borang3.4.5.php',array('data1'=>$data1,
  																 'jmllulusan_wsd'=>$jmllulusan_wsd,
  																 'data2'=>$data2,
@@ -35,7 +40,12 @@ public function index() {
  																 'jml_wsd2'=>$jml_wsd2,
  																 'jml_wsd3'=>$jml_wsd3,
  																 'jml_wsd4'=>$jml_wsd4,
- 																 'jml'=>$jml));
+ 																 'jml'=>$jml,
+ 																 'row1'=>$row1,
+ 																 'row2'=>$row2,
+ 																 'row3'=>$row3,
+ 																 'row4'=>$row4,
+ 																 'row5'=>$row5));
  }
 
  public function ubah($id){
@@ -88,6 +98,11 @@ public function export_excel(){
  $jml_wsd=$this->Apd_a345_model->jml_wsd();
  $jmllulusan_wsd=$this->Apd_a345_model->jmllulusan_wsd();
  $jml=$this->Apd_a345_model->jml();
+ $row1=$this->Apd_a345_model->row1();
+  $row2=$this->Apd_a345_model->row2();
+ $row3=$this->Apd_a345_model->row3();
+ $row4=$this->Apd_a345_model->row4();
+ $row5=$this->Apd_a345_model->row5();
  $this->load->view('User/Butir3/tampilan_borang3.4.5_excel.php',array('data1'=>$data1,
  																 'jmllulusan_wsd'=>$jmllulusan_wsd,
  																 'data2'=>$data2,
@@ -99,7 +114,50 @@ public function export_excel(){
  																 'jml_wsd2'=>$jml_wsd2,
  																 'jml_wsd3'=>$jml_wsd3,
  																 'jml_wsd4'=>$jml_wsd4,
- 																 'jml'=>$jml));
+ 																 'jml'=>$jml,
+ 																 'row1'=>$row1,
+ 																 'row2'=>$row2,
+ 																 'row3'=>$row3,
+ 																 'row4'=>$row4,
+ 																 'row5'=>$row5));
  }
+
+  public function tambah(){
+		$this->load->view('User/Butir3/inputan_borang3.4.5.php');
+ }
+
+ public function do_tambah(){
+		$this->model_squrity->getsqurity();
+		//$id=$_POST['id'];
+		$id_ts=$_POST['tahun'];
+		$instansi=$_POST['instansi'];
+		$j_lulusan_psn=$_POST['j_lulusan_psn'];
+		$j_lulusan_terima=$_POST['j_lulusan_terima'];
+		$data_insert=array(
+			//'id' => $id,
+			'id_ts' => $id_ts,
+			'instansi' =>$instansi,
+			'j_lulusan_psn'=>$j_lulusan_psn,
+			'j_lulusan_terima'=>$j_lulusan_terima,
+		);
+		$res=$this->Apd_a345_model->insert('instansi_lulusan',$data_insert);
+		if ($res>=1) {
+			redirect('Apd_a345_excel');
+		}else {
+			alert('Gagal Insert');
+		}
+	}
+
+	public function do_hapus($kode){
+		$this->model_squrity->getsqurity();
+		$where=array('id'=>$kode);
+		$res=$this->Apd_a345_model->Delete('instansi_lulusan',$where);
+		if($res>=1){
+			redirect('Apd_a345_excel');
+		}else {
+			alert('Gagal Hapus');
+		}
+	}
+
 
 }

@@ -16,7 +16,7 @@ public function index() {
 
  public function tambah(){
 		$this->load->view('User/PengisiBorang/inputan_pengisi.php');
-	}
+ }
 
 	public function do_tambah(){
 		$this->model_squrity->getsqurity();

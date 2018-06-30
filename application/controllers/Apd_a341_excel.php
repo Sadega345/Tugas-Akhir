@@ -62,7 +62,67 @@ public function index() {
 		// 	alert("Gagal Update") ;
 		// }
 	}
+public function ubahwaktu($id){
+ 	$this->model_squrity->getsqurity();
+	$res=$this->Apd_a341_model->updatewaktu("where id='$id'");
+	$data=array(
+		"waktu"=>$res[0]['waktu'],
+		"id_prodi"=>$res[0]['id_prodi'],
+		"id"=>$res[0]['id'],
+	);
+ 	$this->load->view('User/Butir3/edit_borang3.4.1_waktu.php',$data);
+ }
 
+public function do_editwaktu(){
+		$waktu=$_POST['waktu'];
+		$id=$_POST['id'];
+		
+		$data_update=array(
+			"waktu"=>$waktu,
+			
+			
+		);
+		$where=array('id'=>$id);
+		$res=$this->Apd_a341_model->rubah('wkt_tunggu_llsn',$data_update,$where);
+		// print_r($data_update);die;
+		if ($res>=1) {
+			redirect('Apd_a341_excel');
+		}
+		// else {
+		// 	alert("Gagal Update") ;
+		// }
+	}
+
+public function ubahpersen($id){
+ 	$this->model_squrity->getsqurity();
+	$res=$this->Apd_a341_model->updatepersen("where id='$id'");
+	$data=array(
+		"persen"=>$res[0]['persen'],
+		"id_prodi"=>$res[0]['id_prodi'],
+		"id"=>$res[0]['id'],
+	);
+ 	$this->load->view('User/Butir3/edit_borang3.4.1_persen.php',$data);
+ }
+
+public function do_editpersen(){
+		$persen=$_POST['persen'];
+		$id=$_POST['id'];
+		
+		$data_update=array(
+			"persen"=>$persen,
+			
+			
+		);
+		$where=array('id'=>$id);
+		$res=$this->Apd_a341_model->rubah('persentase_llsn',$data_update,$where);
+		// print_r($data_update);die;
+		if ($res>=1) {
+			redirect('Apd_a341_excel');
+		}
+		// else {
+		// 	alert("Gagal Update") ;
+		// }
+	}
 
 public function export_excel(){
  // $data = array( 'title' => ' TABEL DATA BUTIR 3.4 : EVALUASI LULUSAN',

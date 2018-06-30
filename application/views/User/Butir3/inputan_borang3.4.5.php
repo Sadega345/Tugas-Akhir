@@ -100,158 +100,64 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/Apd_a345_excel/tambah";?>">
-											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
-											</button>
-											</a>
+											
 										</div>
 									</div>
 								</div>
 							</div>
-							<table class="table table-striped table-bordered table-hover" id="sample_1">
-							<thead>
-								 <tr>
-									 <th>Tahun</th>
-									 <th>Jumlah Lulusan yang Diwisuda pada</th>
-									 <th>Nama Lembaga (Instansi/Industri)</th>
-									 <th>Jumlah Lulusan yang dipesan</th>
-									 <th>Jumlah Lulusan yang diterima</th>
-									 <th>Aksi</th>
-								 </tr>
-							</thead>
-							<tbody>
-								<?php 
-								foreach ($jml_wsd4 as $j) {
-									foreach ($row1 as $r) {
-								?>
-								<tr>
-								 	<td rowspan="<?php echo $r['row']; ?>">TS-4</td>
-								 	<td rowspan="<?php echo $r['row']; ?>"><?php echo $j['jml_wsd4'] ?></td>
-								 	<?php }} ?>
-								 	<?php 
-										foreach ($data4 as $d ) { 
-									?>
-								 	<td><?php echo $d['instansi']; ?></td>
-								 	<td><?php echo $d['j_lulusan_psn']; ?></td>
-								 	<td><?php echo $d['j_lulusan_terima']; ?></td>
-								 	<td class="center">
-										<a href="<?php echo base_url()."index.php/Apd_a345_excel/ubah/".$d['id'];?>" >Edit</a>
-										||
-								 		<a href="<?php echo base_url()."index.php/Apd_a345_excel/do_hapus/".$d['id'];?>" id="alerthapus"">Hapus</a>
-									</td>
+							<div style="overflow-x:auto;">
 
-								 </tr>
-								 <?php } ?>
-								 <tr>
-								 	<?php foreach ($jml_wsd3 as $j) {
-								 			foreach ($row2 as $r) {
-								 	?>
-								 	<td rowspan="<?php echo $r['row']; ?>">TS-3</td>
-								 	<td rowspan="<?php echo $r['row']; ?>"><?php echo $j['jml_wsd3'] ?></td>
-								 	<?php } }?>
-								 	 <?php 
-										foreach ($data3 as $d ) { 
-									?>
-								 	<td><?php echo $d['instansi']; ?></td>
-								 	<td><?php echo $d['j_lulusan_psn']; ?></td>
-								 	<td><?php echo $d['j_lulusan_terima']; ?></td>
-								 	<td class="center">
-										<a href="<?php echo base_url()."index.php/Apd_a345_excel/ubah/".$d['id'];?>" >Edit</a>
-										||
-								 		<a href="<?php echo base_url()."index.php/Apd_a345_excel/do_hapus/".$d['id'];?>" id="alerthapus"">Hapus</a>
-									</td>
-								 </tr>
-								 <?php } ?>
-								  <tr>
-									<?php foreach ($jml_wsd2 as $j) {
-										foreach ($row3 as $r) {
-									?>
-								 	<td rowspan="<?php echo $r['row']; ?>">TS-2</td>
-								 	<td rowspan="<?php echo $r['row']; ?>"><?php echo $j['jml_wsd2'] ?></td>
-								 	<?php }} ?>
-								 	 <?php 
-										foreach ($data2 as $d ) { 
-									?>
-								 	<td><?php echo $d['instansi']; ?></td>
-								 	<td><?php echo $d['j_lulusan_psn']; ?></td>
-								 	<td><?php echo $d['j_lulusan_terima']; ?></td>
-								 	<td class="center">
-										<a href="<?php echo base_url()."index.php/Apd_a345_excel/ubah/".$d['id'];?>" >Edit</a>
-										||
-								 		<a href="<?php echo base_url()."index.php/Apd_a345_excel/do_hapus/".$d['id'];?>" id="alerthapus"">Hapus</a>
-									</td>
-								 </tr>
-								 <?php } ?>
-								<tr>
-									<?php foreach ($jml_wsd1 as $j) {
-										foreach ($row4 as $r) {
-									?>
-								 	<td rowspan="<?php echo $r['row']; ?>">TS-1</td>
-								 	<td rowspan="<?php echo $r['row']; ?>"><?php echo $j['jml_wsd1'] ?></td>
-								 	<?php }} ?>
-								 	 <?php 
-										foreach ($data1 as $d ) { 
-									?>
-								 	<td><?php echo $d['instansi']; ?></td>
-								 	<td><?php echo $d['j_lulusan_psn']; ?></td>
-								 	<td><?php echo $d['j_lulusan_terima']; ?></td>
-								 	<td class="center">
-										<a href="<?php echo base_url()."index.php/Apd_a345_excel/ubah/".$d['id'];?>" >Edit</a>
-										||
-								 		<a href="<?php echo base_url()."index.php/Apd_a345_excel/do_hapus/".$d['id'];?>" id="alerthapus"">Hapus</a>
-									</td>
-								 </tr>
-								 <?php } ?>
-								 <tr>
-									<?php foreach ($jml_wsd as $j) {
-										foreach ($row5 as $r) {
-									?>
-								 	<td rowspan="<?php echo $r['row']; ?>">TS</td>
-								 	<td rowspan="<?php echo $r['row']; ?>"><?php echo $j['jml_wsd'] ?></td>
-								 	<?php } }?>
-								 	 <?php 
-										foreach ($data as $d ) { 
-									?>
-								 	<td><?php echo $d['instansi']; ?></td>
-								 	<td><?php echo $d['j_lulusan_psn']; ?></td>
-								 	<td><?php echo $d['j_lulusan_terima']; ?></td>
-								 	<td class="center">
-										<a href="<?php echo base_url()."index.php/Apd_a345_excel/ubah/".$d['id'];?>" >Edit</a>
-										||
-								 		<a href="<?php echo base_url()."index.php/Apd_a345_excel/do_hapus/".$d['id'];?>" id="alerthapus"">Hapus</a>
-									</td>
-								 </tr>
-								 <?php } ?>
-								<tr>
-									<th>Total</th>
-									<?php 
-							 			foreach ($jmllulusan_wsd as $jum) {
-							 		?>
-								 	<th><?php echo $jum['jmllulusan_wsd']; ?></th>
-								 	<?php } ?>
-								 	<th></th>
-								 	<?php foreach ($jml as $j) {?>
-								 	<th><?php echo $j['jmllulusan_psn'] ?></th>
-								 	<th><?php echo $j['jmllulusan_trm'] ?></th>
-								 	<?php } ?>
-								</tr>
-							</tbody> 
-							</table>
-							<!-- <div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a345_excel/ubah";?>">
-									<button id="sample_editable_1_new" class="btn green">
-										Ubah 
-									</button>
-								</a>
-							</div> -->
+							<form action="<?php echo base_url()."index.php/Apd_a345_excel/do_tambah"; ?>" method="POST">
+							<div class="container">
+								<div class="col-md-10">
+									<div class="row">
+										<div class="form-group">
+											<label>Tahun</label>
+											<select name="tahun" class="form-control">
+												<option disabled selected>-- Tahun --</option>
+												<?php 
+													$data=$this->Apd_a345_model->gettahun();
+													foreach($data as $d) { ?>
+									                <option value="<?php echo $d['id_ts'];?>"><?php echo $d['tahun'];?></option>
+									            <?php } ?>
+											</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Nama Lembaga (Instansi/Industri)</label>
+											<input type="text" class="form-control" name="instansi">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Jumlah Lulusan yang dipesan</label>
+											<input type="text" class="form-control" name="j_lulusan_psn">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Jumlah Lulusan yang diterima</label>
+											<input type="text" class="form-control" name="j_lulusan_terima">
+										</div>
+									</div>
+								</div>
+							</div>
+							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a345_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn blue">
-										Export To Excel
+								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+							</div>
+							</form>
+							
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Apd_a345_excel";?>">
+									<button id="sample_editable_1_new" class="btn red">
+										Batal
 									</button>
 								</a>
 							</div>
+						
+							
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

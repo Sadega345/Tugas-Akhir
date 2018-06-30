@@ -102,10 +102,10 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							<div style="overflow-x:auto;">
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-										Load 
-									</button>
+								<a href="<?php echo base_url()."index.php/Data_dosen_excel/tambah";?>">
+								<button id="sample_editable_1_new" class="btn green">
+								Tambah <i class="fa fa-plus"></i>
+								</button>
 								</a>
 							</div>
 							<div class="btn-group">
@@ -115,6 +115,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</button>
 								</a>
 							</div>
+							<br>
 							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 							<thead>
 								<tr>
@@ -163,6 +164,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									 	<td><?php echo $d['BID_KEAHLIAN_S3']; ?></td>
 									 	<td class="center">
 											<a href="<?php echo base_url()."index.php/Data_dosen_excel/ubah/".$d['NIDN'];?>" >Edit</a>
+											||
+         									<a href="<?php echo base_url()."index.php/Data_dosen_excel/do_hapus/".$d['NIDN'];?>" id="alerthapus">Hapus</a>
 										</td>
 									 </tr>
 							<?php } ?>

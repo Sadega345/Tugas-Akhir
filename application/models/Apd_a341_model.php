@@ -20,11 +20,21 @@ class Apd_a341_model extends CI_Model {
  return $data->result_array();
  }
 
- 	public function rubah($tablename,$data,$where){
-		$res=$this->db->update($tablename,$data,$where);
-		return $res;
-	}
+public function rubah($tablename,$data,$where){
+$res=$this->db->update($tablename,$data,$where);
+return $res;
+}
 
+public function updatewaktu($where="") {
+ $data= $this->db->query('SELECT id,waktu,id_prodi FROM wkt_tunggu_llsn '.$where.'and id_prodi="p001"');
+ return $data->result_array();
+ }
+
+public function updatepersen($where="") {
+ $data= $this->db->query('SELECT id,persen,id_prodi FROM persentase_llsn '.$where.'and id_prodi="p001"');
+ return $data->result_array();
+ }
+ 
  public function sangatbaik() {
  $data= $this->db->query('SELECT SUM(sangat_baik)AS Sangat_baik FROM evaluasi_lulusan WHERE id_prodi="p001"');
  return $data->result_array();
@@ -46,12 +56,12 @@ class Apd_a341_model extends CI_Model {
  }
 
  public function waktu() {
- $data=$this->db->query('SELECT waktu FROM wkt_tunggu_llsn WHERE id_prodi="p001"');
+ $data=$this->db->query('SELECT id,waktu,id_prodi FROM wkt_tunggu_llsn WHERE id_prodi="p001"');
  return $data->result_array();
  }
 
  public function persen() {
- $data=$this->db->query('SELECT persen FROM persentase_llsn WHERE id_prodi="p001"');
+ $data=$this->db->query('SELECT id,id_prodi,persen FROM persentase_llsn WHERE id_prodi="p001"');
  return $data->result_array();
  }
 

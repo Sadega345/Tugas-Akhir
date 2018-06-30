@@ -25,7 +25,7 @@ header("Expires: 0");
 		<?php 
 			$no=1; 
 			foreach ($data as $d ) { ?> 
-			<tr align="center">
+			<tr>
 			 	<td><?php echo $no++; ?></td>
 			 	<td><?php echo $d['nama']; ?></td>
 			 	<td><?php echo $d['nidn'] ?></td>
