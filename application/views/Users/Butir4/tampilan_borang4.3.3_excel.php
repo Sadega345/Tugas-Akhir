@@ -2,7 +2,7 @@
 
 header("Content-type: application/octet-stream");
 
-header("Content-Disposition: attachment; filename=$title.xls");
+header("Content-Disposition: attachment; filename=TABEL DATA BUTIR 4.3.3 : AKTIVITAS DOSEN TETAP YANG BIDANG KEAHLIANNYA SESUAI DENGAN PS.xls");
 
 header("Pragma: no-cache");
 
@@ -28,77 +28,122 @@ header("Expires: 0");
 			 	<th>PS Sendiri</th>
 			 	<th>PT Lain</th>
 			 </tr>
-			 <tr align="center">
-			 	<td>(1)</td>
-			 	<td>(2)</td>
-			 	<td>(3)</td>
-			 	<td>(4)</td>
-			 	<td>(5)</td>
-			 	<td>(6)</td>
-			 	<td>(7)</td>
-			 	<td>(8)</td>
-			 	<td>(9)</td>
-			 	<td>(10)</td>
-			 </tr>
 		</thead>
 		<tbody>
-			 <tr>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
+			<?php 
+				$no=1; 
+				foreach ($data as $d ) { 
+			?>
+			<tr>
+			 	<td><?php echo $no++; ?></td>
+			 	<td><?php echo $d['NAMA_DOSEN']; ?></td>
+			 	<td><?php echo $d['SKS_PSS']; ?></td>
+			 	<td><?php echo $d['SKS_PSL_PTS']; ?></td>
+			 	<td><?php echo $d['SKS_PTL']; ?></td>
+			 	<td><?php echo $d['SKS_PENELITIAN']; ?></td>
+			 	<td><?php echo $d['SKS_PP_MAS']; ?></td>
+			 	<td><?php echo $d['SKS_MAN_PTS']; ?></td>
+			 	<td><?php echo $d['SKS_MAN_PTL']; ?></td>
+			 	<td><?php echo $d['total']; ?></td>
 			 </tr>
-			 <tr>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-			 <tr>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
+			 <?php } ?>
+
+			 
 			 <tr>
 			 	<td colspan="2">Jumlah</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
+			 	<?php 
+					foreach ($hitung as $h ) { 
+			  	?>
+			 	<td><?php echo $h['jml']; ?></td>
+			 	<?php } ?>
+			 	<?php 
+					foreach ($pt as $p ) { 
+			  	?>
+			 	<td><?php echo $p['jml']; ?></td>
+			 	<?php } ?>
+			 	<?php 
+					foreach ($lain as $l ) { 
+			  	?>
+			 	<td><?php echo $l['jml']; ?></td>
+			 	<?php } ?>
+			 	<?php 
+					foreach ($penelitian as $p ) { 
+			  	?>
+			 	<td><?php echo $p['jml']; ?></td>
+			 	<?php } ?>
+			 	<?php 
+					foreach ($pengabdian as $p ) { 
+			  	?>
+			 	<td><?php echo $p['jml']; ?></td>
+			 	<?php } ?>
+			 	<?php 
+					foreach ($jumsks as $j ) { 
+			  	?>
+			 	<td><?php echo $j['jml']; ?></td>
+			 	<?php } ?>
+			 	<?php 
+					foreach ($manptlain as $man ) { 
+			  	?>
+			 	<td><?php echo $man['jml']; ?></td>
+			 	<?php } ?>
+			 	<?php 
+					foreach ($totsks as $tot ) { 
+			  	?>
+			 	<td><?php echo $tot['jml']; ?></td>
+			 	<?php } ?>
 			 </tr>
+			 
 			  <tr>
 			 	<td colspan="2">Rata-rata</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
+			 	<?php 
+					foreach ($rata as $r ) { 
+			  	?>
+			 	<td><?php echo $r['rata']; ?></td>
+			 	<?php } ?>
+
+			 	<?php 
+					foreach ($prlain as $pr ) { 
+			  	?>
+			 	<td><?php echo $pr['rata']; ?></td>
+			 	<?php } ?>
+
+			 	<?php 
+					foreach ($ptlain as $pt ) { 
+			  	?>
+			 	<td><?php echo $pt['rata']; ?></td>
+			 	<?php } ?>
+
+			 	<?php 
+					foreach ($ratapenelitian as $rp ) { 
+			  	?>
+			 	<td><?php echo $rp['rata']; ?></td>
+			 	<?php } ?>
+
+			 	<?php 
+					foreach ($pengmas as $peng ) { 
+			  	?>
+			 	<td><?php echo $peng['rata']; ?></td>
+			 	<?php } ?>
+
+			 	<?php 
+					foreach ($rataman as $m ) { 
+			  	?>
+			 	<td><?php echo $m['rata']; ?></td>
+			 	<?php } ?>
+
+			 	<?php 
+					foreach ($manlain as $ml ) { 
+			  	?>
+			 	<td><?php echo $ml['rata']; ?></td>
+			 	<?php } ?>
+
+			 	<?php 
+					foreach ($ratajumsks as $ratasks ) { 
+			  	?>
+			 	<td><?php echo $ratasks['rata']; ?></td>
+			 	<?php } ?>
+			 	
+				</tr>
+			</tbody>
 		</tbody>
 		</table>

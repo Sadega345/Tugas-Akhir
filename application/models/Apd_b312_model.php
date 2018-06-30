@@ -11,7 +11,7 @@ public function __construct()
 
 // Listing
  public function GetProdi() {
- $prodi=$this->db->query('Select jurusan from prodi_tbl where kode_prodi="p001"; ');
+ $prodi=$this->db->query('Select jurusan from prodi_tbl where kode_prodi="p001"');
  return $prodi->result_array();
  }
 
@@ -45,7 +45,7 @@ public function __construct()
  return $data3->result_array();
  }
  public function update($where="") {
- $data= $this->db->query('select j_tot_reg_bkn_trf,j_maba_trf,j_maba_reg_bkn_trf,id from data_mhs '.$where);
+ $data= $this->db->query('select j_maba_reg_bkn_trf,id from data_mhs '.$where);
  return $data->result_array();
  }
 

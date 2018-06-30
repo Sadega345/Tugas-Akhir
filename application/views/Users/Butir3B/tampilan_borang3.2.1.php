@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Butir 3.2.1 : MAHASISWA DAN LULUSAN</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -61,12 +62,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <body class="page-header-fixed page-quick-sidebar-over-content">
 	<!-- BEGIN HEADER -->
 		<?php 
-			$this->load->view('User/header_user.php');
+			$this->load->view('Users/header_Users.php');
 		?>
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('Users/sidebar_users.php');
+			$this->load->view('Users/sidebar_Users.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 
@@ -99,9 +100,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="#">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
+											Load 
 											</button>
 											</a>
 										</div>
@@ -124,8 +125,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;" class="col-md-20">
 							
-							<table class="table table-striped table-bordered table-hover" id="sample_1">
+							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 							<thead>
 								<tr>
 									 <th>No.</th>
@@ -133,6 +135,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th>Rata-rata Masa Studi (tahun)*</th>
 									 <th>Rata-rata IPK Lulusan*</th>
 									 <th>Keterangan</th>
+									 <th rowspan="2">Aksi</th>
 								 </tr>
 								 <tr>
 								 	<td>(1)</td>
@@ -143,80 +146,45 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
 								<tr>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 </tr>
-								 <tr>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 </tr>
-								 <tr>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 </tr>
-								  <tr>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								<?php 
+									$no=1;
+									foreach ($masastudi as $m) {
+								 ?>
+								 	<td><?php echo $no++; ?></td>
+								 	<td><?php echo $m['prodi'] ?></td>
+								 	<td><?php echo $m['rata_masa_std'] ?></td>
+								 	<td><?php echo $m['rata_ipk'] ?></td>
+								 	<td><?php echo $m['keterangan'] ?></td>
+								 	<td class="center">
+										<a href="<?php echo base_url()."index.php/Apd_b321_excel/ubah/".$m['id'];?>" >Edit</a>
+									</td>
+								 	<?php } ?>
 								 </tr>
 								 <tr>
 								 	<td colspan="2">Rata-rata di Unit Pengelola**</td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								 	<?php 
+								 		foreach ($rata as $r) {
+								 	 ?>
+								 	 <td><?php echo $r['rata_mastud'] ?></td>
+								 	 <td><?php echo $r['rata2'] ?></td>
+								 	 <td></td>
+								 	 <?php } ?>
 								 </tr>
 							</tbody>
 							</table>
-							<div class="btn-group">
-								<a href="#">
+							</div>
+							<!-- <div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Apd_a431_excel/rubah";?>">
 									<button id="sample_editable_1_new" class="btn green">
-											Ubah 
+										Ubah
 									</button>
 								</a>
-							</div>
+							</div> -->
 							<div class="btn-group">
-								<a href="#">
+								<a href="<?php echo base_url()."index.php/Apd_a431_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn green">
-											Hapus 
-									</button>
-								</a>
-							</div>
-							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Aps_b321_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
-											Export ke Excel 
+										Export To Excel 
 									</button>
 								</a>
 							</div>

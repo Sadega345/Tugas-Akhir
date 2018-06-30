@@ -3,18 +3,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Aps_a631_model extends CI_Model {
 
-public function __construct()
- {
- parent::__construct();
- $this->load->database();
- }
-
 // Listing
  public function listing() {
- $this->db->select('*');
- $this->db->from('aps_a631');
- $query = $this->db->get();
- return $query->result();
+ $ruang1=$this->db->query('SELECT r_kerja_dosen,jml_ruang,jml_luas,id FROM dt_ruang_dosen WHERE kd_prodi="p002"');
+ return $ruang1->result_array();
+ }
+
+ public function update($where="") {
+ $data= $this->db->query('SELECT r_kerja_dosen,jml_ruang,jml_luas,id FROM dt_ruang_dosen '.$where);
+ return $data->result_array();
+ }
+
+ 	public function rubah($tablename,$data,$where){
+		$res=$this->db->update($tablename,$data,$where);
+		return $res;
+	}
+
+ public function totluas(){
+ $totalluas=$this->db->query('select sum(jml_luas) as Tot_Luas from dt_ruang_dosen where kd_prodi="p002"');
+ return $totalluas->result_array();
  }
 
 }

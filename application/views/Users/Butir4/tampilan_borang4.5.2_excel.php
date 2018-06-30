@@ -2,7 +2,7 @@
 
 header("Content-type: application/octet-stream");
 
-header("Content-Disposition: attachment; filename=$title.xls");
+header("Content-Disposition: attachment; filename=TABEL DATA BUTIR 4.5.2 : PENINGKATAN KEMAMPUAN DOSEN TETAP MELALUI TUGAS BELAJAR.xls");
 
 header("Pragma: no-cache");
 
@@ -21,34 +21,21 @@ header("Expires: 0");
 				 <th>Negara</th>
 				 <th>Tahun Mulai Studi</th>
 			 </tr>
-			 <tr align="center">
-			 	<td>(1)</td>
-			 	<td>(2)</td>
-			 	<td>(3)</td>
-			 	<td>(4)</td>
-			 	<td>(5)</td>
-			 	<td>(6)</td>
-			 	<td>(7)</td>
-			 </tr>
 		</thead>
 		<tbody>
-			 <tr>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-			 <tr>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-		</tbody>
+			<tr>
+				<?php 
+					$no=1; 
+					foreach ($data as $d ) { 
+				?>
+				 	<td><?php echo $no++; ?></td>
+				 	<td><?php echo $d['nama_dosen']; ?></td>
+				 	<td><?php echo $d['jenjang_pend']; ?></td>
+				 	<td><?php echo $d['bid_studi']; ?></td>
+				 	<td><?php echo $d['perguruan_tinggi']; ?></td>
+				 	<td><?php echo $d['negara']; ?></td>
+				 	<td><?php echo $d['thn_mulai_std']; ?></td>
+				 </tr>
+			</tbody>
+		<?php } ?>
 	</table>

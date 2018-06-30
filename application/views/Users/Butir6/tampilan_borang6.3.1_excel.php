@@ -2,7 +2,7 @@
 
 header("Content-type: application/octet-stream");
 
-header("Content-Disposition: attachment; filename=$title.xls");
+header("Content-Disposition: attachment; filename=TABEL DATA BUTIR 6.3.1 : DATA RUANG KERJA DOSEN TETAP.xls");
 
 header("Pragma: no-cache");
 
@@ -19,29 +19,23 @@ header("Expires: 0");
 			 </tr>
 		</thead>
 		<tbody>
-			 <tr>
-			 	<td>Satu ruang untuk lebih dari 4 dosen</td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-			 <tr>
-			 	<td>Satu ruang untuk 3-4 dosen</td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-			  <tr>
-			 	<td>Satu ruang untuk 2 dosen</td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-			 <tr>
-			 	<td>Satu ruang untuk 1 dosen (bukan pejabat struktural)</td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
+			 <?php 
+				foreach ($ruang1 as $r ) { 
+			?>
+			<tr>
+				<td><?php echo $r['r_kerja_dosen']; ?></td>
+				<td><?php echo $r['jml_ruang']; ?></td>
+				<td><?php echo $r['jml_luas']; ?></td>
+				
+			</tr>
+			<?php } ?>
 			 <tr>
 			 	<td colspan="2">Total</td>
-			 	<td></td>
+			 	<?php 
+					foreach ($totluas as $d ) { 
+			 	?>
+			 	<td><?php echo $d['Tot_Luas']; ?></td>
+			 <?php } ?>
 			 </tr>
 		</tbody>
 	</table>

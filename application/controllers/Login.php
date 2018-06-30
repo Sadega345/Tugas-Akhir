@@ -28,6 +28,8 @@ class Login extends CI_Controller {
 			$username = $this->input->post('username');
 			$password = $this->input->post('password');
 			$this->model_login->login($username,$password);
+			$u = $this->session->userdata('username');
+			echo $u;
 		}else{
 			$this->session->set_flashdata('info','Maaf Password atau Username yang anda masukan salah'); 
 			$this->index();

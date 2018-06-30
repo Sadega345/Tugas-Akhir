@@ -2,7 +2,7 @@
 
 header("Content-type: application/octet-stream");
 
-header("Content-Disposition: attachment; filename=$title.xls");
+header("Content-Disposition: attachment; filename=TABEL DATA BUTIR 6.2.3 : DANA PELAYANAN/PENGABDIAN KEPADA MASYARAKAT.xls");
 
 header("Pragma: no-cache");
 
@@ -18,29 +18,26 @@ header("Expires: 0");
 				 <th>Sumber dan Jenis Dana</th>
 				 <th>Jumlah Dana (dalam juta rupiah)</th>
 			 </tr>
-			 <tr align="center">
-			 	<td>(1)</td>
-			 	<td>(2)</td>
-			 	<td>(3)</td>
-			 	<td>(4)</td>
-			 </tr>
 		</thead>
-		<tbody>
-			 <tr>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
+		<tbody>			
+			 <?php 
+				
+				foreach ($data as $d ) { 
+			?>
+			<tr>
+			 	<td><?php echo $d['TAHUN']; ?></td>
+			 	<td><?php echo $d['judul_kegiatan']; ?></td>
+			 	<td><?php echo $d['SUMBER_DANA']; ?></td>
+			 	<td><?php echo $d['JUMLAH_DANA']; ?></td>
 			 </tr>
+			 <?php } ?>
 			 <tr>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
+			 	<td colspan="3">Total**</td>
+			 <?php 
+				foreach ($totdana as $d ) { 
+			 ?>
+			 	<td><?php echo $d['Tot_Dana']; ?></td>
+			 <?php } ?>
 			 </tr>
-			 <tr>
-			 	<td colspan="3">Total</td>
-			 	<td></td>
-			 </tr>
-		</tbody>
+			</tbody>
 		</table>

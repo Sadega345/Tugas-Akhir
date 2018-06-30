@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Butir 4.3.4 : AKTIVITAS MENGAJAR DOSEN TETAP YANG BIDANG KEAHLIANNYA SESUAI DENGAN PS</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -61,12 +62,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <body class="page-header-fixed page-quick-sidebar-over-content">
 	<!-- BEGIN HEADER -->
 		<?php 
-			$this->load->view('User/header_user.php');
+			$this->load->view('Users/header_Users.php');
 		?>
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('Users/sidebar_users.php');
+			$this->load->view('Users/sidebar_Users.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 
@@ -101,121 +102,79 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="btn-group">
 											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
+											Tambah 
 											</button>
 											</a>
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;" class="col-md-20">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								  <tr>
-									 <th rowspan="2">No</th>
-									 <th rowspan="2">Nama Dosen Tetap</th>
-									 <th rowspan="2">Bidang Keahlian</th>
-									 <th rowspan="2">Kode Mata Kuliah</th>
-									 <th rowspan="2">Nama Mata Kuliah</th>
-									 <th rowspan="2">Jumlah Kelas</th>
-									 <th colspan="2">Jumlah Pertemuan</th>
+									 <th rowspan="2"><center>No</center></th>
+									 <th rowspan="2"><center>Nama Dosen Tetap</center></th>
+									 <th rowspan="2"><center>Bidang Keahlian</center></th>
+									 <th rowspan="2"><center>Kode Mata Kuliah</center></th>
+									 <th rowspan="2"><center>Nama Mata Kuliah</center></th>
+									 <th rowspan="2"><center>Jumlah Kelas</center></th>
+									 <th colspan="2"><center>Jumlah Pertemuan</center></th>
+									 <th rowspan="2"><center>Aksi</center></th>
 								 </tr>
 								 <tr>
-								 	<th>Direncanakan</th>
-								 	<th>Dilaksanakan</th>
-								 </tr>
-								 <tr align="center">
-								 	<td>(1)</td>
-								 	<td>(2)</td>
-								 	<td>(3)</td>
-								 	<td>(4)</td>
-								 	<td>(5)</td>
-								 	<td>(6)</td>
-								 	<td>(7)</td>
-								 	<td>(8)</td>
+								 	<th><center>Direncanakan</center></th>
+								 	<th><center>Dilaksanakan</center></th>
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
+							<?php 
 								$no=1; 
 								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+							?>
 							 <tr>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td><?php echo $no++; ?></td>
+							 	<td><?php echo $d['nama_dosen']; ?></td>
+							 	<td><?php echo $d['bid_keahlian']; ?></td>
+							 	<td><?php echo $d['kode_mk']; ?></td>
+							 	<td><?php echo $d['nama_mk']; ?></td>
+							 	<td><?php echo $d['jum_kls']; ?></td>
+							 	<td><?php echo $d['jp_rencana']; ?></td>
+							 	<td><?php echo $d['jp_dilaksanakan']; ?></td>
+							 	<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a434_excel/ubah/".$d['kode_mk'];?>" >Edit</a>
+								</td>
 							 </tr>
+							 <?php } ?>
+							 <?php 
+							 	foreach ($jumlah as $jum) {
+							 ?>
 							 <tr>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr
-							 <tr>
-							 	<td colspan="6">Jumlah*</td>
-							 	<td></td>
-							 	<td></td>
+							 	<td colspan="6"><center>Jumlah*</center></td>
+							 	<td><?php echo $jum['jumper_d']; ?></td>
+							 <?php } ?>
+							 <?php 
+							 	foreach ($jumlah2 as $jum2) {
+							 ?>
+							 	<td><?php echo $jum2['jumlahpertemuan_dilaksanakan']; ?></td>
+							 <?php } ?>
 							 </tr>
+
 							</tbody>
 							</table>
-							<div class="btn-group">
-								<a href="#">
+							</div>
+							<!-- <div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Apd_a434_excel/ubah";?>">
 									<button id="sample_editable_1_new" class="btn green">
-											Ubah 
+										Ubah 
 									</button>
 								</a>
-							</div>
+							</div> -->
+							
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-											Hapus 
-									</button>
-								</a>
-							</div>
-							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Aps_a434_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
-											Export ke Excel 
+								<a href="<?php echo base_url()."index.php/Apd_a434_excel/export_excel";?>">
+									<button id="sample_editable_1_new" class="btn blue">
+										Export To Excel 
 									</button>
 								</a>
 							</div>
