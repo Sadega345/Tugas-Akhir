@@ -3,18 +3,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Aps_a451_model extends CI_Model {
 
-public function __construct()
- {
- parent::__construct();
- $this->load->database();
- }
+// public function __construct()
+//  {
+//  parent::__construct();
+//  $this->load->database();
+//  }
 
 // Listing
  public function listing() {
- $this->db->select('*');
- $this->db->from('aps_a451');
- $query = $this->db->get();
- return $query->result();
+ $data=$this->db->query('SELECT nama_pakar,instansi,judul_keg,pelaksanaan,id FROM kegiatan_ahli WHERE kd_prodi="p002"');
+ return $data->result_array();
  }
+
+ public function update($where="") {
+ $data= $this->db->query('SELECT nama_pakar,instansi,judul_keg,pelaksanaan,id FROM kegiatan_ahli '.$where);
+ return $data->result_array();
+ }
+
+ public function rubah($tablename,$data,$where){
+		$res=$this->db->update($tablename,$data,$where);
+		return $res;
+	}
 
 }

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Butir 7.2.1 : KEGIATAN PELAYANAN/PENGABDIAN KEPADA MASYARAKAT</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -61,12 +62,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <body class="page-header-fixed page-quick-sidebar-over-content">
 	<!-- BEGIN HEADER -->
 		<?php 
-			$this->load->view('User/header_user.php');
+			$this->load->view('Users/header_Users.php');
 		?>
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('users/sidebar_users.php');
+			$this->load->view('Users/sidebar_Users.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 
@@ -101,27 +102,11 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="btn-group">
 											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
+											Tambah
 											</button>
 											</a>
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
 							
@@ -132,6 +117,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2">Nama Program Studi</th>
 									 <th colspan="3">Jumlah Judul Kegiatan Pelayanan / Pengabdian Kepada Masyarakat</th>
 									 <th colspan="3">Total Dana  Kegiatan Pelayanan / Pengabdian Kepada Masyarakat(Juta Rupiah)</th>
+									 <th rowspan="2">Aksi</th>
 								 </tr>
 								 <tr align="center">
 								 	<td>TS-2</td>
@@ -143,66 +129,52 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
+							<?php 
 								$no=1; 
 								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
+							?>
+							<tr>
+								<td><?php echo $no++; ?></td>
+								<td><?php echo $d['jurusan']; ?></td>
+								<td><?php echo $d['Tot_Ts2']; ?></td>
+								<td><?php echo $d['Tot_Ts1']; ?></td>
+								<td><?php echo $d['Tot_Ts']; ?></td>
+								<td><?php echo $d['Jum_dana2014']; ?></td>
+								<td><?php echo $d['Jum_dana2015']; ?></td>
+								<td><?php echo $d['Jum_dana2016']; ?></td>
 								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
+									<a href="<?php echo base_url()."index.php/Apd_b721_excel/ubah/".$d['KD_JNS'];?>" >Edit</a>
 								</td>
 							</tr>
-							<?php } ?> -->
-								<tr>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 </tr>	
-								  <tr>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 </tr>
+							<?php } ?>
+							<tr>
+								<td colspan="2">Total</td>
+								<?php 
+									$no=1; 
+									foreach ($total as $t ) { 
+								?>
+								<td><?php echo $t['Tot_Ts2']; ?></td>
+								<td><?php echo $t['Tot_Ts1']; ?></td>
+								<td><?php echo $t['Tot_Ts']; ?></td>
+								<td><?php echo $t['Jum_dana2014']; ?></td>
+								<td><?php echo $t['Jum_dana2015']; ?></td>
+								<td><?php echo $t['Jum_dana2016']; ?></td>
+							</tr>
+							<?php } ?>
 							</tbody>
 							</table>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-											Ubah 
+							<!-- <div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Apd_b721_excel/ubah";?>">
+									<button id="sample_editable_1_new" class="btn blue">
+										Ubah 
 									</button>
 								</a>
-							</div>
+							</div> -->
+							
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-											Hapus 
-									</button>
-								</a>
-							</div>
-							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Aps_b721_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
-											Export ke Excel 
+								<a href="<?php echo base_url()."index.php/Apd_b721_excel/export_excel";?>">
+									<button id="sample_editable_1_new" class="btn blue">
+										Export To Excel
 									</button>
 								</a>
 							</div>

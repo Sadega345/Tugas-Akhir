@@ -3,18 +3,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Aps_a442_model extends CI_Model {
 
-public function __construct()
- {
- parent::__construct();
- $this->load->database();
- }
+// public function __construct()
+//  {
+//  parent::__construct();
+//  $this->load->database();
+//  }
 
 // Listing
  public function listing() {
- $this->db->select('*');
- $this->db->from('aps_a442');
- $query = $this->db->get();
- return $query->result();
+ $data=$this->db->query('SELECT d.nama_dosen,a.kode_mk,a.nama_mk,a.jml_sks,a.jp_rencana,a.jp_dilaksanakan 
+FROM aktivitas_mengajar a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen WHERE d.kd_prodi="p002" AND d.kd_jns_dosen=2');
+ return $data->result_array();
+ }
+
+ public function update($where="") {
+ $data= $this->db->query('SELECT d.nama_dosen,a.kode_mk,a.nama_mk,a.jml_sks,a.jp_rencana,a.jp_dilaksanakan 
+FROM aktivitas_mengajar a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen '.$where);
+ return $data->result_array();
+ }
+
+ public function rubah($tablename,$data,$where){
+		$res=$this->db->update($tablename,$data,$where);
+		return $res;
+	}
+
+ public function tot_pertemuan() {
+ $data=$this->db->query('SELECT SUM(a.jp_rencana) AS total_rencana FROM aktivitas_mengajar a INNER JOIN dosen_tbl d 
+ON a.id_dosen=d.id_dosen WHERE d.kd_prodi="P002" AND d.kd_jns_dosen=2');
+ return $data->result_array();
+ }
+
+ public function tot_dilaksanakan() {
+ $data=$this->db->query('SELECT SUM(a.jp_dilaksanakan) AS total_laksana FROM aktivitas_mengajar a INNER JOIN dosen_tbl d 
+ON a.id_dosen=d.id_dosen WHERE d.kd_prodi="P002" AND d.kd_jns_dosen=2');
+ return $data->result_array();
  }
 
 }

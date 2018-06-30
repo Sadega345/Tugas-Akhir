@@ -2,7 +2,7 @@
 
 header("Content-type: application/octet-stream");
 
-header("Content-Disposition: attachment; filename=$title.xls");
+header("Content-Disposition: attachment; filename=TABEL DATA BUTIR 4.4.2 : AKTIVITAS MENGAJAR DATA DOSEN TIDAK TETAP.xls");
 
 header("Pragma: no-cache");
 
@@ -24,39 +24,35 @@ header("Expires: 0");
 			 	<th>Direncanakan</th>
 			 	<th>Dilaksanakan</th>
 			 </tr>
-			 <tr align="center">
-			 	<td>(1)</td>
-			 	<td>(2)</td>
-			 	<td>(3)</td>
-			 	<td>(4)</td>
-			 	<td>(5)</td>
-			 	<td>(6)</td>
-			 	<td>(7)</td>
-			 </tr>
 		</thead>
 		<tbody>
-			 <tr>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
+			<tr>
+			<?php 
+				$no=1; 
+				foreach ($data as $d ) { 
+			?>
+			 	<td><?php echo $no++; ?></td>
+			 	<td><?php echo $d['nama_dosen']; ?></td>
+			 	<td><?php echo $d['kode_mk']; ?></td>
+			 	<td><?php echo $d['nama_mk']; ?></td>
+			 	<td><?php echo $d['jml_sks']; ?></td>
+			 	<td><?php echo $d['jp_rencana']; ?></td>
+			 	<td><?php echo $d['jp_dilaksanakan']; ?></td>
 			 </tr>
-			 <tr>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
+			 <?php } ?>
 			 <tr>
 			 	<td colspan="5">Jumlah*</td>
-			 	<td></td>
-			 	<td></td>
+			 	<?php 
+			 		foreach ($total as $tot ) {
+			 	 ?>
+			 	<td><?php echo $tot['total_rencana']; ?></td>
+			 	<?php } ?>
+
+			 	<?php 
+			 		foreach ($totdilaksanakan as $totlaksana ) {
+			 	 ?>
+			 	<td><?php echo $totlaksana['total_laksana']; ?></td>
+			 	<?php } ?>
 			 </tr>
-		</tbody>
+			</tbody>
 	</table>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>BUTIR 6.1.1.1 : PEMBIAYAAN</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -61,12 +62,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <body class="page-header-fixed page-quick-sidebar-over-content">
 	<!-- BEGIN HEADER -->
 		<?php 
-			$this->load->view('User/header_user.php');
+			$this->load->view('Users/header_Users.php');
 		?>
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('Users/sidebar_users.php');
+			$this->load->view('Users/sidebar_Users.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 
@@ -99,29 +100,13 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<!-- <a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
+											Load
 											</button>
-											</a>
+											</a> -->
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
@@ -139,72 +124,107 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+
 							<tr>
-							 	<td rowspan="3">Usaha Sendiri</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td rowspan="4">Usaha Sendiri</td>
+							 	<td>Beasiswa Yayasan</td>
+							 	<?php
+									foreach ($dana1 as $a ) { 
+								?>
+								<td><?php echo $a['ts_2'] ?></td>
+								<td><?php echo $a['ts_1'] ?></td>
+								<td><?php echo $a['ts'] ?></td>
+								<td><?php echo $a['total1'] ?></td>
+								<?php } ?>	 
 							 </tr>
 							 <tr>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>Hibah Yayasan</td>
+							 	<?php
+									foreach ($dana2 as $a ) { 
+								?>
+								<td><?php echo $a['ts_2'] ?></td>
+								<td><?php echo $a['ts_1'] ?></td>
+								<td><?php echo $a['ts'] ?></td>
+								<td><?php echo $a['total2'] ?></td>
+								<?php } ?>
+							 </tr>
+							 <tr>
+							 	<td>Hibah Unit Usaha (PT Pasim Sentra Utama)</td>
+							 	<?php
+									foreach ($dana3 as $a ) { 
+								?>
+								<td><?php echo $a['ts_2'] ?></td>
+								<td><?php echo $a['ts_1'] ?></td>
+								<td><?php echo $a['ts'] ?></td>
+								<td><?php echo $a['total3'] ?></td>
+								<?php } ?>
 							 </tr>
 							 <tr>
 							 	<td>Jumlah dana dari usaha sendiri</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<?php
+									foreach ($jml1 as $a ) { 
+								?>
+								<td><?php echo $a['jum2'] ?></td>
+								<td><?php echo $a['jum1'] ?></td>
+								<td><?php echo $a['jum'] ?></td>
+								<td><?php echo $a['totals1'] ?></td>
+								<?php } ?>
 							 </tr>
 							  <tr>
-							 	<td rowspan="3">Mahasiswa</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td rowspan="4">Mahasiswa</td>
+							 	<td>Pendaftaran</td>
+							 	<?php
+									foreach ($dana4 as $a ) { 
+								?>
+								<td><?php echo $a['ts_2'] ?></td>
+								<td><?php echo $a['ts_1'] ?></td>
+								<td><?php echo $a['ts'] ?></td>
+								<td><?php echo $a['total4'] ?></td>
+								<?php } ?>
 							 </tr>
 							 <tr>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>Biaya Registrasi</td>
+							 	<?php
+									foreach ($dana5 as $a ) { 
+								?>
+								<td><?php echo $a['ts_2'] ?></td>
+								<td><?php echo $a['ts_1'] ?></td>
+								<td><?php echo $a['ts'] ?></td>
+								<td><?php echo $a['total5'] ?></td>
+								<?php } ?>
 							 </tr>
 							 <tr>
-							 	<td>Jumlah dana dari usaha sendiri</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>Biaya Kuliah</td>
+							 	<?php
+									foreach ($dana6 as $a ) { 
+								?>
+								<td><?php echo $a['ts_2'] ?></td>
+								<td><?php echo $a['ts_1'] ?></td>
+								<td><?php echo $a['ts'] ?></td>
+								<td><?php echo $a['total6'] ?></td>
+								<?php } ?>
+							 </tr>
+							 <tr>
+							 	<td>Jumlah dana dari Mahasiswa</td>
+							 	<?php
+									foreach ($jml2 as $a ) { 
+								?>
+								<td><?php echo $a['jml2'] ?></td>
+								<td><?php echo $a['jml1'] ?></td>
+								<td><?php echo $a['jml'] ?></td>
+								<td><?php echo $a['totals2'] ?></td>
+								<?php } ?>
 							 </tr>
 							  <tr>
-							 	<td rowspan="3">Pemerintah</td>
+							 	<td rowspan="2">Pemerintah</td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 </tr>
+							<tr>
+							 	<td><center><strong>Jumlah dana dari Pemerintah</strong></center></td>
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
@@ -212,68 +232,75 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td></td>
 							 </tr>
 							 <tr>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td rowspan="4">Sumber Lain</td>
+							 	<td>Alumni</td>
+							 	<?php
+									foreach ($dana7 as $a ) { 
+								?>
+								<td><?php echo $a['ts_2'] ?></td>
+								<td><?php echo $a['ts_1'] ?></td>
+								<td><?php echo $a['ts'] ?></td>
+								<td><?php echo $a['total7'] ?></td>
+								<?php } ?>
 							 </tr>
 							 <tr>
-							 	<td>Jumlah dana dari usaha sendiri</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>Hibah Penelitian</td>
+							 	<?php
+									foreach ($dana8 as $a ) { 
+								?>
+								<td><?php echo $a['ts_2'] ?></td>
+								<td><?php echo $a['ts_1'] ?></td>
+								<td><?php echo $a['ts'] ?></td>
+								<td><?php echo $a['total8'] ?></td>
+								<?php } ?>
 							 </tr>
 							 <tr>
-							 	<td rowspan="3">Sumber Lain</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>Hibah Pengabdian</td>
+							 	<?php
+									foreach ($dana9 as $a ) { 
+								?>
+								<td><?php echo $a['ts_2'] ?></td>
+								<td><?php echo $a['ts_1'] ?></td>
+								<td><?php echo $a['ts'] ?></td>
+								<td><?php echo $a['total9'] ?></td>
+								<?php } ?>
 							 </tr>
 							 <tr>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td>Jumlah dana dari sumber lain</td>
+							 	<?php
+									foreach ($jml4 as $a ) { 
+								?>
+								<td><?php echo $a['jumlah2'] ?></td>
+								<td><?php echo $a['jumlah1'] ?></td>
+								<td><?php echo $a['jumlah'] ?></td>
+								<td><?php echo $a['totals4'] ?></td>
+								<?php } ?>
 							 </tr>
-							 <tr>
-							 	<td>Jumlah dana dari usaha sendiri</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr>
-							 <tr>
-							 	<td colspan="2">TOTAL *</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							<tr>
+							 	<td colspan="2"><center><strong>Total*</strong></center></td>
+							 	 <?php
+									foreach ($total as $a ) { 
+								?>
+								<td><?php echo $a['total1'] ?></td>
+								<td><?php echo $a['total2'] ?></td>
+								<td><?php echo $a['total3'] ?></td>
+								<td><?php echo $a['totals'] ?></td>
+								<?php } ?>
 							 </tr>
 							</tbody>
 							</table>
-							<div class="btn-group">
-								<a href="#">
+							<!-- <div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Apd_b6111_excel/ubah";?>">
 									<button id="sample_editable_1_new" class="btn green">
-											Ubah 
+										Ubah 
 									</button>
 								</a>
-							</div>
+							</div> -->
+							
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-											Hapus 
-									</button>
-								</a>
-							</div>
-							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Aps_b6111_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
-											Export ke Excel 
+								<a href="<?php echo base_url()."index.php/Apd_b6111_excel/export_excel";?>">
+									<button id="sample_editable_1_new" class="btn blue">
+										Export To Excel
 									</button>
 								</a>
 							</div>

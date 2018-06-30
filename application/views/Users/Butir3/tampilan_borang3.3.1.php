@@ -61,7 +61,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <body class="page-header-fixed page-quick-sidebar-over-content">
 	<!-- BEGIN HEADER -->
 		<?php 
-			$this->load->view('Users/header_user.php');
+			$this->load->view('Users/header_users.php');
 		?>
 
 	<!-- BEGIN CONTAINER -->

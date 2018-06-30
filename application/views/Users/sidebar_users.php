@@ -166,7 +166,7 @@
 						Butir 4.5.2 </a>
 						</li>
 						<li>
-							<a href="<?php echo base_url(); ?>index.php/Apd_a453_excel">
+							<a href="<?php echo base_url(); ?>index.php/Aps_a453_excel">
 						Butir 4.5.3 </a>
 						</li>
 						<li>
@@ -280,7 +280,7 @@
 						Butir 6.1.1.3 </a>
 						</li>
 						<li>
-							<a href="<?php echo base_url(); ?>index.php/Apd_b642_excel">
+							<a href="<?php echo base_url(); ?>index.php/Aps_b642_excel">
 						Butir 6.4.2 </a>
 						</li>
 					</ul>

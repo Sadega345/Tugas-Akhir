@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Butir 7.1.1 : PENELITIAN DOSEN TETAP</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -61,12 +62,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <body class="page-header-fixed page-quick-sidebar-over-content">
 	<!-- BEGIN HEADER -->
 		<?php 
-			$this->load->view('User/header_user.php');
+			$this->load->view('Users/header_Users.php');
 		?>
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('Users/sidebar_users.php');
+			$this->load->view('Users/sidebar_Users.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 
@@ -81,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Butir 7.1.1 DAN 7.1.2 : PENELITIAN DOSEN TETAP
+								<i class="fa fa-edit"></i>Butir 7.1.1 : PENELITIAN DOSEN TETAP
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -101,30 +102,13 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="btn-group">
 											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
+											Load
 											</button>
 											</a>
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
-							<p>7.1.1</p>
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -134,92 +118,82 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th>TS</th>
 									 <th>Jumlah</th>
 								 </tr>
+
 							</thead>
 							<tbody>
-							<!-- <?php 
+							<?php 
 								$no=1; 
 								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+							?>
 							<tr>
-							 	<td>Pembiayaan sendiri oleh peneliti</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr>
-							 <tr>
-							 	<td>PT yang bersangkutan</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr>
-							 <tr>
-							 	<td>Depdiknas</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr>
-							  <tr>
-							 	<td>Institusi dalam negeri di luar Depdiknas</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr>
-							 <tr>
-							 	<td>Institusi luar negeri</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+								<td><?php echo $d['sumber_pembiayaan']; ?></td>
+								<td><?php echo $d['TS_2']; ?></td>
+								<td><?php echo $d['TS_1']; ?></td>
+								<td><?php echo $d['TS']; ?></td>
+								
+								<!-- Tot Peneliti -->
+								<!-- <?php 
+									foreach ($peneliti as $p ) { 
+								?>
+								<td>
+									<?php echo $p['JML']; break; } ?>
+									
+								</td> -->
+								
+
+								<!-- Bersangkutan -->
+								<!-- <?php 
+									foreach ($bersangkutan as $b ) { 
+								?>
+								<td><?php echo $b['JML']; } ?></td> -->
+								
+
+
+							</tr>
+							<?php } ?>
+
+							
+							
+							<tr>
+							 	<td>Jumlah</td>
+							 	<!-- TS2 -->
+							 	<?php 
+								
+									foreach ($totTs2 as $ts2 ) { 
+								?>
+							 	<td><?php echo $ts2['TS_2']; ?></td>
+							 	<?php } ?>
+
+							 	<!-- TS1 -->
+							 	<?php 
+								
+									foreach ($totTs1 as $ts1 ) { 
+								?>
+							 	<td><?php echo $ts1['TS_1']; ?></td>
+							 	<?php } ?>
+
+							 	<!-- TS -->
+							 	<?php 
+								
+									foreach ($totTs as $ts ) { 
+								?>
+							 	<td><?php echo $ts['TS']; ?></td>
+							 	<?php } ?>
 							 </tr>
 							</tbody>
 							</table>
-							<p>7.1.2</p>
-								<p>Adakah mahasiswa tugas akhir yang dilibatkan dalam penelitian dosen dalam tiga tahun terakhir?<input type="text" name="">
-								</p>
-								<p>Jika ada, banyaknya mahasiswa PS yang ikut serta dalam penelitian dosen adalah 
-									<input type="text" name="">
-									orang, dari
-									<input type="text" name="">
-									mahasiswa yang melakukan tugas akhir melalui skripsi.
-								</p>
-							<div class="btn-group">
-								<a href="#">
+							<!-- <div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Apd_a711_excel/ubah";?>">
 									<button id="sample_editable_1_new" class="btn green">
 										Ubah 
 									</button>
 								</a>
-							</div>
+							</div> -->
+							
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-										Hapus 
-									</button>
-								</a>
-							</div>
-							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Aps_a711_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
-										Export ke Excel 
+								<a href="<?php echo base_url()."index.php/Apd_a711_excel/export_excel";?>">
+									<button id="sample_editable_1_new" class="btn blue">
+										Export To Excel
 									</button>
 								</a>
 							</div>

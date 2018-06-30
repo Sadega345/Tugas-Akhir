@@ -63,7 +63,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!-- BEGIN HEADER -->
 		<?php 
 			// $this->session->userdata('level').'/header.php' ; 
-			$this->load->view('Users/header_user.php');
+			$this->load->view('Users/header_users.php');
 		?>
 
 	<!-- BEGIN CONTAINER -->

@@ -11,7 +11,7 @@ class Apd_a711_model extends CI_Model {
 
 // Listing
 public function listing() {
- $data=$this->db->query('SELECT TS_2,TS_1,TS,sumber_pembiayaan FROM penelitian_dosen WHERE kd_prodi="p001" ORDER BY KD_JNS;');
+ $data=$this->db->query('SELECT TS_2,TS_1,TS,sumber_pembiayaan FROM penelitian_dosen WHERE kd_prodi="p001" ORDER BY KD_JNS');
  return $data->result_array();
  }
 

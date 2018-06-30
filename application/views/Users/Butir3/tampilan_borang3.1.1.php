@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Butir 3.1.1 : PROFIL MAHASISWA DAN LULUSAN</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -61,12 +62,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <body class="page-header-fixed page-quick-sidebar-over-content">
 	<!-- BEGIN HEADER -->
 		<?php 
-			$this->load->view('Users/header_user.php');
+			$this->load->view('Users/header_Users.php');
 		?>
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('Users/sidebar_users.php');
+			$this->load->view('Users/sidebar_Users.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 
@@ -99,141 +100,165 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="#">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
+											Load
 											</button>
 											</a>
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
-							<table class="table table-striped table-bordered table-hover" id="sample_1">
+							<div style="overflow-x:auto;">
+							
+							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 							<thead>
 								<tr>
-									<td rowspan="2">Tahun <br> akademik</td>
-									<td rowspan="2">Daya <br> tampung</td>
-									<td colspan="2">Jumlah calon mahasiswa</td>
-									<td colspan="2">Jumlah mahasiswa baru</td>
-									<td colspan="2">Jumlah total mahasiswa baru</td>
-									<td colspan="2">Jumlah lulusan</td>
-									<td colspan="3">IPK Lulusan Reg</td>
-									<td colspan="3">Persen dengan lulusan dengan IPK</td>
+									<th rowspan="2">Tahun <br> akademik</th>
+									<th rowspan="2">Daya <br> tampung</th>
+									<th colspan="2">Jumlah calon mahasiswa</th>
+									<th colspan="2">Jumlah mahasiswa baru</th>
+									<th colspan="2">Jumlah total mahasiswa baru</th>
+									<th colspan="2">Jumlah lulusan</th>
+									<th colspan="3">IPK Lulusan Reg</th>
+									<th colspan="3">Persen dengan lulusan dengan IPK</th>
+									<th rowspan="2">Aksi</th>
 								</tr>
 								<tr>
-									<td>Ikut seleksi</td>
-									<td>Lulus Seleksi</td>
-									<td>Ikut seleksi</td>
-									<td>Lulus Seleksi</td>
-									<td>Reg Bukan trf</td>
-									<td>Transfer</td>
-									<td>Reg Bukan trf</td>
-									<td>Transfer</td>
-									<td>Min</td>
-									<td>Rat</td>
-									<td>Max</td>
-									<td><2.75</td>
-									<td>2.75-3.50</td>
-									<td>>3.50</td>
+									<th>Ikut seleksi</th>
+									<th>Lulus Seleksi</th>
+									<th>Ikut seleksi</th>
+									<th>Lulus Seleksi</th>
+									<th>Reg Bukan trf</th>
+									<th>Transfer</th>
+									<th>Reg Bukan trf</th>
+									<th>Transfer</th>
+									<th>Min</th>
+									<th>Rat</th>
+									<th>Max</th>
+									<th><2.75</th>
+									<th>2.75-3.50</th>
+									<th>>3.50</th>
 								</tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
-							<tr align="center">
-								 	<td>(1)</td>
-								 	<td>(2)</td>
-								 	<td>(3)</td>
-								 	<td>(4)</td>
-								 	<td>(5)</td>
-								 	<td>(6)</td>
-								 	<td>(7)</td>
-								 	<td>(8)</td>
-								 	<td>(9)</td>
-								 	<td>(10)</td>
-								 	<td>(11)</td>
-								 	<td>(12)</td>
-								 	<td>(13)</td>
-								 	<td>(14)</td>
-								 	<td>(15)</td>
-								 	<td>(16)</td>
+								 <?php 
+									$no=4; 
+									foreach ($data as $d ) { 
+								?>
+								 <tr>
+								 	<td>TS- <?php echo $no--; ?></td>
+								 	<td><?php echo $d['dy_tampung']; ?></td>
+								 	<td><?php echo $d['jc_mhs_ikt_seleksi']; ?></td>
+								 	<td><?php echo $d['jc_mhs_lls_seleksi']; ?></td>
+								 	<td><?php echo $d['j_maba_reg_bkn_trf']; ?></td>
+								 	<td><?php echo $d['j_maba_trf']; ?></td>
+								 	<td><?php echo $d['j_tot_reg_bkn_trf']; ?></td>
+								 	<td><?php echo $d['j_tot_trf']; ?></td>
+								 	<td><?php echo $d['j_llsn_reg_bkn_trf']; ?></td>
+								 	<td><?php echo $d['j_llsn_trf']; ?></td>
+								 	<td><?php echo $d['ipk_min']; ?></td>
+								 	<td><?php echo $d['ipk_rat']; ?></td>
+								 	<td><?php echo $d['ipk_mak']; ?></td>
+								 	<td><?php echo $d['PRSN_IPK1']; ?></td>
+								 	<td><?php echo $d['PRSN_IPK2']; ?></td>
+								 	<td><?php echo $d['PRSN_IPK3']; ?></td>
+								 	<td class="center">
+										<a href="<?php echo base_url()."index.php/Apd_a311_excel/ubah/".$d['id'];?>" >Edit</a>
+									</td>
 								 </tr>
-								 <tr>
-								 	<td>TS-4</td>
-								 </tr>
-								 <tr>
-								 	<td>TS-3</td>
-								 </tr>
-								 <tr>
-								 	<td>TS-2</td>
-								 </tr>
-								 <tr>
-								 	<td>TS-1</td>
-								 </tr>	
-								 <tr>
-								 	<td>TS</td>
-								 </tr>	
+			
+								<?php } ?>
 								 <tr>
 								 	<td>Jumlah</td>
+								 	<?php 
+							 			foreach ($jumdtampung as $jum) {
+							 		?>
+								 	<td><?php echo $jum['Daya_Tampung']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
+							 			foreach ($iseleksi as $i) {
+							 		?>
+								 	<td><?php echo $i['Ikut_seleksi']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
+							 			foreach ($barutransfer as $i) {
+							 		?>
+								 	<td><?php echo $i['Baru_transfer']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
+							 			foreach ($totbukantransfer as $i) {
+							 		?>
+								 	<td><?php echo $i['Tot_BukanTransfer']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
+							 			foreach ($tottransfer as $i) {
+							 		?>
+								 	<td><?php echo $i['Tot_transfer']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
+							 			foreach ($lulusanregbukantransfer as $i) {
+							 		?>
+								 	<td><?php echo $i['Lulusan_RegBukanTransfer']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
+							 			foreach ($jumlulusantransfer as $i) {
+							 		?>
+								 	<td><?php echo $i['Jumlah_LulusanTransfer']; ?></td>
+								 	<?php } ?>
+									 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
 								 </tr>	
 								 <tr>
 								 	<td>Rataan</td>
+								 	<?php 
+								 		foreach ($rata as $r) {
+								 	 ?>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	<td><?php echo $r['rata']; ?></td>
+								 	<td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 	 <td style="background-color: #D3D3D3"></td>
+								 <?php } ?>
 								 </tr>
-		
 							</tbody>
 							</table>
-							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+							</div>
+							<!-- <div class="btn-group">
+								<a href="<?php echo base_url().'index.php/Apd_a311_excel/ubah'; ?>">
 									<button id="sample_editable_1_new" class="btn green">
-											Ubah 
+										Ubah 
 									</button>
 								</a>
-							</div>
+							</div> -->
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
-									<button id="sample_editable_1_new" class="btn green">
-											Hapus 
-									</button>
-								</a>
-							</div>
-							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Aps_a311_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
-											Export ke Excel 
+								<a href="<?php echo base_url()."index.php/Apd_a311_excel/export_excel";?>">
+									<button id="sample_editable_1_new" class="btn blue">
+										Export ke Excel 
 									</button>
 								</a>
 							</div>

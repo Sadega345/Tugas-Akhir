@@ -16,9 +16,9 @@ class Model_login extends CI_model {
 		$return = $this->db->get('');
 		if($return->num_rows() > 0 ){
 			foreach ($return->result() as $row) {
-				if($row->username=="admin" || $row->password=="admin"){
+				if($row->username=="admin" ){
 					$sess = array('username' => $row->username,
-					   			'password' => $row->password);
+					   			);
 					$this->session->set_userdata( $sess );
 					redirect('Admin');
 				}else if($row->username=="d3" ){

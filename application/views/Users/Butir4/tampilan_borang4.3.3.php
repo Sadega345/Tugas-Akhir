@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Butir 4.3.3 : AKTIVITAS DOSEN TETAP YANG BIDANG KEAHLIANNYA SESUAI DENGAN PS</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -61,12 +62,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <body class="page-header-fixed page-quick-sidebar-over-content">
 	<!-- BEGIN HEADER -->
 		<?php 
-			$this->load->view('User/header_user.php');
+			$this->load->view('Users/header_Users.php');
 		?>
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('Users/sidebar_users.php');
+			$this->load->view('Users/sidebar_Users.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 
@@ -101,159 +102,168 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="btn-group">
 											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
+											Tambah 
 											</button>
 											</a>
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th rowspan="2">No</th>
-									 <th rowspan="2">Nama Dosen Tetap</th>
-									 <th colspan="3">SKS Pengajaran pada</th>
-									 <th rowspan="2">SKS Penelitian</th>
-									 <th rowspan="2">SKS Pengabdian Masyarakat</th>
-									 <th colspan="2">SKS Manajemen</th>
-									 <th rowspan="2">Jumlah SKS</th>
+									 <th rowspan="2"><center>No</center></th>
+									 <th rowspan="2"><center>Nama Dosen Tetap</center></th>
+									 <th colspan="3"><center>SKS Pengajaran pada</center></th>
+									 <th rowspan="2"><center>SKS Penelitian</center></th>
+									 <th rowspan="2"><center>SKS Pengabdian Masyarakat</center></th>
+									 <th colspan="2"><center>SKS Manajemen</center></th>
+									 <th rowspan="2"><center>Jumlah SKS</center></th>
+									 <th rowspan="2"><center>Aksi</center></th>
 								 </tr>
 								 <tr>
-								 	<th>PS Sendiri</th>
-								 	<th>PS Lain, PT Sendiri</th>
-								 	<th>PT Lain</th>
-								 	<th>PS Sendiri</th>
-								 	<th>PT Lain</th>
-								 </tr>
-								 <tr align="center">
-								 	<td>(1)</td>
-								 	<td>(2)</td>
-								 	<td>(3)</td>
-								 	<td>(4)</td>
-								 	<td>(5)</td>
-								 	<td>(6)</td>
-								 	<td>(7)</td>
-								 	<td>(8)</td>
-								 	<td>(9)</td>
-								 	<td>(10)</td>
+								 	<th><center>PS Sendiri</center></th>
+								 	<th><center>PS Lain, PT Sendiri</center></th>
+								 	<th><center>PT Lain</center></th>
+								 	<th><center>PS Sendiri</center></th>
+								 	<th><center>PT Lain</center></th>
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
+							<?php 
 								$no=1; 
 								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+							?>
 							<tr>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td><?php echo $no++; ?></td>
+							 	<td><?php echo $d['NAMA_DOSEN']; ?></td>
+							 	<td><?php echo $d['SKS_PSS']; ?></td>
+							 	<td><?php echo $d['SKS_PSL_PTS']; ?></td>
+							 	<td><?php echo $d['SKS_PTL']; ?></td>
+							 	<td><?php echo $d['SKS_PENELITIAN']; ?></td>
+							 	<td><?php echo $d['SKS_PP_MAS']; ?></td>
+							 	<td><?php echo $d['SKS_MAN_PTS']; ?></td>
+							 	<td><?php echo $d['SKS_MAN_PTL']; ?></td>
+							 	<td><?php echo $d['total']; ?></td>
+							 	<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a433_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>
 							 </tr>
-							 <tr>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr>
-							 <tr>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr>
+							 <input type="hidden" name="id" value="<?php echo $d['id']; ?>">
+							 <?php } ?>
+
+							 
 							 <tr>
 							 	<td colspan="2">Jumlah</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<?php 
+									foreach ($hitung as $h ) { 
+							  	?>
+							 	<td><?php echo $h['jml']; ?></td>
+							 	<?php } ?>
+							 	<?php 
+									foreach ($pt as $p ) { 
+							  	?>
+							 	<td><?php echo $p['jml']; ?></td>
+							 	<?php } ?>
+							 	<?php 
+									foreach ($lain as $l ) { 
+							  	?>
+							 	<td><?php echo $l['jml']; ?></td>
+							 	<?php } ?>
+							 	<?php 
+									foreach ($penelitian as $p ) { 
+							  	?>
+							 	<td><?php echo $p['jml']; ?></td>
+							 	<?php } ?>
+							 	<?php 
+									foreach ($pengabdian as $p ) { 
+							  	?>
+							 	<td><?php echo $p['jml']; ?></td>
+							 	<?php } ?>
+							 	<?php 
+									foreach ($jumsks as $j ) { 
+							  	?>
+							 	<td><?php echo $j['jml']; ?></td>
+							 	<?php } ?>
+							 	<?php 
+									foreach ($manptlain as $man ) { 
+							  	?>
+							 	<td><?php echo $man['jml']; ?></td>
+							 	<?php } ?>
+							 	<?php 
+									foreach ($totsks as $tot ) { 
+							  	?>
+							 	<td><?php echo $tot['jml']; ?></td>
+							 	<?php } ?>
 							 </tr>
+							 
 							  <tr>
 							 	<td colspan="2">Rata-rata</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-			 </tr>
+							 	<?php 
+									foreach ($rata as $r ) { 
+							  	?>
+							 	<td><?php echo $r['rata']; ?></td>
+							 	<?php } ?>
+
+							 	<?php 
+									foreach ($prlain as $pr ) { 
+							  	?>
+							 	<td><?php echo $pr['rata']; ?></td>
+							 	<?php } ?>
+
+							 	<?php 
+									foreach ($ptlain as $pt ) { 
+							  	?>
+							 	<td><?php echo $pt['rata']; ?></td>
+							 	<?php } ?>
+
+							 	<?php 
+									foreach ($ratapenelitian as $rp ) { 
+							  	?>
+							 	<td><?php echo $rp['rata']; ?></td>
+							 	<?php } ?>
+
+							 	<?php 
+									foreach ($pengmas as $peng ) { 
+							  	?>
+							 	<td><?php echo $peng['rata']; ?></td>
+							 	<?php } ?>
+
+							 	<?php 
+									foreach ($rataman as $m ) { 
+							  	?>
+							 	<td><?php echo $m['rata']; ?></td>
+							 	<?php } ?>
+
+							 	<?php 
+									foreach ($manlain as $ml ) { 
+							  	?>
+							 	<td><?php echo $ml['rata']; ?></td>
+							 	<?php } ?>
+
+							 	<?php 
+									foreach ($ratajumsks as $ratasks ) { 
+							  	?>
+							 	<td><?php echo $ratasks['rata']; ?></td>
+							 	<?php } ?>
+							 	
+			 				</tr>
 							</tbody>
+							
 							</table>
-							<div class="btn-group">
-								<a href="#">
+							</div>
+							<!-- <div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Apd_a433_excel/ubah";?>">
 									<button id="sample_editable_1_new" class="btn green">
-											Ubah 
+										Ubah 
 									</button>
 								</a>
-							</div>
+							</div>	 -->						
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-											Hapus 
-									</button>
-								</a>
-							</div>
-							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Aps_a433_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
-											Export ke Excel 
+								<a href="<?php echo base_url()."index.php/Apd_a433_excel/export_excel";?>">
+									<button id="sample_editable_1_new" class="btn blue">
+										Export To Excel
 									</button>
 								</a>
 							</div>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>PROGRAM STUDI</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -61,12 +62,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <body class="page-header-fixed page-quick-sidebar-over-content">
 	<!-- BEGIN HEADER -->
 		<?php 
-			$this->load->view('User/header_user.php');
+			$this->load->view('Users/header_Users.php');
 		?>
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('Users/sidebar_users.php');
+			$this->load->view('Users/sidebar_Users.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 
@@ -81,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>IDENTITAS PROGRAM STUDI
+								<i class="fa fa-edit"></i>Identitas Program Studi
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -97,15 +98,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="portlet-body">
 							<div class="table-toolbar">
 								<div class="row">
-									<div class="col-md-6">
-										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
-											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
-											</button>
-											</a>
-										</div>
-									</div>
+									
 									<!-- <div class="col-md-6">
 										<div class="btn-group pull-right">
 											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
@@ -124,36 +117,47 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
-							<table  id="sample_1">
+							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Prodis_excel/ubah"; ?>" method="POST">
+							<table id="sample_1">
 							<thead>
 								<tr>
 									<th></th>
 									<th></th>
 									<th></th>
-									<th>Kode sesuai kode PPDT</th>
-									<th>Keterangan</th>
+									<!-- <th>Kode sesuai kode PPDT</th> -->
+									<!-- <th>Keterangan</th> -->
+								<?php 
+									
+									foreach ($data as $d ) { 
+								?>
 								</tr>
 								<tr>
 									<th>1.</th>
 									<th>Program Studi</th>
-									<th><input type="text" name="programstudi"> <input type="" name=""></th>
-									<!-- <th><input type="text" name="ppdt"></th> -->
+									<th>
+										<input type="text" name="programstudi" value="<?php echo $d['PRODI']; ?>" readonly=""> 
+										Kode sesuai kode PPDT <input type="text" name=""  value="<?php echo $d['KODE_PRODI']; ?>" readonly="">
+									</th>
+
 								 </tr>
 								 <tr>
 								 	<th>2.</th>
 									<th>Jurusan/Departemen</th>
-									<th><input type="text" name="departemen"></th>
+									<th><input type="text" name="departemen" value="<?php echo $d['jurusan']; ?>" readonly=""></th>
 								 </tr>
 								 <tr>
 								 	<th>3.</th>
 									<th>Fakultas</th>
-									<th><input type="text" name="fakultas"></th>
+									<th><input type="text" name="fakultas" value="<?php echo $d['NAMA_FAKULTAS']; ?>" readonly=""></th>
 								 </tr>
 								 <tr>
 								 	<th>4.</th>
 									<th>Perguruan Tinggi</th>
-									<th><input type="text" name="perguruan"></th>
-									<th><input type="text" name=""></th>
+									<th>
+										<input type="text" name="perguruan" value="<?php echo $d['NAMA_PT']; ?>" readonly="">
+										Kode sesuai kode PPDT<input type="text" name=""  value="<?php echo $d['kode_pt']; ?>" readonly="" >
+									</th>
 								 </tr>
 								  <tr>
 								  	 <th>5.</th>
@@ -162,23 +166,26 @@ License: You must have a valid license purchased only from themeforest(the above
 								 <tr>
 								 	<th></th>
 									<th>Nomor SK</th>
-									<th><input type="text" name="nosk"></th>
+									<th><input type="text" name="nosk" value="<?php echo $d['NO_SK_PS']; ?>" readonly=""></th>
 								 </tr>
 								 <tr>
 								 	<th></th>
 									<th>Tanggal SK</th>
-									<th><input type="text" name="tanggal"></th>
+									<th><input type="text" name="tanggal" value="<?php echo $d['TGL_SK_PS']; ?>" readonly=""></th>
 								 </tr>
 								 <tr>
 								 	<th></th>
 									<th>Pejabat penandatangan</th>
-									<th><input type="text" name="pejabat"></th>
+									<th><input type="text" name="pejabat" value="<?php echo $d['PJBT_TTD']; ?>" readonly=""></th>
 								 </tr>
 								 <tr>
 								 	<th>6.</th>
-									<th>Bulan dan tahun dimulainya penyelenggaraan PS</th>
+									<th>Bulan dan tahun dimulainya <br>penyelenggaraan PS</th>
 									<th>
-										<select>
+										<input type="text" name="" value="<?php echo $d['BLN_MULAI_PS']; ?>" readonly="">
+										<input type="text" name="" value="<?php echo $d['THN_MULAI_PS']; ?>" readonly="">
+
+										<!-- <select>
 											<option>Januari</option>
 											<option>Februari</option>
 											<option>Maret</option>
@@ -187,7 +194,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<option>Juni</option>
 											<option>Juli</option>
 											<option>Agustus</option>
-										</select>
+										</select> -->
 									</th>
 								 </tr>
 								 <tr>
@@ -197,12 +204,12 @@ License: You must have a valid license purchased only from themeforest(the above
 								 <tr>
 								 	<th></th>
 									<th>Nomor SK</th>
-									<th><input type="text" name="nosk"></th>
+									<th><input type="text" name="nosk" value="<?php echo $d['NO_SK_OPR']; ?>" readonly=""></th>
 								 </tr>
 								 <tr>
 								 	<th></th>
 									<th>Tanggal SK</th>
-									<th><input type="text" name="tanggalsk"></th>
+									<th><input type="text" name="tanggalsk" value="<?php echo $d['TGL_SK_OPR']; ?>" readonly=""></th>
 								 </tr>
 								 <tr>
 								 	<th>8.</th>
@@ -211,53 +218,58 @@ License: You must have a valid license purchased only from themeforest(the above
 								 <tr>
 								 	<th></th>
 									<th>Peringkat</th>
-									<th><input type="text" name="peringkat"></th>
+									<th><input type="text" name="peringkat" value="<?php echo $d['PERINGKAT']; ?>" readonly=""></th>
 								 </tr>
 								 <tr>
 								 	<th></th>
 									<th>Nilai</th>
-									<th><input type="text" name="nilai"></th>
+									<th><input type="text" name="nilai" value="<?php echo $d['NILAI']; ?>" readonly=""></th>
 								 </tr>
 								 <tr>
 								 	<th></th>
 									<th>Nomor SK BAN-PT</th>
-									<th><input type="text" name="noskban"></th>
+									<th><input type="text" name="noskban" value="<?php echo $d['NO_SK_BAN_PT']; ?>" readonly=""></th>
 								 </tr>
 								 <tr>
 								 	<th>9.</th>
 									<th>Alamat PS</th>
-									<th><textarea rows="4" cols="50"></textarea></th>
+									<th><textarea rows="4" cols="20" readonly=""><?php echo $d['ALAMAT_PS']; ?> </textarea></th>
 								 </tr>
 								 <tr>
 								 	<th>10.</th>
 									<th>No telepon PS</th>
-									<th><input type="text" name="notelponps"></th>
+									<th><input type="text" name="notelponps" value="<?php echo $d['NO_TELP_PS']; ?>" readonly=""></th>
 								 </tr>
 								 <tr>
 								 	<th>11.</th>
 									<th>Nomor Faksimili PS</th>
-									<th><input type="text" name="nofaksimili"></th>
+									<th><input type="text" name="nofaksimili" value="<?php echo $d['NO_FAX_PS']; ?>" readonly=""></th>
 								 </tr>
+								 <tr>
+								 	<th>12.</th>
+									<th>Homepage PS</th>
+									<th><input type="text" name="nofaksimili" value="<?php echo $d['HOMEPAGE_PS']; ?>" readonly=""></th>
+								 </tr>
+								 <tr>
+								 	<th>13.</th>
+									<th>Email PS</th>
+									<th><input type="text" name="nofaksimili" value="<?php echo $d['EMAIL_PS']; ?>" readonly=""></th>
+								 </tr>
+								 <?php } ?>
 							</thead>
 							</table>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-										Ubah 
-									</button>
-								</a>
 							</div>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-										Hapus 
-									</button>
-								</a>
+								<button id="sample_editable_1_new" class="btn blue">
+									Edit 
+								</button>
+								
 							</div>
+							</form>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Prodis_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Prodi_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn green">
-										Export ke Excel 
+										Export To excel
 									</button>
 								</a>
 							</div>

@@ -1,4 +1,5 @@
  <!DOCTYPE html>
+ <title>Butir 5.4.1 : NAMA DOSEN PEMBIMBING DAN JUMLAH MAHASISWA</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -61,12 +62,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <body class="page-header-fixed page-quick-sidebar-over-content">
 	<!-- BEGIN HEADER -->
 		<?php 
-			$this->load->view('User/header_user.php');
+			$this->load->view('Users/header_Users.php');
 		?>
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('Users/sidebar_users.php');
+			$this->load->view('Users/sidebar_Users.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 
@@ -99,29 +100,13 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="<?php echo base_url()."index.php/Apd_a541_excel/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
+											Tambah+
 											</button>
 											</a>
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
@@ -131,61 +116,55 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th>Nama Dosen Pembimbing Akademik</th>
 									 <th>Jumlah Mahasiswa Bimbingan</th>
 									 <th>Rata-rata banyaknya Pertemuan/mhs/semester</th>
-								 </tr>
-								 <tr align="center">
-								 	<td>(1)</td>
-								 	<td>(2)</td>
-								 	<td>(3)</td>
-								 	<td>(4)</td>
+									 <th rowspan="2">Aksi</th>
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
+							<?php 
 								$no=1; 
 								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+							?>
 							<tr>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td><?php echo $no++; ?></td>
+							 	<td><?php echo $d['nama_dosen'] ?></td>
+							 	<td><?php echo $d['j_mhs_bimbingan'] ?></td>
+							 	<td><?php echo $d['rata2_pertemuan'] ?></td>
+							 	<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a541_excel/ubah/".$d['Id'];?>" >Edit</a>
+								</td>
 							 </tr>
+							 <?php } ?>	
+
+							 
+							 <tr>
+							 	<td colspan="2"><center>Jumlah*</center></td>
+							 	<?php 
+							 		foreach ($totpertemuan as $jum) {
+							 	?>
+							 		<td><?php echo $jum['jum_bimbingan']; ?></td>
+							 	<?php } ?>
+
+							 <?php 
+							 	foreach ($bertemu as $temu) {
+							 ?>
+							 	
+							 	<td><?php echo $temu['rata_pertemuan']; ?></td>
+							 <?php } ?>
+
 							</tbody>
 							</table>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-											Ubah 
+							<!-- <div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Apd_a541_excel/ubah";?>">
+									<button id="sample_editable_1_new" class="btn blue">
+										Ubah 
 									</button>
 								</a>
-							</div>
+							</div> -->
+							
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-											Hapus 
-									</button>
-								</a>
-							</div>
-							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Aps_a541_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
-											Export ke Excel 
+								<a href="<?php echo base_url()."index.php/Apd_a541_excel/export_excel";?>">
+									<button id="sample_editable_1_new" class="btn blue">
+										Export To Excel 
 									</button>
 								</a>
 							</div>
