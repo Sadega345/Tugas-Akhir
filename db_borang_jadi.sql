@@ -1,5 +1,5 @@
 /*
-SQLyog Enterprise - MySQL GUI v8.05 
+SQLyog Enterprise - MySQL GUI v7.02 
 MySQL - 5.6.16 : Database - db_borangakreditasi
 *********************************************************************
 */
@@ -84,8 +84,7 @@ CREATE TABLE `aktivitas_mengajar` (
   `jp_dilaksanakan` int(3) DEFAULT NULL,
   `id` int(4) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`),
-  KEY `FK_aktivitas_mengajar` (`id_dosen`),
-  CONSTRAINT `FK_aktivitas_mengajar` FOREIGN KEY (`id_dosen`) REFERENCES `dosen_tbl` (`id_dosen`)
+  KEY `FK_aktivitas_mengajar` (`id_dosen`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 /*Data for the table `aktivitas_mengajar` */
@@ -308,7 +307,7 @@ CREATE TABLE `dosen_tbl` (
 
 LOCK TABLES `dosen_tbl` WRITE;
 
-insert  into `dosen_tbl`(`id_dosen`,`kd_prodi`,`nidn`,`nama_dosen`,`tgl_lhr`,`kd_jab`,`kd_jns_dosen`,`sertifikasi`,`gelar_s1`,`asal_pt_s1`,`bid_keahlian_s1`,`gelar_s2`,`asal_pt_s2`,`bid_keahlian_s2`,`gelar_s3`,`asal_pt_s3`,`bid_keahlian_s3`,`gelar`,`pengakuan`,`bid_keahlian`,`sts_ahli`) values ('1','P001','0421089201','Erna Hikmawati','1992-08-21',NULL,1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M. Kom','STMIK Likmi','Sistem Informasi','','','','OCA, OCP, MOS','Oracle, Microsoft','Java, Microsoft Excel','YA'),('11','P001','0418106603','Tjandra Tjahyarini','1966-10-18','2',1,'Tidak','Ir','Institut Teknologi Bandung','Geofisika','','(Sedang Studi Lanjut) STMIK LIKMI','Sistem Informasia','','','','','Sololearn','','TIDAK'),('17','P001',NULL,'','0000-00-00',NULL,2,'',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'TIDAK'),('2','P001','0408097207','Soleh Sabarudin','1972-09-08',NULL,1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M. Kom','STMIK Likmi','Sistem Informasi',NULL,NULL,NULL,NULL,'Sololearn','HTML, PHP','YA'),('3','P001','8863350017','Eni Triningsih','1989-09-24',NULL,1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M.T','Institut Teknologi Bandung','Sistem Informasi',NULL,NULL,NULL,NULL,'Sololearn','SQL','YA'),('4','P001','0408047305','Eko Travada SP','1973-01-23',NULL,1,'Tidak','S.T','Universitas Kristen Maranatha','Teknik Elektro','M.T','Institut Teknologi Bandung','Teknik Elektro','','Sedang Studi Lanjut (S3 STEI ITB)','Elektro dan Informatika','','Sololearn','C++','YA'),('5','P001','8891700016','Yudhistira Sulaeman','1973-07-03',NULL,1,'Tidak','S.Si','Institut Teknologi Bandung','Matematika','M.Kom','STMIK Likmi','Sistem Informasi',NULL,NULL,NULL,NULL,NULL,NULL,'YA'),('9','P001','0428097402','Lucky Handayani','1974-09-28',NULL,1,'Tidak','S.T','Universitas Jenderal Ahmad Yani','Teknik Mesin','M.T','Institut Teknologi Bandung ','Teknik Mesin','','','','','','','TIDAK');
+insert  into `dosen_tbl`(`id_dosen`,`kd_prodi`,`nidn`,`nama_dosen`,`tgl_lhr`,`kd_jab`,`kd_jns_dosen`,`sertifikasi`,`gelar_s1`,`asal_pt_s1`,`bid_keahlian_s1`,`gelar_s2`,`asal_pt_s2`,`bid_keahlian_s2`,`gelar_s3`,`asal_pt_s3`,`bid_keahlian_s3`,`gelar`,`pengakuan`,`bid_keahlian`,`sts_ahli`) values ('1','P001','0421089201','Erna Hikmawati','1992-08-21',NULL,1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M. Kom','STMIK Likmi','Sistem Informasi','','','','OCA, OCP, MOS','Oracle, Microsoft','Java, Microsoft Excel','YA'),('2','P001','0408097207','Soleh Sabarudin','1972-09-08',NULL,1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M. Kom','STMIK Likmi','Sistem Informasi',NULL,NULL,NULL,NULL,'Sololearn','HTML, PHP','YA'),('3','P001','8863350017','Eni Triningsih','1989-09-24',NULL,1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M.T','Institut Teknologi Bandung','Sistem Informasi',NULL,NULL,NULL,NULL,'Sololearn','SQL','YA'),('4','P001','0408047305','Eko Travada SP','1973-01-23',NULL,1,'Tidak','S.T','Universitas Kristen Maranatha','Teknik Elektro','M.T','Institut Teknologi Bandung','Teknik Elektro','','Sedang Studi Lanjut (S3 STEI ITB)','Elektro dan Informatika','','Sololearn','C++','YA'),('5','P001','8891700016','Yudhistira Sulaeman','1973-07-03',NULL,1,'Tidak','S.Si','Institut Teknologi Bandung','Matematika','M.Kom','STMIK Likmi','Sistem Informasi',NULL,NULL,NULL,NULL,NULL,NULL,'YA'),('6','P001','0418106603','Tjandra Tjahyarini','1966-10-18','2',1,'Tidak','Ir','Institut Teknologi Bandung','Geofisika','','(Sedang Studi Lanjut) STMIK LIKMI','Sistem Informasia','','','','','Sololearn','','TIDAK'),('7','P001','0428097402','Lucky Handayani','1974-09-28',NULL,1,'Tidak','S.T','Universitas Jenderal Ahmad Yani','Teknik Mesin','M.T','Institut Teknologi Bandung ','Teknik Mesin','','','','','','','TIDAK');
 
 UNLOCK TABLES;
 
@@ -412,7 +411,7 @@ CREATE TABLE `instansi_lulusan` (
   PRIMARY KEY (`id`),
   KEY `FK_instansi_lulusan` (`id_ts`),
   CONSTRAINT `FK_instansi_lulusan` FOREIGN KEY (`id_ts`) REFERENCES `data_mhs` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
 
 /*Data for the table `instansi_lulusan` */
 
@@ -992,7 +991,7 @@ CREATE TABLE `pengisi_borang` (
   PRIMARY KEY (`id`),
   KEY `kode_prodi` (`kode_prodi`),
   CONSTRAINT `pengisi_borang_ibfk_1` FOREIGN KEY (`kode_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
 
 /*Data for the table `pengisi_borang` */
 
@@ -1070,15 +1069,17 @@ DROP TABLE IF EXISTS `persentase_llsn`;
 CREATE TABLE `persentase_llsn` (
   `id_prodi` varchar(6) DEFAULT NULL,
   `persen` double(10,2) DEFAULT NULL,
+  `id` int(4) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`),
   KEY `FK_persentase_llsn` (`id_prodi`),
   CONSTRAINT `FK_persentase_llsn` FOREIGN KEY (`id_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 /*Data for the table `persentase_llsn` */
 
 LOCK TABLES `persentase_llsn` WRITE;
 
-insert  into `persentase_llsn`(`id_prodi`,`persen`) values ('P001',93.28);
+insert  into `persentase_llsn`(`id_prodi`,`persen`,`id`) values ('P001',92.27,1);
 
 UNLOCK TABLES;
 
@@ -1386,15 +1387,17 @@ DROP TABLE IF EXISTS `wkt_tunggu_llsn`;
 CREATE TABLE `wkt_tunggu_llsn` (
   `id_prodi` varchar(6) DEFAULT NULL,
   `waktu` double(10,2) DEFAULT NULL,
+  `id` int(4) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`),
   KEY `FK_wkt_tunggu_llsn` (`id_prodi`),
   CONSTRAINT `FK_wkt_tunggu_llsn` FOREIGN KEY (`id_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 /*Data for the table `wkt_tunggu_llsn` */
 
 LOCK TABLES `wkt_tunggu_llsn` WRITE;
 
-insert  into `wkt_tunggu_llsn`(`id_prodi`,`waktu`) values ('P001',0.11);
+insert  into `wkt_tunggu_llsn`(`id_prodi`,`waktu`,`id`) values ('p001',0.11,1);
 
 UNLOCK TABLES;
 
