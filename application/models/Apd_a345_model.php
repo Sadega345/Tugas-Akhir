@@ -80,4 +80,45 @@ public function listing() {
  	return $jml->result_array();
  }
 
+public function insert($tablename,$data){
+	$res=$this->db->insert($tablename,$data);
+	return $res;
+}
+
+public function gettahun(){
+	$tahun=$this->db->query('select id as id_ts, tahun from data_mhs;');
+	return $tahun->result_array();
+
+}
+
+public function row1(){
+	$row1=$this->db->query('select COUNT(i.instansi) as row from instansi_lulusan i inner join data_mhs d on i.id_ts=d.id where i.id_ts=1 and d.id_prodi="p001";');
+	return $row1->result_array();
+}
+
+public function row2(){
+	$row2=$this->db->query('select COUNT(i.instansi) as row from instansi_lulusan i inner join data_mhs d on i.id_ts=d.id where i.id_ts=2 and d.id_prodi="p001";');
+	return $row2->result_array();
+}
+
+public function row3(){
+	$row3=$this->db->query('select COUNT(i.instansi) as row from instansi_lulusan i inner join data_mhs d on i.id_ts=d.id where i.id_ts=3 and d.id_prodi="p001";');
+	return $row3->result_array();
+}
+
+public function row4(){
+	$row4=$this->db->query('select COUNT(i.instansi) as row from instansi_lulusan i inner join data_mhs d on i.id_ts=d.id where i.id_ts=4 and d.id_prodi="p001";');
+	return $row4->result_array();
+}
+
+public function row5(){
+	$row5=$this->db->query('select COUNT(i.instansi) as row from instansi_lulusan i inner join data_mhs d on i.id_ts=d.id where i.id_ts=5 and d.id_prodi="p001";');
+	return $row5->result_array();
+}
+
+public function delete($tablename,$where){
+	$res=$this->db->delete($tablename,$where);
+	return $res;
+}
+
 }

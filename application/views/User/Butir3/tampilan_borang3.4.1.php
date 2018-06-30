@@ -175,24 +175,50 @@ License: You must have a valid license purchased only from themeforest(the above
 							 </tr>
 							</tbody>
 							</table>
+
 							<p><strong>3.4.3 Rata-rata waktu tunggu lulusan untuk memperoleh pekerjaan yang pertama</strong>
 								<table class="table table-striped table-bordered table-hover" id="sample_1">	
+									<thead>
+										<tr>
+											<th>Rata-rata waktu</th>
+											<th>Aksi</th>
+										</tr>
+									</thead>
+									<tbody>
 									<tr>
 										<?php foreach ($waktu as $w ) {
 										 ?>
 										<td><?php echo $w['waktu'] ; ?></td>
-										<?php } ?>
+										
+										<td class="center">
+											<a href="<?php echo base_url()."index.php/Apd_a341_excel/ubahwaktu/".$w['id'];?>" >Edit</a>
+										</td>
 									</tr>
-								</table> bulan
+									<?php } ?>
+									</tbody>
+								</table> 
 							</p>
+
 							<p><strong>3.4.4 Persentase lulusan yang bekerja pada bidang yang sesuai dengan keahliannya</strong>
 								<table class="table table-striped table-bordered table-hover" id="sample_1">	
+									<thead>
+										<tr>
+											<th>Persentasi</th>
+											<th>Aksi</th>
+										</tr>
+									</thead>
+									<tbody>
 									<tr>
 										<?php foreach ($persen as $p ) {
 										 ?>
 										<td><?php echo $p['persen'] ; ?></td>
-										<?php } ?>
+										
+										<td class="center">
+											<a href="<?php echo base_url()."index.php/Apd_a341_excel/ubahpersen/".$p['id'];?>" >Edit</a>
+										</td>
 									</tr>
+									<?php } ?>
+									</tbody>
 								</table>
 							</p>
 							</div>

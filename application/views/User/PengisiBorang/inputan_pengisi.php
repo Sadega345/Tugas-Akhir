@@ -103,33 +103,13 @@ License: You must have a valid license purchased only from themeforest(the above
 											
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;">
+
 							<form action="<?php echo base_url()."index.php/Pengisi_excel/do_tambah"; ?>" method="POST">
 							<div class="container">
 								<div class="col-md-10">
-									<div class="row">
-										<div class="form-group">
-											<label>Id</label>
-											<input type="text" class="form-control" name="id">
-										</div>
-									</div>
 									<div class="row">
 										<div class="form-group">
 											<label>Nama</label>
@@ -154,12 +134,22 @@ License: You must have a valid license purchased only from themeforest(the above
 											<input type="date" class="form-control" name="tglpengisian">
 										</div>
 									</div>
-									<div class="row">
-										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
-									</div>
 								</div>
 							</div>
+							</div>
+							<div class="btn-group">
+								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+							</div>
 							</form>
+							
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Pengisi_excel";?>">
+									<button id="sample_editable_1_new" class="btn red">
+										Batal
+									</button>
+								</a>
+							</div>
+						
 							
 						</div>
 					</div>

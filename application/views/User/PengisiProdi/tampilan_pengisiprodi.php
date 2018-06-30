@@ -125,8 +125,6 @@ License: You must have a valid license purchased only from themeforest(the above
 									<th></th>
 									<th></th>
 									<th></th>
-									<!-- <th>Kode sesuai kode PPDT</th> -->
-									<!-- <th>Keterangan</th> -->
 								<?php 
 									
 									foreach ($data as $d ) { 
@@ -260,7 +258,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</table>
 							</div>
 							<div class="btn-group">
-								<button id="sample_editable_1_new" class="btn blue">
+								<button id="sample_editable_1_new" class="btn green">
 									Edit 
 								</button>
 								
@@ -268,7 +266,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</form>
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Prodi_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
+									<button id="sample_editable_1_new" class="btn blue">
 										Export To excel
 									</button>
 								</a>
