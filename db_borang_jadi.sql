@@ -37,7 +37,11 @@ CREATE TABLE `aksesbilitas_data` (
 
 /*Data for the table `aksesbilitas_data` */
 
+LOCK TABLES `aksesbilitas_data` WRITE;
+
 insert  into `aksesbilitas_data`(`id`,`kd_jns`,`kd_prodi`,`manual`,`komp_tnp_jar`,`lan`,`wan`,`jenis_data`) values (1,1,'P001','v','v','v','v','Mahasiswa'),(2,2,'P001','v',NULL,NULL,'v','Kartu Rencana Studi (KRS)'),(3,3,'P001','v',NULL,NULL,NULL,'Jadwal Mata Kuliah'),(4,4,'P001',NULL,'v',NULL,NULL,'Nilai Mata Kuliah'),(5,5,'P001','v','v','v','v','Transkrip Akademik'),(6,6,'P001',NULL,NULL,NULL,'v','Lulusan'),(7,7,'P001',NULL,NULL,NULL,'v','Dosen'),(8,8,'P001',NULL,NULL,NULL,'v','Pegawai'),(9,9,'P001',NULL,NULL,NULL,'v','Keuangan'),(10,10,'P001',NULL,NULL,NULL,'v','Inventaris'),(11,11,'P001',NULL,NULL,NULL,'v','Perpustakaan');
+
+UNLOCK TABLES;
 
 /*Table structure for table `aktivitas_dosen` */
 
@@ -59,7 +63,11 @@ CREATE TABLE `aktivitas_dosen` (
 
 /*Data for the table `aktivitas_dosen` */
 
+LOCK TABLES `aktivitas_dosen` WRITE;
+
 insert  into `aktivitas_dosen`(`id_dosen`,`sks_pss`,`sks_psl_pts`,`sks_ptl`,`sks_penelitian`,`sks_pp_mas`,`sks_man_pts`,`sks_man_ptl`,`id`) values ('1',2,0,0,1,1,6,0,1),('2',9,1,4,1,1,4,0,2);
+
+UNLOCK TABLES;
 
 /*Table structure for table `aktivitas_mengajar` */
 
@@ -82,7 +90,11 @@ CREATE TABLE `aktivitas_mengajar` (
 
 /*Data for the table `aktivitas_mengajar` */
 
+LOCK TABLES `aktivitas_mengajar` WRITE;
+
 insert  into `aktivitas_mengajar`(`id_dosen`,`bid_keahlian`,`kode_mk`,`nama_mk`,`jum_kls`,`jml_sks`,`jp_rencana`,`jp_dilaksanakan`,`id`) values ('1','Analisis dan Perancangan','MIMKL24','Rekayasa Perangkat Lunak',7,0,16,18,1),('2','Pemrograman Web dan Networking','MIMKL14','Pemrograman Internet I (WEB)',1,0,16,16,2),('9',NULL,'MIMKL23','Matematika Diskrit',NULL,113,19,16,3),('11',NULL,'MIMKD10','Kalkulus',NULL,3,16,16,4),('17',NULL,'MIMKU03','PENDIDIKAN AGAMA',NULL,3,17,16,5);
+
+UNLOCK TABLES;
 
 /*Table structure for table `artikel_ilmiah` */
 
@@ -105,7 +117,11 @@ CREATE TABLE `artikel_ilmiah` (
 
 /*Data for the table `artikel_ilmiah` */
 
+LOCK TABLES `artikel_ilmiah` WRITE;
+
 insert  into `artikel_ilmiah`(`id`,`kd_prodi`,`judul`,`nama_dosen`,`publikasi`,`thn_publikasi`,`lokal`,`nasional`,`internasional`) values (1,'P001','Pembangunan Sistem Informasi Konsumsi Tunas Raharja di MAN 1 Cirebon\r\n','Nur Achadi, Selly Meliana','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(2,'P001','Pembangunan Aplikasi Bursa Kerja Khusus di SMK Negeri 1 Kota Sukabumi berbasis Web','Sriwisnu','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,NULL,'v',NULL),(3,'P001','Pembangunan Aplikasi Informasi Pajak Bumi dan Bangunan Berbasis Android dan Google Cloud Messanginges di Desa','Yudhistira','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v','v','v'),(4,'P001','Pembangunan Aplikasi E-Learning SMA Negeri 1 Ciranjang','Eko Travada, Erna Hikmawati','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(5,'P001','Pembangunan Aplikasi Profil Pahlawan Nasional Indonesia Berbasis Android dan Google Map','Soleh Sabarudin, Eni Triningsih','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL);
+
+UNLOCK TABLES;
 
 /*Table structure for table `dana_penelitian` */
 
@@ -128,7 +144,11 @@ CREATE TABLE `dana_penelitian` (
 
 /*Data for the table `dana_penelitian` */
 
+LOCK TABLES `dana_penelitian` WRITE;
+
 insert  into `dana_penelitian`(`id`,`kd_prodi`,`jns_dana`,`sumber_dana`,`tahun`,`judul_penelitian`,`jml_dana`) values (2,'P001',1,'OKelah',2014,'Pembangunan Aplikasi Bursa Kerja Khusus di SMK Negeri 1 Kota Sukabumi berbasis Web',9.0),(3,'P001',4,'PT. Pasim Sentra Utama',2014,'Pembangunan Aplikasi Informasi Pajak Bumi dan Bangunan Berbasis Android dan Google Cloud Messanginge',4.5),(4,'P001',1,'PS Sendiri',2014,'Pembangunan Aplikasi E-Learning SMA Negeri 1 Ciranjang',6.0),(5,'P001',4,'PT. Pasim Sentra Utama',2015,'Pembangunan Aplikasi Profil Pahlawan Nasional Indonesia Berbasis Android dan Google Map',6.5),(6,'P001',4,'PT. Stafalindo',2015,'Sistem Informasi Wisata Berbasis Android dan GIS Studi Kasus Pulau Biawak Indramayu',7.3);
+
+UNLOCK TABLES;
 
 /*Table structure for table `dana_pengmas` */
 
@@ -151,7 +171,11 @@ CREATE TABLE `dana_pengmas` (
 
 /*Data for the table `dana_pengmas` */
 
+LOCK TABLES `dana_pengmas` WRITE;
+
 insert  into `dana_pengmas`(`id`,`kd_prodi`,`jns_dana`,`sumber_dana`,`tahun`,`judul_kegiatan`,`jumlah_dana`) values (1,'P001',4,'PT. Pasim Sentra Utama Duit',2014,'Pelatihan Penggunaan Microsoft Word pada Ibu-Ibu PKK Desa Cileunyi Wetan',10.0),(2,'P001',4,'PT. Pasim Sentra Utama',2014,'Pelatihan Penggunaan Microsoft Excel pada Ibu-Ibu PKK Desa Cileunyi Wetan',5.8),(3,'P001',3,'Dinas Koprasi dan UKM Kab. Bandung Barat',2014,'Peningkatan Kemampuan Kapasitas Manajemen Keuangan Koperasi   Tunas Harapan berbasis Aplikasi Komput',8.0),(4,'P001',4,'PT. Valanino',2015,'Peningkatan Efektivitas Pembuatan Surat dengan Menggunakan ',6.1),(5,'P001',4,'PT. Valanino',2015,'Peningkatan Efektifitas Pengolahan Data dengan Menggunakan ',6.2);
+
+UNLOCK TABLES;
 
 /*Table structure for table `dana_tridarma` */
 
@@ -170,7 +194,11 @@ CREATE TABLE `dana_tridarma` (
 
 /*Data for the table `dana_tridarma` */
 
+LOCK TABLES `dana_tridarma` WRITE;
+
 insert  into `dana_tridarma`(`kd_prodi`,`ts_2`,`ts_1`,`ts`,`nm_program_std`,`id`) values ('P001','3398266.00','4567329.00','3036370.00','Manajemen Informartika','1');
+
+UNLOCK TABLES;
 
 /*Table structure for table `data_mhs` */
 
@@ -206,7 +234,11 @@ CREATE TABLE `data_mhs` (
 
 /*Data for the table `data_mhs` */
 
+LOCK TABLES `data_mhs` WRITE;
+
 insert  into `data_mhs`(`id`,`id_prodi`,`tahun`,`kd_prog`,`dy_tampung`,`jc_mhs_ikt_seleksi`,`jc_mhs_lls_seleksi`,`j_maba_reg_bkn_trf`,`j_maba_trf`,`j_tot_reg_bkn_trf`,`j_tot_trf`,`j_llsn_reg_bkn_trf`,`j_llsn_trf`,`ipk_min`,`ipk_rat`,`ipk_mak`,`prsn_ipk1`,`prsn_ipk2`,`prsn_ipk3`) values (1,'P001',2012,1,58,1160,46,45,0,192,0,33,0,2.81,3.44,3.78,0.00,39.00,61.00),(2,'P001',2013,1,65,2800,65,62,0,221,0,25,0,3.11,3.54,3.95,0.00,32.00,68.00),(3,'P001',2014,1,65,992,45,43,0,201,0,37,0,3.13,3.71,3.91,0.00,6.00,94.00),(4,'P001',2015,1,65,1014,40,39,0,139,0,41,0,3.46,3.64,3.87,0.00,5.00,95.00),(5,'P001',2016,1,65,1016,60,59,0,138,0,41,0,2.96,3.57,3.85,0.00,24.00,76.00);
+
+UNLOCK TABLES;
 
 /*Table structure for table `data_mhs_angkatan` */
 
@@ -231,7 +263,11 @@ CREATE TABLE `data_mhs_angkatan` (
 
 /*Data for the table `data_mhs_angkatan` */
 
+LOCK TABLES `data_mhs_angkatan` WRITE;
+
 insert  into `data_mhs_angkatan`(`id`,`id_prodi`,`tahun`,`ts_6`,`ts_5`,`ts_4`,`ts_3`,`ts_2`,`ts_1`,`ts`,`jml_ts_llsan`) values (1,'P001',2012,NULL,NULL,45,42,42,4,4,38),(2,'P001',2013,NULL,NULL,NULL,62,61,61,0,41),(3,'P001',2014,NULL,NULL,NULL,NULL,43,41,37,37),(4,'P001',2015,NULL,NULL,NULL,NULL,NULL,39,39,0),(5,'P001',2016,NULL,NULL,0,0,0,0,51,NULL);
+
+UNLOCK TABLES;
 
 /*Table structure for table `dosen_tbl` */
 
@@ -270,7 +306,11 @@ CREATE TABLE `dosen_tbl` (
 
 /*Data for the table `dosen_tbl` */
 
+LOCK TABLES `dosen_tbl` WRITE;
+
 insert  into `dosen_tbl`(`id_dosen`,`kd_prodi`,`nidn`,`nama_dosen`,`tgl_lhr`,`kd_jab`,`kd_jns_dosen`,`sertifikasi`,`gelar_s1`,`asal_pt_s1`,`bid_keahlian_s1`,`gelar_s2`,`asal_pt_s2`,`bid_keahlian_s2`,`gelar_s3`,`asal_pt_s3`,`bid_keahlian_s3`,`gelar`,`pengakuan`,`bid_keahlian`,`sts_ahli`) values ('1','P001','0421089201','Erna Hikmawati','1992-08-21',NULL,1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M. Kom','STMIK Likmi','Sistem Informasi','','','','OCA, OCP, MOS','Oracle, Microsoft','Java, Microsoft Excel','YA'),('11','P001','0418106603','Tjandra Tjahyarini','1966-10-18','2',1,'Tidak','Ir','Institut Teknologi Bandung','Geofisika','','(Sedang Studi Lanjut) STMIK LIKMI','Sistem Informasia','','','','','Sololearn','','TIDAK'),('17','P001',NULL,'','0000-00-00',NULL,2,'',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'TIDAK'),('2','P001','0408097207','Soleh Sabarudin','1972-09-08',NULL,1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M. Kom','STMIK Likmi','Sistem Informasi',NULL,NULL,NULL,NULL,'Sololearn','HTML, PHP','YA'),('3','P001','8863350017','Eni Triningsih','1989-09-24',NULL,1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M.T','Institut Teknologi Bandung','Sistem Informasi',NULL,NULL,NULL,NULL,'Sololearn','SQL','YA'),('4','P001','0408047305','Eko Travada SP','1973-01-23',NULL,1,'Tidak','S.T','Universitas Kristen Maranatha','Teknik Elektro','M.T','Institut Teknologi Bandung','Teknik Elektro','','Sedang Studi Lanjut (S3 STEI ITB)','Elektro dan Informatika','','Sololearn','C++','YA'),('5','P001','8891700016','Yudhistira Sulaeman','1973-07-03',NULL,1,'Tidak','S.Si','Institut Teknologi Bandung','Matematika','M.Kom','STMIK Likmi','Sistem Informasi',NULL,NULL,NULL,NULL,NULL,NULL,'YA'),('9','P001','0428097402','Lucky Handayani','1974-09-28',NULL,1,'Tidak','S.T','Universitas Jenderal Ahmad Yani','Teknik Mesin','M.T','Institut Teknologi Bandung ','Teknik Mesin','','','','','','','TIDAK');
+
+UNLOCK TABLES;
 
 /*Table structure for table `dt_ruang_dosen` */
 
@@ -290,7 +330,11 @@ CREATE TABLE `dt_ruang_dosen` (
 
 /*Data for the table `dt_ruang_dosen` */
 
+LOCK TABLES `dt_ruang_dosen` WRITE;
+
 insert  into `dt_ruang_dosen`(`id`,`id_jns`,`kd_prodi`,`jml_ruang`,`jml_luas`,`r_kerja_dosen`) values (1,1,'P001',4,500,'Satu ruang untuk lebih dari 4 dosen'),(2,2,'P001',0,0,'Satu ruang untuk 3-4 dosen'),(3,3,'P001',0,0,'Satu ruang untuk 2 dosen'),(4,4,'P001',16,64,'Satu ruang untuk 1 dosen (bukan pejabat struktural)');
+
+UNLOCK TABLES;
 
 /*Table structure for table `evaluasi_lulusan` */
 
@@ -315,7 +359,11 @@ CREATE TABLE `evaluasi_lulusan` (
 
 /*Data for the table `evaluasi_lulusan` */
 
+LOCK TABLES `evaluasi_lulusan` WRITE;
+
 insert  into `evaluasi_lulusan`(`id`,`id_prodi`,`id_kemampuan`,`sangat_baik`,`baik`,`cukup`,`kurang`,`rencana`,`jenis_kemampuan`) values (1,'P001',1,84.76,15.24,0.00,0.00,'memberikan muatan etika dan moral pada materi kurikulum program studi (mata kuliah etika profesi),\r\nmenyelenggarakan kegiatan pembinaan oleh koordinator beasiswa PUB,\r\nmenyelenggaraakan mentoring setiap minggunya','Integritas (etika dan moral)'),(2,'P001',2,91.43,8.57,0.00,0.00,'Mengadakan pelatihan yang berkaitan dengan pemrograman,Mengadakan bootcamp (pelatihan) untuk persiapan dunia kerja','Keahlian berdasarkan bidang ilmu (profesionalisme)'),(3,'P001',3,66.67,17.14,16.19,0.00,'Mnyelenggarakan mata kuliah TOEFL, Mengadakan kegiatan English club, Mengadakan pelatihan public speaking, Mengadakan kegiatan pelatihan bahasa inggris yang bekerja sama dengan program studi D3 Bahasa Inggris','Bahasa Inggris'),(4,'P001',4,85.71,14.29,0.00,0.00,'Penyediaan sarana laboratorium komputer yang memadai, Mendorong dosen untuk memanfaatkan teknologi informasi dalam proses pembelajaran, Penggunaan aplikasi IT untuk layanan mahasiswa (digital campus)','Penggunaan Teknologi Informasi'),(5,'P001',5,80.95,12.38,6.67,0.00,'Mengadakan pelatihan public speaking, Memperbanyak tugas pembuatan laporan ilmiah (untuk meningkatkan kemampuan komunikasi tertulis), Memperbanyak presentasi/diskusi dalam kelas (untuk meningkatkan kemampuan komunikasi secara lisan)','Komunikasi'),(6,'P001',6,79.05,11.43,9.52,0.00,'Memperbanyak pemberian tugas yang harus dikerjakan dan dipresentasikan secara kelompok, Mengadakan kegiatan Latihan Dasar Kepemimpinan Mahasiswa (LDKM)','Kerjasama Tim'),(7,'P001',7,91.43,8.57,0.00,0.00,'Mengikutsertakan mahasiswa dalam berbagai kegiatan UKM dan kepengurusan PUB sehingga dapat mengembangkan potensi yang dimiliki oleh mahasiswa tersebut','Pengembangan Diri');
+
+UNLOCK TABLES;
 
 /*Table structure for table `fakultas_tbl` */
 
@@ -329,7 +377,11 @@ CREATE TABLE `fakultas_tbl` (
 
 /*Data for the table `fakultas_tbl` */
 
+LOCK TABLES `fakultas_tbl` WRITE;
+
 insert  into `fakultas_tbl`(`kode_fakultas`,`nama_fakultas`) values ('F001','Ilmu Komputer'),('F002','Ekonomi'),('F003','Psikologi'),('F004','');
+
+UNLOCK TABLES;
 
 /*Table structure for table `hak_intelektual` */
 
@@ -342,6 +394,10 @@ CREATE TABLE `hak_intelektual` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `hak_intelektual` */
+
+LOCK TABLES `hak_intelektual` WRITE;
+
+UNLOCK TABLES;
 
 /*Table structure for table `instansi_lulusan` */
 
@@ -360,7 +416,11 @@ CREATE TABLE `instansi_lulusan` (
 
 /*Data for the table `instansi_lulusan` */
 
+LOCK TABLES `instansi_lulusan` WRITE;
+
 insert  into `instansi_lulusan`(`id`,`id_ts`,`instansi`,`j_lulusan_psn`,`j_lulusan_terima`) values (1,1,'PT. Pasim Sentra Utamanya',10,10),(2,1,'CV. Zharfan Dwi Putra Utama',3,2),(3,2,'PT. Pasim Sentra Utamanya aku ',5,4),(4,2,'CV. Zharfan Dwi Putra',2,1),(5,2,'PT. Sonitacitra Buanamandiri',3,3),(6,3,'PT. Pasim Sentra Utama',5,3),(7,3,'PT. Duta Berlian Nusantara',2,2),(8,3,'PT. Kalysa Intijaya Sakti',3,2),(9,3,'PT. Sonitacitra Buanamandiri',3,3),(10,4,'PT. Pasim Sentra Utama',8,8),(11,4,'PT. PUB Pasim Putra',3,3),(12,4,'PT. Kalysa Intijaya Sakti',3,3),(13,4,'PT. Stafalindo Menara Nusantara',2,2),(14,4,'PT. Virginindo Utama Karya',2,1),(15,5,'PT. Pasim Sentra Utama',5,4),(16,5,'PT. Valanino Rajawali Perkasa',5,4),(17,5,'PT. Duta Berlian Nusantara',4,4),(18,5,'PT. Kalysa Intijaya Sakti',2,2),(19,5,'PT. Sonitacitra Buanamandiri',4,3),(20,5,'Yayasan Robo Pasim Global Internusa',3,3);
+
+UNLOCK TABLES;
 
 /*Table structure for table `instrumen` */
 
@@ -375,7 +435,11 @@ CREATE TABLE `instrumen` (
 
 /*Data for the table `instrumen` */
 
+LOCK TABLES `instrumen` WRITE;
+
 insert  into `instrumen`(`id`,`instrumen`,`file`) values ('I001','Excel 1','evaluasi_lulusan.xlsx');
+
+UNLOCK TABLES;
 
 /*Table structure for table `jab_akademik` */
 
@@ -389,7 +453,11 @@ CREATE TABLE `jab_akademik` (
 
 /*Data for the table `jab_akademik` */
 
+LOCK TABLES `jab_akademik` WRITE;
+
 insert  into `jab_akademik`(`kd_jab`,`nm_jab_akd`) values ('1','Lektor'),('2','Asisten Ahli');
+
+UNLOCK TABLES;
 
 /*Table structure for table `jns_dana` */
 
@@ -406,7 +474,11 @@ CREATE TABLE `jns_dana` (
 
 /*Data for the table `jns_dana` */
 
+LOCK TABLES `jns_dana` WRITE;
+
 insert  into `jns_dana`(`kd_jns`,`sumber_dana`,`jns_dana`) values (1,1,'Beasiswa Yayasan'),(2,1,'Hibah Yayasan'),(3,1,'Hibah Unit Usaha '),(4,2,'Pendaftaran'),(5,2,'Biaya Registrasi'),(6,2,'Biaya Kuliah'),(7,4,'Biaya Kuliah'),(8,4,'Hibah Penelitian'),(9,4,'Hibah Pengabdian');
+
+UNLOCK TABLES;
 
 /*Table structure for table `jns_data` */
 
@@ -420,7 +492,11 @@ CREATE TABLE `jns_data` (
 
 /*Data for the table `jns_data` */
 
+LOCK TABLES `jns_data` WRITE;
+
 insert  into `jns_data`(`kd_jns`,`jns_data`) values (1,'Mahasiswa'),(2,'Kartu Rencana Studi (KRS)'),(3,'Jadwal Mata Kuliah'),(4,'Nilai Mata Kuliah'),(5,'Transkrip Akademik'),(6,'Lulusan'),(7,'Dosen'),(8,'Pegawai'),(9,'Keuangan'),(10,'Inventaris'),(11,'Perpustakaan'),(12,'Pembayaran SPP');
+
+UNLOCK TABLES;
 
 /*Table structure for table `jns_dosen` */
 
@@ -434,7 +510,11 @@ CREATE TABLE `jns_dosen` (
 
 /*Data for the table `jns_dosen` */
 
+LOCK TABLES `jns_dosen` WRITE;
+
 insert  into `jns_dosen`(`kd_jns`,`jns_dosen`) values (1,'TETAP'),(2,'TIDAK TETAP');
+
+UNLOCK TABLES;
 
 /*Table structure for table `jns_hal` */
 
@@ -449,7 +529,11 @@ CREATE TABLE `jns_hal` (
 
 /*Data for the table `jns_hal` */
 
+LOCK TABLES `jns_hal` WRITE;
+
 insert  into `jns_hal`(`kd_hal`,`jenis`,`hal`) values (1,'JABFUNG','Asisten Ahli'),(2,'JABFUNG','Lektor'),(3,'JABFUNG','Lektor Kepala'),(4,'JABFUNG','Guru Besar/Profesor'),(5,'DIKTI','S1'),(6,'DIKTI','S2/Profesi/Sp-1'),(7,'DIKTI','S3/Sp-2');
+
+UNLOCK TABLES;
 
 /*Table structure for table `jns_jurnal` */
 
@@ -463,6 +547,10 @@ CREATE TABLE `jns_jurnal` (
 
 /*Data for the table `jns_jurnal` */
 
+LOCK TABLES `jns_jurnal` WRITE;
+
+UNLOCK TABLES;
+
 /*Table structure for table `jns_kemampuan` */
 
 DROP TABLE IF EXISTS `jns_kemampuan`;
@@ -475,7 +563,11 @@ CREATE TABLE `jns_kemampuan` (
 
 /*Data for the table `jns_kemampuan` */
 
+LOCK TABLES `jns_kemampuan` WRITE;
+
 insert  into `jns_kemampuan`(`id`,`jns_kemampuan`) values (1,'Integritas (etika dan moral)'),(2,'Keahlian berdasarkan bidang il'),(3,'Bahasa Inggris'),(4,'Penggunaan Teknologi Informasi'),(5,'Komunikasi'),(6,'Kerjasama Tim'),(7,'Pengembangan Diri');
+
+UNLOCK TABLES;
 
 /*Table structure for table `jns_matkul` */
 
@@ -489,7 +581,11 @@ CREATE TABLE `jns_matkul` (
 
 /*Data for the table `jns_matkul` */
 
+LOCK TABLES `jns_matkul` WRITE;
+
 insert  into `jns_matkul`(`kd_jns`,`jns_matkul`) values (1,'WAJIB'),(2,'PILIHAN');
+
+UNLOCK TABLES;
 
 /*Table structure for table `jns_mhs` */
 
@@ -502,6 +598,10 @@ CREATE TABLE `jns_mhs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `jns_mhs` */
+
+LOCK TABLES `jns_mhs` WRITE;
+
+UNLOCK TABLES;
 
 /*Table structure for table `jns_penggunaan` */
 
@@ -516,7 +616,11 @@ CREATE TABLE `jns_penggunaan` (
 
 /*Data for the table `jns_penggunaan` */
 
+LOCK TABLES `jns_penggunaan` WRITE;
+
 insert  into `jns_penggunaan`(`kd_jns`,`status_dana`,`jns_penggunaan`) values (1,'OPR','Pendidikan'),(2,'OPR','Penelitian'),(3,'OPR','Pengabdian kepada Masyarakat'),(4,'INV','Investasi Prasarana'),(5,'INV','Investasi Sarana'),(6,'INV','Investasi SDM'),(7,'INV','Lain-Lain');
+
+UNLOCK TABLES;
 
 /*Table structure for table `jns_program` */
 
@@ -530,7 +634,11 @@ CREATE TABLE `jns_program` (
 
 /*Data for the table `jns_program` */
 
+LOCK TABLES `jns_program` WRITE;
+
 insert  into `jns_program`(`kd_prog`,`jns_program`) values (1,'REGULER'),(2,'NON REGULER');
+
+UNLOCK TABLES;
 
 /*Table structure for table `jns_pustaka` */
 
@@ -544,7 +652,11 @@ CREATE TABLE `jns_pustaka` (
 
 /*Data for the table `jns_pustaka` */
 
+LOCK TABLES `jns_pustaka` WRITE;
+
 insert  into `jns_pustaka`(`kd_jns`,`jns_pustaka`) values (1,'Buku Teks dan handbook'),(2,'Modul Praktikum / Praktek'),(3,'Jurnal yang terakreditasi oleh lembaga resmi (Dikt'),(4,'Jurnal Internasional (termasuk e-journal)'),(5,'Majalah Ilmiah'),(6,'Prosiding');
+
+UNLOCK TABLES;
 
 /*Table structure for table `jns_ruang` */
 
@@ -558,7 +670,11 @@ CREATE TABLE `jns_ruang` (
 
 /*Data for the table `jns_ruang` */
 
+LOCK TABLES `jns_ruang` WRITE;
+
 insert  into `jns_ruang`(`kd_jns`,`ruang_dosen`) values (1,'Satu ruang untuk leb'),(2,'Satu ruang untuk 3-4'),(3,'Satu ruang untuk 2 d'),(4,'Satu ruang untuk 1 d');
+
+UNLOCK TABLES;
 
 /*Table structure for table `jns_tng_kepend` */
 
@@ -572,7 +688,11 @@ CREATE TABLE `jns_tng_kepend` (
 
 /*Data for the table `jns_tng_kepend` */
 
+LOCK TABLES `jns_tng_kepend` WRITE;
+
 insert  into `jns_tng_kepend`(`kd_jns`,`jns_tng_kepend`) values (1,'Pustakawan'),(2,'Laboran/ Teknisi/ Analis/ Operator/ Programer'),(3,'Administrasi'),(4,'Lainnya');
+
+UNLOCK TABLES;
 
 /*Table structure for table `jumlah_sks_ps` */
 
@@ -591,6 +711,10 @@ CREATE TABLE `jumlah_sks_ps` (
 
 /*Data for the table `jumlah_sks_ps` */
 
+LOCK TABLES `jumlah_sks_ps` WRITE;
+
+UNLOCK TABLES;
+
 /*Table structure for table `jurnal` */
 
 DROP TABLE IF EXISTS `jurnal`;
@@ -605,6 +729,10 @@ CREATE TABLE `jurnal` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `jurnal` */
+
+LOCK TABLES `jurnal` WRITE;
+
+UNLOCK TABLES;
 
 /*Table structure for table `kegiatan_ahli` */
 
@@ -622,7 +750,11 @@ CREATE TABLE `kegiatan_ahli` (
 
 /*Data for the table `kegiatan_ahli` */
 
+LOCK TABLES `kegiatan_ahli` WRITE;
+
 insert  into `kegiatan_ahli`(`id`,`kd_prodi`,`nama_pakar`,`instansi`,`judul_keg`,`pelaksanaan`) values (1,'P001','Teguh Prabowo','ARES, Co.Ltd','Workshop Visual Basic .Net','18 Desember 2014'),(2,'P001','Park Young Sun','DUDU IT','Seminar Simulation Logic for Electronic Warfare','14 Januari 2015'),(3,'P001','Park Young Sun','DUDU IT','Wargame Trainning Concept','21 April 2015'),(4,'P001','Park Young Sun','DUDU IT','Seminar DEVS-based Modelling and Simulation','11 Mei 2015'),(5,'P001','Kwon Young Choi','ARES, Co.Ltd','Workshop How to Make 3D Object Models','28 Oktober 2015'),(6,'P001','Kwon Young Choi','ARES, Co.Ltd','Workshop Computer Graphics','3 Oktober 2015'),(7,'P001','Ismail Syah',NULL,'Menyongsong Kurikulum Berbasis KKNI','Mei 2016'),(8,'P001','Nurul Hiron','Universitas Siliwangi','Penyusunan Proposal Penelitian','Februari 2016'),(9,'P001','Kwon Young Choi','ARES, Co.Ltd','Seminar 3D Visualization with VR-Vantage','5 Oktober 2016'),(10,'P001','Park Young Sun','DUDU IT','Seminar Management Information System','2 November 2016'),(11,'P001','Joe Lian Min','Politeknik Negeri Bandung','Workshop Angular JS','7 Desember 2016'),(12,'P001','Park Young Sun','DUDU IT','Seminar Cyber Security','17 Januari 2017'),(13,'P001','Rida Hudaya','Workshop Robotic','Workshop Robotic','9 Februari 2017');
+
+UNLOCK TABLES;
 
 /*Table structure for table `kegiatan_dsn_ttp` */
 
@@ -642,7 +774,11 @@ CREATE TABLE `kegiatan_dsn_ttp` (
 
 /*Data for the table `kegiatan_dsn_ttp` */
 
+LOCK TABLES `kegiatan_dsn_ttp` WRITE;
+
 insert  into `kegiatan_dsn_ttp`(`id`,`id_dosen`,`jenis_kegiatan`,`tempat`,`tahun`,`sbg_penyaji`,`sbg_peserta`) values (1,'1','Peningkatan Kemampuan Kapasitas Manajemen Keuangan Koperasi Tunas Harapan Berbasis Aplikasi Komputer','Kec. Sindang Kerta Kab. Bandung Barat','2014','v','v'),(2,'1','Peningkatan Kemampuan Kapasitas Manajemen Keuangan Koperasi Tunas Harapan Berbasis Aplikasi Komputer','Kec. Sindang Kerta Kab. Bandung Barat','2014','v','v'),(3,'1','Peningkatan Kemampuan Kapasitas Manajemen Keuangan Koperasi Tunas Harapan Berbasis Aplikasi Komputer','Kec. Sindang Kerta Kab. Bandung Barat','2014','v','v'),(4,'1','Peningkatan Kemampuan Kapasitas Manajemen Keuangan Koperasi Tunas Harapan Berbasis Aplikasi Komputer','Kec. Sindang Kerta Kab. Bandung Barat','2014','v','v'),(5,'1','Penggunaan Sistem Informasi Akuntansi Pada Koperasi Bako Wangun','Kec. Sindang Kerta Kab. Bandung Barat','2015','v',NULL),(6,'1','Implementasi Sistem Informasi Pencatatan Data Keuanga Untuk Pengembang Koperasi Giri Waluya','Kec. Sindang Kerta Kab. Bandung Barat','2015','v',NULL),(7,'1','Seminar Simulation Logic for Electronic ','Universitas Nasional Pasim','2015',NULL,'v'),(8,'1','Wargame Trainning Concept','Universitas Nasional Pasim','2015',NULL,'v'),(9,'1','Seminar DEVS-based Modelling and ','Universitas Nasional Pasim','2015',NULL,'v'),(10,'1','Workshop How to Make 3D Object Models','Universitas Nasional Pasim','2015',NULL,'v'),(11,'1','Workshop Computer Graphics','Universitas Nasional Pasim','2015',NULL,'v'),(12,'1','Peningkatan Efektivitas Pembuatan Surat dengan Menggunakan Microsoft Word Pada Ibu-Ibu PKK Desa Cile','Kec. Cileunyi, Kab.Bandung','2015','v',NULL),(13,'1',' Peningkatan Efektivitas Pengolahan Data dengan Menggunakan Microsoft Excel Pada Ibu-Ibu PKK Desa Ci',NULL,NULL,NULL,NULL),(14,'1','Pelatihan Pembuatan Surat dengan Mnggunakan Microsoft Word Pada Ibu-Ibu PKK Desa Cimekar','Kec. Cileunyi, Kab.Bandung','2015','v',NULL),(15,'1','Implementasi Sistem Informasi Berbasis Komputer Untuk Pengembangan Koperasi Produsen Kopi Marga Muly','Kec. Sindang Kerta Kab. Bandung Barat','2016','v',NULL),(16,'1','Pelatihan Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),(17,'1','Workshop Wargame Knowledge and Animation','Universitas Nasional Pasim','2016',NULL,'v'),(18,'1','Penerapan Sistem Informasi Akuntansi Dalam Kegiatan Operasional Pada Koperasi Pilar Jaya','Kec. Sindang Kerta Kab. Bandung Barat','2016','v',NULL),(19,'1','Menyongsong Kurikulum Berbasis KKNI','Universitas Nasional Pasim','2016',NULL,'v'),(20,'1','Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),(21,'1','Seminar 3D Visualization with VR-Vantage','Universitas Nasional Pasim','2016',NULL,'v'),(22,'1','Seminar Management Information System','Universitas Nasional Pasim','2016',NULL,'v'),(23,'1','Workshop Angular JS','Universitas Nasional Pasim','2016',NULL,'v'),(24,'1','Pelatihan Pengolahan Data dengan Menggunakan Microsoft Excel Pada Ibu-Ibu PKK Desa Cimekar','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),(25,'1','Peningkatan Kemampuan Pembuatan Surat  Ibu-Ibu PKK Desa Cinunuk','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),(26,'1','Kegiatan Peningkatan Kemampuan Pengolahan Data Ibu-Ibu PKK Desa Cinunuk dengan Menggunakan Microsoft','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),(27,'1','Penerapan Microsoft Excel dalam Kegiatan Pengolahan Data pada ','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),(28,'1','Peningkatan Kemampuan Akuntansi Koperasi Wening Rahayu Berbasis Sistem Informasi','Kec. Sindang Kerta Kab. Bandung Barat','2017','v',NULL),(29,'1','Seminar Cyber Security','Universitas Nasional Pasim','2017',NULL,'v'),(30,'1','Workshop Robotic','Universitas Nasional Pasim','2017',NULL,'v'),(31,'1',' Pelatihan Penggunaan Microsoft Word Untuk Peningkatan Efektivitas Pembuatan Surat Pada Ibu-Ibu PKK ','Kec. Cileunyi, Kab.Bandung','2017','v',NULL),(32,'1','Pelatihan Penggunaan Microsoft Excel Untuk Peningkatan Evektifitas Pengolahan Data pada Ibu-Ibu PKK ','Kec. Cileunyi, Kab.Bandung','2017','v',NULL),(33,'2','Peningkatan Kemampuan Kapasitas Manajemen Keuangan Koperasi Tunas Harapan Berbasis Aplikasi Komputer','Kec. Sindang Kerta Kab. Bandung Barat','2014','v','v'),(34,'2','Seminar Simulation Logic for Electronic ','Universitas Nasional Pasim','2015',NULL,'v'),(35,'2','Wargame Trainning Concept','Universitas Nasional Pasim','2015',NULL,'v'),(36,'2','Seminar DEVS-based Modelling and Simulation','Universitas Nasional Pasim','2015',NULL,'v'),(37,'2','Workshop How to Make 3D Object Models','Universitas Nasional Pasim','2015',NULL,'v'),(38,'2','Workshop Computer Graphics','Universitas Nasional Pasim','2015',NULL,'v'),(39,'2','Peningkatan Efektivitas Pembuatan Surat dengan Menggunakan Microsoft Word Pada Ibu-Ibu PKK Desa Cile','Kec. Cileunyi, Kab.Bandung','2015','v',NULL),(40,'2','Kegiatan Peningkatan Kemampuan Pengolahan Data Ibu-Ibu PKK Desa Cinunuk dengan Menggunakan Microsoft','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),(41,'2','Menyongsong Kurikulum Berbasis KKNI','Universitas Nasional Pasim','2016',NULL,'v'),(42,'2','Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),(43,'2','Seminar 3D Visualization with VR-Vantage','Universitas Nasional Pasim','2016',NULL,'v'),(44,'2','Seminar Management Information System','Universitas Nasional Pasim','2016',NULL,'v'),(45,'2','Workshop Angular JS','Universitas Nasional Pasim','2016',NULL,'v'),(46,'2',' Pelatihan Penggunaan Microsoft Word Untuk Peningkatan Efektivitas Pembuatan Surat Pada Ibu-Ibu PKK ','Kec. Cileunyi, Kab.Bandung','2017','v',NULL),(47,'2','Seminar Cyber Security','Universitas Nasional Pasim','2017',NULL,'v'),(48,'2','Workshop Robotic','Universitas Nasional Pasim','2017',NULL,'v'),(49,'4','Peningkatan Kemampuan Kapasitas Manajemen Keuangan Koperasi Tunas Harapan Berbasis Aplikasi Komputer','Kec. Sindang Kerta Kab. Bandung Barat','2014','v','v'),(50,'4','Peningkatan Kemampuan Kapasitas Manajemen Keuangan Koperasi Tunas Harapan Berbasis Aplikasi Komputer','Kec. Sindang Kerta Kab. Bandung Barat','2014','v','v'),(51,'4','Pelatihan Pembuatan Surat dengan Mnggunakan Microsoft Word Pada Ibu-Ibu PKK Desa Cimekar','Kec. Cileunyi, Kab.Bandung','2015','v',NULL),(52,'4','Seminar Simulation Logic for Electronic Warfare','Universitas Nasional Pasim','2015',NULL,'v'),(53,'4','Wargame Trainning Concept','Universitas Nasional Pasim','2015',NULL,'v'),(54,'4','Seminar DEVS-based Modelling and Simulation','Universitas Nasional Pasim','2015',NULL,'v'),(55,'4','Workshop How to Make 3D Object Models','Universitas Nasional Pasim','2015',NULL,'v'),(56,'4','Workshop Computer Graphics','Universitas Nasional Pasim','2015',NULL,'v'),(57,'4','Menyongsong Kurikulum Berbasis KKNI','Universitas Nasional Pasim','2016',NULL,'v'),(58,'4','Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),(59,'4','Seminar 3D Visualization with VR-Vantage','Universitas Nasional Pasim','2016',NULL,'v'),(60,'4','Seminar Management Information System','Universitas Nasional Pasim','2016',NULL,'v'),(61,'4','Workshop Angular JS','Universitas Nasional Pasim','2016',NULL,'v'),(62,'4','Seminar Cyber Security','Universitas Nasional Pasim','2017',NULL,'v'),(63,'4','Workshop Robotic','Universitas Nasional Pasim','2017',NULL,'v'),(64,'3','Peningkatan Kemampuan Kapasitas Manajemen Keuangan Koperasi Tunas Harapan Berbasis Aplikasi Komputer','Kec. Sindang Kerta Kab. Bandung Barat','2014','v','v'),(65,'3','Peningkatan Efektivitas Pengolahan Data dengan Menggunakan Microsoft Excel Pada Ibu-Ibu PKK Desa Cil',NULL,NULL,NULL,NULL),(66,'3','Seminar Simulation Logic for Electronic Warfare','Universitas Nasional Pasim','2015',NULL,'v'),(67,'3','Wargame Trainning Concept','Universitas Nasional Pasim','2015',NULL,'v'),(68,'3','Seminar DEVS-based Modelling and Simulation','Universitas Nasional Pasim','2015',NULL,'v'),(69,'3','Workshop How to Make 3D Object Models','Universitas Nasional Pasim','2015',NULL,'v'),(70,'3','Workshop Computer Graphics','Universitas Nasional Pasim','2015',NULL,'v'),(71,'3','Peningkatan Kemampuan Pengolahan Data Ibu-Ibu PKK Desa Cinunuk dengan Menggunakan Microsoft Excel','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),(72,'3','Penerapan Microsoft Word dalam Kegiatan Pembuatan Surat pada Ibu-Ibu PKK Desa Cibiru Wetan','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),(73,'3','Pelatihan Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),(74,'3','Workshop Wargame Knowledge and Animation','Universitas Nasional Pasim','2016',NULL,'v'),(75,'3','Smart City For Advancing Society','Surabaya','2016',NULL,'v'),(76,'3','International Conference On Ict For Smart Society','Surabaya','2016',NULL,'v'),(77,'3','Menyongsong Kurikulum Berbasis KKNI','Universitas Nasional Pasim','2016',NULL,'v'),(78,'3','Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),(79,'3','Seminar 3D Visualization with VR-Vantage','Universitas Nasional Pasim','2016',NULL,'v'),(80,'3','Seminar Management Information System','Universitas Nasional Pasim','2016',NULL,'v'),(81,'3','Workshop Angular JS','Universitas Nasional Pasim','2016',NULL,'v'),(82,'3','Certified Information Systems Security Professional (CISSP)','Jakarta','2017',NULL,'v'),(83,'3','Seminar Cyber Security','Universitas Nasional Pasim','2017',NULL,'v'),(84,'3','Workshop Robotic','Universitas Nasional Pasim','2017',NULL,'v'),(85,'5','Peningkatan Kemampuan Kapasitas Manajemen Keuangan Koperasi Tunas Harapan Berbasis Aplikasi Komputer','Kec. Sindang Kerta Kab. Bandung Barat','2014','v','v'),(86,'5','Peningkatan Kemampuan Kapasitas Manajemen Keuangan Koperasi Tunas Harapan Berbasis Aplikasi Komputer','Kec. Sindang Kerta Kab. Bandung Barat','2014','v','v'),(87,'5','Radar Fundamentals','Bandung','2015',NULL,'v'),(88,'5',' Peningkatan Efektivitas Pengolahan Data dengan Menggunakan Microsoft Excel Pada Ibu-Ibu PKK Desa Ci','Kec. Cileunyi, Kab.Bandung','2015','v',NULL),(89,'5','Seminar Simulation Logic for Electronic Warfare','Universitas Nasional Pasim','2015',NULL,'v'),(90,'5','Wargame Trainning Concept','Universitas Nasional Pasim','2015',NULL,'v'),(91,'5','Seminar DEVS-based Modelling and Simulation','Universitas Nasional Pasim','2015',NULL,'v'),(92,'5','Workshop How to Make 3D Object Models','Universitas Nasional Pasim','2015',NULL,'v'),(93,'5','Workshop Computer Graphics','Universitas Nasional Pasim','2015',NULL,'v'),(94,'5','Peningkatan Kemampuan Pengolahan Data Ibu-Ibu PKK Desa Cinunuk dengan Menggunakan Microsoft Excel','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),(95,'5','Workshop Wargame Knowledge and Animation','Universitas Nasional Pasim','2016',NULL,'v'),(96,'5','Workshop Sosialisasi Pengembangan Software','PT. Pasim Sentra Utama','2016','v',NULL),(97,'5','Pelatihan Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),(98,'5','Having Duly Satisfied the C705 Missile Pratical Training and Having Fulfilled All Other Requirements','China','2016',NULL,'v'),(99,'5','Military Avionics and Main Data Bus Interface Training','Boulogne-Billancourt','2016',NULL,'v'),(100,'5','Menyongsong Kurikulum Berbasis KKNI','Universitas Nasional Pasim','2016',NULL,'v'),(101,'5','Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),(102,'5','Seminar 3D Visualization with VR-Vantage','Universitas Nasional Pasim','2016',NULL,'v'),(103,'5','Seminar Management Information System','Universitas Nasional Pasim','2016',NULL,'v'),(104,'5','Workshop Angular JS','Universitas Nasional Pasim','2016',NULL,'v'),(105,'5','Peningkatan Kemampuan Akuntansi Koperasi Wening Rahayu Berbasis Sistem Informasi ','Kec. Sindang Kerta Kab. Bandung Barat','2017','v',NULL),(106,'5','Seminar Cyber Security','Universitas Nasional Pasim','2017',NULL,'v'),(107,'5','Workshop Robotic','Universitas Nasional Pasim','2017',NULL,'v'),(108,'6','Peningkatan Kemampuan Kapasitas Manajemen Keuangan Koperasi Tunas Harapan Berbasis Aplikasi Komputer','Kec. Sindang Kerta Kab. Bandung Barat','2014','v','v'),(109,'6','Peningkatan Efektivitas Pengolahaan Data dengan Menggunakan Microsoft Excel pada Ibu-Ibu PKK Desa Ci','Kec. Cileunyi, Kab.Bandung','2015','v',NULL),(110,'6','Seminar Simulation Logic for Electronic Warfare','Universitas Nasional Pasim','2015',NULL,'v'),(111,'6','Wargame Trainning Concept','Universitas Nasional Pasim','2015',NULL,'v'),(112,'6','Seminar DEVS-based Modelling and Simulation','Universitas Nasional Pasim','2015',NULL,'v'),(113,'6','Workshop How to Make 3D Object Models','Universitas Nasional Pasim','2015',NULL,'v'),(114,'6','Workshop Computer Graphics','Universitas Nasional Pasim','2015',NULL,'v'),(115,'6','Penerapan Microsoft Excel dalam Kegiatan Pengolahan Data pada ','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),(116,'6','Pelatihan Pengolahan Data dengan Menggunakan Microsoft Excel Pada Ibu-Ibu PKK Desa Cimekar','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),(117,'6','Pelatihan Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),(118,'6','Workshop Wargame Knowledge and Animation','Universitas Nasional Pasim','2016',NULL,'v'),(119,'6','Menyongsong Kurikulum Berbasis KKNI','Universitas Nasional Pasim','2016',NULL,'v'),(120,'6','Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),(121,'6','Seminar 3D Visualization with VR-Vantage','Universitas Nasional Pasim','2016',NULL,'v'),(122,'6','Seminar Management Information System','Universitas Nasional Pasim','2016',NULL,'v'),(123,'6','Workshop Angular JS','Universitas Nasional Pasim','2016',NULL,'v'),(124,'6','Seminar Cyber Security','Universitas Nasional Pasim','2017',NULL,'v'),(125,'6','Workshop Robotic','Universitas Nasional Pasim','2017',NULL,'v'),(126,'7','Peningkatan Kemampuan Kapasitas Manajemen Keuangan Koperasi Tunas Harapan Berbasis Aplikasi Komputer','Kec. Sindang Kerta Kab. Bandung Barat','2014','v','v'),(127,'7','Peningkatan Kemampuan Kapasitas Manajemen Keuangan Koperasi Tunas Harapan Berbasis Aplikasi Komputer','Kec. Sindang Kerta Kab. Bandung Barat','2014','v','v'),(128,'7','Seminar Simulation Logic for Electronic Warfare','Universitas Nasional Pasim','2015',NULL,'v'),(129,'7','Wargame Trainning Concept','Universitas Nasional Pasim','2015',NULL,'v'),(130,'7','Seminar DEVS-based Modelling and Simulation','Universitas Nasional Pasim','2015',NULL,'v'),(131,'7','Workshop How to Make 3D Object Models','Universitas Nasional Pasim','2015',NULL,'v'),(132,'7','Workshop Computer Graphics','Universitas Nasional Pasim','2015',NULL,'v'),(133,'7','Workshop Wargame Knowledge and Animation','Universitas Nasional Pasim','2016',NULL,'v'),(134,'7','Pelatihan Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),(135,'7','Menyongsong Kurikulum Berbasis KKNI','Universitas Nasional Pasim','2016',NULL,'v'),(136,'7','Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),(137,'7','Seminar 3D Visualization with VR-Vantage','Universitas Nasional Pasim','2016',NULL,'v'),(138,'7','Seminar Management Information System','Universitas Nasional Pasim','2016',NULL,'v'),(139,'7','Workshop Angular JS','Universitas Nasional Pasim','2016',NULL,'v'),(140,'7','Peningkatan Kemampuan Pembuatan Surat  Ibu-Ibu PKK Desa Cinunuk','Kec. Cileunyi, Kab.Bandung','2016','v',''),(141,'7','Pelatihan Penggunaan Microsoft Excel Untuk Peningkatan Evektifitas Pengolahan Data pada Ibu-Ibu PKK ',NULL,NULL,NULL,NULL),(142,'7','Seminar Cyber Security','Universitas Nasional Pasim','2017',NULL,'v'),(143,'7','Workshop Robotic','Universitas Nasional Pasim','2017',NULL,'v'),(144,'8','Peningkatan Kemampuan Kapasitas Manajemen Keuangan Koperasi Tunas Harapan Berbasis Aplikasi Komputer','Kec. Sindang Kerta Kab. Bandung Barat','2014','v','v'),(145,'8','Penggunaan Sistem Informasi Akuntansi Pada Koperasi Bako Wangun','Kec. Sindang Kerta Kab. Bandung Barat','2015','v',NULL),(146,'8','Seminar Simulation Logic for Electronic Warfare','Universitas Nasional Pasim','2015',NULL,'v'),(147,'8','Wargame Trainning Concept','Universitas Nasional Pasim','2015',NULL,'v'),(148,'8','Seminar DEVS-based Modelling and Simulation','Universitas Nasional Pasim','2015',NULL,'v'),(149,'8','Workshop How to Make 3D Object Models','Universitas Nasional Pasim','2015',NULL,'v'),(150,'8','Workshop Computer Graphics','Universitas Nasional Pasim','2015',NULL,'v'),(151,'8','Peningkatan Kemampuan Pembuatan Surat Ibu-Ibu PKK Desa Cinunuk dengan Menggunakan Microsoft Word','Kec. Cileunyi, Kab.Bandung','2016','v',NULL),(152,'8','Menyongsong Kurikulum Berbasis KKNI','Universitas Nasional Pasim','2016',NULL,'v'),(153,'8','Penyusunan Proposal Penelitian','Universitas Nasional Pasim','2016',NULL,'v'),(154,'8','Seminar 3D Visualization with VR-Vantage','Universitas Nasional Pasim','2016',NULL,'v'),(155,'8','Seminar Management Information System','Universitas Nasional Pasim','2016',NULL,'v'),(156,'8','Workshop Angular JS','Universitas Nasional Pasim','2016',NULL,'v'),(157,'8','Pelatihan Penggunaan Microsoft Excel Untuk Peningkatan Evektifitas Pengolahan Data pada Ibu-Ibu PKK ','Kec. Cileunyi, Kab.Bandung','2017','v',NULL),(158,'8','Seminar Cyber Security','Universitas Nasional Pasim','2017',NULL,'v'),(159,'8','Workshop Robotic','Universitas Nasional Pasim','2017',NULL,'v');
+
+UNLOCK TABLES;
 
 /*Table structure for table `kegiatan_pkm` */
 
@@ -662,7 +798,11 @@ CREATE TABLE `kegiatan_pkm` (
 
 /*Data for the table `kegiatan_pkm` */
 
+LOCK TABLES `kegiatan_pkm` WRITE;
+
 insert  into `kegiatan_pkm`(`kd_jns`,`kd_prodi`,`ts_2`,`ts_1`,`ts`) values (1,'P001',5,10,5),(2,'P001',NULL,NULL,NULL),(3,'P001',NULL,NULL,NULL),(4,'P001',6,6,6),(5,NULL,NULL,NULL,1);
+
+UNLOCK TABLES;
 
 /*Table structure for table `keikutsertaan_org` */
 
@@ -684,7 +824,11 @@ CREATE TABLE `keikutsertaan_org` (
 
 /*Data for the table `keikutsertaan_org` */
 
+LOCK TABLES `keikutsertaan_org` WRITE;
+
 insert  into `keikutsertaan_org`(`id`,`id_dosen`,`nm_organisasi`,`thn_awal`,`thn_akhir`,`internasional`,`nasional`,`lokal`) values (1,'1','APTIKOM',2018,2019,'',NULL,NULL),(2,'2','APTIKOM',2018,2019,'',NULL,NULL),(3,'3','APTIKOM',2018,2019,'',NULL,NULL),(4,'4','APTIKOM',2018,2019,'',NULL,NULL),(5,'4','Ikatan Ahli Informatika Indonesia (IAII)',2016,2018,NULL,'v',NULL),(6,'5','APTIKOM',2018,2019,'',NULL,NULL);
+
+UNLOCK TABLES;
 
 /*Table structure for table `masastudi_ipk` */
 
@@ -703,7 +847,11 @@ CREATE TABLE `masastudi_ipk` (
 
 /*Data for the table `masastudi_ipk` */
 
+LOCK TABLES `masastudi_ipk` WRITE;
+
 insert  into `masastudi_ipk`(`kd_prodi`,`rata_masa_std`,`rata_ipk`,`keterangan`,`id`) values ('P001',3.2,3.59,'Bagus','1');
+
+UNLOCK TABLES;
 
 /*Table structure for table `mhs_reg_nonreg` */
 
@@ -724,6 +872,10 @@ CREATE TABLE `mhs_reg_nonreg` (
 
 /*Data for the table `mhs_reg_nonreg` */
 
+LOCK TABLES `mhs_reg_nonreg` WRITE;
+
+UNLOCK TABLES;
+
 /*Table structure for table `pembimbing_akd` */
 
 DROP TABLE IF EXISTS `pembimbing_akd`;
@@ -743,7 +895,11 @@ CREATE TABLE `pembimbing_akd` (
 
 /*Data for the table `pembimbing_akd` */
 
+LOCK TABLES `pembimbing_akd` WRITE;
+
 insert  into `pembimbing_akd`(`Id`,`id_dosen`,`kd_prodi`,`j_mhs_bimbingan`,`rata2_pertemuan`) values (1,'1','P001',50,'3.0'),(2,'2','P001',18,'3.0'),(3,'4','P001',18,'3.0'),(4,'5','P001',17,'3.0'),(5,'3','P001',17,'3.0');
+
+UNLOCK TABLES;
 
 /*Table structure for table `pembimbing_skripsi` */
 
@@ -763,7 +919,11 @@ CREATE TABLE `pembimbing_skripsi` (
 
 /*Data for the table `pembimbing_skripsi` */
 
+LOCK TABLES `pembimbing_skripsi` WRITE;
+
 insert  into `pembimbing_skripsi`(`id`,`id_dosen`,`kd_prodi`,`jml_mhs`) values (1,'1','P001',70),(2,'2','P001',5),(3,'4','P001',4),(4,'5','P001',6),(5,'3','P001',6);
+
+UNLOCK TABLES;
 
 /*Table structure for table `penelitian_dosen` */
 
@@ -776,6 +936,7 @@ CREATE TABLE `penelitian_dosen` (
   `ts_2` int(3) DEFAULT NULL,
   `ts_1` int(3) DEFAULT NULL,
   `ts` int(3) DEFAULT NULL,
+  `sumber_pembiayaan` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_penelitian_prodi` (`kd_prodi`),
   KEY `FK_penelitian_jns` (`kd_jns`),
@@ -785,7 +946,11 @@ CREATE TABLE `penelitian_dosen` (
 
 /*Data for the table `penelitian_dosen` */
 
-insert  into `penelitian_dosen`(`id`,`kd_jns`,`kd_prodi`,`ts_2`,`ts_1`,`ts`) values (1,1,'P001',NULL,NULL,NULL),(2,2,'P001',4,4,5),(3,3,'P001',NULL,NULL,NULL),(4,4,'P001',6,5,4),(5,5,'P001',NULL,1,2);
+LOCK TABLES `penelitian_dosen` WRITE;
+
+insert  into `penelitian_dosen`(`id`,`kd_jns`,`kd_prodi`,`ts_2`,`ts_1`,`ts`,`sumber_pembiayaan`) values (1,1,'P001',NULL,NULL,NULL,'Pembiayaan sendiri oleh peneliti		'),(2,2,'P001',4,4,5,'PT yang bersangkutan		\r\n'),(3,3,'P001',NULL,NULL,NULL,'Kemristekdikti		\r\n'),(4,4,'P001',6,5,4,'Institusi dalam negeri di luar Kemristekdikti		\r\n'),(5,5,'P001',NULL,1,2,'Institusi luar negeri		\r\n');
+
+UNLOCK TABLES;
 
 /*Table structure for table `penggunaan_dana` */
 
@@ -807,7 +972,11 @@ CREATE TABLE `penggunaan_dana` (
 
 /*Data for the table `penggunaan_dana` */
 
+LOCK TABLES `penggunaan_dana` WRITE;
+
 insert  into `penggunaan_dana`(`id`,`kd_jns`,`kd_prodi`,`ts_2`,`ts_1`,`ts`) values (1,1,'P001',2298266.46,2466829.16,2920170.73),(2,2,'P001',59800.00,59200.00,65600.00),(3,3,'P001',40200.00,41300.00,50600.00),(4,4,'P001',1969942.68,2114424.99,2503003.49),(5,5,'P001',1313295.12,1409616.66,1668668.99),(6,6,'P001',656647.56,704808.33,834334.49),(7,7,'P001',NULL,NULL,NULL);
+
+UNLOCK TABLES;
 
 /*Table structure for table `pengisi_borang` */
 
@@ -827,7 +996,11 @@ CREATE TABLE `pengisi_borang` (
 
 /*Data for the table `pengisi_borang` */
 
+LOCK TABLES `pengisi_borang` WRITE;
+
 insert  into `pengisi_borang`(`id`,`kode_prodi`,`nama`,`nidn`,`jabatan`,`tgl_pengisian`) values (1,'P001','Erna Hikmawati, S. Kom., M. Kom','421089201','Ketua Program Studi D3 Manajemen Informatika','2017-09-08'),(2,'P001','Soleh Sabarudin, S. Kom., M. Kom','408097207','Sekretaris Program Studi D3 Manajemen Informatika','2017-09-08'),(3,'P001','Endang Mulyani, SE','122002078','Bagian HRD','2017-09-08'),(4,'P001','Sri Lestari, SPd','122006105','Sekretaris Rektorat','2017-09-08'),(5,'P001','Usman Rachman, Drs., MH','122017210','Ketua LPPM','2017-09-08'),(6,'P001','Abdul Holik. S.Fil.l., M.Si','422108502','Ketua Bidang Riset','2017-09-08'),(7,'P001','Sjamsuridjal, Ir., MM','403015301','Ketua Bidang Pengembangan','2017-09-08'),(8,'P001','H.Iwan Ernawan Astamoen,S.E.,MM','122000026','Ketua SPMI','2017-09-08'),(9,'P001','Lia Susana','122009137','Kepala Bagian Akademik','2017-09-08'),(10,'P001','Nina Rustiana','112003015','Kepala Bagian Keuangan','2017-09-08'),(11,'P001','Endri Hendrayana, SE','122013174','Kepala Bagian CRM dan Kemahasiswaan','2017-09-08'),(12,'P001','Rd. Norman Rizkianto','122010149','Bagian GA dan umum','2017-09-08'),(13,'P001','Ridwan Taufik, A.Ma. Pust, SE','122015203','Pustakawan','2017-09-08');
+
+UNLOCK TABLES;
 
 /*Table structure for table `perguruan_tinggi` */
 
@@ -841,7 +1014,11 @@ CREATE TABLE `perguruan_tinggi` (
 
 /*Data for the table `perguruan_tinggi` */
 
+LOCK TABLES `perguruan_tinggi` WRITE;
+
 insert  into `perguruan_tinggi`(`kode_pt`,`nama_pt`) values ('PT001','Universitas Nasional PASIM');
+
+UNLOCK TABLES;
 
 /*Table structure for table `permission` */
 
@@ -854,6 +1031,10 @@ CREATE TABLE `permission` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `permission` */
+
+LOCK TABLES `permission` WRITE;
+
+UNLOCK TABLES;
 
 /*Table structure for table `perolehan_dana` */
 
@@ -876,7 +1057,11 @@ CREATE TABLE `perolehan_dana` (
 
 /*Data for the table `perolehan_dana` */
 
+LOCK TABLES `perolehan_dana` WRITE;
+
 insert  into `perolehan_dana`(`id`,`id_dana`,`kd_prodi`,`jenis_dana`,`ts_2`,`ts_1`,`ts`) values (1,1,'P001','Beasiswa Yayasan',823200.00,537600.00,529200.00),(2,1,'P001','Hibah Yayasan',5000000.00,5000000.00,0.00),(3,1,'P001','Hibah Unit Usaha ',75000.00,973050.00,7497529.50),(4,2,'P001','Pendaftaran',1250.00,2750.00,3250.00),(5,2,'P001','Biaya Registrasi',10750.00,23650.00,27950.00),(6,2,'P001','Biaya Kuliah',21000.00,46200.00,54600.00),(7,4,'P001','Alumni',1288884.00,1166953.00,1062653.00),(8,4,'P001','Hibah Penelitian',35800.00,39700.00,44600.00),(9,4,'P001','Hibah Pengabdian',40200.00,41300.00,50600.00);
+
+UNLOCK TABLES;
 
 /*Table structure for table `persentase_llsn` */
 
@@ -891,7 +1076,11 @@ CREATE TABLE `persentase_llsn` (
 
 /*Data for the table `persentase_llsn` */
 
+LOCK TABLES `persentase_llsn` WRITE;
+
 insert  into `persentase_llsn`(`id_prodi`,`persen`) values ('P001',93.28);
+
+UNLOCK TABLES;
 
 /*Table structure for table `pkdt_tgs_belajar` */
 
@@ -912,7 +1101,11 @@ CREATE TABLE `pkdt_tgs_belajar` (
 
 /*Data for the table `pkdt_tgs_belajar` */
 
+LOCK TABLES `pkdt_tgs_belajar` WRITE;
+
 insert  into `pkdt_tgs_belajar`(`id_dosen`,`jenjang_pend`,`bid_studi`,`perguruan_tinggi`,`negara`,`thn_mulai_std`,`id`) values ('4','S1','Elektro dan Informatika','Institut Teknologi Bandung','Indonesia','2017',1);
+
+UNLOCK TABLES;
 
 /*Table structure for table `prestasi_dosen` */
 
@@ -929,6 +1122,10 @@ CREATE TABLE `prestasi_dosen` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `prestasi_dosen` */
+
+LOCK TABLES `prestasi_dosen` WRITE;
+
+UNLOCK TABLES;
 
 /*Table structure for table `prodi_tbl` */
 
@@ -965,7 +1162,11 @@ CREATE TABLE `prodi_tbl` (
 
 /*Data for the table `prodi_tbl` */
 
+LOCK TABLES `prodi_tbl` WRITE;
+
 insert  into `prodi_tbl`(`kode_prodi`,`kode_fakultas`,`kode_pt`,`prodi`,`jurusan`,`no_sk_ps`,`tgl_sk_ps`,`pjbt_ttd`,`foto_sk_ps`,`bln_mulai_ps`,`thn_mulai_ps`,`no_sk_opr`,`tgl_sk_opr`,`foto_sk_opr`,`peringkat`,`nilai`,`no_sk_ban_pt`,`alamat_ps`,`no_telp_ps`,`no_fax_ps`,`homepage_ps`,`email_ps`,`id`) values ('P001','F001','PT001','D3','Manajemen Informatika','114/D/O/2001','2001-10-02','A.n. Menteri Pendidikan Nasion',NULL,' Agustusan',2008,'2248/D/T/K-IV/2009','2009-05-20','','C',265,'047/SK/BAN-PT/Ak-XII/Dpl-III/II/201','Jalan Dakota No. 8A Sukaraja-Bandung','022 - 6072803','022-20565099','www.pasim.ac.id ','mi@pasim.ac.id',1);
+
+UNLOCK TABLES;
 
 /*Table structure for table `pustaka` */
 
@@ -987,7 +1188,11 @@ CREATE TABLE `pustaka` (
 
 /*Data for the table `pustaka` */
 
+LOCK TABLES `pustaka` WRITE;
+
 insert  into `pustaka`(`id`,`kd_jns`,`jml_judul`,`jml_copy`,`kd_prodi`,`jenis_pustaka`) values (1,1,625,670,'P001','Buku Teks dan handbook'),(2,2,20,60,'P001','Modul Praktikum / Praktek'),(3,3,4,4,'P001','Jurnal yang terakreditasi oleh lembaga resmi (Dikti. LIPI, dll)'),(4,4,2,0,'P001','Jurnal Internasional (termasuk e-journal)'),(5,5,12,0,'P001','Majalah Ilmiah'),(6,6,15,0,'P001','Prosiding');
+
+UNLOCK TABLES;
 
 /*Table structure for table `role` */
 
@@ -1001,7 +1206,11 @@ CREATE TABLE `role` (
 
 /*Data for the table `role` */
 
+LOCK TABLES `role` WRITE;
+
 insert  into `role`(`r_id`,`nama_role`) values ('1','admin');
+
+UNLOCK TABLES;
 
 /*Table structure for table `sdm` */
 
@@ -1020,7 +1229,11 @@ CREATE TABLE `sdm` (
 
 /*Data for the table `sdm` */
 
+LOCK TABLES `sdm` WRITE;
+
 insert  into `sdm`(`kd_hal`,`total`,`kd_prodi`,`jml`) values (1,5,'P001',5),(2,1,'P001',1),(3,0,'P001',NULL),(4,0,'P001',NULL),(5,1,'P001',1),(6,7,'P001',7),(7,0,'P001',NULL);
+
+UNLOCK TABLES;
 
 /*Table structure for table `struktur_kurikulum` */
 
@@ -1050,7 +1263,11 @@ CREATE TABLE `struktur_kurikulum` (
 
 /*Data for the table `struktur_kurikulum` */
 
+LOCK TABLES `struktur_kurikulum` WRITE;
+
 insert  into `struktur_kurikulum`(`kd_prodi`,`kode_mk`,`jns_mk`,`smt`,`nama_mk`,`sks_kuliah`,`sks_praktek`,`sks_inti`,`sks_institusi`,`bobot_tgs`,`deskripsi`,`silabus`,`sap`,`penyelenggara`) values ('P001','MKB1001',1,1,'Komputer Grafiss',8,8,NULL,'v',NULL,NULL,NULL,NULL,'Jurusans'),('P001','MKB1002',1,1,'Logika dan Algoritma',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB1003',1,1,'Pengelolaan Instalasi Komputer',1,1,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB1004',1,1,'Pengenalan Pengolahan Data Elektronik',1,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB2005',1,2,'Basis Data ',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB2006',1,2,'Pemrograman C ',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB2007',1,2,'Pemrograman VB.Net',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB2008',1,2,'Struktur Data',1,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB3009',1,3,'Animasi ',NULL,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB3010',1,3,'Pemrograman C++ ',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB3011',1,3,'Pemrograman .Net Lanjutan',NULL,3,'v','','v','v','v','v','Jurusan'),('P001','MKB4012',1,4,'Web Interface Design',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB4013',1,4,'Sistem Operasi ',1,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB5014',1,5,'Web Database Development',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB5015',1,5,'Pemrograman Java',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB5016',1,5,'Kerja Praktek',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB6017',1,6,'Kewirausahaan',1,1,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB6018',1,6,'Mobile Programming',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB6019',1,6,'Tugas Akhir',NULL,4,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKB6020',1,6,'Networking',NULL,3,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK1001',1,1,'Dasar Akuntansi I',3,NULL,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK1002',1,1,'Kalkulus',3,NULL,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK1003',1,1,'Pengantar Bisnis ',2,NULL,'v','','v','v','v','v','Jurusan'),('P001','MKK2004',1,2,'Aljabar Linier',3,NULL,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK2005',1,2,'Dasar Akuntansi II',1,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK3006',1,3,'Manajemen Umum ',1,NULL,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK3007',1,3,'Rekayasa Perangkat Lunak',1,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK3008',1,3,'Manajemen Keuangan',3,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK4009',1,4,'Matematika Diskrit',3,0,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK4010',1,4,'Sistem Informasi Manajemen',1,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK4011',1,4,'Interaksi Manusia dan Komputer',1,2,NULL,'v','v','v','v','v','Jurusan'),('P001','MKK5012',1,5,'Analisis dan Perancangan Sistem ',1,2,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK5013',1,5,'Statistika Deskriptif',3,NULL,'v',NULL,'v','v','v','v','Jurusan'),('P001','MKK5014',1,5,'Teknik Proyeksi Bisnis ',1,1,NULL,'v','v','v','v','v','Jurusan'),('P001','MKK6015',1,6,'Topik Khusus SIM',2,NULL,NULL,'v','v','v','v','v','Jurusan'),('P001','MPB1001',1,2,'Etika Profesi',2,NULL,'v','','v','v','v','v','Jurusan'),('P001','MPK1001',1,1,'Bahasa Indonesia',2,NULL,NULL,'v','v','v','v','v','Jurusan'),('P001','MPK2002',1,2,'Pendidikan Pancasila dan Kewarganegaraan',2,NULL,'v',NULL,'v','v','v','v','Jurusan'),('P001','MPK3003',1,3,'General English ',2,NULL,NULL,'v','v','v','v','v','Jurusan'),('P001','MPK3004',1,3,'Pendidikan Agama',2,NULL,'v',NULL,'v','v','v','v','Jurusan'),('P001','MPK4005',1,4,'Ilmu Budaya Dasar',2,NULL,NULL,'v','v','v','v','v','Jurusan'),('P001','MPK4006',1,4,'Writing for Business Letter',NULL,2,NULL,'v','v','v','v','v','Jurusan'),('P001','MPK5007',1,5,'Speaking for Presentation',NULL,2,NULL,'v','v','v','v','v','Jurusan'),('P001','MPK6008',1,6,'TOEFL',NULL,2,NULL,'v','v','v','v','v','Jurusan');
+
+UNLOCK TABLES;
 
 /*Table structure for table `sumber_biaya` */
 
@@ -1064,7 +1281,11 @@ CREATE TABLE `sumber_biaya` (
 
 /*Data for the table `sumber_biaya` */
 
+LOCK TABLES `sumber_biaya` WRITE;
+
 insert  into `sumber_biaya`(`kd_jns`,`jns_sumber`) values (1,'Pembiayaan sendiri'),(2,'PT yang bersangkutan'),(3,'Kemristekdikti'),(4,'Institusi dalam negeri di luar'),(5,'Institusi luar negeri');
+
+UNLOCK TABLES;
 
 /*Table structure for table `sumber_dana` */
 
@@ -1078,7 +1299,11 @@ CREATE TABLE `sumber_dana` (
 
 /*Data for the table `sumber_dana` */
 
+LOCK TABLES `sumber_dana` WRITE;
+
 insert  into `sumber_dana`(`id_dana`,`sumber_dana`) values (1,'Usaha Sendiri'),(2,'Mahasiswa'),(3,'Pemerintah'),(4,'Sumber Lain');
+
+UNLOCK TABLES;
 
 /*Table structure for table `tenaga_kepend` */
 
@@ -1105,7 +1330,11 @@ CREATE TABLE `tenaga_kepend` (
 
 /*Data for the table `tenaga_kepend` */
 
+LOCK TABLES `tenaga_kepend` WRITE;
+
 insert  into `tenaga_kepend`(`kode_prodi`,`kd_jns`,`s3`,`s2`,`s1`,`d4`,`d3`,`d2`,`d1`,`sma`,`unit_kerja`,`jns_tng_kepend`) values ('P001',1,3,0,2,0,1,1,0,0,'Universitas','Pustakawan'),('P001',2,0,0,3,0,2,0,0,0,'Program Studi','Laboran/Teknisi/Analisis/Operator/Programer'),('P001',3,NULL,NULL,2,NULL,3,NULL,NULL,NULL,'Program Studi','Administrasi'),('P001',4,NULL,NULL,1,NULL,NULL,NULL,NULL,7,'Universitas','Lainnya');
+
+UNLOCK TABLES;
 
 /*Table structure for table `users` */
 
@@ -1120,7 +1349,11 @@ CREATE TABLE `users` (
 
 /*Data for the table `users` */
 
+LOCK TABLES `users` WRITE;
+
 insert  into `users`(`id`,`username`,`password`) values (1,'admin','teguh'),(2,'d3','d3mi'),(3,'s1','s1'),(4,'s1','ti');
+
+UNLOCK TABLES;
 
 /*Table structure for table `waktu_prpbm` */
 
@@ -1140,7 +1373,11 @@ CREATE TABLE `waktu_prpbm` (
 
 /*Data for the table `waktu_prpbm` */
 
+LOCK TABLES `waktu_prpbm` WRITE;
+
 insert  into `waktu_prpbm`(`id`,`kd_prodi`,`teori`,`praktek`,`praktikum`,`pkl`) values (1,'P001',613,1650,297,180);
+
+UNLOCK TABLES;
 
 /*Table structure for table `wkt_tunggu_llsn` */
 
@@ -1155,7 +1392,11 @@ CREATE TABLE `wkt_tunggu_llsn` (
 
 /*Data for the table `wkt_tunggu_llsn` */
 
+LOCK TABLES `wkt_tunggu_llsn` WRITE;
+
 insert  into `wkt_tunggu_llsn`(`id_prodi`,`waktu`) values ('P001',0.11);
+
+UNLOCK TABLES;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
