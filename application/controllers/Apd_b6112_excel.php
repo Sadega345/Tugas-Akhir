@@ -36,6 +36,41 @@ public function index() {
  	$this->load->view('User/Butir6B/tampilan_borang6.1.1.2.php');
  }
 
+ public function tambah(){
+ 	$this->model_squrity->getsqurity();
+ 	$this->load->view('User/Butir6B/inputan_6112.php');
+ }
+
+ public function do_tambah(){
+		$this->model_squrity->getsqurity();
+		
+		$id=$_POST['id'];
+		$tahun=$_POST['tahun'];
+		$judul_penelitian=$_POST['judul_penelitian'];
+
+		$sumber_dana=$_POST['sumber_dana'];
+		$jml_dana=$_POST['jml_dana'];
+		
+		$data_insert=array(
+			
+			'id'=>$id,
+			'tahun'=>$tahun,
+			'kd_prodi'=>'P001',
+			'judul_penelitian' => $judul_penelitian,
+			'sumber_dana' => $sumber_dana,
+			'jml_dana' => $jml_dana,
+
+		);
+		// print_r($data_insert);die();
+		$res=$this->Apd_a6112_model->insert('penggunaan_dana',$data_insert);
+		if ($res>=1) {
+			
+			redirect('Apd_b6112_excel');
+		}else {
+			alert('Gagal Insert');
+		}
+}
+
 
 public function export_excel(){
  $dana1=$this->Apd_b6112_model->listing1();

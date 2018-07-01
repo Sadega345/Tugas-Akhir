@@ -26,6 +26,12 @@ WHERE KD_PRODI="p001"');
 		return $res;
 	}
 
+
+	public function insert($tablename,$data){
+		$res=$this->db->insert($tablename,$data);
+		return $res;
+	}
+
  public function totdana() {
  $data=$this->db->query('SELECT SUM(jml_dana)AS Tot_Dana FROM dana_penelitian WHERE KD_PRODI="P001"');
  return $data->result_array();

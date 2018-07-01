@@ -55,4 +55,9 @@ public function __construct()
  return $jmldanagab->result_array();
  }
 
+ public function insert($tablename,$data){
+		$res=$this->db->insert($tablename,$data);
+		return $res;
+	}
+
 }

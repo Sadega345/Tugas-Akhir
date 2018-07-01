@@ -11,12 +11,22 @@ class Apd_a552_model extends CI_Model {
 
 // Listing
 	 public function listing() {
-		 $data=$this->db->query('SELECT d.nama_dosen,p.jml_mhs,p.id FROM pembimbing_skripsi p inner join dosen_tbl d on p.id_dosen=d.id_dosen WHERE p.kd_prodi="p001"');
+		 $data=$this->db->query('SELECT nama_dosen, jml_mhs,id FROM pembimbing_skripsi  WHERE kd_prodi="p001"');
 		 return $data->result_array();
 	 }
 
+	 public function dosen() {
+		 $data=$this->db->query('SELECT nama_dosen FROM dosen_tbl ');
+		 return $data->result_array();
+	 }
+
+	 public function insert($tablename,$data){
+		$res=$this->db->insert($tablename,$data);
+		return $res;
+	}
+
 	public function update($where="") {
-	 $data= $this->db->query('SELECT d.nama_dosen,p.jml_mhs,p.id FROM pembimbing_skripsi p inner join dosen_tbl d on p.id_dosen=d.id_dosen '.$where);
+	 $data= $this->db->query('SELECT nama_dosen, jml_mhs,id FROM pembimbing_skripsi '.$where);
 	 return $data->result_array();
 	}
 
@@ -26,7 +36,7 @@ class Apd_a552_model extends CI_Model {
 	}
 
 	 public function totmahasiswa() {
-		 $data=$this->db->query('select sum(p.jml_mhs)as jum_mhs from pembimbing_skripsi p inner join dosen_tbl d on p.id_dosen=d.id_dosen where p.kd_prodi="p001"');
+		 $data=$this->db->query('select sum(p.jml_mhs)as jum_mhs from pembimbing_skripsi p inner join dosen_tbl d on p.nama_dosen=d.id_dosen where p.kd_prodi="p001"');
 		 return $data->result_array();
 	 }
 

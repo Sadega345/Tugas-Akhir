@@ -118,6 +118,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th>TS</th>
 									 <th>Jumlah</th>
 								 </tr>
+
 							</thead>
 							<tbody>
 							<?php 
@@ -129,9 +130,56 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $d['TS_2']; ?></td>
 								<td><?php echo $d['TS_1']; ?></td>
 								<td><?php echo $d['TS']; ?></td>
+								
+								<!-- Tot Peneliti -->
+								<!-- <?php 
+									foreach ($peneliti as $p ) { 
+								?>
+								<td>
+									<?php echo $p['JML']; break; } ?>
+									
+								</td> -->
+								
+
+								<!-- Bersangkutan -->
+								<!-- <?php 
+									foreach ($bersangkutan as $b ) { 
+								?>
+								<td><?php echo $b['JML']; } ?></td> -->
+								
+
+
 							</tr>
 							<?php } ?>
+
 							
+							
+							<tr>
+							 	<td>Jumlah</td>
+							 	<!-- TS2 -->
+							 	<?php 
+								
+									foreach ($totTs2 as $ts2 ) { 
+								?>
+							 	<td><?php echo $ts2['TS_2']; ?></td>
+							 	<?php } ?>
+
+							 	<!-- TS1 -->
+							 	<?php 
+								
+									foreach ($totTs1 as $ts1 ) { 
+								?>
+							 	<td><?php echo $ts1['TS_1']; ?></td>
+							 	<?php } ?>
+
+							 	<!-- TS -->
+							 	<?php 
+								
+									foreach ($totTs as $ts ) { 
+								?>
+							 	<td><?php echo $ts['TS']; ?></td>
+							 	<?php } ?>
+							 </tr>
 							</tbody>
 							</table>
 							<!-- <div class="btn-group">

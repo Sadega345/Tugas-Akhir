@@ -27,6 +27,11 @@ artikel_ilmiah '.$where);
 		return $res;
 	}
 
+	public function insert($tablename,$data){
+		$res=$this->db->insert($tablename,$data);
+		return $res;
+	}
+
  public function lokal() {
  $data=$this->db->query('SELECT COUNT(IF(LOKAL LIKE "v%",LOKAL,NULL))AS JML FROM artikel_ilmiah WHERE kd_prodi="p001"');
  return $data->result_array();

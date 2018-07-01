@@ -19,6 +19,11 @@ class Apd_a631_model extends CI_Model {
 		return $res;
 	}
 
+	public function insert($tablename,$data){
+		$res=$this->db->insert($tablename,$data);
+		return $res;
+	}
+
  public function totluas(){
  $totalluas=$this->db->query('select sum(jml_luas) as Tot_Luas from dt_ruang_dosen where kd_prodi="p001"');
  return $totalluas->result_array();

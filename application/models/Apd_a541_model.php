@@ -11,14 +11,14 @@ class Apd_a541_model extends CI_Model {
 
 // Listing
  public function listing() {
- $data=$this->db->query('SELECT d.nama_dosen, p.j_mhs_bimbingan,p.rata2_pertemuan,p.Id FROM pembimbing_akd p INNER JOIN
- dosen_tbl d ON p.id_dosen=d.id_dosen WHERE p.kd_prodi="p001"');
+ 
+ $data=$this->db->query('SELECT nama_dosen, j_mhs_bimbingan,rata2_pertemuan,id FROM pembimbing_akd   WHERE kd_prodi="p001"');
  return $data->result_array();
  }
 
  public function update($where="") {
  $data= $this->db->query('SELECT d.nama_dosen, p.j_mhs_bimbingan,p.rata2_pertemuan,p.Id FROM pembimbing_akd p INNER JOIN
- dosen_tbl d ON p.id_dosen=d.id_dosen '.$where);
+ dosen_tbl d ON p.nama_dosen=d.id_dosen '.$where);
  return $data->result_array();
  }
 
@@ -31,11 +31,11 @@ class Apd_a541_model extends CI_Model {
 	$res=$this->db->insert($tablename,$data);
 	return $res;
 }
-public function GetDosen()
-	{
-		$data=$this->db->query("select nama_dosen from dosen_tbl ");
-		return $data->result_array();
-	}
+	public function GetDosen()
+		{
+			$data=$this->db->query("select nama_dosen,kd_prodi from dosen_tbl ");
+			return $data->result_array();
+		}
  public function totbimbingan() {
  $data=$this->db->query('SELECT SUM(j_mhs_bimbingan)AS jum_bimbingan FROM pembimbing_akd WHERE kd_prodi="p001"');
  return $data->result_array();

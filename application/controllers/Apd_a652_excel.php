@@ -66,6 +66,47 @@ public function index() {
 		// }
 	}
 
+	public function tambah(){
+ 	$this->model_squrity->getsqurity();
+ 	$this->load->view('User/Butir6/inputan_652.php');
+ }
+
+ public function do_tambah(){
+		$this->model_squrity->getsqurity();
+		
+		$id = $_POST['id'];
+		// $manual = implode(',', $_POST['manual']);
+		// $komp_tnp_jar = implode(',', $_POST['komp_tnp_jar']);
+		// $lan = implode(',', $_POST['lan']);
+		// $wan = implode(',', $_POST['wan']);
+
+		$manual =  $_POST['manual'];
+		$komp_tnp_jar = $_POST['komp_tnp_jar'];
+		$lan = $_POST['lan'];
+		$wan = $_POST['wan'];
+
+		$jenis_data=$_POST['jenis_data'];
+		
+		$data_insert=array(
+			
+			'id'=>$id,
+			'kd_prodi'=>'P001',
+			'manual'=>$manual,
+			'komp_tnp_jar' => $komp_tnp_jar,
+			'lan' => $lan,
+			'wan' => $wan,
+			'jenis_data' => $jenis_data,
+
+		);
+		// print_r($data_insert);die();
+		$res=$this->Apd_a652_model->insert('aksesbilitas_data',$data_insert);
+		if ($res>=1) {
+			redirect('Apd_a652_excel');
+		}else {
+			alert('Gagal Insert');
+		}
+}
+
 
 public function export_excel(){
  // $data = array( 'title' => 'TABEL DATA BUTIR 6.5.2 : AKSESIBILITAS TIAP JENIS DATA',

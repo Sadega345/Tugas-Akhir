@@ -110,8 +110,20 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="col-md-10">
 									<div class="row">
 										<div class="form-group">
+											<label>Id</label>
+											<?php 
+												$data=$this->Apd_a541_model->listing();
+												$id = count($data)+1;
+												
+											?>
+											<input type="text" class="form-control" name="id" value="<?php echo $id; ?>" readonly="">
+										
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
 											<label>Nama Dosen</label>
-											<select name="id_dosen" class="form-control">
+											<select name="nama_dosen" class="form-control">
 												<option disabled selected>-- Pilih Dosen --</option>
 												<?php 
 													$data=$this->Apd_a541_model->GetDosen();

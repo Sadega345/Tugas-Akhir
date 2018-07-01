@@ -56,6 +56,40 @@ public function index() {
 		// }
 	}
 
+ public function tambah(){
+ 	$this->model_squrity->getsqurity();
+ 	$this->load->view('User/Butir6/inputan_623.php');
+ }
+
+ public function do_tambah(){
+		$this->model_squrity->getsqurity();
+		
+		$id=$_POST['id'];
+		$tahun=$_POST['tahun'];
+		$judul_kegiatan=$_POST['judul_kegiatan'];
+
+		$sumber_dana=$_POST['sumber_dana'];
+		$jml_dana=$_POST['jml_dana'];
+		
+		$data_insert=array(
+			
+			'id'=>$id,
+			'tahun'=>$tahun,
+			'kd_prodi'=>'P001',
+			'judul_kegiatan' => $judul_kegiatan,
+			'sumber_dana' => $sumber_dana,
+			'jumlah_dana' => $jml_dana,
+
+		);
+		// print_r($data_insert);die();
+		$res=$this->Apd_a623_model->insert('dana_pengmas',$data_insert);
+		if ($res>=1) {
+			redirect('Apd_a623_excel');
+		}else {
+			alert('Gagal Insert');
+		}
+}
+
 public function export_excel(){
  // $data = array( 'title' => 'TABEL DATA BUTIR 6.2.3 : DANA PELAYANAN/PENGABDIAN KEPADA MASYARAKAT',
  // 'a623' => $this->apd_a623_model->listing());

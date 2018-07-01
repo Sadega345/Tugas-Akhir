@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>Butir 3.1.2 : MAHASISWA DAN LULUSAN</title>
+<title>Butir 6.2.2 : DANA UNTUK KEGIATAN PENELITIAN</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Butir 3.1.2 : MAHASISWA DAN LULUSAN
+								<i class="fa fa-edit"></i>Butir 6.2.2 : DANA UNTUK KEGIATAN PENELITIAN
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -100,123 +100,70 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="#">
-											<button id="sample_editable_1_new" class="btn green">
-											Load 
-											</button>
-											</a>
+											
 										</div>
 									</div>
 								</div>
 							</div>
 							<div style="overflow-x:auto;">
-							<table class="table table-striped table-bordered table-hover" id="sample_1">
-							<thead>
-								<tr>
-									 <th rowspan="2">No</th>
-									 <th rowspan="2"></th>
-									 <th rowspan="2">Total Mahasiswa pada Fakultas**</th>
-									 <th colspan="11"><center>Jumlah Mahasiswa pada PS: *</center></th>
-								 </tr>
-								 <tr>
-								 <?php 
-								 	$no=1;
-								 	$num=4;
-								 	$num++;
-								 	foreach ($prodi as $p) {
-								 ?>
-								 	<th><center>PS- <?php echo $no++; ?> <br> <?php echo $p['jurusan'] ?></center></th>
-								 	<th>Aksi</th>
-								 <?php } ?>
-								 	<th>Total Mahasiswa</th>
-								 </tr>
-
-								 <tr align="center">
-								 	<td>(1)</td>
-								 	<td>(2)</td>
-								 	<td>(3)</td>
-								 	<td>(4)</td>
-								 	<td>(<?php echo $num; ?>)</td>
-								 </tr>
-							</thead>
-							<tbody>
-							<tr>
-							 	<td>1</td>
-							 	<td>Mhs. baru bukan transfer</td>
-							 	<?php 
-							 		foreach ($total1 as $t) {
-							 	 ?>
-							 	 <td><?php echo $t['total1'] ?></td>
-							 	 <?php } ?>
-							 	 <?php 
-							 	 	foreach ($data1 as $d) {
-							 	  ?>
-							 	 <td><?php echo $d['j_maba_reg_bkn_trf']?></td>
-							 	 <td class="center">
-									<a href="<?php echo base_url()."index.php/Apd_b312_excel/ubah/".$d['id'];?>" >Edit</a>
-								 </td>
-							 	 <?php } ?>
-							 	 <?php 
-							 		foreach ($total1 as $t) {
-							 	 ?>
-							 	 <td><?php echo $t['total1'] ?></td>
-
-							 	 <?php } ?>
-							 </tr>
-							 <tr>
-							 	<td>2</td>
-							 	<td>Mhs. baru transfer</td>
-							 	<?php 
-							 		foreach ($total2 as $t) {
-							 	 ?>
-							 	 <td><?php echo $t['total2'] ?></td>
-							 	 <?php } ?>
-							 	 <?php 
-							 	 	foreach ($data2 as $d) {
-							 	  ?>
-							 	 <td><?php echo $d['j_maba_trf']?></td>
-							 	 <td class="center">
-									<a href="<?php echo base_url()."index.php/Apd_b312_excel/ubah/".$d['id'];?>" >Edit</a>
-								 </td>
-							 	 <?php } ?>
-							 	 <?php 
-							 		foreach ($total2 as $t) {
-							 	 ?>
-							 	 <td><?php echo $t['total2'] ?></td>
-							 	 <?php } ?>
-							 </tr>
-							 <tr>
-							 	<td>3</td>
-							 	<td>Total mhs. regular (Student Body)</td>
-							 	<?php 
-							 		foreach ($total3 as $t) {
-							 	 ?>
-							 	 <td><?php echo $t['total3'] ?></td>
-							 	 <?php } ?>
-							 	 <?php 
-							 	 	foreach ($data3 as $d) {
-							 	  ?>
-							 	 <td><?php echo $d['j_tot_reg_bkn_trf']?></td>
-							 	 <td class="center">
-									<a href="<?php echo base_url()."index.php/Apd_b312_excel/ubah/".$d['id'];?>" >Edit</a>
-								 </td>
-							 	 <?php } ?>
-							 	 <?php 
-							 		foreach ($total3 as $t) {
-							 	 ?>
-							 	 <td><?php echo $t['total3'] ?></td>
-							 	 <?php } ?>
-							 </tr>
-							</tbody>
-							</table>
+							<form action="<?php echo base_url()."index.php/Apd_a622_excel/do_tambah"; ?>" method="POST">
+							<div class="container">
+								<div class="col-md-10">
+									<div class="row">
+										<div class="form-group">
+											<label>Id</label>
+											<?php 
+												$data=$this->Apd_a622_model->listing();
+												$id = count($data)+1;
+												
+											?>
+											<input type="text" class="form-control" name="id" value="<?php echo $id; ?>" readonly="">
+										
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Tahun</label>
+											<input type="text" class="form-control" name="tahun" >
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Judul Penelitian</label>
+											<input type="text" class="form-control" name="judul_penelitian" >
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Sumber dan Jenis Data</label>
+											<input type="text" class="form-control" name="sumber_dana">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Jumlah Dana</label>
+											<input type="text" class="form-control" name="jml_dana">
+										</div>
+									</div>	
+									</div>
+									
+								</div>
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_b312_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
-										Export To Excel 
+								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+							</div>
+							</form>
+
+							<div class="btn-group">
+								
+								<a href="<?php echo base_url()."index.php/Apd_a622_excel/";?>">
+									<button id="sample_editable_1_new" class="btn red">
+										Batal
 									</button>
 								</a>
+								
 							</div>
+							
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

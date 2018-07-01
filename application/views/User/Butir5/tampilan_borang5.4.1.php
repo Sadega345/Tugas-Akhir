@@ -130,7 +130,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['j_mhs_bimbingan'] ?></td>
 							 	<td><?php echo $d['rata2_pertemuan'] ?></td>
 							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Apd_a541_excel/ubah/".$d['Id'];?>" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Apd_a541_excel/ubah/".$d['id'];?>" >Edit</a>
 								</td>
 							 </tr>
 							 <?php } ?>	

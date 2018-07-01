@@ -52,6 +52,40 @@ public function index() {
 		// }
 	}
 
+ public function tambah(){
+ 	$this->model_squrity->getsqurity();
+ 	$this->load->view('User/Butir6/inputan_622.php');
+ }
+
+ public function do_tambah(){
+		$this->model_squrity->getsqurity();
+		
+		$id=$_POST['id'];
+		$tahun=$_POST['tahun'];
+		$judul_penelitian=$_POST['judul_penelitian'];
+
+		$sumber_dana=$_POST['sumber_dana'];
+		$jml_dana=$_POST['jml_dana'];
+		
+		$data_insert=array(
+			
+			'id'=>$id,
+			'tahun'=>$tahun,
+			'kd_prodi'=>'P001',
+			'judul_penelitian' => $judul_penelitian,
+			'sumber_dana' => $sumber_dana,
+			'jml_dana' => $jml_dana,
+
+		);
+		// print_r($data_insert);die();
+		$res=$this->Apd_a622_model->insert('dana_penelitian',$data_insert);
+		if ($res>=1) {
+			redirect('Apd_a622_excel');
+		}else {
+			alert('Gagal Insert');
+		}
+}
+
 public function export_excel(){
  // $data = array( 'title' => 'TABEL DATA BUTIR 6.2.2 : DANA UNTUK KEGIATAN PENELITIAN',
  // 'a622' => $this->apd_a622_model->listing());

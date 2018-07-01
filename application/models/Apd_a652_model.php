@@ -26,6 +26,11 @@ public function update($where="") {
 		return $res;
 	}
 
+	public function insert($tablename,$data){
+		$res=$this->db->insert($tablename,$data);
+		return $res;
+	}
+
 public function totmanual() {
  $data=$this->db->query('SELECT COUNT(IF(manual LIKE "v%",manual,NULL)) AS Tot_Manual FROM aksesbilitas_data WHERE kd_prodi="p001"');
  return $data->result_array();

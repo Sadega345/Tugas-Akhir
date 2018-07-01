@@ -51,6 +51,39 @@ public function index() {
 		// }
 	}
 
+	public function tambah(){
+	 	$this->model_squrity->getsqurity();
+	 	$this->load->view('User/Butir6/inputan_631.php');
+ 	}
+
+ public function do_tambah(){
+		$this->model_squrity->getsqurity();
+		
+		$id=$_POST['id'];
+		$r_kerja_dosen=$_POST['r_kerja_dosen'];
+		$jml_ruang=$_POST['jml_ruang'];
+
+		$jml_luas=$_POST['jml_luas'];
+		
+		$data_insert=array(
+			
+			'id'=>$id,
+			'r_kerja_dosen'=>$r_kerja_dosen,
+			'kd_prodi'=>'P001',
+			'jml_ruang' => $jml_ruang,
+			'jml_luas' => $jml_luas,
+			
+
+		);
+		// print_r($data_insert);die();
+		$res=$this->Apd_a631_model->insert('dt_ruang_dosen',$data_insert);
+		if ($res>=1) {
+			redirect('Apd_a631_excel');
+		}else {
+			alert('Gagal Insert');
+		}
+}
+
 
 public function export_excel(){
  // $data = array( 'title' => 'TABEL DATA BUTIR 6.3.1 : DATA RUANG KERJA DOSEN TETAP',

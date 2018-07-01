@@ -25,6 +25,11 @@ class Apd_a641_model extends CI_Model {
 		return $res;
 	}
 
+	public function insert($tablename,$data){
+		$res=$this->db->insert($tablename,$data);
+		return $res;
+	}
+
  public function totjudul() {
  $data=$this->db->query('SELECT SUM(jml_judul)AS Tot_judul FROM pustaka WHERE KD_PRODI="p001"');
  return $data->result_array();

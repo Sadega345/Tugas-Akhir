@@ -25,6 +25,11 @@ class Apd_a623_model extends CI_Model {
 		return $res;
 	}
 
+	public function insert($tablename,$data){
+		$res=$this->db->insert($tablename,$data);
+		return $res;
+	}
+
  public function totdana() {
  $data=$this->db->query('SELECT SUM(JUMLAH_DANA)AS Tot_Dana FROM dana_pengmas WHERE kd_prodi="p001"');
  return $data->result_array();

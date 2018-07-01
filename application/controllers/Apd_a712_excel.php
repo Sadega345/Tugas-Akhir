@@ -74,6 +74,48 @@ public function index() {
 		// }
 	}
 
+	public function tambah(){
+	 	$this->model_squrity->getsqurity();
+	 	$this->load->view('User/Butir7/inputan_712.php');
+	 }
+
+ public function do_tambah(){
+		$this->model_squrity->getsqurity();
+		
+		$id=$_POST['id'];
+		$judul=$_POST['judul'];
+		$nama_dosen=$_POST['nama_dosen'];
+
+		$publikasi=$_POST['publikasi'];
+		$thn_publikasi=$_POST['thn_publikasi'];
+
+		$lokal=$_POST['lokal'];
+		$nasional=$_POST['nasional'];
+
+		$internasional = $_POST['internasional'];
+		
+		$data_insert=array(
+			
+			'id'=>$id,
+			'judul'=>$judul,
+			'kd_prodi'=>'P001',
+			'nama_dosen' => $nama_dosen,
+			'publikasi' => $publikasi,
+			'thn_publikasi' => $thn_publikasi,
+			'lokal' => $lokal,
+			'nasional' => $nasional,
+			'internasional' => $internasional,
+
+		);
+		// print_r($data_insert);die();
+		$res=$this->Apd_a712_model->insert('artikel_ilmiah',$data_insert);
+		if ($res>=1) {
+			redirect('Apd_a712_excel');
+		}else {
+			alert('Gagal Insert');
+		}
+}
+
 public function export_excel(){
  $data=$this->Apd_a712_model->listing();
  $lokal=$this->Apd_a712_model->lokal();

@@ -42,12 +42,47 @@ public function index() {
 		$res=$this->Apd_a641_model->rubah('pustaka',$data_update,$where);
 		// print_r($data_update);die;
 		if ($res>=1) {
+			
 			redirect('Apd_a641_excel');
 		}
 		// else {
 		// 	alert("Gagal Update") ;
 		// }
 	}
+
+	public function tambah(){
+	 	$this->model_squrity->getsqurity();
+	 	$this->load->view('User/Butir6/inputan_641.php');
+ 	}
+
+ public function do_tambah(){
+		$this->model_squrity->getsqurity();
+		
+		$id=$_POST['id'];
+		$jenis_pustaka=$_POST['jenis_pustaka'];
+		$jml_judul=$_POST['jml_judul'];
+
+		$jml_copy=$_POST['jml_copy'];
+		
+		
+		$data_insert=array(
+			
+			'id'=>$id,
+			'jenis_pustaka'=>$jenis_pustaka,
+			'kd_prodi'=>'P001',
+			'jml_judul' => $jml_judul,
+			'jml_copy' => $jml_copy,
+			
+
+		);
+		// print_r($data_insert);die();
+		$res=$this->Apd_a641_model->insert('pustaka',$data_insert);
+		if ($res>=1) {
+			redirect('Apd_a641_excel');
+		}else {
+			alert('Gagal Insert');
+		}
+}
 
 public function export_excel(){
  // $data = array( 'title' => 'TABEL DATA BUTIR 6.4.1 : Pustaka ',
