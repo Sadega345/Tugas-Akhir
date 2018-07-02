@@ -3,16 +3,19 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 //defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Model_login extends CI_model {
-	var $table = "users";
-	public function _construct(){
-		parent::_construct();
-		$this->load->database();
-	}
+	// var $table = "users";
+	// public function _construct(){
+	// 	parent::_construct();
+	// 	$this->load->database();
+	// }
 
-	public function login($username, $password){
+	public function login($username="", $password=""){
 		$this->db->select('*');
 		$this->db->from('users');
 		$this->db->where(['username'=>$username, 'password'=>$password]); 
+		// $username=$this->db->query('SELECT username FROM users');
+		$cekprodi=$this->db->query('SELECT p.prodi FROM users u INNER JOIN prodi_tbl p 
+			ON p.kode_prodi=u.kd_prodi WHERE u.username="$username" ');
 		$return = $this->db->get('');
 		if($return->num_rows() > 0 ){
 			foreach ($return->result() as $row) {
@@ -21,17 +24,32 @@ class Model_login extends CI_model {
 					   			);
 					$this->session->set_userdata( $sess );
 					redirect('Admin');
-				}else if($row->username=="d3" ){
-					$sess = array('username' => $row->username,
-					   			);
-					$this->session->set_userdata( $sess );
-					redirect('User');
 				}
+				// else if($row->username=="d3" ){
+				// 	$sess = array('username' => $row->username,
+				// 	   			);
+				// 	$this->session->set_userdata( $sess );
+				// 	redirect('User');
+				// }
 				else if($row->username=="s1" ){
 					$sess = array('username' => $row->username,
 					   			);
 					$this->session->set_userdata( $sess );
 					redirect('Users');
+				}
+				else if ($username == $row->username) {
+						if($cekprodi = "d3"){
+							$sess = array('username' => $username,
+										  'prodi' => $cekprodi
+					   			);
+							$this->session->set_userdata( $sess );
+							redirect('User');
+				       }else if($cekprodi = "s1"){
+				       		$sess = array('username' => $username,
+					   			);
+							$this->session->set_userdata( $sess );
+				             redirect("Users");
+				       }
 				}
 				
 			}
