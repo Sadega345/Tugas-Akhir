@@ -67,4 +67,43 @@ public function export_excel(){
  $this->load->view('User/Butir4/tampilan_borang4.5.2_excel.php',array('data'=>$data));
  }
 
+  public function tambah(){
+		$this->load->view('User/Butir4/inputan_borang4.5.2.php');
+  }
+
+	public function do_tambah(){
+		$this->model_squrity->getsqurity();
+		$id_dosen=$_POST['id_dosen'];
+		$jenjang_pend=$_POST['jenjang_pend'];
+		$bid_studi=$_POST['bid_studi'];
+		$perguruan_tinggi=$_POST['perguruan_tinggi'];
+		$negara=$_POST['negara'];
+		$thn_mulai_std=$_POST['thn_mulai_std'];
+		$data_insert=array(
+			'id_dosen' => $id_dosen,
+			'jenjang_pend' => $jenjang_pend,
+			'bid_studi'=>$bid_studi,
+			'perguruan_tinggi'=>$perguruan_tinggi,
+			'negara' => $negara,
+			'thn_mulai_std' => $thn_mulai_std
+		);
+		$res=$this->Apd_a452_model->insert('pkdt_tgs_belajar',$data_insert);
+		if ($res>=1) {
+			redirect('Apd_a452_excel');
+		}else {
+			alert('Gagal Insert');
+		}
+	}
+
+	public function do_hapus($id){
+		$this->model_squrity->getsqurity();
+		$where=array('id'=>$id);
+		$res=$this->Apd_a452_model->Delete('pkdt_tgs_belajar',$where);
+		if($res>=1){
+			redirect('Apd_a452_excel');
+		}else {
+			alert('Gagal Hapus');
+		}
+	}
+
 }

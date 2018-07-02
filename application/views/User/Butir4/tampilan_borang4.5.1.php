@@ -100,9 +100,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="#">
+											<a href="<?php echo base_url()."index.php/Apd_a451_excel/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah
+											Tambah 
 											</button>
 											</a>
 										</div>
@@ -133,6 +133,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['pelaksanaan']; ?></td>
 							 	<td class="center">
 									<a href="<?php echo base_url()."index.php/Apd_a451_excel/ubah/".$d['id'];?>">Edit</a>
+									||
+								 		<a href="<?php echo base_url()."index.php/Apd_a451_excel/do_hapus/".$d['id'];?>" id="alerthapus"">Hapus</a>
 								</td>
 							 </tr>
 							 <input type="hidden" name="id" value="<?php echo $d['id']; ?>">

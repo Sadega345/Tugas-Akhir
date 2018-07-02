@@ -10,7 +10,7 @@ header("Pragma: no-cache");
 header("Expires: 0");
 
 ?>
-<p><center>TABEL DATA Pengisi Borang</center></p>
+<p><center>IDENTITAS PENGISI BORANG PROGRAM STUDI</center></p>
 <table border="1" width="50%">
 		<thead>
 			 <tr>

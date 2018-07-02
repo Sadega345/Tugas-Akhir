@@ -61,6 +61,36 @@ public function index() {
 		// }
 	}
 
+	public function tambah(){
+		$this->load->view('User/Butir4/inputan_borang4.5.5.php');
+  }
+
+	public function do_tambah(){
+		$this->model_squrity->getsqurity();
+		$id_dosen=$_POST['id_dosen'];
+		$nm_organisasi=$_POST['nm_organisasi'];
+		$thn_awal=$_POST['thn_awal'];
+		$thn_akhir=$_POST['thn_akhir'];
+		$internasional=$_POST['internasional'];
+		$nasional=$_POST['nasional'];
+		$lokal=$_POST['lokal'];
+		$data_insert=array(
+			'id_dosen' => $id_dosen,
+			'nm_organisasi' => $nm_organisasi,
+			'thn_awal'=>$thn_awal,
+			'thn_akhir'=>$thn_akhir,
+			'internasional' => $internasional,
+			'nasional' => $nasional,
+			'lokal' => $lokal,
+		);
+		$res=$this->Apd_a452_model->insert('keikutsertaan_org',$data_insert);
+		if ($res>=1) {
+			redirect('Apd_a455_excel');
+		}else {
+			alert('Gagal Insert');
+		}
+	}
+
 public function export_excel(){
  // $data = array( 'title' => ' TABEL DATA BUTIR 4.5.5 : KEIKUTSERTAAN DOSEN TETAP DALAM ORGANISASI KEILMUAN/PROFESI',
  // 'a455' => $this->apd_a455_model->listing());

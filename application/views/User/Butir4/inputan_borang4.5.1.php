@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>Butir 4.3.2 : DOSEN TETAP YANG BIDANG KEAHLIANNYA DI LUAR PS</title>
+<title>Butir 4.5.1 : KEGIATAN TENAGA AHLI/PAKAR (TIDAK TERMASUK DOSEN TETAP)</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Butir 4.3.2 : DOSEN TETAP YANG BIDANG KEAHLIANNYA DI LUAR PS
+								<i class="fa fa-edit"></i>Butir 4.5.1 : KEGIATAN TENAGA AHLI/PAKAR (TIDAK TERMASUK DOSEN TETAP)
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -100,94 +100,57 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="#">
-											<button id="sample_editable_1_new" class="btn green">
-											Load 
-											</button>
-											</a>
+											
 										</div>
 									</div>
 								</div>
-							</div >
+							</div>
 							<div style="overflow-x:auto;">
-							<table class="table table-striped table-bordered table-hover" id="sample_1">
-							<thead>
-								<tr>
-									 <th rowspan="2">No</th>
-									 <th rowspan="2">Nama Dosen Tetap</th>
-									 <th rowspan="2">NIDN (Nomor Induk Dosen Nasional)</th>
-									 <th rowspan="2">Tanggal Lahir<br> (dd/mm/yyyy)</th>
-									 <th rowspan="2">Jabatan Akademik</th>
-									 <th rowspan="2">Sertifikasi**<br>(Ya/Tidak)</th>
-									 <th colspan="3"><center>S1</center></th>
-									 <th colspan="3"><center>S2</center></th>
-									 <th colspan="3"><center>S3</center></th>
-									 <th colspan="3">Keahlian Praktis***</th>
-									 <th rowspan="2"><center>Aksi</center></th>
-								 </tr>
-								 <tr>
-								 	<th>PT Asal</th>
-								 	<th>Bidang Keahlian</th>
-								 	<th>Gelar</th>
-								 	<th>PT Asal</th>
-								 	<th>Bidang Keahlian</th>
-								 	<th>Gelar</th>
-								 	<th>PT Asal</th>
-								 	<th>Bidang Keahlian</th>
-								 	<th>Gelar</th>
-								 	<th>Gelar</th>
-								 	<th>Pengakuan</th>
-								 	<th>Bidang Keahlian</th>
-								 	
-								 </tr>
-							</thead>
-							<tbody>
-							
-							<tr>
-								<?php 
-									$no=1; 
-									foreach ($data as $d ) { 
-								?>
-								 	<td><?php echo $no++; ?></td>
-								 	<td><?php echo $d['nama_dosen']; ?></td>
-								 	<td><?php echo $d['nidn']; ?></td>
-								 	<td><?php echo $d['tgl_lhr']; ?></td>
-								 	<td><?php echo $d['NM_JAB_AKD']; ?></td>
-								 	<td><?php echo $d['sertifikasi']; ?></td>
-								 	<td><?php echo $d['GELAR_S1']; ?></td>
-								 	<td><?php echo $d['ASAL_PT_S1']; ?></td>
-								 	<td><?php echo $d['BID_KEAHLIAN_S1']; ?></td>
-								 	<td><?php echo $d['GELAR_S2']; ?></td>
-								 	<td><?php echo $d['ASAL_PT_S2']; ?></td>
-								 	<td><?php echo $d['BID_KEAHLIAN_S2']; ?></td>
-								 	<td><?php echo $d['GELAR_S3']; ?></td>
-								 	<td><?php echo $d['ASAL_PT_S3']; ?></td>
-								 	<td><?php echo $d['BID_KEAHLIAN_S3']; ?></td>
-								 	<td><?php echo $d['GELAR']; ?></td>
-								 	<td><?php echo $d['PENGAKUAN']; ?></td>
-								 	<td><?php echo $d['BID_KEAHLIAN']; ?></td>
-								 	<td class="center">
-										<a href="<?php echo base_url()."index.php/Apd_a432_excel/ubah/".$d['nidn'];?>" >Edit</a>
-									</td>
-								 </tr>
-								 <?php } ?>
-							</tbody>
-							</table>
+
+							<form action="<?php echo base_url()."index.php/Apd_a451_excel/do_tambah"; ?>" method="POST">
+							<div class="container">
+								<div class="col-md-10">
+									<div class="row">
+										<div class="form-group">
+											<label>Nama Tenaga Ahli/Pakar</label>
+											<input type="text" class="form-control" name="nama_pakar">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Instansi/Jabatan</label>
+											<input type="text" class="form-control" name="instansi">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Nama dan Judul Kegiatan</label>
+											<input type="text" class="form-control" name="judul_keg">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Tahun Pelaksanaan</label>
+											<input type="text" class="form-control" name="pelaksanaan">
+										</div>
+									</div>
+								</div>
 							</div>
-							<!-- <div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a432_excel/ubah";?>">
-									<button id="sample_editable_1_new" class="btn green">
-										Ubah 
-									</button>
-								</a>
-							</div> -->
+							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a432_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn blue">
-										Export To Excel 
+								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+							</div>
+							</form>
+							
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Apd_a451_excel";?>">
+									<button id="sample_editable_1_new" class="btn red">
+										Batal
 									</button>
 								</a>
 							</div>
+						
+							
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

@@ -89,6 +89,34 @@ public function index() {
 		// }
 	}
 
+	public function tambah(){
+		$this->load->view('User/Butir4/inputan_borang4.6.1.php');
+  }
+
+	public function do_tambah(){
+		$this->model_squrity->getsqurity();
+		$id_dosen=$_POST['id_dosen'];
+		$jenjang_pend=$_POST['jenjang_pend'];
+		$bid_studi=$_POST['bid_studi'];
+		$perguruan_tinggi=$_POST['perguruan_tinggi'];
+		$negara=$_POST['negara'];
+		$thn_mulai_std=$_POST['thn_mulai_std'];
+		$data_insert=array(
+			'id_dosen' => $id_dosen,
+			'jenjang_pend' => $jenjang_pend,
+			'bid_studi'=>$bid_studi,
+			'perguruan_tinggi'=>$perguruan_tinggi,
+			'negara' => $negara,
+			'thn_mulai_std' => $thn_mulai_std
+		);
+		$res=$this->Apd_a461_model->insert('pkdt_tgs_belajar',$data_insert);
+		if ($res>=1) {
+			redirect('Apd_a461_excel');
+		}else {
+			alert('Gagal Insert');
+		}
+	}
+
 public function export_excel(){
  // $data = array( 'title' => ' TABEL DATA BUTIR 4.6.1 : STATISTIK TENAGA KEPENDIDIKAN',
  // 'a461' => $this->apd_a461_model->listing());

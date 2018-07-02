@@ -62,12 +62,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <body class="page-header-fixed page-quick-sidebar-over-content">
 	<!-- BEGIN HEADER -->
 		<?php 
-			$this->load->view('Users/header_Users.php');
+			$this->load->view('User/header_User.php');
 		?>
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('Users/sidebar_Users.php');
+			$this->load->view('User/sidebar_User.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 
@@ -100,7 +100,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="<?php echo base_url()."index.php/Apd_a453_excel/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
 											Tambah
 											</button>
@@ -140,6 +140,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['sbg_peserta']; ?></td>
 							 	<td class="center">
 									<a href="<?php echo base_url()."index.php/Apd_a453_excel/ubah/".$d['tahun'];?>" >Edit</a>
+									||
+								 		<a href="<?php echo base_url()."index.php/Apd_a453_excel/do_hapus/".$d['id'];?>" id="alerthapus"">Hapus</a>
 								</td>
 							 </tr>
 							 <?php } ?>

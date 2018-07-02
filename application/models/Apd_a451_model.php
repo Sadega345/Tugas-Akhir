@@ -23,6 +23,17 @@ class Apd_a451_model extends CI_Model {
  public function rubah($tablename,$data,$where){
 		$res=$this->db->update($tablename,$data,$where);
 		return $res;
-	}
+}
+
+public function insert($tablename,$data){
+	$res=$this->db->insert($tablename,$data);
+	return $res;
+}
+
+public function delete($tablename,$where){
+	$res=$this->db->delete($tablename,$where);
+	return $res;
+}
+
 
 }

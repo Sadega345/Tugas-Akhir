@@ -102,7 +102,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="btn-group">
 											<a href="#">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah 
+											Load 
 											</button>
 											</a>
 										</div>

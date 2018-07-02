@@ -106,6 +106,13 @@ License: You must have a valid license purchased only from themeforest(the above
 											</button>
 											</a>
 										</div>
+										<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Pengisi_excel/export_excel";?>">
+									<button id="sample_editable_1_new" class="btn blue">
+											Export ke Excel 
+									</button>
+								</a>
+							</div>
 									</div>
 								</div>
 							</div>
@@ -141,13 +148,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								<?php } ?>
 							</tbody>
 							</table>
-							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Pengisi_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn blue">
-											Export ke Excel 
-									</button>
-								</a>
-							</div>
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

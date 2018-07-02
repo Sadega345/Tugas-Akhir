@@ -119,6 +119,20 @@ FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen WHERE d.k
  	$data=$this->db->query('SELECT AVG(A.SKS_PSS+a.SKS_PSL_PTS+a.SKS_PTL+a.SKS_PENELITIAN+a.sks_pp_mas+a.sks_man_pts+a.sks_man_ptl)AS rata FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen WHERE d.kd_prodi="p001" AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
  	return $data->result_array();
  }
+ public function insert($tablename,$data){
+	$res=$this->db->insert($tablename,$data);
+	return $res;
+}
+
+public function getdosen(){
+	$data=$this->db->query('select id_dosen,nama_dosen from dosen_tbl where sts_ahli="YA"');
+	return $data->result_array();
+}
+
+public function delete($tablename,$where){
+	$res=$this->db->delete($tablename,$where);
+	return $res;
+}
 
 
 

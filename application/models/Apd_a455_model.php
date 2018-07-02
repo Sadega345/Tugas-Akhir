@@ -27,4 +27,14 @@ FROM keikutsertaan_org k INNER JOIN dosen_tbl d ON d.id_dosen=k.id_dosen '.$wher
 		return $res;
 	}
 
+	public function getdosen(){
+		$data=$this->db->query('select id_dosen,nama_dosen from dosen_tbl where kd_jns_dosen=1;');
+		return $data->result_array();
+	}
+
+	public function insert($tablename,$data){
+		$res=$this->db->insert($tablename,$data);
+		return $res;
+	}
+
 }

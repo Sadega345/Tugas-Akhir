@@ -20,9 +20,9 @@ $jumlah2=$this->Apd_a434_model->hitung2();
  																'jumlah2'=>$jumlah2));
  }
 
- public function ubah($kode_mk){
+ public function ubah($id){
  	$this->model_squrity->getsqurity();
-		$res=$this->Apd_a434_model->update("where kode_mk='$kode_mk'");
+		$res=$this->Apd_a434_model->update("where id='$id'");
 		$data=array(
 			"nama_dosen"=>$res[0]['nama_dosen'],
 			"bid_keahlian"=>$res[0]['bid_keahlian'],
@@ -73,5 +73,45 @@ public function export_excel(){
  																	  'jumlah'=>$jumlah,
  																	  'jumlah2'=>$jumlah2));
  }
+ public function tambah(){
+		$this->load->view('User/Butir4/inputan_borang4.3.4.php');
+ }
+
+ 	public function do_tambah(){
+		$this->model_squrity->getsqurity();
+		$id_dosen=$_POST['id_dosen'];
+		$bid_keahlian=$_POST['bid_keahlian'];
+		$kode_mk=$_POST['kode_mk'];
+		$nama_mk=$_POST['nama_mk'];
+		$jum_kls=$_POST['jum_kls'];
+		$jp_rencana=$_POST['jp_rencana'];
+		$jp_dilaksanakan=$_POST['jp_dilaksanakan'];
+		$data_insert=array(
+			'id_dosen' => $id_dosen,
+			'bid_keahlian' => $bid_keahlian,
+			'kode_mk'=>$kode_mk,
+			'nama_mk'=>$nama_mk,
+			'jum_kls'=>$jum_kls,
+			'jp_rencana' => $jp_rencana,
+			'jp_dilaksanakan' => $jp_dilaksanakan
+		);
+		// print_r($data_insert);die();
+		$res=$this->Apd_a434_model->insert('aktivitas_mengajar',$data_insert);
+		if ($res>=1) {
+			redirect('Apd_a434_excel');
+		}else {
+			alert('Gagal Insert');
+		}
+	}
+public function do_hapus($id){
+		$this->model_squrity->getsqurity();
+		$where=array('id'=>$id);
+		$res=$this->Apd_a434_model->Delete('aktivitas_mengajar',$where);
+		if($res>=1){
+			redirect('Apd_a434_excel');
+		}else {
+			alert('Gagal Hapus');
+		}
+	}
 
 }

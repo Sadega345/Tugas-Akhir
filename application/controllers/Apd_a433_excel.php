@@ -139,4 +139,47 @@ public function export_excel(){
 	 																'ratajumsks'=>$ratajum));
  }
 
+ public function tambah(){
+		$this->load->view('User/Butir4/inputan_borang4.3.3.php');
+ }
+
+	public function do_tambah(){
+		$this->model_squrity->getsqurity();
+		//$id=$_POST['id'];
+		$id_dosen=$_POST['id_dosen'];
+		$sks_pss=$_POST['sks_pss'];
+		$sks_psl_pts=$_POST['sks_psl_pts'];
+		$sks_ptl=$_POST['sks_ptl'];
+		$sks_penelitian=$_POST['sks_penelitian'];
+		$sks_pp_mas=$_POST['sks_pp_mas'];
+		$sks_man_pts=$_POST['sks_man_pts'];
+		$sks_man_ptl=$_POST['sks_man_ptl'];
+		$data_insert=array(
+			'id_dosen' => $id_dosen,
+			'sks_pss' => $sks_pss,
+			'sks_psl_pts'=>$sks_psl_pts,
+			'sks_ptl'=>$sks_ptl,
+			'sks_penelitian' => $sks_penelitian,
+			'sks_pp_mas' => $sks_pp_mas,
+			'sks_man_pts' => $sks_man_pts,
+			'sks_man_ptl' => $sks_man_ptl
+		);
+		// print_r($data_insert);die();
+		$res=$this->Apd_a433_model->insert('aktivitas_dosen',$data_insert);
+		if ($res>=1) {
+			redirect('Apd_a433_excel');
+		}else {
+			alert('Gagal Insert');
+		}
+	}
+public function do_hapus($id){
+		$this->model_squrity->getsqurity();
+		$where=array('id'=>$id);
+		$res=$this->Apd_a433_model->Delete('aktivitas_dosen',$where);
+		if($res>=1){
+			redirect('Apd_a433_excel');
+		}else {
+			alert('Gagal Hapus');
+		}
+	}
 }

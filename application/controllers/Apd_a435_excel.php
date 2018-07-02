@@ -74,4 +74,45 @@ public function export_excel(){
  
  }
 
+  public function tambah(){
+		$this->load->view('User/Butir4/inputan_borang4.3.5.php');
+ }
+
+ 	public function do_tambah(){
+		$this->model_squrity->getsqurity();
+		$id_dosen=$_POST['id_dosen'];
+		$bid_keahlian=$_POST['bid_keahlian'];
+		$kode_mk=$_POST['kode_mk'];
+		$nama_mk=$_POST['nama_mk'];
+		$jml_sks=$_POST['jml_sks'];
+		$jp_rencana=$_POST['jp_rencana'];
+		$jp_dilaksanakan=$_POST['jp_dilaksanakan'];
+		$data_insert=array(
+			'id_dosen' => $id_dosen,
+			'bid_keahlian' => $bid_keahlian,
+			'kode_mk'=>$kode_mk,
+			'nama_mk'=>$nama_mk,
+			'jml_sks'=>$jml_sks,
+			'jp_rencana' => $jp_rencana,
+			'jp_dilaksanakan' => $jp_dilaksanakan
+		);
+		// print_r($data_insert);die();
+		$res=$this->Apd_a435_model->insert('aktivitas_mengajar',$data_insert);
+		if ($res>=1) {
+			redirect('Apd_a435_excel');
+		}else {
+			alert('Gagal Insert');
+		}
+	}
+public function do_hapus($id){
+		$this->model_squrity->getsqurity();
+		$where=array('id'=>$id);
+		$res=$this->Apd_a435_model->Delete('aktivitas_mengajar',$where);
+		if($res>=1){
+			redirect('Apd_a435_excel');
+		}else {
+			alert('Gagal Hapus');
+		}
+	}
+
 }
