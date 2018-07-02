@@ -24,7 +24,7 @@
 					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 					<img alt="" class="img-circle" src="<?php echo base_url()."assets/";?>admin/layout/img/profile_icon.png"/>
 					<span class="username username-hide-on-mobile">
-					User </span>
+					<?php echo $this->session->userdata('prodi');  ?> </span>
 					<i class="fa fa-angle-down"></i>
 					</a>
 					<ul class="dropdown-menu dropdown-menu-default">

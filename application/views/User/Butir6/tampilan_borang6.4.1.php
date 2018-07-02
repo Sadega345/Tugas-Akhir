@@ -108,6 +108,17 @@ License: You must have a valid license purchased only from themeforest(the above
 										</div>
 									</div>
 								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="btn-group">
+											<a href="<?php echo base_url()."index.php/Apd_a641_excel/load";?>">
+											<button id="sample_editable_1_new" class="btn green">
+											Load <i class="fa fa-plus"></i>
+											</button>
+											</a>
+										</div>
+									</div>
+								</div>
 							</div>
 							
 							<table class="table table-striped table-bordered table-hover" id="sample_1">

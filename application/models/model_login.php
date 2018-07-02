@@ -31,12 +31,12 @@ class Model_login extends CI_model {
 				// 	$this->session->set_userdata( $sess );
 				// 	redirect('User');
 				// }
-				else if($row->username=="s1" ){
-					$sess = array('username' => $row->username,
-					   			);
-					$this->session->set_userdata( $sess );
-					redirect('Users');
-				}
+				// else if($row->username=="s1" ){
+				// 	$sess = array('username' => $row->username,
+				// 	   			);
+				// 	$this->session->set_userdata( $sess );
+				// 	redirect('Users');
+				// }
 				else if ($username == $row->username) {
 						if($cekprodi = "d3"){
 							$sess = array('username' => $username,

@@ -20,19 +20,27 @@ class CrudFakultas extends CI_Controller {
 
 	public function do_tambah(){
 		$this->model_squrity->getsqurity();
-		$kode=$_POST['kode'];
-		$fakultas=$_POST['fakultas'];
-		$this->form_validation->set_rules('fakultas', 'Nama Fakultas', 'required');
-		$data_insert=array(
+		
+		
+		$this->form_validation->set_rules('fakultas', 'Nama Fakultas', 'required|min_length[2]|alpha');
+		if($this->form_validation->run()){
+			$kode=$_POST['kode'];
+			$fakultas=$_POST['fakultas'];
+			$data_insert=array(
 			'kode_fakultas'=>$kode,
 			'nama_fakultas'=>$fakultas
-		);
-		$res=$this->model_fakultas->insert('fakultas_tbl',$data_insert);
-		if ($res>=1) {
-			redirect('Admin/table');
-		}else {
-			alert('Gagal Insert');
+			);
+			$res=$this->model_fakultas->insert('fakultas_tbl',$data_insert);
+			if ($res>=1) {
+				redirect('Admin/table');
+			}else {
+				$this->session->set_flashdata('info','Inputan Salah ');
+			}
+		}else{
+			redirect('CrudFakultas/tambah');
+			$this->session->set_flashdata('info','Inputan Salah ');
 		}
+		
 	}
 
 	public function do_hapus($kode){

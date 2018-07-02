@@ -3,15 +3,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Apd_a641_model extends CI_Model {
 
+// private $db2 ;
+
 // public function __construct()
-//  {
-//  parent::__construct();
-//  $this->load->database();
-//  }
+// {
+//  	parent::__construct();
+// 	$this->db2 = $this->load->database('db_dosen', TRUE);
+// }
+
+ // Kalau si db 2 di aktifin database yg default nggk akan jalan,klw db 2 di matiin db yg default jalan
 
 // Listing
  public function listing1() {
  $pustaka1=$this->db->query('SELECT jml_judul,jml_copy,id,jenis_pustaka FROM pustaka WHERE kd_prodi="p001"');
+ return $pustaka1->result_array();
+ }
+
+ public function loadlisting1() {
+ 	
+ $pustaka1= $this->db2->query('SELECT jml_judul,jml_copy,id,jenis_pustaka FROM pustaka WHERE kd_prodi="p001"');
+
  return $pustaka1->result_array();
  }
 
@@ -37,6 +48,18 @@ class Apd_a641_model extends CI_Model {
 
  public function totkopi() {
  $data=$this->db->query('SELECT SUM(jml_copy)AS Tot_Kopi FROM pustaka WHERE KD_PRODI="p001"');
+ return $data->result_array();
+ }
+
+ public function loadtotjudul() {
+ // $db2 = $this->load->database('db_dosen',TRUE);
+ $data=$this->db2->query('SELECT SUM(jml_judul)AS Tot_judul FROM pustaka WHERE KD_PRODI="p001"');
+ return $data->result_array();
+ }
+
+ public function loadtotkopi() {
+ // $db2 = $this->load->database('db_dosen',TRUE);
+ $data=$this->db2->query('SELECT SUM(jml_copy)AS Tot_Kopi FROM pustaka WHERE KD_PRODI="p001"');
  return $data->result_array();
  }
 

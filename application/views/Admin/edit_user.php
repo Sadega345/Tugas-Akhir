@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Form Edit User</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -119,12 +120,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<input type="text" class="form-control" name="username" value="<?php echo $username; ?>">
 										</div>
 									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Password</label>
-											<input type="text" class="form-control" name="password" value="<?php echo $password; ?>">
-										</div>
-									</div>
+									
 									<!-- <div class="row">
 										<div class="form-group">
 											<label>Level</label>
@@ -132,12 +128,10 @@ License: You must have a valid license purchased only from themeforest(the above
 										</div>
 									</div> -->
 									<div class="row">
-										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
-										<!-- <a href="<?php echo base_url()."index.php/CrudRole";?>">
-											<button id="sample_editable_1_new" class="btn red">
-												Batal 
-											</button>
-										</a> -->
+										<!-- <button type="submit" class="btn btn-primary" name="simpan">Simpan</button> -->
+										<button type="submit" class="btn btn-primary">
+											Simpan 
+										</button>
 									</div>
 									
 									<!-- <form action="<?php echo base_url()."index.php/CrudRole"; ?>" method="POST">

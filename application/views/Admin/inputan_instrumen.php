@@ -147,18 +147,19 @@ License: You must have a valid license purchased only from themeforest(the above
 
 									<div class="row">
 										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
-										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudInstrumen";?>">
+										</form>
+										
+											<form action="<?php echo base_url()."index.php/CrudInstrumen/"; ?>" method="POST">
 												<button id="sample_editable_1_new" class="btn red">
 													Batal 
 												</button>
-											</a>
-										</div>
+											</form>
+										
 									</div>
 
 								</div>
 							</div>
-							</form>
+							
 							
 						</div>
 					</div>
@@ -239,7 +240,7 @@ Demo.init(); // init demo features
 <script type="text/javascript">
 $('#instrumen').bind('keyup blur',function(){ 
     var node = $(this);
-    node.val(node.val().replace(/[^a-zA-Z]/g,'') ); }
+    node.val(node.val().replace(/^[0-9]+$/g,'') ); }
 );
 </script>
 <!-- END JAVASCRIPTS -->

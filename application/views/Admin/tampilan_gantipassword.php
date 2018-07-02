@@ -250,7 +250,7 @@ $('#myform').submit(function(event){
     	$("#alert_tidakcocok").html("Password lama salah <br>");
     }
     if (node2 != node ) {
-    	$("#alert_retype").html("data retype password yg anda masukan berbeda<br>");	
+    	$("#alert_retype").html("data retype password yg anda masukan berbeda<br>");
     }else{
      	$(this).unbind('submit').submit(); // continue the submit unbind preventDefault	
     }

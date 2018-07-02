@@ -31,8 +31,9 @@ class Login extends CI_Controller {
 			$u = $this->session->userdata('username');
 			echo $u;
 		}else{
-			$this->session->set_flashdata('info','Maaf Password atau Username yang anda masukan salah'); 
-			$this->index();
+			$this->session->set_flashdata('info','Maaf Password atau Username yang anda masukan salah');
+			// $this->index();
+			redirect('Login');
 		}
 	}	
 

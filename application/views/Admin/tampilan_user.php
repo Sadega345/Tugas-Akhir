@@ -130,10 +130,10 @@ License: You must have a valid license purchased only from themeforest(the above
 							<tr>
 								
 								<th>
-									 Id
+									 Kode Prodi
 								</th>
 								<th>
-									 Nama Role
+									 Nama User
 								</th>
 								<!-- <th>
 									 Password
@@ -153,15 +153,21 @@ License: You must have a valid license purchased only from themeforest(the above
 							?>
 							<tr class="odd gradeX">								
 								<td>
-									 <?php echo $d['r_id']; ?>
+									 <!-- <?php echo $d['r_id']; ?> -->
+									 
+									 <?php echo $d['kd_prodi']; ?>
 								</td>
 								<td>
-									<?php echo $d['nama_role']; ?>
+									<!-- <?php echo $d['nama_role']; ?> -->
+
+									<?php echo $d['username']; ?>
 								</td>
 								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudUser/edit_data/".$d['r_id'];?>">Edit</a> ||
+									<!-- <a href="<?php echo base_url()."index.php/CrudUser/edit_data/".$d['r_id'];?>">Edit</a> ||
          							<a href="<?php echo base_url()."index.php/CrudUser/do_hapus/".$d['r_id'];?>">Delete</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudRole/perm/".$d['r_id'];?>">Edit Role</a>
+         							<a href="<?php echo base_url()."index.php/CrudRole/perm/".$d['r_id'];?>">Edit Role</a> -->
+         							<a href="<?php echo base_url()."index.php/CrudUser/edit_data/".$d['id'];?>">Edit</a> ||
+         							<a href="<?php echo base_url()."index.php/CrudUser/do_hapus/".$d['id'];?>">Delete</a>
 								</td>
 							</tr>
 							<?php } ?>

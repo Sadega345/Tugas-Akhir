@@ -106,39 +106,35 @@ License: You must have a valid license purchased only from themeforest(the above
 									
 								</div>
 							</div>
+							<div style="overflow-x:auto;">
 							<form action="<?php echo base_url()."index.php/CrudUser/do_tambah"; ?>" method="POST">
 							<div class="container">
 								<div class="col-md-10">
 									<div class="row">
 										<div class="form-group">
 											<label>Id</label>
-											<input type="text" class="form-control" name="id">
+											<input type="text" class="form-control" name="id" value="<?php echo $id; ?>" readonly="">
 										</div>
 									</div>
 									<div class="row">
 										<div class="form-group">
 											<label>Username</label>
-											<input type="text" class="form-control" name="username">
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Password</label>
-											<input type="password" class="form-control" name="password">
+											<input type="text" class="form-control" name="username" id="username">
 										</div>
 									</div>
 									
-									<!-- <div class="row">
+									
+									<div class="row">
 										<div class="form-group">
-											<label>Level</label>
-											<select name="level" class="form-control">
-												<option disabled selected>Level</option>
+											<label>Kode Prodi</label>
+											<select name="kd_prodi" class="form-control">
+												<option disabled selected>Kode Prodi</option>
 												<?php foreach($data as $d) { ?>
-									                <option value="<?php echo $d['level'];?>"><?php echo $d['level'];?></option>
+									                <option value="<?php echo $d['kd_prodi'];?>"><?php echo $d['kd_prodi'];?></option>
 									            <?php } ?>
 											</select>
 										</div>
-									</div> --> 
+									</div>
 									<!-- <div class="caption">
 										<i class="fa fa-edit"></i>Permission
 									</div>
@@ -160,15 +156,23 @@ License: You must have a valid license purchased only from themeforest(the above
 											<input type="checkbox" class="form-control" value="akses3" name="butir[]">
 										</div>
 									</div> -->
-									<div class="row">
-										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
-										<form action="<?php echo base_url()."index.php/CrudRole"; ?>" method="POST">
-											<button type="submit" class="btn btn-danger" name="back">Kembali</button>
-										</form>
 									</div>
 								</div>
+								</div>
+								<div class="btn-group">
+									<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+								</div>
+								</form>
+								
+								<div class="btn-group">
+									<a href="<?php echo base_url()."index.php/CrudUser";?>">
+										<button id="sample_editable_1_new" class="btn red">
+											Batal
+										</button>
+									</a>
+								</div>
 							</div>
-							</form>
+							
 							
 						</div>
 					</div>
@@ -244,6 +248,13 @@ Demo.init(); // init demo features
    Index.initMiniCharts();
    Tasks.initDashboardWidget();
 });
+</script>
+
+<script type="text/javascript">
+$('#username').bind('keyup blur',function(){ 
+    var node = $(this);
+    node.val(node.val().replace(/^[0-9]+$/g,'') ); }
+);
 </script>
 <!-- END JAVASCRIPTS -->
 </body>

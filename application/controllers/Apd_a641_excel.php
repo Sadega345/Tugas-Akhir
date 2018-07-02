@@ -13,6 +13,16 @@ public function index() {
 																'totkopi'=>$totalkopi));
  }
 
+ public function load(){
+ 	
+ 	$pustaka1=$this->Apd_a641_model->loadlisting1();
+	$totaljudul=$this->Apd_a641_model->loadtotjudul();
+	$totalkopi=$this->Apd_a641_model->loadtotkopi();
+	$this->load->view('User/Butir6/tampilan_borang6.4.1.php',array('pustaka1'=>$pustaka1,
+																	'totjudul'=>$totaljudul,
+																'totkopi'=>$totalkopi));
+ }
+
  public function ubah($id){
  	$this->model_squrity->getsqurity();
 	$res=$this->Apd_a641_model->update("where id='$id'");

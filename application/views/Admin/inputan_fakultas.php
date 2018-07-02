@@ -141,14 +141,22 @@ License: You must have a valid license purchased only from themeforest(the above
 
 									<div class="row">
 										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
-										<form action="<?php echo base_url()."index.php/CrudFakultas"; ?>" method="POST">
+										</form>
+										<form action="<?php echo base_url()."index.php/CrudFakultas/"; ?>" method="POST">
 											<button type="submit" class="btn btn-danger" name="back">Kembali</button>
 										</form>
 									</div>
-
+									<div id="alert_retype" style="color:red">
+									</div><br>
+									<?php 
+										$info = $this->session->flashdata('info');
+										if (!empty($info)) {
+											echo $info;
+										}
+									 ?>
 								</div>
 							</div>
-							</form>
+							
 							
 						</div>
 					</div>
@@ -228,9 +236,11 @@ Demo.init(); // init demo features
 </script>
 <!-- Buat Validasi Nama Fakultas -->
 <script type="text/javascript">
-$('#nama_fakultas').bind('keyup blur',function(){ 
-    var node = $(this);
-    node.val(node.val().replace(/[^a-zA-Z]/g,'') ); }
+$('#fakultas').bind('keyup blur',
+	function(){ 
+	    var node = $(this);
+	    node.val(node.val().replace(/^[0-9]+$/g,'') );
+	}
 );
 </script>
 <!-- END JAVASCRIPTS -->
