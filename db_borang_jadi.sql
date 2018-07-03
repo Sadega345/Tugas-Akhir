@@ -1397,7 +1397,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 
-insert  into `users`(`id`,`username`,`password`,`kd_prodi`) values (1,'admin','teguh',NULL),(2,'d3','d3mi','p001'),(3,'s1','s1','p002'),(4,'s1','ti',NULL);
+insert  into `users`(`id`,`username`,`password`,`kd_prodi`) values (1,'admin','teguh',NULL),(2,'d3ManajemenInformatika','d3mi','p001'),(3,'s1TeknikInformatika','s1ti','p002'),(4,'s1','ti',NULL);
 
 UNLOCK TABLES;
 
