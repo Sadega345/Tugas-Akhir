@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>PROGRAM STUDI</title>
+<title>Identitas Program StudiI</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -62,12 +62,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <body class="page-header-fixed page-quick-sidebar-over-content">
 	<!-- BEGIN HEADER -->
 		<?php 
-			$this->load->view('Users/header_Users.php');
+			$this->load->view('User/header_user.php');
 		?>
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('Users/sidebar_Users.php');
+			$this->load->view('User/sidebar_user.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 
@@ -118,15 +118,13 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</div>
 							<div style="overflow-x:auto;">
-							<form action="<?php echo base_url()."index.php/Prodis_excel/ubah"; ?>" method="POST">
+							<form action="<?php echo base_url()."index.php/Prodi_excel/ubah"; ?>" method="POST">
 							<table id="sample_1">
 							<thead>
 								<tr>
 									<th></th>
 									<th></th>
 									<th></th>
-									<!-- <th>Kode sesuai kode PPDT</th> -->
-									<!-- <th>Keterangan</th> -->
 								<?php 
 									
 									foreach ($data as $d ) { 
@@ -260,7 +258,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</table>
 							</div>
 							<div class="btn-group">
-								<button id="sample_editable_1_new" class="btn blue">
+								<button id="sample_editable_1_new" class="btn green">
 									Edit 
 								</button>
 								
@@ -268,7 +266,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</form>
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Prodi_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
+									<button id="sample_editable_1_new" class="btn blue">
 										Export To excel
 									</button>
 								</a>

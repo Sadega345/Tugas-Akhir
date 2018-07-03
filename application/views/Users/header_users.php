@@ -3,9 +3,9 @@
 	<div class="page-header-inner">
 		<!-- BEGIN LOGO -->
 		<div class="page-logo">
-			<a href="index_2.html">
+			<!-- <a href="index_2.html">
 			<img src="<?php echo base_url()."assets/";?>admin/layout/img/logo.png" alt="logo" class="logo-default"/>
-			</a>
+			</a> -->
 			<div class="menu-toggler sidebar-toggler hide">
 				<!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
 			</div>

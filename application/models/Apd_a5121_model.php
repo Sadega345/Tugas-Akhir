@@ -11,7 +11,7 @@ class Apd_a5121_model extends CI_Model {
 
 // Listing
  public function listing() {
- $data=$this->db->query('SELECT smt,kode_mk,nama_mk,sks_kuliah,sks_praktek,sks_inti,sks_institusi,bobot_tgs,deskripsi,silabus,sap,penyelenggara FROM struktur_kurikulum WHERE kd_prodi="p001"');
+ $data=$this->db->query('SELECT smt,kode_mk,nama_mk,sks_kuliah,sks_praktek,sks_inti,sks_institusi,bobot_tgs,deskripsi,silabus,sap,penyelenggara FROM struktur_kurikulum WHERE jns_mk=1 and kd_prodi="p001"');
  return $data->result_array();
  }
 
