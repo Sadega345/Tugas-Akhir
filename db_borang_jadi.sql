@@ -300,9 +300,9 @@ CREATE TABLE `dosen_tbl` (
   KEY `FK_jns` (`kd_jns_dosen`),
   KEY `FK_jab` (`kd_jab`),
   KEY `FK_prodi_dosen` (`kd_prodi`),
-  CONSTRAINT `FK_dosen_tbl` FOREIGN KEY (`kd_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`),
   CONSTRAINT `FK_dosen_jab` FOREIGN KEY (`kd_jab`) REFERENCES `jab_akademik` (`kd_jab`),
-  CONSTRAINT `FK_dosen_jns` FOREIGN KEY (`kd_jns_dosen`) REFERENCES `jns_dosen` (`kd_jns`)
+  CONSTRAINT `FK_dosen_jns` FOREIGN KEY (`kd_jns_dosen`) REFERENCES `jns_dosen` (`kd_jns`),
+  CONSTRAINT `FK_dosen_tbl` FOREIGN KEY (`kd_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`)
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
 /*Data for the table `dosen_tbl` */
@@ -733,7 +733,7 @@ CREATE TABLE `jumlah_sks_ps` (
   KEY `FK_jumlah` (`jns_matkul`),
   CONSTRAINT `FK_jumlah` FOREIGN KEY (`jns_matkul`) REFERENCES `jns_matkul` (`kd_jns`),
   CONSTRAINT `FK_jumlah_sks_ps` FOREIGN KEY (`id_ps`) REFERENCES `prodi_tbl` (`kode_prodi`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 /*Data for the table `jumlah_sks_ps` */
 
