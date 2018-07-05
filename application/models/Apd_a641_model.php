@@ -3,13 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Apd_a641_model extends CI_Model {
 
-// private $db2 ;
+private $db2 ;
 
-// public function __construct()
-// {
-//  	parent::__construct();
-// 	$this->db2 = $this->load->database('db_dosen', TRUE);
-// }
+public function __construct()
+{
+ 	parent::__construct();
+	$this->db2 = $this->load->database('db_dosen',TRUE);
+}
 
  // Kalau si db 2 di aktifin database yg default nggk akan jalan,klw db 2 di matiin db yg default jalan
 

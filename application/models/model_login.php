@@ -23,31 +23,29 @@ class Model_login extends CI_model {
 					$sess = array('username' => $row->username,
 					   			);
 					$this->session->set_userdata( $sess );
+					
 					redirect('Admin');
 				}
-				// else if($row->username=="d3" ){
-				// 	$sess = array('username' => $row->username,
-				// 	   			);
-				// 	$this->session->set_userdata( $sess );
-				// 	redirect('User');
-				// }
-				// else if($row->username=="s1" ){
-				// 	$sess = array('username' => $row->username,
-				// 	   			);
-				// 	$this->session->set_userdata( $sess );
-				// 	redirect('Users');
-				// }
+
 				else if ($username == $row->username) {
 						if($cekprodi = "d3"){
-							$sess = array('username' => $username,
-										  'prodi' => $cekprodi
+							$sess = array(
+								'username' => $row->username,
+								'prodi' => $row->prodi,
+										  'kd_prodi' => $row->kd_prodi
 					   			);
 							$this->session->set_userdata( $sess );
+							// print_r($sess);die();
 							redirect('User');
-				       }else if($cekprodi = "s1"){
-				       		$sess = array('username' => $username,
+				       }
+				       else {
+				       		$sess = array(
+				       			'username' => $row->username,
+				       			'prodi' => $row->prodi,
+										  'kd_prodi' => $row->kd_prodi
 					   			);
 							$this->session->set_userdata( $sess );
+							// print_r($sess);die();
 				             redirect("Users");
 				       }
 				}
