@@ -1,5 +1,5 @@
 /*
-SQLyog Enterprise - MySQL GUI v7.02 
+SQLyog Enterprise - MySQL GUI v8.05 
 MySQL - 5.6.16 : Database - db_borangakreditasi
 *********************************************************************
 */
@@ -1390,6 +1390,7 @@ CREATE TABLE `users` (
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `kd_prodi` varchar(6) DEFAULT NULL,
+  `prodi` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
@@ -1397,7 +1398,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 
-insert  into `users`(`id`,`username`,`password`,`kd_prodi`) values (1,'admin','teguh',NULL),(2,'d3ManajemenInformatika','d3mi','p001'),(3,'s1TeknikInformatika','s1ti','p002'),(4,'s1','ti',NULL);
+insert  into `users`(`id`,`username`,`password`,`kd_prodi`,`prodi`) values (1,'admin','teguh',NULL,NULL),(2,'d3ManajemenInformatika','d3mi','P001','D3'),(3,'s1TeknikInformatika','s1ti','P002','S1'),(4,'s1','ti',NULL,NULL);
 
 UNLOCK TABLES;
 

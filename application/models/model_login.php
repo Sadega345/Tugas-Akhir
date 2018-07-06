@@ -14,8 +14,8 @@ class Model_login extends CI_model {
 		$this->db->from('users');
 		$this->db->where(['username'=>$username, 'password'=>$password]); 
 		// $username=$this->db->query('SELECT username FROM users');
-		$cekprodi=$this->db->query('SELECT p.prodi FROM users u INNER JOIN prodi_tbl p 
-			ON p.kode_prodi=u.kd_prodi WHERE u.username="$username" ');
+		// $cekprodi=$this->db->query('SELECT p.kode_prodi FROM users u INNER JOIN prodi_tbl p 
+		// 	ON p.kode_prodi=u.kd_prodi WHERE u.username="$username" ');
 		$return = $this->db->get('');
 		if($return->num_rows() > 0 ){
 			foreach ($return->result() as $row) {
@@ -28,10 +28,10 @@ class Model_login extends CI_model {
 				}
 
 				else if ($username == $row->username) {
-						if($cekprodi = "d3"){
+						if($row->prodi == "D3"){
 							$sess = array(
 								'username' => $row->username,
-								'prodi' => $row->prodi,
+								// 'prodi' => $row->prodi,
 										  'kd_prodi' => $row->kd_prodi
 					   			);
 							$this->session->set_userdata( $sess );
@@ -41,7 +41,7 @@ class Model_login extends CI_model {
 				       else {
 				       		$sess = array(
 				       			'username' => $row->username,
-				       			'prodi' => $row->prodi,
+				       			// 'prodi' => $row->prodi,
 										  'kd_prodi' => $row->kd_prodi
 					   			);
 							$this->session->set_userdata( $sess );
