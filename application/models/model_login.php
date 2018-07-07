@@ -14,8 +14,8 @@ class Model_login extends CI_model {
 		$this->db->from('users');
 		$this->db->where(['username'=>$username, 'password'=>$password]); 
 		// $username=$this->db->query('SELECT username FROM users');
-		$cekprodi=$this->db->query('SELECT p.prodi FROM users u INNER JOIN prodi_tbl p 
-			ON p.kode_prodi=u.kd_prodi WHERE u.username="$username" ');
+		// $cekprodi=$this->db->query('SELECT p.kode_prodi FROM users u INNER JOIN prodi_tbl p 
+		// 	ON p.kode_prodi=u.kd_prodi WHERE u.username="$username" ');
 		$return = $this->db->get('');
 		if($return->num_rows() > 0 ){
 			foreach ($return->result() as $row) {
@@ -23,31 +23,29 @@ class Model_login extends CI_model {
 					$sess = array('username' => $row->username,
 					   			);
 					$this->session->set_userdata( $sess );
+					
 					redirect('Admin');
 				}
-				// else if($row->username=="d3" ){
-				// 	$sess = array('username' => $row->username,
-				// 	   			);
-				// 	$this->session->set_userdata( $sess );
-				// 	redirect('User');
-				// }
-				// else if($row->username=="s1" ){
-				// 	$sess = array('username' => $row->username,
-				// 	   			);
-				// 	$this->session->set_userdata( $sess );
-				// 	redirect('Users');
-				// }
+
 				else if ($username == $row->username) {
-						if($cekprodi = "d3"){
-							$sess = array('username' => $username,
-										  'prodi' => $cekprodi
+						if($row->prodi == "D3"){
+							$sess = array(
+								'username' => $row->username,
+								// 'prodi' => $row->prodi,
+										  'kd_prodi' => $row->kd_prodi
 					   			);
 							$this->session->set_userdata( $sess );
+							// print_r($sess);die();
 							redirect('User');
-				       }else if($cekprodi = "s1"){
-				       		$sess = array('username' => $username,
+				       }
+				       else {
+				       		$sess = array(
+				       			'username' => $row->username,
+				       			// 'prodi' => $row->prodi,
+										  'kd_prodi' => $row->kd_prodi
 					   			);
 							$this->session->set_userdata( $sess );
+							// print_r($sess);die();
 				             redirect("Users");
 				       }
 				}
