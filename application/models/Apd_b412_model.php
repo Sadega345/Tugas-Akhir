@@ -11,8 +11,8 @@ public function __construct()
 
 // Listing
  public function getprodi(){
- $prodi=$this->db->query('select concat(p.jurusan," ",p.prodi) as prodi from prodi_tbl p inner join dosen_tbl d inner join pkdt_tgs_belajar pd
-on p.kode_prodi=d.kd_prodi and d.id_dosen=pd.id_dosen where p.kode_fakultas="F001"');
+ $prodi=$this->db->query('select distinct concat(p.jurusan," ",p.prodi) as prodi from prodi_tbl p inner join dosen_tbl d inner join pkdt_tgs_belajar pd
+on p.kode_prodi=d.kd_prodi and d.id_dosen=pd.id_dosen where p.kode_fakultas="F001" LIMIT 0,1');
  return $prodi->result_array();
  }
 
