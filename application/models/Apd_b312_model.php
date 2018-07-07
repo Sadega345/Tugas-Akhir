@@ -11,7 +11,8 @@ public function __construct()
 
 // Listing
  public function GetProdi() {
- $prodi=$this->db->query('Select jurusan from prodi_tbl where kode_prodi="p001"');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $prodi=$this->db->query('Select jurusan from prodi_tbl where kode_prodi='."'$kdprodi'");
  return $prodi->result_array();
  }
 
@@ -21,7 +22,8 @@ public function __construct()
  }
 
  public function listing1(){
- $data1=$this->db->query('select j_maba_reg_bkn_trf,id from data_mhs where id_prodi="p001" and tahun="2016"');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $data1=$this->db->query('select j_maba_reg_bkn_trf,id from data_mhs where id_prodi='."'$kdprodi'".' and tahun="2016"');
  return $data1->result_array();
  }
 
@@ -31,7 +33,8 @@ public function __construct()
  }
 
  public function listing2(){
- $data2=$this->db->query('select j_maba_trf,id from data_mhs where id_prodi="P001" and tahun="2016"');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $data2=$this->db->query('select j_maba_trf,id from data_mhs where id_prodi='."'$kdprodi'".' and tahun="2016"');
  return $data2->result_array();
  }
 
@@ -41,7 +44,8 @@ public function __construct()
  }
 
  public function listing3(){
- $data3=$this->db->query('select j_tot_reg_bkn_trf,id from data_mhs where id_prodi="P001" and tahun="2016"');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $data3=$this->db->query('select j_tot_reg_bkn_trf,id from data_mhs where id_prodi='."'$kdprodi'".' and tahun="2016"');
  return $data3->result_array();
  }
  public function update($where="") {

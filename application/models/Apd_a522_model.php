@@ -11,7 +11,8 @@ class Apd_a522_model extends CI_Model {
 
 // Listing
  public function listing() {
- $data=$this->db->query('SELECT teori,praktek,praktikum,pkl,id FROM waktu_prpbm WHERE kd_prodi="p001"');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('SELECT teori,praktek,praktikum,pkl,id FROM waktu_prpbm WHERE kd_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 

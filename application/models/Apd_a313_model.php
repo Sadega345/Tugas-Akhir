@@ -11,12 +11,26 @@ class Apd_a313_model extends CI_Model {
 
 // Listing
  public function D4() {
- $data= $this->db->query('SELECT ts_6,ts_5, ts_4,ts_3,ts_2,ts_1,ts,jml_ts_llsan FROM data_mhs_angkatan WHERE id_prodi="p001"ORDER BY tahun');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $data= $this->db->query('SELECT ts_6,ts_5, ts_4,ts_3,ts_2,ts_1,ts,jml_ts_llsan FROM data_mhs_angkatan WHERE id_prodi='."'$kdprodi'".'ORDER BY tahun');
  return $data->result_array();
  }
 
   public function D3() {
- $data= $this->db->query('SELECT ts_4,ts_3,ts_2,ts_1,ts,jml_ts_llsan,id FROM data_mhs_angkatan WHERE id_prodi="p001" ORDER BY tahun');
+  	$kdprodi = $this->session->userdata('kd_prodi');
+ $data= $this->db->query('SELECT ts_4,ts_3,ts_2,ts_1,ts,jml_ts_llsan,id FROM data_mhs_angkatan WHERE id_prodi='."'$kdprodi'".'ORDER BY tahun');
+ return $data->result_array();
+ }
+
+ public function D2() {
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $data= $this->db->query('SELECT ts_2,ts_1,ts,jml_ts_llsan FROM data_mhs_angkatan WHERE id_prodi='."'$kdprodi'".'ORDER BY tahun');
+ return $data->result_array();
+ }
+
+  public function D1() {
+  	$kdprodi = $this->session->userdata('kd_prodi');
+ $data= $this->db->query('SELECT ts_1,ts,jml_ts_llsan FROM data_mhs_angkatan WHERE id_prodi='."'$kdprodi'".'ORDER BY tahun');
  return $data->result_array();
  }
 
@@ -35,15 +49,7 @@ class Apd_a313_model extends CI_Model {
 		return $res;
 	}
 
- public function D2() {
- $data= $this->db->query('SELECT ts_2,ts_1,ts,jml_ts_llsan FROM data_mhs_angkatan WHERE id_prodi="p001" ORDER BY tahun');
- return $data->result_array();
- }
-
-  public function D1() {
- $data= $this->db->query('SELECT ts_1,ts,jml_ts_llsan FROM data_mhs_angkatan WHERE id_prodi="p001" ORDER BY tahun');
- return $data->result_array();
- }
+ 
 
  
 

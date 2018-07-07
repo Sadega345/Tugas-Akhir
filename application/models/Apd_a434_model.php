@@ -28,8 +28,9 @@ FROM aktivitas_mengajar a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen '.$whe
 	}
 
  public function hitung(){
+ 	$kdprodi = $this->session->userdata('kd_prodi');
  	$data=$this->db->query('SELECT SUM(a.jp_rencana)AS jumper_d FROM aktivitas_mengajar a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen 
-WHERE d.kd_prodi="p001" AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
+WHERE d.kd_prodi='."'$kdprodi'".' AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
  	return $data->result_array();
  }
 

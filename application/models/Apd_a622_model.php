@@ -11,8 +11,9 @@ class Apd_a622_model extends CI_Model {
 
 // Listing
 public function listing() {
+$kdprodi = $this->session->userdata('kd_prodi');
  $data=$this->db->query('SELECT tahun,judul_penelitian,sumber_dana,jml_dana,id FROM dana_penelitian 
-WHERE KD_PRODI="p001"');
+WHERE KD_PRODI='."'$kdprodi'");
  return $data->result_array();
  }
 
@@ -33,7 +34,8 @@ WHERE KD_PRODI="p001"');
 	}
 
  public function totdana() {
- $data=$this->db->query('SELECT SUM(jml_dana)AS Tot_Dana FROM dana_penelitian WHERE KD_PRODI="P001"');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('SELECT SUM(jml_dana)AS Tot_Dana FROM dana_penelitian WHERE KD_PRODI='."'$kdprodi'");
  return $data->result_array();
  }
 

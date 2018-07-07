@@ -5,7 +5,8 @@ class Apd_a631_model extends CI_Model {
 
 // Listing
  public function listing() {
- $ruang1=$this->db->query('SELECT r_kerja_dosen,jml_ruang,jml_luas,id FROM dt_ruang_dosen WHERE kd_prodi="p001"');
+$kdprodi = $this->session->userdata('kd_prodi');
+ $ruang1=$this->db->query('SELECT r_kerja_dosen,jml_ruang,jml_luas,id FROM dt_ruang_dosen WHERE kd_prodi='."'$kdprodi'");
  return $ruang1->result_array();
  }
 
@@ -25,7 +26,8 @@ class Apd_a631_model extends CI_Model {
 	}
 
  public function totluas(){
- $totalluas=$this->db->query('select sum(jml_luas) as Tot_Luas from dt_ruang_dosen where kd_prodi="p001"');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $totalluas=$this->db->query('select sum(jml_luas) as Tot_Luas from dt_ruang_dosen where kd_prodi='."'$kdprodi'");
  return $totalluas->result_array();
  }
 

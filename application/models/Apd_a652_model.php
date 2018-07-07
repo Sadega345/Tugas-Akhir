@@ -12,7 +12,8 @@ class Apd_a652_model extends CI_Model {
 // Listing
 
 public function listing1() {
-$data=$this->db->query('SELECT manual,komp_tnp_jar,lan,wan,jenis_data,id FROM aksesbilitas_data WHERE kd_prodi="p001"');
+	$kdprodi = $this->session->userdata('kd_prodi');
+$data=$this->db->query('SELECT manual,komp_tnp_jar,lan,wan,jenis_data,id FROM aksesbilitas_data WHERE kd_prodi='."'$kdprodi'");
 return $data->result_array();
 }
 
@@ -32,22 +33,26 @@ public function update($where="") {
 	}
 
 public function totmanual() {
- $data=$this->db->query('SELECT COUNT(IF(manual LIKE "v%",manual,NULL)) AS Tot_Manual FROM aksesbilitas_data WHERE kd_prodi="p001"');
+	$kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('SELECT COUNT(IF(manual LIKE "v%",manual,NULL)) AS Tot_Manual FROM aksesbilitas_data WHERE kd_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 
  public function totkomp() {
- $data=$this->db->query('SELECT COUNT(IF(komp_tnp_jar LIKE "v%",komp_tnp_jar,NULL)) AS Tot_Komp FROM aksesbilitas_data WHERE kd_prodi="p001"');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('SELECT COUNT(IF(komp_tnp_jar LIKE "v%",komp_tnp_jar,NULL)) AS Tot_Komp FROM aksesbilitas_data WHERE kd_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 
  public function totlan() {
- $data=$this->db->query('SELECT COUNT(IF(lan LIKE "v%",LAN,NULL)) AS Tot_Lan FROM aksesbilitas_data WHERE kd_prodi="p001"');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('SELECT COUNT(IF(lan LIKE "v%",LAN,NULL)) AS Tot_Lan FROM aksesbilitas_data WHERE kd_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 
  public function totwan() {
- $data=$this->db->query('SELECT COUNT(IF(wan LIKE "v%",WAN,NULL)) AS Tot_Wan FROM aksesbilitas_data WHERE kd_prodi="p001"');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('SELECT COUNT(IF(wan LIKE "v%",WAN,NULL)) AS Tot_Wan FROM aksesbilitas_data WHERE kd_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 

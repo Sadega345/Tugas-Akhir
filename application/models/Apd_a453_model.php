@@ -11,7 +11,8 @@ class Apd_a453_model extends CI_Model {
 
 // Listing
  public function listing() {
- $data=$this->db->query('SELECT d.nama_dosen,k.jenis_kegiatan,k.tempat,k.tahun,k.sbg_penyaji,k.sbg_peserta FROM kegiatan_dsn_ttp k INNER JOIN dosen_tbl d ON k.id_dosen=d.id_dosen WHERE d.kd_prodi="p001" AND d.kd_jns_dosen=1');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('SELECT d.nama_dosen,k.jenis_kegiatan,k.tempat,k.tahun,k.sbg_penyaji,k.sbg_peserta FROM kegiatan_dsn_ttp k INNER JOIN dosen_tbl d ON k.id_dosen=d.id_dosen WHERE d.kd_prodi='."'$kdprodi'".' AND d.kd_jns_dosen=1');
  return $data->result_array();
  }
 

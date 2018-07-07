@@ -11,8 +11,9 @@ class Apd_a442_model extends CI_Model {
 
 // Listing
  public function listing() {
+ 	$kdprodi = $this->session->userdata('kd_prodi');
  $data=$this->db->query('SELECT a.id,d.nama_dosen,a.kode_mk,a.nama_mk,a.jml_sks,a.jp_rencana,a.jp_dilaksanakan 
-FROM aktivitas_mengajar a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen WHERE d.kd_prodi="p001" AND d.kd_jns_dosen=2');
+FROM aktivitas_mengajar a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen WHERE d.kd_prodi='."'$kdprodi'".' AND d.kd_jns_dosen=2');
  return $data->result_array();
  }
 
@@ -28,14 +29,16 @@ FROM aktivitas_mengajar a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen '.$whe
 	}
 
  public function tot_pertemuan() {
+ 	$kdprodi = $this->session->userdata('kd_prodi');
  $data=$this->db->query('SELECT SUM(a.jp_rencana) AS total_rencana FROM aktivitas_mengajar a INNER JOIN dosen_tbl d 
-ON a.id_dosen=d.id_dosen WHERE d.kd_prodi="P001" AND d.kd_jns_dosen=2');
+ON a.id_dosen=d.id_dosen WHERE d.kd_prodi='."'$kdprodi'".' AND d.kd_jns_dosen=2');
  return $data->result_array();
  }
 
  public function tot_dilaksanakan() {
+ 	$kdprodi = $this->session->userdata('kd_prodi');
  $data=$this->db->query('SELECT SUM(a.jp_dilaksanakan) AS total_laksana FROM aktivitas_mengajar a INNER JOIN dosen_tbl d 
-ON a.id_dosen=d.id_dosen WHERE d.kd_prodi="P001" AND d.kd_jns_dosen=2');
+ON a.id_dosen=d.id_dosen WHERE d.kd_prodi='."'$kdprodi'".' AND d.kd_jns_dosen=2');
  return $data->result_array();
  }
 

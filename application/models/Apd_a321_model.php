@@ -11,9 +11,8 @@ class Apd_b321_model extends CI_Model {
 
 // Listing
  public function listing() {
- $data= $this->db->query('
-SELECT P.PRODI,P.JURUSAN,M.RATA_MASA_STD,M.RATA_IPK,M.KETERANGAN FROM masastudi_ipk M 
-INNER JOIN prodi_tbl P ON P.kode_prodi=M.kd_prodi WHERE M.kd_prodi="p001"');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $data= $this->db->query('SELECT P.PRODI,P.JURUSAN,M.RATA_MASA_STD,M.RATA_IPK,M.KETERANGAN FROM masastudi_ipk M INNER JOIN prodi_tbl P ON P.kode_prodi=M.kd_prodi WHERE M.kd_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 

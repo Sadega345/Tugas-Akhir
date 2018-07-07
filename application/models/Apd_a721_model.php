@@ -11,27 +11,32 @@ class Apd_a721_model extends CI_Model {
 
 // Listing
  public function dosen() {
- $data=$this->db->query('SELECT TS_2,TS_1,TS,SUM(TS_2+TS_1+TS) AS JML,KD_JNS FROM kegiatan_pkm WHERE KD_JNS=1 AND kd_prodi="p001"');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('SELECT TS_2,TS_1,TS,SUM(TS_2+TS_1+TS) AS JML,KD_JNS FROM kegiatan_pkm WHERE KD_JNS=1 AND kd_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 
  public function bersangkutan() {
- $data=$this->db->query('SELECT TS_2,TS_1,TS,SUM(TS_2+TS_1+TS) AS JML,KD_JNS FROM kegiatan_pkm WHERE KD_JNS=2 AND kd_prodi="p001"');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('SELECT TS_2,TS_1,TS,SUM(TS_2+TS_1+TS) AS JML,KD_JNS FROM kegiatan_pkm WHERE KD_JNS=2 AND kd_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 
  public function kemristekdikti() {
- $data=$this->db->query('SELECT TS_2,TS_1,TS,SUM(TS_2+TS_1+TS) AS JML,KD_JNS FROM kegiatan_pkm WHERE KD_JNS=3 AND kd_prodi="p001"');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('SELECT TS_2,TS_1,TS,SUM(TS_2+TS_1+TS) AS JML,KD_JNS FROM kegiatan_pkm WHERE KD_JNS=3 AND kd_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 
  public function luarkemristekdikti() {
- $data=$this->db->query('SELECT TS_2,TS_1,TS,SUM(TS_2+TS_1+TS) AS JML,KD_JNS FROM kegiatan_pkm WHERE KD_JNS=4 AND kd_prodi="p001"');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('SELECT TS_2,TS_1,TS,SUM(TS_2+TS_1+TS) AS JML,KD_JNS FROM kegiatan_pkm WHERE KD_JNS=4 AND kd_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 
  public function luarnegeri() {
- $data=$this->db->query('SELECT TS_2,TS_1,TS,SUM(TS_2+TS_1+TS) AS JML,KD_JNS FROM kegiatan_pkm WHERE KD_JNS=5 AND kd_prodi="p001"');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('SELECT TS_2,TS_1,TS,SUM(TS_2+TS_1+TS) AS JML,KD_JNS FROM kegiatan_pkm WHERE KD_JNS=5 AND kd_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 
@@ -46,7 +51,8 @@ class Apd_a721_model extends CI_Model {
  }
 
  public function jml(){
- 	$jml=$this->db->query('Select sum(ts_2) as jmlts2,sum(ts_1) as jmlts1,sum(ts) as jmlts,sum(ts_2+ts_1+ts) as jmltotal from kegiatan_pkm where kd_prodi="p001"');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ 	$jml=$this->db->query('Select sum(ts_2) as jmlts2,sum(ts_1) as jmlts1,sum(ts) as jmlts,sum(ts_2+ts_1+ts) as jmltotal from kegiatan_pkm where kd_prodi='."'$kdprodi'");
  	return $jml->result_array();
  }
 
