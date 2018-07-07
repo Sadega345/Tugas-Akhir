@@ -126,8 +126,8 @@ License: You must have a valid license purchased only from themeforest(the above
 								</a>
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Data_Dosen_Excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
+								<a href="<?php echo base_url()."index.php/Data_Dosens_Excel/export_excel";?>">
+									<button id="sample_editable_1_new" class="btn blue">
 										Export ke Excel 
 									</button>
 								</a>
@@ -196,7 +196,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 	<td><?php echo $d['ASAL_PT_S3']; ?></td>
 									 	<td><?php echo $d['BID_KEAHLIAN_S3']; ?></td>
 									 	<td class="center">
-											<a href="<?php echo base_url()."index.php/Data_dosen_excel/ubah/".$d['NIDN'];?>" >Edit</a>
+											<a href="<?php echo base_url()."index.php/Data_dosens_excel/ubah/".$d['NIDN'];?>" >Edit</a>
 										</td>
 									 </tr>
 							<?php } ?>

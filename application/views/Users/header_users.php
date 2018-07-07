@@ -22,7 +22,7 @@
 				<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
 				<li class="dropdown dropdown-user">
 					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-					<img alt="" class="img-circle" src="<?php echo base_url()."assets/";?>admin/layout/img/avatar3_small.jpg"/>
+					<img alt="" class="img-circle" src="<?php echo base_url()."assets/";?>admin/layout/img/profile_icon.png"/>
 					<span class="username username-hide-on-mobile">
 					<?php echo $this->session->userdata('username'); ?> </span>
 					

@@ -121,7 +121,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
-							<form action="<?php echo base_url()."index.php/Pengisi_excel/do_tambah"; ?>" method="POST">
+							<form action="<?php echo base_url()."index.php/Pengisis_excel/do_tambah"; ?>" method="POST">
 							<div class="container">
 								<div class="col-md-10">
 									<div class="row">

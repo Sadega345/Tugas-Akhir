@@ -122,12 +122,26 @@ License: You must have a valid license purchased only from themeforest(the above
 									  ?>
 									 <th><center>PS-<?php echo $no++; ?> <br><?php echo $p['prodi']; ?></center></th>
 									 <?php } ?>
-									 <th><center>Total di Institusi</center></th>
+									 <th>Aksi</th>
 								 </tr>
 							</thead>
 							<tbody>
 								<tr>
 								 	<td>1</td>
+								 	<td>Banyaknya dosen pensiun/berhenti</td>
+								 	<?php 
+								 		foreach ($total as $t) {
+								 	 ?>
+								 	 <td><?php echo $t['total'] ?></td>
+								 	 <?php } ?>
+								 	 <?php 
+								 	 	foreach ($banyak as $j) {
+								 	  ?>
+								 	 <td><?php echo $j['banyak'] ?></td>
+								 	 <?php } ?>
+								 </tr>
+								<tr>
+								 	<td>2</td>
 								 	<td>Banyaknya dosen tugas belajar S2/Sp-1</td>
 								 	<?php 
 								 		foreach ($total1 as $t) {
@@ -139,14 +153,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	  ?>
 								 	 <td><?php echo $j['banyak1'] ?></td>
 								 	 <?php } ?>
-								 	 <?php 
-								 		foreach ($total1 as $t) {
-								 	 ?>
-								 	 <td><?php echo $t['total1'] ?></td>
-								 	 <?php } ?>
 								 </tr>
 								  <tr>
-								 	<td>2</td>
+								 	<td>3</td>
 								 	<td>Banyaknya dosen tugas belajar S3/Sp-2</td>
 								 	<?php 
 								 		foreach ($total2 as $t) {
@@ -157,11 +166,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	 	foreach ($banyak2 as $j) {
 								 	  ?>
 								 	 <td><?php echo $j['banyak2'] ?></td>
-								 	 <?php } ?>
-								 	 <?php 
-								 		foreach ($total2 as $t) {
-								 	 ?>
-								 	 <td><?php echo $t['total2'] ?></td>
 								 	 <?php } ?>
 								 </tr>
 							</tbody>
@@ -176,7 +180,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div> -->
 							
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_b412_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Aps_b412_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn blue">
 										Export To Excel 
 									</button>

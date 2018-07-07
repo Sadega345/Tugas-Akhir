@@ -114,105 +114,109 @@ License: You must have a valid license purchased only from themeforest(the above
 							<thead>
 								<tr>
 									 <th rowspan="2">No</th>
-									 <th rowspan="2"></th>
+									 <th rowspan="2" colspan="2"><center>Hal</center></th>
 									 <th rowspan="2">Total Mahasiswa pada Fakultas**</th>
-									 <th colspan="11"><center>Jumlah Mahasiswa pada PS: *</center></th>
+									 <th><center>Jumlah Mahasiswa pada PS: *</center></th>
+									 <th>Aksi</th>
 								 </tr>
 								 <tr>
 								 <?php 
 								 	$no=1;
-								 	$num=4;
-								 	$num++;
 								 	foreach ($prodi as $p) {
 								 ?>
 								 	<th><center>PS- <?php echo $no++; ?> <br> <?php echo $p['jurusan'] ?></center></th>
-								 	<th>Aksi</th>
+								 	
 								 <?php } ?>
-								 	<th>Total Mahasiswa</th>
-								 </tr>
-
-								 <tr align="center">
-								 	<td>(1)</td>
-								 	<td>(2)</td>
-								 	<td>(3)</td>
-								 	<td>(4)</td>
-								 	<td>(<?php echo $num; ?>)</td>
+								 	<th></th>
 								 </tr>
 							</thead>
 							<tbody>
-							<tr>
-							 	<td>1</td>
-							 	<td>Mhs. baru bukan transfer</td>
-							 	<?php 
-							 		foreach ($total1 as $t) {
-							 	 ?>
-							 	 <td><?php echo $t['total1'] ?></td>
-							 	 <?php } ?>
-							 	 <?php 
-							 	 	foreach ($data1 as $d) {
-							 	  ?>
-							 	 <td><?php echo $d['j_maba_reg_bkn_trf']?></td>
-							 	 <td class="center">
-									<a href="<?php echo base_url()."index.php/Apd_b312_excel/ubah/".$d['id'];?>" >Edit</a>
-								 </td>
-							 	 <?php } ?>
-							 	 <?php 
-							 		foreach ($total1 as $t) {
-							 	 ?>
-							 	 <td><?php echo $t['total1'] ?></td>
-
-							 	 <?php } ?>
-							 </tr>
-							 <tr>
-							 	<td>2</td>
-							 	<td>Mhs. baru transfer</td>
-							 	<?php 
-							 		foreach ($total2 as $t) {
-							 	 ?>
-							 	 <td><?php echo $t['total2'] ?></td>
-							 	 <?php } ?>
-							 	 <?php 
-							 	 	foreach ($data2 as $d) {
-							 	  ?>
-							 	 <td><?php echo $d['j_maba_trf']?></td>
-							 	 <td class="center">
-									<a href="<?php echo base_url()."index.php/Apd_b312_excel/ubah/".$d['id'];?>" >Edit</a>
-								 </td>
-							 	 <?php } ?>
-							 	 <?php 
-							 		foreach ($total2 as $t) {
-							 	 ?>
-							 	 <td><?php echo $t['total2'] ?></td>
-							 	 <?php } ?>
-							 </tr>
-							 <tr>
-							 	<td>3</td>
-							 	<td>Total mhs. regular (Student Body)</td>
-							 	<?php 
-							 		foreach ($total3 as $t) {
-							 	 ?>
-							 	 <td><?php echo $t['total3'] ?></td>
-							 	 <?php } ?>
-							 	 <?php 
-							 	 	foreach ($data3 as $d) {
-							 	  ?>
-							 	 <td><?php echo $d['j_tot_reg_bkn_trf']?></td>
-							 	 <td class="center">
-									<a href="<?php echo base_url()."index.php/Apd_b312_excel/ubah/".$d['id'];?>" >Edit</a>
-								 </td>
-							 	 <?php } ?>
-							 	 <?php 
-							 		foreach ($total3 as $t) {
-							 	 ?>
-							 	 <td><?php echo $t['total3'] ?></td>
-							 	 <?php } ?>
-							 </tr>
+								<tr>
+									<td rowspan="3">1</td>
+									<td rowspan="3">Program Reguler</td>
+									<td>1. Mhs. baru bukan transfer</td>
+									<?php 
+										foreach ($total1 as $t){
+									 ?>
+									<td><?php echo $t['total1']; ?></td>
+									<?php } ?>
+									<?php 
+										foreach ($data1 as $d) {
+									 ?>
+									<td><?php echo $d['j_maba_reg_bkn_trf']; ?></td>
+									<?php } ?>
+									<td><a>Edit</a></td>
+								</tr>
+								<tr>
+									<td>2. Mhs. baru transfer</td>
+									<?php foreach ($total2 as $t) {
+									 ?>
+									<td><?php echo $t['total2']; ?></td>
+									<?php } ?>
+									<?php foreach ($data2 as $d) {
+									 ?>
+									<td><?php echo $d['j_maba_trf']; ?></td>
+									<?php } ?>
+									<td><a>Edit</a></td>
+								</tr>
+								<tr>
+									<td>3. Total mhs. regular (Student Body)</td>
+									<?php foreach ($total3 as $t) {
+									 ?>
+									<td><?php echo $t['total3']; ?></td>
+									<?php } ?>
+									<?php foreach ($data3 as $d) {
+									 ?>
+									<td><?php echo $d['j_tot_reg_bkn_trf']; ?></td>
+									<?php } ?>
+									<td><a>Edit</a></td>
+								</tr>
+								<tr>
+									<td rowspan="3">2</td>
+									<td rowspan="3">Program Non Reguler Reguler</td>
+									<td>1. Mhs. baru bukan transfer</td>
+									<?php 
+										foreach ($totalnonreg1 as $t){
+									 ?>
+									<td><?php echo $t['totalnonreg1']; ?></td>
+									<?php } ?>
+									<?php 
+										foreach ($listnonreg1 as $d) {
+									 ?>
+									<td><?php echo $d['j_tot_reg_bkn_trf']; ?></td>
+									<?php } ?>
+									<td><a>Edit</a></td>
+								</tr>
+								<tr>
+									<td>2. Mhs. baru transfer</td>
+									<?php foreach ($totalnonreg2 as $t) {
+									 ?>
+									<td><?php echo $t['totalnonreg2']; ?></td>
+									<?php } ?>
+									<?php foreach ($listnonreg2 as $d) {
+									 ?>
+									<td><?php echo $d['j_maba_trf']; ?></td>
+									<?php } ?>
+									<td><a>Edit</a></td>
+								</tr>
+								<tr>
+									<td>3. Total mhs. regular (Student Body)</td>
+									<?php foreach ($totalnonreg3 as $t) {
+									 ?>
+									<td><?php echo $t['totalnonreg3']; ?></td>
+									<?php } ?>
+									<?php foreach ($listnonreg3 as $d) {
+									 ?>
+									<td><?php echo $d['j_tot_reg_bkn_trf']; ?></td>
+									<?php } ?>
+									<td><a>Edit</a></td>
+								</tr>
 							</tbody>
 							</table>
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_b312_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
+								<a href="<?php echo base_url()."index.php/Aps_b312_excel/export_excel";?>">
+									<button id="sample_editable_1_new" class="btn blue">
 										Export To Excel 
 									</button>
 								</a>

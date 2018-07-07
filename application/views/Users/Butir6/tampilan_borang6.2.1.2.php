@@ -115,6 +115,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2"><center>No</center></th>
 									 <th rowspan="2"><center>Jenis Penggunaan</center></th>
 									 <th colspan="3"><center>Penggunaan (Juta Rupiah)</center></th>
+									 <th rowspan="2">Aksi</th>
 								 </tr>
 								 <tr>
 								 	<th><center>TS-2</center></th>
@@ -132,6 +133,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
+								<td class="center">
+									<a href="#" >Edit</a>
+								</td>
 								<?php } ?>	 
 							</tr>
 							<tr>
@@ -143,6 +147,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $b['ts_2'] ?></td>
 								<td><?php echo $b['ts_1'] ?></td>
 								<td><?php echo $b['ts'] ?></td>
+								<td class="center">
+									<a href="#" >Edit</a>
+								</td>
 								<?php } ?>	
 							</tr>
 							<tr>
@@ -154,6 +161,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $c['ts_2'] ?></td>
 								<td><?php echo $c['ts_1'] ?></td>
 								<td><?php echo $c['ts'] ?></td>
+								<td class="center">
+									<a href="#" >Edit</a>
+								</td>
 								<?php } ?>	
 							</tr>
 							<tr>
@@ -174,7 +184,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									foreach ($jmlopr as $j ) { 
 								?>
 							 	<td><?php echo $j['jmlopr']; ?></td>
-							 	<?php } ?>
+							 	<?php } ?>]
+							 	<td></td>
 							</tr>
 							<tr>
 								<td>4</td>
@@ -185,7 +196,10 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $e['ts_2'] ?></td>
 								<td><?php echo $e['ts_1'] ?></td>
 								<td><?php echo $e['ts'] ?></td>
-								<?php } ?>	
+								<?php } ?>
+								<td class="center">
+									<a href="#" >Edit</a>
+								</td>	
 							</tr>
 							<tr>
 								<td>5</td>
@@ -197,6 +211,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $f['ts_1'] ?></td>
 								<td><?php echo $f['ts'] ?></td>
 								<?php } ?>	
+								<td class="center">
+									<a href="#" >Edit</a>
+								</td>
 							</tr>
 							<tr>
 								<td>6</td>
@@ -208,6 +225,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $g['ts_1'] ?></td>
 								<td><?php echo $g['ts'] ?></td>
 								<?php } ?>	
+								<td class="center">
+									<a href="#" >Edit</a>
+								</td>
 							</tr>
 							<tr>
 								<td>7</td>
@@ -219,6 +239,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $h['ts_1'] ?></td>
 								<td><?php echo $h['ts'] ?></td>
 								<?php } ?>	
+								<td class="center">
+									<a href="#" >Edit</a>
+								</td>
 							</tr>
 							<tr>
 								<td colspan="2"><center>Jumlah Dana untuk Investasi</center></td>
@@ -239,6 +262,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								?>
 							 	<td><?php echo $j['jmlinv']; ?></td>
 							 	<?php } ?>
+							 	<td></td>
 							</tr>
 							<tr>
 								<td colspan="2"><center>Jumlah Dana (Operasional + Investasi)</center></td>
@@ -259,6 +283,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								?>
 							 	<td><?php echo $j['jmloprinv']; ?></td>
 							 	<?php } ?>
+							 	<td></td>
 							</tr>
 							<tr>
 								<td colspan="2"><center>Jumlah Mahasiswa Aktif (Student Body)</center></td>
@@ -279,6 +304,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								?>
 							 	<td><?php echo $j['jmlmhs']; ?></td>
 							 	<?php } ?>
+							 	<td></td>
 							</tr>
 							</tbody>
 							</table>
@@ -291,7 +317,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div> -->
 							
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a6212_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Aps_a6212_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn blue">
 										Export To Excel 
 									</button>

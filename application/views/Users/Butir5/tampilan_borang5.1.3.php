@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>BUTIR 5.1.3 : MATA KULIAH PILIHAN</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -66,7 +67,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('Userss/sidebar_Userss.php');
+			$this->load->view('Users/sidebar_Users.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 
@@ -99,29 +100,13 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="<?php echo base_url()."index.php/Aps_a513_excel/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
 											Tambah <i class="fa fa-plus"></i>
 											</button>
 											</a>
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
@@ -133,6 +118,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th>Bobot SKS</th>
 									 <th>Bobot Tugas*</th>
 									 <th>Unit/Jur/Fak Penyelenggara</th>
+									 <th>Aksi</th>
 								 </tr>
 								 <tr align="center">
 								 	<td>(1)</td>
@@ -141,37 +127,31 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>(4)</td>
 								 	<td>(5)</td>
 								 	<td>(6)</td>
+								 	<td></td>
 								 </tr>
 							</thead>
 							<tbody>
+								<?php 
+									foreach ($data as $d) {
+								 ?>
 								 <tr>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								 	<td><?php echo $d['smt']; ?></td>
+								 	<td><?php echo $d['kode_mk']; ?></td>
+								 	<td><?php echo $d['nama_mk']; ?></td>
+								 	<td><?php echo $d['bobot_sks']; ?></td>
+								 	<td><?php echo $d['bobot_tgs']; ?></td>
+								 	<td><?php echo $d['penyelenggara']; ?></td>
+								 	<td class="center">
+									<a href="#" >Edit</a>
+									</td>
 								 </tr>
+								<?php } ?>
 							</tbody>
 							</table>
 							<br><br>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-										Ubah 
-									</button>
-								</a>
-							</div>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-										Hapus 
-									</button>
-								</a>
-							</div>
-							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Aps_a513_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
+									<button id="sample_editable_1_new" class="btn blue">
 										Export ke Excel 
 									</button>
 								</a>

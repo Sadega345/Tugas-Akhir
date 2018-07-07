@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>Butir 3.2.1 : MAHASISWA DAN LULUSAN</title>
+<title>Butir 7.1.2 : JUDUL ARTIKEL ILMIAH/KARYA ILMIAH/KARYA SENI/BUKU</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Butir 3.2.1 : MAHASISWA DAN LULUSAN
+								<i class="fa fa-edit"></i>Butir 7.1.2 : JUDUL ARTIKEL ILMIAH/KARYA ILMIAH/KARYA SENI/BUKU
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -100,66 +100,88 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="#">
+											<!-- <a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
-											Load 
+											Load
 											</button>
-											</a>
+											</a> -->
 										</div>
 									</div>
+									<!-- <div class="col-md-6">
+										<div class="btn-group pull-right">
+											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+											</button>
+											<ul class="dropdown-menu pull-right">
+												<li>
+													<a href="javascript:;">
+													Print </a>
+												</li>
+												<li>
+													<a href="javascript:;">
+													Export to Excel </a>
+												</li>
+											</ul>
+										</div>
+									</div> -->
 								</div>
 							</div>
-							<div style="overflow-x:auto;" class="col-md-20">
-							
-							<table class="table table-striped table-bordered table-hover" id="sample_1" >
+							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Apd_a712_excel/do_edit"; ?>" method="POST">
+							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th>No.</th>
-									 <th>Program Studi</th>
-									 <th>Rata-rata Masa Studi (tahun)*</th>
-									 <th>Rata-rata IPK Lulusan*</th>
-									 <th rowspan="2">Aksi</th>
+									 <th rowspan="2">No</th>
+									 <th rowspan="2">Judul</th>
+									 <th rowspan="2">Nama-nama Dosen</th>
+									 <th rowspan="2">Dihasilkan/dipublikasikan pada</th>
+									 <th rowspan="2">Tahun penyajian/publikasi</th>
+									 <th colspan="3">Banyaknya dosen</th>
+								 </tr>
+								 <tr>
+								 	<th>Lokal</th>
+								 	<th>Nasional</th>
+								 	<th>Internasional</th>
+								 </tr>
+								 <tr align="center">
+								 	<td>(1)</td>
+								 	<td>(2)</td>
+								 	<td>(3)</td>
+								 	<td>(4)</td>
+								 	<td>(5)</td>
+								 	<td>(6)</td>
+								 	<td>(7)</td>
+								 	<td>(8)</td>
 								 </tr>
 							</thead>
 							<tbody>
-								<?php 
-									$no=1;
-									foreach ($masastudi as $m) {
-								 ?>
-								<tr>
-								 	<td><?php echo $no++; ?></td>
-								 	<td><?php echo $m['prodi'] ?></td>
-								 	<td><?php echo $m['rata_masa_std'] ?></td>
-								 	<td><?php echo $m['rata_ipk'] ?></td>
-								 	<td class="center">
-										<a href="<?php echo base_url()."index.php/Aps_b321_excel/ubah/".$m['id'];?>" >Edit</a>
-									</td>
-								 </tr>
-								 <?php } ?>
-								 <tr>
-								 	<td colspan="2">Rata-rata di Unit Pengelola**</td>
-								 	<?php 
-								 		foreach ($rata as $r) {
-								 	 ?>
-								 	 <td><?php echo $r['rata_mastud'] ?></td>
-								 	 <td><?php echo $r['rata2'] ?></td>
-								 	 <td></td>
-								 	 <?php } ?>
-								 </tr>
+							
+							<tr>
+							 	<td>1</td>
+							 	<td><?php echo $JUDUL; ?></td>
+							 	<td><input type="text" name="nama_dosen" value="<?php echo $nama_dosen; ?>"></td>
+							 	<td><input type="text" name="publikasi" value="<?php echo $publikasi; ?>"></td>
+							 	<td><input type="text" name="thn_publikasi" value="<?php echo $thn_publikasi; ?>"></td>
+
+							 	<td><input type="checkbox" name="lokal[]" class="form-control" value="v" ></td>
+							 	<td><input type="checkbox" name="nasional[]" class="form-control" value="v" ></td>
+							 	<td><input type="checkbox" name="internasional[]" class="form-control" value="v" ></td>
+							 </tr>
+							 
 							</tbody>
 							</table>
+
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							</div>
-							<!-- <div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a431_excel/rubah";?>">
-									<button id="sample_editable_1_new" class="btn green">
-										Ubah
-									</button>
-								</a>
-							</div> -->
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php//Aps_b321_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn blue">
-										Export To Excel 
+								<button id="sample_editable_1_new" class="btn blue">
+									Simpan 
+								</button>
+							</div>		
+							</form>					
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Apd_a712_excel";?>">
+									<button id="sample_editable_1_new" class="btn red">
+										Batal
 									</button>
 								</a>
 							</div>

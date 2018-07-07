@@ -147,7 +147,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['SKS_MAN_PTL']; ?></td>
 							 	<td><?php echo $d['total']; ?></td>
 							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Apd_a433_excel/ubah/".$d['id'];?>" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Aps_a433_excel/ubah/".$d['id'];?>" >Edit</a>
 								</td>
 							 </tr>
 							 <input type="hidden" name="id" value="<?php echo $d['id']; ?>">
@@ -261,7 +261,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</a>
 							</div>	 -->						
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a433_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Aps_a433_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn blue">
 										Export To Excel
 									</button>

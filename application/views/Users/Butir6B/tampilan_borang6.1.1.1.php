@@ -100,11 +100,11 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<!-- <a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="#">
 											<button id="sample_editable_1_new" class="btn green">
 											Load
 											</button>
-											</a> -->
+											</a>
 										</div>
 									</div>
 								</div>
@@ -115,26 +115,29 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2">Sumber Dana</th>
 									 <th rowspan="2">Jenis Dana</th>
 									 <th colspan="3">Jumlah Dana (juta rupiah)</th>
-									 <th rowspan="2">Total</th>
+									 <th rowspan="2">Aksi</th>
 								 </tr>
 								 <tr>
 								 	<th>TS-2</th>
 								 	<th>TS-1</th>
 								 	<th>TS</th>
+								 	<th></th>
 								 </tr>
 							</thead>
 							<tbody>
-
 							<tr>
-							 	<td rowspan="4">Usaha Sendiri</td>
-							 	<td>Beasiswa Yayasan</td>
+							 	<td rowspan="3>">PT Sendiri</td>
+							 	<?php } ?>
 							 	<?php
 									foreach ($dana1 as $a ) { 
 								?>
+							 	<td><?php echo $a['']; ?></td>
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
-								<td><?php echo $a['total1'] ?></td>
+								<td class="center">
+									<a href="#" >Edit</a>
+								</td>
 								<?php } ?>	 
 							 </tr>
 							 <tr>
@@ -145,7 +148,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
-								<td><?php echo $a['total2'] ?></td>
+								<td class="center">
+									<a href="#" >Edit</a>
+								</td>
 								<?php } ?>
 							 </tr>
 							 <tr>
@@ -156,7 +161,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
-								<td><?php echo $a['total3'] ?></td>
+								<td class="center">
+									<a href="#" >Edit</a>
+								</td>
 								<?php } ?>
 							 </tr>
 							 <tr>
@@ -167,11 +174,11 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['jum2'] ?></td>
 								<td><?php echo $a['jum1'] ?></td>
 								<td><?php echo $a['jum'] ?></td>
-								<td><?php echo $a['totals1'] ?></td>
+								<td></td>
 								<?php } ?>
 							 </tr>
 							  <tr>
-							 	<td rowspan="4">Mahasiswa</td>
+							 	<td rowspan="4">Yayasan</td>
 							 	<td>Pendaftaran</td>
 							 	<?php
 									foreach ($dana4 as $a ) { 
@@ -179,7 +186,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
-								<td><?php echo $a['total4'] ?></td>
+								<td class="center">
+									<a href="#" >Edit</a>
+								</td>
 								<?php } ?>
 							 </tr>
 							 <tr>
@@ -190,7 +199,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
-								<td><?php echo $a['total5'] ?></td>
+								<td class="center">
+									<a href="#" >Edit</a>
+								</td>
 								<?php } ?>
 							 </tr>
 							 <tr>
@@ -201,7 +212,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
-								<td><?php echo $a['total6'] ?></td>
+								<td class="center">
+									<a href="#" >Edit</a>
+								</td>
 								<?php } ?>
 							 </tr>
 							 <tr>
@@ -212,16 +225,20 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['jml2'] ?></td>
 								<td><?php echo $a['jml1'] ?></td>
 								<td><?php echo $a['jml'] ?></td>
-								<td><?php echo $a['totals2'] ?></td>
+								<td class="center">
+									<a href="#" >Edit</a>
+								</td>
 								<?php } ?>
 							 </tr>
 							  <tr>
-							 	<td rowspan="2">Pemerintah</td>
+							 	<td rowspan="2">Diknas</td>
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
-							 	<td></td>
+							 	<td class="center">
+									<a href="#" >Edit</a>
+								</td>
 							 </tr>
 							<tr>
 							 	<td><center><strong>Jumlah dana dari Pemerintah</strong></center></td>
@@ -240,7 +257,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
-								<td><?php echo $a['total7'] ?></td>
+								<td class="center">
+									<a href="#" >Edit</a>
+								</td>
 								<?php } ?>
 							 </tr>
 							 <tr>
@@ -251,7 +270,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
-								<td><?php echo $a['total8'] ?></td>
+								<td class="center">
+									<a href="#" >Edit</a>
+								</td>
 								<?php } ?>
 							 </tr>
 							 <tr>
@@ -262,7 +283,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
-								<td><?php echo $a['total9'] ?></td>
+								<td class="center">
+									<a href="#" >Edit</a>
+								</td>
 								<?php } ?>
 							 </tr>
 							 <tr>
@@ -273,7 +296,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['jumlah2'] ?></td>
 								<td><?php echo $a['jumlah1'] ?></td>
 								<td><?php echo $a['jumlah'] ?></td>
-								<td><?php echo $a['totals4'] ?></td>
 								<?php } ?>
 							 </tr>
 							<tr>
@@ -284,7 +306,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['total1'] ?></td>
 								<td><?php echo $a['total2'] ?></td>
 								<td><?php echo $a['total3'] ?></td>
-								<td><?php echo $a['totals'] ?></td>
 								<?php } ?>
 							 </tr>
 							</tbody>
@@ -298,7 +319,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div> -->
 							
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_b6111_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Aps_b6111_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn blue">
 										Export To Excel
 									</button>

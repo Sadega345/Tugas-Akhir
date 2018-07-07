@@ -118,7 +118,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</div>
 							<div style="overflow-x:auto;">
-							<form action="<?php echo base_url()."index.php/Prodi_excel/do_edit"; ?>" method="POST">
+							<form action="<?php echo base_url()."index.php/Prodis_excel/do_edit"; ?>" method="POST">
 							<table id="sample_1">
 							<thead>
 								<tr>

@@ -123,8 +123,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th colspan="3"><center>S1</center></th>
 									 <th colspan="3"><center>S2</center></th>
 									 <th colspan="3"><center>S3</center></th>
-									 <th colspan="3">Keahlian Praktis***</th>
-									 <th colspan="3">Aksi</th>
+									 <th rowspan="2">Aksi</th>
 								 </tr>
 								 <tr>
 								 	<th>Gelar</th>
@@ -136,10 +135,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<th>Gelar</th>
 								 	<th>PT Asal</th>
 								 	<th>Bidang Keahlian</th>
-								 	<th>Gelar</th>
-								 	<th>Pengakuan</th>
-								 	<th>Bidang Keahlian</th>
-								 	<th></th>
 								 </tr>
 							</thead>
 							<tbody>
@@ -163,11 +158,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['GELAR_S3']; ?></td>
 							 	<td><?php echo $d['ASAL_PT_S3']; ?></td>
 							 	<td><?php echo $d['BID_KEAHLIAN_S3']; ?></td>
-							 	<td><?php echo $d['GELAR']; ?></td>
-							 	<td><?php echo $d['PENGAKUAN']; ?></td>
-							 	<td><?php echo $d['BID_KEAHLIAN']; ?></td>
 							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Apd_a431_excel/ubah/".$d['nidn'];?>" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Aps_a431_excel/ubah/".$d['nidn'];?>" >Edit</a>
 								</td>
 							 </tr>
 							<?php } ?>
@@ -182,7 +174,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</a>
 							</div> -->
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a431_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Aps_a431_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn blue">
 										Export To Excel 
 									</button>

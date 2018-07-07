@@ -106,7 +106,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									
 								</div>
 							</div>
-							<form action="<?php echo base_url().'index.php/Pengisi_excel/do_edit'; ?>" method="POST">
+							<form action="<?php echo base_url().'index.php/Pengisis_excel/do_edit'; ?>" method="POST">
 							<div class="container">
 								<div class="col-md-10">
 									<div class="row">
@@ -141,7 +141,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 									<div class="row">
 										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
-										<form action="<?php echo base_url()."index.php/Pengisi_excel"; ?>" method="POST">
+										<form action="<?php echo base_url()."index.php/Pengisis_excel"; ?>" method="POST">
 											<button type="submit" class="btn btn-danger" name="back">Kembali</button>
 										</form>
 									</div>

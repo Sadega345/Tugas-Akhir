@@ -164,7 +164,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td><?php echo $d['PRSN_IPK2']; ?></td>
 								 	<td><?php echo $d['PRSN_IPK3']; ?></td>
 								 	<td class="center">
-										<a href="<?php echo base_url()."index.php/Apd_a311_excel/ubah/".$d['id'];?>" >Edit</a>
+										<a href="<?php echo base_url()."index.php/Aps_a311_excel/ubah/".$d['id'];?>" >Edit</a>
 									</td>
 								 </tr>
 			
@@ -256,7 +256,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</a>
 							</div> -->
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a311_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Aps_a311_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn blue">
 										Export ke Excel 
 									</button>

@@ -302,11 +302,11 @@
 						</li>
 						<li>
 							<a href="<?php echo base_url(); ?>index.php/Aps_a714_excel">
-						Butir A A 7.1.4 </a>
+						Butir A 7.1.4 </a>
 						</li>
 						<li>
 							<a href="<?php echo base_url(); ?>index.php/Aps_a721_excel">
-						Butir A A 7.2.1 </a>
+						Butir A 7.2.1 </a>
 						</li>
 						<li>
 							<a href="<?php echo base_url(); ?>index.php/Aps_b711_excel">

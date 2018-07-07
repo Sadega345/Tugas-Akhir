@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title> TABEL DATA BUTIR 3.3 : EVALUASI LULUSAN</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -99,156 +100,128 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="#">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
+											Load
 											</button>
 											</a>
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
-								 <tr>
-									 <th rowspan="2">No</th>
-									 <th rowspan="2">Jenis Kemampuan</th>
-									 <th colspan="4">Tanggapan Pihak Pengguna (%)</th>
-									 <th rowspan="2">Rencana Tindak Lanjut oleh Program Studi</th>
+								<tr>
+									 <th rowspan="2"><center>No.</center></th>
+									 <th rowspan="2"><center>Jenis Kemampuan</center></th>
+									 <th colspan="4"><center>Tanggapan Pihak pengguna (%)</center></th>
+									 <th rowspan="2"><center>Rencana Tindak Lanjut oleh Program Studi</center></th>
+									 <th rowspan="2"><center>Aksi</center></th>
 								 </tr>
 								 <tr>
-								 	<th>Sangat baik</th>
+								 	<th>Sangat Baik</th>
 								 	<th>Baik</th>
 								 	<th>Cukup</th>
 								 	<th>Kurang</th>
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+								<?php 
+									$no=1; 
+									foreach ($data as $d ) { 
+								?>
 							<tr>
-							 	<td>1</td>
-							 	<td>Integritas(etika dan moral)</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+								
+							 	<td><?php echo $no++; ?></td>
+							 	<td><?php echo $d['jenis_kemampuan']; ?></td>
+							 	<td><?php echo $d['sangat_baik']; ?></td>
+							 	<td><?php echo $d['baik']; ?></td>
+							 	<td><?php echo $d['cukup']; ?></td>
+							 	<td><?php echo $d['kurang']; ?></td>
+							 	<td><?php echo $d['rencana']; ?></td>
+							 	<td class="center">
+									<a href="<?php echo base_url()."index.php/Aps_a331_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>
 							 </tr>
+							<?php } ?>
+							 
 							 <tr>
-							 	<td>2</td>
-							 	<td>Keahlian berdasarkan <br>bidang ilmu (profesionalisme)</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
+							 	<td colspan="2"><strong>Total</strong></td>
+							 	<?php 
+									foreach ($sangatbaik as $d ) { 
+								?>
+							 		<td><?php echo $d['Sangat_baik']; ?></td>
+							 	<?php } ?>
+
+							 	<?php 
+									foreach ($baik as $d ) { 
+								?>
+							 		<td><?php echo $d['Baik']; ?></td>
+							 	<?php } ?>
+
+							 	<?php 
+									foreach ($cukup as $d ) { 
+								?>
+							 		<td><?php echo $d['Cukup']; ?></td>
+							 	<?php } ?>
+
+							 	<?php 
+									foreach ($kurang as $d ) { 
+								?>
+							 		<td><?php echo $d['Kurang']; ?></td>
+							 	<?php } ?>
 							 </tr>
-							 <tr>
-							 	<td>3</td>
-							 	<td>Bahasa Inggris</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr>
-							 <tr>
-							 	<td>4</td>
-							 	<td>Penggunaan teknologi informasi</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr>	
-							 <tr>
-							 	<td>5</td>
-							 	<td>Komunikasi</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr>
-							 <tr>
-							 	<td>6</td>
-							 	<td>Kerjasama Tim</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr>
-							 <tr>
-							 	<td>7</td>
-							 	<td>Pengembangan diri</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr>		
-							 <tr>
-							 	<td colspan="2">Total</td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr>	
 							</tbody>
 							</table>
+								<p><strong>3.4.3 Rata-rata waktu tunggu lulusan untuk memperoleh pekerjaan yang pertama</strong>
+								<table class="table table-striped table-bordered table-hover" id="sample_1">	
+									<thead>
+										<tr>
+											<th>Rata-rata waktu</th>
+											<th>Aksi</th>
+										</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<?php foreach ($waktu as $w ) {
+										 ?>
+										<td><?php echo $w['waktu'] ; ?></td>
+										
+										<td class="center">
+											<a href="<?php echo base_url()."index.php/Aps_a331_excel/ubahwaktu/".$w['id_prodi'];?>" >Edit</a>
+										</td>
+									</tr>
+									<?php } ?>
+									</tbody>
+								</table> 
+							</p>
+
+							<p><strong>3.4.4 Persentase lulusan yang bekerja pada bidang yang sesuai dengan keahliannya</strong>
+								<table class="table table-striped table-bordered table-hover" id="sample_1">	
+									<thead>
+										<tr>
+											<th>Persentasi</th>
+											<th>Aksi</th>
+										</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<?php foreach ($persen as $p ) {
+										 ?>
+										<td><?php echo $p['persen'] ; ?></td>
+										
+										<td class="center">
+											<a href="<?php echo base_url()."index.php/Aps_a331_excel/ubahpersen/".$p['id_prodi'];?>" >Edit</a>
+										</td>
+									</tr>
+									<?php } ?>
+									</tbody>
+								</table>
+							</p>
+						
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-										Ubah 
-									</button>
-								</a>
-							</div>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-										Hapus 
-									</button>
-								</a>
-							</div>
-							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a345_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
+								<a href="<?php echo base_url()."index.php/Aps_a331_excel/export_excel";?>">
+									<button id="sample_editable_1_new" class="btn blue">
 											Export ke Excel 
 									</button>
 								</a>

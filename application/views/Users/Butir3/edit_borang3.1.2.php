@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>Butir 3.2.1 : MAHASISWA DAN LULUSAN</title>
+<title>Butir 3.1.2 : PROFIL MAHASISWA DAN LULUSAN</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Butir 3.2.1 : MAHASISWA DAN LULUSAN
+								<i class="fa fa-edit"></i>Butir 3.1.2 : PROFIL MAHASISWA DAN LULUSAN
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -100,69 +100,64 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="#">
+											<!-- <a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
-											Load 
+											Load
 											</button>
-											</a>
+											</a> -->
 										</div>
 									</div>
 								</div>
 							</div>
-							<div style="overflow-x:auto;" class="col-md-20">
-							
+							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Aps_a312_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 							<thead>
 								<tr>
-									 <th>No.</th>
-									 <th>Program Studi</th>
-									 <th>Rata-rata Masa Studi (tahun)*</th>
-									 <th>Rata-rata IPK Lulusan*</th>
-									 <th rowspan="2">Aksi</th>
+									 <th rowspan="2"><center>Tahun Akademik</center></th>
+									 <th rowspan="2"><center>Daya Tampung</center></th>
+									 <th colspan="2"><center>Jumlah calon mahasiswa</center></th>
+									 <th colspan="2"><center>Jumlah Mahasiswa baru</center></th>
+									 <th colspan="2"><center>Jumlah total mahasiswa</th>
+									 <th colspan="2"></th></th>
+								 </tr>
+								 <tr>
+								 	<th><center>Ikut seleksi</center></th>
+								 	<th><center>Lulus Seleksi</center></th>
+								 	<th><center>Non reguler</center></th>
+								 	<th><center>Transfer</center></th>
+								 	<th><center>Non reguler</center></th>
+								 	<th><center>Transfer</center></th>
+								 	<th><center>Aksi</center></th>
 								 </tr>
 							</thead>
 							<tbody>
-								<?php 
-									$no=1;
-									foreach ($masastudi as $m) {
-								 ?>
-								<tr>
-								 	<td><?php echo $no++; ?></td>
-								 	<td><?php echo $m['prodi'] ?></td>
-								 	<td><?php echo $m['rata_masa_std'] ?></td>
-								 	<td><?php echo $m['rata_ipk'] ?></td>
-								 	<td class="center">
-										<a href="<?php echo base_url()."index.php/Aps_b321_excel/ubah/".$m['id'];?>" >Edit</a>
-									</td>
-								 </tr>
-								 <?php } ?>
 								 <tr>
-								 	<td colspan="2">Rata-rata di Unit Pengelola**</td>
-								 	<?php 
-								 		foreach ($rata as $r) {
-								 	 ?>
-								 	 <td><?php echo $r['rata_mastud'] ?></td>
-								 	 <td><?php echo $r['rata2'] ?></td>
-								 	 <td></td>
-								 	 <?php } ?>
+								 	<td><input type="text" name="dy_tampung" value="<?php echo $dy_tampung; ?>"></td>
+								 	<td><input type="text" name="jc_mhs_ikt_seleksi" value="<?php echo $jml_ikutseleksi; ?>">
+								 	<td><input type="text" name="jml_lulusseleksi" value="<?php echo $jml_lulusseleksi; ?>"></td>
+								 	<td><input type="text" name="j_maba_nonreg" value="<?php echo $j_maba_nonreg; ?>"></td>
+								 	<td><input type="text" name="j_maba_trf" value="<?php echo $j_maba_trf; ?>"></td>
+								 	<td><input type="text" name="j_tot_nonreg" value="<?php echo $j_tot_nonreg; ?>"></td>
+								 	<td><input type="text" name="j_tot_trf" value="<?php echo $j_tot_trf; ?>"></td>
 								 </tr>
+							
 							</tbody>
 							</table>
 							</div>
-							<!-- <div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a431_excel/rubah";?>">
-									<button id="sample_editable_1_new" class="btn green">
-										Ubah
-									</button>
-								</a>
-							</div> -->
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php//Aps_b321_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn blue">
-										Export To Excel 
+								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+							</div>
+							</form>
+							
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Aps_a312_excel";?>">
+									<button id="sample_editable_1_new" class="btn red">
+										Batal
 									</button>
 								</a>
 							</div>
+						
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>Butir 5.1.2.1 : STRUKTUR KURIKULUM BERDASARKAN URUTAN MK</title>
+<title> BUTIR 5.1.2.1 : JUMLAH SKS PS (minimum untuk kelulusan)</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Butir 5.1.2.1 : STRUKTUR KURIKULUM BERDASARKAN URUTAN MK
+								<i class="fa fa-edit"></i>BUTIR 5.1.2.1 : JUMLAH SKS PS (minimum untuk kelulusan)
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -100,7 +100,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/Apd_a5121_excel/tambah";?>">
+											<a href="<?php echo base_url()."index.php/Aps_a5121_excel/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
 											Tambah <i class="fa fa-plus"></i>
 											</button>
@@ -112,49 +112,50 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th rowspan="2">Smt</th>
-									 <th rowspan="2">Kode MK</th>
-									 <th rowspan="2">Nama Mata Kuliah</th>
-									 <th colspan="2">Bobot SKS untuk</th>
-									 <th colspan="2">SKS MK dalam Kurikulum</th>
-									 <th rowspan="2">Bobot Tugas***</th>
-									 <th colspan="3">Kelengkapan***</th>
-									 <th rowspan="2">Unit/Jur/Fak Penyelenggara</th>
-									 <th rowspan="2">Aksi</th>
-								 </tr>
-								 <tr>
-								 	<th>Kuliah</th>
-								 	<th>Praktikum/Praktek</th>
-								 	<th>Inti**</th>
-								 	<th>Institusional</th>
-								 	<th>Deskripsi</th>
-								 	<th>Silabus</th>
-								 	<th>SAP</th>
+									 <th>No</th>
+									 <th>Jenis Mata Kuliah</th>
+									 <th>SKS</th>
+									 <th>Keterangan</th>
+									 <th>Aksi</th>
 								 </tr>
 							</thead>
 							<tbody>
 							<tr>
-							<?php 
+								<td>1</td>
+							 	<td>MATA KULIAH WAJIB</td>
+							 	<?php 
 								
-								foreach ($data as $d ) { 
-							?>
-								<td><?php echo $d['smt']; ?></td>
-							 	<td><?php echo $d['kode_mk']; ?></td>
-							 	<td><?php echo $d['nama_mk']; ?></td>
-							 	<td><?php echo $d['sks_kuliah']; ?></td>
-							 	<td><?php echo $d['sks_praktek']; ?></td>
-							 	<td><?php echo $d['sks_inti']; ?></td>
-							 	<td><?php echo $d['sks_institusi']; ?></td>
-							 	<td><?php echo $d['bobot_tgs']; ?></td>
-							 	<td><?php echo $d['deskripsi']; ?></td>
-							 	<td><?php echo $d['silabus']; ?></td>
-							 	<td><?php echo $d['sap']; ?></td>
-							 	<td><?php echo $d['penyelenggara']; ?></td>
+								foreach ($data1 as $d ) { 
+								?>
+							 	<td><?php echo $d['sks']; ?></td>
+							 	<td><?php echo $d['keterangan']; ?></td>
+								 <?php } ?>
 							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Apd_a5121_excel/ubah/".$d['kode_mk'];?>" >Edit</a>
+									<a href="#" >Edit</a>
 								</td>
 							 </tr>
-							 <?php } ?>
+							 <tr>
+								<td>2</td>
+							 	<td>MATA KULIAH PILIHAN</td>
+							 	<?php 
+								
+								foreach ($data2 as $d ) { 
+								?>
+							 	<td><?php echo $d['sks']; ?></td>
+							 	<td><?php echo $d['keterangan']; ?></td>
+								 <?php } ?>
+							 	<td class="center">
+									<a href="#" >Edit</a>
+								</td>
+							 </tr>
+							 <tr>
+							 	<td colspan="2">TOTAL</td>
+							 	<?php 
+							 	foreach ($total as $t) {
+								?>
+							 	<td><?php $t['total'] ?></td>
+							 	<?php } ?>
+							 </tr>
 							</tbody>
 							</table>
 							<!-- <div class="btn-group">
@@ -165,7 +166,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</a>
 							</div> -->
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a5121_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Aps_a5121_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn blue">
 										Export ke Excel 
 									</button>

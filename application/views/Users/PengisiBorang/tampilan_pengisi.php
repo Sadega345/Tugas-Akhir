@@ -100,14 +100,14 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/Pengisi_excel/tambah";?>">
+											<a href="<?php echo base_url()."index.php/Pengisis_excel/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
 											Tambah <i class="fa fa-plus"></i>
 											</button>
 											</a>
 										</div>
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/Pengisi_excel/export_excel";?>">
+											<a href="<?php echo base_url()."index.php/Pengisis_excel/export_excel";?>">
 											<button id="sample_editable_1_new" class="btn blue">
 											Export ke Excel 
 									</button>
@@ -156,9 +156,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td><?php echo $d['jabatan']; ?></td>
 								 	<td><?php echo $d['tgl_pengisian']; ?></td>
 								 	<td>
-								 		<a href="<?php echo base_url()."index.php/Pengisi_excel/edit_data/".$d['id'];?>">Edit</a>
+								 		<a href="<?php echo base_url()."index.php/Pengisis_excel/edit_data/".$d['id'];?>">Edit</a>
 								 		||
-								 		<a href="<?php echo base_url()."index.php/Pengisi_excel/do_hapus/".$d['id'];?>" id="alerthapus"">Hapus</a>
+								 		<a href="<?php echo base_url()."index.php/Pengisis_excel/do_hapus/".$d['id'];?>" id="alerthapus"">Hapus</a>
 								 	</td>
 								 </tr>
 								<?php } ?>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title> TABEL DATA BUTIR 3.1 : PROFIL MAHASISWA DAN LULUSAN</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -81,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Butir 3.4.1 : EVALUASI LULUSAN
+								<i class="fa fa-edit"></i>BUTIR 3.1 : PROFIL MAHASISWA DAN LULUSAN
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -99,94 +100,59 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="#">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
+											Load 
 											</button>
 											</a>
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th rowspan="2">Tahun Masuk</th>
-									 <th colspan="7">Jumlah Mahasiswa Reguler per Angkatan pada Tahun<br>
-									 (tidak memasukkan mahasiswa transfer)</th>
-									 <th rowspan="2">Jumlah Lulusan<br>s.d. TS</th>
+									 <th rowspan="2"><center>Tahun Masuk</center></th>
+									 <th colspan="7"><center>Jumlah Mahasiswa Reguler per Angkatan pada Tahun<br>
+									 (tidak memasukkan mahasiswa transfer)</center></th>
+									 <th rowspan="2"><center>Jumlah Lulusan<br>s.d. TS</center></th>
+									 <th><center>Aksi</center></th>
 								 </tr>
 								 <tr>
-								 	<th>TS-6</th>
-								 	<th>TS-5</th>
-								 	<th>TS-4</th>
-								 	<th>TS-3</th>
-								 	<th>TS-2</th>
-								 	<th>TS-1</th>
-								 	<th>TS</th>
+								 	<th><center>TS-6</center></th>
+								 	<th><center>TS-5</center></th>
+								 	<th><center>TS-4</center></th>
+								 	<th><center>TS-3</center></th>
+								 	<th><center>TS-2</center></th>
+								 	<th><center>TS-1</center></th>
+								 	<th><center>TS</center></th>
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+								<?php 
+									$no=6; 
+									foreach ($data as $d ) { 
+								?>
 								<tr>
-								 	<td>TS-6</td>
+								 	<tr>
+								 	<td>TS- <?php echo $no--; ?></td>
+								 	<td><?php echo$d['ts_6']; ?></td>
+								 	<td><?php echo$d['ts_5']; ?></td>
+								 	<td><?php echo$d['ts_4']; ?></td>
+								 	<td><?php echo$d['ts_3']; ?></td>
+								 	<td><?php echo$d['ts_2']; ?></td>
+								 	<td><?php echo$d['ts_1']; ?></td>
+								 	<td><?php echo$d['ts']; ?></td>
+								 	<td><?php echo$d['jml_ts_llsan']; ?></td>
+								 	<td class="center">
+										<a href="#" >Edit</a>
+									</td>
 								 </tr>	
-								 <tr>
-								 	<td>TS-5</td>
-								 </tr>
-								 <tr>
-								 	<td>TS-4</td>
-								 </tr>
-								 <tr>
-								 	<td>TS-3</td>
-								 </tr>
-								 <tr>
-								 	<td>TS-2</td>
-								 </tr>
-								 <tr>
-								 	<td>TS-1</td>
-								 </tr>	
-								 <tr>
-								 	<td>TS</td>
-								 </tr>
+								 <?php } ?>
+								 
 							</tbody>
 							</table>
-							<div class="btn-group">
+							<!-- <div class="btn-group">
 								<a href="#">
 									<button id="sample_editable_1_new" class="btn green">
 										Ubah 
@@ -199,10 +165,10 @@ License: You must have a valid license purchased only from themeforest(the above
 										Hapus 
 									</button>
 								</a>
-							</div>
+							</div> -->
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Aps_a314_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
+									<button id="sample_editable_1_new" class="btn blue">
 											Export ke Excel 
 									</button>
 								</a>

@@ -100,7 +100,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="#">
 											<button id="sample_editable_1_new" class="btn green">
 											Tambah
 											</button>
@@ -132,7 +132,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $d['TS']; ?></td>
 							 	<td><?php echo $d['JML']; ?></td>
 							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Apd_a721_excel/ubah/".$d['KD_JNS'];?>" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Aps_a721_excel/ubah/".$d['KD_JNS'];?>" >Edit</a>
 								</td>
 							 	<?php } ?>
 							 </tr>
@@ -147,39 +147,39 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $b['TS']; ?></td>
 							 	<td><?php echo $b['JML']; ?></td>
 							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Apd_a721_excel/ubah/".$b['KD_JNS'];?>" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Aps_a721_excel/ubah/".$b['KD_JNS'];?>" >Edit</a>
 								</td>
 							 	
 							 	<?php } ?>
 							 </tr>
 							 <tr>
-							 	<td>Kemristekdikti</td>
+							 	<td>Depdiknas</td>
 							 	<?php 
 									$no=1; 
-									foreach ($kemristekdikti as $k ) { 
+									foreach ($depdiknas as $k ) { 
 								?>
 								<td><?php echo $k['TS_2']; ?></td>
 								<td><?php echo $k['TS_1']; ?></td>
 								<td><?php echo $k['TS']; ?></td>
 							 	<td><?php echo $k['JML']; ?></td>
 							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Apd_a721_excel/ubah/".$k['KD_JNS'];?>" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Aps_a721_excel/ubah/".$k['KD_JNS'];?>" >Edit</a>
 								</td>
 							 	
 							 	<?php } ?>
 							 </tr>
 							  <tr>
-							 	<td>Institusi dalam negeri di luar Kemristekdikti</td>
+							 	<td>Institusi dalam negeri di luar Depdiknas</td>
 							 	<?php 
 									$no=1; 
-									foreach ($luarkemristekdikti as $lk ) { 
+									foreach ($dalamdepdiknas as $lk ) { 
 								?>
 								<td><?php echo $lk['TS_2']; ?></td>
 								<td><?php echo $lk['TS_1']; ?></td>
 								<td><?php echo $lk['TS']; ?></td>
 							 	<td><?php echo $lk['JML']; ?></td>
 							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Apd_a721_excel/ubah/".$lk['KD_JNS'];?>" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Aps_a721_excel/ubah/".$lk['KD_JNS'];?>" >Edit</a>
 								</td>
 							 	
 							 	<?php } ?>
@@ -195,22 +195,11 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $l['TS']; ?></td>
 							 	<td><?php echo $l['JML']; ?></td>
 							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Apd_a721_excel/ubah/".$l['KD_JNS'];?>" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Aps_a721_excel/ubah/".$l['KD_JNS'];?>" >Edit</a>
 								</td>
 							 	
 							 	<?php } ?>
 							 </tr>
-							 <tr>
-							 	<td>Jumlah</td>
-							 	<?php 
-							 		foreach ($jml as $j) {
-							 	 ?>
-							 	 <td><?php echo $j['jmlts2']; ?></td>
-							 	 <td><?php echo $j['jmlts1']; ?></td>
-							 	 <td><?php echo $j['jmlts']; ?></td>
-							 	 <td><?php echo $j['jmltotal']; ?></td>
-							 	<?php } ?>
-								 </tr>
 							</tbody>
 							</table>
 							<!-- <div class="btn-group">
@@ -222,7 +211,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div> -->
 							
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a721_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Aps_a721_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn blue">
 										Export To Excel
 									</button>

@@ -172,7 +172,7 @@ CREATE TABLE `dana_pengmas` (
 
 LOCK TABLES `dana_pengmas` WRITE;
 
-insert  into `dana_pengmas`(`id`,`kd_prodi`,`jns_dana`,`sumber_dana`,`tahun`,`judul_kegiatan`,`jumlah_dana`) values (1,'P001',4,'PT. Pasim Sentra Utama Duit',2014,'Pelatihan Penggunaan Microsoft Word pada Ibu-Ibu PKK Desa Cileunyi Wetan',10.0),(2,'P001',4,'PT. Pasim Sentra Utama',2014,'Pelatihan Penggunaan Microsoft Excel pada Ibu-Ibu PKK Desa Cileunyi Wetan',5.8),(3,'P001',3,'Dinas Koprasi dan UKM Kab. Bandung Barat',2014,'Peningkatan Kemampuan Kapasitas Manajemen Keuangan Koperasi   Tunas Harapan berbasis Aplikasi Komput',8.0),(4,'P001',4,'PT. Valanino',2015,'Peningkatan Efektivitas Pembuatan Surat dengan Menggunakan ',6.1),(5,'P001',4,'PT. Valanino',2015,'Peningkatan Efektifitas Pengolahan Data dengan Menggunakan ',6.2),(6,'P002',4,'Ares Co.Ltd',2015,'Implementasi Sistem Informasi berbasis Komputer Untuk Pengembangan Koperasi Produsen Kopi Margamulya',6.3),(7,'P002',3,'Implementasi Sistem Informasi berbasis Komputer Un',2016,'Penerapan Sistem Informasi Akuntansi dalam Kegiatan Operasional pada \r\nKoperasi Pilar Jaya',8.4);
+insert  into `dana_pengmas`(`id`,`kd_prodi`,`jns_dana`,`sumber_dana`,`tahun`,`judul_kegiatan`,`jumlah_dana`) values (1,'P001',4,'PT. Pasim Sentra Utama Duit',2014,'Pelatihan Penggunaan Microsoft Word pada Ibu-Ibu PKK Desa Cileunyi Wetan',10.0),(2,'P001',4,'PT. Pasim Sentra Utama',2014,'Pelatihan Penggunaan Microsoft Excel pada Ibu-Ibu PKK Desa Cileunyi Wetan',5.8),(3,'P001',3,'Dinas Koprasi dan UKM Kab. Bandung Barat',2014,'Peningkatan Kemampuan Kapasitas Manajemen Keuangan Koperasi   Tunas Harapan berbasis Aplikasi Komput',8.0),(4,'P001',4,'PT. Valanino',2015,'Peningkatan Efektivitas Pembuatan Surat dengan Menggunakan ',6.1),(5,'P001',4,'PT. Valanino',2015,'Peningkatan Efektifitas Pengolahan Data dengan Menggunakan ',6.2),(6,'P002',4,'Ares Co.Ltd',2015,'Implementasi Sistem Informasi berbasis Komputer Untuk Pengembangan Koperasi Produsen Kopi Margamulya',6.3),(7,'P002',3,'PT. Pasim Sentra Utama',2016,'Penerapan Sistem Informasi Akuntansi dalam Kegiatan Operasional pada \r\nKoperasi Pilar Jaya',8.4);
 
 UNLOCK TABLES;
 
@@ -534,7 +534,7 @@ CREATE TABLE `jns_dosen` (
 
 LOCK TABLES `jns_dosen` WRITE;
 
-insert  into `jns_dosen`(`kd_jns`,`jns_dosen`) values (1,'TETAP'),(2,'TIDAK TETAP');
+insert  into `jns_dosen`(`kd_jns`,`jns_dosen`) values (1,'TETAP'),(2,'TIDAK TETAP'),(3,'PENSIUN/BERHENT');
 
 UNLOCK TABLES;
 
@@ -829,13 +829,13 @@ CREATE TABLE `kegiatan_pkm` (
   KEY `FK_kegiatan_pkm` (`kd_jns`),
   CONSTRAINT `FK_kegiatan_pkm` FOREIGN KEY (`kd_jns`) REFERENCES `sumber_biaya` (`kd_jns`),
   CONSTRAINT `FK_pkm_prodi` FOREIGN KEY (`kd_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 /*Data for the table `kegiatan_pkm` */
 
 LOCK TABLES `kegiatan_pkm` WRITE;
 
-insert  into `kegiatan_pkm`(`id`,`kd_jns`,`kd_prodi`,`ts_2`,`ts_1`,`ts`) values (1,1,'P001',5,10,5),(2,2,'P001',0,0,0),(3,3,'P001',0,0,0),(4,4,'P001',6,6,6),(5,5,'P001',0,0,1),(6,1,'P002',5,10,4),(7,2,'P002',0,0,0),(8,3,'P002',0,0,0),(9,4,'P002',4,2,5),(10,5,'P002',0,0,1);
+insert  into `kegiatan_pkm`(`id`,`kd_jns`,`kd_prodi`,`ts_2`,`ts_1`,`ts`) values (1,1,'P001',5,10,5),(2,2,'P001',0,0,0),(3,3,'P001',0,0,0),(4,4,'P001',6,6,6),(5,5,'P001',0,0,1),(6,1,'P002',5,10,4),(7,2,'P002',0,0,0),(8,3,'P002',0,0,0),(9,4,'P002',4,2,5),(10,5,'P002',0,0,1),(11,6,'P002',1,0,1),(12,7,'P002',0,0,0);
 
 UNLOCK TABLES;
 
@@ -884,7 +884,7 @@ CREATE TABLE `masastudi_ipk` (
 
 LOCK TABLES `masastudi_ipk` WRITE;
 
-insert  into `masastudi_ipk`(`kd_prodi`,`rata_masa_std`,`rata_ipk`,`keterangan`,`id`) values ('P001',3.2,3.59,'Bagus','1'),('P002',4.0,3.45,NULL,'2');
+insert  into `masastudi_ipk`(`kd_prodi`,`rata_masa_std`,`rata_ipk`,`keterangan`,`id`) values ('P001',3.2,3.59,'Bagus','1'),('P002',4.0,3.45,NULL,'2'),('P002',7.0,8.90,NULL,'3');
 
 UNLOCK TABLES;
 
@@ -1111,7 +1111,7 @@ CREATE TABLE `persentase_llsn` (
 
 LOCK TABLES `persentase_llsn` WRITE;
 
-insert  into `persentase_llsn`(`id_prodi`,`persen`) values ('P001',93.28);
+insert  into `persentase_llsn`(`id_prodi`,`persen`) values ('P001',93.28),('P002',89.00);
 
 UNLOCK TABLES;
 
@@ -1322,13 +1322,13 @@ CREATE TABLE `sumber_biaya` (
   `kd_jns` int(2) NOT NULL AUTO_INCREMENT,
   `jns_sumber` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`kd_jns`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 /*Data for the table `sumber_biaya` */
 
 LOCK TABLES `sumber_biaya` WRITE;
 
-insert  into `sumber_biaya`(`kd_jns`,`jns_sumber`) values (1,'Pembiayaan sendiri'),(2,'PT yang bersangkutan'),(3,'Kemristekdikti'),(4,'Institusi dalam negeri di luar'),(5,'Institusi luar negeri');
+insert  into `sumber_biaya`(`kd_jns`,`jns_sumber`) values (1,'Pembiayaan sendiri'),(2,'PT yang bersangkutan'),(3,'Kemristekdikti'),(4,'Institusi dalam negeri di luar'),(5,'Institusi luar negeri'),(6,'Depdiknas'),(7,'Institusi dalam negeri di luar Depdiknas');
 
 UNLOCK TABLES;
 
@@ -1440,7 +1440,7 @@ CREATE TABLE `wkt_tunggu_llsn` (
 
 LOCK TABLES `wkt_tunggu_llsn` WRITE;
 
-insert  into `wkt_tunggu_llsn`(`id_prodi`,`waktu`) values ('P001',0.11);
+insert  into `wkt_tunggu_llsn`(`id_prodi`,`waktu`) values ('P001',0.11),('P002',0.11);
 
 UNLOCK TABLES;
 

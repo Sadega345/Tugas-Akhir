@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>Butir 5.5.2 : Pelaksanaan pembimbingan karya/tugas akhir</title>
+<title>BUTIR 5.5.2 : PENYELESAIAN TUGAS AKHIR ATAU SKRIPSI</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Butir 5.5.2 : Pelaksanaan pembimbingan karya/tugas akhir
+								<i class="fa fa-edit"></i>BUTIR 5.5.2 : PENYELESAIAN TUGAS AKHIR ATAU SKRIPSI
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -100,39 +100,30 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="#">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
+											Load 
 											</button>
 											</a>
 										</div>
 									</div>
 								</div>
 							</div>
-							<table class="table table-striped table-bordered table-hover" id="sample_1">
+							<table>
 							<thead>
-								 <tr>
-									 <th>No</th>
-									 <th>Nama Dosen Pembimbing</th>
-									 <th>Jumlah Mahasiswa</th>
-									 <th rowspan="2">Aksi</th>
-								 </tr>
+								<tr>
+									<td></td>
+									<td><p>5.5.2 Rata-rata lama penyelesaian tugas akhir/skripsi pada tiga tahun terakhir :</p></td>
+									<td><input type="text" name="" value=""></td>
+									<td>bulan</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><p>Menurut kurikulum tugas akhir direncanakan </p></td>
+									<td><input type="text" name="" value=""></td>
+									<td>semester</td>
+								</tr>
 							</thead>
-							<tbody>
-							<tr>
-							<?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?>
-							 	<td><?php echo $no++; ?></td>
-							 	<td><?php echo $d['nama_dosen']; ?></td>
-							 	<td><?php echo $d['jml_mhs']; ?></td>
-							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Apd_a552_excel/ubah/".$d['id'];?>" >Edit</a>
-								</td>
-							 </tr>	
-							 <?php } ?>
-							</tbody>
 							</table>
 							<!-- <div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a552_excel/ubah";?>">

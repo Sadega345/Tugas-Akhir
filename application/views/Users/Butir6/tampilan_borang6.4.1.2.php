@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title> BUTIR 6.4.1 : Pustaka </title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -66,7 +67,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('Userss/sidebar_Userss.php');
+			$this->load->view('Users/sidebar_Users.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 
@@ -99,29 +100,13 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="#">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
+											Load
 											</button>
 											</a>
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
@@ -132,86 +117,51 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th>Nama Jurnal</th>
 									 <th>Rincian nomor dan tahun</th>
 									 <th>Jumlah</th>
+									 <th>Aksi</th>
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
+								<?php foreach ($row1 as $r) {
+								?>
 								<tr>
-								 	<td rowspan="3">Jurnal Terakreditasi DIKTI </td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								 	<td rowspan="<?php echo $r['row1'] ?>">Jurnal Terakreditasi DIKTI </td>
+									 <?php } ?>
+									 <?php 
+									 	$no=1;
+									 	foreach ($data1 as $d) {
+									  ?>
+								 	<td><?php echo $no++; ?></td>
+								 	<td><?php echo $d['nm_jurnal']; ?></td>
+								 	<td><?php echo $d['rincian']; ?></td>
+								 	<td><?php echo $d['jml']; ?></td>
+								 	<td class="center">
+									<a href="#" >Edit</a>
+									</td>
 								 </tr>
+								 <?php } ?>
+								 	<?php foreach ($row2 as $r) {
+								 ?>
 								 <tr>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								 	<td rowspan="<?php echo $r['row2']; ?>">Jurnal Internasional</td>
+									 <?php } ?>
+									 <?php 
+									 	$no=1;
+									 	foreach ($data2 as $d) {
+									  ?>
+								 	<td><?php echo $no++; ?></td>
+								 	<td><?php echo $d['nm_jurnal']; ?></td>
+								 	<td><?php echo $d['rincian']; ?></td>
+								 	<td><?php echo $d['jml']; ?></td>
+								 	<td class="center">
+									<a href="#" >Edit</a>
+									</td>
 								 </tr>
-								 <tr>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 </tr>
-								 <tr>
-								 	<td rowspan="3">Jurnal Internasional</td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 </tr>
-								  <tr>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 </tr>
-								  <tr>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
-								 </tr>
+								 <?php } ?>
 							</tbody>
 							</table>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-											Ubah 
-									</button>
-								</a>
-							</div>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-										Hapus 
-									</button>
-								</a>
-							</div>
-							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Aps_a6412_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
+									<button id="sample_editable_1_new" class="btn blue">
 										Export ke Excel 
 									</button>
 								</a>

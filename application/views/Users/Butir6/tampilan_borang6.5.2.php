@@ -100,9 +100,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/";?>">
+											<a href="#">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
+											Load
 											</button>
 											</a>
 										</div>
@@ -135,33 +135,32 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	 <td><?php echo $d['lan'] ?></td>
 							 	 <td><?php echo $d['wan'] ?></td>
 							 	 <td class="center">
-									<a href="<?php echo base_url()."index.php/Apd_a652_excel/ubah/".$d['id'];?>" >Edit</a>
-								</td>
-							 	 
+									<a href="<?php echo base_url()."index.php/Aps_a652_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>	 
 							 </tr>
 							 <?php } ?>
 							 
 							 <tr>
-							 	<td >Total</td>
+							 	<th>Total</th>
 							 <?php 
 								foreach ($totmanual as $d ) { 
 							 ?>
-							 	<td><?php echo $d['Tot_Manual']; ?></td>
+							 	<th><?php echo $d['Tot_Manual']; ?></th>
 							 <?php } ?>
 							 	<?php 
 								foreach ($totkomp as $d ) { 
 							 ?>
-							 	<td><?php echo $d['Tot_Komp']; ?></td>
+							 	<th><?php echo $d['Tot_Komp']; ?></th>
 							 <?php } ?>
 							 	<?php 
 								foreach ($totlan as $d ) { 
 							 ?>
-							 	<td><?php echo $d['Tot_Lan']; ?></td>
+							 	<th><?php echo $d['Tot_Lan']; ?></th>
 							 <?php } ?>
 							 	<?php 
 								foreach ($totwan as $d ) { 
 							 ?>
-							 	<td><?php echo $d['Tot_Wan']; ?></td>
+							 	<th><?php echo $d['Tot_Wan']; ?></th>
 							 <?php } ?>
 							 	
 							 </tr>
@@ -176,7 +175,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div> -->
 							
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a652_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Aps_a652_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn blue">
 										Export To Excel
 									</button>

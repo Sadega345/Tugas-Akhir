@@ -100,7 +100,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="<?php echo base_url()."index.php/Aps_b411_excel/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
 											Load
 											</button>
@@ -116,7 +116,10 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2">No</th>
 									 <th rowspan="2"><center>Hal</center></th>
 									 <th rowspan="2"><center>Total di Unit Pengelola**</center></th>
-									 <th><center>Jumlah Dosen yang bertugas pada PS: *</center></th>
+									 <?php foreach ($cols as $c) {
+									 ?>
+									 <th colspan="<?php echo $c['cols']; ?>"><center>Jumlah Dosen yang bertugas pada PS: *</center></th> <?php } ?>
+									 <th rowspan="2">Aksi</th>
 								 </tr>
 								 <tr>
 								 <?php 
@@ -278,7 +281,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div> -->
 							
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_b411_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/ApS_b411_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn blue">
 										Export To Excel 
 									</button>

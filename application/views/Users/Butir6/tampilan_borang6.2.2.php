@@ -100,7 +100,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/";?>">
+											<a href="<?php echo base_url()."index.php/Aps_a622_excel/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
 											Tambah <i class="fa fa-plus"></i>
 											</button>
@@ -131,7 +131,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['sumber_dana']; ?></td>
 							 	<td><?php echo $d['jml_dana']; ?></td>
 							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Apd_a622_excel/ubah/".$d['id'];?>" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Aps_a622_excel/ubah/".$d['id'];?>" >Edit</a>
 								</td>
 							 </tr>
 							 <?php } ?>
@@ -154,7 +154,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div> -->
 							
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a622_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Aps_a622_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn blue">
 										Export To Excel
 									</button>

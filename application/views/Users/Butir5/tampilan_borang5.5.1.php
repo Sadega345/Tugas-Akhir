@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Butir 5.5.1 : PEMBIMBINGAN TUGAS AKHIR ATAU SKRIPSI</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -66,7 +67,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('Userss/sidebar_Userss.php');
+			$this->load->view('Users/sidebar_Users.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 
@@ -99,70 +100,79 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="<?php echo base_url()."index.php/Aps_a551_excel/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
 											Tambah <i class="fa fa-plus"></i>
 											</button>
 											</a>
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
+							<table>
+								<tr>
+									<td colspan="4"><strong>5.5.1 Jelaskan pelaksanaan pembimbingan Tugas Akhir atau Skripsi yang diterapkan pada PS ini.</strong></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td> > Rata-rata banyaknya mahasiswa per dosen pembimbing tugas akhir (TA):</td>
+									<?php foreach ($avg as $a) {
+									 ?>
+									<td><input type="text" name="avg" value="<?php echo $a['avg']; ?>" readonly></td>
+									<?php } ?>
+									<td> mahasiswa/dosen TA</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td> > Rata-rata jumlah pertemuan dosen-mahasiswa untuk menyelesaikan tugas akhir </td>
+									<td><input type="text" name="avg" value="" readonly></td>
+									<td>kali dari mulai mengambil TA hingga selesai</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td> > Ketersediaan panduan pembimbingan tugas akhir  </td>
+									<td><input type="text" name="avg" value="" readonly></td>
+									<td></td>
+								</tr>
+							</table>
+							<br>
+							<p><strong>Daftar nama dosen pembimbing dan jumlah mahasiswa:</strong></p>
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
 									 <th>No</th>
 									 <th>Nama Dosen Pembimbing</th>
 									 <th>Jumlah Mahasiswa</th>
+									 <th>Aksi</th>
 								 </tr>
 								 <tr align="center">
 								 	<td>(1)</td>
 								 	<td>(2)</td>
 								 	<td>(3)</td>
+								 	<td></td>
 								 </tr>
 							</thead>
 							<tbody>
+								<?php 
+									$no=1;
+									foreach ($data as $d) {
+								 ?>
 								 <tr>
-								 	<td></td>
-								 	<td></td>
-								 	<td></td>
+								 	<td><?php echo $no++; ?></td>
+								 	<td><?php echo $d['nama_dosen']; ?></td>
+								 	<td><?php echo $d['jml_mhs']; ?></td>
+								 	<td class="center">
+									<a href="#">Edit</a>
+								</td>
 								 </tr>
+								<?php } ?>
 							</tbody>
 							</table>
 							<br><br>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-										Ubah 
-									</button>
-								</a>
-							</div>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn green">
-										Hapus 
-									</button>
-								</a>
-							</div>
-							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Aps_a551_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
+									<button id="sample_editable_1_new" class="btn blue">
 										Export ke Excel 
 									</button>
 								</a>

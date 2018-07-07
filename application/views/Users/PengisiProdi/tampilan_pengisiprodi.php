@@ -62,12 +62,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <body class="page-header-fixed page-quick-sidebar-over-content">
 	<!-- BEGIN HEADER -->
 		<?php 
-			$this->load->view('User/header_user.php');
+			$this->load->view('Users/header_users.php');
 		?>
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('User/sidebar_user.php');
+			$this->load->view('Users/sidebar_users.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 
@@ -118,7 +118,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</div>
 							<div style="overflow-x:auto;">
-							<form action="<?php echo base_url()."index.php/Prodi_excel/ubah"; ?>" method="POST">
+							<form action="<?php echo base_url()."index.php/Prodis_excel/ubah"; ?>" method="POST">
 							<table id="sample_1">
 							<thead>
 								<tr>
@@ -265,7 +265,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							</form>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Prodi_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Prodis_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn blue">
 										Export To excel
 									</button>

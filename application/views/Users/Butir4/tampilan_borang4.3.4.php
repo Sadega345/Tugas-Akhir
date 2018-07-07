@@ -100,7 +100,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="<?php echo base_url()."index.php/Aps_a434_excel/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
 											Tambah 
 											</button>
@@ -115,7 +115,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								  <tr>
 									 <th rowspan="2"><center>No</center></th>
 									 <th rowspan="2"><center>Nama Dosen Tetap</center></th>
-									 <th rowspan="2"><center>Bidang Keahlian</center></th>
 									 <th rowspan="2"><center>Kode Mata Kuliah</center></th>
 									 <th rowspan="2"><center>Nama Mata Kuliah</center></th>
 									 <th rowspan="2"><center>Jumlah Kelas</center></th>
@@ -135,14 +134,13 @@ License: You must have a valid license purchased only from themeforest(the above
 							 <tr>
 							 	<td><?php echo $no++; ?></td>
 							 	<td><?php echo $d['nama_dosen']; ?></td>
-							 	<td><?php echo $d['bid_keahlian']; ?></td>
 							 	<td><?php echo $d['kode_mk']; ?></td>
 							 	<td><?php echo $d['nama_mk']; ?></td>
 							 	<td><?php echo $d['jum_kls']; ?></td>
 							 	<td><?php echo $d['jp_rencana']; ?></td>
 							 	<td><?php echo $d['jp_dilaksanakan']; ?></td>
 							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Apd_a434_excel/ubah/".$d['kode_mk'];?>" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Aps_a434_excel/ubah/".$d['kode_mk'];?>" >Edit</a>
 								</td>
 							 </tr>
 							 <?php } ?>
@@ -172,7 +170,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div> -->
 							
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a434_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Aps_a434_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn blue">
 										Export To Excel 
 									</button>
