@@ -11,8 +11,9 @@ class Aps_a541_model extends CI_Model {
 
 // Listing
  public function listing() {
+ 	$kdprodi = $this->session->userdata('kd_prodi');
  $data=$this->db->query('SELECT d.nama_dosen, p.j_mhs_bimbingan,p.rata2_pertemuan,p.Id FROM pembimbing_akd p INNER JOIN
- dosen_tbl d ON p.id_dosen=d.id_dosen WHERE p.kd_prodi="p002"');
+ dosen_tbl d ON p.id_dosen=d.id_dosen WHERE p.kd_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 
@@ -37,12 +38,14 @@ public function GetDosen()
 		return $data->result_array();
 	}
  public function totbimbingan() {
- $data=$this->db->query('SELECT SUM(j_mhs_bimbingan)AS jum_bimbingan FROM pembimbing_akd WHERE kd_prodi="p002"');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('SELECT SUM(j_mhs_bimbingan)AS jum_bimbingan FROM pembimbing_akd WHERE kd_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 
  public function ratapertemuan() {
- $data=$this->db->query('SELECT AVG(j_mhs_bimbingan)AS rata_pertemuan FROM pembimbing_akd WHERE kd_prodi="p002"');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('SELECT AVG(j_mhs_bimbingan)AS rata_pertemuan FROM pembimbing_akd WHERE kd_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 

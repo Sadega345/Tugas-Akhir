@@ -132,7 +132,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $d['TS_1']; ?></td>
 								<td><?php echo $d['TS']; ?></td>
 								<td class="center">
-									<a href="#" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Aps_a711_excel/ubah/".$d['id'];?>" >Edit</a>
 								</td>
 
 							</tr>
@@ -141,8 +141,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tbody>
 							</table>
 
-							<p><strong>7.1.2 Adakah mahasiswa tugas akhir yang dilibatkan dalam penelitian dosen dalam tiga tahun terakhir?  <input type="text" name=""></strong></p>
-							<p><strong>Jika ada, banyaknya mahasiswa PS yang ikut serta dalam penelitian dosen adalah <input type="text" name=""> orang, dari <input type="text" name=""> mahasiswa yang melakukan tugas akhir melalui skripsi.</strong></p>
+							<p><strong>7.1.2 Adakah mahasiswa tugas akhir yang dilibatkan dalam penelitian dosen dalam tiga tahun terakhir?  <input type="text" name="" readonly=""></strong></p>
+							<p><strong>Jika ada, banyaknya mahasiswa PS yang ikut serta dalam penelitian dosen adalah <input type="text" name="" readonly=""> orang, dari <input type="text" name="" readonly=""> mahasiswa yang melakukan tugas akhir melalui skripsi.</strong></p>
 							<br>
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Aps_a711_excel/export_excel";?>">

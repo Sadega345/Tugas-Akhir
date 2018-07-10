@@ -126,7 +126,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</div>
 							<div style="overflow-x:auto;">
-							<form action="<?php echo base_url()."index.php/Apd_a652_excel/do_edit"; ?>" method="POST">
+							<form action="<?php echo base_url()."index.php/Aps_a652_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -180,7 +180,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							</form>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a652_excel";?>">
+								<a href="<?php echo base_url()."index.php/Aps_a652_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal
 									</button>

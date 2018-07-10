@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>Butir 7.1.2 : JUDUL ARTIKEL ILMIAH/KARYA ILMIAH/KARYA SENI/BUKU</title>
+<title>Butir 7.1.3 : JUDUL ARTIKEL ILMIAH/KARYA ILMIAH/KARYA SENI/BUKU</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Butir 7.1.2 : JUDUL ARTIKEL ILMIAH/KARYA ILMIAH/KARYA SENI/BUKU
+								<i class="fa fa-edit"></i>Butir 7.1.3 : JUDUL ARTIKEL ILMIAH/KARYA ILMIAH/KARYA SENI/BUKU
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -126,7 +126,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</div>
 							<div style="overflow-x:auto;">
-							<form action="<?php echo base_url()."index.php/Apd_a712_excel/do_edit"; ?>" method="POST">
+							<form action="<?php echo base_url()."index.php/Aps_a713_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -158,13 +158,13 @@ License: You must have a valid license purchased only from themeforest(the above
 							<tr>
 							 	<td>1</td>
 							 	<td><?php echo $JUDUL; ?></td>
-							 	<td><input type="text" name="nama_dosen" value="<?php echo $nama_dosen; ?>"></td>
-							 	<td><input type="text" name="publikasi" value="<?php echo $publikasi; ?>"></td>
-							 	<td><input type="text" name="thn_publikasi" value="<?php echo $thn_publikasi; ?>"></td>
+							 	<td><input type="text" name="nama_dosen" value="<?php echo $nama_dosen; ?>" class="form-control"></td>
+							 	<td><input type="text" name="publikasi" value="<?php echo $publikasi; ?>" class="form-control"></td>
+							 	<td><input type="text" name="thn_publikasi" value="<?php echo $thn_publikasi; ?>" class="form-control"></td>
 
-							 	<td><input type="checkbox" name="lokal[]" class="form-control" value="v" ></td>
-							 	<td><input type="checkbox" name="nasional[]" class="form-control" value="v" ></td>
-							 	<td><input type="checkbox" name="internasional[]" class="form-control" value="v" ></td>
+							 	<td><input type="checkbox" name="lokal" class="form-control" value="v" class="form-control"></td>
+							 	<td><input type="checkbox" name="nasional" class="form-control" value="v" class="form-control"></td>
+							 	<td><input type="checkbox" name="internasional" class="form-control" value="v" class="form-control"></td>
 							 </tr>
 							 
 							</tbody>
@@ -179,7 +179,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>		
 							</form>					
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a712_excel";?>">
+								<a href="<?php echo base_url()."index.php/Aps_a713_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal
 									</button>

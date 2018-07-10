@@ -63,9 +63,9 @@ public function index() {
 	// 	"id"=>$res[0]['id'],
 	// );
 
-	if ($id==1) {
+	if ($id==10) {
 		$this->load->view('Users/Butir3B/edit_borang3.1.2.php',$data);
-	}else if ($id==5) {
+	}else if ($id==15) {
 		$this->load->view('Users/Butir3B/edit_borang3.1.2(2).php',$data);
 	}else if ($id==3) {
 		$this->load->view('Users/Butir3B/edit_borang3.1.2(3).php',$data);

@@ -141,7 +141,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td><?php echo $d['nasional']; ?></td>
 								 	<td><?php echo $d['internasional']; ?></td>
 								 	<td class="center">
-										<a href="<?php echo base_url()."index.php/Aps_a712_excel/ubah/".$d['id'];?>" >Edit</a>
+										<a href="<?php echo base_url()."index.php/Aps_a713_excel/ubah/".$d['id'];?>" >Edit</a>
 									</td>
 								 </tr>
 								 <input type="hidden" name="id" value="<?php echo $d['id']; ?>">

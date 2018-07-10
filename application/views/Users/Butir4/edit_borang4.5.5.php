@@ -141,19 +141,22 @@ License: You must have a valid license purchased only from themeforest(the above
 							<tbody>
 							<tr>
 							 	<td>1</td>
-							 	<td><input type="text" name="" value="<?php echo $nama_dosen; ?>" ></td>
-							 	<td><input type="text" name="nm_organisasi" value="<?php echo $nm_organisasi; ?>" ></td>
-							 	<td><input type="text" name="thn_awal" value="<?php echo $thn_awal; ?>" ></td>
-							 	<td><input type="text" name="thn_akhir" value="<?php echo $thn_akhir; ?>" ></td>
-							 	<td><input type="text" name="internasional" value="<?php echo $internasional; ?>"></td>
-							 	<td><input type="checkbox" name="nasional" value="<?php echo $nasional; ?>"></td>
-							 	<td><input type="checkbox" name="lokal" value="<?php echo $lokal; ?>"></td>
+							 	<td><?php echo $nama_dosen; ?></td>
+							 	<td><input type="text" name="nm_organisasi" value="<?php echo $nm_organisasi; ?>" class="form-control"></td>
+							 	<td><input type="text" name="thn_awal" value="<?php echo $thn_awal; ?>" class="form-control"></td>
+							 	<td><input type="text" name="thn_akhir" value="<?php echo $thn_akhir; ?>"class="form-control" ></td>
+							 	<td><input type="text" name="internasional" value="<?php echo $internasional; ?>"class="form-control"></td>
+							 	<td><input type="checkbox" name="nasional" value="v"class="form-control"></td>
+							 	<td><input type="checkbox" name="lokal" value="v"class="form-control"></td>
 							 </tr>
 							</tbody>
 							</table>
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
+							</div>
 							<div class="btn-group">
 								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 							</div>
+							</form>
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Aps_a455_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
@@ -161,8 +164,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									</button>
 								</a>
 							</div>
-						</form>
-						</div>
+						
+						
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

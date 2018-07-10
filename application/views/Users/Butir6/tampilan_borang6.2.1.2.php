@@ -101,9 +101,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="col-md-6">
 										<div class="btn-group">
 											<a href="#">
-											<button id="sample_editable_1_new" class="btn green">
-											Load 
-											</button>
+												<button id="sample_editable_1_new" class="btn green">
+													Load 
+												</button>
 											</a>
 										</div>
 									</div>

@@ -48,9 +48,9 @@ public function index() {
 		$publikasi=$_POST['publikasi'];
 		$thn_publikasi=$_POST['thn_publikasi'];
 		// $lokal=$_POST['lokal'];
-		$lokal = implode(',', $_POST['lokal']);
-		$nasional=implode(',', $_POST['nasional']);
-		$internasional=implode(',', $_POST['internasional']);
+		$lokal =  $_POST['lokal'];
+		$nasional= $_POST['nasional'];
+		$internasional= $_POST['internasional'];
 		$id=$_POST['id'];
 		
 		$data_update=array(

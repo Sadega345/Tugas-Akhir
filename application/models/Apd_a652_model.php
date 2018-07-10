@@ -13,7 +13,9 @@ class Apd_a652_model extends CI_Model {
 
 public function listing1() {
 	$kdprodi = $this->session->userdata('kd_prodi');
+	
 $data=$this->db->query('SELECT manual,komp_tnp_jar,lan,wan,jenis_data,id FROM aksesbilitas_data WHERE kd_prodi='."'$kdprodi'");
+
 return $data->result_array();
 }
 

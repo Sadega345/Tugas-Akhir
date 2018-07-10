@@ -58,7 +58,6 @@ public function index() {
 			"komp_tnp_jar"=>$komp_tanpa_jaringan,
 			"lan"=>$lan,
 			"wan"=>$wan,
-			"id"=>$id,
 			
 		);
 		$where=array('id'=>$id);

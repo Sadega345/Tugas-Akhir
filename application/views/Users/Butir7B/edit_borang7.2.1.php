@@ -125,7 +125,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
-							<form action="<?php echo base_url()."index.php/Apd_b721_excel/do_edit"; ?>" method="POST">
+							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Aps_b721_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -151,12 +152,13 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><input type="text" name="Tot_Ts2" class="form-control" value="<?php echo $Tot_Ts2; ?>"></td>
 							 	<td><input type="text" name="Tot_Ts1" class="form-control" value="<?php echo $Tot_Ts1; ?>"></td>
 							 	<td><input type="text" name="Tot_Ts" class="form-control" value="<?php echo $Tot_Ts; ?>"></td>
-							 	<td><input type="text" name="Jum_dana2014" class="form-control" value="<?php echo $Jum_dana2014; ?>"></td>
-							 	<td><input type="text" name="Jum_dana2015" class="form-control" value="<?php echo $Jum_dana2015; ?>"></td>
-							 	<td><input type="text" name="Jum_dana2016" class="form-control" value="<?php echo $Jum_dana2016; ?>"></td>
+							 	<td><?php echo $Jum_dana2014; ?></td>
+							 	<td><?php echo $Jum_dana2015; ?></td>
+							 	<td><?php echo $Jum_dana2016; ?></td>
 							 </tr>	
 							</tbody>
 							</table>
+							</div>
 							<input type="hidden" name="KD_JNS" value="<?php echo $KD_JNS; ?>">
 							<div class="btn-group">
 								<button id="sample_editable_1_new" class="btn blue">
@@ -165,7 +167,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							</form>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_b721_excel";?>">
+								<a href="<?php echo base_url()."index.php/Aps_b721_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal
 									</button>

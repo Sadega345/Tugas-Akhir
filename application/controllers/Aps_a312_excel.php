@@ -50,7 +50,7 @@ $data=$this->aps_a312_model->listing();
 
   public function ubah($id){
  	$this->model_squrity->getsqurity();
-	$res=$this->aps_a312_model->update("id='$id'");
+	$res=$this->aps_a312_model->update("where id='$id'");
 	$data=array(
 		"dy_tampung"=>$res[0]['dy_tampung'],
 		"jml_ikutseleksi"=>$res[0]['jc_mhs_ikt_seleksi'],
@@ -66,8 +66,8 @@ $data=$this->aps_a312_model->listing();
 
  public function do_edit(){
 		$dy_tampung=$_POST['dy_tampung'];
-		$jml_ikutseleksi=$_POST['jc_mhs_ikt_seleksi'];
-		$jml_lulusseleksi=$_POST['jc_mhs_lls_seleksi'];
+		$jml_ikutseleksi=$_POST['jml_ikutseleksi'];
+		$jml_lulusseleksi=$_POST['jml_lulusseleksi'];
 		$j_maba_nonreg=$_POST['j_maba_nonreg'];
 		$j_maba_trf=$_POST['j_maba_trf'];
 		$j_tot_nonreg=$_POST['j_tot_nonreg'];

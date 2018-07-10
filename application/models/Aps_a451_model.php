@@ -21,6 +21,12 @@ class Aps_a451_model extends CI_Model {
  return $data->result_array();
  }
 
+ public function GetProdi()
+	{
+		$data=$this->db->query("select kode_prodi from prodi_tbl ");
+		return $data->result_array();
+	}
+
  public function rubah($tablename,$data,$where){
 		$res=$this->db->update($tablename,$data,$where);
 		return $res;

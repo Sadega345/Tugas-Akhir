@@ -112,6 +112,12 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="col-md-10">
 									<div class="row">
 										<div class="form-group">
+											<label>Kode Prodi</label>
+											<input type="text" class="form-control" name="kode_prodi" value="<?php echo $this->session->userdata('kd_prodi'); ?>" readonly="">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
 											<label>Nama Tenaga Ahli/Pakar</label>
 											<input type="text" class="form-control" name="nama_pakar">
 										</div>

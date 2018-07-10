@@ -151,7 +151,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['jp_rencana']; ?></td>
 							 	<td><?php echo $d['jp_dilaksanakan']; ?></td>
 							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Aps_a435_excel/ubah/".$d['id'];?>" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Aps_a435_excel/ubah/".$d['kode_mk'];?>" >Edit</a>
 									||
 								 	<a href="<?php echo base_url()."index.php/Aps_a435_excel/do_hapus/".$d['id'];?>" id="alerthapus"">Hapus</a>
 								</td>

@@ -41,6 +41,7 @@ public function index() {
 		$internasional=$_POST['internasional'];
 		$nasional=$_POST['nasional'];
 		$lokal=$_POST['lokal'];
+		$id=$_POST['id'];
 		
 		$data_update=array(
 			"nm_organisasi"=>$nm_organisasi,
@@ -91,7 +92,7 @@ public function export_excel(){
 			'nasional' => $nasional,
 			'lokal' => $lokal,
 		);
-		$res=$this->Aps_a452_model->insert('keikutsertaan_org',$data_insert);
+		$res=$this->Aps_a455_model->insert('keikutsertaan_org',$data_insert);
 		if ($res>=1) {
 			redirect('Aps_a455_excel');
 		}else {

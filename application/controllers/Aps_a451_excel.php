@@ -69,20 +69,20 @@ public function export_excel(){
 	public function do_tambah(){
 		$this->model_squrity->getsqurity();
 		// $id=$_POST['id'];
-		$kd_prodi=$_POST['kd_prodi'];
+		$kd_prodi=$_POST['kode_prodi'];
 		$nama_pakar=$_POST['nama_pakar'];
 		$instansi=$_POST['instansi'];
 		$judul_keg=$_POST['judul_keg'];
 		$pelaksanaan=$_POST['pelaksanaan'];
 		$data_insert=array(
-			// 'id' => $id,
-			'kd_prodi' =>$kd_prodi,
+			'kd_prodi'=>$kd_prodi,
 			'nama_pakar'=>$nama_pakar,
 			'instansi'=>$instansi,
 			'judul_keg' => $judul_keg,
 			'pelaksanaan' => $pelaksanaan
 		);
 		$res=$this->Aps_a451_model->insert('kegiatan_ahli',$data_insert);
+		// print_r($data_insert);die();
 		if ($res>=1) {
 			redirect('Aps_a451_excel');
 		}else {

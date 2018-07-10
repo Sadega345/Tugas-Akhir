@@ -11,8 +11,19 @@ public function __construct()
 
 // Listing
  public function listing() {
-	$data=$this->db->query('select karya from hak_intelektual where kd_prodi="p002"');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+	$data=$this->db->query('SELECT karya,id FROM hak_intelektual WHERE kd_prodi='."'$kdprodi'");
 	return $data->result_array();
  }
+
+  public function update($where="") {
+	 $data= $this->db->query('SELECT karya,id FROM hak_intelektual '.$where);
+	 return $data->result_array();
+ }
+
+ 	public function rubah($tablename,$data,$where){
+		$res=$this->db->update($tablename,$data,$where);
+		return $res;
+	}
 
 }

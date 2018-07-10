@@ -163,13 +163,14 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</div>
 							</div>
+							<input type="hidden" name="id">
 							<div class="btn-group">
 								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 							</div>
 							</form>
 							
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Aps_a453_excel";?>">
+								<a href="<?php echo base_url()."index.php/Aps_a455_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal
 									</button>

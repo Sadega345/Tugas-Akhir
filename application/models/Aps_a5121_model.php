@@ -11,17 +11,19 @@ class Aps_a5121_model extends CI_Model {
 
 // Listing
  public function listing1() {
- $data=$this->db->query('select sks,keterangan from jumlah_sks_ps where jns_matkul=1 and id_ps="P002"');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('select sks,keterangan,id from jumlah_sks_ps where jns_matkul=1 and id_ps='."'$kdprodi'");
  return $data->result_array();
  }
 
  public function listing2() {
- $data=$this->db->query('select sks,keterangan from jumlah_sks_ps where jns_matkul=2 and id_ps="P002"');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('select sks,keterangan,id from jumlah_sks_ps where jns_matkul=2 and id_ps='."'$kdprodi'");
  return $data->result_array();
  }
 
  public function update($where="") {
- $data= $this->db->query('SELECT smt,kode_mk,nama_mk,sks_kuliah,sks_praktek,sks_inti,sks_institusi,bobot_tgs,deskripsi,silabus,sap,penyelenggara FROM struktur_kurikulum  '.$where);
+ $data= $this->db->query('select sks,keterangan,id from jumlah_sks_ps '.$where);
  return $data->result_array();
  }
 
@@ -36,7 +38,8 @@ class Aps_a5121_model extends CI_Model {
 }
 
  public function total() {
- $total=$this->db->query('select sum(sks) as total from jumlah_sks_ps where id_ps="P002"');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $total=$this->db->query('select sum(sks) as total from jumlah_sks_ps where id_ps='."'$kdprodi'");
  return $total->result_array();
  }
 

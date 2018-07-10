@@ -49,14 +49,12 @@ public function index() {
 			"ts_2"=>$Tot_Ts2,
 			"ts_1"=>$Tot_Ts1,
 			"ts"=>$Tot_Ts,
-			"Jum_dana2014"=>$Jum_dana2014,
-
-			"Jum_dana2015"=>$Jum_dana2015,
-			"Jum_dana2016"=>$Jum_dana2016,
-			"KD_JNS"=>$KD_JNS,
+			
+			
 			
 		);
 		$where=array('KD_JNS'=>$KD_JNS);
+		// print_r($data_update);die();
 		$res=$this->Aps_b721_model->rubah('kegiatan_pkm',$data_update,$where);
 		if ($res>=1) {
 			redirect('Aps_b721_excel');

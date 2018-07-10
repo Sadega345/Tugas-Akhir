@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>Butir 4.4.1 : DATA DOSEN TIDAK TETAP</title>
+<title>Butir 5.1.2.1 : STRUKTUR KURIKULUM BERDASARKAN URUTAN MK</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Butir 4.4.1 : DATA DOSEN TIDAK TETAP
+								<i class="fa fa-edit"></i>Butir 5.1.2.1 : STRUKTUR KURIKULUM BERDASARKAN URUTAN MK
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -100,11 +100,11 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<!-- <a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
-											Load 
+											Load
 											</button>
-											</a> -->
+											</a>
 										</div>
 									</div>
 									<!-- <div class="col-md-6">
@@ -125,96 +125,44 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
-							<div style="overflow-x:auto;">
-							<form action="<?php echo base_url()."index.php/Aps_a441_excel/do_edit"; ?>" method="POST">
+							<div style="overflow-x:auto;" class="col-md-20">
+							<form action="<?php echo base_url()."index.php/Aps_a5121_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th rowspan="2">No</th>
-									 <th rowspan="2">Nama Dosen Tidak Tetap</th>
-									 <th rowspan="2">NIDN (Nomor Induk Dosen Nasional)</th>
-									 <th rowspan="2">Tanggal Lahir<br> (dd/mm/yyyy)</th>
-									 <th rowspan="2">Jabatan Akademik</th>
-									 <th rowspan="2">Sertifikasi**<br>(Ya/Tidak)</th>
-									 <th colspan="3">S1*</th>
-									 <th colspan="3">S2*</th>
-									 <th colspan="3">S3*</th>
-								 </tr>
-								 <tr>
-								 	<th>PT Asal</th>
-								 	<th>Bidang Keahlian</th>
-								 	<th>Gelar</th>
-								 	<th>PT Asal</th>
-								 	<th>Bidang Keahlian</th>
-								 	<th>Gelar</th>
-								 	<th>PT Asal</th>
-								 	<th>Bidang Keahlian</th>
-								 	<th>Gelar</th>
-								 </tr>
-								 <tr align="center">
-								 	<td>(1)</td>
-								 	<td>(2)</td>
-								 	<td>(3)</td>
-								 	<td>(4)</td>
-								 	<td>(5)</td>
-								 	<td>(6)</td>
-								 	<td>(7)</td>
-								 	<td>(8)</td>
-								 	<td>(9)</td>
-								 	<td>(10)</td>
-								 	<td>(11)</td>
-								 	<td>(12)</td>
-								 	<td>(13)</td>
-								 	<td>(14)</td>
-								 	<td>(15)</td>
+									 <th>No</th>
+									 <th>Jenis Mata Kuliah</th>
+									 <th>SKS</th>
+									 <th>Keterangan</th>
+									 
 								 </tr>
 							</thead>
 							<tbody>
 							
 							<tr>
-							 	<td>1</td>
-							 	<td><input type="text" name="nama_dosen" value="<?php echo $nama_dosen; ?>"></td>
-							 	<td><input type="text" name="nidn" value="<?php echo $nidn; ?>" readonly></td>
-							 	<td><input type="text" name="tgl_lhr" value="<?php echo $tgl_lhr; ?>"></td>
-							 	<td>
-							 		<select name="kd_jab" >
-										<option disabled selected>-- Nama Jabatan --</option>
-										<?php 
-											$data=$this->Aps_a441_model->getjabatan();
-											foreach($data as $d) { ?>
-							                <option value="<?php echo $d['kd_jab'];?>"><?php echo $d['nm_jab_akd'];?></option>
-							            <?php } ?>
-									</select>
-							 	</td>
-							 	<td><input type="text" name="sertifikasi" value="<?php echo $sertifikasi; ?>"></td>
-							 	<td><input type="text" name="ASAL_PT_S1" value="<?php echo $ASAL_PT_S1; ?>"></td>
-							 	<td><input type="text" name="BID_KEAHLIAN_S1" value="<?php echo $BID_KEAHLIAN_S1; ?>"></td>
-							 	<td><input type="text" name="GELAR_S1" value="<?php echo $GELAR_S1; ?>"></td>
-
-							 	<td><input type="text" name="ASAL_PT_S2" value="<?php echo $ASAL_PT_S2; ?>"></td>
-							 	<td><input type="text" name="BID_KEAHLIAN_S2" value="<?php echo $BID_KEAHLIAN_S2; ?>"></td>
-							 	<td><input type="text" name="GELAR_S2" value="<?php echo $GELAR_S2; ?>"></td>
-							 	
-							 	<td><input type="text" name="ASAL_PT_S3" value="<?php echo $ASAL_PT_S3; ?>"></td>
-							 	<td><input type="text" name="BID_KEAHLIAN_S3" value="<?php echo $BID_KEAHLIAN_S3; ?>"></td>
-							 	<td><input type="text" name="GELAR_S3" value="<?php echo $GELAR_S3; ?>"></td>
+								<td><?php echo $id; ?></td>
+								<td>MATA KULIAH PILIHAN</td>
+							 	<td><?php echo $sks; ?></td>
+							 	<td><input type="text" name="keterangan" value="<?php echo $keterangan; ?>"></td>
 							 </tr>
 							</tbody>
 							</table>
-							<input type="hidden" name="nidn" value="<?php echo $nidn; ?>">
+							<input type="hidden" name="id" value="<?php echo $id ?>">
 							</div>
 							<div class="btn-group">
-								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+								<button id="sample_editable_1_new" class="btn blue">
+									Simpan 
+								</button>
 							</div>
 							</form>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Aps_a441_excel";?>">
+								<a href="<?php echo base_url()."index.php/Aps_a5121_excel/";?>">
 									<button id="sample_editable_1_new" class="btn red">
-										Batal 
+										Batal
 									</button>
 								</a>
 							</div>
-						
+
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

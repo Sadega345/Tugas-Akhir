@@ -32,13 +32,15 @@ class CrudFakultas extends CI_Controller {
 			);
 			$res=$this->model_fakultas->insert('fakultas_tbl',$data_insert);
 			if ($res>=1) {
+				$this->session->set_flashdata('pesan','Tambah data berhasil');
 				redirect('Admin/table');
 			}else {
 				$this->session->set_flashdata('info','Inputan Salah ');
 			}
 		}else{
-			redirect('CrudFakultas/tambah');
 			$this->session->set_flashdata('info','Inputan Salah ');
+			redirect('CrudFakultas/tambah');
+			
 		}
 		
 	}

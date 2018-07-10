@@ -10,10 +10,8 @@ class Pengisi_model extends CI_Model {
 //  }
 
 // Listing
-
-
  public function listing($where="") {
-	 $data=$this->db->query('select id,nama,nidn,jabatan,tgl_pengisian from pengisi_borang '.$where );
+	 $data=$this->db->query("select id,nama,nidn,jabatan,tgl_pengisian from pengisi_borang ".$where);
 	 return $data->result_array();
  }
 

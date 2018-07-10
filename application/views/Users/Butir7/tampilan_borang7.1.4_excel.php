@@ -2,7 +2,7 @@
 
 header("Content-type: application/octet-stream");
 
-header("Content-Disposition: attachment; filename=$title.xls");
+header("Content-Disposition: attachment; filename=TABEL DATA BUTIR 7.1.4 : HAK ATAS KEKAYAAN INTELEKTUAL.xls");
 
 header("Pragma: no-cache");
 
@@ -12,31 +12,21 @@ header("Expires: 0");
 <p>TABEL DATA BUTIR 7.1.4 : HAK ATAS KEKAYAAN INTELEKTUAL</p>
 <table border="1" width="50%">
 		<thead>
-			 <tr>
-				 <th>No</th>
-				 <th>Karya *</th>
-			 </tr>
-			 <tr align="center">
-			 	<td>(1)</td>
-			 	<td>(2)</td>
+			<tr>
+				 <th><center>No</center></th>
+				 <th><center>Karya *</center></th>
+				 
 			 </tr>
 		</thead>
 		<tbody>
+			<?php 
+				$no=1;
+				foreach ($data as $d) {
+			 ?>
 			 <tr>
-			 	<td></td>
-			 	<td></td>
+			 	<td><?php echo $no++; ?></td>
+			 	<td><?php echo $d['karya']; ?></td>
 			 </tr>
-			 <tr>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-			  <tr>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-			  <tr>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
+			<?php } ?>
 		</tbody>
 	</table>

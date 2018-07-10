@@ -143,7 +143,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $d['Jum_dana2015']; ?></td>
 								<td><?php echo $d['Jum_dana2016']; ?></td>
 								<td class="center">
-									<a href="<?php echo base_url()."index.php/Apd_b721_excel/ubah/".$d['KD_JNS'];?>" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Aps_b721_excel/ubah/".$d['KD_JNS'];?>" >Edit</a>
 								</td>
 							</tr>
 							<?php } ?>

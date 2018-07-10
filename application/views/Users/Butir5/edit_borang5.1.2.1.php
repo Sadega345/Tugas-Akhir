@@ -126,62 +126,28 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</div>
 							<div style="overflow-x:auto;" class="col-md-20">
-							<form action="<?php echo base_url()."index.php/Apd_a5121_excel/do_edit"; ?>" method="POST">
+							<form action="<?php echo base_url()."index.php/Aps_a5121_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th rowspan="2">Smt</th>
-									 <th rowspan="2">Kode MK</th>
-									 <th rowspan="2">Nama Mata Kuliah</th>
-									 <th colspan="2">Bobot SKS untuk</th>
-									 <th colspan="2">SKS MK dalam Kurikulum</th>
-									 <th rowspan="2">Bobot Tugas***</th>
-									 <th colspan="3">Kelengkapan***</th>
-									 <th rowspan="2">Unit/Jur/Fak Penyelenggara</th>
-								 </tr>
-								 <tr>
-								 	<th>Kuliah</th>
-								 	<th>Praktikum/Praktek</th>
-								 	<th>Inti**</th>
-								 	<th>Institusional</th>
-								 	<th>Deskripsi</th>
-								 	<th>Silabus</th>
-								 	<th>SAP</th>
-								 </tr>
-								 <tr align="center">
-								 	<td>(1)</td>
-								 	<td>(2)</td>
-								 	<td>(3)</td>
-								 	<td>(4)</td>
-								 	<td>(5)</td>
-								 	<td>(6)</td>
-								 	<td>(7)</td>
-								 	<td>(8)</td>
-								 	<td>(9)</td>
-								 	<td>(10)</td>
-								 	<td>(11)</td>
-								 	<td>(12)</td>
+									 <th>No</th>
+									 <th>Jenis Mata Kuliah</th>
+									 <th>SKS</th>
+									 <th>Keterangan</th>
+									 
 								 </tr>
 							</thead>
 							<tbody>
 							
 							<tr>
-								<td><?php echo $smt; ?></td>
-							 	<td><?php echo $kode_mk; ?></td>
-							 	<td><input type="text" name="nama_mk" value="<?php echo $nama_mk; ?>"></td>
-							 	<td><input type="text" name="sks_kuliah" value="<?php echo $sks_kuliah; ?>"></td>
-							 	<td><input type="text" name="sks_praktek" value="<?php echo $sks_praktek; ?>"></td>
-							 	<td><input type="checkbox" name="sks_inti[]" class="form-control" value="v"></td>
-							 	<td><input type="checkbox" name="sks_institusi[]" class="form-control" value="v"></td>
-							 	<td><input type="checkbox" name="bobot_tgs[]" class="form-control" value="v"></td>
-							 	<td><input type="checkbox" name="deskripsi[]" class="form-control" value="v"></td>
-							 	<td><input type="checkbox" name="silabus[]" class="form-control" value="v"></td>
-							 	<td><input type="checkbox" name="sap[]" class="form-control" value="v"></td>
-							 	<td><input type="text" name="penyelenggara" value="<?php echo $penyelenggara; ?>"></td>
+								<td><?php echo $id; ?></td>
+								<td>MATA KULIAH WAJIB</td>
+							 	<td><?php echo $sks; ?></td>
+							 	<td><input type="text" name="keterangan" value="<?php echo $keterangan; ?>" class="form-control"></td>
 							 </tr>
 							</tbody>
 							</table>
-							<input type="hidden" name="kode_mk" value="<?php echo $kode_mk ?>">
+							<input type="hidden" name="id" value="<?php echo $id ?>">
 							</div>
 							<div class="btn-group">
 								<button id="sample_editable_1_new" class="btn blue">
@@ -190,7 +156,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							</form>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a5121_excel/";?>">
+								<a href="<?php echo base_url()."index.php/Aps_a5121_excel/";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal
 									</button>

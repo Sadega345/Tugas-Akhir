@@ -20,7 +20,7 @@ public function index() {
 
  public function ubah($id){
  	$this->model_squrity->getsqurity();
- 	$res=$this->Aps_b711_model->update("where id='$id'");
+ 	$res=$this->Aps_b711_model->update("where pd.id='$id'");
  	$data=array(
  			"jurusan"=>$res[0]['jurusan'],
 			"Tot_Ts2"=>$res[0]['Tot_Ts2'],
@@ -35,7 +35,7 @@ public function index() {
  }
 
  public function do_edit(){
- 		$jurusan=$_POST['jurusan'];
+ 		
 		$Tot_Ts2=$_POST['Tot_Ts2'];
 		$Tot_Ts1=$_POST['Tot_Ts1'];
 		$Tot_Ts=$_POST['Tot_Ts'];
@@ -52,7 +52,6 @@ public function index() {
 			"Dana_penelitian"=>$Dana_penelitian,
 			"Jum_Dana2015"=>$Jum_Dana2015,
 			"Jum_Dana2016"=>$Jum_Dana2016,
-			"id"=>$id,
 			
 		);
 		$where=array('id'=>$id);

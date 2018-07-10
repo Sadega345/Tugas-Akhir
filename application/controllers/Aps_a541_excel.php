@@ -56,7 +56,7 @@ public function ubah($id){
  }
 
  public function do_edit(){
-		$nama_dosen=$_POST['nama_dosen'];
+		
 		$j_mhs_bimbingan=$_POST['j_mhs_bimbingan'];
 		$rata2_pertemuan=$_POST['rata2_pertemuan'];
 		$Id=$_POST['Id'];

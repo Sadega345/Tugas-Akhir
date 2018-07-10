@@ -6,13 +6,11 @@ class Aps_a652_excel extends CI_Controller {
 
 public function index() {
  $data1=$this->Aps_a652_model->listing1();
- 
  $totalmanual=$this->Aps_a652_model->totmanual();
  $totalkomp=$this->Aps_a652_model->totkomp();
  $totallan=$this->Aps_a652_model->totlan();
  $totalwan=$this->Aps_a652_model->totwan();
  $this->load->view('Users/Butir6/tampilan_borang6.5.2.php',array('data1'=>$data1,
- 																
  																'totmanual'=>$totalmanual,
 																'totkomp'=>$totalkomp,
 																'totlan'=>$totallan,

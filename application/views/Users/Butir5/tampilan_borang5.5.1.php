@@ -163,8 +163,8 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td><?php echo $d['nama_dosen']; ?></td>
 								 	<td><?php echo $d['jml_mhs']; ?></td>
 								 	<td class="center">
-									<a href="#">Edit</a>
-								</td>
+										<a href="<?php echo base_url()."index.php/Aps_a551_excel/ubah/".$d['id'];?>" >Edit</a>
+									</td>
 								 </tr>
 								<?php } ?>
 							</tbody>

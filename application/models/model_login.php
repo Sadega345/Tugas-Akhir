@@ -42,7 +42,7 @@ class Model_login extends CI_model {
 				       		$sess = array(
 				       			'username' => $row->username,
 				       			// 'prodi' => $row->prodi,
-								'kd_prodi' => $row->kd_prodi
+										  'kd_prodi' => $row->kd_prodi
 					   			);
 							$this->session->set_userdata( $sess );
 							// print_r($sess);die();

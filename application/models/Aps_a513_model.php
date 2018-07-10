@@ -11,9 +11,20 @@ public function __construct()
 
 // Listing
  public function listing() {
- 	$data=$this->db->query('select smt,kode_mk,nama_mk,bobot_sks,bobot_tgs,penyelenggara			
-from struktur_kurikulum where jns_mk=2 and kd_prodi="p002";');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ 	$data=$this->db->query('SELECT smt,kode_mk,nama_mk,bobot_sks,bobot_tgs,penyelenggara			
+FROM struktur_kurikulum WHERE jns_mk=2 AND kd_prodi='."'$kdprodi'");
 	return $data->result_array();
  }
+
+ public function update($where="") {
+ 	$data= $this->db->query('SELECT smt,kode_mk,nama_mk,bobot_sks,bobot_tgs,penyelenggara FROM struktur_kurikulum '.$where);
+ 	return $data->result_array();
+ }
+
+ 	public function rubah($tablename,$data,$where){
+		$res=$this->db->update($tablename,$data,$where);
+		return $res;
+	}
 
 }

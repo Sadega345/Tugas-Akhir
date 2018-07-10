@@ -89,34 +89,28 @@ public function do_tambah(){
 			"penyelenggara"=>$res[0]['penyelenggara'],
 		);
 		// print_r($data);die;
- 	$this->load->view('User/Butir5/edit_borang5.1.2.1.php',$data);
+ 	$this->load->view('Users/Butir5/edit_borang5.1.2.2.php',$data);
 
  }
 
  public function do_edit(){
 		
-		// $smt=$_POST['smt'];
 		$kode_mk=$_POST['kode_mk'];
 		$nama_mk=$_POST['nama_mk'];
 		$sks_kuliah=$_POST['sks_kuliah'];
-		$sks_praktek=$_POST['sks_praktek'];
 		
-		$sks_inti = implode(',', $_POST['sks_inti']);
-		$sks_institusi = implode(',', $_POST['sks_institusi']);
-		$bobot_tgs = implode(',', $_POST['bobot_tgs']);
 		
-		$deskripsi=implode(',', $_POST['deskripsi']);
-		$silabus=implode(',', $_POST['silabus']);
-		$sap=implode(',', $_POST['sap']);
+		$sks_inti = $_POST['sks_inti'];
+		$sks_institusi = $_POST['sks_institusi'];
+		$bobot_tgs = $_POST['bobot_tgs'];
+		
+		$deskripsi= $_POST['deskripsi'];
+		$silabus= $_POST['silabus'];
+		$sap= $_POST['sap'];
 		$penyelenggara=$_POST['penyelenggara'];
 		
 		$data_update=array(
 			
-			"kode_mk"=>$kode_mk,
-			"nama_mk"=>$nama_mk,
-			"sks_kuliah"=>$sks_kuliah,
-			"sks_praktek"=>$sks_praktek,
-
 			"sks_inti"=>$sks_inti,
 			"sks_institusi"=>$sks_institusi,
 			"bobot_tgs"=>$bobot_tgs,

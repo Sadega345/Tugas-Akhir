@@ -44,7 +44,7 @@ public function index() {
 		$jp_dilaksanakan=$_POST['jp_dilaksanakan'];
 		
 		$data_update=array(
-			"kode_mk"=>$kode_mk,
+			
 			"nama_mk"=>$nama_mk,
 			"jml_sks"=>$jml_sks,
 			"jp_rencana"=>$jp_rencana,

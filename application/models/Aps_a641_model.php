@@ -11,7 +11,8 @@ class Aps_a641_model extends CI_Model {
 
 // Listing
  public function listing1() {
- $pustaka1=$this->db->query('SELECT jml_judul,jml_copy,id,jenis_pustaka FROM pustaka WHERE kd_prodi="p002"');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $pustaka1=$this->db->query('SELECT jml_judul,jml_copy,id,jenis_pustaka FROM pustaka WHERE kd_prodi='."'$kdprodi'");
  return $pustaka1->result_array();
  }
 
@@ -26,12 +27,14 @@ class Aps_a641_model extends CI_Model {
 	}
 
  public function totjudul() {
- $data=$this->db->query('SELECT SUM(jml_judul)AS Tot_judul FROM pustaka WHERE kd_prodi="p002"');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('SELECT SUM(jml_judul)AS Tot_judul FROM pustaka WHERE kd_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 
  public function totkopi() {
- $data=$this->db->query('SELECT SUM(jml_copy)AS Tot_Kopi FROM pustaka WHERE kd_prodi="p002"');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('SELECT SUM(jml_copy)AS Tot_Kopi FROM pustaka WHERE kd_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 

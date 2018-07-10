@@ -127,11 +127,11 @@ License: You must have a valid license purchased only from themeforest(the above
 							<tbody>
 							<tr>
 							 	<td rowspan="3>">PT Sendiri</td>
-							 	<?php } ?>
+							 	<td>Beasiswa Yayasan</td>
 							 	<?php
 									foreach ($dana1 as $a ) { 
 								?>
-							 	<td><?php echo $a['']; ?></td>
+							 	
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>

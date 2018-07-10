@@ -125,7 +125,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
-							<form action="<?php echo base_url()."index.php/Apd_b711_excel/do_edit"; ?>" method="POST">
+							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Aps_b711_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -147,31 +148,32 @@ License: You must have a valid license purchased only from themeforest(the above
 							
 							<tr>
 								<td><?php echo $id; ?></td>
-								<td><?php echo $judul; ?></td>
-								<td><input type="text" name="TS_2" class="form-control" value="<?php echo $TS_2; ?>"></td>
-								<td><input type="text" name="TS_1" class="form-control" value="<?php echo $TS_1; ?>"></td>
-								<td><input type="text" name="TS" class="form-control" value="<?php echo $TS; ?>"></td>
-								<td><input type="text" name="dana_penelitian" class="form-control" value="<?php echo $dana_penelitian; ?>"></td>
+								<td><?php echo $jurusan; ?></td>
+								<td><input type="text" name="Tot_Ts2" class="form-control" value="<?php echo $Tot_Ts2; ?>"></td>
+								<td><input type="text" name="Tot_Ts1" class="form-control" value="<?php echo $Tot_Ts1; ?>"></td>
+								<td><input type="text" name="Tot_Ts" class="form-control" value="<?php echo $Tot_Ts; ?>"></td>
+								<td><input type="text" name="Dana_penelitian" class="form-control" value="<?php echo $Dana_penelitian; ?>"></td>
 								<td><input type="text" name="Jum_Dana2015" class="form-control" value="<?php echo $Jum_Dana2015; ?>"></td>
 								<td><input type="text" name="Jum_Dana2016" class="form-control" value="<?php echo $Jum_Dana2016; ?>"></td>
 							</tr>
 							</tbody>
 							</table>
+							</div>
 							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							<div class="btn-group">
 								<button id="sample_editable_1_new" class="btn blue">
 									Simpan 
 								</button>
 							</div>
-							
+							</form>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_b711_excel";?>">
+								<a href="<?php echo base_url()."index.php/Aps_b711_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal
 									</button>
 								</a>
 							</div>
-							</form>
+							
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

@@ -127,7 +127,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<td><?php echo $d['jml_judul']; ?></td>
 									<td><?php echo $d['jml_copy']; ?></td>
 									<td class="center">
-									<a href="#" >Edit</a>
+										<a href="<?php echo base_url()."index.php/Aps_a6411_excel/ubah/".$d['id'];?>" >Edit</a>
 									</td>
 								</tr>
 								<?php } ?>

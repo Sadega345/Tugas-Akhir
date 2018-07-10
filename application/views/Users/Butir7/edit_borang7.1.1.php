@@ -125,6 +125,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Aps_a711_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -132,71 +134,39 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th>TS-2</th>
 									 <th>TS-1</th>
 									 <th>TS</th>
-									 <th>Jumlah</th>
+									 
 								 </tr>
 							</thead>
 							<tbody>
 							
 							<tr>
-							 	<td>Pembiayaan sendiri oleh peneliti</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td>0</td>
+							 	<td><?php echo $sumber_pembiayaan; ?></td>
+							 	<td><input type="text" name="TS_2" class="form-control" value="<?php echo $TS_2; ?>"></td>
+							 	<td><input type="text" name="TS_1" class="form-control" value="<?php echo $TS_1; ?>"></td>
+							 	<td><input type="text" name="TS" class="form-control" value="<?php echo $TS; ?>"></td>
+							 	
 							 </tr>
-							 <tr>
-							 	<td>PT yang bersangkutan</td>
-							 	<td><input type="text" name="" class="form-control" value="4"></td>
-							 	<td><input type="text" name="" class="form-control" value="4"></td>
-							 	<td><input type="text" name="" class="form-control" value="5"></td>
-							 	<td>13</td>
-							 </tr>
-							 <tr>
-							 	<td>Kemristekdikti</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td>0</td>
-							 </tr>
-							  <tr>
-							 	<td>Institusi dalam negeri di luar Kemristekdikti</td>
-							 	<td><input type="text" name="" class="form-control" value="6"></td>
-							 	<td><input type="text" name="" class="form-control" value="5"></td>
-							 	<td><input type="text" name="" class="form-control" value="4"></td>
-							 	<td>15</td>
-							 </tr>
-							 <tr>
-							 	<td>Institusi luar negeri</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control" value="1"></td>
-							 	<td><input type="text" name="" class="form-control" value="2"></td>
-							 	<td>3</td>
-							 </tr>
-							 <tr>
-							 	<td>Jumlah</td>
-							 	<td>10</td>
-							 	<td>10</td>
-							 	<td>11</td>
-							 	<td>31</td>
-							 </tr>
+							 
 		
 							</tbody>
 							</table>
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
+							</div>
 							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
-									</button>
-								</a>
+								<button id="sample_editable_1_new" class="btn blue">
+									Simpan 
+								</button>
+								
 							</div>
 							
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a711_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Apd_a711_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal
 									</button>
 								</a>
 							</div>
+						</form>
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->
