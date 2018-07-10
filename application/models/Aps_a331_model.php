@@ -11,7 +11,8 @@ class Aps_a331_model extends CI_Model {
 
 // Listing
  public function listing() {
- $data= $this->db->query('SELECT sangat_baik,baik,cukup,kurang,rencana,jenis_kemampuan,id FROM evaluasi_lulusan WHERE id_prodi="p002" ORDER BY id_kemampuan');
+ $kdprodi = $this->session->userdata('kd_prodi');
+ $data= $this->db->query('SELECT sangat_baik,baik,cukup,kurang,rencana,jenis_kemampuan,id FROM evaluasi_lulusan WHERE id_prodi='."'$kdprodi'".' ORDER BY id_kemampuan');
  return $data->result_array();
  }
 
@@ -26,42 +27,50 @@ return $res;
 }
 
 public function updatewaktu($where="") {
- $data= $this->db->query('SELECT id,waktu,id_prodi FROM wkt_tunggu_llsn '.$where.'and id_prodi="p002"');
+$kdprodi = $this->session->userdata('kd_prodi');
+ $data= $this->db->query('SELECT waktu,id_prodi FROM wkt_tunggu_llsn '.$where.'and id_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 
 public function updatepersen($where="") {
- $data= $this->db->query('SELECT id,persen,id_prodi FROM persentase_llsn '.$where.'and id_prodi="p002"');
+$kdprodi = $this->session->userdata('kd_prodi');
+ $data= $this->db->query('SELECT persen,id_prodi FROM persentase_llsn '.$where.'and id_prodi='."'$kdprodi'");
  return $data->result_array();
  }
  
  public function sangatbaik() {
- $data= $this->db->query('SELECT SUM(sangat_baik)AS Sangat_baik FROM evaluasi_lulusan WHERE id_prodi="p002"');
+ $kdprodi = $this->session->userdata('kd_prodi');
+ $data= $this->db->query('SELECT SUM(sangat_baik)AS Sangat_baik FROM evaluasi_lulusan WHERE id_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 
  public function baik() {
- $data= $this->db->query('SELECT SUM(baik)AS Baik FROM evaluasi_lulusan WHERE id_prodi="p002"');
+ $kdprodi = $this->session->userdata('kd_prodi');
+ $data= $this->db->query('SELECT SUM(baik)AS Baik FROM evaluasi_lulusan WHERE id_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 
  public function cukup() {
- $data= $this->db->query('SELECT SUM(cukup)AS Cukup FROM evaluasi_lulusan WHERE id_prodi="p002"');
+ $kdprodi = $this->session->userdata('kd_prodi');
+ $data= $this->db->query('SELECT SUM(cukup)AS Cukup FROM evaluasi_lulusan WHERE id_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 
  public function kurang() {
- $data= $this->db->query('SELECT SUM(kurang)AS Kurang FROM evaluasi_lulusan WHERE id_prodi="p002"');
+ $kdprodi = $this->session->userdata('kd_prodi');
+ $data= $this->db->query('SELECT SUM(kurang)AS Kurang FROM evaluasi_lulusan WHERE id_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 
  public function waktu() {
- $data=$this->db->query('SELECT waktu,id_prodi FROM wkt_tunggu_llsn WHERE id_prodi="p002"');
+ $kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('SELECT waktu,id_prodi FROM wkt_tunggu_llsn WHERE id_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 
  public function persen() {
- $data=$this->db->query('SELECT id_prodi,persen FROM persentase_llsn WHERE id_prodi="p002"');
+ $kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('SELECT id_prodi,persen FROM persentase_llsn WHERE id_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 

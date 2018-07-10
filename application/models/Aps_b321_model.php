@@ -11,9 +11,10 @@ public function __construct()
 
 // Listing
  public function masastudi() {
+ $kdprodi = $this->session->userdata('kd_prodi');
  $masastudi= $this->db->query('
 	SELECT concat(P.PRODI," ",P.JURUSAN) as prodi,M.RATA_MASA_STD as rata_masa_std,M.RATA_IPK as rata_ipk,M.id FROM masastudi_ipk M 
-	INNER JOIN prodi_tbl P ON P.kode_prodi=M.kd_prodi WHERE M.kd_prodi="p002"');
+	INNER JOIN prodi_tbl P ON P.kode_prodi=M.kd_prodi WHERE M.kd_prodi='."'$kdprodi'");
  return $masastudi->result_array();
  }
 

@@ -11,8 +11,9 @@ public function __construct()
 
 // Listing
  public function listing() {
+ 	$kdprodi = $this->session->userdata('kd_prodi');
  	$data=$this->db->query('select p.id,d.nama_dosen, p.prestasi,p.tahun,p.internasional,p.nasional,p.lokal from prestasi_dosen p inner join dosen_tbl d
-on p.id_dosen=d.id_dosen where d.kd_prodi="P002";');
+on p.id_dosen=d.id_dosen where d.kd_prodi='."'$kdprodi'");
  	return $data->result_array();
  }
 

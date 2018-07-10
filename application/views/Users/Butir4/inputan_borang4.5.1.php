@@ -62,12 +62,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <body class="page-header-fixed page-quick-sidebar-over-content">
 	<!-- BEGIN HEADER -->
 		<?php 
-			$this->load->view('Users/header_Users.php');
+			$this->load->view('Users/header_users.php');
 		?>
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('Users/sidebar_Users.php');
+			$this->load->view('Users/sidebar_users.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 
@@ -100,61 +100,57 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/Aps_a451_excel/tambah";?>">
-											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
-											</button>
-											</a>
+											
 										</div>
 									</div>
 								</div>
 							</div>
-							<table class="table table-striped table-bordered table-hover" id="sample_1">
-							<thead>
-								 <tr>
-									 <th><center>No</center></th>
-									 <th><center>Nama Tenaga Ahli/Pakar</center></th>
-									 <th><center>Instansi/Jabatan</center></th>
-									 <th><center>Nama dan Judul Kegiatan</center></th>
-									 <th><center>Tahun Pelaksanaan</center></th>
-									 <th><center>Aksi</center></th>
-								 </tr>
-							</thead>
-							<tbody>
-							<tr>
-							<?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?>
-							 	<td><?php echo $no++; ?></td>
-							 	<td><?php echo $d['nama_pakar']; ?></td>
-							 	<td><?php echo $d['instansi']; ?></td>
-							 	<td><?php echo $d['judul_keg']; ?></td>
-							 	<td><?php echo $d['pelaksanaan']; ?></td>
-							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Aps_a451_excel/ubah/".$d['id'];?>">Edit</a>
-									||
-									<a href="<?php echo base_url()."index.php/Aps_a451_excel/do_hapus/".$d['id']; ?>">Hapus</a>
-								</td>
-							 </tr>
-							 <input type="hidden" name="id" value="<?php echo $d['id']; ?>">
-							 <?php } ?>
-							</tbody>
-							</table>
-							<!-- <div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a451_excel/ubah";?>">
-									<button id="sample_editable_1_new" class="btn green">
-										Ubah 
-									</button>
-								</a>
-							</div> -->
+							<div style="overflow-x:auto;">
+
+							<form action="<?php echo base_url()."index.php/Aps_a451_excel/do_tambah"; ?>" method="POST">
+							<div class="container">
+								<div class="col-md-10">
+									<div class="row">
+										<div class="form-group">
+											<label>Nama Tenaga Ahli/Pakar</label>
+											<input type="text" class="form-control" name="nama_pakar">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Instansi/Jabatan</label>
+											<input type="text" class="form-control" name="instansi">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Nama dan Judul Kegiatan</label>
+											<input type="text" class="form-control" name="judul_keg">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Tahun Pelaksanaan</label>
+											<input type="text" class="form-control" name="pelaksanaan">
+										</div>
+									</div>
+								</div>
+							</div>
+							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Aps_a451_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn blue">
-										Export To Excel
+								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+							</div>
+							</form>
+							
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Aps_a451_excel";?>">
+									<button id="sample_editable_1_new" class="btn red">
+										Batal
 									</button>
 								</a>
 							</div>
+						
+							
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

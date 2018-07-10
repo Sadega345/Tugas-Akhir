@@ -11,9 +11,10 @@ class Aps_a452_model extends CI_Model {
 
 // Listing
  public function listing() {
+  $kdprodi = $this->session->userdata('kd_prodi');
  $data=$this->db->query('
 SELECT d.nama_dosen ,p.jenjang_pend, p.bid_studi, p.perguruan_tinggi, p.negara, p.thn_mulai_std, p.id
-FROM pkdt_tgs_belajar p INNER JOIN dosen_tbl d ON d.id_dosen=p.id_dosen WHERE d.kd_prodi="p002" AND d.kd_jns_dosen=1');
+FROM pkdt_tgs_belajar p INNER JOIN dosen_tbl d ON d.id_dosen=p.id_dosen WHERE d.kd_prodi='."'$kdprodi'".' AND d.kd_jns_dosen=1');
  return $data->result_array();
  }
 

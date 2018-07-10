@@ -118,7 +118,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th>Program Studi</th>
 									 <th>Rata-rata Masa Studi (tahun)*</th>
 									 <th>Rata-rata IPK Lulusan*</th>
-									 <th rowspan="2">Aksi</th>
+									 <!-- <th rowspan="2">Aksi</th> -->
 								 </tr>
 							</thead>
 							<tbody>
@@ -131,9 +131,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td><?php echo $m['prodi'] ?></td>
 								 	<td><?php echo $m['rata_masa_std'] ?></td>
 								 	<td><?php echo $m['rata_ipk'] ?></td>
-								 	<td class="center">
+								 	<!-- <td class="center">
 										<a href="<?php echo base_url()."index.php/Aps_b321_excel/ubah/".$m['id'];?>" >Edit</a>
-									</td>
+									</td> -->
 								 </tr>
 								 <?php } ?>
 								 <tr>
@@ -143,7 +143,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	 ?>
 								 	 <td><?php echo $r['rata_mastud'] ?></td>
 								 	 <td><?php echo $r['rata2'] ?></td>
-								 	 <td></td>
 								 	 <?php } ?>
 								 </tr>
 							</tbody>

@@ -16,10 +16,11 @@ public function index() {
  $this->load->view('Users/Butir4/tampilan_borang4.5.5.php',array('data'=>$data));
  }
 
- public function ubah($thn_awal){
+ public function ubah($id){
  	$this->model_squrity->getsqurity();
-		$res=$this->Aps_a455_model->update("where thn_awal='$thn_awal'");
+		$res=$this->Aps_a455_model->update("where id='$id'");
 		$data=array(
+			"id"=>$res[0]['id'],
 			"nama_dosen"=>$res[0]['nama_dosen'],
 			"nm_organisasi"=>$res[0]['nm_organisasi'],
 			"thn_awal"=>$res[0]['thn_awal'],
@@ -33,7 +34,7 @@ public function index() {
  }
 
  public function do_edit(){
-		// $nama_dosen=$_POST['nama_dosen'];
+		//$nama_dosen=$_POST['nama_dosen'];
 		$nm_organisasi=$_POST['nm_organisasi'];
 		$thn_awal=$_POST['thn_awal'];
 		$thn_akhir=$_POST['thn_akhir'];
@@ -50,7 +51,7 @@ public function index() {
 			"lokal"=>$lokal
 			
 		);
-		$where=array('thn_awal'=>$thn_awal);
+		$where=array('id'=>$id);
 		$res=$this->Aps_a455_model->rubah('keikutsertaan_org',$data_update,$where);
 		if ($res>=1) {
 			redirect('Aps_a455_excel');
@@ -67,5 +68,36 @@ public function export_excel(){
  $data=$this->Aps_a455_model->listing();
  $this->load->view('Users/Butir4/tampilan_borang4.5.5_excel.php',array('data'=>$data));
  }
+
+ public function tambah(){
+		$this->load->view('Users/Butir4/inputan_borang4.5.5.php');
+  }
+
+	public function do_tambah(){
+		$this->model_squrity->getsqurity();
+		$id_dosen=$_POST['id_dosen'];
+		$nm_organisasi=$_POST['nm_organisasi'];
+		$thn_awal=$_POST['thn_awal'];
+		$thn_akhir=$_POST['thn_akhir'];
+		$internasional=$_POST['internasional'];
+		$nasional=$_POST['nasional'];
+		$lokal=$_POST['lokal'];
+		$data_insert=array(
+			'id_dosen' => $id_dosen,
+			'nm_organisasi' => $nm_organisasi,
+			'thn_awal'=>$thn_awal,
+			'thn_akhir'=>$thn_akhir,
+			'internasional' => $internasional,
+			'nasional' => $nasional,
+			'lokal' => $lokal,
+		);
+		$res=$this->Aps_a452_model->insert('keikutsertaan_org',$data_insert);
+		if ($res>=1) {
+			redirect('Aps_a455_excel');
+		}else {
+			alert('Gagal Insert');
+		}
+	}
+
 
 }

@@ -99,34 +99,18 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="table-toolbar">
 								<div class="row">
 									<div class="col-md-6">
-										<div class="btn-group">
+										<!-- <div class="btn-group">
 											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
 											Load
 											</button>
 											</a>
-										</div>
+										</div> -->
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
 							<div style="overflow-x:auto;">
-							<form action="<?php echo base_url()."index.php/Apd_a455_excel/do_edit"; ?>" method="POST">
+							<form action="<?php echo base_url()."index.php/Aps_a455_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								 <tr>
@@ -171,7 +155,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a455_excel";?>">
+								<a href="<?php echo base_url()."index.php/Aps_a455_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal 
 									</button>

@@ -54,9 +54,37 @@ $this->load->view('Users/Butir4B/tampilan_borang4.1.1.php',array('prodi'=>$prodi
  																 ));
  }
 
- public function ubah(){
- 	$this->load->view('Users/Butir4B/tampilan_borang4.1.1.php');
+ public function ubah($id){
+ 	$this->model_squrity->getsqurity();
+	$res=$this->Aps_b411_model->update("where id='$id'");
+	$data=array(
+		// // "rata_masa_std"=>$res[0]['rata_masa_std'],
+		// // "rata_ipk"=>$res[0]['rata_ipk'],
+		// "keterangan"=>$res[0]['keterangan'],
+		// "id"=>$res[0]['id'],
+		
+	);
+ 	$this->load->view('Users/Butir4B/edit_borang4.1.1.php',$data);
  }
+
+  public function do_edit(){
+		// $keterangan=$_POST['keterangan'];
+		// $id=$_POST['id'];
+		
+		// $data_update=array(
+		// 	"keterangan"=>$keterangan,
+			
+		// );
+		$where=array('id'=>$id);
+		$res=$this->Aps_b411_model->rubah('sdm',$data_update,$where);
+		// print_r($data_update);die;
+		if ($res>=1) {
+			redirect('Aps_b411_excel');
+		}
+		// else {
+		// 	alert("Gagal Update") ;
+		// }
+	}
 
 public function export_excel(){
 $prodi=$this->Aps_b411_model->getprodi();

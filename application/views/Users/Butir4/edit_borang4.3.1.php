@@ -107,26 +107,10 @@ License: You must have a valid license purchased only from themeforest(the above
 											</a> -->
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
 							<div style="overflow-x:auto;">
-							<form action="<?php echo base_url()."index.php/Apd_a431_excel/do_edit"; ?>" method="POST">
+							<form action="<?php echo base_url()."index.php/Aps_a431_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 							<thead>
 								<tr>
@@ -139,7 +123,6 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th colspan="3">S1*</th>
 									 <th colspan="3">S2*</th>
 									 <th colspan="3">S3*</th>
-									 <th colspan="3">Keahlian Praktis***</th>
 								 </tr>
 								 <tr>
 								 	<td>Gelar</td>
@@ -150,9 +133,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>Bidang Keahlian</td>
 								 	<td>Gelar</td>
 								 	<td>PT Asal</td>
-								 	<td>Bidang Keahlian</td>
-								 	<td>Gelar</td>
-								 	<td>Pengakuan</td>
 								 	<td>Bidang Keahlian</td>
 								 </tr>
 								 <tr align="center">
@@ -171,9 +151,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>(13)</td>
 								 	<td>(14)</td>
 								 	<td>(15)</td>
-								 	<td>(16)</td>
-								 	<td>(17)</td>
-								 	<td>(18)</td>
 								 </tr>
 							</thead>
 							<tbody>
@@ -187,7 +164,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 		<select name="kd_jab" >
 										<option disabled selected>-- Nama Jabatan --</option>
 										<?php 
-											$data=$this->Apd_a431_model->JabAkademik();
+											$data=$this->Aps_a431_model->JabAkademik();
 											foreach($data as $d) { ?>
 							                <option value="<?php echo $d['kd_jab'];?>"><?php echo $d['nm_jab_akd'];?></option>
 							            <?php } ?>
@@ -203,9 +180,6 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><input type="text" name="GELAR_S3" value="<?php echo $GELAR_S3; ?>"></td>
 							 	<td><input type="text" name="ASAL_PT_S3" value="<?php echo $ASAL_PT_S3; ?>"></td>
 							 	<td><input type="text" name="BID_KEAHLIAN_S3" value="<?php echo $BID_KEAHLIAN_S3; ?>"></td>
-							 	<td><input type="text" name="GELAR" value="<?php echo $GELAR; ?>"></td>
-							 	<td><input type="text" name="PENGAKUAN" value="<?php echo $PENGAKUAN; ?>"></td>
-							 	<td><input type="text" name="BID_KEAHLIAN" value="<?php echo $BID_KEAHLIAN; ?>"></td>
 							 </tr>
 		
 							</tbody>
@@ -215,7 +189,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a431_excel";?>">
+								<a href="<?php echo base_url()."index.php/Aps_a431_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal 
 									</button>

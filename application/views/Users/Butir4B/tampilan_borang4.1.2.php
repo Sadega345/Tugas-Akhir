@@ -117,10 +117,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th><center>Hal</center></th>
 									 <th><center>Total di Unit Pengelola**</center></th>
 									 <?php 
-									 	$no=1;
 									 	foreach ($prodi as $p) {
 									  ?>
-									 <th><center>PS-<?php echo $no++; ?> <br><?php echo $p['prodi']; ?></center></th>
+									 <th><center>PS-1 <br><?php echo $p['prodi']; ?></center></th>
 									 <?php } ?>
 									 <th>Aksi</th>
 								 </tr>
@@ -139,6 +138,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	  ?>
 								 	 <td><?php echo $j['banyak'] ?></td>
 								 	 <?php } ?>
+								 	 <td>Edit</td>
 								 </tr>
 								<tr>
 								 	<td>2</td>

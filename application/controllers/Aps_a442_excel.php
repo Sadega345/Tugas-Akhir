@@ -20,9 +20,9 @@ public function index() {
 																'totdilaksanakan'=>$tot_dilaksanakan));
  }
 
- public function ubah($kode_mk){
+ public function ubah($id){
  	$this->model_squrity->getsqurity();
-		$res=$this->Aps_a442_model->update("where kode_mk='$kode_mk'");
+		$res=$this->Aps_a442_model->update("where id='$id'");
 		$data=array(
 			"nama_dosen"=>$res[0]['nama_dosen'],
 			"kode_mk"=>$res[0]['kode_mk'],
@@ -30,28 +30,30 @@ public function index() {
 			"jml_sks"=>$res[0]['jml_sks'],
 			"jp_rencana"=>$res[0]['jp_rencana'],
 			"jp_dilaksanakan"=>$res[0]['jp_dilaksanakan'],
+			"id"=>$res[0]['id'],
 			
 		);
  	$this->load->view('Users/Butir4/edit_borang4.4.2.php',$data);
  }
 
  public function do_edit(){
-		// $nama_dosen=$_POST['nama_dosen'];
+		$nama_dosen=$_POST['nama_dosen'];
 		$kode_mk=$_POST['kode_mk'];
 		$nama_mk=$_POST['nama_mk'];
 		$jml_sks=$_POST['jml_sks'];
 		$jp_rencana=$_POST['jp_rencana'];
 		$jp_dilaksanakan=$_POST['jp_dilaksanakan'];
+		$id=$_POST['id'];
 		
 		$data_update=array(
-			"kode_mk"=>$kode_mk,
-			"nama_mk"=>$nama_mk,
+			// "kode_mk"=>$kode_mk,
+			// "nama_mk"=>$nama_mk,
 			"jml_sks"=>$jml_sks,
 			"jp_rencana"=>$jp_rencana,
-			"jp_dilaksanakan"=>$jp_dilaksanakan
+			"jp_dilaksanakan"=>$jp_dilaksanakan, 	
 			
 		);
-		$where=array('kode_mk'=>$kode_mk);
+		$where=array('id'=>$id);
 		$res=$this->Aps_a442_model->rubah('aktivitas_mengajar',$data_update,$where);
 		if ($res>=1) {
 			redirect('Aps_a442_excel');
@@ -72,5 +74,44 @@ public function export_excel(){
 																'total'=>$tot_pertemuan,
 																'totdilaksanakan'=>$tot_dilaksanakan));
  }
+
+  public function tambah(){
+		$this->load->view('Users/Butir4/inputan_borang4.4.2.php');
+ }
+
+ 	public function do_tambah(){
+		$this->model_squrity->getsqurity();
+		$id_dosen=$_POST['id_dosen'];
+		$kode_mk=$_POST['kode_mk'];
+		$nama_mk=$_POST['nama_mk'];
+		$jml_sks=$_POST['jml_sks'];
+		$jp_rencana=$_POST['jp_rencana'];
+		$jp_dilaksanakan=$_POST['jp_dilaksanakan'];
+		$data_insert=array(
+			'id_dosen' => $id_dosen,
+			'kode_mk'=>$kode_mk,
+			'nama_mk'=>$nama_mk,
+			'jml_sks'=>$jml_sks,
+			'jp_rencana' => $jp_rencana,
+			'jp_dilaksanakan' => $jp_dilaksanakan
+		);
+		// print_r($data_insert);die();
+		$res=$this->Aps_a434_model->insert('aktivitas_mengajar',$data_insert);
+		if ($res>=1) {
+			redirect('Aps_a442_excel');
+		}else {
+			alert('Gagal Insert');
+		}
+	}
+public function do_hapus($id){
+		$this->model_squrity->getsqurity();
+		$where=array('id'=>$id);
+		$res=$this->Aps_a434_model->Delete('aktivitas_mengajar',$where);
+		if($res>=1){
+			redirect('Aps_a442_excel');
+		}else {
+			alert('Gagal Hapus');
+		}
+	}
 
 }

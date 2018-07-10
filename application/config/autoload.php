@@ -133,9 +133,9 @@ $autoload['language'] = array();
 |	$autoload['model'] = array('first_model' => 'first');
 */
 $autoload['model'] = array('model_login','Model_password','model_squrity','model_fakultas','model_prodi','model_instrumen','model_user','model_admin','Data_dosen_model','Data_dosens_model','Pengisi_model','Pengisis_model','Prodi_model','Prodis_model','model_role','Apd_a311_model','Apd_a313_model','Apd_a341_model','Apd_a345_model','Apd_b321_model','Apd_a431_model','Apd_a432_model','Apd_a433_model','Apd_a434_model','Apd_a435_model','Apd_a441_model','Apd_a442_model','Apd_a451_model','Apd_a452_model','Apd_a453_model','Apd_a455_model','Apd_a461_model','Apd_a5121_model','Apd_a522_model','Apd_a541_model','Apd_a552_model','Apd_a6211_model','Apd_a6212_model','Apd_a622_model','Apd_a623_model','Apd_a631_model','Apd_a641_model','Apd_a652_model','Apd_a711_model','Apd_a712_model','Apd_a721_model','Apd_b711_model',
-	'Apd_b721_model','Apd_b6111_model','Apd_b6112_model','Apd_b6113_model','Apd_b642_model','Apd_b312_model','Apd_b411_model','Apd_b412_model','Apd_b42_model','Aps_a311_model','Aps_a313_model','Aps_b321_model','Aps_a341_model','Aps_a345_model','Aps_a431_model','Aps_a432_model',
+	'Apd_b721_model','Apd_b6111_model','Apd_b6112_model','Apd_b6113_model','Apd_b642_model','Apd_b312_model','Apd_b411_model','Apd_b412_model','Apd_b42_model','Aps_a311_model','Aps_b321_model','Aps_a431_model','Aps_a432_model',
 	'Aps_a433_model','Aps_a434_model','Aps_a435_model','Aps_a441_model','Aps_a442_model','Aps_a451_model','Aps_a452_model','Aps_a453_model',
 	'Aps_a455_model','Aps_a461_model','Aps_a5121_model','Aps_a522_model','Aps_a541_model','Aps_a552_model','Aps_a6211_model','Aps_a6212_model',
 	'Aps_a622_model','Aps_a623_model','Aps_a631_model','Aps_a641_model','Aps_a652_model','Aps_a711_model','Aps_a712_model','Aps_a721_model',
 	'Aps_b312_model','Aps_b321_model','Apd_b411_model','Apd_b412_model','Aps_b42_model','Aps_b6111_model','Aps_b6112_model','Aps_b6113_model',
-	'Aps_b642_model','Aps_b711_model','Aps_b721_model','Pengisis_model','Data_dosens_model','Aps_b411_model','Aps_b412_model');
+	'Aps_b642_model','Aps_b711_model','Aps_b721_model','Pengisis_model','Data_dosens_model','Aps_b411_model','Aps_b412_model','Aps_a331_model');

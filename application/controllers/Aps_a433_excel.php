@@ -13,7 +13,7 @@ public function index() {
  // $data = array( 'title' => '  TABEL DATA BUTIR 4.3.3 : AKTIVITAS DOSEN TETAP YANG BIDANG KEAHLIANNYA SESUAI DENGAN PS',
  // 'a433' => $this->Aps_a433_model->listing());
  $data=$this->Aps_a433_model->listing();
- $hitung=$this->Aps_a433_model->hitung();
+ $jumlah_pssendiri=$this->Aps_a433_model->jumlah_pssendiri();
  $ptsendiri=$this->Aps_a433_model->jumlah_ps_lain_pt_sendiri();
  $ptlain=$this->Aps_a433_model->jumlah_ptlain();
  $penelitian=$this->Aps_a433_model->jumlah_penelitian();
@@ -30,7 +30,7 @@ public function index() {
  $ratamanlain=$this->Aps_a433_model->rata_manptlain();
  $ratajum=$this->Aps_a433_model->rata_jumsks();
  $this->load->view('Users/Butir4/tampilan_borang4.3.3.php',array('data'=>$data,
- 																'hitung'=>$hitung,
+ 																'jumlah_pssendiri'=>$jumlah_pssendiri,
  																'pt'=>$ptsendiri,
  																'lain'=>$ptlain,
  																'penelitian'=>$penelitian,
@@ -104,7 +104,7 @@ public function export_excel(){
  // $data = array( 'title' => '  TABEL DATA BUTIR 4.3.3 : AKTIVITAS DOSEN TETAP YANG BIDANG KEAHLIANNYA SESUAI DENGAN PS',
  // 'a433' => $this->Aps_a433_model->listing());
  $data=$this->Aps_a433_model->listing();
- $hitung=$this->Aps_a433_model->hitung();
+ $jumlah_pssendiri=$this->Aps_a433_model->jumlah_pssendiri();
  $ptsendiri=$this->Aps_a433_model->jumlah_ps_lain_pt_sendiri();
  $ptlain=$this->Aps_a433_model->jumlah_ptlain();
  $penelitian=$this->Aps_a433_model->jumlah_penelitian();
@@ -121,7 +121,7 @@ public function export_excel(){
  $ratamanlain=$this->Aps_a433_model->rata_manptlain();
  $ratajum=$this->Aps_a433_model->rata_jumsks();
  $this->load->view('Users/Butir4/tampilan_borang4.3.3_excel.php',array('data'=>$data,
- 																	  'hitung'=>$hitung,
+ 																	  'jumlah_pssendiri'=>$jumlah_pssendiri,
 	 																'pt'=>$ptsendiri,
 	 																'lain'=>$ptlain,
 	 																'penelitian'=>$penelitian,
@@ -138,5 +138,49 @@ public function export_excel(){
 	 																'manlain'=>$ratamanlain,
 	 																'ratajumsks'=>$ratajum));
  }
+
+ public function tambah(){
+		$this->load->view('Users/Butir4/inputan_borang4.3.3.php');
+ }
+
+	public function do_tambah(){
+		$this->model_squrity->getsqurity();
+		//$id=$_POST['id'];
+		$id_dosen=$_POST['id_dosen'];
+		$sks_pss=$_POST['sks_pss'];
+		$sks_psl_pts=$_POST['sks_psl_pts'];
+		$sks_ptl=$_POST['sks_ptl'];
+		$sks_penelitian=$_POST['sks_penelitian'];
+		$sks_pp_mas=$_POST['sks_pp_mas'];
+		$sks_man_pts=$_POST['sks_man_pts'];
+		$sks_man_ptl=$_POST['sks_man_ptl'];
+		$data_insert=array(
+			'id_dosen' => $id_dosen,
+			'sks_pss' => $sks_pss,
+			'sks_psl_pts'=>$sks_psl_pts,
+			'sks_ptl'=>$sks_ptl,
+			'sks_penelitian' => $sks_penelitian,
+			'sks_pp_mas' => $sks_pp_mas,
+			'sks_man_pts' => $sks_man_pts,
+			'sks_man_ptl' => $sks_man_ptl
+		);
+		// print_r($data_insert);die();
+		$res=$this->Aps_a433_model->insert('aktivitas_dosen',$data_insert);
+		if ($res>=1) {
+			redirect('Aps_a433_excel');
+		}else {
+			alert('Gagal Insert');
+		}
+	}
+public function do_hapus($id){
+		$this->model_squrity->getsqurity();
+		$where=array('id'=>$id);
+		$res=$this->Aps_a433_model->Delete('aktivitas_dosen',$where);
+		if($res>=1){
+			redirect('Aps_a433_excel');
+		}else {
+			alert('Gagal Hapus');
+		}
+	}
 
 }

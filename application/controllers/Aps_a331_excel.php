@@ -111,7 +111,7 @@ public function do_editpersen(){
 		);
 		$where=array('id_prodi'=>$id_prodi);
 		$res=$this->Aps_a331_model->rubah('persentase_llsn',$data_update,$where);
-		// print_r($data_update);die;
+		 print_r($data_update);die;
 		if ($res>=1) {
 			redirect('Aps_a331_excel');
 		}

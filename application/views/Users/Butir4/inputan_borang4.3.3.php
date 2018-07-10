@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>Butir 4.5.1 : KEGIATAN TENAGA AHLI/PAKAR (TIDAK TERMASUK DOSEN TETAP)</title>
+<title>Butir 4.3.3 : AKTIVITAS DOSEN TETAP YANG BIDANG KEAHLIANNYA SESUAI DENGAN PS</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -62,12 +62,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <body class="page-header-fixed page-quick-sidebar-over-content">
 	<!-- BEGIN HEADER -->
 		<?php 
-			$this->load->view('Users/header_Users.php');
+			$this->load->view('User/header_user.php');
 		?>
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('Users/sidebar_Users.php');
+			$this->load->view('User/sidebar_user.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 
@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Butir 4.5.1 : KEGIATAN TENAGA AHLI/PAKAR (TIDAK TERMASUK DOSEN TETAP)
+								<i class="fa fa-edit"></i>Butir 4.3.3 : AKTIVITAS DOSEN TETAP YANG BIDANG KEAHLIANNYA SESUAI DENGAN PS
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -100,61 +100,89 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/Aps_a451_excel/tambah";?>">
-											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
-											</button>
-											</a>
+											
 										</div>
 									</div>
 								</div>
 							</div>
-							<table class="table table-striped table-bordered table-hover" id="sample_1">
-							<thead>
-								 <tr>
-									 <th><center>No</center></th>
-									 <th><center>Nama Tenaga Ahli/Pakar</center></th>
-									 <th><center>Instansi/Jabatan</center></th>
-									 <th><center>Nama dan Judul Kegiatan</center></th>
-									 <th><center>Tahun Pelaksanaan</center></th>
-									 <th><center>Aksi</center></th>
-								 </tr>
-							</thead>
-							<tbody>
-							<tr>
-							<?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?>
-							 	<td><?php echo $no++; ?></td>
-							 	<td><?php echo $d['nama_pakar']; ?></td>
-							 	<td><?php echo $d['instansi']; ?></td>
-							 	<td><?php echo $d['judul_keg']; ?></td>
-							 	<td><?php echo $d['pelaksanaan']; ?></td>
-							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Aps_a451_excel/ubah/".$d['id'];?>">Edit</a>
-									||
-									<a href="<?php echo base_url()."index.php/Aps_a451_excel/do_hapus/".$d['id']; ?>">Hapus</a>
-								</td>
-							 </tr>
-							 <input type="hidden" name="id" value="<?php echo $d['id']; ?>">
-							 <?php } ?>
-							</tbody>
-							</table>
-							<!-- <div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a451_excel/ubah";?>">
-									<button id="sample_editable_1_new" class="btn green">
-										Ubah 
-									</button>
-								</a>
-							</div> -->
+							<div style="overflow-x:auto;">
+
+							<form action="<?php echo base_url()."index.php/Aps_a433_excel/do_tambah"; ?>" method="POST">
+							<div class="container">
+								<div class="col-md-10">
+									<div class="row">
+										<div class="form-group">
+											<label>Nama Dosen</label>
+											<select name="id_dosen" class="form-control">
+												<option disabled selected>-- Pilih Dosen --</option>
+												<?php 
+													$data=$this->Aps_a433_model->getdosen();
+													foreach($data as $d) { 
+												?>
+									                <option value="<?php echo $d['id_dosen'];?>"><?php echo $d['nama_dosen'];?></option>
+									            <?php } ?>
+											</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>SKS Pengajaran Pada PS Sendiri</label>
+											<input type="number" class="form-control" name="sks_pss">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>SKS Pengajaran Pada PS Lain, PT Sendiri</label>
+											<input type="number" class="form-control" name="sks_psl_pts">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>SKS Pengajaran Pada PT Lain</label>
+											<input type="number" class="form-control" name="sks_ptl">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>SKS Penelitian</label>
+											<input type="number" class="form-control" name="sks_penelitian">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>SKS Pengabdian pada Masyarakat</label>
+											<input type="number" class="form-control" name="sks_pp_mas">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>SKS Manajemen, PT Sendiri</label>
+											<input type="number" class="form-control" name="sks_man_pts">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>SKS Manajemen, PT Lain</label>
+											<input type="number" class="form-control" name="sks_man_ptl">
+										</div>
+									</div>
+								</div>
+							</div>
+							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Aps_a451_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn blue">
-										Export To Excel
+								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+							</div>
+							</form>
+							
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Aps_a433_excel";?>">
+									<button id="sample_editable_1_new" class="btn red">
+										Batal
 									</button>
 								</a>
 							</div>
+						
+							
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

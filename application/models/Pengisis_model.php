@@ -10,11 +10,17 @@ public function __construct()
  }
 
 // Listing
- public function listing($where="") {
-	 $data=$this->db->query("select id,nama,nidn,jabatan,tgl_pengisian from pengisi_borang ".$where);
+ public function listing() {
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+	 $data=$this->db->query("select id,nama,nidn,jabatan,tgl_pengisian from pengisi_borang where kode_prodi="."'$kdprodi'");
 	 return $data->result_array();
  }
 
+public function ubah($where=""){
+	$kdprodi = $this->session->userdata('kd_prodi');
+	$data=$this->db->query("select id,nama,nidn,jabatan,tgl_pengisian from pengisi_borang where kode_prodi="."'$kdprodi'"."and ".$where);
+	return $data->result_array();
+}
  public function insert($tablename,$data){
 	$res=$this->db->insert($tablename,$data);
 	return $res;

@@ -107,26 +107,10 @@ License: You must have a valid license purchased only from themeforest(the above
 											</a> -->
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
 							<div style="overflow-x:auto;">
-							<form action="<?php echo base_url()."index.php/Apd_a442_excel/do_edit"; ?>" method="POST">
+							<form action="<?php echo base_url()."index.php/Aps_a442_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -157,24 +141,19 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td>1</td>
 							 	<td><?php echo $nama_dosen; ?></td>
 							 	<td><?php echo $kode_mk; ?></td>
-							 	<td><input type="text" name="nama_mk" value="<?php echo $nama_mk; ?>"></td>
+							 	<td><?php echo $nama_mk; ?></td>
 							 	<td><input type="text" name="jml_sks" value="<?php echo $jml_sks; ?>"></td>
 							 	<td><input type="text" name="jp_rencana" value="<?php echo $jp_rencana; ?>"></td>
 							 	<td><input type="text" name="jp_dilaksanakan" value="<?php echo $jp_dilaksanakan; ?>"></td>
 							 </tr>
-							 <tr>
-							 	<td colspan="5">Jumlah*</td>
-							 	<td>16</td>
-							 	<td>16</td>
-							 </tr>
 							</tbody>
 							</table>
-							<input type="hidden" name="kode_mk" value="<?php echo $kode_mk; ?>">
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							<div class="btn-group">
 								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a442_excel";?>">
+								<a href="<?php echo base_url()."index.php/Aps_a442_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal 
 									</button>

@@ -102,7 +102,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="btn-group">
 											<a href="<?php echo base_url()."index.php/Aps_a455_excel/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah
+											Tambah<i class="fa fa-plus"></i>
 											</button>
 											</a>
 										</div>
@@ -142,7 +142,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['nasional']; ?></td>
 							 	<td><?php echo $d['lokal']; ?></td>
 							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Aps_a455_excel/ubah/".$d['thn_awal'];?>" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Aps_a455_excel/ubah/".$d['id'];?>" >Edit</a>
+									||
+									<a href="<?php echo base_url()."index.php/Aps_a455_excel/do_hapus/".$d['id'] ?>"></a>
 								</td>
 							 </tr>
 							 <?php } ?>

@@ -11,10 +11,10 @@ class Aps_a433_model extends CI_Model {
 
 // Listing
  public function listing() {
+ $kdprodi = $this->session->userdata('kd_prodi');
  $data=$this->db->query('
-SELECT D.NAMA_DOSEN, A.SKS_PSS,A.SKS_PSL_PTS,A.SKS_PTL,A.SKS_PENELITIAN,A.SKS_PP_MAS,A.SKS_MAN_PTS,A.SKS_MAN_PTL,A.id,
-SUM(A.SKS_PSS+a.SKS_PSL_PTS+a.SKS_PTL+a.SKS_PENELITIAN+a.sks_pp_mas+a.sks_man_pts+a.sks_man_ptl)as total
-FROM aktivitas_dosen A INNER JOIN dosen_tbl D ON A.id_dosen=D.id_dosen WHERE D.kd_prodi="P002" and D.STS_AHLI="YA" and d.kd_jns_dosen=1 group by a.id_dosen');
+SELECT D.NAMA_DOSEN, A.SKS_PSS,A.SKS_PSL_PTS,A.SKS_PTL,A.SKS_PENELITIAN,A.SKS_PP_MAS,A.SKS_MAN_PTS,A.SKS_MAN_PTL,A.id
+FROM aktivitas_dosen A INNER JOIN dosen_tbl D ON A.id_dosen=D.id_dosen WHERE D.kd_prodi='."'$kdprodi'".' and D.STS_AHLI="YA" and d.kd_jns_dosen=1;');
  
  return $data->result_array();
  }
@@ -32,93 +32,127 @@ FROM aktivitas_dosen A INNER JOIN dosen_tbl D ON A.id_dosen=D.id_dosen '.$where)
 		return $res;
 	}
 
- public function hitung(){
- 	$data=$this->db->query('select sum(a.sks_pss)as jml from aktivitas_dosen a inner join dosen_tbl d on a.id_dosen=d.id_dosen where d.sts_ahli="ya" and d.kd_jns_dosen=1');
+ public function jumlah_pssendiri(){
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ 	$data=$this->db->query('select sum(a.sks_pss) as jml from aktivitas_dosen a inner join dosen_tbl d on d.id_dosen=a.id_dosen
+	where d.kd_jns_dosen=1 and d.sts_ahli="YA" and d.kd_prodi='."'$kdprodi'");
  	return $data->result_array();
  }
 
+
  public function jumlah_ps_lain_pt_sendiri(){
- 	$data=$this->db->query('SELECT SUM(a.SKS_PSL_PTS)AS jml FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen 
-WHERE d.kd_prodi="p001" AND d.sts_ahli="YA" AND d.kd_jns_dosen=1
+ $kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('SELECT SUM(a.SKS_PSL_PTS)AS jml FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen 
+WHERE d.kd_prodi='."'$kdprodi'".' AND d.sts_ahli="YA" AND d.kd_jns_dosen=1
 ');
  	return $data->result_array();
  }
 
  public function jumlah_ptlain(){
+ 	 $kdprodi = $this->session->userdata('kd_prodi');
  	$data=$this->db->query('SELECT SUM(a.SKS_PTL)AS jml FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen 
-WHERE d.kd_prodi="p001" AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
+WHERE d.kd_prodi='."'$kdprodi'".' AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
  	return $data->result_array();
  }
 
  public function jumlah_penelitian(){
+ 	 $kdprodi = $this->session->userdata('kd_prodi');
  	$data=$this->db->query('SELECT SUM(a.SKS_PENELITIAN)AS jml FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen 
-WHERE d.kd_prodi="p001" AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
+WHERE d.kd_prodi='."'$kdprodi'".' AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
  	return $data->result_array();
  }
 
  public function sks_pengabdian(){
+ 	 $kdprodi = $this->session->userdata('kd_prodi');
  	$data=$this->db->query('SELECT SUM(a.SKS_PP_MAS)AS jml FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen 
-WHERE d.kd_prodi="p001" AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
+WHERE d.kd_prodi='."'$kdprodi'".' AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
  	return $data->result_array();
  }
 
   public function jum_sks(){
+  	 $kdprodi = $this->session->userdata('kd_prodi');
  	$data=$this->db->query('SELECT SUM(a.SKS_MAN_PTS)AS jml FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen 
-WHERE d.kd_prodi="p001" AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
+WHERE d.kd_prodi='."'$kdprodi'".' AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
  	return $data->result_array();
  }
 
  public function man_ptlain(){
+ 	 $kdprodi = $this->session->userdata('kd_prodi');
  	$data=$this->db->query('SELECT SUM(a.SKS_MAN_PTS)AS jml FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen 
-WHERE d.kd_prodi="p001" AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
+WHERE d.kd_prodi='."'$kdprodi'".' AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
  	return $data->result_array();
  }
 
  public function tot_sks(){
+ 	 $kdprodi = $this->session->userdata('kd_prodi');
  	$data=$this->db->query('SELECT SUM(A.SKS_PSS+a.SKS_PSL_PTS+a.SKS_PTL+a.SKS_PENELITIAN+a.sks_pp_mas+a.sks_man_pts+a.sks_man_ptl)AS jml 
-FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen WHERE d.kd_prodi="p001" AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
+FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen WHERE d.kd_prodi='."'$kdprodi'".' AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
  	return $data->result_array();
  }
 
  public function rata_ps_sendiri(){
- 	$data=$this->db->query('SELECT AVG(a.sks_pss)AS rata FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen WHERE d.kd_prodi="p001" AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
+ 	 $kdprodi = $this->session->userdata('kd_prodi');
+ 	$data=$this->db->query('SELECT AVG(a.sks_pss)AS rata FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen WHERE d.kd_prodi='."'$kdprodi'".' AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
  	return $data->result_array();
  }
 
  public function rata_prlain(){
- 	$data=$this->db->query('SELECT AVG(a.SKS_PSL_PTS)AS rata FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen WHERE d.kd_prodi="p001" AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
+ 	 $kdprodi = $this->session->userdata('kd_prodi');
+ 	$data=$this->db->query('SELECT AVG(a.SKS_PSL_PTS)AS rata FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen WHERE d.kd_prodi='."'$kdprodi'".' AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
  	return $data->result_array();
  }
 
  public function rata_ptlain(){
- 	$data=$this->db->query('SELECT AVG(a.SKS_PTL)AS rata FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen WHERE d.kd_prodi="p001" AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
+ 	 $kdprodi = $this->session->userdata('kd_prodi');
+ 	$data=$this->db->query('SELECT AVG(a.SKS_PTL)AS rata FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen WHERE d.kd_prodi='."'$kdprodi'".' AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
  	return $data->result_array();
  }
 
  public function rata_penelitian(){
- 	$data=$this->db->query('SELECT AVG(a.SKS_PENELITIAN)AS rata FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen WHERE d.kd_prodi="p001" AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
+ 	 $kdprodi = $this->session->userdata('kd_prodi');
+ 	$data=$this->db->query('SELECT AVG(a.SKS_PENELITIAN)AS rata FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen WHERE d.kd_prodi='."'$kdprodi'".' AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
  	return $data->result_array();
  }
 
  public function rata_pengmas(){
- 	$data=$this->db->query('SELECT AVG(a.SKS_PP_MAS)AS rata FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen WHERE d.kd_prodi="p001" AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
+ 	 $kdprodi = $this->session->userdata('kd_prodi');
+ 	$data=$this->db->query('SELECT AVG(a.SKS_PP_MAS)AS rata FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen WHERE d.kd_prodi='."'$kdprodi'".' AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
  	return $data->result_array();
  }
 
  public function rata_manptsendiri(){
- 	$data=$this->db->query('SELECT AVG(a.SKS_MAN_PTS)AS rata FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen WHERE d.kd_prodi="p001" AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
+ 	 $kdprodi = $this->session->userdata('kd_prodi');
+ 	$data=$this->db->query('SELECT AVG(a.SKS_MAN_PTS)AS rata FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen WHERE d.kd_prodi='."'$kdprodi'".' AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
  	return $data->result_array();
  }
 
  public function rata_manptlain(){
- 	$data=$this->db->query('SELECT AVG(a.SKS_MAN_PTL)AS rata FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen WHERE d.kd_prodi="p001" AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
+ 	 $kdprodi = $this->session->userdata('kd_prodi');
+ 	$data=$this->db->query('SELECT AVG(a.SKS_MAN_PTL)AS rata FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen WHERE d.kd_prodi='."'$kdprodi'".' AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
  	return $data->result_array();
  }
 
  public function rata_jumsks(){
- 	$data=$this->db->query('SELECT AVG(A.SKS_PSS+a.SKS_PSL_PTS+a.SKS_PTL+a.SKS_PENELITIAN+a.sks_pp_mas+a.sks_man_pts+a.sks_man_ptl)AS rata FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen WHERE d.kd_prodi="p001" AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
+ 	 $kdprodi = $this->session->userdata('kd_prodi');
+ 	$data=$this->db->query('SELECT AVG(A.SKS_PSS+a.SKS_PSL_PTS+a.SKS_PTL+a.SKS_PENELITIAN+a.sks_pp_mas+a.sks_man_pts+a.sks_man_ptl)AS rata FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen WHERE d.kd_prodi='."'$kdprodi'".' AND d.sts_ahli="YA" AND d.kd_jns_dosen=1');
  	return $data->result_array();
  }
+
+ public function insert($tablename,$data){
+	$res=$this->db->insert($tablename,$data);
+	return $res;
+}
+
+public function delete($tablename,$where){
+	$res=$this->db->delete($tablename,$where);
+	return $res;
+}
+
+public function getdosen(){
+	 $kdprodi = $this->session->userdata('kd_prodi');
+	$data=$this->db->query('select id_dosen,nama_dosen from dosen_tbl where sts_ahli="YA" and kd_prodi='."'$kdprodi'");
+	return $data->result_array();
+}
 
 
 

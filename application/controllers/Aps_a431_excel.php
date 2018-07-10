@@ -34,9 +34,6 @@ public function index() {
 		"GELAR_S3"=>$res[0]['GELAR_S3'],
 		"ASAL_PT_S3"=>$res[0]['ASAL_PT_S3'],
 		"BID_KEAHLIAN_S3"=>$res[0]['BID_KEAHLIAN_S3'],
-		"GELAR"=>$res[0]['GELAR'],
-		"PENGAKUAN"=>$res[0]['PENGAKUAN'],
-		"BID_KEAHLIAN"=>$res[0]['BID_KEAHLIAN'],
 	);
  	$this->load->view('Users/Butir4/edit_borang4.3.1.php',$data);
  }
@@ -56,9 +53,6 @@ public function index() {
 		$GELAR_S3=$_POST['GELAR_S3'];
 		$ASAL_PT_S3=$_POST['ASAL_PT_S3'];
 		$BID_KEAHLIAN_S3=$_POST['BID_KEAHLIAN_S3'];
-		$GELAR=$_POST['GELAR'];
-		$PENGAKUAN=$_POST['PENGAKUAN'];
-		$BID_KEAHLIAN=$_POST['BID_KEAHLIAN'];
 		$data_update=array(
 			"nama_dosen"=>$nama_dosen,
 			"nidn"=>$nidn,
@@ -74,9 +68,6 @@ public function index() {
 			"GELAR_S3"=>$GELAR_S3,
 			"ASAL_PT_S3"=>$ASAL_PT_S3,
 			"BID_KEAHLIAN_S3"=>$BID_KEAHLIAN_S3,
-			"GELAR"=>$GELAR,
-			"PENGAKUAN"=>$PENGAKUAN,
-			"BID_KEAHLIAN"=>$BID_KEAHLIAN
 		);
 		$where=array('nidn'=>$nidn);
 		$res=$this->Aps_a431_model->rubah('dosen_tbl',$data_update,$where);

@@ -51,9 +51,10 @@ $this->load->view('Users/Butir3B/tampilan_borang3.2.1.php',array('masastudi'=>$m
 	}
 
 public function export_excel(){
- $data = array( 'title' => 'TABEL DATA BUTIR 3.2.1 : MAHASISWA DAN LULUSAN',
- 'b321' => $this->Aps_b321_model->listing());
- $this->load->view('Users/Butir3B/tampilan_borang3.2.1.php',$data);
+ $masastudi=$this->Aps_b321_model->masastudi();
+$rata=$this->Aps_b321_model->rata();
+ $this->load->view('Users/Butir3B/tampilan_borang3.2.1_excel.php',array('masastudi'=>$masastudi,
+																'rata'=>$rata));
  }
 
 }

@@ -2,7 +2,7 @@
 
 header("Content-type: application/octet-stream");
 
-header("Content-Disposition: attachment; filename=$title.xls");
+header("Content-Disposition: attachment; filename=Butir 3.1.2 : PROFIL MAHASISWA DAN LULUSAN.xls");
 
 header("Pragma: no-cache");
 

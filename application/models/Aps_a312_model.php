@@ -11,45 +11,64 @@ public function __construct()
 
 // Listing
  public function listing() {
- $data=$this->db->query('SELECT dy_tampung,jc_mhs_ikt_seleksi,jc_mhs_lls_seleksi,j_maba_nonreg,j_maba_trf,j_tot_nonreg,j_tot_trf,id FROM DATA_MHS WHERE id_prodi="p002" and kd_prog=2
+ $kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('SELECT dy_tampung,jc_mhs_ikt_seleksi,jc_mhs_lls_seleksi,j_maba_nonreg,j_maba_trf,j_tot_nonreg,j_tot_trf,id FROM DATA_MHS WHERE id_prodi='."'$kdprodi'".' and kd_prog=2
 ORDER BY tahun;');
  return $data->result_array();
  }
 
  public function jml_tampung(){
- 	$data=$this->db->query('SELECT sum(dy_tampung) as jml_tampung FROM DATA_MHS WHERE id_prodi="p002" and kd_prog=2;');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ 	$data=$this->db->query('SELECT sum(dy_tampung) as jml_tampung FROM DATA_MHS WHERE id_prodi='."'$kdprodi'".' and kd_prog=2;');
  	return $data->result_array();
  }
 
  public function jml_ikutseleksi(){
- 	$data=$this->db->query('SELECT sum(jc_mhs_ikt_seleksi) as jml_ikutseleksi FROM DATA_MHS WHERE id_prodi="p002" and kd_prog=2;');
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ 	$data=$this->db->query('SELECT sum(jc_mhs_ikt_seleksi) as jml_ikutseleksi FROM DATA_MHS WHERE id_prodi='."'$kdprodi'".' and kd_prog=2;');
  	return $data->result_array();
  }
 
   public function jml_lulusseleksi(){
- 	$data=$this->db->query('SELECT sum(jc_mhs_lls_seleksi) as jml_lulusseleksi FROM DATA_MHS WHERE id_prodi="p002" and kd_prog=2;');
+  	$kdprodi = $this->session->userdata('kd_prodi');
+ 	$data=$this->db->query('SELECT sum(jc_mhs_lls_seleksi) as jml_lulusseleksi FROM DATA_MHS WHERE id_prodi='."'$kdprodi'".' and kd_prog=2;');
  	return $data->result_array();
  }
 
   public function j_maba_nonreg(){
- 	$data=$this->db->query('SELECT sum(j_maba_nonreg) as j_maba_nonreg FROM DATA_MHS WHERE id_prodi="p002" and kd_prog=2;');
+  	$kdprodi = $this->session->userdata('kd_prodi');
+ 	$data=$this->db->query('SELECT sum(j_maba_nonreg) as j_maba_nonreg FROM DATA_MHS WHERE id_prodi='."'$kdprodi'".' and kd_prog=2;');
  	return $data->result_array();
  }
 
    public function j_maba_trf(){
- 	$data=$this->db->query('SELECT sum(j_maba_trf) as j_maba_trf FROM DATA_MHS WHERE id_prodi="p002" and kd_prog=2;');
+   	$kdprodi = $this->session->userdata('kd_prodi');
+ 	$data=$this->db->query('SELECT sum(j_maba_trf) as j_maba_trf FROM DATA_MHS WHERE id_prodi='."'$kdprodi'".' and kd_prog=2;');
  	return $data->result_array();
  }
 
   public function j_tot_nonreg(){
- 	$data=$this->db->query('SELECT sum(j_tot_nonreg) as j_tot_nonreg FROM DATA_MHS WHERE id_prodi="p002" and kd_prog=2;');
+  	$kdprodi = $this->session->userdata('kd_prodi');
+ 	$data=$this->db->query('SELECT sum(j_tot_nonreg) as j_tot_nonreg FROM DATA_MHS WHERE id_prodi='."'$kdprodi'".' and kd_prog=2;');
  	return $data->result_array();
  }
 
   public function j_tot_trf(){
- 	$data=$this->db->query('SELECT sum(j_tot_trf) as j_tot_trf FROM DATA_MHS WHERE id_prodi="p002" and kd_prog=2;');
+  	$kdprodi = $this->session->userdata('kd_prodi');
+ 	$data=$this->db->query('SELECT sum(j_tot_trf) as j_tot_trf FROM DATA_MHS WHERE id_prodi='."'$kdprodi'".' and kd_prog=2;');
  	return $data->result_array();
  }
+
+public function update($where=""){
+ $kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('SELECT dy_tampung,jc_mhs_ikt_seleksi,jc_mhs_lls_seleksi,j_maba_nonreg,j_maba_trf,j_tot_nonreg,j_tot_trf,id FROM DATA_MHS WHERE id='.$where);
+ return $data->result_array();
+}
+
+public function ubah($tablename,$data,$where){
+	$res=$this->db->update($tablename,$data,$where);
+	return $res;
+}
 
  
 

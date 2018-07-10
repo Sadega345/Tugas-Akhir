@@ -100,7 +100,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/Aps_b411_excel/tambah";?>">
+											<a href="#">
 											<button id="sample_editable_1_new" class="btn green">
 											Load
 											</button>
@@ -150,6 +150,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	 ?>
 							 	 <td><?php echo $d['jml']; ?></td>
 							 	 <?php } ?>
+							 	 <td class="center">
+									<a href="<?php echo base_url()."index.php/Aps_a411_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>
 							 </tr>
 							 <tr>
 							 	<td>2</td>
@@ -164,6 +167,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	 ?>
 							 	 <td><?php echo $d['jml']; ?></td>
 							 	 <?php } ?>
+							 	 <td class="center">
+									<a href="<?php echo base_url()."index.php/Aps_a411_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>
 							 </tr>
 							 <tr>
 							 	<td>3</td>
@@ -178,6 +184,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	 ?>
 							 	 <td><?php echo $d['jml']; ?></td>
 							 	 <?php } ?>
+							 	 <td class="center">
+									<a href="<?php echo base_url()."index.php/Aps_a411_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>
 							 </tr>
 							  <tr>
 							 	<td>4</td>
@@ -192,6 +201,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	 ?>
 							 	 <td><?php echo $d['jml']; ?></td>
 							 	 <?php } ?>
+							 	 <td class="center">
+									<a href="<?php echo base_url()."index.php/Aps_a411_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>
 							 </tr>
 							 <tr>
 							 	<td></td>
@@ -226,6 +238,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	 ?>
 							 	 <td><?php echo $d['jml']; ?></td>
 							 	 <?php } ?>
+							 	 <td class="center">
+									<a href="<?php echo base_url()."index.php/Aps_a411_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>
 							 </tr>
 							 <tr>
 							 	<td>2</td>
@@ -240,6 +255,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	 ?>
 							 	 <td><?php echo $d['jml']; ?></td>
 							 	 <?php } ?>
+							 	 <td class="center">
+									<a href="<?php echo base_url()."index.php/Aps_a411_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>
 							 </tr>
 							 <tr>
 							 	<td>3</td>
@@ -254,6 +272,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	 ?>
 							 	 <td><?php echo $d['jml']; ?></td>
 							 	 <?php } ?>
+							 	 <td class="center">
+									<a href="<?php echo base_url()."index.php/Aps_a411_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>
 							 </tr>
 							 <tr>
 							 	<td></td>

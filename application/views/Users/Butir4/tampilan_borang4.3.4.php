@@ -102,7 +102,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="btn-group">
 											<a href="<?php echo base_url()."index.php/Aps_a434_excel/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah 
+											Tambah<i class="fa fa-plus"></i>
 											</button>
 											</a>
 										</div>
@@ -140,7 +140,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['jp_rencana']; ?></td>
 							 	<td><?php echo $d['jp_dilaksanakan']; ?></td>
 							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Aps_a434_excel/ubah/".$d['kode_mk'];?>" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Aps_a434_excel/ubah/".$d['id'];?>" >Edit</a>
+									||
+								 	<a href="<?php echo base_url()."index.php/Aps_a434_excel/do_hapus/".$d['id'];?>" id="alerthapus"">Hapus</a>
 								</td>
 							 </tr>
 							 <?php } ?>
@@ -148,7 +150,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	foreach ($jumlah as $jum) {
 							 ?>
 							 <tr>
-							 	<td colspan="6"><center>Jumlah*</center></td>
+							 	<td colspan="5"><center><strong>Jumlah*</strong></center></td>
 							 	<td><?php echo $jum['jumper_d']; ?></td>
 							 <?php } ?>
 							 <?php 

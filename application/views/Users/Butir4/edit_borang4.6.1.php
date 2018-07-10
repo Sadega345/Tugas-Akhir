@@ -125,7 +125,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
-							<form action="<?php echo base_url()."index.php/Apd_a461_excel/do_edit"; ?>" method="POST">
+							<form action="<?php echo base_url()."index.php/Aps_a461_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								 <tr>
@@ -176,14 +176,14 @@ License: You must have a valid license purchased only from themeforest(the above
 							 </tr>
 							</tbody>
 							</table>
-							<input type="hidden" name="kd_jns" value="<?php echo $kd_jns; ?>">
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							<div class="btn-group">
 								<button id="sample_editable_1_new" class="btn blue">
 									Simpan 
 								</button>
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a461_excel";?>">
+								<a href="<?php echo base_url()."index.php/Aps_a461_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal 
 									</button>

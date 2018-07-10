@@ -51,7 +51,8 @@ public function delete($tablename,$where){
 }
 
 public function getdosen(){
-	$data=$this->db->query('select id_dosen,nama_dosen from dosen_tbl where sts_ahli="YA";');
+	$kdprodi = $this->session->userdata('kd_prodi');
+	$data=$this->db->query('select id_dosen,nama_dosen from dosen_tbl where kd_jns_dosen=1 and sts_ahli="YA" and kd_prodi='."'$kdprodi'");
 	return $data->result_array();
 }
 

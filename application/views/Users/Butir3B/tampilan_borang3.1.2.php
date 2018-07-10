@@ -113,11 +113,11 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th rowspan="2">No</th>
+									 <th rowspan="2"><center>No</center></th>
 									 <th rowspan="2" colspan="2"><center>Hal</center></th>
-									 <th rowspan="2">Total Mahasiswa pada Fakultas**</th>
+									 <th rowspan="2"><center>Total Mahasiswa pada Fakultas**</center></th>
 									 <th><center>Jumlah Mahasiswa pada PS: *</center></th>
-									 <th>Aksi</th>
+									 <th rowspan="2"><center>Aksi</center></th>
 								 </tr>
 								 <tr>
 								 <?php 
@@ -127,7 +127,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<th><center>PS- <?php echo $no++; ?> <br> <?php echo $p['jurusan'] ?></center></th>
 								 	
 								 <?php } ?>
-								 	<th></th>
 								 </tr>
 							</thead>
 							<tbody>
@@ -145,7 +144,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									 ?>
 									<td><?php echo $d['j_maba_reg_bkn_trf']; ?></td>
 									<?php } ?>
-									<td><a>Edit</a></td>
+									<td class="center">
+										<a href="<?php echo base_url()."index.php/Aps_b312_excel/ubah/".$d['id'];?>" >Edit</a>
+									</td>
 								</tr>
 								<tr>
 									<td>2. Mhs. baru transfer</td>
@@ -157,7 +158,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									 ?>
 									<td><?php echo $d['j_maba_trf']; ?></td>
 									<?php } ?>
-									<td><a>Edit</a></td>
+									<td class="center">
+										<a href="<?php echo base_url()."index.php/Aps_b312_excel/ubah/".$d['id'];?>" >Edit</a>
+									</td>
 								</tr>
 								<tr>
 									<td>3. Total mhs. regular (Student Body)</td>
@@ -169,7 +172,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									 ?>
 									<td><?php echo $d['j_tot_reg_bkn_trf']; ?></td>
 									<?php } ?>
-									<td><a>Edit</a></td>
+									<td class="center">
+										<a href="<?php echo base_url()."index.php/Aps_b312_excel/ubah/".$d['id'];?>" >Edit</a>
+									</td>
 								</tr>
 								<tr>
 									<td rowspan="3">2</td>
@@ -185,7 +190,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									 ?>
 									<td><?php echo $d['j_tot_reg_bkn_trf']; ?></td>
 									<?php } ?>
-									<td><a>Edit</a></td>
+									<td class="center">
+										<a href="<?php echo base_url()."index.php/Aps_b312_excel/ubah/".$d['id'];?>" >Edit</a>
+									</td>
 								</tr>
 								<tr>
 									<td>2. Mhs. baru transfer</td>
@@ -197,7 +204,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									 ?>
 									<td><?php echo $d['j_maba_trf']; ?></td>
 									<?php } ?>
-									<td><a>Edit</a></td>
+									<td class="center">
+										<a href="<?php echo base_url()."index.php/Aps_b312_excel/ubah/".$d['id'];?>" >Edit</a>
+									</td>
 								</tr>
 								<tr>
 									<td>3. Total mhs. regular (Student Body)</td>
@@ -209,7 +218,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									 ?>
 									<td><?php echo $d['j_tot_reg_bkn_trf']; ?></td>
 									<?php } ?>
-									<td><a>Edit</a></td>
+									<td class="center">
+										<a href="<?php echo base_url()."index.php/Aps_b312_excel/ubah/".$d['id'];?>" >Edit</a>
+									</td>
 								</tr>
 							</tbody>
 							</table>

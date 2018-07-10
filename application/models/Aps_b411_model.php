@@ -16,37 +16,44 @@ return $prodi->result_array();
 }
 
 public function listing1() {
-$data1=$this->db->query('select jml from sdm where kd_hal=1 and kd_prodi="p002";');
+$kdprodi = $this->session->userdata('kd_prodi');
+$data1=$this->db->query('select id,jml from sdm where kd_hal=1 and kd_prodi='."'$kdprodi'");
 return $data1->result_array();
 }
 
 public function listing2() {
-$data2=$this->db->query('select jml from sdm where kd_hal=2 and kd_prodi="p002";');
+$kdprodi = $this->session->userdata('kd_prodi');
+$data2=$this->db->query('select id,jml from sdm where kd_hal=2 and kd_prodi='."'$kdprodi'");
 return $data2->result_array();
 }
 
 public function listing3() {
-$data3=$this->db->query('select jml from sdm where kd_hal=3 and kd_prodi="p002";');
+$kdprodi = $this->session->userdata('kd_prodi');
+$data3=$this->db->query('select id,jml from sdm where kd_hal=3 and kd_prodi='."'$kdprodi'");
 return $data3->result_array();
 }
 
 public function listing4() {
-$data4=$this->db->query('select jml from sdm where kd_hal=4 and kd_prodi="p002";');
+$kdprodi = $this->session->userdata('kd_prodi');
+$data4=$this->db->query('select id,jml from sdm where kd_hal=4 and kd_prodi='."'$kdprodi'");
 return $data4->result_array();
 }
 
 public function listing5() {
-$data5=$this->db->query('select jml from sdm where kd_hal=5 and kd_prodi="p002";');
+$kdprodi = $this->session->userdata('kd_prodi');
+$data5=$this->db->query('select id,jml from sdm where kd_hal=5 and kd_prodi='."'$kdprodi'");
 return $data5->result_array();
 }
 
 public function listing6() {
-$data6=$this->db->query('select jml from sdm where kd_hal=6 and kd_prodi="p002";');
+$kdprodi = $this->session->userdata('kd_prodi');
+$data6=$this->db->query('select id,jml from sdm where kd_hal=6 and kd_prodi='."'$kdprodi'");
 return $data6->result_array();
 }
 
 public function listing7() {
-$data7=$this->db->query('select jml from sdm where kd_hal=7 and kd_prodi="p002";');
+$kdprodi = $this->session->userdata('kd_prodi');
+$data7=$this->db->query('select id,jml from sdm where kd_hal=7 and kd_prodi='."'$kdprodi'");
 return $data7->result_array();
 }
 
@@ -91,7 +98,8 @@ return $totala->result_array();
 }
 
 public function totalaps(){
-$totalaps=$this->db->query('select sum(s.jml) as totalaps from sdm s inner join jns_hal j on j.kd_hal=s.kd_hal where j.jenis="JABFUNG" and kd_prodi="p002"');
+$kdprodi = $this->session->userdata('kd_prodi');
+$totalaps=$this->db->query('select sum(s.jml) as totalaps from sdm s inner join jns_hal j on j.kd_hal=s.kd_hal where j.jenis="JABFUNG" and kd_prodi='."'$kdprodi'");
 return $totalaps->result_array();
 }
 
@@ -101,11 +109,13 @@ return $totalb->result_array();
 }
 
 public function totalbps(){
-$totalbps=$this->db->query('select sum(s.jml) as totalbps from sdm s inner join jns_hal j on j.kd_hal=s.kd_hal where j.jenis="dikti" and kd_prodi="p002"');
+$kdprodi = $this->session->userdata('kd_prodi');
+$totalbps=$this->db->query('select sum(s.jml) as totalbps from sdm s inner join jns_hal j on j.kd_hal=s.kd_hal where j.jenis="dikti" and kd_prodi='."'$kdprodi'");
 return $totalbps->result_array();
 }
 
 public function cols(){
+	$kdprodi = $this->session->userdata('kd_prodi');
 	$cols=$this->db->query('select count(distinct s.kd_prodi) as cols from sdm s inner join prodi_tbl p on p.kode_prodi=s.kd_prodi;');
 	return $cols->result_array();
 }

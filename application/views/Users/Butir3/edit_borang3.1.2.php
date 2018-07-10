@@ -114,7 +114,6 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 							<thead>
 								<tr>
-									 <th rowspan="2"><center>Tahun Akademik</center></th>
 									 <th rowspan="2"><center>Daya Tampung</center></th>
 									 <th colspan="2"><center>Jumlah calon mahasiswa</center></th>
 									 <th colspan="2"><center>Jumlah Mahasiswa baru</center></th>
@@ -128,7 +127,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<th><center>Transfer</center></th>
 								 	<th><center>Non reguler</center></th>
 								 	<th><center>Transfer</center></th>
-								 	<th><center>Aksi</center></th>
 								 </tr>
 							</thead>
 							<tbody>
@@ -141,7 +139,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td><input type="text" name="j_tot_nonreg" value="<?php echo $j_tot_nonreg; ?>"></td>
 								 	<td><input type="text" name="j_tot_trf" value="<?php echo $j_tot_trf; ?>"></td>
 								 </tr>
-							
 							</tbody>
 							</table>
 							</div>

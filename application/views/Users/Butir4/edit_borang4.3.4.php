@@ -86,7 +86,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
-								</a>
+								</a>								
 								<a href="#portlet-config" data-toggle="modal" class="config">
 								</a>
 								<a href="javascript:;" class="reload">
@@ -107,26 +107,10 @@ License: You must have a valid license purchased only from themeforest(the above
 											</a> -->
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
 							<div style="overflow-x:auto;">
-							<form action="<?php echo base_url()."index.php/Apd_a434_excel/do_edit"; ?>" method="POST">
+							<form action="<?php echo base_url()."index.php/Aps_a434_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								  <tr>
@@ -167,14 +151,14 @@ License: You must have a valid license purchased only from themeforest(the above
 							 </tr>
 							</tbody>
 							</table>
-							<input type="hidden" name="kode_mk" value="<?php echo $kode_mk; ?>">
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							</div>
 							<div class="btn-group">
 								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 							</div>
 							</form>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a434_excel";?>">
+								<a href="<?php echo base_url()."index.php/Aps_a434_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal 
 									</button>

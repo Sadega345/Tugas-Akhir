@@ -49,7 +49,7 @@ class Pengisis_excel extends CI_Controller {
 
 	public function edit_data($id){
 		$this->model_squrity->getsqurity();
-		$res=$this->Pengisis_model->listing("where id=$id");
+		$res=$this->Pengisis_model->ubah("id=$id");
 		$data=array(
 			"id"=>$res[0]['id'],
 			"nama"=>$res[0]['nama'],

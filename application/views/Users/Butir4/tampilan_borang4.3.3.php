@@ -100,9 +100,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="<?php echo base_url()."index.php/Aps_a433_excel/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah 
+											Tambah <i class="fa fa-plus"></i>
 											</button>
 											</a>
 										</div>
@@ -148,6 +148,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['total']; ?></td>
 							 	<td class="center">
 									<a href="<?php echo base_url()."index.php/Aps_a433_excel/ubah/".$d['id'];?>" >Edit</a>
+									||
+								 	<a href="<?php echo base_url()."index.php/Aps_a433_excel/do_hapus/".$d['id'];?>" id="alerthapus"">Hapus</a>
 								</td>
 							 </tr>
 							 <input type="hidden" name="id" value="<?php echo $d['id']; ?>">
@@ -155,9 +157,9 @@ License: You must have a valid license purchased only from themeforest(the above
 
 							 
 							 <tr>
-							 	<td colspan="2">Jumlah</td>
+							 	<td colspan="2"><strong>Jumlah</strong></td>
 							 	<?php 
-									foreach ($hitung as $h ) { 
+									foreach ($jumlah_pssendiri as $h ) { 
 							  	?>
 							 	<td><?php echo $h['jml']; ?></td>
 							 	<?php } ?>
@@ -199,7 +201,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 </tr>
 							 
 							  <tr>
-							 	<td colspan="2">Rata-rata</td>
+							 	<td colspan="2"><strong>Rata-rata</strong></td>
 							 	<?php 
 									foreach ($rata as $r ) { 
 							  	?>

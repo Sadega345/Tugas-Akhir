@@ -126,7 +126,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</div>
 							<div style="overflow-x:auto;">
-							<form action="<?php echo base_url()."index.php/Apd_a441_excel/do_edit"; ?>" method="POST">
+							<form action="<?php echo base_url()."index.php/Aps_a441_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -176,7 +176,16 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><input type="text" name="nama_dosen" value="<?php echo $nama_dosen; ?>"></td>
 							 	<td><input type="text" name="nidn" value="<?php echo $nidn; ?>" readonly></td>
 							 	<td><input type="text" name="tgl_lhr" value="<?php echo $tgl_lhr; ?>"></td>
-							 	<td><input type="text" name="" value="<?php echo $NM_JAB_AKD; ?>"></td>
+							 	<td>
+							 		<select name="kd_jab" >
+										<option disabled selected>-- Nama Jabatan --</option>
+										<?php 
+											$data=$this->Aps_a441_model->getjabatan();
+											foreach($data as $d) { ?>
+							                <option value="<?php echo $d['kd_jab'];?>"><?php echo $d['nm_jab_akd'];?></option>
+							            <?php } ?>
+									</select>
+							 	</td>
 							 	<td><input type="text" name="sertifikasi" value="<?php echo $sertifikasi; ?>"></td>
 							 	<td><input type="text" name="GELAR_S1" value="<?php echo $GELAR_S1; ?>"></td>
 							 	<td><input type="text" name="ASAL_PT_S1" value="<?php echo $ASAL_PT_S1; ?>"></td>
@@ -195,7 +204,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a441_excel";?>">
+								<a href="<?php echo base_url()."index.php/Aps_a441_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal 
 									</button>

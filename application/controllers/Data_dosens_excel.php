@@ -85,7 +85,7 @@ public function ubah($NIDN){
 		$where=array('NIDN'=>$NIDN);
 		$res=$this->Data_dosens_model->rubah('dosen_tbl',$data_update,$where);
 		if ($res>=1) {
-			redirect('Data_dosen_excel');
+			redirect('Data_dosens_excel');
 		}
  		// echo "Masuk";
 		// else {

@@ -89,9 +89,9 @@ public function index() {
 		// }
 	}
 
-	public function tambah(){
+public function tambah(){
 		$this->load->view('User/Butir4/inputan_borang4.6.1.php');
-  }
+}
 
 	public function do_tambah(){
 		$this->model_squrity->getsqurity();

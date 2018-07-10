@@ -2,98 +2,70 @@
 
 header("Content-type: application/octet-stream");
 
-header("Content-Disposition: attachment; filename=$title.xls");
+header("Content-Disposition: attachment; filename=Butir 3.3 : EVALUASI LULUSAN.xls");
 
 header("Pragma: no-cache");
 
 header("Expires: 0");
 
 ?>
-<p>  TABEL DATA BUTIR 3.4 : EVALUASI LULUSAN</p>
+<p>  TABEL DATA BUTIR 3.3 : EVALUASI LULUSAN</p>
 	<table border="1" width="50%">
 		<thead>
-			<tr>
-				 <th rowspan="2">No</th>
-				 <th rowspan="2">Jenis Kemampuan</th>
-				 <th colspan="4">Tanggapan Pihak Pengguna (%)</th>
-				 <th rowspan="2">Rencana Tindak Lanjut oleh Program Studi</th>
-			 </tr>
-			 <tr>
-			 	<th>Sangat baik</th>
-			 	<th>Baik</th>
-			 	<th>Cukup</th>
-			 	<th>Kurang</th>
-			 </tr>
-		</thead>
-		<tbody>
-			 <tr>
-			 	<td>1</td>
-			 	<td>Integritas(etika dan moral)</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-			 <tr>
-			 	<td>2</td>
-			 	<td>Keahlian berdasarkan <br>bidang ilmu (profesionalisme)</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-			 <tr>
-			 	<td>3</td>
-			 	<td>Bahasa Inggris</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-			 <tr>
-			 	<td>4</td>
-			 	<td>Penggunaan teknologi informasi</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>	
-			 <tr>
-			 	<td>5</td>
-			 	<td>Komunikasi</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-			 <tr>
-			 	<td>6</td>
-			 	<td>Kerjasama Tim</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-			 <tr>
-			 	<td>7</td>
-			 	<td>Pengembangan diri</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>		
-			 <tr>
-			 	<td colspan="2">Total</td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>	
-		</tbody>
+								<tr>
+									 <th rowspan="2"><center>No.</center></th>
+									 <th rowspan="2"><center>Jenis Kemampuan</center></th>
+									 <th colspan="4"><center>Tanggapan Pihak pengguna (%)</center></th>
+									 <th rowspan="2"><center>Rencana Tindak Lanjut oleh Program Studi</center></th>
+								 </tr>
+								 <tr>
+								 	<th>Sangat Baik</th>
+								 	<th>Baik</th>
+								 	<th>Cukup</th>
+								 	<th>Kurang</th>
+								 </tr>
+							</thead>
+							<tbody>
+								<?php 
+									$no=1; 
+									foreach ($data as $d ) { 
+								?>
+							<tr>
+								
+							 	<td><?php echo $no++; ?></td>
+							 	<td><?php echo $d['jenis_kemampuan']; ?></td>
+							 	<td><?php echo $d['sangat_baik']; ?></td>
+							 	<td><?php echo $d['baik']; ?></td>
+							 	<td><?php echo $d['cukup']; ?></td>
+							 	<td><?php echo $d['kurang']; ?></td>
+							 	<td><?php echo $d['rencana']; ?></td>
+							 </tr>
+							<?php } ?>
+							 
+							 <tr>
+							 	<td colspan="2"><strong>Total</strong></td>
+							 	<?php 
+									foreach ($sangatbaik as $d ) { 
+								?>
+							 		<td><?php echo $d['Sangat_baik']; ?></td>
+							 	<?php } ?>
+
+							 	<?php 
+									foreach ($baik as $d ) { 
+								?>
+							 		<td><?php echo $d['Baik']; ?></td>
+							 	<?php } ?>
+
+							 	<?php 
+									foreach ($cukup as $d ) { 
+								?>
+							 		<td><?php echo $d['Cukup']; ?></td>
+							 	<?php } ?>
+
+							 	<?php 
+									foreach ($kurang as $d ) { 
+								?>
+							 		<td><?php echo $d['Kurang']; ?></td>
+							 	<?php } ?>
+							 </tr>
+							</tbody>

@@ -16,9 +16,9 @@ public function index() {
  $this->load->view('Users/Butir4/tampilan_borang4.5.3.php',array('data'=>$data));
  }
 
- public function ubah($tahun){
+ public function ubah($id){
  	$this->model_squrity->getsqurity();
-		$res=$this->Aps_a453_model->update("where tahun='$tahun'");
+		$res=$this->Aps_a453_model->update("where id='$id'");
 		$data=array(
 			"nama_dosen"=>$res[0]['nama_dosen'],
 			"jenis_kegiatan"=>$res[0]['jenis_kegiatan'],
@@ -49,7 +49,7 @@ public function index() {
 			"sbg_peserta"=>$sbg_peserta
 			
 		);
-		$where=array('tahun'=>$tahun);
+		$where=array('id'=>$id);
 		$res=$this->Aps_a453_model->rubah('kegiatan_dsn_ttp',$data_update,$where);
 		if ($res>=1) {
 			redirect('Aps_a453_excel');
@@ -66,5 +66,45 @@ public function export_excel(){
  $data=$this->Aps_a453_model->listing();
  $this->load->view('Users/Butir4/tampilan_borang4.5.3_excel.php',array('data'=>$data));
  }
+
+ public function tambah(){
+ 	$this->load->view('Users/Butir4/inputan_borang4.5.3.php');
+ }
+
+ public function do_tambah(){
+		$this->model_squrity->getsqurity();
+		$id_dosen=$_POST['id_dosen'];
+		$jenis_kegiatan=$_POST['jenis_kegiatan'];
+		$tempat=$_POST['tempat'];
+		$tahun=$_POST['tahun'];
+		$sbg_penyaji=$_POST['sbg_penyaji'];
+		$sbg_peserta=$_POST['sbg_peserta'];
+		$data_insert=array(
+			'id_dosen' => $id_dosen,
+			'jenis_kegiatan' => $jenis_kegiatan,
+			'tempat'=>$tempat,
+			'tahun'=>$tahun,
+			'sbg_penyaji' => $sbg_penyaji,
+			'sbg_peserta' => $sbg_peserta
+		);
+		// print_r($data_insert);die();
+		$res=$this->Aps_a453_model->insert('kegiatan_dsn_ttp',$data_insert);
+		if ($res>=1) {
+			redirect('Aps_a453_excel');
+		}else {
+			alert('Gagal Insert');
+		}
+	}
+
+ public function do_hapus($id){
+		$this->model_squrity->getsqurity();
+		$where=array('id'=>$id);
+		$res=$this->Aps_a453_model->delete('kegiatan_dsn_ttp',$where);
+		if($res>=1){
+			redirect('Aps_a453_excel');
+		}else {
+			alert('Gagal Hapus');
+		}
+	}
 
 }

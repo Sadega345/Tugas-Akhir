@@ -11,7 +11,8 @@ public function __construct()
 
 // Listing
  public function GetProdi() {
- $prodi=$this->db->query('Select jurusan from prodi_tbl where kode_prodi="p002"');
+ $kdprodi = $this->session->userdata('kd_prodi');
+ $prodi=$this->db->query('Select jurusan from prodi_tbl where kode_prodi='."'$kdprodi'");
  return $prodi->result_array();
  }
 
@@ -21,7 +22,8 @@ public function __construct()
  }
 
  public function listing1(){
- $data1=$this->db->query('select j_maba_reg_bkn_trf,id from data_mhs where kd_prog=1 and id_prodi="p002" and tahun="2016"');
+ $kdprodi = $this->session->userdata('kd_prodi');
+ $data1=$this->db->query('select j_maba_reg_bkn_trf,id from data_mhs where kd_prog=1 and id_prodi='."'$kdprodi'".' and tahun="2016"');
  return $data1->result_array();
  }
 
@@ -31,7 +33,8 @@ public function __construct()
  }
 
  public function listing2(){
- $data2=$this->db->query('select j_maba_trf,id from data_mhs where kd_prog=1 and id_prodi="P002" and tahun="2016"');
+  $kdprodi = $this->session->userdata('kd_prodi');
+ $data2=$this->db->query('select j_maba_trf,id from data_mhs where kd_prog=1 and id_prodi='."'$kdprodi'".' and tahun="2016"');
  return $data2->result_array();
  }
 
@@ -41,7 +44,8 @@ public function __construct()
  }
 
  public function listing3(){
- $data3=$this->db->query('select j_tot_reg_bkn_trf,id from data_mhs where kd_prog=1 and id_prodi="P002" and tahun="2016"');
+ $kdprodi = $this->session->userdata('kd_prodi');
+ $data3=$this->db->query('select j_tot_reg_bkn_trf,id from data_mhs where kd_prog=1 and id_prodi='."'$kdprodi'".' and tahun="2016"');
  return $data3->result_array();
  }
  public function update($where="") {
@@ -60,7 +64,8 @@ $totalnonreg1=$this->db->query('select sum(d.j_maba_reg_bkn_trf)as totalnonreg1 
 }
 
 public function listnonreg1(){
-	$listnonreg1=$this->db->query('select j_tot_reg_bkn_trf,id from data_mhs where kd_prog=2 and id_prodi="P001" and tahun="2016"');
+	$kdprodi = $this->session->userdata('kd_prodi');
+	$listnonreg1=$this->db->query('select j_tot_reg_bkn_trf,id from data_mhs where kd_prog=2 and id_prodi='."'$kdprodi'".' and tahun="2016"');
  	return $listnonreg1->result_array();
 }
 
@@ -70,7 +75,8 @@ $totalnonreg2=$this->db->query('select sum(d.j_maba_trf)as totalnonreg2 from dat
 }
 
 public function listnonreg2(){
-	$listnonreg2=$this->db->query('select j_maba_trf,id from data_mhs where kd_prog=2 and id_prodi="P001" and tahun="2016"');
+	$kdprodi = $this->session->userdata('kd_prodi');
+	$listnonreg2=$this->db->query('select j_maba_trf,id from data_mhs where kd_prog=2 and id_prodi='."'$kdprodi'".' and tahun="2016"');
  	return $listnonreg2->result_array();
 }
 
@@ -80,7 +86,8 @@ $totalnonreg3=$this->db->query('select sum(d.j_tot_reg_bkn_trf)as totalnonreg3 f
 }
 
 public function listnonreg3(){
-	$listnonreg3=$this->db->query('select j_tot_reg_bkn_trf,id from data_mhs where kd_prog=2 and id_prodi="P001" and tahun="2016"');
+	$kdprodi = $this->session->userdata('kd_prodi');
+	$listnonreg3=$this->db->query('select j_tot_reg_bkn_trf,id from data_mhs where kd_prog=2 and id_prodi='."'$kdprodi'".' and tahun="2016"');
  	return $listnonreg3->result_array();
 }
 
