@@ -133,26 +133,26 @@ License: You must have a valid license purchased only from themeforest(the above
 									<th>1.</th>
 									<th>Program Studi</th>
 									<th>
-										<input type="text" name="PRODI" value="<?php echo $PRODI ?>" > 
-										Kode sesuai kode PPDT <input type="text" name="KODE_PRODI"  value="<?php echo $KODE_PRODI; ?>" readonly="">
+										<input type="text" name="PRODI" value="<?php echo $PRODI ?>" readonly > 
+										Kode sesuai kode PPDT <input type="text" name="KODE_PRODI"  value="<?php echo $KODE_PRODI; ?>" readonly>
 									</th>
 
 								 </tr>
 								 <tr>
 								 	<th>2.</th>
 									<th>Jurusan/Departemen</th>
-									<th><input type="text" name="jurusan" value="<?php echo $jurusan ?>"></th>
+									<th><input type="text" name="jurusan" value="<?php echo $jurusan ?>" readonly></th>
 								 </tr>
 								 <tr>
 								 	<th>3.</th>
 									<th>Fakultas</th>
-									<th><input type="text" name="NAMA_FAKULTAS" value="<?php echo $NAMA_FAKULTAS; ?>"></th>
+									<th><input type="text" name="NAMA_FAKULTAS" value="<?php echo $NAMA_FAKULTAS; ?>" readonly></th>
 								 </tr>
 								 <tr>
 								 	<th>4.</th>
 									<th>Perguruan Tinggi</th>
 									<th>
-										<input type="text" name="NAMA_PT" value="<?php echo $NAMA_PT; ?>">
+										<input type="text" name="NAMA_PT" value="<?php echo $NAMA_PT; ?>" readonly>
 										Kode sesuai kode PPDT<input type="text" name="kode_pt" readonly="" value="<?php echo $kode_pt; ?>" >
 									</th>
 									

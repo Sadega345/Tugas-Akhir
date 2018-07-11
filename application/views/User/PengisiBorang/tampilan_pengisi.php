@@ -119,12 +119,12 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th>No</th>
-									 <th>Nama</th>
-									 <th>NIDN</th>
-									 <th>Jabatan</th>
-									 <th>Tanggal Pengisian</th>
-									 <th>Aksi</th>
+									 <th><center>No</center></th>
+									 <th><center>Nama</center></th>
+									 <th><center>NIDN</center></th>
+									 <th><center>Jabatan</center></th>
+									 <th><center>Tanggal Pengisian</center></th>
+									 <th><center>Aksi</center></th>
 								 </tr>
 							</thead>
 							<tbody>

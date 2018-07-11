@@ -140,7 +140,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 </tr>
 							</tbody>
 							</table>
-							<input type="hidden" name="id" value="<?php echo $id; ?>">
+							<input type="hidden" name="id_prodi" value="<?php echo $id_prodi; ?>">
 							</div>
 							<div class="btn-group">
 								<button id="sample_editable_1_new" class="btn blue">

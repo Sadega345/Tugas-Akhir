@@ -103,22 +103,6 @@ License: You must have a valid license purchased only from themeforest(the above
 											
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
 							<form action="<?php echo base_url()."index.php/Pengisi_excel/do_tambah"; ?>" method="POST">
@@ -126,8 +110,8 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="col-md-10">
 									<div class="row">
 										<div class="form-group">
-											<label>Id</label>
-											<input type="text" class="form-control" name="id">
+											<!-- <label>Id</label> -->
+											<input type="hidden" class="form-control" name="id">
 										</div>
 									</div>
 									<div class="row">
@@ -155,14 +139,20 @@ License: You must have a valid license purchased only from themeforest(the above
 										</div>
 									</div>
 									<div class="row">
-										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+										<table>
+										<td><button type="submit" class="btn btn-primary" name="simpan">Simpan</button></td>
+										<td>&nbsp;&nbsp;</td>
+										</form>
+											<form action="<?php echo base_url()."index.php/Pengisi_excel/"; ?>" method="POST">
+												<td><button id="sample_editable_1_new" class="btn red">
+													Batal 
+												</button></td>
+											</form>
+										</table>
 									</div>
 								</div>
 							</div>
-							</form>
-							
 						</div>
-					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->
 				</div>
 			</div>

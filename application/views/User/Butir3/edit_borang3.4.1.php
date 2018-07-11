@@ -130,10 +130,10 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th rowspan="2">No.</th>
-									 <th rowspan="2">Jenis Kemampuan</th>
-									 <th colspan="4">Tanggapan Pihak pengguna (%)</th>
-									 <th rowspan="2">Rencana Tindak Lanjut oleh Program Studi</th>
+									 <th rowspan="2"><center>No.</center></th>
+									 <th rowspan="2"><center>Jenis Kemampuan></center></th>
+									 <th colspan="4"><center>Tanggapan Pihak pengguna (%)</center></th>
+									 <th rowspan="2"><center>Rencana Tindak Lanjut oleh Program Studi</center></th>
 								 </tr>
 								 <tr>
 								 	<th>Sangat Baik</th>
@@ -148,10 +148,10 @@ License: You must have a valid license purchased only from themeforest(the above
 								
 							 	<td><?php echo $id; ?></td>
 							 	<td><?php echo $jenis_kemampuan; ?></td>
-							 	<td><?php echo $sangat_baik; ?></td>
-							 	<td><?php echo $baik; ?></td>
-							 	<td><?php echo $cukup; ?></td>
-							 	<td><?php echo $kurang; ?></td>
+							 	<td><input type="text" name="sangat_baik" value="<?php echo $sangat_baik; ?>"></td>
+							 	<td><input type="text" name="baik" value="<?php echo $baik; ?>"></td>
+							 	<td><input type="text" name="cukup" value="<?php echo $cukup; ?>"></td>
+							 	<td><input type="text" name="kurang" value="<?php echo $kurang; ?>"></td>
 							 	<td><textarea cols="100" rows="5" name="rencana"><?php echo $rencana; ?></textarea></td>
 							 </tr>
 							
