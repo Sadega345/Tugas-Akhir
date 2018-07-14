@@ -103,24 +103,10 @@ License: You must have a valid license purchased only from themeforest(the above
 											
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
+									
 								</div>
 							</div>
+							<div style="overflow-x:auto;">
 
 							<form action="<?php echo base_url()."index.php/CrudFakultas/do_tambah"; ?>" method="POST" >
 							<div class="container">
@@ -139,21 +125,22 @@ License: You must have a valid license purchased only from themeforest(the above
 										</div>
 									</div>
 
-									<div class="row">
-										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
-										</form>
-										<form action="<?php echo base_url()."index.php/CrudFakultas/"; ?>" method="POST">
-											<button type="submit" class="btn btn-danger" name="back">Kembali</button>
-										</form>
 									</div>
-									<div id="alert_retype" style="color:red">
-									</div><br>
-									<?php 
-										$info = $this->session->flashdata('info');
-										if (!empty($info)) {
-											echo $info;
-										}
-									 ?>
+									</div>
+									</div>
+									<div class="btn-group">
+										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+									</div>
+									</form>
+									
+									<div class="btn-group">
+										<a href="<?php echo base_url()."index.php/CrudFakultas";?>">
+											<button id="sample_editable_1_new" class="btn red">
+												Batal
+											</button>
+										</a>
+									</div>
+									
 								</div>
 							</div>
 							
@@ -243,6 +230,7 @@ $('#fakultas').bind('keyup blur',
 	}
 );
 </script>
+
 <!-- END JAVASCRIPTS -->
 </body>
 <!-- END BODY -->
