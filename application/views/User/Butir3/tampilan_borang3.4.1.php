@@ -191,7 +191,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<td><?php echo $w['waktu'] ; ?></td>
 										
 										<td class="center">
-											<a href="<?php echo base_url()."index.php/Apd_a341_excel/ubahwaktu/".$w['id'];?>" >Edit</a>
+											<a href="<?php echo base_url()."index.php/Apd_a341_excel/ubahwaktu/".$w['id_prodi'];?>" >Edit</a>
 										</td>
 									</tr>
 									<?php } ?>
@@ -214,7 +214,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<td><?php echo $p['persen'] ; ?></td>
 										
 										<td class="center">
-											<a href="<?php echo base_url()."index.php/Apd_a341_excel/ubahpersen/".$p['id'];?>" >Edit</a>
+											<a href="<?php echo base_url()."index.php/Apd_a341_excel/ubahpersen/".$p['id_prodi'];?>" >Edit</a>
 										</td>
 									</tr>
 									<?php } ?>

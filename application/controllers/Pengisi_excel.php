@@ -54,7 +54,7 @@ public function index() {
 
 	public function edit_data($id){
 		$this->model_squrity->getsqurity();
-		$res=$this->Pengisi_model->listing("where id=$id");
+		$res=$this->Pengisi_model->ubah("where id=$id");
 		$data=array(
 			"id"=>$res[0]['id'],
 			"nama"=>$res[0]['nama'],

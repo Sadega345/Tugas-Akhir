@@ -130,30 +130,29 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 							<thead>
 								<tr>
-									<td rowspan="2">Tahun <br> akademik</td>
-									<td rowspan="2">Daya <br> tampung</td>
-									<td colspan="2">Jumlah calon mahasiswa</td>
-									<td colspan="2">Jumlah mahasiswa baru</td>
-									<td colspan="2">Jumlah total mahasiswa baru</td>
-									<td colspan="2">Jumlah lulusan</td>
-									<td colspan="3">IPK Lulusan Reg</td>
-									<td colspan="3">Persen dengan lulusan dengan IPK</td>
+									<td rowspan="2"><center><strong>Daya <br> tampung</strong></center></td>
+									<td colspan="2"><center><strong>Jumlah calon mahasiswa</strong></td>
+									<td colspan="2"><center><strong>Jumlah mahasiswa baru</strong></td>
+									<td colspan="2"><center><strong>Jumlah total mahasiswa baru</strong></td>
+									<td colspan="2"><center><strong>Jumlah lulusan</strong></td>
+									<td colspan="3"><center><strong>IPK Lulusan Reg</strong></td>
+									<td colspan="3"><center><strong>Persen dengan lulusan dengan IPK</strong></td>
 								</tr>
 								<tr>
-									<td>Ikut seleksi</td>
-									<td>Lulus Seleksi</td>
-									<td>Ikut seleksi</td>
-									<td>Lulus Seleksi</td>
-									<td>Reg Bukan trf</td>
-									<td>Transfer</td>
-									<td>Reg Bukan trf</td>
-									<td>Transfer</td>
-									<td>Min</td>
-									<td>Rat</td>
-									<td>Max</td>
-									<td>2.75</td>
-									<td>2.75-3.50</td>
-									<td>>3.50</td>
+									<td><center><strong>Ikut seleksi</strong></td>
+									<td><center><strong>Lulus Seleksi</strong></td>
+									<td><center><strong>Ikut seleksi</strong></td>
+									<td><center><strong>Lulus Seleksi</strong></td>
+									<td><center><strong>Reg Bukan trf</strong></td>
+									<td><center><strong>Transfer</strong></td>
+									<td><center><strong>Reg Bukan trf</strong></td>
+									<td><center><strong>Transfer</strong></td>
+									<td><center><strong>Min</strong></td>
+									<td><center><strong>Rat</strong></td>
+									<td><center><strong>Max</strong></td>
+									<td><center><strong>2.75</strong></td>
+									<td><center><strong>2.75-3.50</strong></td>
+									<td><center><strong>>3.50</strong></td>
 								</tr>
 							</thead>
 							<tbody>
@@ -173,11 +172,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>(13)</td>
 								 	<td>(14)</td>
 								 	<td>(15)</td>
-								 	<td>(16)</td>
 								 </tr>
 								
 								 <tr>
-								 	<td>TS- <?php echo $id; ?></td>
 								 	<td><input type="text" name="dy_tampung" value="<?php echo $dy_tampung; ?>"></td>
 								 	<td><input type="text" name="jc_mhs_ikt_seleksi" value="<?php echo $jc_mhs_ikt_seleksi; ?>">
 								 	<td><input type="text" name="jc_mhs_lls_seleksi" value="<?php echo $jc_mhs_lls_seleksi; ?>"></td>
@@ -190,9 +187,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td><input type="text" name="ipk_min" value="<?php echo $ipk_min; ?>"></td>
 								 	<td><input type="text" name="ipk_rat" value="<?php echo $ipk_rat; ?>"></td>
 								 	<td><input type="text" name="ipk_mak" value="<?php echo $ipk_mak; ?>"></td>
-								 	<td><input type="text" name="PRSN_IPK1" value="<?php echo $PRSN_IPK1; ?>"></td>
-								 	<td><input type="text" name="PRSN_IPK2" value="<?php echo $PRSN_IPK2; ?>"></td>
-								 	<td><input type="text" name="PRSN_IPK3" value="<?php echo $PRSN_IPK3; ?>"></td>
+								 	<td><input type="text" name="PRSN_IPK1" value="<?php echo $PRSN_IPK1; ?>" readonly></td>
+								 	<td><input type="text" name="PRSN_IPK2" value="<?php echo $PRSN_IPK2; ?>" readonly></td>
+								 	<td><input type="text" name="PRSN_IPK3" value="<?php echo $PRSN_IPK3; ?>" readonly></td>
 								 </tr>
 							
 							</tbody>

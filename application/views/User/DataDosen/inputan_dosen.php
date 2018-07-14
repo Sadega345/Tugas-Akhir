@@ -119,14 +119,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="row">
 										<div class="form-group">
 											<label>Kode Prodi</label>
-											<select name="kd_prodi" class="form-control">
-												<option disabled selected>-- Kode Prodi --</option>
-												<?php 
-													$data=$this->Data_dosen_model->GetProdi();
-													foreach($data as $d) { ?>
-									                <option value="<?php echo $d['kode_prodi'];?>"><?php echo $d['kode_prodi'];?></option>
-									            <?php } ?>
-											</select>
+											<input type="text" class="form-control" name="kd_prodi" value="<?php echo $this->session->userdata('kd_prodi') ?>" readonly>
 										</div>
 									</div>
 									<div class="row">

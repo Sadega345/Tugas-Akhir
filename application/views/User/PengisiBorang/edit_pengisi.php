@@ -118,7 +118,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="row">
 										<div class="form-group">
 											<label>Nama</label>
-											<input type="text" class="form-control" name="nama" value="<?php echo $nama; ?>" id="nama_pengisi">
+											<input type="text" class="form-control" name="nama" value="<?php echo $nama; ?>" id="nama">
 										</div>
 									</div>
 									<div class="row">
@@ -142,7 +142,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="row">
 										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 										<form action="<?php echo base_url()."index.php/Pengisi_excel"; ?>" method="POST">
-											<button type="submit" class="btn btn-danger" name="back">Kembali</button>
+											<button type="submit" class="btn btn-danger" name="back">Batal</button>
 										</form>
 									</div>
 								</div>
@@ -225,9 +225,9 @@ Demo.init(); // init demo features
 </script>
 
 <script type="text/javascript">
-$('#nama_pengisi').bind('keyup blur',function(){ 
+$('#nama').bind('keyup blur',function(){ 
     var node = $(this);
-    node.val(node.val().replace(/[^a-z]/g,'') ); }
+    node.val(node.val().replace(/[^a-zA-Z ]/g,'') ); }
 );
 </script>
 

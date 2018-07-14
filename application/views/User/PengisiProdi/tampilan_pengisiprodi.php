@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>Identitas Program StudiI</title>
+<title>IDENTITAS PROGRAM STUDI</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Identitas Program Studi
+								<i class="fa fa-edit"></i>IDENTITAS PROGRAM STUDI
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">

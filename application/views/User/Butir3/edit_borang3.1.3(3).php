@@ -159,7 +159,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr> -->
 								 <tr>
 								 	<td>TS-3</td>
-								 	<td ><input type="text" name="ts_4" value="<?php echo $ts_4; ?>" readonly=""></td>
+								 	<td ><input type="text" name="ts_4" value="<?php echo $ts_4; ?>"></td>
 								 	<td><input type="text" name="ts_3" value="<?php echo $ts_3; ?>"></td>
 								 	<td><input type="text" name="ts_2" value="<?php echo $ts_2; ?>"></td>
 								 	<td><input type="text" name="ts_1" value="<?php echo $ts_1; ?>"></td>

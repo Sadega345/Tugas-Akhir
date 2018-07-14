@@ -28,13 +28,13 @@ return $res;
 
 public function updatewaktu($where="") {
 	$kdprodi = $this->session->userdata('kd_prodi');
- $data= $this->db->query('SELECT waktu,id_prodi FROM wkt_tunggu_llsn '.$where.'and id_prodi='."'$kdprodi'");
+ $data= $this->db->query('SELECT waktu,id_prodi FROM wkt_tunggu_llsn '.$where);
  return $data->result_array();
  }
 
 public function updatepersen($where="") {
 	$kdprodi = $this->session->userdata('kd_prodi');
- $data= $this->db->query('SELECT id,persen,id_prodi FROM persentase_llsn '.$where.'and id_prodi='."'$kdprodi'");
+ $data= $this->db->query('SELECT persen,id_prodi FROM persentase_llsn '.$where);
  return $data->result_array();
  }
  
@@ -64,13 +64,13 @@ public function updatepersen($where="") {
 
  public function waktu() {
  	$kdprodi = $this->session->userdata('kd_prodi');
- $data=$this->db->query('SELECT id,waktu,id_prodi FROM wkt_tunggu_llsn WHERE id_prodi='."'$kdprodi'");
+ $data=$this->db->query('SELECT waktu,id_prodi FROM wkt_tunggu_llsn WHERE id_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 
  public function persen() {
  	$kdprodi = $this->session->userdata('kd_prodi');
- $data=$this->db->query('SELECT id,id_prodi,persen FROM persentase_llsn WHERE id_prodi='."'$kdprodi'");
+ $data=$this->db->query('SELECT id_prodi,persen FROM persentase_llsn WHERE id_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 

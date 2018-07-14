@@ -48,8 +48,16 @@ public function index() {
  public function do_edit(){
 		$rencana=$_POST['rencana'];
 		$id=$_POST['id'];
+		$sangat_baik=$_POST['sangat_baik'];
+		$baik=$_POST=$_POST['baik'];
+		$cukup=$_POST['cukup'];
+		$kurang=$_POST['kurang'];
 		$data_update=array(
 			"rencana"=>$rencana,
+			"sangat_baik"=>$sangat_baik,
+			"baik"=>$baik,
+			"cukup"=>$cukup,
+			"kurang"=>$kurang
 			
 		);
 		$where=array('id'=>$id);
@@ -62,27 +70,26 @@ public function index() {
 		// 	alert("Gagal Update") ;
 		// }
 	}
-public function ubahwaktu($id){
+public function ubahwaktu($id_prodi){
  	$this->model_squrity->getsqurity();
-	$res=$this->Apd_a341_model->updatewaktu("where id='$id'");
+	$res=$this->Apd_a341_model->updatewaktu("where id_prodi='$id_prodi'");
 	$data=array(
 		"waktu"=>$res[0]['waktu'],
 		"id_prodi"=>$res[0]['id_prodi'],
-		"id"=>$res[0]['id'],
 	);
  	$this->load->view('User/Butir3/edit_borang3.4.1_waktu.php',$data);
  }
 
 public function do_editwaktu(){
 		$waktu=$_POST['waktu'];
-		$id=$_POST['id'];
+		$id_prodi=$_POST['id_prodi'];
 		
 		$data_update=array(
 			"waktu"=>$waktu,
 			
 			
 		);
-		$where=array('id'=>$id);
+		$where=array('id_prodi'=>$id_prodi);
 		$res=$this->Apd_a341_model->rubah('wkt_tunggu_llsn',$data_update,$where);
 		// print_r($data_update);die;
 		if ($res>=1) {
@@ -93,27 +100,25 @@ public function do_editwaktu(){
 		// }
 	}
 
-public function ubahpersen($id){
+public function ubahpersen($id_prodi){
  	$this->model_squrity->getsqurity();
-	$res=$this->Apd_a341_model->updatepersen("where id='$id'");
+	$res=$this->Apd_a341_model->updatepersen("where id_prodi='$id_prodi'");
 	$data=array(
 		"persen"=>$res[0]['persen'],
 		"id_prodi"=>$res[0]['id_prodi'],
-		"id"=>$res[0]['id'],
 	);
  	$this->load->view('User/Butir3/edit_borang3.4.1_persen.php',$data);
  }
 
 public function do_editpersen(){
 		$persen=$_POST['persen'];
-		$id=$_POST['id'];
+		$id_prodi=$_POST['id_prodi'];
 		
 		$data_update=array(
 			"persen"=>$persen,
-			
-			
+		
 		);
-		$where=array('id'=>$id);
+		$where=array('id_prodi'=>$id_prodi);
 		$res=$this->Apd_a341_model->rubah('persentase_llsn',$data_update,$where);
 		// print_r($data_update);die;
 		if ($res>=1) {
