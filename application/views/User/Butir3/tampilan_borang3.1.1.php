@@ -184,6 +184,18 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<?php } ?>
 
 								 	<?php 
+							 			foreach ($llsseleksi as $i) {
+							 		?>
+								 	<td><?php echo $i['llsseleksi']; ?></td>
+								 	<?php } ?>
+
+								 		<?php 
+							 			foreach ($barubkntransfer as $i) {
+							 		?>
+								 	<td><?php echo $i['barubkntransfer']; ?></td>
+								 	<?php } ?>
+
+								 	<?php 
 							 			foreach ($barutransfer as $i) {
 							 		?>
 								 	<td><?php echo $i['Baru_transfer']; ?></td>

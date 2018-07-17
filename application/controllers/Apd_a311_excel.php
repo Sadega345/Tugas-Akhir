@@ -25,6 +25,8 @@ $lulusanregbukantransfer=$this->Apd_a311_model->lulusanregbukantransfer();
 
 $jumlulusantransfer=$this->Apd_a311_model->jumlulusantransfer();
 $rata=$this->Apd_a311_model->rata();
+$llsseleksi=$this->Apd_a311_model->llsseleksi();
+$barubkntransfer=$this->Apd_a311_model->barubkntransfer();
 
  $this->load->view('User/Butir3/tampilan_borang3.1.1.php',array('data'=>$data,
 
@@ -37,7 +39,9 @@ $rata=$this->Apd_a311_model->rata();
  																'tottransfer'=>$tottransfer,
  																'lulusanregbukantransfer'=>$lulusanregbukantransfer,
  																'jumlulusantransfer'=>$jumlulusantransfer,
- 																'rata'=>$rata));
+ 																'rata'=>$rata,
+ 																'llsseleksi'=>$llsseleksi,
+ 																'barubkntransfer'=>$barubkntransfer));
  }
 
  // public function ubah(){
@@ -225,6 +229,8 @@ $lulusanregbukantransfer=$this->Apd_a311_model->lulusanregbukantransfer();
 
 $jumlulusantransfer=$this->Apd_a311_model->jumlulusantransfer();
 $rata=$this->Apd_a311_model->rata();
+$llsseleksi=$this->Apd_a311_model->llsseleksi();
+$barubkntransfer=$this->Apd_a311_model->barubkntransfer();
  $this->load->view('User/Butir3/tampilan_borang3.1.1_excel.php',array('data'=>$data,
 
  																'jumdtampung'=>$jumdtampung,
@@ -236,7 +242,9 @@ $rata=$this->Apd_a311_model->rata();
  																'tottransfer'=>$tottransfer,
  																'lulusanregbukantransfer'=>$lulusanregbukantransfer,
  																'jumlulusantransfer'=>$jumlulusantransfer,
- 																'rata'=>$rata));
+ 																'rata'=>$rata,
+ 																'llsseleksi'=>$llsseleksi,
+ 																'barubkntransfer'=>$barubkntransfer));
 }
 
 }

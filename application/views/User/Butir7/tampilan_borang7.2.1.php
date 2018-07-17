@@ -100,9 +100,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="#">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah
+											Load
 											</button>
 											</a>
 										</div>
@@ -201,7 +201,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<?php } ?>
 							 </tr>
 							 <tr>
-							 	<td>Jumlah</td>
+							 	<th>Jumlah</th>
 							 	<?php 
 							 		foreach ($jml as $j) {
 							 	 ?>

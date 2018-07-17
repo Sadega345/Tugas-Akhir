@@ -101,23 +101,26 @@ class Apd_a6212_model extends CI_Model {
  }
 
  public function jmloprinv() {
- 	$kdprodi = $this->session->userdata('kd_prodi');
+ $kdprodi = $this->session->userdata('kd_prodi');
  $data=$this->db->query('SELECT SUM(P.TS) as jmloprinv FROM penggunaan_dana P INNER JOIN JNS_PENGGUNAAN J ON J.kd_jns=P.kd_jns WHERE P.kd_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 
  public function jmlmhs2() {
- $data=$this->db->query('select j_tot_reg_bkn_trf as jmlmhs2 from data_mhs where tahun="2014"');
+ $kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('select j_tot_reg_bkn_trf as jmlmhs2 from data_mhs where id_ts=3 and id_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 
  public function jmlmhs1() {
- $data=$this->db->query('select j_tot_reg_bkn_trf as jmlmhs1 from data_mhs where tahun="2015"');
+ $kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('select j_tot_reg_bkn_trf as jmlmhs1 from data_mhs where id_ts=4 and id_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 
 public function jmlmhs() {
- $data=$this->db->query('select j_tot_reg_bkn_trf as jmlmhs from data_mhs where tahun="2016"');
+$kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('select j_tot_reg_bkn_trf as jmlmhs from data_mhs where id_ts=5 and id_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 

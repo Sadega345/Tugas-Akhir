@@ -11,7 +11,7 @@ class Apd_a712_model extends CI_Model {
 
 // Listing
  public function listing() {
- 	$kdprodi = $this->session->userdata('kd_prodi');
+ $kdprodi = $this->session->userdata('kd_prodi');
  $data=$this->db->query('SELECT JUDUL,nama_dosen,publikasi,thn_publikasi,lokal,nasional,internasional,id FROM
 artikel_ilmiah WHERE kd_prodi='."'$kdprodi'");
  return $data->result_array();

@@ -130,15 +130,15 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th rowspan="2">No</th>
-									 <th rowspan="2">Jenis Data</th>
-									 <th colspan="4">Sistem Pengolahan Data</th>
+									 <th rowspan="2"><center>No</center></th>
+									 <th rowspan="2"><center>Jenis Data</center></th>
+									 <th colspan="4"><center>Sistem Pengolahan Data</center></th>
 								 </tr>
 								 <tr>
-								 	<th>Secara Manual</th>
-								 	<th>Dengan Komputer Tanpa Jaringan</th>
-								 	<th>Dengan Komputer Jaringan Lokal (LAN)</th>
-								 	<th>Dengan Komputer Jaringan Luas (WAN)</th>
+								 	<th><center>Secara Manual</center></th>
+								 	<th><center>Dengan Komputer Tanpa Jaringan</center></th>
+								 	<th><center>Dengan Komputer Jaringan Lokal (LAN)</center></th>
+								 	<th><center>Dengan Komputer Jaringan Luas (WAN)</center></th>
 								 </tr>
 								 <tr align="center">
 								 	<th>(1)</th>
@@ -155,17 +155,44 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $id; ?></td>
 							 	<td><?php echo $jenis_data; ?></td>
 							 	<td>
-	                    			<input type="checkbox" name="manual" class="form-control" value="v" >
-	                    			
+							 		<?php 
+							 			if($manual=="v"){
+							 				$cek="checked";
+							 			}else{
+							 				$cek=" ";
+							 			}
+							 		 ?>
+	                    			<input type="checkbox" name="manual" class="form-control" <?php echo $cek ?> >
 	                    		</td>
 							 	<td>
-	                    			<input type="checkbox" name="komp_tanpa_jaringan" class="form-control" value="v"  >
+							 		<?php 
+							 			if($komp_tnp_jar=="v"){
+							 				$cek="checked";
+							 			}else{
+							 				$cek=" ";
+							 			}
+							 		 ?>
+	                    			<input type="checkbox" name="komp_tanpa_jaringan" class="form-control" <?php echo $cek ?> value="v" >
 	                    		</td>
 							 	<td>
-	                    			<input type="checkbox" name="lan" class="form-control" value="v"  >
+							 		<?php 
+							 			if($lan=="v"){
+							 				$cek="checked";
+							 			}else{
+							 				$cek=" ";
+							 			}
+							 		 ?>
+	                    			<input type="checkbox" name="lan" class="form-control" <?php echo $cek ?> value="v" >
 	                    		</td>
 							 	<td>
-	                    			<input type="checkbox" name="wan" class="form-control" value="v"  >
+							 		<?php 
+							 			if($wan=="v"){
+							 				$cek="checked";
+							 			}else{
+							 				$cek=" ";
+							 			}
+							 		 ?>
+	                    			<input type="checkbox" name="wan" class="form-control" <?php echo $cek ?>  value="v">
 	                    		</td>
 							 </tr>
 							 

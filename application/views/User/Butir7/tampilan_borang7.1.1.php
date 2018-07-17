@@ -117,45 +117,89 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th>TS-1</th>
 									 <th>TS</th>
 									 <th>Jumlah</th>
+									 <th>Aksi</th>
 								 </tr>
 
 							</thead>
 							<tbody>
 							<?php 
-								$no=1; 
-								foreach ($data as $d ) { 
+								foreach ($data1 as $d ) { 
 							?>
 							<tr>
 								<td><?php echo $d['sumber_pembiayaan']; ?></td>
-								<td><?php echo $d['TS_2']; ?></td>
-								<td><?php echo $d['TS_1']; ?></td>
-								<td><?php echo $d['TS']; ?></td>
-								
-								<!-- Tot Peneliti -->
-								<!-- <?php 
-									foreach ($peneliti as $p ) { 
-								?>
-								<td>
-									<?php echo $p['JML']; break; } ?>
-									
-								</td> -->
-								
-
-								<!-- Bersangkutan -->
-								<!-- <?php 
-									foreach ($bersangkutan as $b ) { 
-								?>
-								<td><?php echo $b['JML']; } ?></td> -->
-								
-
-
+								<td><?php echo $d['ts_2']; ?></td>
+								<td><?php echo $d['ts_1']; ?></td>
+								<td><?php echo $d['ts']; ?></td>
+								<td><?php echo $d['jml']; ?></td>
+								<td class="center">
+									<a href="#" >Edit</a>
+								</td>
 							</tr>
 							<?php } ?>
 
-							
-							
+							<?php 
+								foreach ($data2 as $d ) { 
+							?>
 							<tr>
-							 	<td>Jumlah</td>
+								<td><?php echo $d['sumber_pembiayaan']; ?></td>
+								<td><?php echo $d['ts_2']; ?></td>
+								<td><?php echo $d['ts_1']; ?></td>
+								<td><?php echo $d['ts']; ?></td>
+								<td><?php echo $d['jml']; ?></td>
+								<td class="center">
+									<a href="#" >Edit</a>
+								</td>
+							</tr>
+							<?php } ?>
+
+							<?php 
+								foreach ($data3 as $d ) { 
+							?>
+							<tr>
+								<td><?php echo $d['sumber_pembiayaan']; ?></td>
+								<td><?php echo $d['ts_2']; ?></td>
+								<td><?php echo $d['ts_1']; ?></td>
+								<td><?php echo $d['ts']; ?></td>
+								<td><?php echo $d['jml']; ?></td>
+								<td class="center">
+									<a href="#" >Edit</a>
+								</td>
+							</tr>
+							<?php } ?>
+
+							<?php 
+								foreach ($data4 as $d ) { 
+							?>
+							<tr>
+								<td><?php echo $d['sumber_pembiayaan']; ?></td>
+								<td><?php echo $d['ts_2']; ?></td>
+								<td><?php echo $d['ts_1']; ?></td>
+								<td><?php echo $d['ts']; ?></td>
+								<td><?php echo $d['jml']; ?></td>
+								<td class="center">
+									<a href="#" >Edit</a>
+								</td>
+							</tr>
+							<?php } ?>
+
+							<?php 
+								foreach ($data5 as $d ) { 
+							?>
+							<tr>
+								<td><?php echo $d['sumber_pembiayaan']; ?></td>
+								<td><?php echo $d['ts_2']; ?></td>
+								<td><?php echo $d['ts_1']; ?></td>
+								<td><?php echo $d['ts']; ?></td>
+								<td><?php echo $d['jml']; ?></td>
+								<td class="center">
+									<a href="#" >Edit</a>
+								</td>
+							</tr>
+							<?php } ?>
+
+
+							<tr>
+							 	<th>Jumlah</th>
 							 	<!-- TS2 -->
 							 	<?php 
 								
@@ -178,6 +222,13 @@ License: You must have a valid license purchased only from themeforest(the above
 									foreach ($totTs as $ts ) { 
 								?>
 							 	<td><?php echo $ts['TS']; ?></td>
+							 	<?php } ?>
+
+							 	<!--Jumlah-->
+							 	<?php 
+							 		foreach ($jml as $j) {
+							 	 ?>
+							 	 <td><?php echo $j['jml']; ?></td>
 							 	<?php } ?>
 							 </tr>
 							</tbody>

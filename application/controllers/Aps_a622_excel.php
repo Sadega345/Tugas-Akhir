@@ -37,6 +37,8 @@ public function index() {
 		
 		$data_update=array(
 			"id"=>$id,
+			"tahun"=>$tahun,
+			"judul_penelitian"=>$judul_penelitian,
 			"sumber_dana"=>$sumber_dana,
 			"jml_dana"=>$jml_dana,
 			

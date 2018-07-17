@@ -155,17 +155,44 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $id; ?></td>
 							 	<td><?php echo $jenis_data; ?></td>
 							 	<td>
-	                    			<input type="checkbox" name="manual" class="form-control" value="v" >
-	                    			
+							 		<?php 
+							 			if($manual=="v"){
+							 				$cek="checked";
+							 			}else{
+							 				$cek=" ";
+							 			}
+							 		 ?>
+							 		<input type="checkbox" name="manual" class="form-control" <?php echo $cek ?> >	
 	                    		</td>
 							 	<td>
-	                    			<input type="checkbox" name="komp_tanpa_jaringan" class="form-control" value="v"  >
+							 		<?php 
+							 			if($komp_tnp_jar=="v"){
+							 				$cek="checked";
+							 			}else{
+							 				$cek=" ";
+							 			}
+							 		 ?>
+	                    			<input type="checkbox" name="komp_tanpa_jaringan" class="form-control" <?php echo $cek ?>  >
 	                    		</td>
 							 	<td>
-	                    			<input type="checkbox" name="lan" class="form-control" value="v"  >
+							 		<?php 
+							 			if($lan=="v"){
+							 				$cek="checked";
+							 			}else{
+							 				$cek=" ";
+							 			}
+							 		 ?>
+	                    			<input type="checkbox" name="lan" class="form-control" <?php echo $cek ?> >
 	                    		</td>
 							 	<td>
-	                    			<input type="checkbox" name="wan" class="form-control" value="v"  >
+							 		<?php 
+							 			if($wan=="v"){
+							 				$cek="checked";
+							 			}else{
+							 				$cek=" ";
+							 			}
+							 		 ?>
+	                    			<input type="checkbox" name="wan" class="form-control" <?php echo $cek ?> >
 	                    		</td>
 							 </tr>
 							 

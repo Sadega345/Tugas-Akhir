@@ -125,7 +125,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<?php 
 										foreach ($data as $d ) { 
 									?>
-									 <td bgcolor="yellow"><?php echo $d['teori']; ?></td>
+									 <td><input type="text" name="teori" value="<?php echo $d['teori']; ?>" readonly style="background-color: #DCDCDC" ></td>
 									 <?php } ?>
 									 <td></td>
 									 <td>Jam per paket program</td>
@@ -136,7 +136,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <?php 
 										foreach ($data as $d ) { 
 									?>
-									 <td bgcolor="yellow"><?php echo $d['praktek']; ?></td>
+									 <td><input type="text" name="praktek" value="<?php echo $d['praktek']; ?>" readonly style="background-color: #DCDCDC"></td>
 									 <?php } ?>
 									 <td></td>
 									 <td>Jam per paket program</td>
@@ -147,7 +147,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <?php 
 										foreach ($data as $d ) { 
 									?>
-									 <td bgcolor="yellow"><?php echo $d['praktikum']; ?></td>
+									 <td ><input type="text" name="praktikum" value="<?php echo $d['praktikum']; ?>" readonly style="background-color: #DCDCDC"></td>
 									 <?php } ?>
 									 <td></td>
 									 <td>Jam per paket program</td>
@@ -158,7 +158,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <?php 
 										foreach ($data as $d ) { 
 									?>
-									 <td bgcolor="yellow"><?php echo $d['pkl']; ?></td>
+									 <td><input type="text" name="pkl" value="<?php echo $d['pkl']; ?>" readonly style="background-color: #DCDCDC"></td>
 									 <?php } ?>
 									 <td></td>
 									 <td>Jam per paket program</td>

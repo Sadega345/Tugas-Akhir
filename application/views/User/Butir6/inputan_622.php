@@ -142,7 +142,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="row">
 										<div class="form-group">
 											<label>Jumlah Dana</label>
-											<input type="text" class="form-control" name="jml_dana">
+											<input type="number" class="form-control" name="jml_dana">
 										</div>
 									</div>	
 									</div>

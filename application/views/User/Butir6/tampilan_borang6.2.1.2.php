@@ -115,6 +115,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2"><center>No</center></th>
 									 <th rowspan="2"><center>Jenis Penggunaan</center></th>
 									 <th colspan="3"><center>Penggunaan (Juta Rupiah)</center></th>
+									 <th rowspan="2"><center>Aksi</center></th>
 								 </tr>
 								 <tr>
 								 	<th><center>TS-2</center></th>
@@ -132,6 +133,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
+								<td class="center">
+										<a href="#" >Edit</a>
+								</td>
 								<?php } ?>	 
 							</tr>
 							<tr>
@@ -143,6 +147,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $b['ts_2'] ?></td>
 								<td><?php echo $b['ts_1'] ?></td>
 								<td><?php echo $b['ts'] ?></td>
+								<td class="center">
+										<a href="#" >Edit</a>
+								</td>
 								<?php } ?>	
 							</tr>
 							<tr>
@@ -154,6 +161,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $c['ts_2'] ?></td>
 								<td><?php echo $c['ts_1'] ?></td>
 								<td><?php echo $c['ts'] ?></td>
+								<td class="center">
+										<a href="#" >Edit</a>
+								</td>
 								<?php } ?>	
 							</tr>
 							<tr>
@@ -175,6 +185,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								?>
 							 	<td><?php echo $j['jmlopr']; ?></td>
 							 	<?php } ?>
+							 	<td></td>
 							</tr>
 							<tr>
 								<td>4</td>
@@ -185,6 +196,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $e['ts_2'] ?></td>
 								<td><?php echo $e['ts_1'] ?></td>
 								<td><?php echo $e['ts'] ?></td>
+								<td class="center">
+										<a href="#" >Edit</a>
+								</td>
 								<?php } ?>	
 							</tr>
 							<tr>
@@ -196,6 +210,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $f['ts_2'] ?></td>
 								<td><?php echo $f['ts_1'] ?></td>
 								<td><?php echo $f['ts'] ?></td>
+								<td class="center">
+										<a href="#" >Edit</a>
+								</td>
 								<?php } ?>	
 							</tr>
 							<tr>
@@ -207,6 +224,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $g['ts_2'] ?></td>
 								<td><?php echo $g['ts_1'] ?></td>
 								<td><?php echo $g['ts'] ?></td>
+								<td class="center">
+										<a href="#" >Edit</a>
+								</td>
 								<?php } ?>	
 							</tr>
 							<tr>
@@ -218,6 +238,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $h['ts_2'] ?></td>
 								<td><?php echo $h['ts_1'] ?></td>
 								<td><?php echo $h['ts'] ?></td>
+								<td class="center">
+										<a href="#" >Edit</a>
+								</td>
 								<?php } ?>	
 							</tr>
 							<tr>
@@ -239,6 +262,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								?>
 							 	<td><?php echo $j['jmlinv']; ?></td>
 							 	<?php } ?>
+							 	<td></td>
 							</tr>
 							<tr>
 								<td colspan="2"><center>Jumlah Dana (Operasional + Investasi)</center></td>
@@ -259,6 +283,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								?>
 							 	<td><?php echo $j['jmloprinv']; ?></td>
 							 	<?php } ?>
+							 	<td></td>
 							</tr>
 							<tr>
 								<td colspan="2"><center>Jumlah Mahasiswa Aktif (Student Body)</center></td>
@@ -279,6 +304,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								?>
 							 	<td><?php echo $j['jmlmhs']; ?></td>
 							 	<?php } ?>
+							 	<td></td>
 							</tr>
 							</tbody>
 							</table>

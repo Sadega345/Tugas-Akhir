@@ -19,18 +19,22 @@ public function index() {
  $totalskripsi=$this->Apd_a5121_model->totskripsi();
  $totalsilabus=$this->Apd_a5121_model->totsilabus();
  $totalsap=$this->Apd_a5121_model->totsap();
+ $jml_sks_min=$this->Apd_a5121_model->jml_sks_min();
  $this->load->view('User/Butir5/tampilan_borang5.1.2.1.php',array('data'=>$data,
 																  'totkuliah'=>$totalkuliah,
 																  'totpraktikum'=>$totalpraktikum,
 																  'tottugas'=>$totaltugas,
 																  'totskripsi'=>$totalskripsi,
-																  'totalsap'=>$totalsap));
+																  'totalsap'=>$totalsap,
+																  'totalsilabus'=>$totalsilabus,
+																  'jml_sks_min'=>$jml_sks_min));
  }
 
 // public function tambah(){
 // 	$this->load->view('User/Butir5/inputan_5121.php');
 // }
 public function do_tambah(){
+		$kdprodi = $this->session->userdata('kd_prodi');
 		$this->model_squrity->getsqurity();
 		$kode_mk=$_POST['kode_mk'];
 		$jns_mk=$_POST['jns_mk'];
@@ -46,7 +50,7 @@ public function do_tambah(){
 		$sap=$_POST['sap'];
 		$penyelenggara=$_POST['penyelenggara'];
 		$data_insert=array(
-			'kd_prodi' => 'P001',
+			'kd_prodi' => $kdprodi,
 			'kode_mk'=>$kode_mk,
 			'jns_mk'=>$jns_mk,
 			'smt' => $smt,
@@ -149,12 +153,14 @@ public function export_excel(){
  $totalskripsi=$this->Apd_a5121_model->totskripsi();
  $totalsilabus=$this->Apd_a5121_model->totsilabus();
  $totalsap=$this->Apd_a5121_model->totsap();
+ $jml_sks_min=$this->Apd_a5121_model->jml_sks_min();
  $this->load->view('User/Butir5/tampilan_borang5.1.2.1_excel.php',array('data'=>$data,
 																  'totkuliah'=>$totalkuliah,
 																  'totpraktikum'=>$totalpraktikum,
 																  'tottugas'=>$totaltugas,
 																  'totskripsi'=>$totalskripsi,
-																  'totalsap'=>$totalsap));
+																  'totalsap'=>$totalsap,
+																  'jml_sks_min'=>$jml_sks_min));
  }
 
 }

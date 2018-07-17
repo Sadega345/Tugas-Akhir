@@ -148,21 +148,21 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="row">
 										<div class="form-group">
 											<label>Lokal</label>
-											<input type="checkbox" class="form-control" name="lokal" value="v">
+											<input type="radio" class="form-control" name="lokal" value="v">
 										</div>
 									</div>
 
 									<div class="row">
 										<div class="form-group">
 											<label>Nasional</label>
-											<input type="checkbox" class="form-control" name="nasional" value="v">
+											<input type="radio" class="form-control" name="nasional" value="v">
 										</div>
 									</div>
 
 									<div class="row">
 										<div class="form-group">
 											<label>Internasional</label>
-											<input type="checkbox" class="form-control" name="internasional" value="v">
+											<input type="radio" class="form-control" name="internasional" value="v">
 										</div>
 									</div>
 

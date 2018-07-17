@@ -102,7 +102,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="btn-group">
 											<a href="<?php echo base_url()."index.php/Apd_a712_excel/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah
+											Tambah <i class="fa fa-plus"></i>
 											</button>
 											</a>
 										</div>
@@ -113,18 +113,18 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th rowspan="2">No</th>
-									 <th rowspan="2">Judul</th>
-									 <th rowspan="2">Nama-nama Dosen</th>
-									 <th rowspan="2">Dihasilkan/dipublikasikan pada</th>
-									 <th rowspan="2">Tahun penyajian/publikasi</th>
-									 <th colspan="3">Banyaknya dosen</th>
-									 <th rowspan="2">Aksi</th>
+									 <th rowspan="2"><center>No</center></th>
+									 <th rowspan="2"><center>Judul</center></th>
+									 <th rowspan="2"><center>Nama-nama Dosen</center></th>
+									 <th rowspan="2"><center>Dihasilkan/dipublikasikan pada</center></th>
+									 <th rowspan="2"><center>Tahun penyajian/publikasi</center></th>
+									 <th colspan="3"><center>Banyaknya dosen</center></th>
+									 <th rowspan="2"><center>Aksi</center></th>
 								 </tr>
 								 <tr>
-								 	<th>Lokal</th>
-								 	<th>Nasional</th>
-								 	<th>Internasional</th>
+								 	<th><center>Lokal</center></th>
+								 	<th><center>Nasional</center></th>
+								 	<th><center>Internasional</center></th>
 								 </tr>
 							</thead>
 							<tbody>

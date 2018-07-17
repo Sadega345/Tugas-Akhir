@@ -18,7 +18,7 @@ class Apd_a345_model extends CI_Model {
 
  public function jml_wsd4(){
  	$kdprodi = $this->session->userdata('kd_prodi');
- $jml4= $this->db->query('select sum(j_llsn_reg_bkn_trf+j_llsn_trf) as jml_wsd4 from data_mhs where id_prodi='."'$kdprodi'".'and tahun="2012"');
+ $jml4= $this->db->query('select sum(j_llsn_reg_bkn_trf+j_llsn_trf) as jml_wsd4 from data_mhs where id_prodi='."'$kdprodi'".'and id_ts=1');
  return $jml4->result_array();
  }
 
@@ -39,7 +39,7 @@ public function listing3() {
 
  public function jml_wsd3(){
  	$kdprodi = $this->session->userdata('kd_prodi');
- $jml3= $this->db->query('select sum(j_llsn_reg_bkn_trf+j_llsn_trf) as jml_wsd3 from data_mhs where id_prodi='."'$kdprodi'".' and tahun="2013"');
+ $jml3= $this->db->query('select sum(j_llsn_reg_bkn_trf+j_llsn_trf) as jml_wsd3 from data_mhs where id_prodi='."'$kdprodi'".' and id_ts=2');
  return $jml3->result_array();
  }
 
@@ -50,7 +50,7 @@ public function listing3() {
 
  public function jml_wsd2(){
  	$kdprodi = $this->session->userdata('kd_prodi');
- $jml2= $this->db->query('select sum(j_llsn_reg_bkn_trf+j_llsn_trf) as jml_wsd2 from data_mhs where id_prodi='."'$kdprodi'".' and tahun="2014";');
+ $jml2= $this->db->query('select sum(j_llsn_reg_bkn_trf+j_llsn_trf) as jml_wsd2 from data_mhs where id_prodi='."'$kdprodi'".' and id_ts=3;');
  return $jml2->result_array();
  }
 
@@ -61,7 +61,7 @@ public function listing3() {
 
  public function jml_wsd1(){
  	$kdprodi = $this->session->userdata('kd_prodi');
- $jml1= $this->db->query('select sum(j_llsn_reg_bkn_trf+j_llsn_trf) as jml_wsd1 from data_mhs where id_prodi='."'$kdprodi'".' and tahun="2015";');
+ $jml1= $this->db->query('select sum(j_llsn_reg_bkn_trf+j_llsn_trf) as jml_wsd1 from data_mhs where id_prodi='."'$kdprodi'".' and id_ts=4;');
  return $jml1->result_array();
  }
 
@@ -72,7 +72,7 @@ public function listing() {
 
  public function jml_wsd(){
  	$kdprodi = $this->session->userdata('kd_prodi');
- $jml= $this->db->query('select sum(j_llsn_reg_bkn_trf+j_llsn_trf) as jml_wsd from data_mhs where id_prodi='."'$kdprodi'".' and tahun="2016";');
+ $jml= $this->db->query('select sum(j_llsn_reg_bkn_trf+j_llsn_trf) as jml_wsd from data_mhs where id_prodi='."'$kdprodi'".' and id_ts=5;');
  return $jml->result_array();
  }
 
@@ -94,7 +94,7 @@ public function insert($tablename,$data){
 }
 
 public function gettahun(){
-	$tahun=$this->db->query('select id as id_ts, tahun from data_mhs');
+	$tahun=$this->db->query('select id_ts,tahun from tahun_akd;');
 	return $tahun->result_array();
 
 }

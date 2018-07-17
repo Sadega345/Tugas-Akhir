@@ -12,7 +12,7 @@ class Apd_a5121_model extends CI_Model {
 // Listing
  public function listing() {
  	$kdprodi = $this->session->userdata('kd_prodi');
- $data=$this->db->query('SELECT smt,kode_mk,nama_mk,sks_kuliah,sks_praktek,sks_inti,sks_institusi,bobot_tgs,deskripsi,silabus,sap,penyelenggara FROM struktur_kurikulum WHERE jns_mk=1 and kd_prodi='."'$kdprodi'");
+ $data=$this->db->query('SELECT smt,kode_mk,nama_mk,sks_kuliah,sks_praktek,sks_inti,sks_institusi,bobot_tgs,deskripsi,silabus,sap,penyelenggara FROM struktur_kurikulum WHERE jns_mk=1 and kd_prodi='."'$kdprodi'".'order by smt');
  return $data->result_array();
  }
 
@@ -70,6 +70,12 @@ class Apd_a5121_model extends CI_Model {
  	$kdprodi = $this->session->userdata('kd_prodi');
  $data=$this->db->query('SELECT COUNT(IF(SAP LIKE "v%",SAP,NULL)) AS jml_sap FROM struktur_kurikulum WHERE kd_prodi='."'$kdprodi'");
  return $data->result_array();
+ }
+
+ public function jml_sks_min(){
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ 	$data=$this->db->query('SELECT sum(sks_praktek)+sum(sks_kuliah) as jml_sks_min FROM struktur_kurikulum WHERE kd_prodi='."'$kdprodi'");
+ 	return $data->result_array();
  }
 
 }

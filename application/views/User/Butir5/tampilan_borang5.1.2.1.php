@@ -109,6 +109,10 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 								</div>
 							</div>
+							<?php 	
+									foreach ($jml_sks_min as $j) {
+							 ?>
+							<p>Jumlah sks minimum untuk kelulusan PS : <input type="text" name="jml_sks_min" readonly="" value="<?php echo $j['jml_sks_min'] ?>"> SKS</p> <?php 	} ?>
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -155,6 +159,38 @@ License: You must have a valid license purchased only from themeforest(the above
 								</td>
 							 </tr>
 							 <?php } ?>
+							 <tr>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
+							 	<?php foreach ($totkuliah as $t) {
+								 ?>
+							 	<td><?php echo $t['bobot_kuliah']; ?></td>
+							 	<?php } ?>
+							 	<?php foreach ($totpraktikum as $t) {
+								 ?>
+							 	<td><?php echo $t['bobot_praktikum']; ?></td>
+							 	<?php } ?>
+							 	<td></td>
+							 	<td></td>
+							 	<?php foreach ($tottugas as $t) {
+								 ?>
+							 	<td><?php echo $t['jml_tugas']; ?></td>
+							 	<?php } ?>
+							 	<?php foreach ($totskripsi as $t) {
+								 ?>
+							 	<td><?php echo $t['jml_skripsi']; ?></td>
+								<?php } ?>
+								<?php foreach ($totalsilabus as $t) {
+								 ?>
+							 	<td><?php echo $t['jml_silabus']; ?></td>
+							 	<?php } ?>
+							 	<?php foreach ($totalsap as $t) {
+								 ?>
+							 	<td><?php echo $t['jml_sap']; ?></td>
+							 	<?php } ?>
+							 	<td></td>
+							 </tr>
 							</tbody>
 							</table>
 							<!-- <div class="btn-group">

@@ -55,6 +55,7 @@ public function index() {
 		
 		$data_update=array(
 			// "NAMA_DOSEN"=>$NAMA_DOSEN,
+			"JUDUL"=>$JUDUL,
 			"nama_dosen"=>$nama_dosen,
 			"publikasi"=>$publikasi,
 			"thn_publikasi"=>$thn_publikasi,

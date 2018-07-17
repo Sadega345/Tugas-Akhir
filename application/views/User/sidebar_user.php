@@ -282,7 +282,7 @@ BEGIN CONTAINER -->
 						</li>
 						<li>
 							<a href="<?php echo base_url(); ?>index.php/Apd_a712_excel">
-						Butir A .1.2 </a>
+						Butir A 7.1.2 </a>
 						</li>
 						<li>
 							<a href="<?php echo base_url(); ?>index.php/Apd_a721_excel">

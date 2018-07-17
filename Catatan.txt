@@ -1,0 +1,17 @@
+1. Data dosen (autoincrement pada saat tambah harusnya dimulai dari id terakhir di db)
+2. butir a5121 Tambah data error, belum ada hapus
+[16:36, 7/12/2018] DwTeguh: Klw do_tambah mah harusnya dri si html nya lah jangan di gtuin di controller
+[16:36, 7/12/2018] DwTeguh: Jdi dia input type hidden
+3. butir a522 Edit nya belum
+4. butir a541 tambah dan hapus
+5.Butir a552 tambah,edit,hapus
+6. butir a6211, edit
+7. butir a6212, edit
+8. butir a622, tambah (autoincrement pada saat tambah harusnya dimulai dari id terakhir di db), edit (ketika edit tahun dn jumlah penelitian, tidak bisa keubah datanya),hapusnya belum ada
+9. butir a623, tambah (autoincrement pada saat tambah harusnya dimulai dari id terakhir di db), hapusya belum ada
+10. butir b6111, edit
+11. butir b6112, edit
+12. butir a711, edit
+13. butir b642, pas edit yg checkbx tdk berhasil
+14.butir a712, pas edit radiobutton tdk berhasil
+

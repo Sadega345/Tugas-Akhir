@@ -134,7 +134,6 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th>TS-2</th>
 									 <th>TS-1</th>
 									 <th>TS</th>
-									 <th>Jumlah</th>
 								 </tr>
 							</thead>
 							<tbody>							
@@ -143,7 +142,6 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><input type="text" name="TS_2" class="form-control" value="<?php echo $TS_2;?>"></td>
 							 	<td><input type="text" name="TS_1" class="form-control" value="<?php echo $TS_1;?>"></td>
 							 	<td><input type="text" name="TS" class="form-control" value="<?php echo $TS;?>"></td>
-							 	<td><?php echo $JML; ?></td>
 							 </tr>
 							 
 							 

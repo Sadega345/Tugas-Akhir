@@ -41,6 +41,8 @@ public function index() {
 		$id=$_POST['id'];
 		
 		$data_update=array(
+			"TAHUN"=>$TAHUN,
+			"judul_kegiatan"=>$judul_kegiatan,
 			"SUMBER_DANA"=>$SUMBER_DANA,
 			"JUMLAH_DANA"=>$JUMLAH_DANA,
 			"id"=>$id,

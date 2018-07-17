@@ -100,9 +100,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/Apd_b6112_excel/tambah";?>">
+											<a href="#">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
+											Load
 											</button>
 											</a>										
 										</div>
@@ -117,6 +117,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2">Jenis Penggunaan</th>
 									 <th colspan="3"><center>Jumlah Dana (juta rupiah)</center></th>
 									 <th rowspan="2"><center>Jumlah</center></th>
+									 <th rowspan="2"><center>Aksi</center></th>
 								 </tr>
 								 <tr>
 								 	<th>TS-2</th>
@@ -135,6 +136,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	 <td><?php echo $d['ts_1'] ?></td>
 								 	 <td><?php echo $d['ts'] ?></td>
 								 	 <td><?php echo $d['jumlah1'] ?></td>
+								 	 <td class="center">
+										<a href="#" >Edit</a>
+									 </td>
 								 	 <?php } ?>
 								 </tr>
 								 <tr>
@@ -147,6 +151,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	 <td><?php echo $d['ts_1'] ?></td>
 								 	 <td><?php echo $d['ts'] ?></td>
 								 	 <td><?php echo $d['jumlah2'] ?></td>
+								 	 <td class="center">
+										<a href="#" >Edit</a>
+									 </td>
 								 	 <?php } ?>
 								 </tr>
 								 <tr>
@@ -159,6 +166,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	 <td><?php echo $d['ts_1'] ?></td>
 								 	 <td><?php echo $d['ts'] ?></td>
 								 	 <td><?php echo $d['jumlah3'] ?></td>
+								 	 <td class="center">
+										<a href="#" >Edit</a>
+									 </td>
 								 	 <?php } ?>
 								 </tr>
 								  <tr>
@@ -170,6 +180,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	 <td><?php echo $d['jmlopr1'] ?></td>
 								 	 <td><?php echo $d['jmlopr'] ?></td>
 								 	 <td><?php echo $d['totalopr'] ?></td>
+								 	 <td></td>
 								 	 <?php } ?>
 								 </tr>
 								 <tr>
@@ -182,6 +193,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	 <td><?php echo $d['ts_1'] ?></td>
 								 	 <td><?php echo $d['ts'] ?></td>
 								 	 <td><?php echo $d['jumlah4'] ?></td>
+								 	 <td class="center">
+										<a href="#" >Edit</a>
+									 </td>
 								 	 <?php } ?>
 								 </tr>
 								 <tr>
@@ -194,6 +208,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	 <td><?php echo $d['ts_1'] ?></td>
 								 	 <td><?php echo $d['ts'] ?></td>
 								 	 <td><?php echo $d['jumlah5'] ?></td>
+								 	 <td class="center">
+										<a href="#" >Edit</a>
+									 </td>
 								 	 <?php } ?>
 								 </tr>
 								  <tr>
@@ -206,6 +223,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	 <td><?php echo $d['ts_1'] ?></td>
 								 	 <td><?php echo $d['ts'] ?></td>
 								 	 <td><?php echo $d['jumlah6'] ?></td>
+								 	 <td class="center">
+										<a href="#" >Edit</a>
+									 </td>
 								 	 <?php } ?>
 								 </tr>
 								 <tr>
@@ -217,6 +237,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	 <td><?php echo $d['jmlinv1'] ?></td>
 								 	 <td><?php echo $d['jmlinv2'] ?></td>
 								 	 <td><?php echo $d['totalinv'] ?></td>
+								 	 <td></td>
 								 	 <?php } ?>
 								 </tr>
 								 <tr>
@@ -228,6 +249,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	 <td><?php echo $d['jmlgab1'] ?></td>
 								 	 <td><?php echo $d['jmlgab'] ?></td>
 								 	 <td><?php echo $d['totalgab'] ?></td>
+								 	 <td></td>
 								 	 <?php } ?>
 								 </tr>
 							</tbody>

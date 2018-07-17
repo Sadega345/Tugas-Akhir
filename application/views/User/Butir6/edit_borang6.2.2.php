@@ -144,8 +144,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							</thead>
 							<tbody>
 							<tr>
-							 	<td><?php echo $tahun; ?></td>
-							 	<td><?php echo $judul_penelitian; ?></td>
+							 	<td><input type="text" name="tahun" class="form-control" value="<?php echo $tahun; ?>"></td>
+							 	<td><input type="text" name="judul_penelitian" class="form-control" value="<?php echo $judul_penelitian; ?>"></td>
 							 	<td><input type="text" name="sumber_dana" class="form-control" value="<?php echo $sumber_dana; ?>"></td>
 							 	<td><input type="text" name="jml_dana" class="form-control" value="<?php echo $jml_dana; ?>"></td>
 							 </tr>

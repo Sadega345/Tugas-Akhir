@@ -130,17 +130,16 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th rowspan="2">No</th>
-									 <th rowspan="2">Judul</th>
-									 <th rowspan="2">Nama-nama Dosen</th>
-									 <th rowspan="2">Dihasilkan/dipublikasikan pada</th>
-									 <th rowspan="2">Tahun penyajian/publikasi</th>
-									 <th colspan="3">Banyaknya dosen</th>
+									 <th rowspan="2"><center>Judul</center></th>
+									 <th rowspan="2"><center>Nama-nama Dosen</center></th>
+									 <th rowspan="2"><center>Dihasilkan/dipublikasikan pada</center></th>
+									 <th rowspan="2"><center>Tahun penyajian/publikasi</center></th>
+									 <th colspan="3"><center>Banyaknya dosen</center></th>
 								 </tr>
 								 <tr>
-								 	<th>Lokal</th>
-								 	<th>Nasional</th>
-								 	<th>Internasional</th>
+								 	<th><center>Lokal</center></th>
+								 	<th><center>Nasional</center></th>
+								 	<th><center>Internasional</center></th>
 								 </tr>
 								 <tr align="center">
 								 	<td>(1)</td>
@@ -150,21 +149,39 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>(5)</td>
 								 	<td>(6)</td>
 								 	<td>(7)</td>
-								 	<td>(8)</td>
 								 </tr>
 							</thead>
 							<tbody>
 							
 							<tr>
-							 	<td>1</td>
-							 	<td><?php echo $JUDUL; ?></td>
+							 	<td><input type="text" name="JUDUL" value="<?php echo $JUDUL; ?>"></td>
 							 	<td><input type="text" name="nama_dosen" value="<?php echo $nama_dosen; ?>"></td>
 							 	<td><input type="text" name="publikasi" value="<?php echo $publikasi; ?>"></td>
 							 	<td><input type="text" name="thn_publikasi" value="<?php echo $thn_publikasi; ?>"></td>
-
-							 	<td><input type="checkbox" name="lokal[]" class="form-control" value="v" ></td>
-							 	<td><input type="checkbox" name="nasional[]" class="form-control" value="v" ></td>
-							 	<td><input type="checkbox" name="internasional[]" class="form-control" value="v" ></td>
+							 	<?php
+ 									if($lokal=="v"){
+ 										$cek="checked";
+ 									}else{
+ 										$cek="";
+ 									}
+							 	?>
+							 	<td><input type="radio" name="lokal" class="form-control" <?php echo $cek; ?> ></td>
+							 	<?php
+ 									if($nasional=="v"){
+ 										$cek="checked";
+ 									}else{
+ 										$cek="";
+ 									}
+							 	?>
+							 	<td><input type="radio" name="nasional" class="form-control" <?php echo $cek; ?> ></td>
+							 	<?php
+ 									if($internasional=="v"){
+ 										$cek="checked";
+ 									}else{
+ 										$cek="";
+ 									}
+							 	?>
+							 	<td><input type="radio" name="internasional" class="form-control" <?php echo $cek; ?>  ></td>
 							 </tr>
 							 
 							</tbody>

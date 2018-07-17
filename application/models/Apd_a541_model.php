@@ -12,7 +12,8 @@ class Apd_a541_model extends CI_Model {
 // Listing
  public function listing() {
  $kdprodi = $this->session->userdata('kd_prodi');
- $data=$this->db->query('SELECT nama_dosen, j_mhs_bimbingan,rata2_pertemuan,id FROM pembimbing_akd  WHERE kd_prodi='."'$kdprodi'");
+ $data=$this->db->query('SELECT d.nama_dosen, p.j_mhs_bimbingan,p.rata2_pertemuan,p.Id FROM pembimbing_akd p INNER JOIN
+ dosen_tbl d ON p.id_dosen=d.id_dosen WHERE p.kd_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 
@@ -22,20 +23,20 @@ class Apd_a541_model extends CI_Model {
  return $data->result_array();
  }
 
-	public function rubah($tablename,$data,$where){
+public function rubah($tablename,$data,$where){
 		$res=$this->db->update($tablename,$data,$where);
 		return $res;
-	}
+}
  
- public function insert($tablename,$data){
+public function insert($tablename,$data){
 	$res=$this->db->insert($tablename,$data);
 	return $res;
 }
-public function GetDosen()
-	{
-		$data=$this->db->query("select nama_dosen,kd_prodi from dosen_tbl ");
+public function GetDosen(){
+		$kdprodi = $this->session->userdata('kd_prodi');
+		$data=$this->db->query('select nama_dosen,kd_prodi from dosen_tbl where kd_prodi='."'$kdprodi'");
 		return $data->result_array();
-	}
+}
  public function totbimbingan() {
  	$kdprodi = $this->session->userdata('kd_prodi');
  $data=$this->db->query('SELECT SUM(j_mhs_bimbingan)AS jum_bimbingan FROM pembimbing_akd WHERE kd_prodi='."'$kdprodi'");

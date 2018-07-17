@@ -100,20 +100,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/Apd_a641_excel/tambah";?>">
+											<a href="#">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
-											</button>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/Apd_a641_excel/load";?>">
-											<button id="sample_editable_1_new" class="btn green">
-											Load <i class="fa fa-plus"></i>
+											Load 
 											</button>
 											</a>
 										</div>
@@ -145,7 +134,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 								 <?php } ?>
 								 <tr>
-								 	<td>Total</td>
+								 	<th>Total</th>
 								 	<?php 
 										foreach ($totjudul as $d ) { 
 							 		?>

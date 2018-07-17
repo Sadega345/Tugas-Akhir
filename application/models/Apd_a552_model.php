@@ -12,12 +12,13 @@ class Apd_a552_model extends CI_Model {
 // Listing
 	 public function listing() {
 	 	$kdprodi = $this->session->userdata('kd_prodi');
-		 $data=$this->db->query('SELECT nama_dosen, jml_mhs,id FROM pembimbing_skripsi  WHERE kd_prodi='."'$kdprodi'");
+		 $data=$this->db->query('SELECT d.nama_dosen,p.jml_mhs,p.id FROM pembimbing_skripsi p inner join dosen_tbl d on p.id_dosen=d.id_dosen WHERE p.kd_prodi='."'$kdprodi'");
 		 return $data->result_array();
 	 }
 
 	 public function dosen() {
-		 $data=$this->db->query('SELECT nama_dosen FROM dosen_tbl ');
+	 	$kdprodi = $this->session->userdata('kd_prodi');
+		 $data=$this->db->query('SELECT nama_dosen FROM dosen_tbl where kd_prodi='."'$kdprodi'");
 		 return $data->result_array();
 	 }
 
@@ -38,7 +39,7 @@ class Apd_a552_model extends CI_Model {
 
 	 public function totmahasiswa() {
 	 	$kdprodi = $this->session->userdata('kd_prodi');
-		 $data=$this->db->query('select sum(p.jml_mhs)as jum_mhs from pembimbing_skripsi p inner join dosen_tbl d on p.nama_dosen=d.id_dosen where p.kd_prodi='."'$kdprodi'");
+		 $data=$this->db->query('select sum(p.jml_mhs)as jum_mhs from pembimbing_skripsi p inner join dosen_tbl d on p.id_dosen=d.id_dosen where p.kd_prodi='."'$kdprodi'");
 		 return $data->result_array();
 	 }
 
