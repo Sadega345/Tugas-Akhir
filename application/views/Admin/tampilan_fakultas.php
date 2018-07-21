@@ -125,6 +125,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 							<tr>
@@ -165,6 +166,11 @@ License: You must have a valid license purchased only from themeforest(the above
 							<?php } ?>
 							</tbody>
 							</table>
+							<div id="alert_retype" style="color:green">
+								<?php 
+									$this->session->flashdata('pesan');
+								 ?>
+							</div><br>
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->
@@ -239,6 +245,11 @@ Demo.init(); // init demo features
    Index.initMiniCharts();
    Tasks.initDashboardWidget();
 });
+</script>
+
+
+<script type="text/javascript">
+	$("#alert_retype").html("Data Berhasil Disimpan<br>");
 </script>
 <!-- END JAVASCRIPTS -->
 </body>

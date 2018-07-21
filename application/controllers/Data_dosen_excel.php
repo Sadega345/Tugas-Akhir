@@ -99,7 +99,7 @@ public function export_excel(){
  }
 
 public function tambah(){
-		$data = $this->Data_dosen_model->getdosen();
+		$data = $this->Data_dosen_model->listing();
 		$kd_dosen = count($data)+1;
 		// echo $convert;die;
 		// print_r($data);

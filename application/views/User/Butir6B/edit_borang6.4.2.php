@@ -162,7 +162,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 				$cek=" ";
 							 			}
 							 		 ?>
-	                    			<input type="checkbox" name="manual" class="form-control" <?php echo $cek ?> >
+	                    			<input type="checkbox" name="manual" class="form-control" <?php echo $cek ?> value="v">
 	                    		</td>
 							 	<td>
 							 		<?php 
@@ -198,6 +198,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 
 							</tbody>
 							</table>
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							</div>
 							<div class="btn-group">
 								<button id="sample_editable_1_new" class="btn blue">

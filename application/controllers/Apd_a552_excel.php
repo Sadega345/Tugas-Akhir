@@ -27,14 +27,14 @@ public function index() {
  }
 
   public function do_edit(){
-		$nama_dosen=$_POST['nama_dosen'];
+		// $nama_dosen=$_POST['nama_dosen'];
 		$jml_mhs=$_POST['jml_mhs'];
 		$id=$_POST['id'];
 		
 		$data_update=array(
 			
 			"jml_mhs"=>$jml_mhs,
-			"id"=>$id,
+			
 			
 		);
 		$where=array('id'=>$id);
@@ -59,17 +59,19 @@ public function index() {
 		$id=$_POST['id'];
 		$nama_dosen=$_POST['nama_dosen'];
 		$jml_mhs=$_POST['jml_mhs'];
-		
+		$kdprodi = $this->session->userdata('kd_prodi');
+
 		$data_insert=array(
 			
-			'id'=>$id,
-			'nama_dosen'=>$nama_dosen,
-			'kd_prodi'=>'P001',
+			'id'=> $id,
+			// 'nama_dosen'=> $nama_dosen,
+			'kd_prodi'=> $kdprodi,
 			'jml_mhs' => $jml_mhs,
 
 		);
-		// print_r($data_insert);die();
+		
 		$res=$this->Apd_a552_model->insert('pembimbing_skripsi',$data_insert);
+		// print_r($data_insert);die();
 		if ($res>=1) {
 			redirect('Apd_a552_excel');
 		}else {

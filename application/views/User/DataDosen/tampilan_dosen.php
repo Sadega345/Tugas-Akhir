@@ -148,7 +148,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							?>
 							<tr align="center">
 								 	<tr>
-									 	<td><?php echo $no++; ?></td>
+									 	<!-- <td><?php echo $no++; ?></td> -->
+									 	<td><?php echo $d['id_dosen']; ?></td>
 									 	<td><?php echo $d['NAMA_DOSEN']; ?></td>
 									 	<td><?php echo $d['NIDN']; ?></td>
 									 	<td><?php echo $d['TGL_LHR']; ?></td>
