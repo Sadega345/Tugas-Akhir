@@ -142,7 +142,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<tr>
 							 	<td><?php echo $sumber_pembiayaan; ?></td>
 							 	<td><input type="text" name="ts_2" class="form-control" value="<?php echo $ts_2 ?>"></td>
-							 	<td><input type="text" name="ts_1" class="form-control" value="<?php echo $ts_2 ?>"></td>
+							 	<td><input type="text" name="ts_1" class="form-control" value="<?php echo $ts_1 ?>"></td>
 							 	<td><input type="text" name="ts" class="form-control" value="<?php echo $ts ?>"></td>
 							 	<td><?php echo $jml; ?></td>
 							 </tr>
