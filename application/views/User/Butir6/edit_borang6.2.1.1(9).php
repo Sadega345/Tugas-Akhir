@@ -144,8 +144,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							<tbody>
 							
 							<tr>
-							 	<td >Usaha Sendiri</td>
-							 	<td><input type="text" name="jenis_dana" class="form-control" value="<?php echo $jenis_dana; ?>"></td>
+							 	<td >Sumber Lain</td>
+							 	<td><input type="text" name="jenis_dana" class="form-control" value="<?php echo $jenis_dana; ?>" ></td>
 							 	<td><input type="text" name="ts_2" class="form-control" value="<?php echo $ts_2; ?>"></td>
 							 	<td><input type="text" name="ts_1" class="form-control" value="<?php echo $ts_1; ?>"></td>
 							 	<td><input type="text" name="ts" class="form-control" value="<?php echo $ts; ?>"></td>
@@ -169,7 +169,6 @@ License: You must have a valid license purchased only from themeforest(the above
 									</button>
 								</a>
 							</div>
-
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

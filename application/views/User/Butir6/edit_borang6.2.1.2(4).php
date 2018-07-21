@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>Butir 6.2.1.1 : PEROLEHAN DAN ALOKASI DANA</title>
+<title>Butir 6.2.1.2  : PEROLEHAN DAN ALOKASI DANA</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Butir 6.2.1.1 : PEROLEHAN DAN ALOKASI DANA
+								<i class="fa fa-edit"></i>Butir 6.2.1.2  : PEROLEHAN DAN ALOKASI DANA
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -126,14 +126,13 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</div>
 							<div style="overflow-x:auto;" class="col-md-20">
-							<form action="<?php echo base_url()."index.php/Apd_a6211_excel/do_edit"; ?>" method="POST">
+							<form action="<?php echo base_url()."index.php/Apd_a6212_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th rowspan="2">Sumber Dana</th>
-									 <th rowspan="2">Jenis Dana</th>
-									 <th colspan="3">Jumlah Dana (juta rupiah)</th>
-									 <th rowspan="2">Total</th>
+									 <th rowspan="2">No</th>
+									 <th rowspan="2">Jenis Penggunaan</th>
+									 <th colspan="3">Penggunaan (Juta Rupiah)</th>
 								 </tr>
 								 <tr>
 								 	<th>TS-2</th>
@@ -142,16 +141,14 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							
-							<tr>
-							 	<td >Usaha Sendiri</td>
-							 	<td><input type="text" name="jenis_dana" class="form-control" value="<?php echo $jenis_dana; ?>"></td>
-							 	<td><input type="text" name="ts_2" class="form-control" value="<?php echo $ts_2; ?>"></td>
-							 	<td><input type="text" name="ts_1" class="form-control" value="<?php echo $ts_1; ?>"></td>
-							 	<td><input type="text" name="ts" class="form-control" value="<?php echo $ts; ?>"></td>
-							 	<td><?php echo $total1; ?></td>
-							 </tr>
-							 
+								<tr>
+								 	<td>4</td>
+								 	<td>Investasi Prasarana</td>
+								 	<td><input type="text" name="ts_2" class="form-control" value="<?php echo $ts_2; ?>"></td>
+								 	<td><input type="text" name="ts_1" class="form-control" value="<?php echo $ts_1; ?>"></td>
+								 	<td><input type="text" name="ts" class="form-control" value="<?php echo $ts; ?>"></td>
+								 </tr>
+								 
 							</tbody>
 							</table>
 							<input type="hidden" name="id" value="<?php echo $id; ?>">
@@ -163,13 +160,12 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							</form>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a6211_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Apd_a6212_excel/";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal
 									</button>
 								</a>
 							</div>
-
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

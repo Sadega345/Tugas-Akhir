@@ -5,7 +5,7 @@
 3. butir a522 Edit nya belum
 4. butir a541 tambah dan hapus
 5.Butir a552 tambah,edit,hapus
-6. butir a6211, edit
+6. butir a6211, edit Done
 7. butir a6212, edit
 8. butir a622, tambah (autoincrement pada saat tambah harusnya dimulai dari id terakhir di db), edit (ketika edit tahun dn jumlah penelitian, tidak bisa keubah datanya),hapusnya belum ada
 9. butir a623, tambah (autoincrement pada saat tambah harusnya dimulai dari id terakhir di db), hapusya belum ada

@@ -127,24 +127,26 @@ License: You must have a valid license purchased only from themeforest(the above
 							<tbody>
 							<tr>
 							 	<td rowspan="4">Usaha Sendiri</td>
-							 	<td>Beasiswa Yayasan</td>
+							 	
 								<?php
 									foreach ($dana1 as $a ) { 
 								?>
+								<td><?php echo $a['jenis_dana'] ?></td>
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
 								<td><?php echo $a['total1'] ?></td>
 								<td class="center">
-										<a href="<?php echo base_url()."index.php/Apd_a6211_excel/ubah/".$a['id'];?>" >Edit</a>
-									</td>
+									<a href="<?php echo base_url()."index.php/Apd_a6211_excel/ubah/".$a['id'];?>" >Edit</a>
+								</td>
 								<?php } ?>	 
 							 </tr>
 							 <tr>
-							 	<td>Hibah Yayasan</td>
+							 	
 							 	<?php
 									foreach ($dana2 as $a ) { 
 								?>
+								<td><?php echo $a['jenis_dana'] ?></td>
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
@@ -155,10 +157,11 @@ License: You must have a valid license purchased only from themeforest(the above
 								<?php } ?>
 							 </tr>
 							 <tr>
-							 	<td>Hibah Unit Usaha(PT. Pasim Sentra Utama)</td>
+							 	
 							 	<?php
 									foreach ($dana3 as $a ) { 
 								?>
+								<td><?php echo $a['jenis_dana'] ?></td>
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
@@ -181,10 +184,11 @@ License: You must have a valid license purchased only from themeforest(the above
 							 </tr>
 							 <tr>
 							 	<td rowspan="4">Mahasiswa</td>
-							 	<td>Pendaftaran</td>
+							 	
 							 	<?php
 									foreach ($dana4 as $a ) { 
 								?>
+								<td><?php echo $a['jenis_dana'] ?></td>
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
@@ -195,10 +199,11 @@ License: You must have a valid license purchased only from themeforest(the above
 								<?php } ?>
 							 </tr>
 							 <tr>
-							 	<td>Biaya Registrasi</td>
+							 	
 							 	<?php
 									foreach ($dana5 as $a ) { 
 								?>
+								<td><?php echo $a['jenis_dana'] ?></td>
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
@@ -209,10 +214,11 @@ License: You must have a valid license purchased only from themeforest(the above
 								<?php } ?>
 							 </tr>
 							 <tr>
-							 	<td>Biaya Kuliah</td>
+							 	
 							 	<?php
 									foreach ($dana6 as $a ) { 
 								?>
+								<td><?php echo $a['jenis_dana'] ?></td>
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
@@ -244,7 +250,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td></td>
 							 	<td></td>
 							 	<td class="center">
-									<a href="#" >Edit</a>
+									
 								</td>
 							 </tr>
 							  <tr>
@@ -257,10 +263,11 @@ License: You must have a valid license purchased only from themeforest(the above
 							 </tr>
 							 <tr>
 							 	<td rowspan="4">Sumber Lain</td>
-							 	<td>Alumni</td>
+							 	
 							 	<?php
 									foreach ($dana7 as $a ) { 
 								?>
+								<td><?php echo $a['jenis_dana'] ?></td>
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
@@ -271,10 +278,11 @@ License: You must have a valid license purchased only from themeforest(the above
 								<?php } ?>
 							 </tr>
 							 <tr>
-							 	<td>Hibah Penelitian</td>
+							 	
 							 	<?php
 									foreach ($dana8 as $a ) { 
 								?>
+								<td><?php echo $a['jenis_dana'] ?></td>
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
@@ -285,10 +293,11 @@ License: You must have a valid license purchased only from themeforest(the above
 								<?php } ?>
 							 </tr>
 							 <tr>
-							 	<td>Hibah Pengabdian</td>
+							 	
 							 	<?php
 									foreach ($dana9 as $a ) { 
 								?>
+								<td><?php echo $a['jenis_dana'] ?></td>
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>

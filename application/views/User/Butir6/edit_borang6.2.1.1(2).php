@@ -169,7 +169,6 @@ License: You must have a valid license purchased only from themeforest(the above
 									</button>
 								</a>
 							</div>
-
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

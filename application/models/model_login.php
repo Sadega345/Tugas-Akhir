@@ -19,7 +19,7 @@ class Model_login extends CI_model {
 		$return = $this->db->get('');
 		if($return->num_rows() > 0 ){
 			foreach ($return->result() as $row) {
-				if($row->username=="admin" ){
+				if($username == "admin" ){
 					$sess = array('username' => $row->username,
 					   			);
 					$this->session->set_userdata( $sess );
