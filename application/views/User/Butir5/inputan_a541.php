@@ -123,12 +123,12 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="row">
 										<div class="form-group">
 											<label>Nama Dosen</label>
-											<select name="nama_dosen" class="form-control">
+											<select name="id_dosen" class="form-control">
 												<option disabled selected>-- Pilih Dosen --</option>
 												<?php 
 													$data=$this->Apd_a541_model->GetDosen();
 													foreach($data as $d) { ?>
-									                <option value="<?php echo $d['nama_dosen'];?>"><?php echo $d['nama_dosen'];?></option>
+									                <option value="<?php echo $d['id_dosen'];?>"><?php echo $d['nama_dosen'];?></option>
 									            <?php } ?>
 											</select>
 										</div>

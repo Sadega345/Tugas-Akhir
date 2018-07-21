@@ -24,7 +24,7 @@ class Apd_a552_model extends CI_Model {
 
 	 public function dosen() {
 	 	$kdprodi = $this->session->userdata('kd_prodi');
-		 $data=$this->db->query('SELECT nama_dosen FROM dosen_tbl where kd_prodi='."'$kdprodi'");
+		 $data=$this->db->query('SELECT id_dosen,nama_dosen FROM dosen_tbl where kd_prodi='."'$kdprodi'");
 		 return $data->result_array();
 	 }
 

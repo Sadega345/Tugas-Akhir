@@ -12,31 +12,31 @@ class Apd_a711_model extends CI_Model {
 // Listing
 public function listing1() {
  $kdprodi = $this->session->userdata('kd_prodi');
- $data=$this->db->query('SELECT sumber_pembiayaan,ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jml from penelitian_dosen where kd_prodi='."'$kdprodi'".' and kd_jns=1;');
+ $data=$this->db->query('SELECT id,sumber_pembiayaan,ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jml from penelitian_dosen where kd_prodi='."'$kdprodi'".' and kd_jns=1;');
  return $data->result_array();
  }
 
  public function listing2() {
  $kdprodi = $this->session->userdata('kd_prodi');
- $data=$this->db->query('SELECT sumber_pembiayaan,ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jml from penelitian_dosen where kd_prodi='."'$kdprodi'".' and kd_jns=2;');
+ $data=$this->db->query('SELECT id,sumber_pembiayaan,ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jml from penelitian_dosen where kd_prodi='."'$kdprodi'".' and kd_jns=2;');
  return $data->result_array();
  }
 
  public function listing3() {
  $kdprodi = $this->session->userdata('kd_prodi');
- $data=$this->db->query('SELECT sumber_pembiayaan,ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jml from penelitian_dosen where kd_prodi='."'$kdprodi'".' and kd_jns=3;');
+ $data=$this->db->query('SELECT id,sumber_pembiayaan,ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jml from penelitian_dosen where kd_prodi='."'$kdprodi'".' and kd_jns=3;');
  return $data->result_array();
  }
 
  public function listing4() {
  $kdprodi = $this->session->userdata('kd_prodi');
- $data=$this->db->query('SELECT sumber_pembiayaan,ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jml from penelitian_dosen where kd_prodi='."'$kdprodi'".' and kd_jns=4;');
+ $data=$this->db->query('SELECT id,sumber_pembiayaan,ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jml from penelitian_dosen where kd_prodi='."'$kdprodi'".' and kd_jns=4;');
  return $data->result_array();
  }
 
  public function listing5() {
  $kdprodi = $this->session->userdata('kd_prodi');
- $data=$this->db->query('SELECT sumber_pembiayaan,ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jml from penelitian_dosen where kd_prodi='."'$kdprodi'".' and kd_jns=5;');
+ $data=$this->db->query('SELECT id,sumber_pembiayaan,ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jml from penelitian_dosen where kd_prodi='."'$kdprodi'".' and kd_jns=5;');
  return $data->result_array();
  }
 
@@ -63,5 +63,15 @@ public function listing1() {
  $data=$this->db->query('SELECT sum(ts_2+ts_1+ts) as jml from penelitian_dosen WHERE kd_prodi='."'$kdprodi'");
  return $data->result_array();
  }
+
+ public function update($where="") {
+	 $data= $this->db->query('SELECT id,sumber_pembiayaan,ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jml from penelitian_dosen '.$where);
+	 return $data->result_array();
+ }
+
+ public function rubah($tablename,$data,$where){
+		$res=$this->db->update($tablename,$data,$where);
+		return $res;
+	}
 
 }

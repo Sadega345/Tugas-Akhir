@@ -26,14 +26,14 @@ public function do_tambah(){
 		$this->model_squrity->getsqurity();
 		
 		$id=$_POST['id'];
-		$nama_dosen=$_POST['nama_dosen'];
+		$id_dosen=$_POST['id_dosen'];
 		$j_mhs_bimbingan=$_POST['j_mhs_bimbingan'];
 		$rata2_pertemuan=$_POST['rata2_pertemuan'];
 		$data_insert=array(
 			
 			'id'=>$id,
-			'nama_dosen'=>$nama_dosen,
-			'kd_prodi'=>'P001',
+			'id_dosen'=>$id_dosen,
+			'kd_prodi'=> $this->session->userdata('kd_prodi'),
 			'j_mhs_bimbingan' => $j_mhs_bimbingan,
 			'rata2_pertemuan' => $rata2_pertemuan,
 

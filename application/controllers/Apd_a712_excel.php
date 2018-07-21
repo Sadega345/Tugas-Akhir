@@ -51,6 +51,7 @@ public function index() {
 		$lokal = $_POST['lokal'];
 		$nasional=$_POST['nasional'];
 		$internasional=$_POST['internasional'];
+		// $banyak_dosen=$_POST['banyak_dosen'];
 		$id=$_POST['id'];
 		
 		$data_update=array(

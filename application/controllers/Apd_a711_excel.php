@@ -28,9 +28,47 @@ public function index() {
 																'jml'=>$jml));
  }
 
-public function ubah(){
- 	$this->load->view('User/Butir7/tampilan_borang7.1.1.php');
+
+ public function ubah($id){
+ 	$this->model_squrity->getsqurity();
+	$res=$this->Apd_a711_model->update("where id='$id'");
+	$data=array(
+		"sumber_pembiayaan"=>$res[0]['sumber_pembiayaan'],
+		"id"=>$res[0]['id'],
+		"ts_2"=>$res[0]['ts_2'],
+		"ts_1"=>$res[0]['ts_1'],
+		"ts"=>$res[0]['ts'],
+		"jml"=>$res[0]['jml'],
+	);
+
+ 	$this->load->view('User/Butir7/edit_borang7.1.1.php',$data);
  }
+
+ public function do_edit(){
+		
+		$ts_2=$_POST['ts_2'];
+		$ts_1=$_POST['ts_1'];
+		$ts=$_POST['ts'];
+		$id=$_POST['id'];
+		
+		$data_update=array(
+			
+			"ts_2"=>$ts_2,
+			"ts_1"=>$ts_1,
+			"ts"=>$ts,
+			
+		);
+		$where=array('id'=>$id);
+		// print_r($data_update);die();
+		$res=$this->Apd_a711_model->rubah('penelitian_dosen',$data_update,$where);
+		
+		if ($res>=1) {
+			redirect('Apd_a711_excel');
+		}
+		// else {
+		// 	alert("Gagal Update") ;
+		// }
+	}
 
 public function export_excel(){
 $data1=$this->Apd_a711_model->listing1();

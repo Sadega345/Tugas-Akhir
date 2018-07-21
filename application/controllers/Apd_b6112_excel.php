@@ -32,9 +32,55 @@ public function index() {
 
  }
 
- public function ubah(){
- 	$this->load->view('User/Butir6B/tampilan_borang6.1.1.2.php');
+ public function ubah($id){
+ 	$this->model_squrity->getsqurity();
+	$res=$this->Apd_b6112_model->update("where id='$id'");
+	$data=array(
+		"ts_2"=>$res[0]['ts_2'],
+		"id"=>$res[0]['id'],
+		"ts_1"=>$res[0]['ts_1'],
+		"ts"=>$res[0]['ts'],
+	);
+
+
+	if ($id==1) {
+		$this->load->view('User/Butir6B/edit_borang6.1.1.2.php',$data);
+	}else if ($id==2) {
+		$this->load->view('User/Butir6B/edit_borang6.1.1.2(2).php',$data);
+	}else if ($id==3) {
+		$this->load->view('User/Butir6B/edit_borang6.1.1.2(3).php',$data);
+	}else if ($id==4) {
+		$this->load->view('User/Butir6B/edit_borang6.1.1.2(4).php',$data);
+	}else if ($id==5) {
+		$this->load->view('User/Butir6B/edit_borang6.1.1.2(5).php',$data);
+	}else if ($id==6) {
+		$this->load->view('User/Butir6B/edit_borang6.1.1.2(6).php',$data);
+	}
  }
+
+ public function do_edit(){
+		$ts_2=$_POST['ts_2'];
+		$ts_1=$_POST['ts_1'];
+		$ts=$_POST['ts'];
+		$id=$_POST['id'];
+		
+		$data_update=array(
+			"ts_2"=>$ts_2,
+			"ts_1"=>$ts_1,
+			"ts"=>$ts,
+			
+		);
+		$where=array('id'=>$id);
+		// print_r($data_update);die;
+		$res=$this->Apd_b6112_model->rubah('penggunaan_dana',$data_update,$where);
+		
+		if ($res>=1) {
+			redirect('Apd_b6112_excel');
+		}
+		// else {
+		// 	alert("Gagal Update") ;
+		// }
+	}
 
  public function tambah(){
  	$this->model_squrity->getsqurity();

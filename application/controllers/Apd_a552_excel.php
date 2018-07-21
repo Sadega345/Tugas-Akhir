@@ -57,14 +57,14 @@ public function index() {
 		$this->model_squrity->getsqurity();
 		
 		$id=$_POST['id'];
-		$nama_dosen=$_POST['nama_dosen'];
+		$id_dosen=$_POST['id_dosen'];
 		$jml_mhs=$_POST['jml_mhs'];
 		$kdprodi = $this->session->userdata('kd_prodi');
 
 		$data_insert=array(
 			
 			'id'=> $id,
-			// 'nama_dosen'=> $nama_dosen,
+			'id_dosen'=> $id_dosen,
 			'kd_prodi'=> $kdprodi,
 			'jml_mhs' => $jml_mhs,
 

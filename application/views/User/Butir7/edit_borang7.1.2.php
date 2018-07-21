@@ -159,29 +159,29 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><input type="text" name="publikasi" value="<?php echo $publikasi; ?>"></td>
 							 	<td><input type="text" name="thn_publikasi" value="<?php echo $thn_publikasi; ?>"></td>
 							 	<?php
- 									if($lokal=="v"){
+ 									if($lokal=="lokal"){
  										$cek="checked";
  									}else{
  										$cek="";
  									}
 							 	?>
-							 	<td><input type="radio" name="lokal" value="v" class="form-control" <?php echo $cek; ?> ></td>
+							 	<td><input type="radio" name="lokal" value="lokal" class="form-control"  ></td>
 							 	<?php
- 									if($nasional=="v"){
+ 									if($nasional=="nasional"){
  										$cek="checked";
  									}else{
  										$cek="";
  									}
 							 	?>
-							 	<td><input type="radio" name="nasional" value="v" class="form-control" <?php echo $cek; ?> ></td>
+							 	<td><input type="radio" name="nasional" value="nasional" class="form-control" ></td>
 							 	<?php
- 									if($internasional=="v"){
+ 									if($internasional=="internasional"){
  										$cek="checked";
  									}else{
  										$cek="";
  									}
 							 	?>
-							 	<td><input type="radio" name="internasional" value="v" class="form-control" <?php echo $cek; ?>  ></td>
+							 	<td><input type="radio" name="internasional" value="internasional" class="form-control" ></td>
 							 </tr>
 							 
 							</tbody>

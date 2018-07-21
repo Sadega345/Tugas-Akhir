@@ -12,37 +12,37 @@ public function __construct()
 // Listing
  public function listing1() {
  	$kdprodi = $this->session->userdata('kd_prodi');
- $dana1=$this->db->query('select ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jumlah1 from penggunaan_dana where id=1 and kd_prodi='."'$kdprodi'");
+ $dana1=$this->db->query('select id,ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jumlah1 from penggunaan_dana where id=1 and kd_prodi='."'$kdprodi'");
  return $dana1->result_array();
  }
 
  public function listing2() {
  	$kdprodi = $this->session->userdata('kd_prodi');
- $dana2=$this->db->query('select ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jumlah2 from penggunaan_dana where id=2 and kd_prodi='."'$kdprodi'");
+ $dana2=$this->db->query('select id,ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jumlah2 from penggunaan_dana where id=2 and kd_prodi='."'$kdprodi'");
  return $dana2->result_array();
  }
 
  public function listing3() {
  	$kdprodi = $this->session->userdata('kd_prodi');
- $dana3=$this->db->query('select ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jumlah3 from penggunaan_dana where id=3 and kd_prodi='."'$kdprodi'");
+ $dana3=$this->db->query('select id,ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jumlah3 from penggunaan_dana where id=3 and kd_prodi='."'$kdprodi'");
  return $dana3->result_array();
  }
 
  public function listing4() {
  	$kdprodi = $this->session->userdata('kd_prodi');
- $dana4=$this->db->query('select ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jumlah4 from penggunaan_dana where id=4 and kd_prodi='."'$kdprodi'");
+ $dana4=$this->db->query('select id,ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jumlah4 from penggunaan_dana where id=4 and kd_prodi='."'$kdprodi'");
  return $dana4->result_array();
  }
 
  public function listing5() {
  	$kdprodi = $this->session->userdata('kd_prodi');
- $dana5=$this->db->query('select ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jumlah5 from penggunaan_dana where id=5 and kd_prodi='."'$kdprodi'");
+ $dana5=$this->db->query('select id,ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jumlah5 from penggunaan_dana where id=5 and kd_prodi='."'$kdprodi'");
  return $dana5->result_array();
  }
 
  public function listing6() {
  	$kdprodi = $this->session->userdata('kd_prodi');
- $dana6=$this->db->query('select ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jumlah6 from penggunaan_dana where id=6 and kd_prodi='."'$kdprodi'");
+ $dana6=$this->db->query('select id,ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jumlah6 from penggunaan_dana where id=6 and kd_prodi='."'$kdprodi'");
  return $dana6->result_array();
  }
 
@@ -67,6 +67,16 @@ public function __construct()
  public function insert($tablename,$data){
 		$res=$this->db->insert($tablename,$data);
 		return $res;
+	}
+
+	public function update($where="") {
+	 $data= $this->db->query('select id,ts_2,ts_1,ts from penggunaan_dana '.$where);
+	 return $data->result_array();
+	 }
+
+	public function rubah($tablename,$data,$where){
+			$res=$this->db->update($tablename,$data,$where);
+			return $res;
 	}
 
 }

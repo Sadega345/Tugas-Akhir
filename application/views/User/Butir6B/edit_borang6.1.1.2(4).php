@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>Butir 5.5.2 : Pelaksanaan pembimbingan karya/tugas akhir</title>
+<title>Butir 6.1.1.2 : PENGGUNAAN DANA</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Butir 5.5.2 : Pelaksanaan pembimbingan karya/tugas akhir
+								<i class="fa fa-edit"></i>Butir 6.1.1.2 : PENGGUNAAN DANA
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -100,67 +100,73 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											
-										</div>
-									</div>
-								</div>
-							</div>
-							<div style="overflow-x:auto;">
-							<form action="<?php echo base_url()."index.php/Apd_a552_excel/do_tambah"; ?>" method="POST">
-							<div class="container">
-								<div class="col-md-10">
-									<div class="row">
-										<div class="form-group">
-											<label>Id</label>
-											<?php 
-												$data=$this->Apd_a552_model->PembingbingSkripsi();
-												$id = count($data)+1;
-												
-											?>
-											<input type="text" class="form-control" name="id" value="<?php echo $id; ?>" readonly="">
-										
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Nama Dosen</label>
-											<select name="id_dosen" class="form-control">
-												<option disabled selected>-- Pilih Dosen --</option>
-												<?php 
-													$data=$this->Apd_a552_model->dosen();
-													foreach($data as $d) { ?>
-									                <option value="<?php echo $d['id_dosen'];?>"><?php echo $d['nama_dosen'];?></option>
-									            <?php } ?>
-											</select>
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group">
-											<label>Jumlah Mahasiswa</label>
-											<input type="text" class="form-control" name="jml_mhs">
-										</div>
-									</div>
-									</div>
-									</div>
-									</div>
-									<div class="btn-group">
-										<button id="sample_editable_1_new" class="btn blue">
-											Simpan 
-										</button>
-									</div>
-									</form>
-									<div class="btn-group">
-										<a href="<?php echo base_url()."index.php/Apd_a552_excel";?>">
-											<button id="sample_editable_1_new" class="btn red">
-												Batal 
+											<!-- <a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<button id="sample_editable_1_new" class="btn green">
+											Load
 											</button>
-										</a>
+											</a> -->
+										</div>
 									</div>
-									
+									<!-- <div class="col-md-6">
+										<div class="btn-group pull-right">
+											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+											</button>
+											<ul class="dropdown-menu pull-right">
+												<li>
+													<a href="javascript:;">
+													Print </a>
+												</li>
+												<li>
+													<a href="javascript:;">
+													Export to Excel </a>
+												</li>
+											</ul>
+										</div>
+									</div> -->
 								</div>
 							</div>
 							
-							
+							<div style="overflow-x:auto;" class="col-md-20">
+							<form action="<?php echo base_url()."index.php/Apd_b6112_excel/do_edit"; ?>" method="POST">
+							<table class="table table-striped table-bordered table-hover" id="sample_1">
+							<thead>
+								<tr>
+									 <th rowspan="2">No</th>
+									 <th rowspan="2">Jenis Penggunaan</th>
+									 <th colspan="3">Penggunaan (Juta Rupiah)</th>
+								 </tr>
+								 <tr>
+								 	<th>TS-2</th>
+								 	<th>TS-1</th>
+								 	<th>TS</th>
+								 </tr>
+							</thead>
+							<tbody>
+								<tr>
+								 	<td>4</td>
+								 	<td>Investasi Prasarana</td>
+								 	<td><input type="text" name="ts_2" class="form-control" value="<?php echo $ts_2; ?>"></td>
+								 	<td><input type="text" name="ts_1" class="form-control" value="<?php echo $ts_1; ?>"></td>
+								 	<td><input type="text" name="ts" class="form-control" value="<?php echo $ts; ?>"></td>
+								 </tr>
+								 
+							</tbody>
+							</table>
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
+							</div>
+							<div class="btn-group">
+								<button id="sample_editable_1_new" class="btn blue">
+									Simpan 
+								</button>
+							</div>
+							</form>
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Apd_b6112_excel/";?>">
+									<button id="sample_editable_1_new" class="btn red">
+										Batal
+									</button>
+								</a>
+							</div>
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->
