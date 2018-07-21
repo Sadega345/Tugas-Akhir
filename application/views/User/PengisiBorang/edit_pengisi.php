@@ -111,8 +111,8 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="col-md-10">
 									<div class="row">
 										<div class="form-group">
-											<label>Id</label>
-											<input type="text" class="form-control" name="id"  value="<?php echo $id; ?>" readonly="">
+											<!-- <label>Id</label> -->
+											<input type="hidden" class="form-control" name="id"  value="<?php echo $id; ?>" readonly="">
 										</div>
 									</div>
 									<div class="row">

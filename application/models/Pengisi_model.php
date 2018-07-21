@@ -11,9 +11,16 @@ class Pengisi_model extends CI_Model {
 
 // Listing
  public function listing($where="") {
-	 $data=$this->db->query("select id,nama,nidn,jabatan,tgl_pengisian from pengisi_borang ".$where);
+ 	 $kdprodi = $this->session->userdata('kd_prodi');
+	 $data=$this->db->query("select id,nama,nidn,jabatan,tgl_pengisian from pengisi_borang where kode_prodi="."'$kdprodi'");
 	 return $data->result_array();
  }
+
+ public function ubah($where=""){
+	$kdprodi = $this->session->userdata('kd_prodi');
+	$data=$this->db->query("select id,nama,nidn,jabatan,tgl_pengisian from pengisi_borang ".$where);
+	return $data->result_array();
+}
 
  public function insert($tablename,$data){
 	$res=$this->db->insert($tablename,$data);
