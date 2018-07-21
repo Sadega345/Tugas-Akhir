@@ -33,6 +33,11 @@ artikel_ilmiah '.$where);
 		return $res;
 	}
 
+public function delete($tablename,$where){
+	$res=$this->db->delete($tablename,$where);
+	return $res;
+}
+
  public function lokal() {
  	$kdprodi = $this->session->userdata('kd_prodi');
  $data=$this->db->query('SELECT COUNT(IF(LOKAL LIKE "v%",LOKAL,NULL))AS JML FROM artikel_ilmiah WHERE kd_prodi='."'$kdprodi'");
