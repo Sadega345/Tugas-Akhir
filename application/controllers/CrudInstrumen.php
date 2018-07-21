@@ -24,8 +24,8 @@ class CrudInstrumen extends CI_Controller {
 
 	public function do_tambah(){
 	
-	$this->form_validation->set_rules('fakultas', 'Nama Fakultas', 'required|min_length[2]|alpha');
-	if($this->form_validation->run()){
+	
+	
 
 		//membuat konfigurasi
       $config = [
@@ -50,11 +50,8 @@ class CrudInstrumen extends CI_Controller {
           $this->model_instrumen->insert('instrumen',$data); //memasukan data ke database
           redirect('Admin/table_instrumen'); //mengalihkan halaman
       }
-     }
-     else{
-     	redirect('CrudInstrumen/tambah');
-		$this->session->set_flashdata('info','Inputan Salah ');
-     }
+     
+     
 	}
 
 	public function do_hapus($id){
