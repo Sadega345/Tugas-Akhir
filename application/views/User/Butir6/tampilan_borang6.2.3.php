@@ -132,6 +132,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['JUMLAH_DANA']; ?></td>
 							 	<td class="center">
 									<a href="<?php echo base_url()."index.php/Apd_a623_excel/ubah/".$d['id'];?>" >Edit</a>
+									||
+									<a href="<?php echo base_url()."index.php/Apd_a623_excel/do_hapus/".$d['id'];?>" >Hapus</a>
 								</td>
 							 </tr>
 							 <?php } ?>

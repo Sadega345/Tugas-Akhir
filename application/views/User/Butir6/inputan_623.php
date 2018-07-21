@@ -156,7 +156,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 							<div class="btn-group">
 								
-								<a href="<?php echo base_url()."index.php/Apd_a622_excel/";?>">
+								<a href="<?php echo base_url()."index.php/Apd_a623_excel/";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal
 									</button>
