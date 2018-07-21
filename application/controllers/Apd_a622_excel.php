@@ -86,6 +86,17 @@ public function index() {
 		}
 }
 
+public function do_hapus($id){
+		$this->model_squrity->getsqurity();
+		$where=array('id'=>$id);
+		$res=$this->Apd_a622_model->Delete('dana_penelitian',$where);
+		if($res>=1){
+			redirect('Apd_a622_excel');
+		}else {
+			alert('Gagal Hapus');
+		}
+	}
+
 public function export_excel(){
  // $data = array( 'title' => 'TABEL DATA BUTIR 6.2.2 : DANA UNTUK KEGIATAN PENELITIAN',
  // 'a622' => $this->apd_a622_model->listing());

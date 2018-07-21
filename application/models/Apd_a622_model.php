@@ -39,4 +39,9 @@ WHERE KD_PRODI='."'$kdprodi'");
  return $data->result_array();
  }
 
+ public function delete($tablename,$where){
+	$res=$this->db->delete($tablename,$where);
+	return $res;
+}
+
 }
