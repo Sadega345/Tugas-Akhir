@@ -39,7 +39,7 @@ public function index() {
 		$id=$_POST['id'];
 		
 		$data_update=array(
-			// "nama_pakar"=>$nama_pakar,
+			"nama_pakar"=>$nama_pakar,
 			"instansi"=>$instansi,
 			"judul_keg"=>$judul_keg,
 			"pelaksanaan"=>$pelaksanaan

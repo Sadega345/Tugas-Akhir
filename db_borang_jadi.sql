@@ -58,14 +58,15 @@ CREATE TABLE `aktivitas_dosen` (
   `sks_man_ptl` int(3) DEFAULT NULL,
   `id` int(6) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`),
-  KEY `FK_aktivitas_dosen` (`id_dosen`)
+  KEY `FK_aktivitas_dosen` (`id_dosen`),
+  CONSTRAINT `FK_dosen` FOREIGN KEY (`id_dosen`) REFERENCES `dosen_tbl` (`id_dosen`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 /*Data for the table `aktivitas_dosen` */
 
 LOCK TABLES `aktivitas_dosen` WRITE;
 
-insert  into `aktivitas_dosen`(`id_dosen`,`sks_pss`,`sks_psl_pts`,`sks_ptl`,`sks_penelitian`,`sks_pp_mas`,`sks_man_pts`,`sks_man_ptl`,`id`) values (1,2,0,0,1,1,6,0,1),(2,9,1,4,1,1,4,0,2),(13,6,2,0,1,1,4,0,3),(14,8,1,4,1,1,6,0,4),(14,1,4,0,0,0,0,0,5);
+insert  into `aktivitas_dosen`(`id_dosen`,`sks_pss`,`sks_psl_pts`,`sks_ptl`,`sks_penelitian`,`sks_pp_mas`,`sks_man_pts`,`sks_man_ptl`,`id`) values (1,2,0,0,1,1,6,0,1),(2,9,1,4,1,1,4,0,2),(9,6,2,0,1,1,4,0,3),(10,8,1,4,1,1,6,0,4),(11,1,4,0,0,0,0,0,5);
 
 UNLOCK TABLES;
 
@@ -84,14 +85,15 @@ CREATE TABLE `aktivitas_mengajar` (
   `jp_dilaksanakan` int(3) DEFAULT NULL,
   `id` int(4) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`),
-  KEY `FK_aktivitas_mengajar` (`id_dosen`)
+  KEY `FK_aktivitas_mengajar` (`id_dosen`),
+  CONSTRAINT `FK_dosen_mengajar` FOREIGN KEY (`id_dosen`) REFERENCES `dosen_tbl` (`id_dosen`)
 ) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
 
 /*Data for the table `aktivitas_mengajar` */
 
 LOCK TABLES `aktivitas_mengajar` WRITE;
 
-insert  into `aktivitas_mengajar`(`id_dosen`,`bid_keahlian`,`kode_mk`,`nama_mk`,`jum_kls`,`jml_sks`,`jp_rencana`,`jp_dilaksanakan`,`id`) values (1,'Analisis dan Perancangan','MIMKL24','Rekayasa Perangkat Lunak',0,16,18,1,7),(2,'Pemrograman Web dan Networking','MIMKL14','Pemrograman Internet I (WEB)',0,16,16,2,8),(9,'Analisis dan Design','MIMKB01','APSI',1,16,10,14,10),(12,'PAI','MIMKD02','Pendidikan Agama',1,1,16,16,12),(13,'Pemrograman Web',NULL,'ASDF',5,1,1,1,13),(16,'Matematika','MIMKD04','Statistika II',1,16,16,10,14),(14,'Pemrograman Java dan Mobile','MIMKL31','Etika Profesi',1,16,16,14,15),(15,'Komputer Grafis dan Sistem Operasi','MIMKL01','Aplikasi Pemrograman (Komputer Grafis)',1,16,16,14,16),(17,'Bidang Keahlian A','MIMK001','Mata Kuliah A',1,16,16,16,17),(18,'Bidang Keahlian B','MIMK003','Mata Kuliah B',1,16,16,12,18),(13,'AA','MKPL','ASD',3,NULL,1,1,21),(19,NULL,'MKPL','ASD',0,18,17,17,27);
+insert  into `aktivitas_mengajar`(`id_dosen`,`bid_keahlian`,`kode_mk`,`nama_mk`,`jum_kls`,`jml_sks`,`jp_rencana`,`jp_dilaksanakan`,`id`) values (1,'Analisis dan Perancangan','MIMKL24','Rekayasa Perangkat Lunak',0,16,18,1,7),(2,'Pemrograman Web dan Networking','MIMKL14','Pemrograman Internet I (WEB)',0,16,16,2,8),(6,'Analisis dan Design','MIMKB01','APSI',1,16,10,14,10),(8,'PAI','MIMKD02','Pendidikan Agama',1,1,16,16,12),(9,'Pemrograman Web',NULL,'ASDF',5,1,1,1,13),(16,'Matematika','MIMKD04','Statistika II',1,16,16,10,14),(10,'Pemrograman Java dan Mobile','MIMKL31','Etika Profesi',1,16,16,14,15),(11,'Komputer Grafis dan Sistem Operasi','MIMKL01','Aplikasi Pemrograman (Komputer Grafis)',1,16,16,14,16),(14,'Bidang Keahlian A','MIMK001','Mata Kuliah A',1,16,16,16,17),(15,'Bidang Keahlian B','MIMK003','Mata Kuliah B',1,16,16,12,18),(9,'AA','MKPL','ASD',3,NULL,1,1,21),(16,NULL,'MKPL','ASD',0,18,17,17,27);
 
 UNLOCK TABLES;
 
@@ -278,7 +280,7 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `dosen_tbl`;
 
 CREATE TABLE `dosen_tbl` (
-  `id_dosen` int(6) NOT NULL AUTO_INCREMENT,
+  `id_dosen` int(6) NOT NULL,
   `kd_prodi` varchar(6) NOT NULL,
   `nidn` varchar(10) DEFAULT NULL,
   `nama_dosen` varchar(50) NOT NULL,
@@ -306,13 +308,13 @@ CREATE TABLE `dosen_tbl` (
   CONSTRAINT `FK_dosen_jab` FOREIGN KEY (`kd_jab`) REFERENCES `jab_akademik` (`kd_jab`),
   CONSTRAINT `FK_dosen_jns` FOREIGN KEY (`kd_jns_dosen`) REFERENCES `jns_dosen` (`kd_jns`),
   CONSTRAINT `FK_dosen_tbl` FOREIGN KEY (`kd_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `dosen_tbl` */
 
 LOCK TABLES `dosen_tbl` WRITE;
 
-insert  into `dosen_tbl`(`id_dosen`,`kd_prodi`,`nidn`,`nama_dosen`,`tgl_lhr`,`kd_jab`,`kd_jns_dosen`,`sertifikasi`,`gelar_s1`,`asal_pt_s1`,`bid_keahlian_s1`,`gelar_s2`,`asal_pt_s2`,`bid_keahlian_s2`,`gelar_s3`,`asal_pt_s3`,`bid_keahlian_s3`,`gelar`,`pengakuan`,`bid_keahlian`,`sts_ahli`) values (1,'P001','0421089201','Erna Hikmawati','1992-08-21',NULL,1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M. Kom','STMIK Likmi','Sistem Informasi','','','','OCA, OCP, MOS','Oracle, Microsoft','Java, Microsoft Excel','YA'),(2,'P001','0408097207','Soleh Sabarudin','1972-09-08',NULL,1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M. Kom','STMIK Likmi','Sistem Informasi',NULL,NULL,NULL,NULL,'Sololearn','HTML, PHP','YA'),(3,'P001','8863350017','Eni Triningsih','1989-09-24',NULL,1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M.T','Institut Teknologi Bandung','Sistem Informasi',NULL,NULL,NULL,NULL,'Sololearn','SQL','YA'),(4,'P001','0408047305','Eko Travada SP','1973-01-23',NULL,1,'Tidak','S.T','Universitas Kristen Maranatha','Teknik Elektro','M.T','Institut Teknologi Bandung','Teknik Elektro','','Sedang Studi Lanjut (S3 STEI ITB)','Elektro dan Informatika','','Sololearn','C++','YA'),(5,'P001','8891700016','Yudhistira Sulaeman','1973-07-03',NULL,1,'Tidak','S.Si','Institut Teknologi Bandung','Matematika','M.Kom','STMIK Likmi','Sistem Informasi',NULL,NULL,NULL,NULL,NULL,NULL,'YA'),(9,'P001','0428097402','Lucky Handayani','1974-09-28',NULL,1,'Tidak','S.T','Universitas Jenderal Ahmad Yani','Teknik Mesin','M.T','Institut Teknologi Bandung ','Teknik Mesin','','','','','','','TIDAK'),(11,'P001','0418106603','Tjandra Tjahyarini','1966-10-18','2',1,'Tidak','Ir','Institut Teknologi Bandung','Geofisika','','(Sedang Studi Lanjut) STMIK LIKMI','Sistem Informasi','','','','','Sololearn','','TIDAK'),(12,'P001','0434624677','Juhridin S','1950-10-30',NULL,2,'Tidak','S.Pd','STAI Siliwangi Bandung','Bahasa Inggris','M.Ag','Pasca Sarjana UIN SGD Bandng','PAI','','','',NULL,NULL,NULL,'TIDAK'),(13,'P002','0671683188','Dosen A','1940-09-21',NULL,1,'Tidak','S.T','Politeknik Bandung','Teknik Informatika','M.T','Institut Teknologi Bandung','Teknik Informatika','','','',NULL,NULL,NULL,'YA'),(14,'P002','0412742848','Dosen B','1978-10-21',NULL,1,'Tidak ','S.Kom','Unikom','Teknik Informatika','M. Kom','STIMIK LIKMI','Sistem Informasi',NULL,NULL,NULL,NULL,NULL,NULL,'YA'),(15,'P002','0784247924','Dosen C','1980-11-23',NULL,1,'Tidak','S.T','Universitas Indonesia','Teknik Informatika','','(Sedang Studi Lanjut) ITB','Teknik Elektro',NULL,NULL,NULL,NULL,NULL,NULL,'YA'),(16,'P002','0523266467','Dosen DA','1988-02-14',NULL,1,'Tidak','S.Si','Institut teknologi bandung','Matematika','M.Si','Institut Teknologi bandung','Matematika','','','',NULL,NULL,NULL,'TIDAK'),(17,'P002','0451246767','Dosen E','1967-03-21',NULL,2,'Tidak','S.Pd','Unisba','Bahasa Indonesia','M.hum','(Sedang Studi Lanjut) Universitas Padjajaran','Sastra Indonesia','','','',NULL,NULL,NULL,'TIDAK'),(18,'P002','0673617381','Dosen F','1980-05-22',NULL,2,'Tidak','S.Kom','Universitas Nasional PASIM','Teknik Informatika','M.Kom','Universitas A','Teknik Informatika',NULL,NULL,NULL,NULL,NULL,NULL,'TIDAK'),(19,'P002','0340024001','Dosen G','1977-09-12',NULL,2,'Tidak ','S.T','Politeknik Bandung','Teknik Informatika','M.T','Politeknik A','Teknik Informatika',NULL,NULL,NULL,NULL,NULL,NULL,'YA'),(20,'P002','0404244512','Dosen H','1982-12-01',NULL,1,'Tidak','S.Kom','Universitas Widiyatama','Teknik Informatika','M.Kom','Universitas B','Teknik Komputer',NULL,NULL,NULL,NULL,NULL,NULL,'YA');
+insert  into `dosen_tbl`(`id_dosen`,`kd_prodi`,`nidn`,`nama_dosen`,`tgl_lhr`,`kd_jab`,`kd_jns_dosen`,`sertifikasi`,`gelar_s1`,`asal_pt_s1`,`bid_keahlian_s1`,`gelar_s2`,`asal_pt_s2`,`bid_keahlian_s2`,`gelar_s3`,`asal_pt_s3`,`bid_keahlian_s3`,`gelar`,`pengakuan`,`bid_keahlian`,`sts_ahli`) values (1,'P001','0421089201','Erna Hikmawati','1992-08-21',NULL,1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M. Kom','STMIK Likmi','Sistem Informasi','','','','OCA, OCP, MOS','Oracle, Microsoft','Java, Microsoft Excel','YA'),(2,'P001','0408097207','Soleh Sabarudin','1972-09-08',NULL,1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M. Kom','STMIK Likmi','Sistem Informasi',NULL,NULL,NULL,NULL,'Sololearn','HTML, PHP','YA'),(3,'P001','8863350017','Eni Triningsih','1989-09-24',NULL,1,'Tidak','S. Kom','Universitas Nasional Pasim','Teknik Informatika','M.T','Institut Teknologi Bandung','Sistem Informasi',NULL,NULL,NULL,NULL,'Sololearn','SQL','YA'),(4,'P001','0408047305','Eko Travada SP','1973-01-23',NULL,1,'Tidak','S.T','Universitas Kristen Maranatha','Teknik Elektro','M.T','Institut Teknologi Bandung','Teknik Elektro','','Sedang Studi Lanjut (S3 STEI ITB)','Elektro dan Informatika','','Sololearn','C++','YA'),(5,'P001','8891700016','Yudhistira Sulaeman','1973-07-03',NULL,1,'Tidak','S.Si','Institut Teknologi Bandung','Matematika','M.Kom','STMIK Likmi','Sistem Informasi',NULL,NULL,NULL,NULL,NULL,NULL,'YA'),(6,'P001','0428097402','Lucky Handayani','1974-09-28',NULL,1,'Tidak','S.T','Universitas Jenderal Ahmad Yani','Teknik Mesin','M.T','Institut Teknologi Bandung ','Teknik Mesin','','','','','','','TIDAK'),(7,'P001','0418106603','Tjandra Tjahyarini','1966-10-18','2',1,'Tidak','Ir','Institut Teknologi Bandung','Geofisika','','(Sedang Studi Lanjut) STMIK LIKMI','Sistem Informasi','','','','','Sololearn','','TIDAK'),(8,'P001','0434624677','Juhridin S','1950-10-30',NULL,2,'Tidak','S.Pd','STAI Siliwangi Bandung','Bahasa Inggris','M.Ag','Pasca Sarjana UIN SGD Bandng','PAI','','','',NULL,NULL,NULL,'TIDAK'),(9,'P002','0671683188','Dosen A','1940-09-21',NULL,1,'Tidak','S.T','Politeknik Bandung','Teknik Informatika','M.T','Institut Teknologi Bandung','Teknik Informatika','','','',NULL,NULL,NULL,'YA'),(10,'P002','0412742848','Dosen B','1978-10-21',NULL,1,'Tidak ','S.Kom','Unikom','Teknik Informatika','M. Kom','STIMIK LIKMI','Sistem Informasi',NULL,NULL,NULL,NULL,NULL,NULL,'YA'),(11,'P002','0784247924','Dosen C','1980-11-23',NULL,1,'Tidak','S.T','Universitas Indonesia','Teknik Informatika','','(Sedang Studi Lanjut) ITB','Teknik Elektro',NULL,NULL,NULL,NULL,NULL,NULL,'YA'),(12,'P002','0523266467','Dosen DA','1988-02-14',NULL,1,'Tidak','S.Si','Institut teknologi bandung','Matematika','M.Si','Institut Teknologi bandung','Matematika','','','',NULL,NULL,NULL,'TIDAK'),(13,'P002','0451246767','Dosen E','1967-03-21',NULL,2,'Tidak','S.Pd','Unisba','Bahasa Indonesia','M.hum','(Sedang Studi Lanjut) Universitas Padjajaran','Sastra Indonesia','','','',NULL,NULL,NULL,'TIDAK'),(14,'P002','0673617381','Dosen F','1980-05-22',NULL,2,'Tidak','S.Kom','Universitas Nasional PASIM','Teknik Informatika','M.Kom','Universitas A','Teknik Informatika',NULL,NULL,NULL,NULL,NULL,NULL,'TIDAK'),(15,'P002','0340024001','Dosen G','1977-09-12',NULL,2,'Tidak ','S.T','Politeknik Bandung','Teknik Informatika','M.T','Politeknik A','Teknik Informatika',NULL,NULL,NULL,NULL,NULL,NULL,'YA'),(16,'P002','0404244512','Dosen H','1982-12-01',NULL,1,'Tidak','S.Kom','Universitas Widiyatama','Teknik Informatika','M.Kom','Universitas B','Teknik Komputer',NULL,NULL,NULL,NULL,NULL,NULL,'YA');
 
 UNLOCK TABLES;
 
@@ -783,7 +785,7 @@ CREATE TABLE `kegiatan_ahli` (
   `judul_keg` varchar(100) DEFAULT NULL,
   `pelaksanaan` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
 /*Data for the table `kegiatan_ahli` */
 
@@ -865,7 +867,7 @@ CREATE TABLE `keikutsertaan_org` (
 
 LOCK TABLES `keikutsertaan_org` WRITE;
 
-insert  into `keikutsertaan_org`(`id`,`id_dosen`,`nm_organisasi`,`thn_awal`,`thn_akhir`,`internasional`,`nasional`,`lokal`) values (1,1,'APTIKOM',2018,2019,'',NULL,NULL),(2,2,'APTIKOM',2018,2019,'',NULL,NULL),(3,3,'APTIKOM',2018,2019,'',NULL,NULL),(4,4,'APTIKOM',2018,2019,'',NULL,NULL),(5,4,'Ikatan Ahli Informatika Indonesia (IAII)',2016,2018,NULL,'v',NULL),(6,5,'APTIKOM',2018,2019,'',NULL,NULL),(7,1,'ITB',2017,2018,NULL,NULL,'v'),(8,13,'APTIKOM',2017,2018,NULL,NULL,'v'),(9,14,'APTIKOM',2017,2018,NULL,NULL,'v'),(10,17,'Ikatan Ahli Informatika Indonesia (IAII)',2018,2019,NULL,NULL,'v'),(11,19,'APTIKOM',2017,2018,NULL,NULL,'v');
+insert  into `keikutsertaan_org`(`id`,`id_dosen`,`nm_organisasi`,`thn_awal`,`thn_akhir`,`internasional`,`nasional`,`lokal`) values (1,1,'APTIKOM',2018,2019,'',NULL,NULL),(2,2,'APTIKOM',2018,2019,'',NULL,NULL),(3,3,'APTIKOM',2018,2019,'',NULL,NULL),(4,4,'APTIKOM',2018,2019,'',NULL,NULL),(5,4,'Ikatan Ahli Informatika Indonesia (IAII)',2016,2018,NULL,'v',NULL),(6,5,'APTIKOM',2018,2019,'',NULL,NULL),(7,1,'ITB',2017,2018,NULL,NULL,'v'),(8,9,'APTIKOM',2017,2018,NULL,NULL,'v'),(9,10,'APTIKOM',2017,2018,NULL,NULL,'v'),(10,14,'Ikatan Ahli Informatika Indonesia (IAII)',2018,2019,NULL,NULL,'v'),(11,16,'APTIKOM',2017,2018,NULL,NULL,'v');
 
 UNLOCK TABLES;
 
@@ -935,7 +937,7 @@ CREATE TABLE `pembimbing_akd` (
 
 LOCK TABLES `pembimbing_akd` WRITE;
 
-insert  into `pembimbing_akd`(`Id`,`id_dosen`,`kd_prodi`,`j_mhs_bimbingan`,`rata2_pertemuan`) values (1,'1','P001',50,'3.0'),(2,'2','P001',18,'3.0'),(3,'4','P001',18,'3.0'),(4,'5','P001',17,'3.0'),(5,'3','P001',17,'3.0'),(6,'13','P002',18,'3.0'),(7,'16','P002',17,'3.0'),(8,'17','P002',16,'3.0'),(9,'18','P002',17,'3.0');
+insert  into `pembimbing_akd`(`Id`,`id_dosen`,`kd_prodi`,`j_mhs_bimbingan`,`rata2_pertemuan`) values (1,'1','P001',50,'3.0'),(2,'2','P001',18,'3.0'),(3,'4','P001',18,'3.0'),(4,'5','P001',17,'3.0'),(5,'3','P001',17,'3.0'),(6,'9','P002',18,'3.0'),(7,'13','P002',17,'3.0'),(8,'14','P002',16,'3.0'),(9,'15','P002',17,'3.0');
 
 UNLOCK TABLES;
 
@@ -958,7 +960,7 @@ CREATE TABLE `pembimbing_skripsi` (
 
 LOCK TABLES `pembimbing_skripsi` WRITE;
 
-insert  into `pembimbing_skripsi`(`id`,`id_dosen`,`kd_prodi`,`jml_mhs`) values (1,'1','P001',70),(2,'2','P001',5),(3,'4','P001',4),(4,'5','P001',6),(5,'3','P001',6),(6,'13','P002',6),(7,'16','P002',5),(8,'17','P002',8),(9,'18','P002',5);
+insert  into `pembimbing_skripsi`(`id`,`id_dosen`,`kd_prodi`,`jml_mhs`) values (1,'1','P001',70),(2,'2','P001',5),(3,'4','P001',4),(4,'5','P001',6),(5,'3','P001',6),(6,'9','P002',6),(7,'13','P002',5),(8,'14','P002',8),(9,'15','P002',5);
 
 UNLOCK TABLES;
 
@@ -1140,7 +1142,7 @@ CREATE TABLE `pkdt_tgs_belajar` (
 
 LOCK TABLES `pkdt_tgs_belajar` WRITE;
 
-insert  into `pkdt_tgs_belajar`(`id_dosen`,`jenjang_pend`,`bid_studi`,`perguruan_tinggi`,`negara`,`thn_mulai_std`,`id`) values (4,'S1','Elektro dan Informatika','Institut Teknologi Bandung','Indonesia','2017',1),(2,'S3','Teknik Informatika','Institut Teknologi Bandung','Indonesia','2018',2),(15,'S2','Teknik Informatika','Institut Teknologi Bandung','Indonesia','2016',3),(17,'S2','Bahasa Indonesia','Universitas Padjajaran','Indonesia','2016',4);
+insert  into `pkdt_tgs_belajar`(`id_dosen`,`jenjang_pend`,`bid_studi`,`perguruan_tinggi`,`negara`,`thn_mulai_std`,`id`) values (4,'S1','Elektro dan Informatika','Institut Teknologi Bandung','Indonesia','2017',1),(2,'S3','Teknik Informatika','Institut Teknologi Bandung','Indonesia','2018',2),(11,'S2','Teknik Informatika','Institut Teknologi Bandung','Indonesia','2016',3),(14,'S2','Bahasa Indonesia','Universitas Padjajaran','Indonesia','2016',4);
 
 UNLOCK TABLES;
 
@@ -1165,7 +1167,7 @@ CREATE TABLE `prestasi_dosen` (
 
 LOCK TABLES `prestasi_dosen` WRITE;
 
-insert  into `prestasi_dosen`(`id`,`id_dosen`,`prestasi`,`tahun`,`internasional`,`nasional`,`lokal`) values (1,13,'Prestasi A','2015',NULL,NULL,'v'),(2,14,'Prestasi B','2016',NULL,NULL,'v'),(3,15,'Prestasi C	','2016',NULL,NULL,'v');
+insert  into `prestasi_dosen`(`id`,`id_dosen`,`prestasi`,`tahun`,`internasional`,`nasional`,`lokal`) values (1,9,'Prestasi A','2015',NULL,NULL,'v'),(2,10,'Prestasi B','2016',NULL,NULL,'v'),(3,11,'Prestasi C	','2016',NULL,NULL,'v');
 
 UNLOCK TABLES;
 
@@ -1401,7 +1403,7 @@ CREATE TABLE `tenaga_kepend` (
 
 LOCK TABLES `tenaga_kepend` WRITE;
 
-insert  into `tenaga_kepend`(`kode_prodi`,`kd_jns`,`s3`,`s2`,`s1`,`d4`,`d3`,`d2`,`d1`,`sma`,`unit_kerja`,`jns_tng_kepend`,`id`) values ('P001',1,4,0,2,0,1,1,0,0,'Universitas','Pustakawan',1),('P001',2,0,0,3,0,2,0,0,0,'Program Studi','Laboran/Teknisi/Analisis/Operator/Programer',2),('P001',3,NULL,NULL,2,NULL,3,NULL,NULL,NULL,'Program Studi','Administrasi',3),('P001',4,NULL,NULL,1,NULL,NULL,NULL,NULL,7,'Universitas','Lainnya',4),('P002',1,5,0,1,0,2,3,0,0,'Universitas','Pustakawan',5),('P002',2,0,0,2,1,1,1,0,0,'Program Studi','Laboran/Teknisi/Analisis/Operator/Programer',6),('P002',3,1,2,0,1,0,0,0,0,'Program Studi','Administrasi',7),('P002',4,2,1,0,1,0,0,0,0,'Universitas','Lainnya',8);
+insert  into `tenaga_kepend`(`kode_prodi`,`kd_jns`,`s3`,`s2`,`s1`,`d4`,`d3`,`d2`,`d1`,`sma`,`unit_kerja`,`jns_tng_kepend`,`id`) values ('P001',1,1,0,2,0,1,1,0,0,'Universitas','Pustakawan',1),('P001',2,0,0,3,0,2,0,0,0,'Program Studi','Laboran/Teknisi/Analisis/Operator/Programer',2),('P001',3,0,0,2,0,3,0,0,0,'Program Studi','Administrasi',3),('P001',4,0,0,1,0,0,0,0,7,'Universitas','Lainnya',4),('P002',1,1,0,2,0,1,1,0,0,'Universitas','Pustakawan',5),('P002',2,0,0,2,1,1,1,0,0,'Program Studi','Laboran/Teknisi/Analisis/Operator/Programer',6),('P002',3,1,2,0,1,0,0,0,0,'Program Studi','Administrasi',7),('P002',4,2,1,0,1,0,0,0,0,'Universitas','Lainnya',8);
 
 UNLOCK TABLES;
 

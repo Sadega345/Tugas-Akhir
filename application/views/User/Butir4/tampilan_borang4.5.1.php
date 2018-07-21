@@ -102,7 +102,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="btn-group">
 											<a href="<?php echo base_url()."index.php/Apd_a451_excel/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah 
+											Tambah <i class="fa fa-plus"></i>
 											</button>
 											</a>
 										</div>

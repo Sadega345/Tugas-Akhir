@@ -29,7 +29,7 @@ $totala=$this->Apd_b411_model->totala();
 $totalb=$this->Apd_b411_model->totalb();
 $totalaps=$this->Apd_b411_model->totalaps();
 $totalbps=$this->Apd_b411_model->totalbps();
-$cols=$this->Apd_b411_model->cols(); 
+// $cols=$this->Apd_b411_model->cols(); 
 $this->load->view('User/Butir4B/tampilan_borang4.1.1.php',array('prodi'=>$prodi,
 																'data1'=>$data1,
 																'data2'=>$data2,
@@ -49,7 +49,7 @@ $this->load->view('User/Butir4B/tampilan_borang4.1.1.php',array('prodi'=>$prodi,
 																'totalbps'=>$totalbps,
 																'totala'=>$totala,
 																'totalb'=>$totalb,
-																'cols'=>$cols
+																// 'cols'=>$cols
  																 ));
  }
 
