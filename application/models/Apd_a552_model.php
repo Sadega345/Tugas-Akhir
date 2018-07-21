@@ -16,6 +16,12 @@ class Apd_a552_model extends CI_Model {
 		 return $data->result_array();
 	 }
 
+	 public function PembingbingSkripsi() {
+	 	
+		 $data=$this->db->query('SELECT id FROM pembimbing_skripsi');
+		 return $data->result_array();
+	 }
+
 	 public function dosen() {
 	 	$kdprodi = $this->session->userdata('kd_prodi');
 		 $data=$this->db->query('SELECT nama_dosen FROM dosen_tbl where kd_prodi='."'$kdprodi'");
@@ -28,7 +34,7 @@ class Apd_a552_model extends CI_Model {
 	}
 
 	public function update($where="") {
-	 $data= $this->db->query('SELECT nama_dosen, jml_mhs,id FROM pembimbing_skripsi '.$where);
+	 $data= $this->db->query('SELECT d.nama_dosen,p.jml_mhs,p.id FROM pembimbing_skripsi p inner join dosen_tbl d on p.id_dosen=d.id_dosen '.$where);
 	 return $data->result_array();
 	}
 

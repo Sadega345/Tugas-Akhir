@@ -279,7 +279,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="row">
 										<button type="submit" class="btn btn-primary" name="simpan" >Simpan</button>
 										<form action="<?php echo base_url()."index.php/CrudProdi"; ?>" method="POST">
-											<button type="submit" class="btn btn-danger" name="back">Kembali</button>
+											<button type="submit" class="btn btn-danger" name="back">Batal</button>
 										</form>
 									</div>
 								</div>
@@ -366,7 +366,7 @@ Demo.init(); // init demo features
 <script type="text/javascript">
 $('#nama_jurusan').bind('keyup blur',function(){ 
     var node = $(this);
-    node.val(node.val().replace(/[^a-zA-Z]/g,'') ); }
+    node.val(node.val().replace(/[^a-zA-Z]/g,' ') ); }
 );
 </script>
 

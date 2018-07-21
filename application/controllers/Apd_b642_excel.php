@@ -58,12 +58,13 @@ public function index() {
 			"komp_tnp_jar"=>$komp_tanpa_jaringan,
 			"lan"=>$lan,
 			"wan"=>$wan,
-			"id"=>$id,
+			// "id"=>$id,
 			
 		);
 		$where=array('id'=>$id);
-		$res=$this->Apd_b642_model->rubah('aksesbilitas_data',$data_update,$where);
 		// print_r($data_update);die;
+		$res=$this->Apd_b642_model->rubah('aksesbilitas_data',$data_update,$where);
+		
 		if ($res>=1) {
 			redirect('Apd_b642_excel');
 		}

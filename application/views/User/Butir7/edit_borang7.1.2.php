@@ -165,7 +165,7 @@ License: You must have a valid license purchased only from themeforest(the above
  										$cek="";
  									}
 							 	?>
-							 	<td><input type="radio" name="lokal" class="form-control" <?php echo $cek; ?> ></td>
+							 	<td><input type="radio" name="lokal" value="v" class="form-control" <?php echo $cek; ?> ></td>
 							 	<?php
  									if($nasional=="v"){
  										$cek="checked";
@@ -173,7 +173,7 @@ License: You must have a valid license purchased only from themeforest(the above
  										$cek="";
  									}
 							 	?>
-							 	<td><input type="radio" name="nasional" class="form-control" <?php echo $cek; ?> ></td>
+							 	<td><input type="radio" name="nasional" value="v" class="form-control" <?php echo $cek; ?> ></td>
 							 	<?php
  									if($internasional=="v"){
  										$cek="checked";
@@ -181,7 +181,7 @@ License: You must have a valid license purchased only from themeforest(the above
  										$cek="";
  									}
 							 	?>
-							 	<td><input type="radio" name="internasional" class="form-control" <?php echo $cek; ?>  ></td>
+							 	<td><input type="radio" name="internasional" value="v" class="form-control" <?php echo $cek; ?>  ></td>
 							 </tr>
 							 
 							</tbody>

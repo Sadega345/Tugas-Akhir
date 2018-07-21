@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>Butir 5.4.1 : NAMA DOSEN PEMBIMBING DAN JUMLAH MAHASISWA</title>
+<title>Butir 5.5.2 : Pelaksanaan pembimbingan karya/tugas akhir</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Inputan Butir 5.4.1 : NAMA DOSEN PEMBIMBING DAN JUMLAH MAHASISWA
+								<i class="fa fa-edit"></i>Butir 5.5.2 : Pelaksanaan pembimbingan karya/tugas akhir
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -105,6 +105,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 								</div>
 							</div>
+							<div style="overflow-x:auto;">
 							<form action="<?php echo base_url()."index.php/Apd_a552_excel/do_tambah"; ?>" method="POST">
 							<div class="container">
 								<div class="col-md-10">
@@ -112,7 +113,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="form-group">
 											<label>Id</label>
 											<?php 
-												$data=$this->Apd_a552_model->listing();
+												$data=$this->Apd_a552_model->PembingbingSkripsi();
 												$id = count($data)+1;
 												
 											?>
@@ -139,15 +140,26 @@ License: You must have a valid license purchased only from themeforest(the above
 											<input type="text" class="form-control" name="jml_mhs">
 										</div>
 									</div>
-									
-									
-									<div class="row">
-										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
-										<button type="submit" class="btn btn-danger" name="simpan">Batal</button>
 									</div>
+									</div>
+									</div>
+									<div class="btn-group">
+										<button id="sample_editable_1_new" class="btn blue">
+											Simpan 
+										</button>
+									</div>
+									</form>
+									<div class="btn-group">
+										<a href="<?php echo base_url()."index.php/Apd_a552_excel";?>">
+											<button id="sample_editable_1_new" class="btn red">
+												Batal 
+											</button>
+										</a>
+									</div>
+									
 								</div>
 							</div>
-							</form>
+							
 							
 						</div>
 					</div>

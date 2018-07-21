@@ -48,9 +48,9 @@ public function index() {
 		$publikasi=$_POST['publikasi'];
 		$thn_publikasi=$_POST['thn_publikasi'];
 		// $lokal=$_POST['lokal'];
-		$lokal = implode(',', $_POST['lokal']);
-		$nasional=implode(',', $_POST['nasional']);
-		$internasional=implode(',', $_POST['internasional']);
+		$lokal = $_POST['lokal'];
+		$nasional=$_POST['nasional'];
+		$internasional=$_POST['internasional'];
 		$id=$_POST['id'];
 		
 		$data_update=array(
@@ -62,10 +62,11 @@ public function index() {
 			"lokal"=>$lokal,
 			"nasional"=>$nasional,
 			"internasional"=>$internasional,
-			"id"=>$id,
+			
 			
 		);
 		$where=array('id'=>$id);
+		print_r($data_update);die();
 		$res=$this->Apd_a712_model->rubah('artikel_ilmiah',$data_update,$where);
 		if ($res>=1) {
 			redirect('Apd_a712_excel');

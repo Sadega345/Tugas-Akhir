@@ -136,7 +136,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['ts'] ?></td>
 								<td><?php echo $a['total1'] ?></td>
 								<td class="center">
-										<a href="<?php echo base_url()."index.php/Apd_a6211_excel/ubah/".$d['id'];?>" >Edit</a>
+										<a href="<?php echo base_url()."index.php/Apd_a6211_excel/ubah/".$a['id'];?>" >Edit</a>
 									</td>
 								<?php } ?>	 
 							 </tr>
@@ -150,7 +150,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['ts'] ?></td>
 								<td><?php echo $a['total2'] ?></td>
 								<td class="center">
-										<a href="<?php echo base_url()."index.php/Apd_a6211_excel/ubah/".$d['id'];?>" >Edit</a>
+										<a href="<?php echo base_url()."index.php/Apd_a6211_excel/ubah/".$a['id'];?>" >Edit</a>
 									</td>
 								<?php } ?>
 							 </tr>
@@ -164,7 +164,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['ts'] ?></td>
 								<td><?php echo $a['total3'] ?></td>
 								<td class="center">
-										<a href="<?php echo base_url()."index.php/Apd_a6211_excel/ubah/".$d['id'];?>" >Edit</a>
+										<a href="<?php echo base_url()."index.php/Apd_a6211_excel/ubah/".$a['id'];?>" >Edit</a>
 									</td>
 								<?php } ?>
 							 </tr>
@@ -190,7 +190,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['ts'] ?></td>
 								<td><?php echo $a['total4'] ?></td>
 								<td class="center">
-										<a href="<?php echo base_url()."index.php/Apd_a6211_excel/ubah/".$d['id'];?>" >Edit</a>
+										<a href="<?php echo base_url()."index.php/Apd_a6211_excel/ubah/".$a['id'];?>" >Edit</a>
 									</td>
 								<?php } ?>
 							 </tr>
@@ -204,7 +204,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['ts'] ?></td>
 								<td><?php echo $a['total5'] ?></td>
 								<td class="center">
-										<a href="<?php echo base_url()."index.php/Apd_a6211_excel/ubah/".$d['id'];?>" >Edit</a>
+										<a href="<?php echo base_url()."index.php/Apd_a6211_excel/ubah/".$a['id'];?>" >Edit</a>
 									</td>
 								<?php } ?>
 							 </tr>
@@ -218,7 +218,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['ts'] ?></td>
 								<td><?php echo $a['total6'] ?></td>
 								<td class="center">
-										<a href="<?php echo base_url()."index.php/Apd_a6211_excel/ubah/".$d['id'];?>" >Edit</a>
+										<a href="<?php echo base_url()."index.php/Apd_a6211_excel/ubah/".$a['id'];?>" >Edit</a>
 									</td>
 								<?php } ?>
 							 </tr>
@@ -232,8 +232,8 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['jml'] ?></td>
 								<td><?php echo $a['totals2'] ?></td>
 								<td class="center">
-										<a href="<?php echo base_url()."index.php/Apd_a6211_excel/ubah/".$d['id'];?>" >Edit</a>
-									</td>
+									<a href="<?php echo base_url()."index.php/Apd_a6211_excel/ubah/".$a['id'];?>" >Edit</a>
+								</td>
 								<?php } ?>
 							 </tr>
 							 <tr>
@@ -244,8 +244,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td></td>
 							 	<td></td>
 							 	<td class="center">
-										<a href="<?php echo base_url()."index.php/Apd_a6211_excel/ubah/".$d['id'];?>" >Edit</a>
-									</td>
+									<a href="#" >Edit</a>
+								</td>
 							 </tr>
 							  <tr>
 							 	<td><center><strong>Jumlah dana dari Pemerintah</strong></center></td>
@@ -266,7 +266,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['ts'] ?></td>
 								<td><?php echo $a['total7'] ?></td>
 								<td class="center">
-										<a href="<?php echo base_url()."index.php/Apd_a6211_excel/ubah/".$d['id'];?>" >Edit</a>
+										<a href="<?php echo base_url()."index.php/Apd_a6211_excel/ubah/".$a['id'];?>" >Edit</a>
 									</td>
 								<?php } ?>
 							 </tr>
@@ -280,7 +280,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['ts'] ?></td>
 								<td><?php echo $a['total8'] ?></td>
 								<td class="center">
-										<a href="<?php echo base_url()."index.php/Apd_a6211_excel/ubah/".$d['id'];?>" >Edit</a>
+										<a href="<?php echo base_url()."index.php/Apd_a6211_excel/ubah/".$a['id'];?>" >Edit</a>
 									</td>
 								<?php } ?>
 							 </tr>
@@ -294,7 +294,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['ts'] ?></td>
 								<td><?php echo $a['total9'] ?></td>
 								<td class="center">
-										<a href="<?php echo base_url()."index.php/Apd_a6211_excel/ubah/".$d['id'];?>" >Edit</a>
+										<a href="<?php echo base_url()."index.php/Apd_a6211_excel/ubah/".$a['id'];?>" >Edit</a>
 									</td>
 								<?php } ?>
 							 </tr>
