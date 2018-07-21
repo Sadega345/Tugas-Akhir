@@ -131,7 +131,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<thead>
 								<tr>
 									 <th rowspan="2"><center>No.</center></th>
-									 <th rowspan="2"><center>Jenis Kemampuan></center></th>
+									 <th rowspan="2"><center>Jenis Kemampuan</center></th>
 									 <th colspan="4"><center>Tanggapan Pihak pengguna (%)</center></th>
 									 <th rowspan="2"><center>Rencana Tindak Lanjut oleh Program Studi</center></th>
 								 </tr>
