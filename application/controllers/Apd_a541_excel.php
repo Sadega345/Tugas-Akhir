@@ -82,6 +82,17 @@ public function ubah($id){
 		// }
 	}
 
+public function do_hapus($id){
+		$this->model_squrity->getsqurity();
+		$where=array('Id'=>$id);
+		$res=$this->Apd_a541_model->Delete('pembimbing_akd',$where);
+		if($res>=1){
+			redirect('Apd_a541_excel');
+		}else {
+			alert('Gagal Hapus');
+		}
+	}
+
 
 public function export_excel(){
  // $data = array( 'title' => ' TABEL DATA BUTIR 5.4.1 : NAMA DOSEN PEMBIMBING DAN JUMLAH MAHASISWA',

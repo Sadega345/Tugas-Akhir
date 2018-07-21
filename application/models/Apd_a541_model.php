@@ -32,6 +32,12 @@ public function insert($tablename,$data){
 	$res=$this->db->insert($tablename,$data);
 	return $res;
 }
+
+public function delete($tablename,$where){
+		$res=$this->db->delete($tablename,$where);
+		return $res;
+}
+
 public function GetDosen(){
 		$kdprodi = $this->session->userdata('kd_prodi');
 		$data=$this->db->query('select id_dosen,nama_dosen,kd_prodi from dosen_tbl where kd_prodi='."'$kdprodi'");
