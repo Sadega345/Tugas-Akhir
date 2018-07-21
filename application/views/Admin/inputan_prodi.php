@@ -128,7 +128,11 @@ License: You must have a valid license purchased only from themeforest(the above
 										
 										<div class="form-group">
 											<label>Kode Perguruan Tinggi</label>
-											<input type="text" class="form-control" name="kode_pt" value="P001" readonly="">
+											<?php 
+												$data=$this->model_prodi->GetPerguruanTinggi();
+												foreach($data as $d) { ?>
+											<input type="text" class="form-control" name="kode_pt" value="<?php echo $d['kode_pt']; ?> -- <?php echo $d['nama_pt']; ?>" readonly="">
+											<?php } ?>
 										</div>
 										
 									</div>
@@ -140,7 +144,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<?php 
 													$data=$this->model_prodi->GetFakultas();
 													foreach($data as $d) { ?>
-									                <option value="<?php echo $d['kode_fakultas'];?>"><?php echo $d['kode_fakultas'];?></option>
+									                <option value="<?php echo $d['kode_fakultas'];?>"><?php echo $d['kode_fakultas'];?> -- <?php echo $d['nama_fakultas'];?></option>
 									            <?php } ?>
 											</select>
 										</div>
@@ -154,7 +158,15 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="row">
 										<div class="form-group">
 											<label>Prodi</label>
-											<input type="text" class="form-control" name="prodi" id="nama_prodi">
+											<!-- <input type="text" class="form-control" name="prodi" id="nama_prodi"> -->
+											<select name="prodi" class="form-control" >
+												<option disabled selected>-- Prodi --</option>
+												<?php 
+													$data=$this->model_prodi->GetNamaProdi();
+													foreach($data as $d) { ?>
+									                <option value="<?php echo $d['prodi'];?>"><?php echo $d['prodi'];?></option>
+									            <?php } ?>
+											</select>
 										</div>
 									</div>
 									<div class="row">
@@ -166,7 +178,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="row">
 										<div class="form-group">
 											<label>No SK Prodi</label>
-											<input type="text" class="form-control" name="no_sk_ps" id="nos_sk">
+											<input type="text" class="form-control" name="no_sk_ps" >
 										</div>
 									</div>
 									<div class="row">

@@ -8,6 +8,12 @@ class Model_Prodi extends CI_Model {
 		return $data->result_array();
 	}
 
+	public function GetNamaProdi()
+	{
+		$data=$this->db->query("SELECT DISTINCT prodi FROM prodi_tbl");
+		return $data->result_array();
+	}
+
 	public function GetEditProdi($where="")
 	{
 		$data=$this->db->query("select * from prodi_tbl ".$where);
@@ -16,13 +22,13 @@ class Model_Prodi extends CI_Model {
 
 	public function GetFakultas()
 	{
-		$data=$this->db->query("select kode_fakultas from fakultas_tbl ");
+		$data=$this->db->query("select nama_fakultas,kode_fakultas from fakultas_tbl ");
 		return $data->result_array();
 	}
 
 	public function GetPerguruanTinggi()
 	{
-		$data=$this->db->query("SELECT kode_pt FROM perguruan_tinggi ");
+		$data=$this->db->query("SELECT nama_pt,kode_pt FROM perguruan_tinggi ");
 		return $data->result_array();
 	}
 
