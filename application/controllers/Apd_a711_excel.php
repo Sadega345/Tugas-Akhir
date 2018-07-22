@@ -29,20 +29,32 @@ public function index() {
  }
 
 
- public function ubah($id,$kd_jns){
+ public function ubah($id){
  	$this->model_squrity->getsqurity();
-	$res=$this->Apd_a711_model->update("where id='$id' and kd_jns='$kd_jns'");
+	$res=$this->Apd_a711_model->update("where id='$id'");
 	$data=array(
 		"sumber_pembiayaan"=>$res[0]['sumber_pembiayaan'],
 		"id"=>$res[0]['id'],
-		"kd_jns"=>$res[0]['kd_jns'],
+		
 		"ts_2"=>$res[0]['ts_2'],
 		"ts_1"=>$res[0]['ts_1'],
 		"ts"=>$res[0]['ts'],
 		"jml"=>$res[0]['jml'],
 	);
 
- 	$this->load->view('User/Butir7/edit_borang7.1.1.php',$data);
+	if ($id == 1) {
+		$this->load->view('User/Butir7/edit_borang7.1.1.php',$data);
+	}else if ($id == 2) {
+		$this->load->view('User/Butir7/edit_borang7.1.1(2).php',$data);
+	}else if ($id == 3) {
+		$this->load->view('User/Butir7/edit_borang7.1.1(3).php',$data);
+	}else if ($id == 4) {
+		$this->load->view('User/Butir7/edit_borang7.1.1(4).php',$data);
+	}else if ($id == 5) {
+		$this->load->view('User/Butir7/edit_borang7.1.1(5).php',$data);
+	}
+
+ 	
  }
 
  public function do_edit(){
