@@ -128,11 +128,11 @@ License: You must have a valid license purchased only from themeforest(the above
 							<tbody>
 								
 							<tr>
-							 	<td><?php echo $jenis_kemampuan; ?></td>
-							 	<td><?php echo $sangat_baik; ?></td>
-							 	<td><?php echo $baik; ?></td>
-							 	<td><?php echo $cukup; ?></td>
-							 	<td><?php echo $kurang; ?></td>
+							 	<td><input type="text" name="jenis_kemampuan" value="<?php echo $jenis_kemampuan; ?>" class="form-control"></td>
+							 	<td><input type="text" name="sangat_baik" value="<?php echo $sangat_baik; ?>"" class="form-control"></td>
+							 	<td><input type="text" name="baik" value="<?php echo $baik; ?>" class="form-control"></td>
+							 	<td><input type="text" name="cukup" value="<?php echo $cukup; ?>" class="form-control"></td>
+							 	<td><input type="text" name="kurang" value="<?php echo $kurang; ?>" class="form-control"></td>
 							 	<td><input type="text" name="rencana" value="<?php echo $rencana; ?>" class="form-control"></td>
 							 </tr>
 							</tbody>

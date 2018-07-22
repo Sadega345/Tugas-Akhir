@@ -14,6 +14,7 @@ class Pengisis_excel extends CI_Controller {
 	}
 
 	public function do_tambah(){
+		$kdprodi = $this->session->userdata('kd_prodi');
 		$this->model_squrity->getsqurity();
 		$id=$_POST['id'];
 		$nama=$_POST['nama'];
@@ -22,7 +23,7 @@ class Pengisis_excel extends CI_Controller {
 		$tglpengisian=$_POST['tglpengisian'];
 		$data_insert=array(
 			'id' => $id,
-			'kode_prodi' => 'P001',
+			'kode_prodi' => $kdprodi,
 			'nama'=>$nama,
 			'nidn'=>$nidn,
 			'jabatan' => $jabatan,

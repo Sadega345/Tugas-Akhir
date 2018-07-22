@@ -130,8 +130,12 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<tbody>
 								<tr>
-								 	<td>Keterangan</td>
-								 	<td><input type="text" name="keterangan"></td>
+								 	<td>Rata-rata Masa Studi (tahun)*</td>
+								 	<td>Rata-rata IPK Lulusan*</td>
+								 </tr>
+								 <tr>
+								 	<td><input type="text" name="rata_masa_std" value="<?php echo $rata_masa_std; ?>"></td>
+								 	<td><input type="text" name="rata_ipk" value="<?php echo $rata_ipk;  ?>"></td>
 								 </tr>
 							</tbody>
 							</table>

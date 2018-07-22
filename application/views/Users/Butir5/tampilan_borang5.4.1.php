@@ -131,6 +131,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['rata2_pertemuan'] ?></td>
 							 	<td class="center">
 									<a href="<?php echo base_url()."index.php/Aps_a541_excel/ubah/".$d['Id'];?>" >Edit</a>
+									||
+									<a href="<?php echo base_url()."index.php/Aps_a541_excel/do_hapus/".$d['Id'];?>" >Hapus</a>
 								</td>
 							 </tr>
 							 <?php } ?>	

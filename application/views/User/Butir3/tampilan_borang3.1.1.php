@@ -136,7 +136,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<th>Min</th>
 									<th>Rat</th>
 									<th>Max</th>
-									<th>2.75</th>
+									<th><2.75</th>
 									<th>2.75-3.50</th>
 									<th>>3.50</th>
 								</tr>
@@ -189,7 +189,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td><?php echo $i['llsseleksi']; ?></td>
 								 	<?php } ?>
 
-								 		<?php 
+								 	<?php 
 							 			foreach ($barubkntransfer as $i) {
 							 		?>
 								 	<td><?php echo $i['barubkntransfer']; ?></td>

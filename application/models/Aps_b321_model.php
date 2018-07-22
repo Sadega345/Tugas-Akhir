@@ -20,7 +20,7 @@ public function __construct()
 
  public function update($where="") {
  $data= $this->db->query('
- 	SELECT keterangan,id FROM masastudi_ipk '.$where);
+ 	SELECT RATA_MASA_STD,RATA_IPK,id FROM masastudi_ipk '.$where);
  return $data->result_array();
  }
 

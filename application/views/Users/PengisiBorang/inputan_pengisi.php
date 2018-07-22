@@ -126,8 +126,8 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="col-md-10">
 									<div class="row">
 										<div class="form-group">
-											<label>Id</label>
-											<input type="text" class="form-control" name="id">
+											<!-- <label>Id</label> -->
+											<input type="hidden" class="form-control" name="id">
 										</div>
 									</div>
 									<div class="row">
@@ -156,6 +156,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 									<div class="row">
 										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+										<form action="<?php echo base_url()."index.php/Pengisis_excel"; ?>" method="POST">
+											<button type="submit" class="btn btn-danger" name="back">Batal</button>
+										</form>
 									</div>
 								</div>
 							</div>

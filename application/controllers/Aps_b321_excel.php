@@ -22,9 +22,9 @@ $this->load->view('Users/Butir3B/tampilan_borang3.2.1.php',array('masastudi'=>$m
  	$this->model_squrity->getsqurity();
 	$res=$this->Aps_b321_model->update("where id='$id'");
 	$data=array(
-		// "rata_masa_std"=>$res[0]['rata_masa_std'],
-		// "rata_ipk"=>$res[0]['rata_ipk'],
-		"keterangan"=>$res[0]['keterangan'],
+		"RATA_MASA_STD"=>$res[0]['RATA_MASA_STD'],
+		"RATA_IPK"=>$res[0]['RATA_IPK'],
+		// "keterangan"=>$res[0]['keterangan'],
 		"id"=>$res[0]['id'],
 		
 	);
@@ -32,11 +32,14 @@ $this->load->view('Users/Butir3B/tampilan_borang3.2.1.php',array('masastudi'=>$m
  }
 
   public function do_edit(){
-		$keterangan=$_POST['keterangan'];
+		// $keterangan=$_POST['keterangan'];
+  		$rata_masa_std=$_POST['rata_masa_std'];
+  		$rata_ipk=$_POST['rata_ipk'];
 		$id=$_POST['id'];
 		
 		$data_update=array(
-			"keterangan"=>$keterangan,
+			"RATA_IPK"=>$rata_ipk,
+			"RATA_MASA_STD"=>$rata_masa_std,
 			
 		);
 		$where=array('id'=>$id);

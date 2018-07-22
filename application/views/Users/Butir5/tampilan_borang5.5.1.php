@@ -100,9 +100,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/Aps_a551_excel/tambah";?>">
+											<a href="#">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
+											Load
 											</button>
 											</a>
 										</div>
@@ -136,7 +136,22 @@ License: You must have a valid license purchased only from themeforest(the above
 									<td></td>
 								</tr>
 							</table>
+
 							<br>
+							<div class="table-toolbar">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="btn-group">
+											<a href="<?php echo base_url()."index.php/Aps_a551_excel/tambah";?>">
+											<button id="sample_editable_1_new" class="btn green">
+											Tambah <i class="fa fa-plus"></i>
+											</button>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
 							<p><strong>Daftar nama dosen pembimbing dan jumlah mahasiswa:</strong></p>
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
@@ -150,7 +165,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>(1)</td>
 								 	<td>(2)</td>
 								 	<td>(3)</td>
-								 	<td></td>
+								 	<td>(4)</td>
 								 </tr>
 							</thead>
 							<tbody>
@@ -164,6 +179,8 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td><?php echo $d['jml_mhs']; ?></td>
 								 	<td class="center">
 										<a href="<?php echo base_url()."index.php/Aps_a551_excel/ubah/".$d['id'];?>" >Edit</a>
+										||
+										<a href="<?php echo base_url()."index.php/Aps_a551_excel/do_hapus/".$d['id'];?>" >Hapus</a>
 									</td>
 								 </tr>
 								<?php } ?>

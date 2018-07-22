@@ -16,6 +16,28 @@ $avg=$this->Aps_a551_model->avg();
 																 'avg'=>$avg));
  }
 
+ public function tambah(){
+	$this->load->view('Users/Butir5/inputan_borang551.php');
+}
+public function do_tambah(){
+		$kdprodi = $this->session->userdata('kd_prodi');
+		$this->model_squrity->getsqurity();
+		$id_dosen=$_POST['id_dosen'];
+		$j_mhs_bimbingan=$_POST['j_mhs_bimbingan'];
+		$data_insert=array(
+			'id_dosen'=>$id_dosen,
+			'kd_prodi'=>$kdprodi,
+			'jml_mhs' => $jml_mhs,
+
+		);
+		$res=$this->Aps_a551_model->insert('pembimbing_skripsi',$data_insert);
+		if ($res>=1) {
+			redirect('Aps_a551_excel');
+		}else {
+			alert('Gagal Insert');
+		}
+}
+
  public function ubah($id){
  	$this->model_squrity->getsqurity();
 	$res=$this->Aps_a551_model->update("where id='$id'");
@@ -44,6 +66,17 @@ $avg=$this->Aps_a551_model->avg();
 		// else {
 		// 	alert("Gagal Update") ;
 		// }
+	}
+
+public function do_hapus($id){
+		$this->model_squrity->getsqurity();
+		$where=array('id'=>$id);
+		$res=$this->Aps_a551_model->Delete('pembimbing_skripsi',$where);
+		if($res>=1){
+			redirect('Aps_a551_excel');
+		}else {
+			alert('Gagal Hapus');
+		}
 	}
 
 public function export_excel(){

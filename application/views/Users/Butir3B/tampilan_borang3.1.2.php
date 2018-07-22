@@ -143,10 +143,10 @@ License: You must have a valid license purchased only from themeforest(the above
 										foreach ($data1 as $d) {
 									 ?>
 									<td><?php echo $d['j_maba_reg_bkn_trf']; ?></td>
-									<?php } ?>
 									<td class="center">
 										<a href="<?php echo base_url()."index.php/Aps_b312_excel/ubah/".$d['id'];?>" >Edit</a>
 									</td>
+									<?php } ?>
 								</tr>
 								<tr>
 									<td>2. Mhs. baru transfer</td>
@@ -157,10 +157,10 @@ License: You must have a valid license purchased only from themeforest(the above
 									<?php foreach ($data2 as $d) {
 									 ?>
 									<td><?php echo $d['j_maba_trf']; ?></td>
-									<?php } ?>
 									<td class="center">
 										<a href="<?php echo base_url()."index.php/Aps_b312_excel/ubah/".$d['id'];?>" >Edit</a>
 									</td>
+									<?php } ?>
 								</tr>
 								<tr>
 									<td>3. Total mhs. regular (Student Body)</td>
@@ -171,14 +171,14 @@ License: You must have a valid license purchased only from themeforest(the above
 									<?php foreach ($data3 as $d) {
 									 ?>
 									<td><?php echo $d['j_tot_reg_bkn_trf']; ?></td>
-									<?php } ?>
 									<td class="center">
 										<a href="<?php echo base_url()."index.php/Aps_b312_excel/ubah/".$d['id'];?>" >Edit</a>
 									</td>
+									<?php } ?>
 								</tr>
 								<tr>
 									<td rowspan="3">2</td>
-									<td rowspan="3">Program Non Reguler Reguler</td>
+									<td rowspan="3">Program Non Reguler</td>
 									<td>1. Mhs. baru bukan transfer</td>
 									<?php 
 										foreach ($totalnonreg1 as $t){
@@ -188,11 +188,11 @@ License: You must have a valid license purchased only from themeforest(the above
 									<?php 
 										foreach ($listnonreg1 as $d) {
 									 ?>
-									<td><?php echo $d['j_tot_reg_bkn_trf']; ?></td>
-									<?php } ?>
+									<td><?php echo $d['j_maba_reg_bkn_trf']; ?></td>
 									<td class="center">
 										<a href="<?php echo base_url()."index.php/Aps_b312_excel/ubah/".$d['id'];?>" >Edit</a>
 									</td>
+									<?php } ?>
 								</tr>
 								<tr>
 									<td>2. Mhs. baru transfer</td>
@@ -203,10 +203,10 @@ License: You must have a valid license purchased only from themeforest(the above
 									<?php foreach ($listnonreg2 as $d) {
 									 ?>
 									<td><?php echo $d['j_maba_trf']; ?></td>
-									<?php } ?>
 									<td class="center">
 										<a href="<?php echo base_url()."index.php/Aps_b312_excel/ubah/".$d['id'];?>" >Edit</a>
 									</td>
+									<?php } ?>
 								</tr>
 								<tr>
 									<td>3. Total mhs. regular (Student Body)</td>
@@ -217,10 +217,10 @@ License: You must have a valid license purchased only from themeforest(the above
 									<?php foreach ($listnonreg3 as $d) {
 									 ?>
 									<td><?php echo $d['j_tot_reg_bkn_trf']; ?></td>
-									<?php } ?>
 									<td class="center">
 										<a href="<?php echo base_url()."index.php/Aps_b312_excel/ubah/".$d['id'];?>" >Edit</a>
 									</td>
+									<?php } ?>
 								</tr>
 							</tbody>
 							</table>

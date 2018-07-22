@@ -44,6 +44,7 @@ public function ubah($id){
 		
 		$data_update=array(
 			"keterangan"=>$keterangan,
+			"sks"=>$sks,
 		);
 		$where=array('id'=>$id);
 		$res=$this->Aps_a5121_model->rubah('jumlah_sks_ps',$data_update,$where);

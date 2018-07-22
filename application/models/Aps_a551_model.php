@@ -31,4 +31,15 @@ class Aps_a551_model extends CI_Model {
 		$res=$this->db->update($tablename,$data,$where);
 		return $res;
 	}
+
+	public function GetDosen(){
+		$kdprodi = $this->session->userdata('kd_prodi');
+		$data=$this->db->query("select id_dosen, nama_dosen from dosen_tbl where kd_prodi="."'kdprodi'");
+		return $data->result_array();
+	}
+
+	public function delete($tablename,$where){
+	$res=$this->db->delete($tablename,$where);
+	return $res;
+	}
 }

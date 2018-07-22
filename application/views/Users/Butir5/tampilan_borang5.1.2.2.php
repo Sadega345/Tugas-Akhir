@@ -153,7 +153,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $d['smt']; ?></td>
 							 	<td><?php echo $d['kode_mk']; ?></td>
 							 	<td><?php echo $d['nama_mk']; ?></td>
-							 	<td><?php echo $d['sks_kuliah']; ?></td>
+							 	<td><?php echo $d['bobot_sks']; ?></td>
 							 	<td><?php echo $d['sks_inti']; ?></td>
 							 	<td><?php echo $d['sks_institusi']; ?></td>
 							 	<td><?php echo $d['bobot_tgs']; ?></td>
@@ -162,7 +162,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['sap']; ?></td>
 							 	<td><?php echo $d['penyelenggara']; ?></td>
 							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Aps_a5122_excel/ubah/".$d['kode_mk'];?>" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Aps_a5122_excel/ubah/".$d['id'];?>" >Edit</a>
+									||
+									<a href="<?php echo base_url()."index.php/Aps_a5122_excel/do_hapus/".$d['id'];?>" >Hapus</a>
 								</td>
 							 </tr>
 							 <?php } ?>

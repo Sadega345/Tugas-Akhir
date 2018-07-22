@@ -135,7 +135,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th>Id</th>
+									 <th>No</th>
 									 <th>Nama</th>
 									 <th>NIDN</th>
 									 <th>Jabatan</th>
@@ -145,12 +145,12 @@ License: You must have a valid license purchased only from themeforest(the above
 							</thead>
 							<tbody>
 							<?php 
-								// $no=1;
+								$no=1;
 								foreach ($data as $d ) { 
 							?> 
 							<tr align="center">
 							 	 <tr>
-								 	<td><?php echo $d['id']; ?></td>
+								 	<td><?php echo $no++; ?></td>
 								 	<td><?php echo $d['nama']; ?></td>
 								 	<td><?php echo $d['nidn'] ?></td>
 								 	<td><?php echo $d['jabatan']; ?></td>

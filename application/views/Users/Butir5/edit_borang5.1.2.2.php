@@ -166,18 +166,60 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $smt; ?></td>
 							 	<td><?php echo $kode_mk; ?></td>
 							 	<td><?php echo $nama_mk; ?></td>
-							 	<td><?php echo $sks_kuliah; ?></td>
-							 	<td><input type="checkbox" name="sks_inti" class="form-control" value="v"></td>
-							 	<td><input type="checkbox" name="sks_institusi" class="form-control" value="v"></td>
-							 	<td><input type="checkbox" name="bobot_tgs" class="form-control" value="v"></td>
-							 	<td><input type="checkbox" name="deskripsi" class="form-control" value="v"></td>
-							 	<td><input type="checkbox" name="silabus" class="form-control" value="v"></td>
-							 	<td><input type="checkbox" name="sap" class="form-control" value="v"></td>
+							 	<td><input type="text" name="bobot_sks" class="form-control" value="<?php echo $bobot_sks; ?>"></td>
+							 	<?php 
+							 		if($sks_inti=="v"){
+							 			$cek="checked";
+							 		}else if($sks_inti==""){
+							 			$cek=" ";
+							 		}
+							 	 ?>
+							 	<td><input type="checkbox" name="sks_inti" class="form-control" value="v" <?php $cek ?>></td>
+							 	<?php 
+							 		if($sks_institusi=="v"){
+							 			$cek="checked";
+							 		}else if($sks_institusi==""){
+							 			$cek=" ";
+							 		}
+							 	 ?>
+							 	<td><input type="checkbox" name="sks_institusi" class="form-control" value="v" <?php $cek ?>></td>
+							 	<?php 
+							 		if($bobot_tgs=="v"){
+							 			$cek="checked";
+							 		}else if($bobot_tgs==""){
+							 			$cek=" ";
+							 		}
+							 	 ?>
+							 	<td><input type="checkbox" name="bobot_tgs" class="form-control" value="v" <?php $cek ?>></td>
+							 	<?php 
+							 		if($deskripsi=="v"){
+							 			$cek="checked";
+							 		}else if($deskripsi==""){
+							 			$cek=" ";
+							 		}
+							 	 ?>
+							 	<td><input type="checkbox" name="deskripsi" class="form-control" value="v" <?php $cek ?>></td>
+							 	<?php 
+							 		if($silabus=="v"){
+							 			$cek="checked";
+							 		}else if($silabus==""){
+							 			$cek=" ";
+							 		}
+							 	 ?>
+							 	<td><input type="checkbox" name="silabus" class="form-control" value="v" <?php $cek ?>></td>
+							 	<?php 
+							 		if($sap=="v"){
+							 			$cek="checked";
+							 		}else if($sap==""){
+							 			$cek=" ";
+							 		}
+							 	 ?>
+							 	<td><input type="checkbox" name="sap" class="form-control" value="v" <?php $cek ?>></td>
 							 	<td><input type="text" name="penyelenggara" value="<?php echo $penyelenggara; ?>" class="form-control"></td>
 							 </tr>
 							</tbody>
 							</table>
-							<input type="hidden" name="kode_mk" value="<?php echo $kode_mk; ?>">
+							<input type="hidden" name="kode_mk" value="<?php echo $id; ?>">
 							</div>
 							<div class="btn-group">
 								<button id="sample_editable_1_new" class="btn blue">

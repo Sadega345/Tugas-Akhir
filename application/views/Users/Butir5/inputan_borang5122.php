@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>Butir 3.1.2 : MAHASISWA DAN LULUSAN</title>
+<title>BUTIR 5.1.2.2 : STRUKTUR KURIKULUM BERDASARKAN URUTAN MK</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Butir 3.1.2 : MAHASISWA DAN LULUSAN
+								<i class="fa fa-edit"></i>Inputan BUTIR 5.1.2.2 : STRUKTUR KURIKULUM BERDASARKAN URUTAN MK
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -100,11 +100,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<!-- <a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
-											<button id="sample_editable_1_new" class="btn green">
-											Load 
-											</button>
-											</a> -->
+											
 										</div>
 									</div>
 									<!-- <div class="col-md-6">
@@ -125,37 +121,110 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
-							<div style="overflow-x:auto;">
-							<form action="<?php echo base_url()."index.php/Aps_b312_excel/do_edit"; ?>" method="POST">
-							<table class="table table-striped table-bordered table-hover" id="sample_1">
-							<thead>
-								<tr>
-									 <th><center>Jumlah Mahasiswa pada PS: *</center></th>
-								</tr>
-							</thead>
-							<tbody>
-							<tr>
-							 	<td><input type="text" name="j_maba_reg_bkn_trf" value="<?php echo $j_maba_reg_bkn_trf; ?>" ></td>
-							 </tr>
-							 
-							</tbody>
-							</table>
-							<input type="hidden" name="id" value="<?php echo $id; ?>">
-							
+							<form action="<?php echo base_url()."index.php/Aps_a5122_excel/do_tambah"; ?>" method="POST">
+							<div class="container">
+								<div class="col-md-10">
+									<div class="row">
+										<div class="form-group">
+											<label>Smt</label>
+											<input type="number" class="form-control" name="smt">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Kode Mata Kuliah</label>
+											<input type="text" class="form-control" name="kode_mk">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Jenis Mata Kuliah</label>
+											<select name="jns_mk" class="form-control">
+												<option disabled selected>-- Pilih Jenis Matkul --</option>
+												<?php 
+													$data=$this->Aps_a5122_model->GetJenis();
+													foreach($data as $d) { ?>
+									                <option value="<?php echo $d['kd_jns'];?>"><?php echo $d['jns_matkul'];?></option>
+									            <?php } ?>
+											</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Mata Kuliah</label>
+											<input type="text" class="form-control" name="nama_mk">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Bobot SKS</label>
+											<input type="number" class="form-control" name="bobot_sks">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>SKS Inti</label>
+											<input type="checkbox" class="form-control" name="sks_inti" value="v">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>SKS Institusional</label>
+											<input type="checkbox" class="form-control" name="sks_institusi" value="v">
+										</div>
+									</div>
+									<div class="row">
+									<div class="form-group">
+									<table>
+										<tr>
+											<td>Bobot Tugas</td>
+											<td><input type="checkbox" class="form-control" name="bobot_tgs" value="v"></td>
+										</tr>
+										<tr>
+											<td>Deskripsi</td>
+											<td><input type="checkbox" class="form-control" name="deskripsi" value="v"></td>
+										</tr>
+										<tr>
+											<td>Silabus</td>
+											<td><input type="checkbox" class="form-control" name="silabus" value="v"></td>
+										</tr>
+										<tr>
+											<td>SAP</td>
+											<td><input type="checkbox" class="form-control" name="sap" value="v"></td>
+										</tr>
+									</table>
+									</div>
+									</div>
+									
+									<div class="row">
+										<div class="form-group">
+											<label>Penyelenggara</label>
+											<input type="text" class="form-control" name="penyelenggara">
+										</div>
+									</div>
+									<div class="btn-group">
+										<button id="sample_editable_1_new" class="btn blue">
+											Simpan 
+										</button>
+									</div>		
+									</form>					
+									<div class="btn-group">
+										<a href="<?php echo base_url()."index.php/Aps_a5122_excel";?>">
+											<button id="sample_editable_1_new" class="btn red">
+												Batal
+											</button>
+										</a>
+									</div>
+								</div>
 							</div>
-							<div class="btn-group">
-								<button id="sample_editable_1_new" class="btn blue">
-									Simpan
-								</button>
-							</div>
-							</form>
-							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Aps_b312_excel";?>">
+							<!-- <div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Aps_a5122_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
-										Batal 
+										Batal
 									</button>
 								</a>
-							</div>
+							</div> -->
+							
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

@@ -1,5 +1,5 @@
 /*
-SQLyog Enterprise - MySQL GUI v8.05 
+SQLyog Enterprise - MySQL GUI v7.02 
 MySQL - 5.6.16 : Database - db_borangakreditasi
 *********************************************************************
 */
@@ -238,7 +238,7 @@ CREATE TABLE `data_mhs` (
 
 LOCK TABLES `data_mhs` WRITE;
 
-insert  into `data_mhs`(`id`,`id_prodi`,`id_ts`,`kd_prog`,`dy_tampung`,`jc_mhs_ikt_seleksi`,`jc_mhs_lls_seleksi`,`j_maba_reg_bkn_trf`,`j_maba_nonreg`,`j_maba_trf`,`j_tot_reg_bkn_trf`,`j_tot_nonreg`,`j_tot_trf`,`j_llsn_reg_bkn_trf`,`j_llsn_trf`,`ipk_min`,`ipk_rat`,`ipk_mak`,`prsn_ipk1`,`prsn_ipk2`,`prsn_ipk3`) values (1,'P001',1,1,58,1159,46,45,0,0,192,0,0,33,0,2.81,3.44,3.78,0.00,39.00,61.00),(2,'P001',2,1,65,2800,65,62,0,0,221,0,0,25,0,3.11,3.54,3.95,0.00,32.00,68.00),(3,'P001',3,1,65,992,45,43,0,0,201,0,0,37,0,3.13,3.71,3.91,0.00,6.00,94.00),(4,'P001',4,1,65,1014,40,39,0,0,139,0,0,41,0,3.46,3.64,3.87,0.00,5.00,95.00),(5,'P001',5,1,65,1016,60,NULL,0,65,NULL,0,0,41,0,2.96,3.57,3.85,0.00,24.00,76.00),(6,'P002',1,1,65,204,50,45,0,0,88,0,0,40,0,3.00,3.45,3.78,0.00,35.00,60.00),(7,'P002',2,1,65,120,60,56,0,0,85,0,0,34,0,2.78,3.20,3.88,0.00,20.00,64.00),(8,'P002',3,1,65,132,58,54,0,0,78,0,0,40,0,3.01,3.40,3.80,0.00,23.00,56.00),(9,'P002',4,1,65,111,45,43,0,0,72,0,0,45,0,2.78,3.32,3.76,0.00,18.00,48.00),(10,'P002',5,1,65,134,60,55,0,0,68,0,0,50,0,2.86,3.34,3.87,0.00,30.00,78.00),(11,'P002',1,2,55,110,43,0,40,0,0,40,0,0,0,0.00,0.00,0.00,0.00,0.00,0.00),(12,'P002',2,2,55,105,51,0,48,0,0,48,0,0,0,0.00,0.00,0.00,0.00,0.00,0.00),(13,'P002',3,2,55,98,50,0,50,0,0,50,0,0,0,0.00,0.00,0.00,0.00,0.00,0.00),(14,'P002',4,2,55,102,57,0,48,0,0,48,0,0,0,0.00,0.00,0.00,0.00,0.00,0.00),(15,'P002',5,2,55,105,46,0,46,0,0,45,0,0,0,0.00,0.00,0.00,0.00,0.00,0.00);
+insert  into `data_mhs`(`id`,`id_prodi`,`id_ts`,`kd_prog`,`dy_tampung`,`jc_mhs_ikt_seleksi`,`jc_mhs_lls_seleksi`,`j_maba_reg_bkn_trf`,`j_maba_nonreg`,`j_maba_trf`,`j_tot_reg_bkn_trf`,`j_tot_nonreg`,`j_tot_trf`,`j_llsn_reg_bkn_trf`,`j_llsn_trf`,`ipk_min`,`ipk_rat`,`ipk_mak`,`prsn_ipk1`,`prsn_ipk2`,`prsn_ipk3`) values (1,'P001',1,1,58,1159,46,45,0,0,192,0,0,33,0,2.81,3.44,3.78,0.00,39.00,61.00),(2,'P001',2,1,65,2800,65,62,0,0,221,0,0,25,0,3.11,3.54,3.95,0.00,32.00,68.00),(3,'P001',3,1,65,992,45,43,0,0,201,0,0,37,0,3.13,3.71,3.91,0.00,6.00,94.00),(4,'P001',4,1,65,1014,40,39,0,0,139,0,0,41,0,3.46,3.64,3.87,0.00,5.00,95.00),(5,'P001',5,1,65,1016,60,NULL,0,0,65,0,0,41,0,2.96,3.57,3.85,0.00,24.00,76.00),(6,'P002',1,1,60,204,50,45,0,0,88,0,0,40,0,3.00,3.45,3.78,0.00,35.00,60.00),(7,'P002',2,1,65,120,60,56,0,0,85,0,0,34,0,2.78,3.20,3.88,0.00,20.00,64.00),(8,'P002',3,1,65,132,58,54,0,0,78,0,0,40,0,3.01,3.40,3.80,0.00,23.00,56.00),(9,'P002',4,1,65,111,45,43,0,0,72,0,0,45,0,2.78,3.32,3.76,0.00,18.00,48.00),(10,'P002',5,1,65,134,60,54,0,NULL,NULL,0,0,50,0,2.86,3.34,3.87,0.00,30.00,78.00),(11,'P002',1,2,55,NULL,43,0,40,0,0,40,0,0,0,0.00,0.00,0.00,0.00,0.00,0.00),(12,'P002',2,2,55,105,51,0,48,0,0,48,0,0,0,0.00,0.00,0.00,0.00,0.00,0.00),(13,'P002',3,2,55,98,50,0,50,0,0,50,0,0,0,0.00,0.00,0.00,0.00,0.00,0.00),(14,'P002',4,2,55,102,57,0,48,0,0,48,0,0,0,0.00,0.00,0.00,0.00,0.00,0.00),(15,'P002',5,2,55,105,46,0,46,0,0,45,0,0,0,0.00,0.00,0.00,0.00,0.00,0.00);
 
 UNLOCK TABLES;
 
@@ -263,13 +263,13 @@ CREATE TABLE `data_mhs_angkatan` (
   KEY `FK_tahun` (`id_ts`),
   CONSTRAINT `FK_data_mhs_angkatan` FOREIGN KEY (`id_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`),
   CONSTRAINT `FK_tahun` FOREIGN KEY (`id_ts`) REFERENCES `tahun_akd` (`id_ts`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 /*Data for the table `data_mhs_angkatan` */
 
 LOCK TABLES `data_mhs_angkatan` WRITE;
 
-insert  into `data_mhs_angkatan`(`id`,`id_prodi`,`id_ts`,`ts_6`,`ts_5`,`ts_4`,`ts_3`,`ts_2`,`ts_1`,`ts`,`jml_ts_llsan`) values (1,'P001',1,NULL,NULL,45,42,42,4,4,38),(2,'P001',2,NULL,NULL,NULL,62,61,61,0,41),(3,'P001',3,NULL,NULL,NULL,NULL,43,41,37,37),(4,'P001',4,NULL,NULL,0,0,0,39,38,0),(5,'P001',5,NULL,NULL,0,0,0,0,51,0),(6,'P002',1,45,40,40,38,38,7,7,34),(7,'P002',2,NULL,52,52,51,48,43,43,43),(8,'P002',3,NULL,NULL,38,37,37,37,37,37),(9,'P002',4,NULL,NULL,NULL,35,35,35,35,35),(10,'P002',5,NULL,NULL,NULL,NULL,32,32,32,32);
+insert  into `data_mhs_angkatan`(`id`,`id_prodi`,`id_ts`,`ts_6`,`ts_5`,`ts_4`,`ts_3`,`ts_2`,`ts_1`,`ts`,`jml_ts_llsan`) values (1,'P001',1,NULL,NULL,45,42,42,4,4,38),(2,'P001',2,NULL,NULL,NULL,62,61,61,0,41),(3,'P001',3,NULL,NULL,NULL,NULL,43,41,37,37),(4,'P001',4,NULL,NULL,0,0,0,39,38,0),(5,'P001',5,NULL,NULL,0,0,0,0,51,0),(6,'P002',1,45,40,40,38,38,7,7,34),(7,'P002',2,NULL,52,52,51,48,43,43,43),(8,'P002',3,NULL,NULL,38,37,37,37,37,37),(9,'P002',4,NULL,NULL,NULL,35,35,35,35,35),(10,'P002',5,NULL,NULL,NULL,NULL,32,32,32,32),(11,'P002',6,NULL,NULL,NULL,NULL,NULL,32,32,0),(12,'P002',7,NULL,NULL,NULL,NULL,NULL,NULL,32,0);
 
 UNLOCK TABLES;
 
@@ -365,7 +365,7 @@ CREATE TABLE `evaluasi_lulusan` (
 
 LOCK TABLES `evaluasi_lulusan` WRITE;
 
-insert  into `evaluasi_lulusan`(`id`,`id_prodi`,`id_kemampuan`,`sangat_baik`,`baik`,`cukup`,`kurang`,`rencana`,`jenis_kemampuan`) values (1,'P001',1,84.77,15.24,1.00,1.00,'Memberikan muatan etika dan moral pada materi kurikulum program studi (mata kuliah etika profesi),\r\nmenyelenggarakan kegiatan pembinaan oleh koordinator beasiswa PUB,\r\nmenyelenggaraakan mentoring setiap minggunya','Integritas (etika dan moral)'),(2,'P001',2,91.43,8.57,8.00,8.00,'Mengadakan bootcamp (pelatihan) untuk persiapan dunia kerja ','Keahlian berdasarkan bidang ilmu (profesionalisme)'),(3,'P001',3,66.67,17.14,16.19,0.00,'Mnyelenggarakan mata kuliah TOEFL, Mengadakan kegiatan English club, Mengadakan pelatihan public speaking, Mengadakan kegiatan pelatihan bahasa inggris yang bekerja sama dengan program studi D3 Bahasa Inggris','Bahasa Inggris'),(4,'P001',4,85.71,14.29,0.00,0.00,'Penyediaan sarana laboratorium komputer yang memadai, Mendorong dosen untuk memanfaatkan teknologi informasi dalam proses pembelajaran, Penggunaan aplikasi IT untuk layanan mahasiswa (digital campus)','Penggunaan Teknologi Informasi'),(5,'P001',5,80.95,12.38,6.67,0.00,'Mengadakan pelatihan public speaking, Memperbanyak tugas pembuatan laporan ilmiah (untuk meningkatkan kemampuan komunikasi tertulis), Memperbanyak presentasi/diskusi dalam kelas (untuk meningkatkan kemampuan komunikasi secara lisan)','Komunikasi'),(6,'P001',6,79.05,11.43,9.52,0.00,'Memperbanyak pemberian tugas yang harus dikerjakan dan dipresentasikan secara kelompok, Mengadakan kegiatan Latihan Dasar Kepemimpinan Mahasiswa (LDKM)','Kerjasama Tim'),(7,'P001',7,91.43,8.57,0.00,0.00,'Mengikutsertakan mahasiswa dalam berbagai kegiatan UKM dan kepengurusan PUB sehingga dapat mengembangkan potensi yang dimiliki oleh mahasiswa tersebut','Pengembangan Diri'),(8,'P002',1,85.00,15.00,0.00,0.00,'Menyelenggaraakan mentoring setiap minggu','Integritas (etika dan moral)'),(9,'P002',2,73.00,27.00,0.00,0.00,'mengadakan pelatihan yang berkaitan dengan pemrograman','Keahlian berdasarkan bidang ilmu (profesionalisme)'),(10,'P002',3,88.00,12.00,0.00,0.00,'Mengadakan kegiatan pelatihan bahasa inggris yang bekerja sama dengan program studi D3 Bahasa Inggris','Bahasa Inggris'),(11,'P002',4,90.00,10.00,0.00,0.00,'penggunaan aplikasi IT untuk layanan mahasiswa (digital campus)','Penggunaan Teknologi Informasi'),(12,'P002',5,83.50,16.50,0.00,0.00,'Memperbanyak presentasi/diskusi dalam kelas (untuk meningkatkan kemampuan komunikasi secara lisan)','Komunikasi'),(13,'P002',6,60.00,20.00,20.00,0.00,'Mengadakan kegiatan Latihan Dasar Kepemimpinan Mahasiswa (LDKM)','Kerjasama Tim'),(14,'P002',7,72.15,20.85,0.00,0.00,'Mengikutsertakan mahasiswa dalam berbagai kegiatan UKM dan kepengurusan PUB sehingga dapat mengembangkan potensi yang dimiliki oleh mahasiswa tersebut.','Pengembangan Diri');
+insert  into `evaluasi_lulusan`(`id`,`id_prodi`,`id_kemampuan`,`sangat_baik`,`baik`,`cukup`,`kurang`,`rencana`,`jenis_kemampuan`) values (1,'P001',1,84.77,15.24,1.00,1.00,'Memberikan muatan etika dan moral pada materi kurikulum program studi (mata kuliah etika profesi),\r\nmenyelenggarakan kegiatan pembinaan oleh koordinator beasiswa PUB,\r\nmenyelenggaraakan mentoring setiap minggunya','Integritas (etika dan moral)'),(2,'P001',2,91.43,8.57,8.00,8.00,'Mengadakan bootcamp (pelatihan) untuk persiapan dunia kerja ','Keahlian berdasarkan bidang ilmu (profesionalisme)'),(3,'P001',3,66.67,17.14,16.19,0.00,'Mnyelenggarakan mata kuliah TOEFL, Mengadakan kegiatan English club, Mengadakan pelatihan public speaking, Mengadakan kegiatan pelatihan bahasa inggris yang bekerja sama dengan program studi D3 Bahasa Inggris','Bahasa Inggris'),(4,'P001',4,85.71,14.29,0.00,0.00,'Penyediaan sarana laboratorium komputer yang memadai, Mendorong dosen untuk memanfaatkan teknologi informasi dalam proses pembelajaran, Penggunaan aplikasi IT untuk layanan mahasiswa (digital campus)','Penggunaan Teknologi Informasi'),(5,'P001',5,80.95,12.38,6.67,0.00,'Mengadakan pelatihan public speaking, Memperbanyak tugas pembuatan laporan ilmiah (untuk meningkatkan kemampuan komunikasi tertulis), Memperbanyak presentasi/diskusi dalam kelas (untuk meningkatkan kemampuan komunikasi secara lisan)','Komunikasi'),(6,'P001',6,79.05,11.43,9.52,0.00,'Memperbanyak pemberian tugas yang harus dikerjakan dan dipresentasikan secara kelompok, Mengadakan kegiatan Latihan Dasar Kepemimpinan Mahasiswa (LDKM)','Kerjasama Tim'),(7,'P001',7,91.43,8.57,0.00,0.00,'Mengikutsertakan mahasiswa dalam berbagai kegiatan UKM dan kepengurusan PUB sehingga dapat mengembangkan potensi yang dimiliki oleh mahasiswa tersebut','Pengembangan Diri'),(8,'P002',1,85.00,15.00,0.00,0.00,'Menyelenggaraakan mentoring setiap minggu','Integritas (etika dan moral)'),(9,'P002',2,72.00,26.00,12.00,0.00,'Mengadakan pelatihan yang berkaitan dengan pemrograman','Keahlian berdasarkan bidang ilmu (profesionalisme)'),(10,'P002',3,88.00,12.00,0.00,0.00,'Mengadakan kegiatan pelatihan bahasa inggris yang bekerja sama dengan program studi D3 Bahasa Inggris','Bahasa Inggris'),(11,'P002',4,90.00,10.00,0.00,0.00,'penggunaan aplikasi IT untuk layanan mahasiswa (digital campus)','Penggunaan Teknologi Informasi'),(12,'P002',5,83.50,16.50,0.00,0.00,'Memperbanyak presentasi/diskusi dalam kelas (untuk meningkatkan kemampuan komunikasi secara lisan)','Komunikasi'),(13,'P002',6,60.00,20.00,20.00,0.00,'Mengadakan kegiatan Latihan Dasar Kepemimpinan Mahasiswa (LDKM)','Kerjasama Tim'),(14,'P002',7,72.15,20.85,0.00,0.00,'Mengikutsertakan mahasiswa dalam berbagai kegiatan UKM dan kepengurusan PUB sehingga dapat mengembangkan potensi yang dimiliki oleh mahasiswa tersebut.','Pengembangan Diri');
 
 UNLOCK TABLES;
 
@@ -743,7 +743,7 @@ CREATE TABLE `jumlah_sks_ps` (
 
 LOCK TABLES `jumlah_sks_ps` WRITE;
 
-insert  into `jumlah_sks_ps`(`id`,`id_ps`,`jns_matkul`,`sks`,`keterangan`) values (1,'P002',1,16,NULL),(2,'P002',2,16,NULL);
+insert  into `jumlah_sks_ps`(`id`,`id_ps`,`jns_matkul`,`sks`,`keterangan`) values (1,'P002',1,16,''),(2,'P002',2,16,NULL);
 
 UNLOCK TABLES;
 
@@ -888,7 +888,7 @@ CREATE TABLE `masastudi_ipk` (
 
 LOCK TABLES `masastudi_ipk` WRITE;
 
-insert  into `masastudi_ipk`(`kd_prodi`,`rata_masa_std`,`rata_ipk`,`keterangan`,`id`) values ('P001',3.2,3.59,'Sangat Bagus','1'),('P002',4.0,3.45,NULL,'2'),('P002',7.0,8.90,NULL,'3');
+insert  into `masastudi_ipk`(`kd_prodi`,`rata_masa_std`,`rata_ipk`,`keterangan`,`id`) values ('P001',3.2,3.59,'Sangat Bagus','1'),('P002',4.0,3.45,NULL,'2');
 
 UNLOCK TABLES;
 
@@ -934,7 +934,7 @@ CREATE TABLE `pembimbing_akd` (
 
 LOCK TABLES `pembimbing_akd` WRITE;
 
-insert  into `pembimbing_akd`(`Id`,`id_dosen`,`kd_prodi`,`j_mhs_bimbingan`,`rata2_pertemuan`) values (1,'1','P001',51,'4.0'),(2,'2','P001',20,'3.0'),(3,'4','P001',18,'3.0'),(4,'5','P001',17,'3.0'),(5,'3','P001',17,'3.0'),(1,'9','P002',51,'4.0'),(2,'14','P002',20,'3.0'),(3,'15','P002',17,'3.0'),(6,'6','P001',19,'3.0'),(7,'5','P001',19,'3.0');
+insert  into `pembimbing_akd`(`Id`,`id_dosen`,`kd_prodi`,`j_mhs_bimbingan`,`rata2_pertemuan`) values (1,'1','P001',51,'4.0'),(2,'2','P001',20,'3.0'),(4,'5','P001',17,'3.0'),(5,'3','P001',17,'3.0'),(1,'9','P002',51,'4.0'),(2,'14','P002',20,'3.0'),(6,'6','P001',19,'3.0'),(7,'5','P001',19,'3.0'),(0,NULL,'P001',0,'0.0'),(0,NULL,'P001',0,'0.0'),(4,NULL,'P002',0,'0.0'),(4,NULL,'P002',0,'0.0'),(0,NULL,'P001',0,'0.0');
 
 UNLOCK TABLES;
 
@@ -943,7 +943,7 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `pembimbing_skripsi`;
 
 CREATE TABLE `pembimbing_skripsi` (
-  `id` int(200) NOT NULL,
+  `id` int(200) NOT NULL AUTO_INCREMENT,
   `id_dosen` varchar(6) DEFAULT NULL,
   `kd_prodi` varchar(6) NOT NULL,
   `jml_mhs` int(4) DEFAULT NULL,
@@ -951,13 +951,13 @@ CREATE TABLE `pembimbing_skripsi` (
   KEY `FK_pembimbing_skripsi` (`id_dosen`),
   KEY `FK_pembimbing_prodi` (`kd_prodi`),
   CONSTRAINT `FK_pembimbing_prodi` FOREIGN KEY (`kd_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 /*Data for the table `pembimbing_skripsi` */
 
 LOCK TABLES `pembimbing_skripsi` WRITE;
 
-insert  into `pembimbing_skripsi`(`id`,`id_dosen`,`kd_prodi`,`jml_mhs`) values (1,'1','P001',70),(2,'2','P001',5),(3,'4','P001',4),(4,'5','P001',6),(5,'3','P001',6),(6,'9','P002',6),(7,'13','P002',5),(8,'14','P002',8),(9,'15','P002',5),(10,'1','P001',8),(11,'7','P001',2);
+insert  into `pembimbing_skripsi`(`id`,`id_dosen`,`kd_prodi`,`jml_mhs`) values (1,'1','P001',70),(2,'2','P001',5),(3,'4','P001',4),(4,'5','P001',6),(5,'3','P001',6),(6,'9','P002',7),(7,'13','P002',5),(8,'14','P002',8),(10,'1','P001',8),(11,'7','P001',2);
 
 UNLOCK TABLES;
 
@@ -1114,7 +1114,7 @@ CREATE TABLE `persentase_llsn` (
 
 LOCK TABLES `persentase_llsn` WRITE;
 
-insert  into `persentase_llsn`(`id_prodi`,`persen`) values ('P001',93.28),('P002',89.00);
+insert  into `persentase_llsn`(`id_prodi`,`persen`) values ('P001',93.28),('P002',88.00);
 
 UNLOCK TABLES;
 
@@ -1305,15 +1305,15 @@ CREATE TABLE `struktur_kurikulum` (
   PRIMARY KEY (`id`),
   KEY `FK_struktur_kurikulum` (`jns_mk`),
   KEY `FK_prodi_struktur` (`kd_prodi`),
-  CONSTRAINT `FK_prodi_struktur` FOREIGN KEY (`kd_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`),
-  CONSTRAINT `FK_struktur_kurikulum` FOREIGN KEY (`jns_mk`) REFERENCES `jns_matkul` (`kd_jns`)
-) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=latin1;
+  CONSTRAINT `FK_jns_mk` FOREIGN KEY (`jns_mk`) REFERENCES `jns_matkul` (`kd_jns`),
+  CONSTRAINT `FK_prodi_struktur` FOREIGN KEY (`kd_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`)
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=latin1;
 
 /*Data for the table `struktur_kurikulum` */
 
 LOCK TABLES `struktur_kurikulum` WRITE;
 
-insert  into `struktur_kurikulum`(`id`,`kd_prodi`,`kode_mk`,`jns_mk`,`smt`,`nama_mk`,`bobot_sks`,`sks_kuliah`,`sks_praktek`,`sks_inti`,`sks_institusi`,`bobot_tgs`,`deskripsi`,`silabus`,`sap`,`penyelenggara`) values (2,'P001','MKB1002',1,1,'Logika dan Algoritma',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(3,'P001','MKB1003',1,1,'Pengelolaan Instalasi Komputer',0,1,1,'v',NULL,'v','v','v','v','Jurusan'),(4,'P001','MKB1004',1,1,'Pengenalan Pengolahan Data Elektronik',0,1,2,'v',NULL,'v','v','v','v','Jurusan'),(5,'P001','MKB2005',1,2,'Basis Data ',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(6,'P001','MKB2006',1,2,'Pemrograman C ',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(7,'P001','MKB2007',1,2,'Pemrograman VB.Net',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(8,'P001','MKB2008',1,2,'Struktur Data',0,1,2,'v',NULL,'v','v','v','v','Jurusan'),(9,'P001','MKB3009',1,3,'Animasi ',0,NULL,2,'v',NULL,'v','v','v','v','Jurusan'),(10,'P001','MKB3010',1,3,'Pemrograman C++ ',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(11,'P001','MKB3011',1,3,'Pemrograman .Net Lanjutan',0,NULL,3,'v','','v','v','v','v','Jurusan'),(12,'P001','MKB4012',1,4,'Web Interface Design',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(13,'P001','MKB4013',1,4,'Sistem Operasi ',0,1,2,'v',NULL,'v','v','v','v','Jurusan'),(14,'P001','MKB5014',1,5,'Web Database Development',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(15,'P001','MKB5015',1,5,'Pemrograman Java',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(16,'P001','MKB5016',1,5,'Kerja Praktek',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(17,'P001','MKB6017',1,6,'Kewirausahaan',0,1,1,'v',NULL,'v','v','v','v','Jurusan'),(18,'P001','MKB6018',1,6,'Mobile Programming',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(19,'P001','MKB6019',1,6,'Tugas Akhir',0,NULL,4,'v',NULL,'v','v','v','v','Jurusan'),(20,'P001','MKB6020',1,6,'Networking',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(21,'P001','MKK1001',1,1,'Dasar Akuntansi I',0,3,NULL,'v',NULL,'v','v','v','v','Jurusan'),(22,'P001','MKK0121',1,1,'Kalkulus',0,2,5,'v',NULL,NULL,NULL,NULL,NULL,'Jurusan'),(23,'P001','MKK1003',1,1,'Pengantar Bisnis ',0,2,NULL,'v','','v','v','v','v','Jurusan'),(24,'P001','MKK2004',1,2,'Aljabar Linier',0,3,NULL,'v',NULL,'v','v','v','v','Jurusan'),(25,'P001','MKK2005',1,2,'Dasar Akuntansi II',0,1,2,'v',NULL,'v','v','v','v','Jurusan'),(26,'P001','MKK3006',1,3,'Manajemen Umum ',0,1,NULL,'v',NULL,'v','v','v','v','Jurusan'),(27,'P001','MKK3007',1,3,'Rekayasa Perangkat Lunak',0,1,2,'v',NULL,'v','v','v','v','Jurusan'),(28,'P001','MKK3008',1,3,'Manajemen Keuangan',0,3,2,'v',NULL,'v','v','v','v','Jurusan'),(29,'P001','MKK4009',1,4,'Matematika Diskrit',0,3,0,'v',NULL,'v','v','v','v','Jurusan'),(30,'P001','MKK4010',1,4,'Sistem Informasi Manajemen',0,1,2,'v',NULL,'v','v','v','v','Jurusan'),(31,'P001','MKK4011',1,4,'Interaksi Manusia dan Komputer',0,1,2,NULL,'v','v','v','v','v','Jurusan'),(32,'P001','MKK5012',1,5,'Analisis dan Perancangan Sistem ',0,1,2,'v',NULL,'v','v','v','v','Jurusan'),(33,'P001','MKK5013',1,5,'Statistika Deskriptif',0,3,NULL,'v',NULL,'v','v','v','v','Jurusan'),(34,'P001','MKK5014',1,5,'Teknik Proyeksi Bisnis ',0,1,1,NULL,'v','v','v','v','v','Jurusan'),(35,'P001','MKK6015',1,6,'Topik Khusus SIM',0,2,NULL,NULL,'v','v','v','v','v','Jurusan'),(36,'P001','MPB1001',1,2,'Etika Profesi',0,2,NULL,'v','','v','v','v','v','Jurusan'),(37,'P001','MPK1001',1,1,'Bahasa Indonesia',0,2,NULL,NULL,'v','v','v','v','v','Jurusan'),(38,'P001','MPK2002',1,2,'Pendidikan Pancasila dan Kewarganegaraan',0,2,NULL,'v',NULL,'v','v','v','v','Jurusan'),(39,'P001','MPK3003',1,3,'General English ',0,2,NULL,NULL,'v','v','v','v','v','Jurusan'),(40,'P001','MPK3004',1,3,'Pendidikan Agama',0,2,NULL,'v',NULL,'v','v','v','v','Jurusan'),(41,'P001','MPK4005',1,4,'Ilmu Budaya Dasar',0,2,NULL,NULL,'v','v','v','v','v','Jurusan'),(42,'P001','MPK4006',1,4,'Writing for Business Letter',0,NULL,2,NULL,'v','v','v','v','v','Jurusan'),(43,'P001','MPK5007',1,5,'Speaking for Presentation',0,NULL,2,NULL,'v','v','v','v','v','Jurusan'),(44,'P001','MPK6008',1,6,'TOEFL',0,NULL,2,NULL,'v','v','v','v','v','Jurusan'),(45,'P002','MKB1001',1,1,'Komputer Grafiss',2,8,8,NULL,'v','v','v','v','v','Jurusan'),(46,'P002','MKB1002',1,1,'Logika dan Algoritma',4,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(47,'P002','MKB2005',1,2,'Basis Data',2,2,2,'v','v','v','v','v','v','Jurusan'),(48,'P002','MKB3010',1,3,'Pemrograman C++',2,8,2,'v','v','v','v','v','v','Jurusan'),(49,'P002','MKB4012',1,4,'Web Interface Design',2,4,2,'v','v','v','v','v','v','Jurusan'),(50,'P002','MKB5015',1,5,'Pemrograman Java',2,4,2,'v','v','v','v','v','v','Jurusan'),(51,'P002','MKB1004',2,1,'Pengenalan Pengolahan Data Elektronik',2,4,NULL,'v','v','v','v','v','v','Jurusan'),(52,'P002','MKB2007',2,2,'Pemrograman VB.Net',2,1,3,'v','v','v','v','v','v','Jurusan'),(53,'P002','MKB3011',2,3,'Pemrograman .Net Lanjutan',2,2,NULL,'v','v','v','v','v','v','Jurusan');
+insert  into `struktur_kurikulum`(`id`,`kd_prodi`,`kode_mk`,`jns_mk`,`smt`,`nama_mk`,`bobot_sks`,`sks_kuliah`,`sks_praktek`,`sks_inti`,`sks_institusi`,`bobot_tgs`,`deskripsi`,`silabus`,`sap`,`penyelenggara`) values (1,'P001','MKB1002',1,1,'Logika dan Algoritma',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(2,'P001','MKB1003',1,1,'Pengelolaan Instalasi Komputer',0,1,1,'v',NULL,'v','v','v','v','Jurusan'),(3,'P001','MKB1004',1,1,'Pengenalan Pengolahan Data Elektronik',0,1,2,'v',NULL,'v','v','v','v','Jurusan'),(4,'P001','MKB2005',1,2,'Basis Data',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(5,'P001','MKB2006',1,2,'Pemrograman C',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(6,'P001','MKB2007',1,2,'Pemrograman VB.Net',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(7,'P001','MKB2008',1,2,'Struktur Data',0,1,2,'v',NULL,'v','v','v','v','Jurusan'),(8,'P001','MKB2009',1,3,'Animasi',0,NULL,2,'v',NULL,'v','v','v','v','Jurusan'),(9,'P001','MKB3010',1,3,'Pemrograman C++',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(10,'P001','MKB3011',1,3,'Pemrograman .Net Lanjutan',0,NULL,3,'v','','v','v','v','v','Jurusan'),(11,'P001','MKB4012',1,4,'Web Interface Design',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(12,'P001','MKB4013',1,4,'Sistem Operasi',0,1,2,'v',NULL,'v','v','v','v','Jurusan'),(13,'P001','MKB4014',1,5,'Web Database Development',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(14,'P001','MKB5015',1,5,'Pemrograman Java',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(15,'P001','MKB5016',1,5,'Kerja Praktek',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(16,'P001','MKB6017',1,6,'Kewirausahaan',0,NULL,1,'v',NULL,'v','v','v','v','Jurusan'),(17,'P001','MKB6018',1,6,'Mobile Programming',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(18,'P001','MKB6019',1,6,'Tugas Akhir',0,NULL,4,'v',NULL,'v','v','v','v','Jurusan'),(19,'P001','MKB6020',1,6,'Networking',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(20,'P001','MKK1001',1,1,'Dasar Akuntansi I',0,3,NULL,'v',NULL,'v','v','v','v','Jurusan'),(21,'P001','MKK0121',1,1,'Kalkulus',0,2,NULL,'v',NULL,'v','v','v','v','Jurusan'),(22,'P001','MKk1003',1,1,'Pengantar Bisnis',0,2,NULL,'v','','v','v','v','v','Jurusan'),(23,'P001','MKK2004',1,2,'Aljabar Linier',0,3,NULL,'v',NULL,'v','v','v','v','Jurusan'),(24,'P001','MKK2005',1,2,'Dasar Akuntansi II',0,1,2,'v',NULL,'v','v','v','v','Jurusan'),(25,'P001','MKK3006',1,3,'Manajemen Umum',0,1,NULL,'v',NULL,'v','v','v','v','Jurusan'),(26,'P001','MKK3007',1,3,'Rekayasa Perangkat Lunak',0,1,2,'v',NULL,'v','v','v','v','Jurusan'),(27,'P001','MKK3008',1,3,'Manajemen Keuangan',0,3,NULL,'v',NULL,'v','v','v','v','Jurusan'),(28,'P001','MKK4009',1,4,'Matematika Diskrit',0,3,NULL,'v',NULL,'v','v','v','v','Jurusan'),(29,'P001','MKK4010',1,4,'Sistem Informasi Manajemen',0,1,2,'v',NULL,'v','v','v','v','Jurusan'),(30,'P001','MKK4011',1,4,'Interaksi Manusia dan Komputer',0,1,2,'v',NULL,'v','v','v','v','Jurusan'),(31,'P001','MKK5012',1,5,'Analisis dan Perancangan Sistem',0,1,2,'v',NULL,'v','v','v','v','Jurusan'),(32,'P001','MKK5013',1,5,'Statistika Deskriptif',0,3,NULL,'v',NULL,'v','v','v','v','Jurusan'),(34,'P001','MKK6015',1,6,'Topik Khusus SIM',0,3,0,'v',NULL,'v','v','v','v','Jurusan'),(36,'P002','MKB1002',1,1,'Logika dan Algoritma',0,0,3,'v',NULL,'v','v','v','v','Jurusan'),(37,'P002','MKB2005',1,2,'Basis Data',0,0,3,'v',NULL,'v','v','v','v','Jurusan'),(38,'P002','MKB3010',1,3,'Pemrograman C++',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(39,'P002','MKB4012',1,4,'Web Interface Design ',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(40,'P002','MKB5015',1,5,'Pemrograman Java',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(41,'P002','MKB1004',2,1,'Pengenalan Pengolahan Data Elektronik',0,2,NULL,'v',NULL,'v','v','v','v','Jurusan'),(42,'P002','MKB2007',2,2,'Pemrograman VB.Net',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(43,'P002','MKB3011',2,3,'Pemrograman .Net lanjutan',0,NULL,3,'v',NULL,'v','v','v','v','Jurusan'),(44,'P002','MKL0012',2,4,'Aljabar Linier',0,3,NULL,'v',NULL,'v','v','v','v','Jurusan');
 
 UNLOCK TABLES;
 
@@ -1361,13 +1361,13 @@ CREATE TABLE `tahun_akd` (
   `id_ts` int(4) NOT NULL AUTO_INCREMENT,
   `tahun` int(4) DEFAULT NULL,
   PRIMARY KEY (`id_ts`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 /*Data for the table `tahun_akd` */
 
 LOCK TABLES `tahun_akd` WRITE;
 
-insert  into `tahun_akd`(`id_ts`,`tahun`) values (1,2012),(2,2013),(3,2014),(4,2015),(5,2016);
+insert  into `tahun_akd`(`id_ts`,`tahun`) values (1,2012),(2,2013),(3,2014),(4,2015),(5,2016),(6,2017),(7,2018),(8,2019);
 
 UNLOCK TABLES;
 
@@ -1464,7 +1464,7 @@ CREATE TABLE `wkt_tunggu_llsn` (
 
 LOCK TABLES `wkt_tunggu_llsn` WRITE;
 
-insert  into `wkt_tunggu_llsn`(`id_prodi`,`waktu`) values ('P001',0.11),('P002',0.11);
+insert  into `wkt_tunggu_llsn`(`id_prodi`,`waktu`) values ('P001',0.11),('P002',0.12);
 
 UNLOCK TABLES;
 

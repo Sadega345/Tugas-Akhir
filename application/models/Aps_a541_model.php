@@ -32,11 +32,12 @@ class Aps_a541_model extends CI_Model {
 	$res=$this->db->insert($tablename,$data);
 	return $res;
 }
-public function GetDosen()
-	{
-		$data=$this->db->query("select nama_dosen from dosen_tbl ");
+public function GetDosen(){
+		$kdprodi = $this->session->userdata('kd_prodi');
+		$data=$this->db->query("select id_dosen, nama_dosen from dosen_tbl where kd_prodi="."'kdprodi'");
 		return $data->result_array();
-	}
+}
+
  public function totbimbingan() {
  	$kdprodi = $this->session->userdata('kd_prodi');
  $data=$this->db->query('SELECT SUM(j_mhs_bimbingan)AS jum_bimbingan FROM pembimbing_akd WHERE kd_prodi='."'$kdprodi'");
@@ -48,5 +49,10 @@ public function GetDosen()
  $data=$this->db->query('SELECT AVG(j_mhs_bimbingan)AS rata_pertemuan FROM pembimbing_akd WHERE kd_prodi='."'$kdprodi'");
  return $data->result_array();
  }
+
+ public function delete($tablename,$where){
+	$res=$this->db->delete($tablename,$where);
+	return $res;
+}
 
 }

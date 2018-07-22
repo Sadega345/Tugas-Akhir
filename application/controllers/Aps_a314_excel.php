@@ -19,25 +19,71 @@ public function export_excel(){
  $this->load->view('Users/Butir3/tampilan_borang3.1.4_excel.php',array('data'=>$data));
  }
 
-// public function ubah($id){
-//  	$this->model_squrity->getsqurity();
-// 	$res=$this->aps_a312_model->update("id='$id'");
-// 	$data=array(
-	
-// 	);
-//  	$this->load->view('Users/Butir3/edit_borang3.1.2.php',$data);
-//  }
-// public function do_edit(){
+public function ubah($id){
+ 	$this->model_squrity->getsqurity();
+	$res=$this->Aps_a314_model->update("where id='$id'");
+	$data=array(
+		"ts_6"=>$res[0]['ts_6'],
+		"ts_5"=>$res[0]['ts_5'],
+		"ts_4"=>$res[0]['ts_4'],
+		"ts_3"=>$res[0]['ts_3'],
+		"ts_2"=>$res[0]['ts_2'],
+		"ts_1"=>$res[0]['ts_1'],
+		"ts"=>$res[0]['ts'],
+		"jml_ts_llsan"=>$res[0]['jml_ts_llsan'],
+		"id"=>$res[0]['id'],
+		"id_ts"=>$res[0]['id_ts'],
+		
+	);
+	if ($id_ts==1) {
+		$this->load->view('Users/Butir3/edit_borang3.1.4(6).php',$data);
+	}else if ($id_ts==2) {
+		$this->load->view('Users/Butir3/edit_borang3.1.4(5).php',$data);
+	}else if ($id_ts==3) {
+		$this->load->view('Users/Butir3/edit_borang3.1.4(4).php',$data);
+	}else if ($id_ts==4) {
+		$this->load->view('Users/Butir3/edit_borang3.1.4(3).php',$data);
+	}else if ($id_ts==5) {
+		$this->load->view('Users/Butir3/edit_borang3.1.4(2).php',$data);
+	}else if($id_ts==6){
+		$this->load->view('Users/Butir3/edit_borang3.1.4(1).php',$data);
+	}else if($id_ts==7){
+		$this->load->view('Users/Butir3/edit_borang3.1.4_ts.php',$data);
+	}
+ 	// $this->load->view('User/Butir3/edit_borang3.1.3.php',$data);
+ }
 
-// 		$where=array('id'=>$id);
-// 		$res=$this->aps_a312_model->ubah('DATA_MHS',$data_update,$where);
-// 		// print_r($data_update);die;
-// 		if ($res>=1) {
-// 			redirect('Aps_a312_excel');
-// 		}
-// 		// else {
-// 		// 	alert("Gagal Update") ;
-// 		// }
-// 	}
+ public function do_edit(){
+ 		$ts_6=$_POST['ts_6'];
+ 		$ts_5=$_POST['ts_5'];
+		$ts_4=$_POST['ts_4'];
+		$ts_3=$_POST['ts_3'];
+		$ts_2=$_POST['ts_2'];
+		$ts_1=$_POST['ts_1'];
+		$ts=$_POST['ts'];
+		$id=$_POST['id'];
+		$id_ts=$_POST['id_ts'];
+		
+		$data_update=array(
+			"ts_6"=>$ts_6,
+			"ts_5"=>$ts_5,
+			"ts_4"=>$ts_4,
+			"ts_3"=>$ts_3,
+			"ts_2"=>$ts_2,
+			"ts_1"=>$ts_1,
+			"ts"=>$ts,
+			
+		);
+		$where=array('id'=>$id);
+		// print_r($data_update);die;
+		$res=$this->Aps_a314_model->rubah('data_mhs_angkatan',$data_update,$where);
+		// print_r($data_update);die;
+		if ($res>=1) {
+			redirect('Aps_a314_excel');
+		}
+		// else {
+		// 	alert("Gagal Update") ;
+		// }
+	}
 
 }

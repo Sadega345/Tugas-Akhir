@@ -138,6 +138,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td><input type="text" name="ts_2" value="<?php echo $ts_2; ?>"></td>
 								 	<td><input type="text" name="ts_1" value="<?php echo $ts_1; ?>"></td>
 								 	<td><input type="text" name="jml_ts_llsan" value="<?php echo $jml_ts_llsan; ?>"></td>
+								 	<input type="hide" name="id_ts" value="<?php echo $id_ts; ?>">
 								 </tr>
 							
 							</tbody>

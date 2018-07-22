@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>Butir 3.1.2 : MAHASISWA DAN LULUSAN</title>
+<title>Butir 5.5.1 : PEMBIMBINGAN TUGAS AKHIR ATAU SKRIPSI</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Butir 3.1.2 : MAHASISWA DAN LULUSAN
+								<i class="fa fa-edit"></i>Inputan Butir 5.5.1 : PEMBIMBINGAN TUGAS AKHIR ATAU SKRIPSI
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -100,62 +100,42 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<!-- <a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
-											<button id="sample_editable_1_new" class="btn green">
-											Load 
-											</button>
-											</a> -->
+											
 										</div>
 									</div>
-									<!-- <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="javascript:;">
-													Print </a>
-												</li>
-												<li>
-													<a href="javascript:;">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div> -->
 								</div>
 							</div>
-							<div style="overflow-x:auto;">
-							<form action="<?php echo base_url()."index.php/Aps_b312_excel/do_edit"; ?>" method="POST">
-							<table class="table table-striped table-bordered table-hover" id="sample_1">
-							<thead>
-								<tr>
-									 <th><center>Jumlah Mahasiswa pada PS: *</center></th>
-								</tr>
-							</thead>
-							<tbody>
-							<tr>
-							 	<td><input type="text" name="j_maba_reg_bkn_trf" value="<?php echo $j_maba_reg_bkn_trf; ?>" ></td>
-							 </tr>
-							 
-							</tbody>
-							</table>
-							<input type="hidden" name="id" value="<?php echo $id; ?>">
-							
-							</div>
-							<div class="btn-group">
-								<button id="sample_editable_1_new" class="btn blue">
-									Simpan
-								</button>
+							<form action="<?php echo base_url()."index.php/Aps_a551_excel/do_tambah"; ?>" method="POST">
+							<div class="container">
+								<div class="col-md-10">
+									<div class="row">
+										<div class="form-group">
+											<label>Nama Dosen</label>
+											<select name="id_dosen" class="form-control">
+												<option disabled selected>-- Pilih Dosen --</option>
+												<?php 
+													$data=$this->Aps_a551_model->GetDosen();
+													foreach($data as $d) { ?>
+									                <option value="<?php echo $d['id_dosen'];?>"><?php echo $d['nama_dosen'];?></option>
+									            <?php } ?>
+											</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Jumlah Mahasiswa</label>
+											<input type="text" class="form-control" name="jml_mhs">
+										</div>
+									</div>
+									
+									<div class="row">
+										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+										<button type="submit" class="btn btn-danger" name="simpan">Batal</button>
+									</div>
+								</div>
 							</div>
 							</form>
-							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Aps_b312_excel";?>">
-									<button id="sample_editable_1_new" class="btn red">
-										Batal 
-									</button>
-								</a>
-							</div>
+							
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

@@ -13,7 +13,7 @@ public function __construct()
  public function listing() {
  $kdprodi = $this->session->userdata('kd_prodi');
  $data=$this->db->query('SELECT dy_tampung,jc_mhs_ikt_seleksi,jc_mhs_lls_seleksi,j_maba_nonreg,j_maba_trf,j_tot_nonreg,j_tot_trf,id FROM DATA_MHS WHERE id_prodi='."'$kdprodi'".' and kd_prog=2
-ORDER BY tahun;');
+ORDER BY id_ts;');
  return $data->result_array();
  }
 

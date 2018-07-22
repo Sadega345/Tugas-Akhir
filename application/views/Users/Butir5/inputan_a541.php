@@ -105,7 +105,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 								</div>
 							</div>
-							<form action="<?php echo base_url()."index.php/Apd_a541_excel/do_tambah"; ?>" method="POST">
+							<form action="<?php echo base_url()."index.php/Aps_a541_excel/do_tambah"; ?>" method="POST">
 							<div class="container">
 								<div class="col-md-10">
 									<div class="row">
@@ -114,9 +114,9 @@ License: You must have a valid license purchased only from themeforest(the above
 											<select name="id_dosen" class="form-control">
 												<option disabled selected>-- Pilih Dosen --</option>
 												<?php 
-													$data=$this->Apd_a541_model->GetDosen();
+													$data=$this->Aps_a541_model->GetDosen();
 													foreach($data as $d) { ?>
-									                <option value="<?php echo $d['nama_dosen'];?>"><?php echo $d['nama_dosen'];?></option>
+									                <option value="<?php echo $d['id_dosen'];?>"><?php echo $d['nama_dosen'];?></option>
 									            <?php } ?>
 											</select>
 										</div>

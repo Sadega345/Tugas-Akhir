@@ -146,7 +146,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								
 							</tbody>
 							</table>
-							<input type="hidden" name="kode_mk" value="<?php echo $kode_mk; ?>">
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							<div class="btn-group">
 								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 							</div>

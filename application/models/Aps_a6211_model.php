@@ -10,18 +10,19 @@ public function __construct()
  }
 
 // Listing
- public function listing1() {
- $dana1=$this->db->query('SELECT ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as total1 FROM perolehan_dana WHERE id=1 and kd_prodi="p002"');
+public function listing1() {
+ 	$kdprodi = $this->session->userdata('kd_prodi');
+ $dana1=$this->db->query('SELECT id,jenis_dana,ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as total1 FROM perolehan_dana WHERE id_dana=1 and kd_prodi='."'$kdprodi'");
  return $dana1->result_array();
  }
 
  public function listing2() {
- $dana2=$this->db->query('SELECT ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as total2 FROM perolehan_dana WHERE id=2 and kd_prodi="p002"');
+ $dana2=$this->db->query('SELECT ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as total2 FROM perolehan_dana WHERE id_dana=2 and kd_prodi="p002"');
  return $dana2->result_array();
  }
 
  public function listing3() {
- $dana3=$this->db->query('SELECT ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as total3 FROM perolehan_dana WHERE id=3 and kd_prodi="p002"');
+ $dana3=$this->db->query('SELECT ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as total3 FROM perolehan_dana WHERE id_dana=3 and kd_prodi="p002"');
  return $dana3->result_array();
  }
 
@@ -31,17 +32,17 @@ public function __construct()
  }
 
  public function listing4() {
- $dana4=$this->db->query('select ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as total4 from perolehan_dana where id=4 and kd_prodi="p002"');
+ $dana4=$this->db->query('select ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as total4 from perolehan_dana where id_dana=4 and kd_prodi="p002"');
  return $dana4->result_array();
  }
 
  public function listing5() {
- $dana5=$this->db->query('select ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as total5 from perolehan_dana where id=5 and kd_prodi="p002"');
+ $dana5=$this->db->query('select ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as total5 from perolehan_dana where id_dana=5 and kd_prodi="p002"');
  return $dana5->result_array();
  }
 
  public function listing6() {
- $dana6=$this->db->query('select ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as total6 from perolehan_dana where id=6 and kd_prodi="p002"');
+ $dana6=$this->db->query('select ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as total6 from perolehan_dana where id_dana=6 and kd_prodi="p002"');
  return $dana6->result_array();
  }
 
@@ -51,17 +52,17 @@ public function __construct()
  }
 
  public function listing7() {
- $dana7=$this->db->query('select ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as total7 from perolehan_dana where id=7 and kd_prodi="p002"');
+ $dana7=$this->db->query('select ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as total7 from perolehan_dana where id_dana=7 and kd_prodi="p002"');
  return $dana7->result_array();
  }
 
  public function listing8() {
- $dana8=$this->db->query('select ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as total8 from perolehan_dana where id=8 and kd_prodi="p002"');
+ $dana8=$this->db->query('select ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as total8 from perolehan_dana where id_dana=8 and kd_prodi="p002"');
  return $dana8->result_array();
  }
 
  public function listing9() {
- $dana9=$this->db->query('select ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as total9 from perolehan_dana where id=9 and kd_prodi="p002"');
+ $dana9=$this->db->query('select ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as total9 from perolehan_dana where id_dana=9 and kd_prodi="p002"');
  return $dana9->result_array();
  }
 

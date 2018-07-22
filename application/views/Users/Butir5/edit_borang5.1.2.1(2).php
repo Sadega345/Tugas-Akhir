@@ -142,7 +142,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<tr>
 								<td><?php echo $id; ?></td>
 								<td>MATA KULIAH PILIHAN</td>
-							 	<td><?php echo $sks; ?></td>
+							 	<td><input type="text" name="sks" value="<?php echo $sks; ?>" class="form-control"></td>
 							 	<td><input type="text" name="keterangan" value="<?php echo $keterangan; ?>"></td>
 							 </tr>
 							</tbody>

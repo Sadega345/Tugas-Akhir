@@ -46,8 +46,16 @@ public function index() {
  public function do_edit(){
 		$rencana=$_POST['rencana'];
 		$id=$_POST['id'];
+		$sangat_baik=$_POST['sangat_baik'];
+		$baik=$_POST['baik'];
+		$cukup=$_POST['cukup'];
+		$kurang=$_POST['kurang'];
 		$data_update=array(
 			"rencana"=>$rencana,
+			"sangat_baik"=>$sangat_baik,
+			"baik"=>$baik,
+			"cukup"=>$cukup,
+			"kurang"=>$kurang
 			
 		);
 		$where=array('id'=>$id);

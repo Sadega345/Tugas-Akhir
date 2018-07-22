@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Edit PROGRAM STUDI
+								<i class="fa fa-edit"></i>Edit Identitas Program Studi
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -265,7 +265,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							</form>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Prodi_excel/";?>">
+								<a href="<?php echo base_url()."index.php/Prodis_excel/";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal
 									</button>
