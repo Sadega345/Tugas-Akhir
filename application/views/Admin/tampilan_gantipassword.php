@@ -166,7 +166,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</form>
 									
 									<div class="btn-group">
-										<a href="<?php echo base_url()."index.php/Users";?>">
+										<a href="<?php echo base_url()."index.php/Admin";?>">
 											<button id="sample_editable_1_new" class="btn red">
 												Batal
 											</button>
