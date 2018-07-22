@@ -109,6 +109,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 								</div>
 							</div>
+							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Apd_a522_excel/ubah"; ?>" method="POST">
 							<table >
 								<tr>
 									<th></th>
@@ -165,27 +167,28 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							</table>
-							<form action="<?php echo base_url()."index.php/Apd_a522_excel/ubah"; ?>" method="POST">
+							</div>								
 							<?php 
 								foreach ($data as $d ) { 
 							?>
 							<input type="hidden" name="id" value="<?php echo $d['id']; ?>">
 							<?php } ?>
 							<br><br>
-							<!-- <div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a522_excel/ubah";?>">
-									<button id="sample_editable_1_new" class="btn green">
-										Ubah 
-									</button>
-								</a>
-							</div> -->
+							<div class="btn-group">
+								<button id="sample_editable_1_new" class="btn green">
+									Ubah 
+								</button>
+							</div> 
 							</form>
+							
+							
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Apd_a522_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn blue">
 										Export To Excel
 									</button>
 								</a>
+							</div>
 							</div>
 						</div>
 					</div>

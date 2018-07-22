@@ -29,12 +29,13 @@ public function index() {
  }
 
 
- public function ubah($id){
+ public function ubah($id,$kd_jns){
  	$this->model_squrity->getsqurity();
-	$res=$this->Apd_a711_model->update("where id='$id'");
+	$res=$this->Apd_a711_model->update("where id='$id' and kd_jns='$kd_jns'");
 	$data=array(
 		"sumber_pembiayaan"=>$res[0]['sumber_pembiayaan'],
 		"id"=>$res[0]['id'],
+		"kd_jns"=>$res[0]['kd_jns'],
 		"ts_2"=>$res[0]['ts_2'],
 		"ts_1"=>$res[0]['ts_1'],
 		"ts"=>$res[0]['ts'],

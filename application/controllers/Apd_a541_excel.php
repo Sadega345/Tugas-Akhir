@@ -60,7 +60,7 @@ public function ubah($id){
  }
 
  public function do_edit(){
-		$nama_dosen=$_POST['nama_dosen'];
+		
 		$j_mhs_bimbingan=$_POST['j_mhs_bimbingan'];
 		$rata2_pertemuan=$_POST['rata2_pertemuan'];
 		$Id=$_POST['Id'];
@@ -72,8 +72,9 @@ public function ubah($id){
 			
 		);
 		$where=array('Id'=>$Id);
-		$res=$this->Apd_a541_model->rubah('pembimbing_akd',$data_update,$where);
 		// print_r($data_update);die;
+		$res=$this->Apd_a541_model->rubah('pembimbing_akd',$data_update,$where);
+		
 		if ($res>=1) {
 			redirect('Apd_a541_excel');
 		}

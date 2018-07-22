@@ -56,8 +56,9 @@ public function index() {
 			
 		);
 		$where=array('id'=>$id);
-		$res=$this->Apd_a652_model->rubah('aksesbilitas_data',$data_update,$where);
 		// print_r($data_update);die;
+		$res=$this->Apd_a652_model->rubah('aksesbilitas_data',$data_update,$where);
+		
 		if ($res>=1) {
 			redirect('Apd_a652_excel');
 		}

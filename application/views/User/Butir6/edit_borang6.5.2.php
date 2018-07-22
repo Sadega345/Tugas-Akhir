@@ -162,7 +162,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 				$cek=" ";
 							 			}
 							 		 ?>
-							 		<input type="checkbox" name="manual" class="form-control" <?php echo $cek ?> >	
+							 		<input type="checkbox" name="manual" class="form-control" value="v" <?php echo $cek ?> >	
 	                    		</td>
 							 	<td>
 							 		<?php 
@@ -172,7 +172,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 				$cek=" ";
 							 			}
 							 		 ?>
-	                    			<input type="checkbox" name="komp_tanpa_jaringan" class="form-control" <?php echo $cek ?>  >
+	                    			<input type="checkbox" name="komp_tanpa_jaringan" class="form-control" value="v" <?php echo $cek ?>  >
 	                    		</td>
 							 	<td>
 							 		<?php 
@@ -182,7 +182,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 				$cek=" ";
 							 			}
 							 		 ?>
-	                    			<input type="checkbox" name="lan" class="form-control" <?php echo $cek ?> >
+	                    			<input type="checkbox" name="lan" class="form-control" value="v" <?php echo $cek ?> >
 	                    		</td>
 							 	<td>
 							 		<?php 
@@ -192,7 +192,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 				$cek=" ";
 							 			}
 							 		 ?>
-	                    			<input type="checkbox" name="wan" class="form-control" <?php echo $cek ?> >
+	                    			<input type="checkbox" name="wan" class="form-control" value="v" <?php echo $cek ?> >
 	                    		</td>
 							 </tr>
 							 

@@ -125,6 +125,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;">
 							<form action="<?php echo base_url()."index.php/Apd_a522_excel/do_edit"; ?>" method="POST">
 							<table >
 							<thead>
@@ -152,6 +153,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</table>
 							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							<br><br>
+							</div>
 							<div class="btn-group">
 								<button id="sample_editable_1_new" class="btn blue">
 									Simpan 

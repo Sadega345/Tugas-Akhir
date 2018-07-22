@@ -121,6 +121,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;">
 							<form action="<?php echo base_url()."index.php/Apd_a5121_excel/do_tambah"; ?>" method="POST">
 							<div class="container">
 								<div class="col-md-10">
@@ -218,28 +219,26 @@ License: You must have a valid license purchased only from themeforest(the above
 											<input type="text" class="form-control" name="penyelenggara">
 										</div>
 									</div>
+									</div>
+									</div>
+									</div>
 									<div class="btn-group">
 										<button id="sample_editable_1_new" class="btn blue">
 											Simpan 
 										</button>
 									</div>		
-									</form>					
-									<!-- <div class="btn-group">
+									</form>	
+
+									<div class="btn-group">
 										<a href="<?php echo base_url()."index.php/Apd_a5121_excel";?>">
 											<button id="sample_editable_1_new" class="btn red">
 												Batal
 											</button>
 										</a>
-									</div> -->
+									</div>
 								</div>
 							</div>
-							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a5121_excel";?>">
-									<button id="sample_editable_1_new" class="btn red">
-										Batal
-									</button>
-								</a>
-							</div>
+							
 							
 						</div>
 					</div>

@@ -131,7 +131,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<tbody>
 								<tr>
 								 	<td>Keterangan</td>
-								 	<td><input type="text" name="keterangan"></td>
+								 	<td><input type="text" name="keterangan" value="<?php echo $keterangan; ?>"></td>
 								 </tr>
 							</tbody>
 							</table>

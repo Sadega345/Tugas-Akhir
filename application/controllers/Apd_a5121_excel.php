@@ -30,9 +30,9 @@ public function index() {
 																  'jml_sks_min'=>$jml_sks_min));
  }
 
-// public function tambah(){
-// 	$this->load->view('User/Butir5/inputan_5121.php');
-// }
+public function tambah(){
+	$this->load->view('User/Butir5/inputan_5121.php');
+}
 public function do_tambah(){
 		$kdprodi = $this->session->userdata('kd_prodi');
 		$this->model_squrity->getsqurity();
@@ -66,6 +66,7 @@ public function do_tambah(){
 			'penyelenggara' => $penyelenggara,
 
 		);
+		// print_r($data_insert);die();
 		$res=$this->Apd_a5121_model->insert('struktur_kurikulum',$data_insert);
 		if ($res>=1) {
 			redirect('Apd_a5121_excel');

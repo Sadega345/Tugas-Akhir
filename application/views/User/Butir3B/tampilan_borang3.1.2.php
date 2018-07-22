@@ -128,7 +128,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<th><center>PS- <?php echo $no++; ?> <br> <?php echo $p['jurusan'] ?></center></th>
 								 	<th>Aksi</th>
 								 <?php } ?>
-								 	<th>Total Mahasiswa</th>
+								 	<th rowspan="2" align="center">Total Mahasiswa</th>
 								 </tr>
 
 								 <tr align="center">
