@@ -166,8 +166,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									<!-- <a href="<?php echo base_url()."index.php/CrudUser/edit_data/".$d['r_id'];?>">Edit</a> ||
          							<a href="<?php echo base_url()."index.php/CrudUser/do_hapus/".$d['r_id'];?>">Delete</a> ||
          							<a href="<?php echo base_url()."index.php/CrudRole/perm/".$d['r_id'];?>">Edit Role</a> -->
-         							<a href="<?php echo base_url()."index.php/CrudUser/edit_data/".$d['id'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudUser/do_hapus/".$d['id'];?>">Delete</a>
+         							<!-- <a href="<?php echo base_url()."index.php/CrudUser/edit_data/".$d['id'];?>">Edit</a> || -->
+         							<a href="<?php echo base_url()."index.php/CrudUser/do_hapus/".$d['id'];?>">Hapus</a>
 								</td>
 							</tr>
 							<?php } ?>

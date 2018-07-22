@@ -129,10 +129,35 @@ License: You must have a valid license purchased only from themeforest(the above
 											<label>Kode Prodi</label>
 											<select name="kd_prodi" class="form-control">
 												<option disabled selected>Kode Prodi</option>
-												<?php foreach($data as $d) { ?>
-									                <option value="<?php echo $d['kd_prodi'];?>"><?php echo $d['kd_prodi'];?></option>
+												<?php 
+													$data=$this->model_user->GetProdi();
+													foreach($data as $d) { 
+												?>
+									                <option value="<?php echo $d['kode_prodi'];?>"><?php echo $d['kode_prodi'];?> -- <?php echo $d['jurusan'];?></option>
 									            <?php } ?>
 											</select>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="form-group">
+											<label>Prodi</label>
+											<select name="prodi" class="form-control">
+												<option disabled selected>Prodi</option>
+												<?php 
+													$data=$this->model_user->GetNamaProdi();
+													foreach($data as $d) { 
+												?>
+									                <option value="<?php echo $d['prodi'];?>"><?php echo $d['prodi'];?></option>
+									            <?php } ?>
+											</select>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="form-group">
+											<label>Password</label>
+											<input type="password" class="form-control" name="pwd" >
 										</div>
 									</div>
 									<!-- <div class="caption">

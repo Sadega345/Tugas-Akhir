@@ -12,7 +12,7 @@ class CrudUser extends CI_Controller {
 	}
 
 	public function tambah(){
-		$data=$this->model_user->GetUser();
+		$data=$this->model_user->GetIdUser();
 		$prodi=$this->model_user->GetProdi();
 		$id = count($data)+1;
 		$this->load->view('Admin/inputan_user.php',array('data'=>$data,
@@ -23,8 +23,9 @@ class CrudUser extends CI_Controller {
 	public function do_tambah(){
 		$id=$_POST['id'];
 		$username=$_POST['username'];
-		$password=$_POST['password'];
+		$prodi=$_POST['prodi'];
 		$kd_prodi=$_POST['kd_prodi'];
+		$password=$_POST['pwd'];
 		// $permission=$_POST['butir'];
 		// $roleid=implode(',', $permission);
 		// $level=$_POST['user'];
@@ -34,9 +35,11 @@ class CrudUser extends CI_Controller {
 			'username'=>$username,
 			'password'=>$password,
 			'kd_prodi'=>$kd_prodi,
+			'prodi'=>$prodi,
 			// 'role_id'=>$roleid,
 			// 'level'=>$level
 		);
+		// print_r($data_insert);die();
 		$res=$this->model_user->insert('users',$data_insert);
 		if ($res>=1) {
 			redirect('Admin/table_user');
