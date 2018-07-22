@@ -12,7 +12,7 @@ class Apd_a711_model extends CI_Model {
 // Listing
 public function listing1() {
  $kdprodi = $this->session->userdata('kd_prodi');
- $data=$this->db->query('SELECT id,sumber_pembiayaan,ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jml from penelitian_dosen where kd_prodi='."'$kdprodi'".' and kd_jns=1;');
+ $data=$this->db->query('SELECT kd_jns,id,sumber_pembiayaan,ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jml from penelitian_dosen where kd_prodi='."'$kdprodi'".' and kd_jns=1;');
  return $data->result_array();
  }
 
@@ -65,7 +65,7 @@ public function listing1() {
  }
 
  public function update($where="") {
-	 $data= $this->db->query('SELECT id,sumber_pembiayaan,ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jml from penelitian_dosen '.$where);
+	 $data= $this->db->query('SELECT kd_jns,id,sumber_pembiayaan,ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as jml from penelitian_dosen '.$where);
 	 return $data->result_array();
  }
 

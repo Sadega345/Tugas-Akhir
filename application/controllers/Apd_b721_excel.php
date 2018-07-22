@@ -57,6 +57,7 @@ public function index() {
 			
 		);
 		$where=array('KD_JNS'=>$KD_JNS);
+		print_r($data_update);die();
 		$res=$this->Apd_b721_model->rubah('kegiatan_pkm',$data_update,$where);
 		if ($res>=1) {
 			redirect('Apd_b721_excel');

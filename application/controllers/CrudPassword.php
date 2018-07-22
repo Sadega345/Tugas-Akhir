@@ -60,7 +60,8 @@ class CrudPassword extends CI_Controller {
 			// $data = $this->queries->data();
 			// $this->load->model('queries');
 
-			$userid = '1';
+			// $userid = '1';
+			$userid = $this->session->userdata('id');
 			$passwd = $this->Model_password->data("where id='$userid'");
 			$data_update = array(
 				'password' => $pwdbaru
