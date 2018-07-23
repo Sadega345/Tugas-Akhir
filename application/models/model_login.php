@@ -20,7 +20,9 @@ class Model_login extends CI_model {
 		if($return->num_rows() > 0 ){
 			foreach ($return->result() as $row) {
 				if($username == "admin" ){
-					$sess = array('username' => $row->username,
+					$sess = array(
+									'username' => $row->username,
+									'id' => $row->id,
 					   			);
 					$this->session->set_userdata( $sess );
 					
@@ -30,9 +32,10 @@ class Model_login extends CI_model {
 				else if ($username == $row->username) {
 						if($row->prodi == "D3"){
 							$sess = array(
-								'username' => $row->username,
-								// 'prodi' => $row->prodi,
-										  'kd_prodi' => $row->kd_prodi
+									'username' => $row->username,
+				       				'prodi' => $row->prodi,
+									'kd_prodi' => $row->kd_prodi,
+									'id' => $row->id,
 					   			);
 							$this->session->set_userdata( $sess );
 							// print_r($sess);die();
@@ -40,9 +43,10 @@ class Model_login extends CI_model {
 				       }
 				       else {
 				       		$sess = array(
-				       			'username' => $row->username,
-				       			// 'prodi' => $row->prodi,
-										  'kd_prodi' => $row->kd_prodi
+				       				'username' => $row->username,
+				       				'prodi' => $row->prodi,
+									'kd_prodi' => $row->kd_prodi,
+									'id' => $row->id,
 					   			);
 							$this->session->set_userdata( $sess );
 							// print_r($sess);die();
