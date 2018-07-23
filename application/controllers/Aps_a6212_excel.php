@@ -19,44 +19,69 @@ public function index() {
  $data5=$this->Aps_a6212_model->listing5();
  $data6=$this->Aps_a6212_model->listing6();
  $data7=$this->Aps_a6212_model->listing7();
- $jmlopr2=$this->Aps_a6212_model->jmlopr2();
- $jmlopr1=$this->Aps_a6212_model->jmlopr1();
- $jmlopr=$this->Aps_a6212_model->jmlopr();
- $jmlinv2=$this->Aps_a6212_model->jmlinv2();
- $jmlinv1=$this->Aps_a6212_model->jmlinv1();
- $jmlinv=$this->Aps_a6212_model->jmlinv();
- $jmloprinv2=$this->Aps_a6212_model->jmloprinv2();
- $jmloprinv1=$this->Aps_a6212_model->jmloprinv1();
- $jmloprinv=$this->Aps_a6212_model->jmloprinv();
- $jmlmhs2=$this->Aps_a6212_model->jmlmhs2();
- $jmlmhs1=$this->Aps_a6212_model->jmlmhs1();
- $jmlmhs=$this->Aps_a6212_model->jmlmhs();
  $this->load->view('Users/Butir6/tampilan_borang6.2.1.2.php',array('data1'=>$data1,
  																  'data2'=>$data2,
  																  'data3'=>$data3,
  																  'data4'=>$data4,
  																  'data5'=>$data5,
  																  'data6'=>$data6,
- 																  'data7'=>$data7,
- 																  'jmlopr2'=>$jmlopr2,
- 																  'jmlopr1'=>$jmlopr1,
- 																  'jmlopr'=>$jmlopr,
- 																  'jmlinv2'=>$jmlinv2,
- 																  'jmlinv1'=>$jmlinv1,
- 																  'jmlinv'=>$jmlinv,
- 																  'jmloprinv2'=>$jmloprinv2,
- 																  'jmloprinv1'=>$jmloprinv1,
- 																  'jmloprinv'=>$jmloprinv,
- 																  'jmlmhs2'=>$jmlmhs2,
- 																  'jmlmhs1'=>$jmlmhs1,
- 																  'jmlmhs'=>$jmlmhs
+ 																  'data7'=>$data7
 																  ));
  }
 
-public function ubah(){
- 	$this->load->view('Users/Butir6/tampilan_borang6.2.1.2.php');
+public function ubah($id,$kd_jns){
+ 	$this->model_squrity->getsqurity();
+	$res=$this->Aps_a6212_model->update("where id='$id' and kd_jns='$kd_jns'");
+	$data=array(
+		"kd_jns"=>$res[0]['kd_jns'],
+		"ts_2"=>$res[0]['ts_2'],
+		"id"=>$res[0]['id'],
+		"ts_1"=>$res[0]['ts_1'],
+		"ts"=>$res[0]['ts'],
+	);
+
+
+	if ($kd_jns==1) {
+		$this->load->view('Users/Butir6/edit_borang6.2.1.2.php',$data);
+	}else if ($kd_jns==2) {
+		$this->load->view('Users/Butir6/edit_borang6.2.1.2(2).php',$data);
+	}else if ($kd_jns==3) {
+		$this->load->view('Users/Butir6/edit_borang6.2.1.2(3).php',$data);
+	}else if ($kd_jns==4) {
+		$this->load->view('Users/Butir6/edit_borang6.2.1.2(4).php',$data);
+	}else if ($kd_jns==5) {
+		$this->load->view('Users/Butir6/edit_borang6.2.1.2(5).php',$data);
+	}else if ($kd_jns==6) {
+		$this->load->view('Users/Butir6/edit_borang6.2.1.2(6).php',$data);
+	}else if ($kd_jns==7) {
+		$this->load->view('Users/Butir6/edit_borang6.2.1.2(7).php',$data);
+	}
  }
 
+ public function do_edit(){
+ 		$kd_jns=$_POST['kd_jns'];
+		$ts_2=$_POST['ts_2'];
+		$ts_1=$_POST['ts_1'];
+		$ts=$_POST['ts'];
+		$id=$_POST['id'];
+		
+		$data_update=array(
+			"ts_2"=>$ts_2,
+			"ts_1"=>$ts_1,
+			"ts"=>$ts,
+			
+		);
+		$where=array('id'=>$id, 'kd_jns'=>$kd_jns);
+		// print_r($data_update);die;
+		$res=$this->Aps_a6212_model->rubah('penggunaan_dana',$data_update,$where);
+		
+		if ($res>=1) {
+			redirect('Aps_a6212_excel');
+		}
+		// else {
+		// 	alert("Gagal Update") ;
+		// }
+	}
 public function export_excel(){
  // $data = array( 'title' => 'TABEL DATA BUTIR 6.2.1 : PEROLEHAN DAN ALOKASI DANA',
  // 'a6212' => $this->Aps_a6212_model->listing());
@@ -68,37 +93,13 @@ public function export_excel(){
  $data5=$this->Aps_a6212_model->listing5();
  $data6=$this->Aps_a6212_model->listing6();
  $data7=$this->Aps_a6212_model->listing7();
- $jmlopr2=$this->Aps_a6212_model->jmlopr2();
- $jmlopr1=$this->Aps_a6212_model->jmlopr1();
- $jmlopr=$this->Aps_a6212_model->jmlopr();
- $jmlinv2=$this->Aps_a6212_model->jmlinv2();
- $jmlinv1=$this->Aps_a6212_model->jmlinv1();
- $jmlinv=$this->Aps_a6212_model->jmlinv();
- $jmloprinv2=$this->Aps_a6212_model->jmloprinv2();
- $jmloprinv1=$this->Aps_a6212_model->jmloprinv1();
- $jmloprinv=$this->Aps_a6212_model->jmloprinv();
- $jmlmhs2=$this->Aps_a6212_model->jmlmhs2();
- $jmlmhs1=$this->Aps_a6212_model->jmlmhs1();
- $jmlmhs=$this->Aps_a6212_model->jmlmhs();
  $this->load->view('Users/Butir6/tampilan_borang6.2.1.2_excel.php',array('data1'=>$data1,
  																  'data2'=>$data2,
  																  'data3'=>$data3,
  																  'data4'=>$data4,
  																  'data5'=>$data5,
  																  'data6'=>$data6,
- 																  'data7'=>$data7,
- 																  'jmlopr2'=>$jmlopr2,
- 																  'jmlopr1'=>$jmlopr1,
- 																  'jmlopr'=>$jmlopr,
- 																  'jmlinv2'=>$jmlinv2,
- 																  'jmlinv1'=>$jmlinv1,
- 																  'jmlinv'=>$jmlinv,
- 																  'jmloprinv2'=>$jmloprinv2,
- 																  'jmloprinv1'=>$jmloprinv1,
- 																  'jmloprinv'=>$jmloprinv,
- 																  'jmlmhs2'=>$jmlmhs2,
- 																  'jmlmhs1'=>$jmlmhs1,
- 																  'jmlmhs'=>$jmlmhs
+ 																  'data7'=>$data7
 																  ));
  
  }

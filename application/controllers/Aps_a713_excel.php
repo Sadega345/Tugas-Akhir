@@ -76,12 +76,12 @@ public function index() {
 
 	public function tambah(){
 	 	$this->model_squrity->getsqurity();
-	 	$this->load->view('Usesr/Butir7/inputan_713.php');
+	 	$this->load->view('Users/Butir7/inputan_borang7.1.3.php');
 	 }
 
  public function do_tambah(){
 		$this->model_squrity->getsqurity();
-		
+		$kdprodi = $this->session->userdata('kd_prodi');
 		$id=$_POST['id'];
 		$judul=$_POST['judul'];
 		$nama_dosen=$_POST['nama_dosen'];
@@ -98,7 +98,7 @@ public function index() {
 			
 			'id'=>$id,
 			'judul'=>$judul,
-			'kd_prodi'=>'P002',
+			'kd_prodi'=>$kdprodi,
 			'nama_dosen' => $nama_dosen,
 			'publikasi' => $publikasi,
 			'thn_publikasi' => $thn_publikasi,

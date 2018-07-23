@@ -12,13 +12,23 @@ class Aps_a622_model extends CI_Model {
 // Listing
 public function listing() {
 $kdprodi = $this->session->userdata('kd_prodi');
-$data=$this->db->query('SELECT tahun,judul_penelitian,sumber_dana,jml_dana,id FROM dana_penelitian 
+$data=$this->db->query('SELECT id,tahun,jns_dana,judul_penelitian,sumber_dana,jml_dana,id FROM dana_penelitian 
 WHERE KD_PRODI='."'$kdprodi'");
  return $data->result_array();
  }
 
+ public function listed(){
+ $data=$this->db->query('SELECT id,tahun,judul_penelitian,sumber_dana,jml_dana,id FROM dana_penelitian');
+ return $data->result_array();
+ }
+
+ public function GetDana(){
+ $dana=$this->db->query('select id_dana,sumber_dana from sumber_dana where id_dana between  1 and 4;');
+ return $dana->result_array();
+ }
+
  public function update($where="") {
- $data= $this->db->query('SELECT tahun,judul_penelitian,sumber_dana,jml_dana,id FROM dana_penelitian '.$where);
+ $data= $this->db->query('SELECT id,tahun,jns_dana,judul_penelitian,sumber_dana,jml_dana,id FROM dana_penelitian '.$where);
  return $data->result_array();
  }
 
@@ -27,10 +37,20 @@ WHERE KD_PRODI='."'$kdprodi'");
  return $res;
  }
 
+ public function insert($tablename,$data){
+	$res=$this->db->insert($tablename,$data);
+	return $res;
+}
+
  public function totdana() {
  $kdprodi = $this->session->userdata('kd_prodi');
  $data=$this->db->query('SELECT SUM(jml_dana)AS Tot_Dana FROM dana_penelitian WHERE KD_PRODI='."'$kdprodi'");
  return $data->result_array();
  }
+
+ public function delete($tablename,$where){
+	$res=$this->db->delete($tablename,$where);
+	return $res;
+}
 
 }

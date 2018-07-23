@@ -33,10 +33,10 @@ public function index() {
 		$id=$_POST['id'];
 		$ts_1=$_POST['ts_1'];
 		$ts=$_POST['ts'];
+		$nm_program_std=$_POST['nm_program_std'];
 		
 		$data_update=array(
 			"ts_2"=>$ts_2,
-			
 			"ts_1"=>$ts_1,
 			"ts"=>$ts,
 		);

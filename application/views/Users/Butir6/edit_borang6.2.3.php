@@ -145,8 +145,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							<tbody>
 							
 							 <tr>
-							 	<td><?php echo $TAHUN; ?></td>
-							 	<td><?php echo $judul_kegiatan;; ?></td>
+							 	<td><input type="text" name="TAHUN" class="form-control" value="<?php echo $TAHUN; ?>"></td>
+							 	<td><input type="text" name="judul_kegiatan" class="form-control" value="<?php echo $judul_kegiatan; ?>"></td>
 							 	<td><input type="text" name="SUMBER_DANA" class="form-control" value="<?php echo $SUMBER_DANA; ?>"></td>
 							 	<td><input type="text" name="JUMLAH_DANA" class="form-control" value="<?php echo $JUMLAH_DANA; ?>"></td>
 							 </tr>
@@ -154,6 +154,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</tbody>
 							</table>
 							<input type="hidden" name="id" value="<?php echo $id; ?>">
+							<input type="hidden" name="jns_dana" value="<?php echo $jns_dana; ?>">
 							</div>
 							<div class="btn-group">
 								<button id="sample_editable_1_new" class="btn blue">

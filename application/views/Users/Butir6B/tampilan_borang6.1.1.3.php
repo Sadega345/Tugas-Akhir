@@ -102,7 +102,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="btn-group">
 											<a href="#">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
+											Load
 											</button>
 											</a>
 										</div>
@@ -150,7 +150,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							 -->
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Aps_b6113_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Aps_b6113_excel";?>">
 									<button id="sample_editable_1_new" class="btn blue">
 										Export To Excel
 									</button>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title> BUTIR 6.4.1 : Pustaka </title>
+<title>Butir 6.2.1.2  : PEROLEHAN DAN ALOKASI DANA</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -62,12 +62,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <body class="page-header-fixed page-quick-sidebar-over-content">
 	<!-- BEGIN HEADER -->
 		<?php 
-			$this->load->view('Users/header_Users.php');
+			$this->load->view('Users/header_users.php');
 		?>
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('Users/sidebar_Users.php');
+			$this->load->view('Users/sidebar_users.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 
@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Butir 6.4.1 : Pustaka
+								<i class="fa fa-edit"></i>Butir 6.2.1.2  : PEROLEHAN DAN ALOKASI DANA
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -100,69 +100,70 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="#">
+											<!-- <a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
 											Load
 											</button>
-											</a>
+											</a> -->
 										</div>
 									</div>
+									<!-- <div class="col-md-6">
+										<div class="btn-group pull-right">
+											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+											</button>
+											<ul class="dropdown-menu pull-right">
+												<li>
+													<a href="javascript:;">
+													Print </a>
+												</li>
+												<li>
+													<a href="javascript:;">
+													Export to Excel </a>
+												</li>
+											</ul>
+										</div>
+									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;" class="col-md-20">
+							<form action="<?php echo base_url()."index.php/Aps_a6212_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th>Jenis</th>
-									 <th>No</th>
-									 <th>Nama Jurnal</th>
-									 <th>Rincian nomor dan tahun</th>
-									 <th>Jumlah</th>
-									 <th>Aksi</th>
+									 <th rowspan="2">No</th>
+									 <th rowspan="2">Jenis Penggunaan</th>
+									 <th colspan="3">Penggunaan (Juta Rupiah)</th>
+								 </tr>
+								 <tr>
+								 	<th>TS-2</th>
+								 	<th>TS-1</th>
+								 	<th>TS</th>
 								 </tr>
 							</thead>
 							<tbody>
-								<?php foreach ($row1 as $r) {
-								?>
 								<tr>
-								 	<td rowspan="<?php echo $r['row1'] ?>">Jurnal Terakreditasi DIKTI </td>
-									 <?php } ?>
-									 <?php 
-									 	$no=1;
-									 	foreach ($data1 as $d) {
-									  ?>
-								 	<td><?php echo $no++; ?></td>
-								 	<td><?php echo $d['nm_jurnal']; ?></td>
-								 	<td><?php echo $d['rincian']; ?></td>
-								 	<td><?php echo $d['jml']; ?></td>
-								 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Aps_a6412_excel/ubah/".$d['id'];?>" >Edit</a>
-									</td>
+								 	<td>4</td>
+								 	<td>Investasi Prasarana</td>
+								 	<td><input type="text" name="ts_2" class="form-control" value="<?php echo $ts_2; ?>"></td>
+								 	<td><input type="text" name="ts_1" class="form-control" value="<?php echo $ts_1; ?>"></td>
+								 	<td><input type="text" name="ts" class="form-control" value="<?php echo $ts; ?>"></td>
 								 </tr>
-								 <?php } ?>
-								 	<?php foreach ($row2 as $r) {
-								 ?>
-								 <tr>
-								 	<td rowspan="<?php echo $r['row2']; ?>">Jurnal Internasional</td>
-									 <?php } ?>
-									 <?php 
-									 	$no=1;
-									 	foreach ($data2 as $d) {
-									  ?>
-								 	<td><?php echo $no++; ?></td>
-								 	<td><?php echo $d['nm_jurnal']; ?></td>
-								 	<td><?php echo $d['rincian']; ?></td>
-								 	<td><?php echo $d['jml']; ?></td>
-								 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Aps_a6412_excel/ubah/".$d['id'];?>" >Edit</a>
-									</td>
-								 </tr>
-								 <?php } ?>
+								 
 							</tbody>
 							</table>
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
+							<input type="hidden" name="kd_jns" value="<?php echo $kd_jns; ?>">
+							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Aps_a6412_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn blue">
-										Export ke Excel 
+								<button id="sample_editable_1_new" class="btn blue">
+									Simpan 
+								</button>
+							</div>
+							</form>
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Aps_a6212_excel/";?>">
+									<button id="sample_editable_1_new" class="btn red">
+										Batal
 									</button>
 								</a>
 							</div>

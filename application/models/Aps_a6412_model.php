@@ -24,13 +24,26 @@ public function __construct()
 
  public function data1(){
  	$kdprodi = $this->session->userdata('kd_prodi');
- 	$data1=$this->db->query('select nm_jurnal,rincian,jml from jurnal where kd_jns=1 and kd_prodi='."'$kdprodi'");
+ 	$data1=$this->db->query('select id,nm_jurnal,rincian,jml from jurnal where kd_jns=1 and kd_prodi='."'$kdprodi'");
  	return $data1->result_array();
  }
 
  public function data2(){
  	$kdprodi = $this->session->userdata('kd_prodi');
- 	$data2=$this->db->query('select nm_jurnal,rincian,jml from jurnal where kd_jns=2 and kd_prodi='."'$kdprodi'");
+ 	$data2=$this->db->query('select id,nm_jurnal,rincian,jml from jurnal where kd_jns=2 and kd_prodi='."'$kdprodi'");
  	return $data2->result_array();
  }
+
+
+ public function update($where="") {
+	$kdprodi = $this->session->userdata('kd_prodi');
+ 	$data2=$this->db->query('select nm_jurnal,rincian,jml from jurnal where '.$where);
+ 	return $data2->result_array();
+ }
+
+ public function rubah($tablename,$data,$where){
+		$res=$this->db->update($tablename,$data,$where);
+		return $res;
+	}
+
 }

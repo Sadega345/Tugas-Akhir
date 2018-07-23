@@ -124,173 +124,143 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<tr>
-							 	<td rowspan="4">Usaha Sendiri</td>
-							 	<td>Beasiswa Yayasan</td>
+														<tr>
+							 	<td rowspan="3">Usaha Sendiri</td>
+							 	
 								<?php
 									foreach ($dana1 as $a ) { 
 								?>
+								<td><?php echo $a['jenis_dana'] ?></td>
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
 								<td class="center">
-									<a href="#" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Aps_a6211_excel/ubah/".$a['id'];?>" >Edit</a>
 								</td>
 								<?php } ?>	 
 							 </tr>
 							 <tr>
-							 	<td>Hibah Yayasan</td>
+							 	
 							 	<?php
 									foreach ($dana2 as $a ) { 
 								?>
+								<td><?php echo $a['jenis_dana'] ?></td>
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
 								<td class="center">
-									<a href="#" >Edit</a>
-								</td>
+										<a href="<?php echo base_url()."index.php/Aps_a6211_excel/ubah/".$a['id'];?>" >Edit</a>
+									</td>
 								<?php } ?>
 							 </tr>
 							 <tr>
-							 	<td>Hibah Unit Usaha(PT. Pasim Sentra Utama)</td>
+							 	
 							 	<?php
 									foreach ($dana3 as $a ) { 
 								?>
+								<td><?php echo $a['jenis_dana'] ?></td>
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
 								<td class="center">
-									<a href="#" >Edit</a>
-								</td>
+										<a href="<?php echo base_url()."index.php/Aps_a6211_excel/ubah/".$a['id'];?>" >Edit</a>
+									</td>
 								<?php } ?>
-							 </tr>
-							  <tr>
-							 	<td><center><strong>Jumlah dana dari Usaha sendiri</strong></center></td>
-							 	<?php
-									foreach ($jml1 as $a ) { 
-								?>
-								<td><?php echo $a['jum2'] ?></td>
-								<td><?php echo $a['jum1'] ?></td>
-								<td><?php echo $a['jum'] ?></td>
-								<?php } ?>
-								<td></td>
 							 </tr>
 							 <tr>
-							 	<td rowspan="4">Mahasiswa</td>
-							 	<td>Pendaftaran</td>
+							 	<td rowspan="3">Mahasiswa</td>
+							 	
 							 	<?php
 									foreach ($dana4 as $a ) { 
 								?>
+								<td><?php echo $a['jenis_dana'] ?></td>
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
 								<td class="center">
-									<a href="#" >Edit</a>
-								</td>
+										<a href="<?php echo base_url()."index.php/Aps_a6211_excel/ubah/".$a['id'];?>" >Edit</a>
+									</td>
 								<?php } ?>
 							 </tr>
 							 <tr>
-							 	<td>Biaya Registrasi</td>
+							 	
 							 	<?php
 									foreach ($dana5 as $a ) { 
 								?>
+								<td><?php echo $a['jenis_dana'] ?></td>
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
 								<td class="center">
-									<a href="#" >Edit</a>
-								</td>
+										<a href="<?php echo base_url()."index.php/Aps_a6211_excel/ubah/".$a['id'];?>" >Edit</a>
+									</td>
 								<?php } ?>
 							 </tr>
 							 <tr>
-							 	<td>Biaya Kuliah</td>
+							 	
 							 	<?php
 									foreach ($dana6 as $a ) { 
 								?>
+								<td><?php echo $a['jenis_dana'] ?></td>
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
 								<td class="center">
-									<a href="#" >Edit</a>
-								</td>
+										<a href="<?php echo base_url()."index.php/Aps_a6211_excel/ubah/".$a['id'];?>" >Edit</a>
+									</td>
 								<?php } ?>
-							 </tr>
-							  <tr>
-							 	<td><center><strong>Jumlah dana dari Mahasiswa</strong></center></td>
-							 	<?php
-									foreach ($jml2 as $a ) { 
-								?>
-								<td><?php echo $a['jml2'] ?></td>
-								<td><?php echo $a['jml1'] ?></td>
-								<td><?php echo $a['jml'] ?></td>
-								<?php } ?>
-								<td></td>
 							 </tr>
 							 <tr>
-							 	<td rowspan="2">Pemerintah</td>
+							 	<td>Pemerintah</td>
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
 							 	<td class="center">
-									<a href="#" >Edit</a>
+									<a href="#">Edit</a>
 								</td>
 							 </tr>
-							  <tr>
-							 	<td><center><strong>Jumlah dana dari Pemerintah</strong></center></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr>
 							 <tr>
-							 	<td rowspan="4">Sumber Lain</td>
-							 	<td>Alumni</td>
+							 	<td rowspan="3">Sumber Lain</td>
+							 	
 							 	<?php
 									foreach ($dana7 as $a ) { 
 								?>
+								<td><?php echo $a['jenis_dana'] ?></td>
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
 								<td class="center">
-									<a href="#" >Edit</a>
-								</td>
+										<a href="<?php echo base_url()."index.php/Aps_a6211_excel/ubah/".$a['id'];?>" >Edit</a>
+									</td>
 								<?php } ?>
 							 </tr>
 							 <tr>
-							 	<td>Hibah Penelitian</td>
+							 	
 							 	<?php
 									foreach ($dana8 as $a ) { 
 								?>
+								<td><?php echo $a['jenis_dana'] ?></td>
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
 								<td class="center">
-									<a href="#" >Edit</a>
-								</td>
+										<a href="<?php echo base_url()."index.php/Aps_a6211_excel/ubah/".$a['id'];?>" >Edit</a>
+									</td>
 								<?php } ?>
 							 </tr>
 							 <tr>
-							 	<td>Hibah Pengabdian</td>
+							 	
 							 	<?php
 									foreach ($dana9 as $a ) { 
 								?>
+								<td><?php echo $a['jenis_dana'] ?></td>
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
 								<td class="center">
-									<a href="#" >Edit</a>
-								</td>
-								<?php } ?>
-							 </tr>
-							 <tr>
-							 	<td><center><strong>Jumlah dana dari sumber lain</strong></center></td>
-							 	<?php
-									foreach ($jml4 as $a ) { 
-								?>
-								<td><?php echo $a['jumlah2'] ?></td>
-								<td><?php echo $a['jumlah1'] ?></td>
-								<td><?php echo $a['jumlah'] ?></td>
+										<a href="<?php echo base_url()."index.php/Aps_a6211_excel/ubah/".$a['id'];?>" >Edit</a>
+									</td>
 								<?php } ?>
 							 </tr>
 							 <tr>
@@ -301,18 +271,11 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['total1'] ?></td>
 								<td><?php echo $a['total2'] ?></td>
 								<td><?php echo $a['total3'] ?></td>
+								<td><?php echo $a['totals'] ?></td>
 								<?php } ?>
 							 </tr>
 							</tbody>
 							</table>
-							<!-- <div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a6211_excel/ubah";?>">
-									<button id="sample_editable_1_new" class="btn green">
-										Ubah 
-									</button>
-								</a>
-							</div> -->
-							
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Aps_a6211_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn blue">

@@ -11,8 +11,19 @@ class Aps_a623_model extends CI_Model {
 
 // Listing
  public function listing() {
- $data=$this->db->query('SELECT TAHUN,judul_kegiatan,SUMBER_DANA,JUMLAH_DANA,id FROM dana_pengmas WHERE kd_prodi="p002"');
+ $kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('SELECT TAHUN,judul_kegiatan,SUMBER_DANA,JUMLAH_DANA,id FROM dana_pengmas WHERE kd_prodi='."'$kdprodi'");
  return $data->result_array();
+ }
+
+ public function listed(){
+ $data=$this->db->query('SELECT id,tahun,judul_kegiatan,sumber_dana,jumlah_dana FROM dana_pengmas');
+ return $data->result_array();
+ }
+
+ public function GetDana(){
+ $dana=$this->db->query('select id_dana,sumber_dana from sumber_dana where id_dana between  1 and 4;');
+ return $dana->result_array();
  }
 
  public function update($where="") {
@@ -26,8 +37,19 @@ class Aps_a623_model extends CI_Model {
 	}
 
  public function totdana() {
- $data=$this->db->query('SELECT SUM(JUMLAH_DANA)AS Tot_Dana FROM dana_pengmas WHERE kd_prodi="p002"');
+ $kdprodi = $this->session->userdata('kd_prodi');
+ $data=$this->db->query('SELECT SUM(JUMLAH_DANA)AS Tot_Dana FROM dana_pengmas WHERE kd_prodi='."'$kdprodi'");
  return $data->result_array();
  }
+
+  public function delete($tablename,$where){
+	$res=$this->db->delete($tablename,$where);
+	return $res;
+}
+
+ public function insert($tablename,$data){
+	$res=$this->db->insert($tablename,$data);
+	return $res;
+}
 
 }

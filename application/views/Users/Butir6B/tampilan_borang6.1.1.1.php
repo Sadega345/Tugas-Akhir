@@ -112,10 +112,10 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th rowspan="2">Sumber Dana</th>
-									 <th rowspan="2">Jenis Dana</th>
-									 <th colspan="3">Jumlah Dana (juta rupiah)</th>
-									 <th rowspan="2">Aksi</th>
+									 <th rowspan="2"><center>Sumber Dana</center></th>
+									 <th rowspan="2"><center>Jenis Dana</center></th>
+									 <th colspan="3"><center>Jumlah Dana (juta rupiah)</center></th>
+									 <th rowspan="2"><center>Aksi</center></th>
 								 </tr>
 								 <tr>
 								 	<th>TS-2</th>
@@ -127,111 +127,34 @@ License: You must have a valid license purchased only from themeforest(the above
 							<tbody>
 							<tr>
 							 	<td rowspan="3>">PT Sendiri</td>
-							 	<td>Beasiswa Yayasan</td>
 							 	<?php
 									foreach ($dana1 as $a ) { 
 								?>
-							 	
+							 	<td><?php echo $a['jenis_dana']; ?></td>
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
 								<td class="center">
-									<a href="#" >Edit</a>
-								</td>
-								<?php } ?>	 
+									<a href="<?php echo base_url()."index.php/Aps_b6111_excel/ubah/".$a['id'] .$a['id_dana'];?>" >Edit</a>
+								</td>	 
 							 </tr>
-							 <tr>
-							 	<td>Hibah Yayasan</td>
+							 <?php } ?>
+							  <tr>
+							 	<td>Yayasan</td>
 							 	<?php
 									foreach ($dana2 as $a ) { 
 								?>
+								<td><?php echo $a['jenis_dana']; ?></td>
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
 								<td class="center">
-									<a href="#" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Aps_b6111_excel/ubah/".$a['id'] .$a['id_dana'];?>" >Edit</a>
 								</td>
-								<?php } ?>
 							 </tr>
-							 <tr>
-							 	<td>Hibah Unit Usaha (PT Pasim Sentra Utama)</td>
-							 	<?php
-									foreach ($dana3 as $a ) { 
-								?>
-								<td><?php echo $a['ts_2'] ?></td>
-								<td><?php echo $a['ts_1'] ?></td>
-								<td><?php echo $a['ts'] ?></td>
-								<td class="center">
-									<a href="#" >Edit</a>
-								</td>
-								<?php } ?>
-							 </tr>
-							 <tr>
-							 	<td>Jumlah dana dari usaha sendiri</td>
-							 	<?php
-									foreach ($jml1 as $a ) { 
-								?>
-								<td><?php echo $a['jum2'] ?></td>
-								<td><?php echo $a['jum1'] ?></td>
-								<td><?php echo $a['jum'] ?></td>
-								<td></td>
-								<?php } ?>
-							 </tr>
+							 <?php } ?>
 							  <tr>
-							 	<td rowspan="4">Yayasan</td>
-							 	<td>Pendaftaran</td>
-							 	<?php
-									foreach ($dana4 as $a ) { 
-								?>
-								<td><?php echo $a['ts_2'] ?></td>
-								<td><?php echo $a['ts_1'] ?></td>
-								<td><?php echo $a['ts'] ?></td>
-								<td class="center">
-									<a href="#" >Edit</a>
-								</td>
-								<?php } ?>
-							 </tr>
-							 <tr>
-							 	<td>Biaya Registrasi</td>
-							 	<?php
-									foreach ($dana5 as $a ) { 
-								?>
-								<td><?php echo $a['ts_2'] ?></td>
-								<td><?php echo $a['ts_1'] ?></td>
-								<td><?php echo $a['ts'] ?></td>
-								<td class="center">
-									<a href="#" >Edit</a>
-								</td>
-								<?php } ?>
-							 </tr>
-							 <tr>
-							 	<td>Biaya Kuliah</td>
-							 	<?php
-									foreach ($dana6 as $a ) { 
-								?>
-								<td><?php echo $a['ts_2'] ?></td>
-								<td><?php echo $a['ts_1'] ?></td>
-								<td><?php echo $a['ts'] ?></td>
-								<td class="center">
-									<a href="#" >Edit</a>
-								</td>
-								<?php } ?>
-							 </tr>
-							 <tr>
-							 	<td>Jumlah dana dari Mahasiswa</td>
-							 	<?php
-									foreach ($jml2 as $a ) { 
-								?>
-								<td><?php echo $a['jml2'] ?></td>
-								<td><?php echo $a['jml1'] ?></td>
-								<td><?php echo $a['jml'] ?></td>
-								<td class="center">
-									<a href="#" >Edit</a>
-								</td>
-								<?php } ?>
-							 </tr>
-							  <tr>
-							 	<td rowspan="2">Diknas</td>
+							 	<td>Diknas</td>
 							 	<td></td>
 							 	<td></td>
 							 	<td></td>
@@ -240,64 +163,20 @@ License: You must have a valid license purchased only from themeforest(the above
 									<a href="#" >Edit</a>
 								</td>
 							 </tr>
-							<tr>
-							 	<td><center><strong>Jumlah dana dari Pemerintah</strong></center></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr>
 							 <tr>
-							 	<td rowspan="4">Sumber Lain</td>
-							 	<td>Alumni</td>
+							 	<td rowspan="3">Sumber Lain</td>
 							 	<?php
-									foreach ($dana7 as $a ) { 
+									foreach ($dana4 as $a ) { 
 								?>
+								<td><?php echo $a['jenis_dana']; ?></td>
 								<td><?php echo $a['ts_2'] ?></td>
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
 								<td class="center">
-									<a href="#" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Aps_b6111_excel/ubah/".$a['id'] .$a['id_dana'];?>" >Edit</a>
 								</td>
-								<?php } ?>
 							 </tr>
-							 <tr>
-							 	<td>Hibah Penelitian</td>
-							 	<?php
-									foreach ($dana8 as $a ) { 
-								?>
-								<td><?php echo $a['ts_2'] ?></td>
-								<td><?php echo $a['ts_1'] ?></td>
-								<td><?php echo $a['ts'] ?></td>
-								<td class="center">
-									<a href="#" >Edit</a>
-								</td>
-								<?php } ?>
-							 </tr>
-							 <tr>
-							 	<td>Hibah Pengabdian</td>
-							 	<?php
-									foreach ($dana9 as $a ) { 
-								?>
-								<td><?php echo $a['ts_2'] ?></td>
-								<td><?php echo $a['ts_1'] ?></td>
-								<td><?php echo $a['ts'] ?></td>
-								<td class="center">
-									<a href="#" >Edit</a>
-								</td>
-								<?php } ?>
-							 </tr>
-							 <tr>
-							 	<td>Jumlah dana dari sumber lain</td>
-							 	<?php
-									foreach ($jml4 as $a ) { 
-								?>
-								<td><?php echo $a['jumlah2'] ?></td>
-								<td><?php echo $a['jumlah1'] ?></td>
-								<td><?php echo $a['jumlah'] ?></td>
-								<?php } ?>
-							 </tr>
+							 	<?php } ?>
 							<tr>
 							 	<td colspan="2"><center><strong>Total*</strong></center></td>
 							 	 <?php

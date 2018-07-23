@@ -134,7 +134,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
 								<td class="center">
-									<a href="#" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Aps_a6212_excel/ubah/".$a['id'] .$a['kd_jns'];?>" >Edit</a>
 								</td>
 								<?php } ?>	 
 							</tr>
@@ -148,7 +148,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $b['ts_1'] ?></td>
 								<td><?php echo $b['ts'] ?></td>
 								<td class="center">
-									<a href="#" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Aps_a6212_excel/ubah/".$a['id']. $a['kd_jns'];?>" >Edit</a>
 								</td>
 								<?php } ?>	
 							</tr>
@@ -162,30 +162,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $c['ts_1'] ?></td>
 								<td><?php echo $c['ts'] ?></td>
 								<td class="center">
-									<a href="#" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Aps_a6212_excel/ubah/".$a['id'] .$a['kd_jns'];?>" >Edit</a>
 								</td>
 								<?php } ?>	
-							</tr>
-							<tr>
-								<td colspan="2"><center>Jumlah Dana Operasional</center></td>
-								<?php 
-									foreach ($jmlopr2 as $j2 ) { 
-								?>
-							 	<td><?php echo $j2['jmlopr2']; ?></td>
-							 	<?php } ?>
-
-							 	<?php 
-									foreach ($jmlopr1 as $j1 ) { 
-								?>
-							 	<td><?php echo $j1['jmlopr1']; ?></td>
-							 	<?php } ?>
-
-								<?php 
-									foreach ($jmlopr as $j ) { 
-								?>
-							 	<td><?php echo $j['jmlopr']; ?></td>
-							 	<?php } ?>]
-							 	<td></td>
 							</tr>
 							<tr>
 								<td>4</td>
@@ -196,10 +175,10 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $e['ts_2'] ?></td>
 								<td><?php echo $e['ts_1'] ?></td>
 								<td><?php echo $e['ts'] ?></td>
-								<?php } ?>
 								<td class="center">
-									<a href="#" >Edit</a>
-								</td>	
+									<a href="<?php echo base_url()."index.php/Aps_a6212_excel/ubah/".$a['id'] .$a['kd_jns'];?>" >Edit</a>
+								</td>
+								<?php } ?>	
 							</tr>
 							<tr>
 								<td>5</td>
@@ -210,10 +189,10 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $f['ts_2'] ?></td>
 								<td><?php echo $f['ts_1'] ?></td>
 								<td><?php echo $f['ts'] ?></td>
-								<?php } ?>	
 								<td class="center">
-									<a href="#" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Aps_a6212_excel/ubah/".$a['id'] .$a['kd_jns'];?>" >Edit</a>
 								</td>
+								<?php } ?>	
 							</tr>
 							<tr>
 								<td>6</td>
@@ -224,10 +203,10 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $g['ts_2'] ?></td>
 								<td><?php echo $g['ts_1'] ?></td>
 								<td><?php echo $g['ts'] ?></td>
-								<?php } ?>	
 								<td class="center">
-									<a href="#" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Aps_a6212_excel/ubah/".$a['id'] .$a['kd_jns'];?>" >Edit</a>
 								</td>
+								<?php } ?>									
 							</tr>
 							<tr>
 								<td>7</td>
@@ -238,73 +217,10 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $h['ts_2'] ?></td>
 								<td><?php echo $h['ts_1'] ?></td>
 								<td><?php echo $h['ts'] ?></td>
-								<?php } ?>	
 								<td class="center">
-									<a href="#" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Aps_a6212_excel/ubah/".$a['id'] .$a['kd_jns'];?>" >Edit</a>
 								</td>
-							</tr>
-							<tr>
-								<td colspan="2"><center>Jumlah Dana untuk Investasi</center></td>
-								<?php 
-									foreach ($jmlinv2 as $j2 ) { 
-								?>
-							 	<td><?php echo $j2['jmlinv2']; ?></td>
-							 	<?php } ?>
-
-							 	<?php 
-									foreach ($jmlinv1 as $j1 ) { 
-								?>
-							 	<td><?php echo $j1['jmlinv1']; ?></td>
-							 	<?php } ?>
-
-								<?php 
-									foreach ($jmlinv as $j ) { 
-								?>
-							 	<td><?php echo $j['jmlinv']; ?></td>
-							 	<?php } ?>
-							 	<td></td>
-							</tr>
-							<tr>
-								<td colspan="2"><center>Jumlah Dana (Operasional + Investasi)</center></td>
-								<?php 
-									foreach ($jmloprinv2 as $j2 ) { 
-								?>
-							 	<td><?php echo $j2['jmloprinv2']; ?></td>
-							 	<?php } ?>
-
-							 	<?php 
-									foreach ($jmloprinv1 as $j1 ) { 
-								?>
-							 	<td><?php echo $j1['jmloprinv1']; ?></td>
-							 	<?php } ?>
-
-								<?php 
-									foreach ($jmloprinv as $j ) { 
-								?>
-							 	<td><?php echo $j['jmloprinv']; ?></td>
-							 	<?php } ?>
-							 	<td></td>
-							</tr>
-							<tr>
-								<td colspan="2"><center>Jumlah Mahasiswa Aktif (Student Body)</center></td>
-								<?php 
-									foreach ($jmlmhs2 as $j2 ) { 
-								?>
-							 	<td><?php echo $j2['jmlmhs2']; ?></td>
-							 	<?php } ?>
-
-							 	<?php 
-									foreach ($jmlmhs1 as $j1 ) { 
-								?>
-							 	<td><?php echo $j1['jmlmhs1']; ?></td>
-							 	<?php } ?>
-
-								<?php 
-									foreach ($jmlmhs as $j ) { 
-								?>
-							 	<td><?php echo $j['jmlmhs']; ?></td>
-							 	<?php } ?>
-							 	<td></td>
+								<?php } ?>									
 							</tr>
 							</tbody>
 							</table>

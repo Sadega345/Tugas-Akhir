@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title> BUTIR 6.4.1 : Pustaka </title>
+<title>Butir 7.1.3 : JUDUL ARTIKEL ILMIAH/KARYA ILMIAH/KARYA SENI/BUKU</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -62,12 +62,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <body class="page-header-fixed page-quick-sidebar-over-content">
 	<!-- BEGIN HEADER -->
 		<?php 
-			$this->load->view('Users/header_Users.php');
+			$this->load->view('Users/header_users.php');
 		?>
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('Users/sidebar_Users.php');
+			$this->load->view('Users/sidebar_users.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 
@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Butir 6.4.1 : Pustaka
+								<i class="fa fa-edit"></i>Butir 7.1.3 : JUDUL ARTIKEL ILMIAH/KARYA ILMIAH/KARYA SENI/BUKU
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -100,72 +100,91 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="#">
-											<button id="sample_editable_1_new" class="btn green">
-											Load
-											</button>
-											</a>
+											
 										</div>
 									</div>
 								</div>
 							</div>
-							<table class="table table-striped table-bordered table-hover" id="sample_1">
-							<thead>
-								<tr>
-									 <th>Jenis</th>
-									 <th>No</th>
-									 <th>Nama Jurnal</th>
-									 <th>Rincian nomor dan tahun</th>
-									 <th>Jumlah</th>
-									 <th>Aksi</th>
-								 </tr>
-							</thead>
-							<tbody>
-								<?php foreach ($row1 as $r) {
-								?>
-								<tr>
-								 	<td rowspan="<?php echo $r['row1'] ?>">Jurnal Terakreditasi DIKTI </td>
-									 <?php } ?>
-									 <?php 
-									 	$no=1;
-									 	foreach ($data1 as $d) {
-									  ?>
-								 	<td><?php echo $no++; ?></td>
-								 	<td><?php echo $d['nm_jurnal']; ?></td>
-								 	<td><?php echo $d['rincian']; ?></td>
-								 	<td><?php echo $d['jml']; ?></td>
-								 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Aps_a6412_excel/ubah/".$d['id'];?>" >Edit</a>
-									</td>
-								 </tr>
-								 <?php } ?>
-								 	<?php foreach ($row2 as $r) {
-								 ?>
-								 <tr>
-								 	<td rowspan="<?php echo $r['row2']; ?>">Jurnal Internasional</td>
-									 <?php } ?>
-									 <?php 
-									 	$no=1;
-									 	foreach ($data2 as $d) {
-									  ?>
-								 	<td><?php echo $no++; ?></td>
-								 	<td><?php echo $d['nm_jurnal']; ?></td>
-								 	<td><?php echo $d['rincian']; ?></td>
-								 	<td><?php echo $d['jml']; ?></td>
-								 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Aps_a6412_excel/ubah/".$d['id'];?>" >Edit</a>
-									</td>
-								 </tr>
-								 <?php } ?>
-							</tbody>
-							</table>
+							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Aps_a713_excel/do_tambah"; ?>" method="POST">
+							<div class="container">
+								<div class="col-md-10">
+									<div class="row">
+										<div class="form-group">
+											<!-- <label>Id</label> -->
+											<?php 
+												$data=$this->Aps_a713_model->listed();
+												$id = count($data)+1;
+												
+											?>
+											<input type="hidden" class="form-control" name="id" value="<?php echo $id; ?>" readonly="">
+										
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Judul </label>
+											<input type="text" class="form-control" name="judul" >
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Nama Dosen </label>
+											<input type="text" class="form-control" name="nama_dosen" >
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Dihasilkan/Dipublikasikan Pada </label>
+											<input type="text" class="form-control" name="publikasi" >
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Tahun Penyajian/Publikasi </label>
+											<input type="text" class="form-control" name="thn_publikasi" >
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Lokal</label>
+											<input type="radio" class="form-control" name="lokal" value="v">
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="form-group">
+											<label>Nasional</label>
+											<input type="radio" class="form-control" name="nasional" value="v">
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="form-group">
+											<label>Internasional</label>
+											<input type="radio" class="form-control" name="internasional" value="v">
+										</div>
+									</div>
+
+									</div>
+									
+								</div>
+							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Aps_a6412_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn blue">
-										Export ke Excel 
+								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+							</div>
+							</form>
+
+							<div class="btn-group">
+								
+								<a href="<?php echo base_url()."index.php/Aps_a713_excel/";?>">
+									<button id="sample_editable_1_new" class="btn red">
+										Batal
 									</button>
 								</a>
+								
 							</div>
+							
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

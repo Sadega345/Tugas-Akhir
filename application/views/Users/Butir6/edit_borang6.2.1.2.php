@@ -62,12 +62,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <body class="page-header-fixed page-quick-sidebar-over-content">
 	<!-- BEGIN HEADER -->
 		<?php 
-			$this->load->view('Users/header_Users.php');
+			$this->load->view('Users/header_users.php');
 		?>
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('Users/sidebar_Users.php');
+			$this->load->view('Users/sidebar_users.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 
@@ -125,6 +125,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;" class="col-md-20">
+							<form action="<?php echo base_url()."index.php/Aps_a6212_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
@@ -139,113 +141,29 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
 								<tr>
 								 	<td>1</td>
 								 	<td>Pendidikan</td>
-								 	<td><input type="text" name="" class="form-control" value="2298266,46"></td>
-								 	<td><input type="text" name="" class="form-control" value="2466829,158"></td>
-								 	<td><input type="text" name="" class="form-control" value="2920170,734"></td>
+								 	<td><input type="text" name="ts_2" class="form-control" value="<?php echo $ts_2; ?>"></td>
+								 	<td><input type="text" name="ts_1" class="form-control" value="<?php echo $ts_1; ?>"></td>
+								 	<td><input type="text" name="ts" class="form-control" value="<?php echo $ts; ?>"></td>
 								 </tr>
-								 <tr>
-								 	<td>2</td>
-								 	<td>Penelitian</td>
-								 	<td><input type="text" name="" class="form-control" value="59800"></td>
-								 	<td><input type="text" name="" class="form-control" value="60700"></td>
-								 	<td><input type="text" name="" class="form-control" value="65600"></td>
-								 </tr>
-								 <tr>
-								 	<td>3</td>
-								 	<td>Pengabdian Kepada Masyarakat</td>
-								 	<td><input type="text" name="" class="form-control" value="40200"></td>
-								 	<td><input type="text" name="" class="form-control" value="41300"></td>
-								 	<td><input type="text" name="" class="form-control" value="50600"></td>
-								 </tr>
-								 <tr>
-								 	<td colspan="2">Jumlah Dana Operasional</td>
-								 	<td>2398266.46</td>
-								 	<td>2568829.158</td>
-								 	<td>3036370.734</td>
-								 </tr>
-								  <tr>
-								 	<td>4</td>
-								 	<td>Investasi Prasarana</td>
-								 	<td><input type="text" name="" class="form-control" value="1969942,68"></td>
-								 	<td><input type="text" name="" class="form-control" value="2114424,993"></td>
-								 	<td><input type="text" name="" class="form-control" value="2503003,486"></td>
-								 </tr>
-								 <tr>
-								 	<td>5</td>
-								 	<td>Investasi Sarana</td>
-								 	<td><input type="text" name="" class="form-control" value="1313295,12"></td>
-								 	<td><input type="text" name="" class="form-control" value="1409616,662"></td>
-								 	<td><input type="text" name="" class="form-control" value="1668668,991"></td>
-								 </tr>
-								 <tr>
-								 	<td>6</td>
-								 	<td>Investasi SDM</td>
-								 	<td><input type="text" name="" class="form-control" value="656647,56"></td>
-								 	<td><input type="text" name="" class="form-control" value="704808,331"></td>
-								 	<td><input type="text" name="" class="form-control" value="834334,495"></td>
-								 </tr>
-								 <tr>
-								 	<td>7</td>
-								 	<td>Lain-lain</td>
-								 	<td><input type="text" name="" class="form-control"></td>
-								 	<td><input type="text" name="" class="form-control"></td>
-								 	<td><input type="text" name="" class="form-control"></td>
-								 </tr>
-								  <tr>
-								 	<td colspan="2">Jumlah Dana untuk Investasi</td>
-								 	<td>3939885.36</td>
-								 	<td>4228849.986</td>
-								 	<td>5006006.972</td>
-								 </tr>
-								  <tr>
-								 	<td colspan="2">Jumlah Dana (Operasional+Investasi)</td>
-								 	<td>6338151.82</td>
-								 	<td>6797679.144</td>
-								 	<td>8042377.706</td>
-								 </tr>
-								  <tr>
-								 	<td colspan="2">Jumlah Mahasiswa Aktif (Student Body)</td>
-								 	<td>201</td>
-								 	<td>139</td>
-								 	<td>139</td>
-								 </tr>
+								 
 							</tbody>
 							</table>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
-									</button>
-								</a>
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
+							<input type="hidden" name="kd_jns" value="<?php echo $kd_jns; ?>">
 							</div>
-							
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a6212_excel/export_excel";?>">
+								<button id="sample_editable_1_new" class="btn blue">
+									Simpan 
+								</button>
+							</div>
+							</form>
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Aps_a6212_excel/";?>">
 									<button id="sample_editable_1_new" class="btn red">
-										Batal 
+										Batal
 									</button>
 								</a>
 							</div>

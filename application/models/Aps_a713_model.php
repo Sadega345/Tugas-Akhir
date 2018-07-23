@@ -11,9 +11,15 @@ class Aps_a713_model extends CI_Model {
 
 // Listing
  public function listing() {
- 	$kdprodi = $this->session->userdata('kd_prodi');
+ $kdprodi = $this->session->userdata('kd_prodi');
  $data=$this->db->query('SELECT JUDUL,nama_dosen,publikasi,thn_publikasi,lokal,nasional,internasional,id FROM
 artikel_ilmiah WHERE kd_prodi='."'$kdprodi'");
+ return $data->result_array();
+ }
+
+ public function listed(){
+ $data=$this->db->query('SELECT JUDUL,nama_dosen,publikasi,thn_publikasi,lokal,nasional,internasional,id FROM
+artikel_ilmiah');
  return $data->result_array();
  }
 
@@ -24,14 +30,14 @@ artikel_ilmiah '.$where);
  }
 
  public function rubah($tablename,$data,$where){
-		$res=$this->db->update($tablename,$data,$where);
-		return $res;
-	}
+	$res=$this->db->update($tablename,$data,$where);
+	return $res;
+ }
 
-	public function insert($tablename,$data){
-		$res=$this->db->insert($tablename,$data);
-		return $res;
-	}
+public function insert($tablename,$data){
+	$res=$this->db->insert($tablename,$data);
+	return $res;
+}
 
  public function lokal() {
 	$kdprodi = $this->session->userdata('kd_prodi');

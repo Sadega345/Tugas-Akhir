@@ -163,9 +163,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td><?php echo $d['nm_jurnal']; ?></td>
 								 	<td><?php echo $d['rincian']; ?></td>
 								 	<td><?php echo $d['jml']; ?></td>
-								 	<td class="center">
-									<a href="#" >Edit</a>
-									</td>
 								 </tr>
 								 <?php } ?>
 							</tbody>
