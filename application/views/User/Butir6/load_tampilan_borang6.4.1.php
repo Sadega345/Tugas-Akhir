@@ -157,9 +157,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div> -->
 							
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a641_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Apd_a641_excel";?>">
 									<button id="sample_editable_1_new" class="btn blue">
-										Export To Excel
+										Batal
 									</button>
 								</a>
 							</div>
