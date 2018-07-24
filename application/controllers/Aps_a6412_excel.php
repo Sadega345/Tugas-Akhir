@@ -46,6 +46,7 @@ $this->load->view('Users/Butir6/tampilan_borang6.4.1.2.php',array('row1' => $row
 			
 		);
 		$where=array('id'=>$id);
+		// print_r($data_update);die;
 		$res=$this->Aps_a6412_model->rubah('jurnal',$data_update,$where);
 		// print_r($data_update);die;
 		if ($res>=1) {

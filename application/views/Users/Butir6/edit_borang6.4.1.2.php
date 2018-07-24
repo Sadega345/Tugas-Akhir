@@ -130,8 +130,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 							<thead>
 								<tr>
-									 <th>Jenis</th>
-									 <th>No</th>
+									 
 									 <th>Nama Jurnal</th>
 									 <th>Rincian nomor dan tahun</th>
 									 <th>Jumlah</th>
@@ -139,34 +138,15 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-								
 								<tr>
-								 	<td rowspan="<?php echo $r['row1'] ?>">Jurnal Terakreditasi DIKTI </td>
-									 
-								 	<td><?php echo $no++; ?></td>
-								 	<td><?php echo $d['nm_jurnal']; ?></td>
-								 	<td><?php echo $d['rincian']; ?></td>
-								 	<td><?php echo $d['jml']; ?></td>
-								 	
-								 </tr>
-								 <?php } ?>
-								 	<?php foreach ($row2 as $r) {
-								 ?>
-								 <tr>
-								 	<td rowspan="<?php echo $r['row2']; ?>">Jurnal Internasional</td>
-									 <?php } ?>
-									 <?php 
-									 	$no=1;
-									 	foreach ($data2 as $d) {
-									  ?>
-								 	<td><?php echo $no++; ?></td>
-								 	<td><?php echo $d['nm_jurnal']; ?></td>
-								 	<td><?php echo $d['rincian']; ?></td>
-								 	<td><?php echo $d['jml']; ?></td>
-								 </tr>
-								 <?php } ?>
+									<td><input type="text" class="form-control" name="nm_jurnal" value="<?php echo $nm_jurnal; ?>"></td>
+									<td><input type="text" class="form-control" name="rincian" value="<?php echo $rincian; ?>"></td>
+									<td><input type="text" class="form-control" name="jml" value="<?php echo $jml; ?>"></td>
+								</tr>
+								
 							</tbody>
 							</table>
+							<input type="hidden" name="id" value="<?php echo $id ?>">
 							</div>
 							<div class="btn-group">
 								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>

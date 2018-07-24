@@ -135,7 +135,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
 								<td class="center">
-									<a href="<?php echo base_url()."index.php/Aps_b6111_excel/ubah/".$a['id'] .$a['id_dana'];?>" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Aps_b6111_excel/ubah/".$a['id'].'/'.$a['id_dana'];?>" >Edit</a>
 								</td>	 
 							 </tr>
 							 <?php } ?>
@@ -149,7 +149,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $a['ts_1'] ?></td>
 								<td><?php echo $a['ts'] ?></td>
 								<td class="center">
-									<a href="<?php echo base_url()."index.php/Aps_b6111_excel/ubah/".$a['id'] .$a['id_dana'];?>" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Aps_b6111_excel/ubah/".$a['id'].'/'.$a['id_dana'];?>" >Edit</a>
 								</td>
 							 </tr>
 							 <?php } ?>

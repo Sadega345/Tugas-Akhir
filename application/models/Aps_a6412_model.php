@@ -36,8 +36,8 @@ public function __construct()
 
 
  public function update($where="") {
-	$kdprodi = $this->session->userdata('kd_prodi');
- 	$data2=$this->db->query('select nm_jurnal,rincian,jml from jurnal where '.$where);
+	
+ 	$data2=$this->db->query('SELECT id,nm_jurnal,rincian,jml FROM jurnal '.$where);
  	return $data2->result_array();
  }
 

@@ -71,7 +71,7 @@ public function listing1() {
  }
 
  public function update($where="") {
- $data= $this->db->query('SELECT id,id_dana,jenis_dana,ts_2,ts_1,ts,sum(ts_2+ts_1+ts) as total1 FROM perolehan_dana '.$where);
+ $data= $this->db->query('SELECT id,id_dana,jenis_dana,ts_2,ts_1,ts,SUM(ts_2+ts_1+ts) AS total1 FROM perolehan_dana '.$where);
  return $data->result_array();
  }
 

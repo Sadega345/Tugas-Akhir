@@ -32,14 +32,15 @@ public function index() {
 
  }
 
- public function ubah($id){
+ public function ubah($id,$kd_jns){
  	$this->model_squrity->getsqurity();
-	$res=$this->Aps_b6112_model->update("where id='$id'");
+	$res=$this->Aps_b6112_model->update("where id='$id' and kd_jns='$kd_jns'");
 	$data=array(
 		"ts_2"=>$res[0]['ts_2'],
 		"id"=>$res[0]['id'],
 		"ts_1"=>$res[0]['ts_1'],
 		"ts"=>$res[0]['ts'],
+		"kd_jns"=>$res[0]['kd_jns'],
 	);
 
 		$this->load->view('Users/Butir6B/edit_borang6.1.1.2.php',$data);
@@ -50,6 +51,7 @@ public function index() {
 		$ts_1=$_POST['ts_1'];
 		$ts=$_POST['ts'];
 		$id=$_POST['id'];
+		$kd_jns=$_POST['kd_jns'];
 		
 		$data_update=array(
 			"ts_2"=>$ts_2,
@@ -57,7 +59,10 @@ public function index() {
 			"ts"=>$ts,
 			
 		);
-		$where=array('id'=>$id);
+		$where=array(
+			'id'=>$id,
+			'kd_jns'=>$kd_jns
+		);
 		// print_r($data_update);die;
 		$res=$this->Aps_b6112_model->rubah('penggunaan_dana',$data_update,$where);
 		

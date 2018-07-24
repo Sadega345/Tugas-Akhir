@@ -12,37 +12,37 @@ public function __construct()
 // Listing
  public function listing1() {
  $kdprodi = $this->session->userdata('kd_prodi');
- $dana1=$this->db->query('select id,ts_2,ts_1,ts from penggunaan_dana where kd_jns=1 and kd_prodi='."'$kdprodi'");
+ $dana1=$this->db->query('select id,ts_2,ts_1,ts,kd_jns from penggunaan_dana where kd_jns=1 and kd_prodi='."'$kdprodi'");
  return $dana1->result_array();
  }
 
  public function listing2() {
  $kdprodi = $this->session->userdata('kd_prodi');
- $dana2=$this->db->query('select id,ts_2,ts_1,ts from penggunaan_dana where kd_jns=2 and kd_prodi='."'$kdprodi'");
+ $dana2=$this->db->query('select id,ts_2,ts_1,ts,kd_jns from penggunaan_dana where kd_jns=2 and kd_prodi='."'$kdprodi'");
  return $dana2->result_array();
  }
 
  public function listing3() {
  $kdprodi = $this->session->userdata('kd_prodi');
- $dana3=$this->db->query('select id,ts_2,ts_1,ts from penggunaan_dana where kd_jns=3 and kd_prodi='."'$kdprodi'");
+ $dana3=$this->db->query('select id,ts_2,ts_1,ts,kd_jns from penggunaan_dana where kd_jns=3 and kd_prodi='."'$kdprodi'");
  return $dana3->result_array();
  }
 
  public function listing4() {
  $kdprodi = $this->session->userdata('kd_prodi');
- $dana4=$this->db->query('select id,ts_2,ts_1,ts from penggunaan_dana where kd_jns=4 and kd_prodi='."'$kdprodi'");
+ $dana4=$this->db->query('select id,ts_2,ts_1,ts,kd_jns from penggunaan_dana where kd_jns=4 and kd_prodi='."'$kdprodi'");
  return $dana4->result_array();
  }
 
  public function listing5() {
  $kdprodi = $this->session->userdata('kd_prodi');
- $dana5=$this->db->query('select id,ts_2,ts_1,ts from penggunaan_dana where kd_jns=5 and kd_prodi='."'$kdprodi'");
+ $dana5=$this->db->query('select id,ts_2,ts_1,ts,kd_jns from penggunaan_dana where kd_jns=5 and kd_prodi='."'$kdprodi'");
  return $dana5->result_array();
  }
 
  public function listing6() {
  $kdprodi = $this->session->userdata('kd_prodi');
- $dana6=$this->db->query('select id,ts_2,ts_1,ts from penggunaan_dana where kd_jns=6 and kd_prodi='."'$kdprodi'");
+ $dana6=$this->db->query('select id,ts_2,ts_1,ts,kd_jns from penggunaan_dana where kd_jns=6 and kd_prodi='."'$kdprodi'");
  return $dana6->result_array();
  }
 
@@ -65,7 +65,7 @@ public function __construct()
  }
 
  public function update($where="") {
-	 $data= $this->db->query('select id,ts_2,ts_1,ts from penggunaan_dana '.$where);
+	 $data= $this->db->query('select id,ts_2,ts_1,ts,kd_jns from penggunaan_dana '.$where);
 	 return $data->result_array();
 	 }
 

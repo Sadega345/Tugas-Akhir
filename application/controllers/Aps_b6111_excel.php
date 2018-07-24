@@ -34,26 +34,18 @@ public function index() {
 		"ts_1"=>$res[0]['ts_1'],
 		"ts"=>$res[0]['ts'],
 		"jenis_dana"=>$res[0]['jenis_dana'],
-		// "total1"=>$res[0]['total1']
+		// "total1"=>$res[0]['total1'],
 	);
-
-
-	if ($id_dana==1) {
-		$this->load->view('Users/Butir6B/edit_borang6.1.1.1.php',$data);
-	}else if ($id_dana==5) {
-		$this->load->view('Users/Butir6B/edit_borang6.1.1.1(2).php',$data);
-	}else if ($id_dana==6) {
-		$this->load->view('Users/Butir6B/edit_borang6.1.1.1(3).php',$data);
-	}else if ($id_dana==4) {
-		$this->load->view('Users/Butir6B/edit_borang6.1.1.1(4).php',$data);
-	}
+	
+	$this->load->view('Users/Butir6B/edit_borang6.1.1.1.php',$data);
+	
  }
 
  public function do_edit(){
 		$ts_2=$_POST['ts_2'];
 		$ts_1=$_POST['ts_1'];
 		$ts=$_POST['ts'];
-		$jenis_dana=$_POST['jenis_dana'];
+		
 		$id=$_POST['id'];
 		$id_dana=$_POST['id_dana'];
 		
@@ -61,7 +53,7 @@ public function index() {
 			"ts_2"=>$ts_2,
 			"ts_1"=>$ts_1,
 			"ts"=>$ts,
-			"jenis_dana"=> $jenis_dana
+			
 			
 		);
 		$where=array('id'=>$id, 'id_dana'=>$id_dana);

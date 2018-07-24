@@ -124,13 +124,15 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div> -->
 								</div>
 							</div>
+							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Aps_b6111_excel/do_edit"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th rowspan="2">Sumber Dana</th>
+									 
 									 <th rowspan="2">Jenis Dana</th>
 									 <th colspan="3">Jumlah Dana (juta rupiah)</th>
-									 <th rowspan="2">Total</th>
+									 
 								 </tr>
 								 <tr>
 								 	<th>TS-2</th>
@@ -139,147 +141,26 @@ License: You must have a valid license purchased only from themeforest(the above
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
 							<tr>
-							 	<td rowspan="4">Usaha Sendiri</td>
-							 	<td>Beasiswa Yayasan</td>
-							 	<td><input type="text" name="" class="form-control" value="823200"></td>
-							 	<td><input type="text" name="" class="form-control" value="537600"></td>
-							 	<td><input type="text" name="" class="form-control" value="529200"></td>
-							 	<td>18900000</td>
-							 </tr>
-							 <tr>
-							 	<td>Hibah Yayasan</td>
-							 	<td><input type="text" name="" class="form-control" value="5000000"></td>
-							 	<td><input type="text" name="" class="form-control" value="5000000"></td>
-							 	<td><input type="text" name="" class="form-control" value="0"></td>
-							 	<td>10000000</td>
-							 </tr>
-							 <tr>
-							 	<td>Hibah Unit Usaha (PT Pasim Sentra Utama)</td>
-							 	<td><input type="text" name="" class="form-control" value="75000"></td>
-							 	<td><input type="text" name="" class="form-control" value="973050"></td>
-							 	<td><input type="text" name="" class="form-control" value="7497529,5"></td>
-							 	<td>8545579.5</td>
-							 </tr>
-							 <tr>
-							 	<td>Jumlah dana dari usaha sendiri</td>
-							 	<td>5898200</td>
-							 	<td>6510650</td>
-							 	<td>8026729.5</td>
-							 	<td>20435580</td>
-							 </tr>
-							  <tr>
-							 	<td rowspan="4">Mahasiswa</td>
-							 	<td>Pendaftaran</td>
-							 	<td><input type="text" name="" class="form-control" value="1250"></td>
-							 	<td><input type="text" name="" class="form-control" value="2750"></td>
-							 	<td><input type="text" name="" class="form-control" value="3250"></td>
-							 	<td>4500</td>
-							 </tr>
-							 <tr>
-							 	<td>Biaya Registrasi</td>
-							 	<td><input type="text" name="" class="form-control" value="10750"></td>
-							 	<td><input type="text" name="" class="form-control" value="23650"></td>
-							 	<td><input type="text" name="" class="form-control" value="27950"></td>
-							 	<td>62350</td>
-							 </tr>
-							 <tr>
-							 	<td>Biaya Kuliah</td>
-							 	<td><input type="text" name="" class="form-control" value="21000"></td>
-							 	<td><input type="text" name="" class="form-control" value="46200"></td>
-							 	<td><input type="text" name="" class="form-control" value="54600"></td>
-							 	<td>121800</td>
-							 </tr>
-							 <tr>
-							 	<td>Jumlah dana dari usaha sendiri</td>
-							 	<td>33000</td>
-							 	<td>69850</td>
-							 	<td>85800</td>
-							 	<td>188650</td>
-							 </tr>
-							  <tr>
-							 	<td rowspan="2">Pemerintah</td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td><input type="text" name="" class="form-control"></td>
-							 	<td>0</td>
-							 </tr>
-							 <tr>
-							 	<td>Jumlah dana dari usaha sendiri</td>
-							 	<td><input type="text" name="" class="form-control" value="0"></td>
-							 	<td><input type="text" name="" class="form-control" value="0"></td>
-							 	<td><input type="text" name="" class="form-control" value="0"></td>
-							 	<td><input type="text" name="" class="form-control" value="0"></td>
-							 </tr>
-							 <tr>
-							 	<td rowspan="4">Sumber Lain</td>
-							 	<td>Alumni</td>
-							 	<td><input type="text" name="" class="form-control" value="1288884"></td>
-							 	<td><input type="text" name="" class="form-control" value="1166953,67"></td>
-							 	<td><input type="text" name="" class="form-control" value="1062653,78"></td>
-							 	<td>3518491.5</td>
-							 </tr>
-							 <tr>
-							 	<td>Hibah Penelitian</td>
-							 	<td><input type="text" name="" class="form-control" value="35800"></td>
-							 	<td><input type="text" name="" class="form-control" value="39700"></td>
-							 	<td><input type="text" name="" class="form-control" value="44600"></td>
-							 	<td>102100</td>
-							 </tr>
-							 <tr>
-							 	<td>Hibah Pengabdian</td>
-							 	<td><input type="text" name="" class="form-control" value="40200"></td>
-							 	<td><input type="text" name="" class="form-control" value="41300"></td>
-							 	<td><input type="text" name="" class="form-control" value="50600"></td>
-							 	<td>132100</td>
-							 </tr>
-							 <tr>
-							 	<td>Jumlah dana dari usaha sendiri</td>
-							 	<td>1364884</td>
-							 	<td>1247953.67</td>
-							 	<td>1157853.78</td>
-							 	<td>3770691.5</td>
-							 </tr>
-							 <tr>
-							 	<td colspan="2">TOTAL *</td>
-							 	<td>7296984</td>
-							 	<td>7828453.67</td>
-							 	<td>9270383.28</td>
-							 	<td>24394921</td>
+							 	<td><?php echo $jenis_dana ?></td>
+							 	<td><input type="text" name="ts_2" class="form-control" value="<?php echo $ts_2 ?>"></td>
+							 	<td><input type="text" name="ts_1" class="form-control" value="<?php echo $ts_1 ?>"></td>
+							 	<td><input type="text" name="ts" class="form-control" value="<?php echo $ts ?>"></td>
+							 	
 							 </tr>
 							</tbody>
 							</table>
-							<div class="btn-group">
-								<a href="#">
-									<button id="sample_editable_1_new" class="btn blue">
-										Simpan 
-									</button>
-								</a>
+							<input type="hidden" name="id" value="<?php echo $id ?>">
+							<input type="hidden" name="id_dana" value="<?php echo $id_dana ?>">
 							</div>
-							
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_b6111_excel/export_excel";?>">
+								<button id="sample_editable_1_new" class="btn blue">
+									Simpan 
+								</button>
+							</div>
+							</form>
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Aps_b6111_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal
 									</button>

@@ -18,7 +18,7 @@ public function index() {
  	$pustaka1=$this->Apd_a641_model->loadlisting1();
 	$totaljudul=$this->Apd_a641_model->loadtotjudul();
 	$totalkopi=$this->Apd_a641_model->loadtotkopi();
-	$this->load->view('User/Butir6/tampilan_borang6.4.1.php',array('pustaka1'=>$pustaka1,
+	$this->load->view('User/Butir6/load_tampilan_borang6.4.1.php',array('pustaka1'=>$pustaka1,
 																	'totjudul'=>$totaljudul,
 																'totkopi'=>$totalkopi));
  }

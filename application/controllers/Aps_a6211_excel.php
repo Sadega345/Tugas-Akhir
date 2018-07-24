@@ -34,36 +34,37 @@ public function index() {
  }
 
  public function ubah($id){
- 	$this->model_squrity->getsqurity();
-	$res=$this->Aps_a6211_model->update("where id='$id'");
-	$data=array(
-		"jenis_dana"=>$res[0]['jenis_dana'],
-		"id"=>$res[0]['id'],
-		"ts_2"=>$res[0]['ts_2'],
-		"ts_1"=>$res[0]['ts_1'],
-		"ts"=>$res[0]['ts'],
-		"total1"=>$res[0]['total1'],
-	);
+ // 	$this->model_squrity->getsqurity();
+	// $res=$this->Aps_a6211_model->update("where id='$id'");
+	// $data=array(
+	// 	"jenis_dana"=>$res[0]['jenis_dana'],
+	// 	"id"=>$res[0]['id'],
+	// 	"ts_2"=>$res[0]['ts_2'],
+	// 	"ts_1"=>$res[0]['ts_1'],
+	// 	"ts"=>$res[0]['ts'],
+	// 	"total1"=>$res[0]['total1'],
+	// );
 
-	if ($id==1) {
-		$this->load->view('User/Butir6/edit_borang6.2.1.1.php',$data);
-	}else if ($id==2) {
-		$this->load->view('User/Butir6/edit_borang6.2.1.1(2).php',$data);
-	}else if ($id==3) {
-		$this->load->view('User/Butir6/edit_borang6.2.1.1(3).php',$data);
-	}else if ($id==4) {
-		$this->load->view('User/Butir6/edit_borang6.2.1.1(4).php',$data);
-	}else if ($id==5) {
-		$this->load->view('User/Butir6/edit_borang6.2.1.1(5).php',$data);
-	}else if ($id==6) {
-		$this->load->view('User/Butir6/edit_borang6.2.1.1(6).php',$data);
-	}else if ($id==7) {
-		$this->load->view('User/Butir6/edit_borang6.2.1.1(7).php',$data);
-	}else if ($id==8) {
-		$this->load->view('User/Butir6/edit_borang6.2.1.1(8).php',$data);
-	}else if ($id==9) {
-		$this->load->view('User/Butir6/edit_borang6.2.1.1(9).php',$data);
-	}
+	// if ($id==1) {
+	// 	$this->load->view('User/Butir6/edit_borang6.2.1.1.php',$data);
+	// }else if ($id==2) {
+	// 	$this->load->view('User/Butir6/edit_borang6.2.1.1(2).php',$data);
+	// }else if ($id==3) {
+	// 	$this->load->view('User/Butir6/edit_borang6.2.1.1(3).php',$data);
+	// }else if ($id==4) {
+	// 	$this->load->view('User/Butir6/edit_borang6.2.1.1(4).php',$data);
+	// }else if ($id==5) {
+	// 	$this->load->view('User/Butir6/edit_borang6.2.1.1(5).php',$data);
+	// }else if ($id==6) {
+	// 	$this->load->view('User/Butir6/edit_borang6.2.1.1(6).php',$data);
+	// }else if ($id==7) {
+	// 	$this->load->view('User/Butir6/edit_borang6.2.1.1(7).php',$data);
+	// }else if ($id==8) {
+	// 	$this->load->view('User/Butir6/edit_borang6.2.1.1(8).php',$data);
+	// }else if ($id==9) {
+	// 	$this->load->view('User/Butir6/edit_borang6.2.1.1(9).php',$data);
+	// }
+	echo "Masuk sini";
  	
  }
 
