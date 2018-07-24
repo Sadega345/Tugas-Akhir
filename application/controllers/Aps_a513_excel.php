@@ -64,7 +64,7 @@ public function do_tambah(){
 
   public function do_edit(){
 		$bobot_sks=$_POST['bobot_sks'];
-		$kode_mk=$_POST['kode_mk'];
+		$id=$_POST['id'];
 		$bobot_tgs=$_POST['bobot_tgs'];
 		$penyelenggara=$_POST['penyelenggara'];
 		
@@ -75,8 +75,9 @@ public function do_tambah(){
 			
 		);
 		$where=array('id'=>$id);
-		$res=$this->Aps_a513_model->rubah('struktur_kurikulum',$data_update,$where);
 		// print_r($data_update);die;
+		$res=$this->Aps_a513_model->rubah('struktur_kurikulum',$data_update,$where);
+		
 		if ($res>=1) {
 			redirect('Aps_a513_excel');
 		}

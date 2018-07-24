@@ -45,7 +45,7 @@ public function do_tambah(){
 
 public function ubah($id){
  	$this->model_squrity->getsqurity();
-	$res=$this->Aps_a541_model->update("where Id='$id'");
+	$res=$this->Aps_a541_model->update("and Id='$id'");
 	$data=array(
 		"nama_dosen"=>$res[0]['nama_dosen'],
 		"j_mhs_bimbingan"=>$res[0]['j_mhs_bimbingan'],

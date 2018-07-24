@@ -51,25 +51,25 @@ public function index() {
 		"total1"=>$res[0]['total1'],
 	);
 
-	if ($id==1) {
-		$this->load->view('User/Butir6/edit_borang6.2.1.1.php',$data);
-	}else if ($id==2) {
-		$this->load->view('User/Butir6/edit_borang6.2.1.1(2).php',$data);
-	}else if ($id==3) {
-		$this->load->view('User/Butir6/edit_borang6.2.1.1(3).php',$data);
-	}else if ($id==4) {
-		$this->load->view('User/Butir6/edit_borang6.2.1.1(4).php',$data);
-	}else if ($id==5) {
-		$this->load->view('User/Butir6/edit_borang6.2.1.1(5).php',$data);
-	}else if ($id==6) {
-		$this->load->view('User/Butir6/edit_borang6.2.1.1(6).php',$data);
-	}else if ($id==7) {
-		$this->load->view('User/Butir6/edit_borang6.2.1.1(7).php',$data);
-	}else if ($id==8) {
-		$this->load->view('User/Butir6/edit_borang6.2.1.1(8).php',$data);
-	}else if ($id==9) {
-		$this->load->view('User/Butir6/edit_borang6.2.1.1(9).php',$data);
-	}
+	// if ($id==1) {
+		$this->load->view('User/Butir6/edit_borang6.2.1.1.php',$data.$id);
+	// }else if ($id==2) {
+	// 	$this->load->view('User/Butir6/edit_borang6.2.1.1(2).php',$data);
+	// }else if ($id==3) {
+	// 	$this->load->view('User/Butir6/edit_borang6.2.1.1(3).php',$data);
+	// }else if ($id==4) {
+	// 	$this->load->view('User/Butir6/edit_borang6.2.1.1(4).php',$data);
+	// }else if ($id==5) {
+	// 	$this->load->view('User/Butir6/edit_borang6.2.1.1(5).php',$data);
+	// }else if ($id==6) {
+	// 	$this->load->view('User/Butir6/edit_borang6.2.1.1(6).php',$data);
+	// }else if ($id==7) {
+	// 	$this->load->view('User/Butir6/edit_borang6.2.1.1(7).php',$data);
+	// }else if ($id==8) {
+	// 	$this->load->view('User/Butir6/edit_borang6.2.1.1(8).php',$data);
+	// }else if ($id==9) {
+	// 	$this->load->view('User/Butir6/edit_borang6.2.1.1(9).php',$data);
+	// }
  	
  }
 

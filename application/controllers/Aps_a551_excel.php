@@ -23,13 +23,14 @@ public function do_tambah(){
 		$kdprodi = $this->session->userdata('kd_prodi');
 		$this->model_squrity->getsqurity();
 		$id_dosen=$_POST['id_dosen'];
-		$j_mhs_bimbingan=$_POST['j_mhs_bimbingan'];
+		$jml_mhs=$_POST['jml_mhs'];
 		$data_insert=array(
 			'id_dosen'=>$id_dosen,
 			'kd_prodi'=>$kdprodi,
 			'jml_mhs' => $jml_mhs,
 
 		);
+		// print_r($data_insert);die();
 		$res=$this->Aps_a551_model->insert('pembimbing_skripsi',$data_insert);
 		if ($res>=1) {
 			redirect('Aps_a551_excel');

@@ -85,7 +85,7 @@ public function do_tambah(){
 		// $kode_mk=$_POST['kode_mk'];
 		// $nama_mk=$_POST['nama_mk'];
 		$bobot_sks=$_POST['bobot_sks'];
-		
+		$id=$_POST['id'];
 		
 		$sks_inti = $_POST['sks_inti'];
 		$sks_institusi = $_POST['sks_institusi'];
@@ -109,6 +109,7 @@ public function do_tambah(){
 			
 		);
 		$where=array('id'=>$id);
+		// print_r($data_update);die();
 		$res=$this->Aps_a5122_model->rubah('struktur_kurikulum',$data_update,$where);
 		if ($res>=1) {
 			redirect('Aps_a5122_excel');

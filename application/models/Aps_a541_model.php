@@ -18,8 +18,11 @@ class Aps_a541_model extends CI_Model {
  }
 
  public function update($where="") {
+ 	$kdprodi = $this->session->userdata('kd_prodi');
  $data= $this->db->query('SELECT d.nama_dosen, p.j_mhs_bimbingan,p.rata2_pertemuan,p.Id FROM pembimbing_akd p INNER JOIN
- dosen_tbl d ON p.id_dosen=d.id_dosen '.$where);
+ dosen_tbl d ON p.id_dosen=d.id_dosen WHERE p.kd_prodi='."'$kdprodi'" .$where);
+
+ 
  return $data->result_array();
  }
 

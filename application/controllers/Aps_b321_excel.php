@@ -43,8 +43,9 @@ $this->load->view('Users/Butir3B/tampilan_borang3.2.1.php',array('masastudi'=>$m
 			
 		);
 		$where=array('id'=>$id);
-		$res=$this->Aps_b321_model->rubah('masastudi_ipk',$data_update,$where);
 		// print_r($data_update);die;
+		$res=$this->Aps_b321_model->rubah('masastudi_ipk',$data_update,$where);
+		
 		if ($res>=1) {
 			redirect('Aps_b321_excel');
 		}
