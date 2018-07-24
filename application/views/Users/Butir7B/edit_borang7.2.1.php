@@ -130,7 +130,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th rowspan="2">No</th>
+									 <!--    -->
 									 <th rowspan="2">Nama Program Studi</th>
 									 <th colspan="3">Jumlah Judul Kegiatan Pelayanan / Pengabdian Kepada Masyarakat</th>
 									 <th colspan="3">Total Dana  Kegiatan Pelayanan / Pengabdian Kepada Masyarakat(Juta Rupiah)</th>
@@ -147,19 +147,19 @@ License: You must have a valid license purchased only from themeforest(the above
 							<tbody>
 							
 							<tr>
-							 	<td><?php echo $KD_JNS; ?></td>
+							 	<!-- <td><?php echo $KD_JNS; ?></td> -->
 							 	<td><?php echo $jurusan; ?></td>
 							 	<td><input type="text" name="Tot_Ts2" class="form-control" value="<?php echo $Tot_Ts2; ?>"></td>
 							 	<td><input type="text" name="Tot_Ts1" class="form-control" value="<?php echo $Tot_Ts1; ?>"></td>
 							 	<td><input type="text" name="Tot_Ts" class="form-control" value="<?php echo $Tot_Ts; ?>"></td>
-							 	<td><?php echo $Jum_dana2014; ?></td>
-							 	<td><?php echo $Jum_dana2015; ?></td>
-							 	<td><?php echo $Jum_dana2016; ?></td>
+							 	<td><input type="text" name="Jum_dana2014" class="form-control" value="<?php echo $Jum_dana2014; ?>"></td>
+							 	<td><input type="text" name="Jum_dana2015" class="form-control" value="<?php echo $Jum_dana2015; ?>"></td>
+							 	<td><input type="text" name="Jum_dana2016" class="form-control" value="<?php echo $Jum_dana2016; ?>"></td>
 							 </tr>	
 							</tbody>
 							</table>
 							</div>
-							<input type="hidden" name="KD_JNS" value="<?php echo $KD_JNS; ?>">
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							<div class="btn-group">
 								<button id="sample_editable_1_new" class="btn blue">
 									Simpan 

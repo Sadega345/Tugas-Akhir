@@ -102,7 +102,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="btn-group">
 											<a href="#">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah
+											Load
 											</button>
 											</a>
 										</div>
@@ -112,11 +112,11 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th rowspan="2">No.</th>
-									 <th rowspan="2">Nama Program Studi</th>
-									 <th colspan="3">Jumlah Judul Penelitian</th>
-									 <th colspan="3">Total Dana Penelitian (Juta Rupiah)</th>
-									 <th rowspan="2">Edit</th>
+									 <th rowspan="2"><center>No.</center></th>
+									 <th rowspan="2"><center>Nama Program Studi</center></th>
+									 <th colspan="3"><center>Jumlah Judul Penelitian</center></th>
+									 <th colspan="3"><center>Total Dana Penelitian (Juta Rupiah)</center></th>
+									 <th rowspan="2"><center>Aksi</center></th>
 								 </tr>
 								 <tr>
 								 	<th>TS-2</th>

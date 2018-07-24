@@ -120,7 +120,7 @@ CREATE TABLE `artikel_ilmiah` (
 
 LOCK TABLES `artikel_ilmiah` WRITE;
 
-insert  into `artikel_ilmiah`(`id`,`kd_prodi`,`judul`,`nama_dosen`,`publikasi`,`thn_publikasi`,`lokal`,`nasional`,`internasional`) values (1,'P001','Pembangunan Sistem Informasi Konsumsi Tunas Raharja di MAN 1 Cirebon','Nur Achadi, Selly Meliana','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(2,'P001','Pembangunan Aplikasi Bursa Kerja Khusus di SMK Negeri 1 Kota Sukabumi berbasis Web','Sriwisnu','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,NULL,'v',NULL),(3,'P001','Pembangunan Aplikasi Informasi Pajak Bumi dan Bangunan Berbasis Android dan Google Cloud Messanginges di Desa','Yudhistira','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'','v',''),(4,'P001','Pembangunan Aplikasi E-Learning SMA Negeri 1 Ciranjang','Eko Travada, Erna Hikmawati','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(5,'P001','Pembangunan Aplikasi Profil Pahlawan Nasional Indonesia Berbasis Android dan Google Map','Soleh Sabarudin, Eni Triningsih','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(6,'P002','Implementasi Algoritma Minimum Edit Distance dalam Pembangunan Aplikasi Pendeteksi Plagiarisme Dokumen Bahasa Indonesia ','Nur Achadi','Jurnal Ilmu Komputer\r\nVol. 7 No. 1',2016,'v',NULL,NULL),(7,'P002','Pembangunan Aplikasi Simulasi Antrian ATM dengan Menggunakan Metode Monte Carlo pada PT. Hitachi-Omron Terminal Solutions ','Eko Travada, Selly Meliana','Jurnal Ilmu Komputer\r\nVol. 8 No. 1',2017,'v',NULL,NULL),(9,'P002','Karya Tulis Ilmiah','Prabowo','Jurnal Ilmu Komputer Vol. 8 No. 1',2011,'v',NULL,NULL),(10,'P002','Karya Tulis Ilmiah 2','Lutfi Amalia','Jurnal Ilmu Komputer Vol. 8 No. 1',2018,NULL,'v',NULL),(12,'P002','aBB','sg','2',0,NULL,NULL,NULL);
+insert  into `artikel_ilmiah`(`id`,`kd_prodi`,`judul`,`nama_dosen`,`publikasi`,`thn_publikasi`,`lokal`,`nasional`,`internasional`) values (1,'P001','Pembangunan Sistem Informasi Konsumsi Tunas Raharja di MAN 1 Cirebon','Nur Achadi, Selly Meliana','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(2,'P001','Pembangunan Aplikasi Bursa Kerja Khusus di SMK Negeri 1 Kota Sukabumi berbasis Web','Sriwisnu','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,NULL,'v',NULL),(3,'P001','Pembangunan Aplikasi Informasi Pajak Bumi dan Bangunan Berbasis Android dan Google Cloud Messanginges di Desa','Yudhistira','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'','v',''),(4,'P001','Pembangunan Aplikasi E-Learning SMA Negeri 1 Ciranjang','Eko Travada, Erna Hikmawati','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(5,'P001','Pembangunan Aplikasi Profil Pahlawan Nasional Indonesia Berbasis Android dan Google Map','Soleh Sabarudin, Eni Triningsih','Jurnal Ilmu Komputer Vol. 6 No. 1',2015,'v',NULL,NULL),(6,'P002','Implementasi Algoritma Minimum Edit Distance dalam Pembangunan Aplikasi Pendeteksi Plagiarisme Dokumen Bahasa Indonesia ','Nur Achadi','Jurnal Ilmu Komputer\r\nVol. 7 No. 1',2016,'v',NULL,NULL),(7,'P002','Pembangunan Aplikasi Simulasi Antrian ATM dengan Menggunakan Metode Monte Carlo pada PT. Hitachi-Omron Terminal Solutions ','Eko Travada, Selly Meliana','Jurnal Ilmu Komputer\r\nVol. 8 No. 1',2017,'v',NULL,NULL),(9,'P002','Karya Tulis Ilmiah','Prabowo','Jurnal Ilmu Komputer Vol. 8 No. 1',2011,'v',NULL,NULL),(10,'P002','Karya Tulis Ilmiah 2','Lutfi Amalia','Jurnal Ilmu Komputer Vol. 8 No. 1',2018,NULL,'v',NULL);
 
 UNLOCK TABLES;
 
@@ -141,13 +141,13 @@ CREATE TABLE `dana_penelitian` (
   KEY `FK_dana_sumber` (`jns_dana`),
   CONSTRAINT `FK_dana_sumber` FOREIGN KEY (`jns_dana`) REFERENCES `sumber_dana` (`id_dana`),
   CONSTRAINT `FK_prodi_dana` FOREIGN KEY (`kd_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 /*Data for the table `dana_penelitian` */
 
 LOCK TABLES `dana_penelitian` WRITE;
 
-insert  into `dana_penelitian`(`id`,`kd_prodi`,`jns_dana`,`sumber_dana`,`tahun`,`judul_penelitian`,`jml_dana`) values (1,'P001',1,'Pemeritah',2014,'Pembangunan Aplikasi Bursa Kerja Khusus di SMK Negeri 1 Kota Sukabumi berbasis Web',9.5),(2,'P001',4,'PT. Pasim Sentra Utama',2014,'Pembangunan Aplikasi Informasi Pajak Bumi dan Bangunan Berbasis Android dan Google Cloud Messanginges di Desa',4.5),(3,'P001',1,'PS Sendiri',2014,'Pembangunan Aplikasi E-Learning SMA Negeri 1 Ciranjang',6.0),(4,'P001',4,'PT. Pasim Sentra Utama',2015,'Pembangunan Aplikasi Profil Pahlawan Nasional Indonesia Berbasis Android dan Google Map',6.5),(5,'P001',4,'PT. Stafalindo',2015,'Sistem Informasi Wisata Berbasis Android dan GIS Studi Kasus Pulau Biawak Indramayu',7.3),(6,'P002',4,'PT Pasim Sentra Utama',2013,'Implementasi Algoritma Minimum Edit Distance dalam Pembangunan Aplikasi Pendeteksi Plagiarisme Dokumen Bahasa Indonesia ',5.3),(7,'P002',4,'PT Rajawali',2014,'Sistem Pendukung Keputusan Penerimaan Mahasiswa Beasiswa dengan Metode AHP dan TOPSIS',8.0),(8,'P002',1,'PS Sendiri',2015,'Sistem Pendukung Keputusan Seleksi Beasiswa dengan Metode SAW (Simple Additive Weighting) Berbasis Web (Studi Kasus di SMA Negeri 1 Ciranjang)',4.2),(9,'P002',2,'PT Pasim Utama',2014,'Pembangunan Aplikasi Bursa Kerja Khusus di SMK Negeri 1 Kota Sukabumi berbasis Web',3.0),(10,'P002',1,'PT Sendiri',2018,'Pembangunan Aplikasi Pengolahan Format Data Borang Akreditasi A',9.0);
+insert  into `dana_penelitian`(`id`,`kd_prodi`,`jns_dana`,`sumber_dana`,`tahun`,`judul_penelitian`,`jml_dana`) values (1,'P001',1,'Pemeritah',2014,'Pembangunan Aplikasi Bursa Kerja Khusus di SMK Negeri 1 Kota Sukabumi berbasis Web',9.5),(2,'P001',4,'PT. Pasim Sentra Utama',2014,'Pembangunan Aplikasi Informasi Pajak Bumi dan Bangunan Berbasis Android dan Google Cloud Messanginges di Desa',4.5),(3,'P001',1,'PS Sendiri',2014,'Pembangunan Aplikasi E-Learning SMA Negeri 1 Ciranjang',6.0),(4,'P001',4,'PT. Pasim Sentra Utama',2015,'Pembangunan Aplikasi Profil Pahlawan Nasional Indonesia Berbasis Android dan Google Map',6.5),(5,'P001',4,'PT. Stafalindo',2015,'Sistem Informasi Wisata Berbasis Android dan GIS Studi Kasus Pulau Biawak Indramayu',7.3),(6,'P002',4,'PT Pasim Sentra Utama',2013,'Implementasi Algoritma Minimum Edit Distance dalam Pembangunan Aplikasi Pendeteksi Plagiarisme Dokumen Bahasa Indonesia ',5.3),(7,'P002',4,'PT Rajawali',2014,'Sistem Pendukung Keputusan Penerimaan Mahasiswa Beasiswa dengan Metode AHP dan TOPSIS',8.0),(8,'P002',1,'PS Sendiri',2015,'Sistem Pendukung Keputusan Seleksi Beasiswa dengan Metode SAW (Simple Additive Weighting) Berbasis Web (Studi Kasus di SMA Negeri 1 Ciranjang)',4.2),(9,'P002',2,'PT Pasim Utama',2014,'Pembangunan Aplikasi Bursa Kerja Khusus di SMK Negeri 1 Kota Sukabumi berbasis Web',3.0),(10,'P002',1,'PT Sendiri',2018,'Pembangunan Aplikasi Pengolahan Format Data Borang Akreditasi A',9.0),(11,'P002',1,'PT Sendiri',2016,'Pembangunan Aplikasi Repository Dosen',0.0);
 
 UNLOCK TABLES;
 
@@ -168,13 +168,13 @@ CREATE TABLE `dana_pengmas` (
   KEY `FK_prodi_pengmas` (`kd_prodi`),
   CONSTRAINT `FK_dana` FOREIGN KEY (`jns_dana`) REFERENCES `sumber_dana` (`id_dana`),
   CONSTRAINT `FK_prodi_pengmas` FOREIGN KEY (`kd_prodi`) REFERENCES `prodi_tbl` (`kode_prodi`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 /*Data for the table `dana_pengmas` */
 
 LOCK TABLES `dana_pengmas` WRITE;
 
-insert  into `dana_pengmas`(`id`,`kd_prodi`,`jns_dana`,`sumber_dana`,`tahun`,`judul_kegiatan`,`jumlah_dana`) values (1,'P001',4,'PT. Pasim Sentra Utama',2014,'Pelatihan Penggunaan Microsoft Word pada Ibu-Ibu PKK Desa Cileunyi Wetan',10.0),(2,'P001',4,'PT. Pasim Sentra Utama',2014,'Pelatihan Penggunaan Microsoft Word pada Ibu-Ibu PKK Desa Cileunyi Wetan',6.0),(3,'P001',3,'Dinas Koprasi dan UKM Kab. Bandung Barat',2014,'Peningkatan Efektivitas Pembuatan Surat dengan Menggunakan Microsoft Word Pada Ibu-Ibu PKK Desa Cileunyi Kulon',8.0),(4,'P001',4,'PT. Valanino',2015,'Peningkatan Efektivitas Pembuatan Surat dengan Menggunakan Microsoft Word Pada Ibu-Ibu PKK Desa Cileunyi Kulon ',6.1),(5,'P001',4,'PT. Valanino',2015,'Peningkatan Efektivitas Pembuatan Surat dengan Menggunakan Microsoft Word Pada Ibu-Ibu PKK Desa Cileunyi Kulon',6.2),(6,'P002',4,'Ares Co.Ltd',2015,'Implementasi Sistem Informasi Pencatatan Data Keuangan Untuk Pengembangan Koperasi Giri Waluya',6.3),(7,'P002',3,'PT. Pasim Sentra Utama',2016,'Penerapan Sistem Informasi Akuntansi dalam Kegiatan Operasional pada \r\nKoperasi Pilar Jaya',8.4),(8,'P001',3,'PT Pasim Utama',2017,'Workshop Mahasiswa',5.6);
+insert  into `dana_pengmas`(`id`,`kd_prodi`,`jns_dana`,`sumber_dana`,`tahun`,`judul_kegiatan`,`jumlah_dana`) values (1,'P001',4,'PT. Pasim Sentra Utama',2014,'Pelatihan Penggunaan Microsoft Word pada Ibu-Ibu PKK Desa Cileunyi Wetan',10.0),(2,'P001',4,'PT. Pasim Sentra Utama',2014,'Pelatihan Penggunaan Microsoft Word pada Ibu-Ibu PKK Desa Cileunyi Wetan',6.0),(3,'P001',3,'Dinas Koprasi dan UKM Kab. Bandung Barat',2014,'Peningkatan Efektivitas Pembuatan Surat dengan Menggunakan Microsoft Word Pada Ibu-Ibu PKK Desa Cileunyi Kulon',8.0),(4,'P001',4,'PT. Valanino',2015,'Peningkatan Efektivitas Pembuatan Surat dengan Menggunakan Microsoft Word Pada Ibu-Ibu PKK Desa Cileunyi Kulon ',6.1),(5,'P001',4,'PT. Valanino',2015,'Peningkatan Efektivitas Pembuatan Surat dengan Menggunakan Microsoft Word Pada Ibu-Ibu PKK Desa Cileunyi Kulon',6.2),(6,'P002',4,'Ares Co.Ltd',2015,'Implementasi Sistem Informasi Pencatatan Data Keuangan Untuk Pengembangan Koperasi Giri Waluya',6.3),(7,'P002',3,'PT. Pasim Sentra Utama',2016,'Penerapan Sistem Informasi Akuntansi dalam Kegiatan Operasional pada \r\nKoperasi Pilar Jaya',8.4),(8,'P001',3,'PT Pasim Utama',2017,'Workshop Mahasiswa',5.6),(9,'P002',3,'PT Pasim Utama',2014,'Seminar Tugas Akhir',0.0);
 
 UNLOCK TABLES;
 
@@ -398,13 +398,13 @@ CREATE TABLE `hak_intelektual` (
   `kd_prodi` varchar(6) NOT NULL,
   `karya` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 /*Data for the table `hak_intelektual` */
 
 LOCK TABLES `hak_intelektual` WRITE;
 
-insert  into `hak_intelektual`(`id`,`kd_prodi`,`karya`) values (1,'P002','Karya Hak Kekayaan Intelektual A'),(2,'P002','Karya Hak Imtelektual 2'),(3,'P002','Karya Hak Intelektual');
+insert  into `hak_intelektual`(`id`,`kd_prodi`,`karya`) values (1,'P002','Karya Hak Kekayaan Intelektual A'),(2,'P002','Karya Hak Imtelektual 2'),(3,'P002','Karya Hak Intelektual'),(4,'P002','Hak Atas Dasar Kekayaan Intelektual');
 
 UNLOCK TABLES;
 
@@ -841,7 +841,7 @@ CREATE TABLE `kegiatan_pkm` (
 
 LOCK TABLES `kegiatan_pkm` WRITE;
 
-insert  into `kegiatan_pkm`(`id`,`kd_jns`,`kd_prodi`,`ts_2`,`ts_1`,`ts`) values (1,1,'P001',5,10,5),(2,2,'P001',0,0,0),(3,3,'P001',0,0,0),(4,4,'P001',6,6,6),(5,5,'P001',0,0,1),(6,1,'P002',5,10,5),(7,2,'P002',0,0,0),(8,3,'P002',0,0,0),(9,4,'P002',4,2,5),(10,5,'P002',0,0,1),(11,6,'P002',1,0,1),(12,7,'P002',0,0,0);
+insert  into `kegiatan_pkm`(`id`,`kd_jns`,`kd_prodi`,`ts_2`,`ts_1`,`ts`) values (1,1,'P001',4,10,5),(2,2,'P001',0,0,0),(3,3,'P001',0,0,0),(4,4,'P001',6,6,6),(5,5,'P001',0,0,1),(6,1,'P002',4,10,5),(7,2,'P002',0,0,0),(8,3,'P002',0,0,0),(9,4,'P002',4,2,5),(10,5,'P002',0,0,1),(11,6,'P002',1,0,1),(12,7,'P002',0,0,0);
 
 UNLOCK TABLES;
 

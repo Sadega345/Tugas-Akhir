@@ -12,19 +12,19 @@ class Aps_a713_model extends CI_Model {
 // Listing
  public function listing() {
  $kdprodi = $this->session->userdata('kd_prodi');
- $data=$this->db->query('SELECT JUDUL,nama_dosen,publikasi,thn_publikasi,lokal,nasional,internasional,id FROM
+ $data=$this->db->query('SELECT id,JUDUL,nama_dosen,publikasi,thn_publikasi,lokal,nasional,internasional,id FROM
 artikel_ilmiah WHERE kd_prodi='."'$kdprodi'");
  return $data->result_array();
  }
 
  public function listed(){
- $data=$this->db->query('SELECT JUDUL,nama_dosen,publikasi,thn_publikasi,lokal,nasional,internasional,id FROM
+ $data=$this->db->query('SELECT id,JUDUL,nama_dosen,publikasi,thn_publikasi,lokal,nasional,internasional,id FROM
 artikel_ilmiah');
  return $data->result_array();
  }
 
  public function update($where="") {
- $data= $this->db->query('SELECT JUDUL,nama_dosen,publikasi,thn_publikasi,lokal,nasional,internasional,id FROM
+ $data= $this->db->query('SELECT id,JUDUL,nama_dosen,publikasi,thn_publikasi,lokal,nasional,internasional,id FROM
 artikel_ilmiah '.$where);
  return $data->result_array();
  }
@@ -36,6 +36,11 @@ artikel_ilmiah '.$where);
 
 public function insert($tablename,$data){
 	$res=$this->db->insert($tablename,$data);
+	return $res;
+}
+
+public function delete($tablename,$where){
+	$res=$this->db->delete($tablename,$where);
 	return $res;
 }
 
@@ -56,5 +61,6 @@ public function insert($tablename,$data){
  $data=$this->db->query('SELECT COUNT(IF(internasional LIKE "v%",internasional,NULL))AS JML FROM artikel_ilmiah WHERE kd_prodi='."'$kdprodi'");
  return $data->result_array();
  }
+
 
 }

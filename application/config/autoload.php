@@ -138,4 +138,4 @@ $autoload['model'] = array('model_login','Model_password','model_squrity','model
 	'Aps_a455_model','Aps_a461_model','Aps_a5121_model','Aps_a522_model','Aps_a541_model','Aps_a552_model','Aps_a6211_model','Aps_a6212_model',
 	'Aps_a622_model','Aps_a623_model','Aps_a631_model','Aps_a641_model','Aps_a652_model','Aps_a711_model','Aps_a712_model','Aps_a721_model',
 	'Aps_b312_model','Aps_b321_model','Apd_b411_model','Apd_b412_model','Aps_b42_model','Aps_b6111_model','Aps_b6112_model','Aps_b6113_model',
-	'Aps_b642_model','Aps_b711_model','Aps_b721_model','Pengisis_model','Data_dosens_model','Aps_b411_model','Aps_b412_model','Aps_a331_model','Aps_a5122_model','Aps_a513_model','Aps_a551_model','Aps_a6411_model','Aps_a6412_model','Aps_a713_model');
+	'Aps_b642_model','Aps_b711_model','Aps_b721_model','Pengisis_model','Data_dosens_model','Aps_b411_model','Aps_b412_model','Aps_a331_model','Aps_a5122_model','Aps_a513_model','Aps_a551_model','Aps_a6411_model','Aps_a6412_model','Aps_a713_model','Aps_a714_model');

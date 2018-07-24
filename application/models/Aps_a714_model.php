@@ -16,14 +16,29 @@ public function __construct()
 	return $data->result_array();
  }
 
+ public function listed(){
+ 	$kdprodi=$this->session->userdata('kd_prodi');
+ 	$data=$this->db->query('SELECT karya,id from hak_intelektual');
+ 	return $data->result_array();
+ }
+
   public function update($where="") {
 	 $data= $this->db->query('SELECT karya,id FROM hak_intelektual '.$where);
 	 return $data->result_array();
  }
 
- 	public function rubah($tablename,$data,$where){
-		$res=$this->db->update($tablename,$data,$where);
-		return $res;
-	}
+ public function rubah($tablename,$data,$where){
+	$res=$this->db->update($tablename,$data,$where);
+	return $res;
+ }
+
+public function insert($tablename,$data){
+	$res=$this->db->insert($tablename,$data);
+	return $res;
+}
+public function delete($tablename,$where){
+	$res=$this->db->delete($tablename,$where);
+	return $res;
+}
 
 }

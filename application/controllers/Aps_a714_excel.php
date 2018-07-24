@@ -44,6 +44,39 @@ public function index() {
 		// }
 	}
 
+public function tambah(){
+		$this->load->view('Users/Butir7/inputan_borang7.1.4.php');
+ }
+
+	public function do_tambah(){
+		$kdprodi = $this->session->userdata('kd_prodi');
+		$this->model_squrity->getsqurity();
+		$id=$_POST['id'];
+		$karya=$_POST['karya'];
+		$data_insert=array(
+			'id' => $id,
+			'kd_prodi' => $kdprodi,
+			'karya'=>$karya,
+		);
+		$res=$this->Aps_a714_model->insert('hak_intelektual',$data_insert);
+		if ($res>=1) {
+			redirect('Aps_a714_excel');
+		}else {
+			alert('Gagal Insert');
+		}
+	}
+
+	public function do_hapus($id){
+		$this->model_squrity->getsqurity();
+		$where=array('id'=>$id);
+		$res=$this->Aps_a714_model->Delete('hak_intelektual',$where);
+		if($res>=1){
+			redirect('Aps_a714_excel');
+		}else {
+			alert('Gagal Hapus');
+		}
+	}
+
 public function export_excel(){
  $data = $this->Aps_a714_model->listing();
  $this->load->view('Users/Butir7/tampilan_borang7.1.4_excel.php',array('data'=>$data));

@@ -100,9 +100,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/CrudFakultas/tambah";?>">
+											<a href="#">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah
+											Load
 											</button>
 											</a>
 										</div>
@@ -113,19 +113,19 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th rowspan="2">No</th>
-									 <th rowspan="2">Nama Program Studi</th>
-									 <th colspan="3">Jumlah Judul Kegiatan Pelayanan / Pengabdian Kepada Masyarakat</th>
-									 <th colspan="3">Total Dana  Kegiatan Pelayanan / Pengabdian Kepada Masyarakat(Juta Rupiah)</th>
-									 <th rowspan="2">Aksi</th>
+									 <th rowspan="2"><center>No</center></th>
+									 <th rowspan="2"><center>Nama Program Studi</center></th>
+									 <th colspan="3"><center>Jumlah Judul Kegiatan Pelayanan / Pengabdian Kepada Masyarakat</center></th>
+									 <th colspan="3"><center>Total Dana  Kegiatan Pelayanan / Pengabdian Kepada Masyarakat(Juta Rupiah)</center></th>
+									 <th rowspan="2"><center>Aksi</center></th>
 								 </tr>
 								 <tr align="center">
-								 	<td>TS-2</td>
-								 	<td>TS-1</td>
-								 	<td>TS</td>
-								 	<td>TS-2</td>
-								 	<td>TS-1</td>
-								 	<td>TS</td>
+								 	<td><center>TS-2</center></td>
+								 	<td><center>TS-1</center></td>
+								 	<td><center>TS</center></td>
+								 	<td><center>TS-2</center></td>
+								 	<td><center>TS-1</center></td>
+								 	<td><center>TS</center></td>
 								 </tr>
 							</thead>
 							<tbody>

@@ -116,6 +116,17 @@ public function index() {
 		}
 }
 
+public function do_hapus($id){
+		$this->model_squrity->getsqurity();
+		$where=array('id'=>$id);
+		$res=$this->Aps_a713_model->Delete('artikel_ilmiah',$where);
+		if($res>=1){
+			redirect('Aps_a713_excel');
+		}else {
+			alert('Gagal Hapus');
+		}
+	}
+
 public function export_excel(){
  $data=$this->Aps_a713_model->listing();
  $lokal=$this->Aps_a713_model->lokal();

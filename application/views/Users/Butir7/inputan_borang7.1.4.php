@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>Butir 7.2.1 : KEGIATAN PELAYANAN/PENGABDIAN KEPADA MASYARAKAT (PKM)</title>
+<title>Butir 7.1.4 : HAK ATAS KEKAYAAN INTELEKTUAL</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -62,12 +62,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <body class="page-header-fixed page-quick-sidebar-over-content">
 	<!-- BEGIN HEADER -->
 		<?php 
-			$this->load->view('Users/header_Users.php');
+			$this->load->view('Users/header_users.php');
 		?>
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('Users/sidebar_Users.php');
+			$this->load->view('Users/sidebar_users.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 
@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Butir 7.2.1 : KEGIATAN PELAYANAN/PENGABDIAN KEPADA MASYARAKAT (PKM)
+								<i class="fa fa-edit"></i>Butir 7.1.4 : HAK ATAS KEKAYAAN INTELEKTUAL
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -100,123 +100,52 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="#">
-											<button id="sample_editable_1_new" class="btn green">
-											Load
-											</button>
-											</a>
+											
 										</div>
 									</div>
 								</div>
 							</div>
-							<table class="table table-striped table-bordered table-hover" id="sample_1">
-							<thead>
-								<tr>
-									 <th>Sumber Dana Kegiatan Pelayanan/Pengabdian kepada Masyarakat</th>
-									 <th>TS-2</th>
-									 <th>TS-1</th>
-									 <th>TS</th>
-									 <th>Jumlah</th>
-									 <th>Aksi</th>
-								 </tr>
-							</thead>
-							<tbody>
-							<tr>
-							 	<td>Pembiayaan sendiri oleh dosen</td>
-							 	<?php 
-									$no=1; 
-									foreach ($data as $d ) { 
-								?>
-								<td><?php echo $d['TS_2']; ?></td>
-								<td><?php echo $d['TS_1']; ?></td>
-								<td><?php echo $d['TS']; ?></td>
-							 	<td><?php echo $d['JML']; ?></td>
-							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Aps_a721_excel/ubah/".$d['KD_JNS'];?>" >Edit</a>
-								</td>
-							 	<?php } ?>
-							 </tr>
-							 <tr>
-							 	<td>PT yang bersangkutan</td>
-							 	<?php 
-									$no=1; 
-									foreach ($bersangkutan as $b ) { 
-								?>
-								<td><?php echo $b['TS_2']; ?></td>
-								<td><?php echo $b['TS_1']; ?></td>
-								<td><?php echo $b['TS']; ?></td>
-							 	<td><?php echo $b['JML']; ?></td>
-							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Aps_a721_excel/ubah/".$b['KD_JNS'];?>" >Edit</a>
-								</td>
-							 	
-							 	<?php } ?>
-							 </tr>
-							 <tr>
-							 	<td>Depdiknas</td>
-							 	<?php 
-									$no=1; 
-									foreach ($depdiknas as $k ) { 
-								?>
-								<td><?php echo $k['TS_2']; ?></td>
-								<td><?php echo $k['TS_1']; ?></td>
-								<td><?php echo $k['TS']; ?></td>
-							 	<td><?php echo $k['JML']; ?></td>
-							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Aps_a721_excel/ubah/".$k['KD_JNS'];?>" >Edit</a>
-								</td>
-							 	
-							 	<?php } ?>
-							 </tr>
-							  <tr>
-							 	<td>Institusi dalam negeri di luar Depdiknas</td>
-							 	<?php 
-									$no=1; 
-									foreach ($dalamdepdiknas as $lk ) { 
-								?>
-								<td><?php echo $lk['TS_2']; ?></td>
-								<td><?php echo $lk['TS_1']; ?></td>
-								<td><?php echo $lk['TS']; ?></td>
-							 	<td><?php echo $lk['JML']; ?></td>
-							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Aps_a721_excel/ubah/".$lk['KD_JNS'];?>" >Edit</a>
-								</td>
-							 	
-							 	<?php } ?>
-							 </tr>
-							 <tr>
-							 	<td>Institusi luar negeri</td>
-							 	<?php 
-									$no=1; 
-									foreach ($luarnegeri as $l ) { 
-								?>
-								<td><?php echo $l['TS_2']; ?></td>
-								<td><?php echo $l['TS_1']; ?></td>
-								<td><?php echo $l['TS']; ?></td>
-							 	<td><?php echo $l['JML']; ?></td>
-							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Aps_a721_excel/ubah/".$l['KD_JNS'];?>" >Edit</a>
-								</td>
-							 	
-							 	<?php } ?>
-							 </tr>
-							</tbody>
-							</table>
-							<!-- <div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a721_excel/ubah";?>">
-									<button id="sample_editable_1_new" class="btn green">
-										Ubah 
-									</button>
-								</a>
-							</div> -->
-							
-							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Aps_a721_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn blue">
-										Export To Excel
-									</button>
-								</a>
+							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Aps_a714_excel/do_tambah"; ?>" method="POST">
+							<div class="container">
+								<div class="col-md-10">
+									<div class="row">
+										<div class="form-group">
+											<label>Id</label>
+											<?php 
+												$data=$this->Aps_a714_model->listed();
+												$id = count($data)+1;
+												
+											?>
+											<input type="text" class="form-control" name="id" value="<?php echo $id; ?>" readonly="">
+										
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label>Karya * </label>
+											<input type="text" class="form-control" name="karya" >
+										</div>
+									</div>
+								</div>
+									
+								</div>
 							</div>
+							<div class="btn-group">
+								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+							</div>
+							</form>
+
+							<div class="btn-group">
+								
+								<a href="<?php echo base_url()."index.php/Aps_a714_excel/";?>">
+									<button id="sample_editable_1_new" class="btn red">
+										Batal
+									</button>
+								</a>
+								
+							</div>
+							
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

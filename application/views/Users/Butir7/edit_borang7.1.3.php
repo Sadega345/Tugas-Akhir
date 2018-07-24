@@ -162,11 +162,29 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><input type="text" name="publikasi" value="<?php echo $publikasi; ?>" class="form-control"></td>
 							 	<td><input type="text" name="thn_publikasi" value="<?php echo $thn_publikasi; ?>" class="form-control"></td>
 							 	<?php 
-
-							 	 ?>
-							 	<td><input type="checkbox" name="lokal" class="form-control" value="v" class="form-control"></td>
-							 	<td><input type="checkbox" name="nasional" class="form-control" value="v" class="form-control"></td>
-							 	<td><input type="checkbox" name="internasional" class="form-control" value="v" class="form-control"></td>
+							 		if($lokal=="v"){
+							 			$cek="checked";
+							 		}else{
+							 			$cek=" ";
+							 		}
+							 	?>
+							 	<td><input type="checkbox" name="lokal" class="form-control" value="v"  <?php echo $cek ?> ></td>
+							 	<?php 
+							 		if($nasional=="v"){
+							 			$cek="checked";
+							 		}else{
+							 			$cek=" ";
+							 		}
+							 	?>
+							 	<td><input type="checkbox" name="nasional" class="form-control" value="v" <?php echo $cek ?> ></td>
+							 	<?php 
+							 		if($internasional=="v"){
+							 			$cek="checked";
+							 		}else{
+							 			$cek=" ";
+							 		}
+							 	?>
+							 	<td><input type="checkbox" name="internasional" class="form-control" value="v"  <?php echo $cek ?> ></td>
 							 </tr>
 							 
 							</tbody>

@@ -18,9 +18,9 @@ public function index() {
 																'total'=>$total));
  }
 
- public function ubah($KD_JNS){
+ public function ubah($id){
  	$this->model_squrity->getsqurity();
- 	$res=$this->Aps_b721_model->update("where KD_JNS='$KD_JNS'");
+ 	$res=$this->Aps_b721_model->update(" where k.id='$id'");
  	$data=array(
 			"Tot_Ts2"=>$res[0]['Tot_Ts2'],
 			"Tot_Ts1"=>$res[0]['Tot_Ts1'],
@@ -30,6 +30,7 @@ public function index() {
 			"Jum_dana2016"=>$res[0]['Jum_dana2016'],
 			"jurusan"=>$res[0]['jurusan'],
 			"KD_JNS"=>$res[0]['KD_JNS'],
+			"id"=>$res[0]['id']
 		);
  	$this->load->view('Users/Butir7B/edit_borang7.2.1.php',$data);
  }
@@ -43,9 +44,12 @@ public function index() {
 		$Jum_dana2016=$_POST['Jum_dana2016'];
 		// $jurusan=$_POST['jurusan'];
 		$KD_JNS=$_POST['KD_JNS'];
+		$id=$_POST['id'];
 		
 		$data_update=array(
-			// "NAMA_DOSEN"=>$NAMA_DOSEN,
+			"Jum_dana2016"=>$Jum_dana2016,
+			"Jum_dana2015"=>$Jum_dana2015,
+			"Jum_dana2014"=>$Jum_dana2014,
 			"ts_2"=>$Tot_Ts2,
 			"ts_1"=>$Tot_Ts1,
 			"ts"=>$Tot_Ts,
@@ -53,7 +57,7 @@ public function index() {
 			
 			
 		);
-		$where=array('KD_JNS'=>$KD_JNS);
+		$where=array('id'=>$id);
 		// print_r($data_update);die();
 		$res=$this->Aps_b721_model->rubah('kegiatan_pkm',$data_update,$where);
 		if ($res>=1) {
