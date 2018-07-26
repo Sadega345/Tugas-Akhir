@@ -174,7 +174,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 			$cek=" ";
 							 		}
 							 	 ?>
-							 	<td><input type="checkbox" name="sks_inti" class="form-control" value="v" <?php $cek ?>></td>
+							 	<td><input type="checkbox" name="sks_inti" class="form-control" value="v" <?php echo $cek ?>></td>
 							 	<?php 
 							 		if($sks_institusi=="v"){
 							 			$cek="checked";
@@ -182,7 +182,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 			$cek=" ";
 							 		}
 							 	 ?>
-							 	<td><input type="checkbox" name="sks_institusi" class="form-control" value="v" <?php $cek ?>></td>
+							 	<td><input type="checkbox" name="sks_institusi" class="form-control" value="v" <?php echo $cek ?>></td>
 							 	<?php 
 							 		if($bobot_tgs=="v"){
 							 			$cek="checked";
@@ -190,7 +190,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 			$cek=" ";
 							 		}
 							 	 ?>
-							 	<td><input type="checkbox" name="bobot_tgs" class="form-control" value="v" <?php $cek ?>></td>
+							 	<td><input type="checkbox" name="bobot_tgs" class="form-control" value="v" <?php echo $cek ?>></td>
 							 	<?php 
 							 		if($deskripsi=="v"){
 							 			$cek="checked";
@@ -198,7 +198,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 			$cek=" ";
 							 		}
 							 	 ?>
-							 	<td><input type="checkbox" name="deskripsi" class="form-control" value="v" <?php $cek ?>></td>
+							 	<td><input type="checkbox" name="deskripsi" class="form-control" value="v" <?php echo $cek ?>></td>
 							 	<?php 
 							 		if($silabus=="v"){
 							 			$cek="checked";
@@ -206,7 +206,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 			$cek=" ";
 							 		}
 							 	 ?>
-							 	<td><input type="checkbox" name="silabus" class="form-control" value="v" <?php $cek ?>></td>
+							 	<td><input type="checkbox" name="silabus" class="form-control" value="v" <?php echo $cek ?>></td>
 							 	<?php 
 							 		if($sap=="v"){
 							 			$cek="checked";
@@ -214,12 +214,12 @@ License: You must have a valid license purchased only from themeforest(the above
 							 			$cek=" ";
 							 		}
 							 	 ?>
-							 	<td><input type="checkbox" name="sap" class="form-control" value="v" <?php $cek ?>></td>
+							 	<td><input type="checkbox" name="sap" class="form-control" value="v" <?php echo $cek ?>></td>
 							 	<td><input type="text" name="penyelenggara" value="<?php echo $penyelenggara; ?>" class="form-control"></td>
 							 </tr>
 							</tbody>
 							</table>
-							<input type="hidden" name="kode_mk" value="<?php echo $id; ?>">
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							</div>
 							<div class="btn-group">
 								<button id="sample_editable_1_new" class="btn blue">

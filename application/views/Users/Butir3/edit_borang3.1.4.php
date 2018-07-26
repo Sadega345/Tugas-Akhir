@@ -114,35 +114,30 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 							<thead>
 								<tr>
-									 <th rowspan="2">Tahun Masuk</th>
-									 <th colspan="7">Jumlah Mahasiswa Reguler per Angkatan pada Tahun<br>
+									 
+									 <th colspan="2">Jumlah Mahasiswa Reguler per Angkatan pada Tahun<br>
 									 (tidak memasukkan mahasiswa transfer)</th>
 									 <th rowspan="2">Jumlah Lulusan<br>s.d. TS</th>
 								 </tr>
 								 <tr>
-								 	<th>TS-6</th>
-								 	<th>TS-5</th>
-								 	<th>TS-4</th>
-								 	<th>TS-3</th>
-								 	<th>TS-2</th>
+								 	
 								 	<th>TS-1</th>
 								 	<th>TS</th>
 								 </tr>
 							</thead>
 							<tbody>
 								 <tr>
-								 	<td><input type="text" name="ts_6" value="<?php echo $ts_6; ?>"></td>
-								 	<td><input type="text" name="ts_5" value="<?php echo $ts_5; ?>">
-								 	<td><input type="text" name="ts_4" value="<?php echo $ts_4; ?>"></td>
-								 	<td><input type="text" name="ts_3" value="<?php echo $ts_3; ?>"></td>
-								 	<td><input type="text" name="ts_2" value="<?php echo $ts_2; ?>"></td>
+								 	
 								 	<td><input type="text" name="ts_1" value="<?php echo $ts_1; ?>"></td>
+								 	<td><input type="text" name="ts" value="<?php echo $ts; ?>"></td>
 								 	<td><input type="text" name="jml_ts_llsan" value="<?php echo $jml_ts_llsan; ?>"></td>
-								 	<input type="hide" name="id_ts" value="<?php echo $id_ts; ?>">
+								 	
 								 </tr>
 							
 							</tbody>
 							</table>
+							<input type="hidden" name="id_ts" value="<?php echo $id_ts; ?>">
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							</div>
 							<div class="btn-group">
 								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>

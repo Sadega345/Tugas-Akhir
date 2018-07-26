@@ -134,8 +134,8 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td>Rata-rata IPK Lulusan*</td>
 								 </tr>
 								 <tr>
-								 	<td><input type="text" name="rata_masa_std" value="<?php echo $rata_masa_std; ?>"></td>
-								 	<td><input type="text" name="rata_ipk" value="<?php echo $rata_ipk;  ?>"></td>
+								 	<td><input type="text" name="rata_masa_std" value="<?php echo $RATA_MASA_STD; ?>"></td>
+								 	<td><input type="text" name="rata_ipk" value="<?php echo $RATA_IPK;  ?>"></td>
 								 </tr>
 							</tbody>
 							</table>

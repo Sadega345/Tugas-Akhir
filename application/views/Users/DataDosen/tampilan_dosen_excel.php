@@ -4,7 +4,7 @@ header("Content-type: application/octet-stream");
 
 header("Pragma: no-cache");
 
-// header("Content-Disposition: attachment; filename=$title.xls");
+header("Content-Disposition: attachment; filename=Data Dosen.xls");
 
 header("Expires: 0");
 

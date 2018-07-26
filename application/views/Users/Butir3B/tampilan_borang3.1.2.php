@@ -154,6 +154,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 ?>
 									<td><?php echo $t['total2']; ?></td>
 									<?php } ?>
+									
 									<?php foreach ($data2 as $d) {
 									 ?>
 									<td><?php echo $d['j_maba_trf']; ?></td>

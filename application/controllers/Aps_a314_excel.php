@@ -21,7 +21,7 @@ public function export_excel(){
 
 public function ubah($id){
  	$this->model_squrity->getsqurity();
-	$res=$this->Aps_a314_model->update("where id='$id'");
+	$res=$this->aps_a314_model->update("where id='$id'");
 	$data=array(
 		"ts_6"=>$res[0]['ts_6'],
 		"ts_5"=>$res[0]['ts_5'],
@@ -35,22 +35,22 @@ public function ubah($id){
 		"id_ts"=>$res[0]['id_ts'],
 		
 	);
-	if ($id_ts==1) {
+	if ( $id == 6) {
 		$this->load->view('Users/Butir3/edit_borang3.1.4(6).php',$data);
-	}else if ($id_ts==2) {
+	} else if ($id == 7) {
 		$this->load->view('Users/Butir3/edit_borang3.1.4(5).php',$data);
-	}else if ($id_ts==3) {
+	} else if ($id == 8) {
 		$this->load->view('Users/Butir3/edit_borang3.1.4(4).php',$data);
-	}else if ($id_ts==4) {
+	} else if ($id == 9) {
 		$this->load->view('Users/Butir3/edit_borang3.1.4(3).php',$data);
-	}else if ($id_ts==5) {
+	} else if ($id == 10 ) {
 		$this->load->view('Users/Butir3/edit_borang3.1.4(2).php',$data);
-	}else if($id_ts==6){
-		$this->load->view('Users/Butir3/edit_borang3.1.4(1).php',$data);
-	}else if($id_ts==7){
+	} else if ($id == 11) {
+		$this->load->view('Users/Butir3/edit_borang3.1.4.php',$data);
+	} else if ($id == 12) {
 		$this->load->view('Users/Butir3/edit_borang3.1.4_ts.php',$data);
 	}
- 	// $this->load->view('User/Butir3/edit_borang3.1.3.php',$data);
+
  }
 
  public function do_edit(){
@@ -76,7 +76,7 @@ public function ubah($id){
 		);
 		$where=array('id'=>$id);
 		// print_r($data_update);die;
-		$res=$this->Aps_a314_model->rubah('data_mhs_angkatan',$data_update,$where);
+		$res=$this->aps_a314_model->ubah('data_mhs_angkatan',$data_update,$where);
 		// print_r($data_update);die;
 		if ($res>=1) {
 			redirect('Aps_a314_excel');
