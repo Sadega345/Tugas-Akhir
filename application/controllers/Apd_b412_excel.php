@@ -22,9 +22,48 @@ $this->load->view('User/Butir4B/tampilan_borang4.1.2.php',array('total1'=>$total
 																'prodi'=>$prodi));
  }
 
-public function ubah(){
- 	$this->load->view('User/Butir4B/tampilan_borang4.1.2.php');
+ public function ubah1($id){
+ 	$this->model_squrity->getsqurity();
+	$res=$this->Apd_b412_model->update1(" p.id='$id'");
+	$data=array(
+		"total1"=>$res[0]['total1'],
+		"banyak1"=>$res[0]['banyak1'],
+		"id"=>$res[0]['id'],
+	);
+ 	$this->load->view('User/Butir4B/edit_borang4.1.2.php',$data);
  }
+
+  public function ubah2($id){
+ 	$this->model_squrity->getsqurity();
+	$res=$this->Apd_b412_model->update2(" p.id='$id'");
+	$data=array(
+		"total2"=>$res[0]['tota2'],
+		"banyak2"=>$res[0]['banyak2'],
+		"id"=>$res[0]['id'],
+	);
+ 	$this->load->view('User/Butir4B/edit_borang4.1.2.php',$data);
+ }
+
+public function do_edit(){
+		$banyak1=$_POST['banyak1'];
+		$banyak2=$_POST['banyak2'];
+		$id=$_POST['id'];
+		
+		$data_update=array(
+			"banyak2"=>$banyak1,
+			"banyak1"=>$banyak1,
+			
+		);
+		$where=array('id'=>$id);
+		$res=$this->Apd_b412_model->rubah('pkdt_tgs_belajar',$data_update,$where);
+		// print_r($data_update);die;
+		if ($res>=1) {
+			redirect('Apd_b412_excel');
+		}
+		// else {
+		// 	alert("Gagal Update") ;
+		// }
+	}
 
 public function export_excel(){
 $total1=$this->Apd_b412_model->total1();

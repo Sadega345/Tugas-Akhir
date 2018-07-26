@@ -102,7 +102,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="btn-group">
 											<a href="<?php echo base_url()."index.php/Apd_a433_excel/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah 
+											Tambah <i class="fa fa-plus"></i>
 											</button>
 											</a>
 										</div>
@@ -205,49 +205,49 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<?php 
 									foreach ($rata as $r ) { 
 							  	?>
-							 	<td><?php echo $r['rata']; ?></td>
+							 	<td><?php echo number_format($r['rata'],2,",","."); ?></td>
 							 	<?php } ?>
 
 							 	<?php 
 									foreach ($prlain as $pr ) { 
 							  	?>
-							 	<td><?php echo $pr['rata']; ?></td>
+							 	<td><?php echo number_format($pr['rata'],2,",","."); ?></td>
 							 	<?php } ?>
 
 							 	<?php 
 									foreach ($ptlain as $pt ) { 
 							  	?>
-							 	<td><?php echo $pt['rata']; ?></td>
+							 	<td><?php echo number_format($pt['rata'],2,",","."); ?></td>
 							 	<?php } ?>
 
 							 	<?php 
 									foreach ($ratapenelitian as $rp ) { 
 							  	?>
-							 	<td><?php echo $rp['rata']; ?></td>
+							 	<td><?php echo number_format($rp['rata'],2,",","."); ?></td>
 							 	<?php } ?>
 
 							 	<?php 
 									foreach ($pengmas as $peng ) { 
 							  	?>
-							 	<td><?php echo $peng['rata']; ?></td>
+							 	<td><?php echo number_format($peng['rata'],2,",","."); ?></td>
 							 	<?php } ?>
 
 							 	<?php 
 									foreach ($rataman as $m ) { 
 							  	?>
-							 	<td><?php echo $m['rata']; ?></td>
+							 	<td><?php echo number_format($m['rata'],2,",","."); ?></td>
 							 	<?php } ?>
 
 							 	<?php 
 									foreach ($manlain as $ml ) { 
 							  	?>
-							 	<td><?php echo $ml['rata']; ?></td>
+							 	<td><?php echo number_format($ml['rata'],2,",","."); ?></td>
 							 	<?php } ?>
 
 							 	<?php 
 									foreach ($ratajumsks as $ratasks ) { 
 							  	?>
-							 	<td><?php echo $ratasks['rata']; ?></td>
+							 	<td><?php echo number_format($ratasks['rata'],2,",","."); ?></td>
 							 	<?php } ?>
 							 	
 			 				</tr>

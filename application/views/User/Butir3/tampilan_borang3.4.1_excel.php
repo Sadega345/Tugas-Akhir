@@ -13,16 +13,16 @@ header("Expires: 0");
 <table border="1" width="50%">
 		<thead>
 			 <tr>
-				 <th rowspan="2">No.</th>
-				 <th rowspan="2">Jenis Kemampuan</th>
-				 <th colspan="4">Tanggapan Pihak pengguna (%)</th>
-				 <th rowspan="2">Rencana Tindak Lanjut oleh Program Studi</th>
+				 <th rowspan="2" bgcolor="#D3D3D3">No.</th>
+				 <th rowspan="2" bgcolor="#D3D3D3">Jenis Kemampuan</th>
+				 <th colspan="4" bgcolor="#D3D3D3">Tanggapan Pihak pengguna (%)</th>
+				 <th rowspan="2" bgcolor="#D3D3D3">Rencana Tindak Lanjut oleh Program Studi</th>
 			 </tr>
 			 <tr>
-			 	<th>Sangat Baik</th>
-			 	<th>Baik</th>
-			 	<th>Cukup</th>
-			 	<th>Kurang</th>
+			 	<th bgcolor="#D3D3D3">Sangat Baik</th>
+			 	<th bgcolor="#D3D3D3">Baik</th>
+			 	<th bgcolor="#D3D3D3">Cukup</th>
+			 	<th bgcolor="#D3D3D3">Kurang</th>
 			 </tr>
 		</thead>
 		<tbody>
@@ -32,40 +32,40 @@ header("Expires: 0");
 			?>
 		<tr>
 			
-		 	<td><?php echo $no++; ?></td>
-		 	<td><?php echo $d['jenis_kemampuan']; ?></td>
-		 	<td><?php echo $d['sangat_baik']; ?></td>
-		 	<td><?php echo $d['baik']; ?></td>
-		 	<td><?php echo $d['cukup']; ?></td>
-		 	<td><?php echo $d['kurang']; ?></td>
-		 	<td><?php echo $d['rencana']; ?></td>
+		 	<td bgcolor="#D3D3D3"><?php echo $no++; ?></td>
+		 	<td bgcolor="#D3D3D3" align="top"><?php echo $d['jenis_kemampuan']; ?></td>
+		 	<td bgcolor="#FFFF00"><?php echo number_format((double)$d['sangat_baik'],2,',',','); ?></td>
+		 	<td bgcolor="#FFFF00"><?php echo number_format((double)$d['baik'],2,',',','); ?></td>
+		 	<td bgcolor="#FFFF00"><?php echo number_format((double)$d['cukup'],2,',',','); ?></td>
+		 	<td bgcolor="#FFFF00"><?php echo number_format((double)$d['kurang'],2,',',','); ?></td>
+		 	<td bgcolor="#FFFF00"><?php echo $d['rencana']; ?></td>
 		 </tr>
 		<?php } ?>
 		 
 		 <tr>
-		 	<td colspan="2">Total</td>
+		 	<td colspan="2" bgcolor="#D3D3D3">Total</td>
 		 	<?php 
 				foreach ($sangatbaik as $d ) { 
 			?>
-		 		<td><?php echo $d['Sangat_baik']; ?></td>
+		 		<td bgcolor="#D3D3D3"><?php echo number_format((double)$d['Sangat_baik'],2,',',','); ?></td>
 		 	<?php } ?>
 
 		 	<?php 
 				foreach ($baik as $d ) { 
 			?>
-		 		<td><?php echo $d['Baik']; ?></td>
+		 		<td bgcolor="#D3D3D3"><?php echo number_format((double)$d['Baik'],2,',',','); ?></td>
 		 	<?php } ?>
 
 		 	<?php 
 				foreach ($cukup as $d ) { 
 			?>
-		 		<td><?php echo $d['Cukup']; ?></td>
+		 		<td bgcolor="#D3D3D3"><?php echo number_format((double)$d['Cukup'],2,',',','); ?></td>
 		 	<?php } ?>
 
 		 	<?php 
 				foreach ($kurang as $d ) { 
 			?>
-		 		<td><?php echo $d['Kurang']; ?></td>
+		 		<td bgcolor="#D3D3D3"><?php echo number_format((double)$d['Kurang'],2,',',','); ?></td>
 		 	<?php } ?>
 		 </tr>
 		</tbody>
@@ -75,7 +75,7 @@ header("Expires: 0");
 									<tr>
 										<?php foreach ($waktu as $w ) {
 										 ?>
-										<td><?php echo $w['waktu'] ; ?></td>
+										<td bgcolor="#FFFF00"><?php echo number_format((double)$w['waktu'],2,',',',') ; ?></td>
 										<?php } ?>
 									</tr>
 								</table> bulan
@@ -85,7 +85,7 @@ header("Expires: 0");
 									<tr>
 										<?php foreach ($persen as $p ) {
 										 ?>
-										<td><?php echo $p['persen'] ; ?></td>
+										<td bgcolor="#FFFF00"><?php echo number_format((double)$p['persen'],2,',',',') ; ?></td>
 										<?php } ?>
 									</tr>
 								</table>

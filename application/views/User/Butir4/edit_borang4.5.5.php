@@ -157,16 +157,39 @@ License: You must have a valid license purchased only from themeforest(the above
 							<tbody>
 							<tr>
 							 	<td>1</td>
-							 	<td><input type="text" name="" value="<?php echo $nama_dosen; ?>" ></td>
+							 	<td><?php echo $nama_dosen;?></td>
 							 	<td><input type="text" name="nm_organisasi" value="<?php echo $nm_organisasi; ?>" ></td>
 							 	<td><input type="text" name="thn_awal" value="<?php echo $thn_awal; ?>" ></td>
 							 	<td><input type="text" name="thn_akhir" value="<?php echo $thn_akhir; ?>" ></td>
-							 	<td><input type="text" name="internasional" value="<?php echo $internasional; ?>"></td>
-							 	<td><input type="checkbox" name="nasional" value="<?php echo $nasional; ?>"></td>
-							 	<td><input type="checkbox" name="lokal" value="<?php echo $lokal; ?>"></td>
+							 	<?php 
+							 		if($internasional=="v"){
+							 			$cek="checked";
+							 		}else{
+							 			$cek=" ";
+							 		}
+							 	 ?>
+							 	<td><input type="checkbox" name="internasional" value="v" <?php echo $cek; ?>></td>
+							 	<?php 
+							 		if($nasional=="v"){
+							 			$cek="checked";
+							 		}else{
+							 			$cek=" ";
+							 		}
+							 	 ?>
+							 	<td><input type="checkbox" name="nasional" value="v" <?php echo $cek; ?>></td>
+							 	<?php 
+							 		if($lokal=="v"){
+							 			$cek="checked";
+							 		}else{
+							 			$cek=" ";
+							 		}
+							 	 ?>
+							 	<td><input type="checkbox" name="lokal" value="v" <?php echo $cek; ?>></td>
 							 </tr>
 							</tbody>
 							</table>
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
+							</div>
 							<div class="btn-group">
 								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 							</div>
@@ -178,7 +201,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								</a>
 							</div>
 						</form>
-						</div>
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

@@ -53,9 +53,34 @@ $this->load->view('User/Butir4B/tampilan_borang4.1.1.php',array('prodi'=>$prodi,
  																 ));
  }
 
- public function ubah(){
- 	$this->load->view('User/Butir4B/tampilan_borang4.1.1.php');
+ public function ubah($id){
+ 	$this->model_squrity->getsqurity();
+	$res=$this->Apd_b411_model->update("where id='$id'");
+	$data=array(
+		"id"=>$res[0]['id'],
+		"jml"=>$res[0]['id'],
+
+	);
+ 	$this->load->view('User/Butir4B/tampilan_borang4.1.1.php',$data);
  }
+
+public function do_edit(){
+ 		
+		$jml=$_POST['jml'];
+		$id=$_POST['id'];	
+		$data_update=array(
+		
+			"jml"=>$jml,
+		);
+		$where=array('id'=>$id);
+		$res=$this->Apd_b411_model->rubah('sdm',$data_update,$where);
+		if ($res>=1) {
+			redirect('Apd_b411_excel');
+		}
+		// else {
+		// 	alert("Gagal Update") ;
+		// }
+}
 
 public function export_excel(){
 $prodi=$this->Apd_b411_model->getprodi();

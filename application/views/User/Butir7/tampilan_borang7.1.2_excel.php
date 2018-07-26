@@ -11,19 +11,19 @@ header("Expires: 0");
 ?>
 <p>TABEL DATA BUTIR 7.1.2 : JUDUL ARTIKEL ILMIAH/KARYA ILMIAH/KARYA SENI/BUKU</p>
 <table border="1" width="50%">
-		<thead>
+<thead>
 								<tr>
-									 <th rowspan="2">No</th>
-									 <th rowspan="2">Judul</th>
-									 <th rowspan="2">Nama-nama Dosen</th>
-									 <th rowspan="2">Dihasilkan/dipublikasikan pada</th>
-									 <th rowspan="2">Tahun penyajian/publikasi</th>
-									 <th colspan="3">Banyaknya dosen</th>
+									 <th rowspan="2" bgcolor="#D3D3D3"><center>No</center></th>
+									 <th rowspan="2" bgcolor="#D3D3D3"><center>Judul</center></th>
+									 <th rowspan="2" bgcolor="#D3D3D3"><center>Nama-nama Dosen</center></th>
+									 <th rowspan="2" bgcolor="#D3D3D3"><center>Dihasilkan/dipublikasikan pada</center></th>
+									 <th rowspan="2" bgcolor="#D3D3D3"><center>Tahun penyajian/publikasi</center></th>
+									 <th colspan="3" bgcolor="#D3D3D3"><center>Banyaknya dosen</center></th>
 								 </tr>
 								 <tr>
-								 	<th>Lokal</th>
-								 	<th>Nasional</th>
-								 	<th>Internasional</th>
+								 	<th bgcolor="#D3D3D3"><center>Lokal</center></th>
+								 	<th bgcolor="#D3D3D3"><center>Nasional</center></th>
+								 	<th bgcolor="#D3D3D3"><center>Internasional</center></th>
 								 </tr>
 							</thead>
 							<tbody>
@@ -32,14 +32,14 @@ header("Expires: 0");
 									foreach ($data as $d ) { 
 								?>
 								<tr>
-								 	<td><?php echo $no++; ?></td>
-								 	<td><?php echo $d['JUDUL']; ?></td>
-								 	<td><?php echo $d['nama_dosen']; ?></td>
-								 	<td><?php echo $d['publikasi']; ?></td>
-								 	<td><?php echo $d['thn_publikasi']; ?></td>
-								 	<td><?php echo $d['lokal']; ?></td>
-								 	<td><?php echo $d['nasional']; ?></td>
-								 	<td><?php echo $d['internasional']; ?></td>
+								 	<td bgcolor="#FFFF00"><?php echo $no++; ?></td>
+								 	<td bgcolor="#FFFF00"><?php echo $d['JUDUL']; ?></td>
+								 	<td bgcolor="#FFFF00"><?php echo $d['nama_dosen']; ?></td>
+								 	<td bgcolor="#FFFF00"><?php echo $d['publikasi']; ?></td>
+								 	<td bgcolor="#FFFF00"><?php echo $d['thn_publikasi']; ?></td>
+								 	<td bgcolor="#FFFF00"><?php echo $d['lokal']; ?></td>
+								 	<td bgcolor="#FFFF00"><?php echo $d['nasional']; ?></td>
+								 	<td bgcolor="#FFFF00"><?php echo $d['internasional']; ?></td>
 								 </tr>
 								 <input type="hidden" name="id" value="<?php echo $d['id']; ?>">
 								<?php } ?>
@@ -49,21 +49,21 @@ header("Expires: 0");
 										
 										foreach ($lokal as $l ) { 
 									?>
-								 	<td><?php echo $l['JML']; ?></td>
+								 	<td bgcolor="#7FFF00"><?php echo $l['JML']; ?></td>
 								 	<?php } ?>
 
 								 	<?php 
 										
 										foreach ($nasional as $n ) { 
 									?>
-								 	<td><?php echo $n['JML']; ?></td>
+								 	<td bgcolor="#7FFF00"><?php echo $n['JML']; ?></td>
 								 	<?php } ?>
 
 								 	<?php 
 										
 										foreach ($internasional as $in ) { 
 									?>
-								 	<td><?php echo $in['JML']; ?></td>
+								 	<td bgcolor="#7FFF00"><?php echo $in['JML']; ?></td>
 								 	<?php } ?>
 								 </tr>
 							</tbody>

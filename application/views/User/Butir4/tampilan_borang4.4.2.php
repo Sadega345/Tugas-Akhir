@@ -102,7 +102,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="btn-group">
 											<a href="<?php echo base_url()."index.php/Apd_a442_excel/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah 
+											Tambah <i class="fa fa-plus"></i>
 											</button>
 											</a>
 										</div>
@@ -140,24 +140,24 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['jp_rencana']; ?></td>
 							 	<td><?php echo $d['jp_dilaksanakan']; ?></td>
 							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Apd_a442_excel/ubah/".$d['kode_mk'];?>" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Apd_a442_excel/ubah/".$d['id'];?>" >Edit</a>
 									||
 								 		<a href="<?php echo base_url()."index.php/Apd_a442_excel/do_hapus/".$d['id'];?>" id="alerthapus"">Hapus</a>
 								</td>
 							 </tr>
 							 <?php } ?>
 							 <tr>
-							 	<td colspan="5">Jumlah*</td>
+							 	<th colspan="5">Jumlah*</th>
 							 	<?php 
 							 		foreach ($total as $tot ) {
 							 	 ?>
-							 	<td><?php echo $tot['total_rencana']; ?></td>
+							 	<th><?php echo $tot['total_rencana']; ?></th>
 							 	<?php } ?>
 
 							 	<?php 
 							 		foreach ($totdilaksanakan as $totlaksana ) {
 							 	 ?>
-							 	<td><?php echo $totlaksana['total_laksana']; ?></td>
+							 	<th><?php echo $totlaksana['total_laksana']; ?></th>
 							 	<?php } ?>
 							 </tr>
 							</tbody>

@@ -10,15 +10,15 @@ header("Pragma: no-cache");
 header("Expires: 0");
 
 ?>
-<p><center>IDENTITAS PENGISI BORANG PROGRAM STUDI</center></p>
+<p style="color:red"><center>IDENTITAS PENGISI BORANG PROGRAM STUDI</center></p>
 <table border="1" width="50%">
 		<thead>
 			 <tr>
-				 <th>No</th>
-				 <th>Nama</th>
-				 <th>NIDN</th>
-				 <th>Jabatan</th>
-				 <th>Tanggal Pengisian (dd/mm/yyyy)</th>
+				 <th bgcolor="#D3D3D3">No</th>
+				 <th bgcolor="#D3D3D3">Nama</th>
+				 <th bgcolor="#D3D3D3">NIDN</th>
+				 <th bgcolor="#D3D3D3">Jabatan</th>
+				 <th bgcolor="#D3D3D3">Tanggal Pengisian (dd/mm/yyyy)</th>
 			 </tr>
 		</thead>
 		<tbody>
@@ -26,11 +26,11 @@ header("Expires: 0");
 			$no=1; 
 			foreach ($data as $d ) { ?> 
 			<tr>
-			 	<td><?php echo $no++; ?></td>
-			 	<td><?php echo $d['nama']; ?></td>
-			 	<td><?php echo $d['nidn'] ?></td>
-			 	<td><?php echo $d['jabatan']; ?></td>
-			 	<td><?php echo $d['tgl_pengisian']; ?></td>
+			 	<td bgcolor="#FFFF00"><?php echo $no++; ?></td>
+			 	<td bgcolor="#FFFF00"><?php echo $d['nama']; ?></td>
+			 	<td bgcolor="#FFFF00"><?php echo $d['nidn'] ?></td>
+			 	<td bgcolor="#FFFF00"><?php echo $d['jabatan']; ?></td>
+			 	<td bgcolor="#FFFF00"><?php echo $d['tgl_pengisian']; ?></td>
 			 </tr>
 			<?php } ?>
 		</tbody>

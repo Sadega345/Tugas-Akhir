@@ -116,7 +116,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2">Nama Program Studi</th>
 									 <th colspan="3">Jumlah Judul Penelitian</th>
 									 <th colspan="3">Total Dana Penelitian (Juta Rupiah)</th>
-									 <th rowspan="2">Edit</th>
+									 <th rowspan="2">Aksi</th>
 								 </tr>
 								 <tr>
 								 	<th>TS-2</th>

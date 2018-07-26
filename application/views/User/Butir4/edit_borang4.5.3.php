@@ -158,11 +158,27 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><input type="text" name="jenis_kegiatan" value="<?php echo $jenis_kegiatan; ?>"></td>
 							 	<td><input type="text" name="tempat" value="<?php echo $tempat; ?>" ></td>
 							 	<td><input type="text" name="tahun" value="<?php echo $tahun; ?>" ></td>
-							 	<td><input type="checkbox" name="sbg_penyaji[]" value="v" ></td>
-							 	<td><input type="checkbox" name="sbg_peserta[]" value="v" ></td>
+							 	<?php 
+							 		if($sbg_penyaji=="v"){
+							 			$cek="checked";
+							 		}else{
+							 			$cek=" ";
+							 		}
+							 	 ?>
+							 	<td><input type="checkbox" name="sbg_penyaji" class="form-control" value="v" <?php echo $cek; ?>></td>
+							 	<?php 
+							 		if($sbg_peserta=="v"){
+							 			$cek="checked";
+							 		}else{
+							 			$cek=" ";
+							 		}
+							 	 ?>
+							 	<td><input type="checkbox" name="sbg_peserta" class="form-control" value="v"  <?php echo $cek; ?>></td>
 							 </tr>
 							</tbody>
 							</table>
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
+							</div>
 							<div class="btn-group">
 								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 							</div>
@@ -174,7 +190,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								</a>
 							</div>
 						</form>
-						</div>
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

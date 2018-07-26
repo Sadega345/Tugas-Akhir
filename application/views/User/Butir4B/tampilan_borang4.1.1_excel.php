@@ -11,19 +11,19 @@ header("Expires: 0");
 ?>
 <p> TABEL DATA BUTIR 4.1.1 : SUMBER DAYA MANUSIA</p>
  <table border="1" width="50%">
-<thead>
+							<thead>
 								<tr>
-									 <th rowspan="2">No</th>
-									 <th rowspan="2"><center>Hal</center></th>
-									 <th rowspan="2"><center>Total di Unit Pengelola**</center></th>
-									 <th><center>Jumlah Dosen yang bertugas pada PS: *</center></th>
+									 <th rowspan="2" bgcolor="#D3D3D3">No</th>
+									 <th rowspan="2" bgcolor="#D3D3D3"><center>Hal</center></th>
+									 <th rowspan="2" bgcolor="#D3D3D3"><center>Total di Unit Pengelola**</center></th>
+									 <th bgcolor="#D3D3D3"><center>Jumlah Dosen yang bertugas pada PS: *</center></th>
 								 </tr>
 								 <tr>
 								 <?php 
 								 	$no=1;
 								 	foreach ($prodi as $p) {
 								  ?>
-								 	<th><center>PS-<?php echo $no++; ?> <br><?php echo $p['prodi']; ?></center></th>
+								 	<th bgcolor="#D3D3D3"><center>PS-<?php echo $no++; ?> <br><?php echo $p['prodi']; ?></center></th>
 								 <?php } ?>
 								 </tr>
 							</thead>
@@ -40,13 +40,14 @@ header("Expires: 0");
 							 	<?php 
 							 		foreach ($total1 as $t) {
 							 	 ?>
-							 	 <td><?php echo $t['total']; ?></td>
+							 	 <td bgcolor="#7FFF00"><?php echo $t['total']; ?></td>
 							 	 <?php } ?>
 							 	 <?php 
 							 		foreach ($data1 as $d) {
 							 	 ?>
-							 	 <td><?php echo $d['jml']; ?></td>
+							 	 <td bgcolor="#FFFF00"><?php echo $d['jml']; ?></td>
 							 	 <?php } ?>
+
 							 </tr>
 							 <tr>
 							 	<td>2</td>
@@ -54,12 +55,12 @@ header("Expires: 0");
 							 	<?php 
 							 		foreach ($total2 as $t) {
 							 	 ?>
-							 	 <td><?php echo $t['total']; ?></td>
+							 	 <td bgcolor="#7FFF00"><?php echo $t['total']; ?></td>
 							 	 <?php } ?>
 							 	 <?php 
 							 		foreach ($data2 as $d) {
 							 	 ?>
-							 	 <td><?php echo $d['jml']; ?></td>
+							 	 <td bgcolor="#FFFF00"><?php echo $d['jml']; ?></td>
 							 	 <?php } ?>
 							 </tr>
 							 <tr>
@@ -68,12 +69,12 @@ header("Expires: 0");
 							 	<?php 
 							 		foreach ($total3 as $t) {
 							 	 ?>
-							 	 <td><?php echo $t['total']; ?></td>
+							 	 <td bgcolor="#7FFF00"><?php echo $t['total']; ?></td>
 							 	 <?php } ?>
 							 	 <?php 
 							 		foreach ($data3 as $d) {
 							 	 ?>
-							 	 <td><?php echo $d['jml']; ?></td>
+							 	 <td bgcolor="#FFFF00"><?php echo $d['jml']; ?></td>
 							 	 <?php } ?>
 							 </tr>
 							  <tr>
@@ -82,12 +83,12 @@ header("Expires: 0");
 							 	<?php 
 							 		foreach ($total4 as $t) {
 							 	 ?>
-							 	 <td><?php echo $t['total']; ?></td>
+							 	 <td bgcolor="#7FFF003"><?php echo $t['total']; ?></td>
 							 	 <?php } ?>
 							 	 <?php 
 							 		foreach ($data4 as $d) {
 							 	 ?>
-							 	 <td><?php echo $d['jml']; ?></td>
+							 	 <td bgcolor="#FFFF00"><?php echo $d['jml']; ?></td>
 							 	 <?php } ?>
 							 </tr>
 							 <tr>
@@ -96,12 +97,12 @@ header("Expires: 0");
 							 	<?php 
 							 		foreach ($totala as $t) {
 							 	 ?>
-							 	 <td><?php echo $t['totala']; ?></td>
+							 	 <td bgcolor="#D3D3D3"><?php echo $t['totala']; ?></td>
 							 	 <?php } ?>
 							 	 <?php 
 							 		foreach ($totalaps as $t) {
 							 	 ?>
-							 	 <td><?php echo $t['totalaps']; ?></td>
+							 	 <td bgcolor="#D3D3D3"><?php echo $t['totalaps']; ?></td>
 							 	 <?php } ?>
 							 </tr>
 							 <tr>
@@ -116,12 +117,12 @@ header("Expires: 0");
 							 	<?php 
 							 		foreach ($total5 as $t) {
 							 	 ?>
-							 	 <td><?php echo $t['total']; ?></td>
+							 	 <td bgcolor="#7FFF00"><?php echo $t['total']; ?></td>
 							 	 <?php } ?>
 							 	 <?php 
 							 		foreach ($data5 as $d) {
 							 	 ?>
-							 	 <td><?php echo $d['jml']; ?></td>
+							 	 <td bgcolor="#FFFF00"><?php echo $d['jml']; ?></td>
 							 	 <?php } ?>
 							 </tr>
 							 <tr>
@@ -130,12 +131,12 @@ header("Expires: 0");
 							 	<?php 
 							 		foreach ($total6 as $t) {
 							 	 ?>
-							 	 <td><?php echo $t['total']; ?></td>
+							 	 <td bgcolor="#7FFF00"><?php echo $t['total']; ?></td>
 							 	 <?php } ?>
 							 	 <?php 
 							 		foreach ($data6 as $d) {
 							 	 ?>
-							 	 <td><?php echo $d['jml']; ?></td>
+							 	 <td bgcolor="#FFFF00"><?php echo $d['jml']; ?></td>
 							 	 <?php } ?>
 							 </tr>
 							 <tr>
@@ -144,12 +145,12 @@ header("Expires: 0");
 							 	<?php 
 							 		foreach ($total7 as $t) {
 							 	 ?>
-							 	 <td><?php echo $t['total']; ?></td>
+							 	 <td bgcolor="#7FFF00"><?php echo $t['total']; ?></td>
 							 	 <?php } ?>
 							 	 <?php 
 							 		foreach ($data7 as $d) {
 							 	 ?>
-							 	 <td><?php echo $d['jml']; ?></td>
+							 	 <td bgcolor="#FFFF00"><?php echo $d['jml']; ?></td>
 							 	 <?php } ?>
 							 </tr>
 							 <tr>
@@ -158,12 +159,12 @@ header("Expires: 0");
 							 	<?php 
 							 		foreach ($totalb as $t) {
 							 	 ?>
-							 	 <td><?php echo $t['totalb']; ?></td>
+							 	 <td bgcolor="#D3D3D3"><?php echo $t['totalb']; ?></td>
 							 	 <?php } ?>
 							 	 <?php 
 							 		foreach ($totalbps as $t) {
 							 	 ?>
-							 	 <td><?php echo $t['totalbps']; ?></td>
+							 	 <td bgcolor="#D3D3D3"><?php echo $t['totalbps']; ?></td>
 							 	 <?php } ?>
 							 </tr>
 							</tbody>

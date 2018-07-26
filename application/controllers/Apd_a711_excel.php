@@ -94,7 +94,7 @@ $data1=$this->Apd_a711_model->listing1();
  $totTs=$this->Apd_a711_model->totTs();
  $jml=$this->Apd_a711_model->jml();
 
- $this->load->view('User/Butir7/tampilan_borang7.1.1.php',array('data1'=>$data1,
+ $this->load->view('User/Butir7/tampilan_borang7.1.1_excel.php',array('data1'=>$data1,
  																'data2'=>$data2,
  																'data3'=>$data3,
  																'data4'=>$data4,

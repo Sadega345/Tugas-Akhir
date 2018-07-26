@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>Butir 4.3.5  : AKTIVITAS MENGAJAR DOSEN TETAP YANG BIDANG KEAHLIANNYA DI LUAR PS</title>
+<title>Butir 4.3.1 : DOSEN TETAP YANG BIDANG KEAHLIANNYA SESUAI BIDANG PS</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Butir 4.3.5  : AKTIVITAS MENGAJAR DOSEN TETAP YANG BIDANG KEAHLIANNYA DI LUAR PS
+								<i class="fa fa-edit"></i>Butir 4.3.1 : DOSEN TETAP YANG BIDANG KEAHLIANNYA SESUAI BIDANG PS
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -100,82 +100,91 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row">
 									<div class="col-md-6">
 										<div class="btn-group">
-											<a href="<?php echo base_url()."index.php/Apd_a435_excel/tambah";?>">
+											<a href="<?php echo base_url()."index.php/Apd_a431_excel/load" ?>">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah <i class="fa fa-plus"></i>
+											Load 
 											</button>
 											</a>
 										</div>
 									</div>
 								</div>
 							</div>
-							<table class="table table-striped table-bordered table-hover" id="sample_1">
+							<div style="overflow-x:auto;" class="col-md-20">
+							
+							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 							<thead>
 								<tr>
-									 <th rowspan="2"><center>No</center></th>
-									 <th rowspan="2"><center>Nama Dosen Tetap</center></th>
-									 <th rowspan="2"><center>Kode Mata Kuliah</center></th>
-									 <th rowspan="2"><center>Nama Mata Kuliah</center></th>
-									 <th rowspan="2"><center>Jumlah SKS</center></th>
-									 <th colspan="2"><center>Jumlah Pertemuan</center></th>
-									 <th rowspan="2"><center>Aksi</center></th>
+									 <th rowspan="2">No</th>
+									 <th rowspan="2">Nama Dosen Tetap</th>
+									 <th rowspan="2">NIDN (Nomor Induk Dosen Nasional)</th>
+									 <th rowspan="2">Tanggal Lahir<br> (dd/mm/yyyy)</th>
+									 <th rowspan="2">Jabatan Akademik</th>
+									 <th rowspan="2">Sertifikasi**<br>(Ya/Tidak)</th>
+									 <th colspan="3"><center>S1</center></th>
+									 <th colspan="3"><center>S2</center></th>
+									 <th colspan="3"><center>S3</center></th>
+									 <th colspan="3">Keahlian Praktis***</th>
+									 <th colspan="3">Aksi</th>
 								 </tr>
 								 <tr>
-								 	<th><center>Direncanakan</center></th>
-								 	<th><center>Dilaksanakan</center></th>
-								 	
+								 	<th>Gelar</th>
+								 	<th>PT Asal</th>
+								 	<th>Bidang Keahlian</th>
+								 	<th>Gelar</th>
+								 	<th>PT Asal</th>
+								 	<th>Bidang Keahlian</th>
+								 	<th>Gelar</th>
+								 	<th>PT Asal</th>
+								 	<th>Bidang Keahlian</th>
+								 	<th>Gelar</th>
+								 	<th>Pengakuan</th>
+								 	<th>Bidang Keahlian</th>
+								 	<th></th>
 								 </tr>
 							</thead>
 							<tbody>
-							
-							<tr>
 							<?php 
 								$no=1; 
 								foreach ($data as $d ) { 
 							?>
+								<tr>
 							 	<td><?php echo $no++; ?></td>
 							 	<td><?php echo $d['nama_dosen']; ?></td>
-							 	<td><?php echo $d['kode_mk']; ?></td>
-							 	<td><?php echo $d['nama_mk']; ?></td>
-							 	<td><?php echo $d['jml_sks']; ?></td>
-							 	<td><?php echo $d['jp_rencana']; ?></td>
-							 	<td><?php echo $d['jp_dilaksanakan']; ?></td>
+							 	<td><?php echo $d['nidn']; ?></td>
+							 	<td><?php echo $d['tgl_lhr']; ?></td>
+							 	<td><?php echo $d['NM_JAB_AKD']; ?></td>
+							 	<td><?php echo $d['sertifikasi']; ?></td>
+							 	<td><?php echo $d['GELAR_S1']; ?></td>
+							 	<td><?php echo $d['ASAL_PT_S1']; ?></td>
+							 	<td><?php echo $d['BID_KEAHLIAN_S1']; ?></td>
+							 	<td><?php echo $d['GELAR_S2']; ?></td>
+							 	<td><?php echo $d['ASAL_PT_S2']; ?></td>
+							 	<td><?php echo $d['BID_KEAHLIAN_S2']; ?></td>
+							 	<td><?php echo $d['GELAR_S3']; ?></td>
+							 	<td><?php echo $d['ASAL_PT_S3']; ?></td>
+							 	<td><?php echo $d['BID_KEAHLIAN_S3']; ?></td>
+							 	<td><?php echo $d['GELAR']; ?></td>
+							 	<td><?php echo $d['PENGAKUAN']; ?></td>
+							 	<td><?php echo $d['BID_KEAHLIAN']; ?></td>
 							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Apd_a435_excel/ubah/".$d['kode_mk'];?>" >Edit</a>
-									||
-								 		<a href="<?php echo base_url()."index.php/Apd_a435_excel/do_hapus/".$d['id'];?>" id="alerthapus"">Hapus</a>
+									<a href="<?php echo base_url()."index.php/Apd_a431_excel/ubah/".$d['nidn'];?>" >Edit</a>
 								</td>
 							 </tr>
-							 <?php } ?>
-
-							 <tr>
-							 	<td colspan="5"><center>Jumlah</center></td>
-							 	<?php 
-							 		foreach ($total as $tot ) {
-							 	 ?>
-							 	<td><?php echo $tot['total_rencana']; ?></td>
-							 	<?php } ?>
-
-							 	<?php 
-							 		foreach ($totdilaksanakan as $totlaksana ) {
-							 	 ?>
-							 	<td><?php echo $totlaksana['total_laksana']; ?></td>
-							 	<?php } ?>
-							 </tr>
-		
+							<?php } ?>
 							</tbody>
 							</table>
+							</div>
 							<!-- <div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a435_excel/ubah";?>">
+								<a href="<?php echo base_url()."index.php/Apd_a431_excel/rubah";?>">
 									<button id="sample_editable_1_new" class="btn green">
-										Ubah 
+										Ubah
 									</button>
 								</a>
 							</div> -->
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a435_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Apd_a431_excel";?>">
 									<button id="sample_editable_1_new" class="btn blue">
-										Export ke Excel 
+										Batal
 									</button>
 								</a>
 							</div>

@@ -10,8 +10,8 @@ class Apd_a433_model extends CI_Model {
 //  }
 
 // Listing
- public function listing() {
- $data=$this->db->query('
+public function listing() {
+$data=$this->db->query('
 SELECT D.NAMA_DOSEN, A.SKS_PSS,A.SKS_PSL_PTS,A.SKS_PTL,A.SKS_PENELITIAN,A.SKS_PP_MAS,A.SKS_MAN_PTS,A.SKS_MAN_PTL,A.id,
 SUM(A.SKS_PSS+a.SKS_PSL_PTS+a.SKS_PTL+a.SKS_PENELITIAN+a.sks_pp_mas+a.sks_man_pts+a.sks_man_ptl)as total
 FROM aktivitas_dosen A INNER JOIN dosen_tbl D ON A.id_dosen=D.id_dosen WHERE D.STS_AHLI="YA" and d.kd_jns_dosen=1 group by a.id_dosen');
@@ -134,7 +134,8 @@ FROM aktivitas_dosen a INNER JOIN dosen_tbl d ON a.id_dosen=d.id_dosen WHERE d.k
 }
 
 public function getdosen(){
-	$data=$this->db->query('select id_dosen,nama_dosen from dosen_tbl where sts_ahli="YA"');
+	$kdprodi = $this->session->userdata('kd_prodi');
+	$data=$this->db->query('select id_dosen,nama_dosen from dosen_tbl where sts_ahli="YA" and kd_prodi='."'$kdprodi'");
 	return $data->result_array();
 }
 

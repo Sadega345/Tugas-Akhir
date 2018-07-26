@@ -20,10 +20,11 @@ public function index() {
 																'totdilaksanakan'=>$tot_dilaksanakan));
  }
 
- public function ubah($kode_mk){
+ public function ubah($id){
  	$this->model_squrity->getsqurity();
-		$res=$this->Apd_a442_model->update("where kode_mk='$kode_mk'");
+		$res=$this->Apd_a442_model->update("where a.id='$id'");
 		$data=array(
+			"id"=>$res[0]['id'],
 			"nama_dosen"=>$res[0]['nama_dosen'],
 			"kode_mk"=>$res[0]['kode_mk'],
 			"nama_mk"=>$res[0]['nama_mk'],
@@ -42,16 +43,17 @@ public function index() {
 		$jml_sks=$_POST['jml_sks'];
 		$jp_rencana=$_POST['jp_rencana'];
 		$jp_dilaksanakan=$_POST['jp_dilaksanakan'];
+		$id=$_POST['id'];
 		
 		$data_update=array(
-			"kode_mk"=>$kode_mk,
+			// "kode_mk"=>$kode_mk,
 			"nama_mk"=>$nama_mk,
 			"jml_sks"=>$jml_sks,
 			"jp_rencana"=>$jp_rencana,
 			"jp_dilaksanakan"=>$jp_dilaksanakan
 			
 		);
-		$where=array('kode_mk'=>$kode_mk);
+		$where=array('id'=>$id);
 		$res=$this->Apd_a442_model->rubah('aktivitas_mengajar',$data_update,$where);
 		if ($res>=1) {
 			redirect('Apd_a442_excel');

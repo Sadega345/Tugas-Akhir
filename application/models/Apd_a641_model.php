@@ -8,21 +8,21 @@ private $db2 ;
 public function __construct()
 {
  	parent::__construct();
-	$this->db2 = $this->load->database('db_dosen',TRUE);
+	// $this->db2 = $this->load->database('db_dosen',TRUE);
 }
 
  // Kalau si db 2 di aktifin database yg default nggk akan jalan,klw db 2 di matiin db yg default jalan
 
 // Listing
  public function listing1() {
- 	$kdprodi = $this->session->userdata('kd_prodi');
+ $kdprodi = $this->session->userdata('kd_prodi');
  $pustaka1=$this->db->query('SELECT jml_judul,jml_copy,id,jenis_pustaka FROM pustaka WHERE kd_prodi='."'$kdprodi'");
  return $pustaka1->result_array();
  }
 
  public function loadlisting1() {
  	
- 	$kdprodi = $this->session->userdata('kd_prodi');
+ $kdprodi = $this->session->userdata('kd_prodi');
  $pustaka1= $this->db2->query('SELECT jml_judul,jml_copy,id,jenis_pustaka FROM pustaka WHERE kd_prodi='."'$kdprodi'");
 
  return $pustaka1->result_array();

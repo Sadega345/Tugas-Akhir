@@ -130,7 +130,6 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th rowspan="2">No</th>
 									 <th rowspan="2">Nama Dosen Tidak Tetap</th>
 									 <th rowspan="2">Kode Mata Kuliah</th>
 									 <th rowspan="2">Nama Mata Kuliah</th>
@@ -154,7 +153,6 @@ License: You must have a valid license purchased only from themeforest(the above
 							<tbody>
 							
 							<tr>
-							 	<td>1</td>
 							 	<td><?php echo $nama_dosen; ?></td>
 							 	<td><?php echo $kode_mk; ?></td>
 							 	<td><input type="text" name="nama_mk" value="<?php echo $nama_mk; ?>"></td>
@@ -162,14 +160,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><input type="text" name="jp_rencana" value="<?php echo $jp_rencana; ?>"></td>
 							 	<td><input type="text" name="jp_dilaksanakan" value="<?php echo $jp_dilaksanakan; ?>"></td>
 							 </tr>
-							 <tr>
-							 	<td colspan="5">Jumlah*</td>
-							 	<td>16</td>
-							 	<td>16</td>
-							 </tr>
 							</tbody>
 							</table>
-							<input type="hidden" name="kode_mk" value="<?php echo $kode_mk; ?>">
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							<div class="btn-group">
 								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 							</div>

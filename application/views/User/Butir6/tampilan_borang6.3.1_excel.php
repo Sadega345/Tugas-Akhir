@@ -11,31 +11,23 @@ header("Expires: 0");
 ?>
 <p>TABEL DATA BUTIR 6.3.1 : DATA RUANG KERJA DOSEN TETAP</p>
 <table border="1" width="50%">
-		<thead>
-			 <tr>
-				 <th>Ruang Kerja Dosen</th>
-				 <th>Jumlah Ruang</th>
-				 <th>Jumlah Luas(m2)</th>
-			 </tr>
-		</thead>
-		<tbody>
-			 <?php 
-				foreach ($ruang1 as $r ) { 
-			?>
-			<tr>
-				<td><?php echo $r['r_kerja_dosen']; ?></td>
-				<td><?php echo $r['jml_ruang']; ?></td>
-				<td><?php echo $r['jml_luas']; ?></td>
-				
-			</tr>
-			<?php } ?>
-			 <tr>
-			 	<td colspan="2">Total</td>
-			 	<?php 
-					foreach ($totluas as $d ) { 
-			 	?>
-			 	<td><?php echo $d['Tot_Luas']; ?></td>
-			 <?php } ?>
-			 </tr>
-		</tbody>
+							<thead>
+								<tr>
+									 <th bgcolor="#D3D3D3">Ruang Kerja Dosen</th>
+									 <th bgcolor="#D3D3D3">Jumlah Ruang</th>
+									 <th bgcolor="#D3D3D3">Jumlah Luas(m2)</th>
+								 </tr>
+							</thead>
+							<tbody>
+							<?php 
+								 
+								foreach ($ruang1 as $r ) { 
+							?>
+							<tr>
+								<td bgcolor="#FFFF00"><?php echo $r['r_kerja_dosen']; ?></td>
+								<td bgcolor="#FFFF00"><?php echo $r['jml_ruang']; ?></td>
+								<td bgcolor="#FFFF00"><?php echo $r['jml_luas']; ?></td>
+							</tr>
+							<?php } ?>
+							</tbody>
 	</table>

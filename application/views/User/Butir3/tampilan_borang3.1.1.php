@@ -231,8 +231,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	 <td style="background-color: #D3D3D3"></td>
 								 	 <td style="background-color: #D3D3D3"></td>
 								 	 <td style="background-color: #D3D3D3"></td>
-								 	 <td style="background-color: #D3D3D3"></td>
-								 	 <td style="background-color: #D3D3D3"></td>
+								 	 
 								 </tr>	
 								 <tr>
 								 	<td>Rataan</td>

@@ -102,7 +102,14 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="btn-group">
 											<a href="<?php echo base_url()."index.php/Apd_a453_excel/tambah";?>">
 											<button id="sample_editable_1_new" class="btn green">
-											Tambah
+											Tambah <i class="fa fa-plus"></i>
+											</button>
+											</a>
+										</div>
+										<div class="btn-group">
+											<a href="<?php echo base_url()."index.php/Apd_a453_excel/export_excel";?>">
+											<button id="sample_editable_1_new" class="btn blue">
+											Export To Excel 
 											</button>
 											</a>
 										</div>
@@ -139,7 +146,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<td><?php echo $d['sbg_penyaji']; ?></td>
 							 	<td><?php echo $d['sbg_peserta']; ?></td>
 							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Apd_a453_excel/ubah/".$d['tahun'];?>" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Apd_a453_excel/ubah/".$d['id'];?>" >Edit</a>
 									||
 								 		<a href="<?php echo base_url()."index.php/Apd_a453_excel/do_hapus/".$d['id'];?>" id="alerthapus"">Hapus</a>
 								</td>
@@ -155,13 +162,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								</a>
 							</div> -->
 							
-							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a453_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn blue">
-										Export To Excel 
-									</button>
-								</a>
-							</div>
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

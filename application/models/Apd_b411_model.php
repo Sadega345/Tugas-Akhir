@@ -11,50 +11,56 @@ class Apd_b411_model extends CI_Model {
 
 // Listing
 public function getprodi(){
-$prodi=$this->db->query('select distinct(p.jurusan) as prodi from prodi_tbl p inner join sdm s on s.kd_prodi=p.kode_prodi where p.kode_fakultas="F001";');
+$kdprodi = $this->session->userdata('kd_prodi');
+$prodi=$this->db->query('select distinct p.jurusan as prodi from sdm s inner join prodi_tbl p on p.kode_prodi=s.kd_prodi where s.kd_prodi='."'$kdprodi'");
 return $prodi->result_array();
 }
 
 public function listing1() {
-	$kdprodi = $this->session->userdata('kd_prodi');
-$data1=$this->db->query('select jml from sdm where kd_hal=1 and kd_prodi='."'$kdprodi'");
+$kdprodi = $this->session->userdata('kd_prodi');
+$data1=$this->db->query('select id,jml from sdm where kd_hal=1 and kd_prodi='."'$kdprodi'");
 return $data1->result_array();
 }
 
 public function listing2() {
-	$kdprodi = $this->session->userdata('kd_prodi');
-$data2=$this->db->query('select jml from sdm where kd_hal=2 and kd_prodi='."'$kdprodi'");
+$kdprodi = $this->session->userdata('kd_prodi');
+$data2=$this->db->query('select id,jml from sdm where kd_hal=2 and kd_prodi='."'$kdprodi'");
 return $data2->result_array();
 }
 
 public function listing3() {
-	$kdprodi = $this->session->userdata('kd_prodi');
-$data3=$this->db->query('select jml from sdm where kd_hal=3 and kd_prodi='."'$kdprodi'");
+$kdprodi = $this->session->userdata('kd_prodi');
+$data3=$this->db->query('select id,jml from sdm where kd_hal=3 and kd_prodi='."'$kdprodi'");
 return $data3->result_array();
 }
 
 public function listing4() {
-	$kdprodi = $this->session->userdata('kd_prodi');
-$data4=$this->db->query('select jml from sdm where kd_hal=4 and kd_prodi='."'$kdprodi'");
+$kdprodi = $this->session->userdata('kd_prodi');
+$data4=$this->db->query('select id,jml from sdm where kd_hal=4 and kd_prodi='."'$kdprodi'");
 return $data4->result_array();
 }
 
 public function listing5() {
-	$kdprodi = $this->session->userdata('kd_prodi');
-$data5=$this->db->query('select jml from sdm where kd_hal=5 and kd_prodi='."'$kdprodi'");
+$kdprodi = $this->session->userdata('kd_prodi');
+$data5=$this->db->query('select id,jml from sdm where kd_hal=5 and kd_prodi='."'$kdprodi'");
 return $data5->result_array();
 }
 
 public function listing6() {
-	$kdprodi = $this->session->userdata('kd_prodi');
-$data6=$this->db->query('select jml from sdm where kd_hal=6 and kd_prodi='."'$kdprodi'");
+$kdprodi = $this->session->userdata('kd_prodi');
+$data6=$this->db->query('select id,jml from sdm where kd_hal=6 and kd_prodi='."'$kdprodi'");
 return $data6->result_array();
 }
 
 public function listing7() {
-	$kdprodi = $this->session->userdata('kd_prodi');
-$data7=$this->db->query('select jml from sdm where kd_hal=7 and kd_prodi='."'$kdprodi'");
+$kdprodi = $this->session->userdata('kd_prodi');
+$data7=$this->db->query('select id,jml from sdm where kd_hal=7 and kd_prodi='."'$kdprodi'");
 return $data7->result_array();
+}
+
+public function update($where=""){
+$data=$this->db->query('select id,jml from sdm '.$where);
+return $data->result_array();	
 }
 
 public function total1(){

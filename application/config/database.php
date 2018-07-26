@@ -95,12 +95,12 @@ $db['default'] = array(
 	'save_queries' => TRUE
 );
 
-$db['db_dosen'] = array(
+$db['repository-dosen'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-	'database' => 'db_dosen',
+	'database' => 'repository-dosen',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

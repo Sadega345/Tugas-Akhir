@@ -12,181 +12,189 @@ header("Expires: 0");
 <p>TABEL DATA BUTIR 6.1.1.1 : PEMBIAYAAN</p>
 <table border="1" width="50%">
 		<thead>
-			<tr>
-				 <th rowspan="2">Sumber Dana</th>
-				 <th rowspan="2">Jenis Dana</th>
-				 <th colspan="3">Jumlah Dana (juta rupiah)</th>
-				 <th rowspan="2">Total</th>
-			 </tr>
-			 <tr>
-			 	<th>TS-2</th>
-			 	<th>TS-1</th>
-			 	<th>TS</th>
-			 </tr>
-		</thead>
-		<tbody>
+								<tr>
+									 <th rowspan="2" bgcolor="#D3D3D3"><center>Sumber Dana</center></th>
+									 <th rowspan="2" bgcolor="#D3D3D3"><center>Jenis Dana</center></th>
+									 <th colspan="3" bgcolor="#D3D3D3"><center>Jumlah Dana (juta rupiah)</center></th>
+									 <th rowspan="2" bgcolor="#D3D3D3"><center>Total</center></th>
+								 </tr>
+								 <tr>
+								 	<th bgcolor="#D3D3D3"><center>TS-2</center></th>
+								 	<th bgcolor="#D3D3D3"><center>TS-1</center></th>
+								 	<th bgcolor="#D3D3D3"><center>TS</center></th>
+								 </tr>
+							</thead>
+							<tbody>
 
-		<tr>
-		 	<td rowspan="4">Usaha Sendiri</td>
-		 	<td>Beasiswa Yayasan</td>
-		 	<?php
-				foreach ($dana1 as $a ) { 
-			?>
-			<td><?php echo $a['ts_2'] ?></td>
-			<td><?php echo $a['ts_1'] ?></td>
-			<td><?php echo $a['ts'] ?></td>
-			<td><?php echo $a['total1'] ?></td>
-			<?php } ?>	 
-		 </tr>
-		 <tr>
-		 	<td>Hibah Yayasan</td>
-		 	<?php
-				foreach ($dana2 as $a ) { 
-			?>
-			<td><?php echo $a['ts_2'] ?></td>
-			<td><?php echo $a['ts_1'] ?></td>
-			<td><?php echo $a['ts'] ?></td>
-			<td><?php echo $a['total2'] ?></td>
-			<?php } ?>
-		 </tr>
-		 <tr>
-		 	<td>Hibah Unit Usaha (PT Pasim Sentra Utama)</td>
-		 	<?php
-				foreach ($dana3 as $a ) { 
-			?>
-			<td><?php echo $a['ts_2'] ?></td>
-			<td><?php echo $a['ts_1'] ?></td>
-			<td><?php echo $a['ts'] ?></td>
-			<td><?php echo $a['total3'] ?></td>
-			<?php } ?>
-		 </tr>
-		 <tr>
-		 	<td>Jumlah dana dari usaha sendiri</td>
-		 	<?php
-				foreach ($jml1 as $a ) { 
-			?>
-			<td><?php echo $a['jum2'] ?></td>
-			<td><?php echo $a['jum1'] ?></td>
-			<td><?php echo $a['jum'] ?></td>
-			<td><?php echo $a['totals1'] ?></td>
-			<?php } ?>
-		 </tr>
-		  <tr>
-		 	<td rowspan="4">Mahasiswa</td>
-		 	<td>Pendaftaran</td>
-		 	<?php
-				foreach ($dana4 as $a ) { 
-			?>
-			<td><?php echo $a['ts_2'] ?></td>
-			<td><?php echo $a['ts_1'] ?></td>
-			<td><?php echo $a['ts'] ?></td>
-			<td><?php echo $a['total4'] ?></td>
-			<?php } ?>
-		 </tr>
-		 <tr>
-		 	<td>Biaya Registrasi</td>
-		 	<?php
-				foreach ($dana5 as $a ) { 
-			?>
-			<td><?php echo $a['ts_2'] ?></td>
-			<td><?php echo $a['ts_1'] ?></td>
-			<td><?php echo $a['ts'] ?></td>
-			<td><?php echo $a['total5'] ?></td>
-			<?php } ?>
-		 </tr>
-		 <tr>
-		 	<td>Biaya Kuliah</td>
-		 	<?php
-				foreach ($dana6 as $a ) { 
-			?>
-			<td><?php echo $a['ts_2'] ?></td>
-			<td><?php echo $a['ts_1'] ?></td>
-			<td><?php echo $a['ts'] ?></td>
-			<td><?php echo $a['total6'] ?></td>
-			<?php } ?>
-		 </tr>
-		 <tr>
-		 	<td>Jumlah dana dari Mahasiswa</td>
-		 	<?php
-				foreach ($jml2 as $a ) { 
-			?>
-			<td><?php echo $a['jml2'] ?></td>
-			<td><?php echo $a['jml1'] ?></td>
-			<td><?php echo $a['jml'] ?></td>
-			<td><?php echo $a['totals2'] ?></td>
-			<?php } ?>
-		 </tr>
-		  <tr>
-		 	<td rowspan="2">Pemerintah</td>
-		 	<td></td>
-		 	<td></td>
-		 	<td></td>
-		 	<td></td>
-		 	<td></td>
-		 </tr>
-		<tr>
-		 	<td><center><strong>Jumlah dana dari Pemerintah</strong></center></td>
-		 	<td></td>
-		 	<td></td>
-		 	<td></td>
-		 	<td></td>
-		 </tr>
-		 <tr>
-		 	<td rowspan="4">Sumber Lain</td>
-		 	<td>Alumni</td>
-		 	<?php
-				foreach ($dana7 as $a ) { 
-			?>
-			<td><?php echo $a['ts_2'] ?></td>
-			<td><?php echo $a['ts_1'] ?></td>
-			<td><?php echo $a['ts'] ?></td>
-			<td><?php echo $a['total7'] ?></td>
-			<?php } ?>
-		 </tr>
-		 <tr>
-		 	<td>Hibah Penelitian</td>
-		 	<?php
-				foreach ($dana8 as $a ) { 
-			?>
-			<td><?php echo $a['ts_2'] ?></td>
-			<td><?php echo $a['ts_1'] ?></td>
-			<td><?php echo $a['ts'] ?></td>
-			<td><?php echo $a['total8'] ?></td>
-			<?php } ?>
-		 </tr>
-		 <tr>
-		 	<td>Hibah Pengabdian</td>
-		 	<?php
-				foreach ($dana9 as $a ) { 
-			?>
-			<td><?php echo $a['ts_2'] ?></td>
-			<td><?php echo $a['ts_1'] ?></td>
-			<td><?php echo $a['ts'] ?></td>
-			<td><?php echo $a['total9'] ?></td>
-			<?php } ?>
-		 </tr>
-		 <tr>
-		 	<td>Jumlah dana dari sumber lain</td>
-		 	<?php
-				foreach ($jml4 as $a ) { 
-			?>
-			<td><?php echo $a['jumlah2'] ?></td>
-			<td><?php echo $a['jumlah1'] ?></td>
-			<td><?php echo $a['jumlah'] ?></td>
-			<td><?php echo $a['totals4'] ?></td>
-			<?php } ?>
-		 </tr>
-		<tr>
-		 	<td colspan="2"><center><strong>Total*</strong></center></td>
-		 	 <?php
-				foreach ($total as $a ) { 
-			?>
-			<td><?php echo $a['total1'] ?></td>
-			<td><?php echo $a['total2'] ?></td>
-			<td><?php echo $a['total3'] ?></td>
-			<td><?php echo $a['totals'] ?></td>
-			<?php } ?>
-		 </tr>
-		</tbody>
+							<tr>
+							 	<td rowspan="4" bgcolor="#D3D3D3">Usaha Sendiri</td>
+							 	<?php
+									foreach ($dana1 as $a ) { 
+								?>
+								<td bgcolor="#FFFF00"><?php echo $a['jenis_dana'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts_2'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts_1'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['total1'] ?></td>
+								<?php } ?>	 
+							 </tr>
+							 <tr>
+							 	
+							 	<?php
+									foreach ($dana2 as $a ) { 
+								?>
+								<td bgcolor="#FFFF00"><?php echo $a['jenis_dana'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts_2'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts_1'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['total2'] ?></td>
+								<?php } ?>
+							 </tr>
+							 <tr>
+							 	
+							 	<?php
+									foreach ($dana3 as $a ) { 
+								?>
+								<td bgcolor="#FFFF00"><?php echo $a['jenis_dana'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts_2'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts_1'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['total3'] ?></td>
+								<?php } ?>
+							 </tr>
+							 <tr>
+							 	<td bgcolor="#7FFF00"><center><strong>Jumlah dana dari usaha sendiri</strong></center></td>
+							 	<?php
+									foreach ($jml1 as $a ) { 
+								?>
+								<td bgcolor="#7FFF00"><?php echo $a['jum2'] ?></td>
+								<td bgcolor="#7FFF00"><?php echo $a['jum1'] ?></td>
+								<td bgcolor="#7FFF00"><?php echo $a['jum'] ?></td>
+								<td bgcolor="#7FFF00"><?php echo $a['totals1'] ?></td>
+								<?php } ?>
+							 </tr>
+							  <tr>
+							 	<td rowspan="4" bgcolor="#D3D3D3">Mahasiswa</td>
+							 	
+							 	<?php
+									foreach ($dana4 as $a ) { 
+								?>
+								<td bgcolor="#FFFF00"><?php echo $a['jenis_dana'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts_2'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts_1'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['total4'] ?></td>
+								<?php } ?>
+							 </tr>
+							 <tr>
+							 	<?php
+									foreach ($dana5 as $a ) { 
+								?>
+								<td bgcolor="#FFFF00"><?php echo $a['jenis_dana'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts_2'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts_1'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['total5'] ?></td>
+								<?php } ?>
+							 </tr>
+							 <tr>
+							 	
+							 	<?php
+									foreach ($dana6 as $a ) { 
+								?>
+								<td bgcolor="#FFFF00"><?php echo $a['jenis_dana'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts_2'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts_1'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['total6'] ?></td>
+								<?php } ?>
+							 </tr>
+							 <tr>
+							 	<td bgcolor="#7FFF00"><center><strong>Jumlah dana dari Mahasiswa</strong></center></td>
+							 	<?php
+									foreach ($jml2 as $a ) { 
+								?>
+								<td bgcolor="#7FFF00"><?php echo $a['jml2'] ?></td>
+								<td bgcolor="#7FFF00"><?php echo $a['jml1'] ?></td>
+								<td bgcolor="#7FFF00"><?php echo $a['jml'] ?></td>
+								<td bgcolor="#7FFF00"><?php echo $a['totals2'] ?></td>
+								<?php } ?>
+							 </tr>
+							  <tr>
+							 	<td rowspan="2" bgcolor="#D3D3D3">Pemerintah</td>
+							 	<td bgcolor="#FFFF00"></td>
+							 	<td bgcolor="#FFFF00"></td>
+							 	<td bgcolor="#FFFF00"></td>
+							 	<td bgcolor="#FFFF00"></td>
+							 	<td bgcolor="#FFFF00"></td>
+							 	
+							 </tr>
+							<tr>
+							 	<td bgcolor="#7FFF00"><center><strong>Jumlah dana dari Pemerintah</strong></center></td>
+							 	<td bgcolor="#7FFF00"></td>
+							 	<td bgcolor="#7FFF00"></td>
+							 	<td bgcolor="#7FFF00"></td>
+							 	<td bgcolor="#7FFF00"></td>
+							 </tr>
+							 <tr>
+							 	<td rowspan="4" bgcolor="#D3D3D3">Sumber Lain</td>
+							 	
+							 	<?php
+									foreach ($dana7 as $a ) { 
+								?>
+								<td bgcolor="#FFFF00"><?php echo $a['jenis_dana'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts_2'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts_1'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['total7'] ?></td>
+								<?php } ?>
+							 </tr>
+							 <tr>
+							 	
+							 	<?php
+									foreach ($dana8 as $a ) { 
+								?>
+								<td bgcolor="#FFFF00"><?php echo $a['jenis_dana'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts_2'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts_1'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['total8'] ?></td>
+								<?php } ?>
+							 </tr>
+							 <tr>
+							 	
+							 	<?php
+									foreach ($dana9 as $a ) { 
+								?>
+								<td bgcolor="#FFFF00"><?php echo $a['jenis_dana'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts_2'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts_1'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['ts'] ?></td>
+								<td bgcolor="#FFFF00"><?php echo $a['total9'] ?></td>
+								<?php } ?>
+							 </tr>
+							 <tr>
+							 	<td bgcolor="#7FFF00">Jumlah dana dari sumber lain</td>
+							 	<?php
+									foreach ($jml4 as $a ) { 
+								?>
+								<td bgcolor="#7FFF00"><?php echo $a['jumlah2'] ?></td>
+								<td bgcolor="#7FFF00"><?php echo $a['jumlah1'] ?></td>
+								<td bgcolor="#7FFF00"><?php echo $a['jumlah'] ?></td>
+								<td bgcolor="#7FFF00"><?php echo $a['totals4'] ?></td>
+								<?php } ?>
+							 </tr>
+							<tr>
+							 	<td colspan="2" bgcolor="#D3D3D3"><center><strong>Total*</strong></center></td>
+							 	 <?php
+									foreach ($total as $a ) { 
+								?>
+								<td bgcolor="#7FFF00"><?php echo $a['total1'] ?></td>
+								<td bgcolor="#7FFF00"><?php echo $a['total2'] ?></td>
+								<td bgcolor="#7FFF00"><?php echo $a['total3'] ?></td>
+								<td bgcolor="#7FFF00"><?php echo $a['totals'] ?></td>
+								<?php } ?>
+							 </tr>
+							</tbody>
 	</table>
 

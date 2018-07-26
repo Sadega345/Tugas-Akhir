@@ -116,8 +116,8 @@ License: You must have a valid license purchased only from themeforest(the above
 											<select name="id_dosen" class="form-control">
 												<option disabled selected>-- Pilih Dosen --</option>
 												<?php 
-													$data=$this->Apd_a453_model->getdosen();
-													foreach($data as $d) { 
+													$dosen=$this->Apd_a453_model->getdosen();
+													foreach($dosen as $d) { 
 												?>
 									                <option value="<?php echo $d['id_dosen'];?>"><?php echo $d['nama_dosen'];?></option>
 									            <?php } ?>

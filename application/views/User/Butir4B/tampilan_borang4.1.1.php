@@ -117,6 +117,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2"><center>Hal</center></th>
 									 <th rowspan="2"><center>Total di Unit Pengelola**</center></th>
 									 <th><center>Jumlah Dosen yang bertugas pada PS: *</center></th>
+									 <th rowspan="2"><center>Aksi</center>	</th>
 								 </tr>
 								 <tr>
 								 <?php 
@@ -133,6 +134,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							 	<th>Jabatan Fungsional :</th>
 							 	 <td></td>
 							 	 <td></td>
+							 	 <td></td>
 							 </tr>
 							 <tr>
 							 	<td>1</td>
@@ -146,7 +148,11 @@ License: You must have a valid license purchased only from themeforest(the above
 							 		foreach ($data1 as $d) {
 							 	 ?>
 							 	 <td><?php echo $d['jml']; ?></td>
+							 	 <td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_b411_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>
 							 	 <?php } ?>
+
 							 </tr>
 							 <tr>
 							 	<td>2</td>
@@ -160,6 +166,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 		foreach ($data2 as $d) {
 							 	 ?>
 							 	 <td><?php echo $d['jml']; ?></td>
+							 	 <td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a411_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>
 							 	 <?php } ?>
 							 </tr>
 							 <tr>
@@ -174,6 +183,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 		foreach ($data3 as $d) {
 							 	 ?>
 							 	 <td><?php echo $d['jml']; ?></td>
+							 	 <td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a411_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>
 							 	 <?php } ?>
 							 </tr>
 							  <tr>
@@ -188,6 +200,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 		foreach ($data4 as $d) {
 							 	 ?>
 							 	 <td><?php echo $d['jml']; ?></td>
+							 	 <td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a411_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>
 							 	 <?php } ?>
 							 </tr>
 							 <tr>
@@ -202,11 +217,15 @@ License: You must have a valid license purchased only from themeforest(the above
 							 		foreach ($totalaps as $t) {
 							 	 ?>
 							 	 <td><?php echo $t['totalaps']; ?></td>
+							 	 <td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a411_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>
 							 	 <?php } ?>
 							 </tr>
 							 <tr>
 							 	<th>B</th>
 							 	<th>Pendidikan Tertinggi:</th>
+							 	<td></td>
 							 	<td></td>
 							 	<td></td>
 							 </tr>
@@ -222,6 +241,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 		foreach ($data5 as $d) {
 							 	 ?>
 							 	 <td><?php echo $d['jml']; ?></td>
+							 	 <td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a411_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>
 							 	 <?php } ?>
 							 </tr>
 							 <tr>
@@ -236,6 +258,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 		foreach ($data6 as $d) {
 							 	 ?>
 							 	 <td><?php echo $d['jml']; ?></td>
+							 	 <td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a411_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>
 							 	 <?php } ?>
 							 </tr>
 							 <tr>
@@ -250,6 +275,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 		foreach ($data7 as $d) {
 							 	 ?>
 							 	 <td><?php echo $d['jml']; ?></td>
+							 	 <td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a411_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>
 							 	 <?php } ?>
 							 </tr>
 							 <tr>
@@ -264,6 +292,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							 		foreach ($totalbps as $t) {
 							 	 ?>
 							 	 <td><?php echo $t['totalbps']; ?></td>
+							 	 <td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_a411_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>
 							 	 <?php } ?>
 							 </tr>
 							</tbody>

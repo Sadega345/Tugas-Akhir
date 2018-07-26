@@ -13,10 +13,10 @@ header("Expires: 0");
 <table border="1" width="50%">
 		<thead>
 								<tr>
-									 <th>No</th>
-									 <th>Nama Dosen Pembimbing Akademik</th>
-									 <th>Jumlah Mahasiswa Bimbingan</th>
-									 <th>Rata-rata banyaknya Pertemuan/mhs/semester</th>
+									 <th  bgcolor="#D3D3D3">No</th>
+									 <th  bgcolor="#D3D3D3">Nama Dosen Pembimbing Akademik</th>
+									 <th  bgcolor="#D3D3D3">Jumlah Mahasiswa Bimbingan</th>
+									 <th  bgcolor="#D3D3D3">Rata-rata banyaknya Pertemuan/mhs/semester</th>
 								 </tr>
 							</thead>
 							<tbody>
@@ -25,28 +25,27 @@ header("Expires: 0");
 								foreach ($data as $d ) { 
 							?>
 							<tr>
-							 	<td><?php echo $no++; ?></td>
-							 	<td><?php echo $d['nama_dosen'] ?></td>
-							 	<td><?php echo $d['j_mhs_bimbingan'] ?></td>
-							 	<td><?php echo $d['rata2_pertemuan'] ?></td>
+							 	<td bgcolor="#FFFF00"><?php echo $no++; ?></td>
+							 	<td bgcolor="#FFFF00"><?php echo $d['nama_dosen'] ?></td>
+							 	<td bgcolor="#FFFF00"><?php echo $d['j_mhs_bimbingan'] ?></td>
+							 	<td bgcolor="#FFFF00"><?php echo $d['rata2_pertemuan'] ?></td>
 							 </tr>
 							 <?php } ?>	
 
 							 
 							 <tr>
-							 	<td colspan="2"><center>Jumlah*</center></td>
+							 	<td colspan="2" bgcolor="#D3D3D3"><center>Jumlah*</center></td>
 							 	<?php 
 							 		foreach ($totpertemuan as $jum) {
 							 	?>
-							 		<td><?php echo $jum['jum_bimbingan']; ?></td>
+							 		<td bgcolor="#7FFF00"><?php echo $jum['jum_bimbingan']; ?></td>
 							 	<?php } ?>
 
 							 <?php 
 							 	foreach ($bertemu as $temu) {
 							 ?>
 							 	
-							 	<td><?php echo $temu['rata_pertemuan']; ?></td>
+							 	<td bgcolor="#7FFF00"><?php echo $temu['rata_pertemuan']; ?></td>
 							 <?php } ?>
 
-							</tbody>
-</table>
+							</tbody></table>

@@ -257,6 +257,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</thead>
 							</table>
 							</div>
+							<br>
 							<div class="btn-group">
 								<button id="sample_editable_1_new" class="btn green">
 									Edit 

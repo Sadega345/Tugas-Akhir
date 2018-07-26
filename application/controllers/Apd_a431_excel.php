@@ -16,6 +16,13 @@ public function index() {
  $this->load->view('User/Butir4/tampilan_borang4.3.1.php',array('data'=>$data));
  }
 
+public function load(){
+ 	$loadlisting=$this->Apd_a431_model->loadlisting();
+	$data=$this->Apd_a431_model->listing();
+	$this->load->view('User/Butir4/load_tampilan_borang4.3.1.php',array('loadlisting'=>$loadlisting,
+																	'data'=>$data));
+ }
+
  public function ubah($nidn){
  	$this->model_squrity->getsqurity();
 	$res=$this->Apd_a431_model->update("where nidn='$nidn'");

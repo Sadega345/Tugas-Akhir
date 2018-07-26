@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+<title>Butir 4.1.1 : SUMBER DAYA MANUSIA</title>
 <!-- 
+
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
 Author: KeenThemes
@@ -128,188 +130,25 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 								<tr>
-									 <th rowspan="2">No</th>
-									 <th rowspan="2">Hal</th>
-									 <th rowspan="2">Total di Unit Pengelola**</th>
-									 <th colspan="7">Jumlah Dosen yang bertugas pada PS: *</th>
+									 <th rowspan="2"><center>Total di Unit Pengelola**</center></th>
+									 <th><center>Jumlah Dosen yang bertugas pada PS: *</center></th>
 								 </tr>
-								 <tr>
-								 	<th>PS-1 <br>Nama PS-1</th>
-								 	<th>PS-2 <br>Nama PS-2</th>
-								 	<th>PS-3 <br>Nama PS-3</th>
-								 	<th>PS-4 <br>Nama PS-4</th>
-								 	<th></th>
-								 	<th></th>
-								 	<th></th>
-								 </tr>
-								 <tr align="center">
-								 	<td>(1)</td>
-								 	<td>(2)</td>
-								 	<td>(3)</td>
-								 	<td>(4)</td>
-								 	<td>(5)</td>
-								 	<td>(6)</td>
-								 	<td>(7)</td>
-								 	<td>(8)</td>
-								 	<td>(9)</td>
-								 	<td>(10)</td>
+								<tr>
+								 <?php 
+								 	$no=1;
+								 	foreach ($prodi as $p) {
+								  ?>
+								 	<th><center>PS-<?php echo $no++; ?> <br><?php echo $p['prodi']; ?></center></th>
+								 <?php } ?>
 								 </tr>
 							</thead>
 							<tbody>
-							<!-- <?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?> -->
-							<!-- <tr class="odd gradeX">
-								<td>
-									<?php echo $no++; ?>
-								</td>
-								<td>
-									 <?php echo $d['kode_fakultas']; ?>
-								</td>
-								<td>
-									<?php echo $d['nama_fakultas']; ?>
-								</td>
-								<td class="center">
-									<a href="<?php echo base_url()."index.php/CrudFakultas/edit_data/".$d['kode_fakultas'];?>">Edit</a> ||
-         							<a href="<?php echo base_url()."index.php/CrudFakultas/do_hapus/".$d['kode_fakultas'];?>">Delete</a>
-								</td>
-							</tr>
-							<?php } ?> -->
-							<tr>
-							 	<th>A</th>
-							 	<th>Jabatan Fungsional :</th>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr>
-							 <tr>
-							 	<td>1</td>
-							 	<td>Asisten Ahli</td>
-							 	<td><input type="text" name="" value="5" class="form-controll"></td>
-							 	<td><input type="text" name="" value="5" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 </tr>
-							 <tr>
-							 	<td>2</td>
-							 	<td>Lektor</td>
-							 	<td><input type="text" name="" value="1" class="form-controll"></td>
-							 	<td><input type="text" name="" value="1" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 </tr>
-							 <tr>
-							 	<td>3</td>
-							 	<td>Lektor Kepala</td>
-							 	<td><input type="text" name="" value="0" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 </tr>
-							  <tr>
-							 	<td>4</td>
-							 	<td>Guru Besar/Profesor</td>
-							 	<td><input type="text" name="" value="0" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 </tr>
-							 <tr>
-							 	<td></td>
-							 	<td>Total</td>
-							 	<td>6</td>
-							 	<td>6</td>
-							 	<td>0</td>
-							 	<td>0</td>
-							 	<td>0</td>
-							 	<td>0</td>
-							 	<td>0</td>
-							 	<td>0</td>
-							 </tr>
-							 <tr>
-							 	<th>B</th>
-							 	<th>Pendidikan Tertinggi:</th>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 	<td></td>
-							 </tr>
-							  <tr>
-							 	<td>1</td>
-							 	<td>S1</td>
-							 	<td><input type="text" name="" class="form-controll" value="1"></td>
-							 	<td><input type="text" name="" class="form-controll" value="1"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 </tr>
-							 <tr>
-							 	<td>2</td>
-							 	<td>S2/Profesi/Sp-1</td>
-							 	<td><input type="text" name="" class="form-controll" value="7"></td>
-							 	<td><input type="text" name="" class="form-controll" value="7"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 </tr>
-							 <tr>
-							 	<td>3</td>
-							 	<td>S3/Sp-2</td>
-							 	<td><input type="text" name="" value="0"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 	<td><input type="text" name="" class="form-controll"></td>
-							 </tr>
-							 <tr>
-							 	<td></td>
-							 	<td>Total</td>
-							 	<td>8</td>
-							 	<td>8</td>
-							 	<td>0</td>
-							 	<td>0</td>
-							 	<td>0</td>
-							 	<td>0</td>
-							 	<td>0</td>
-							 	<td>0</td>
-							 </tr>
+								<tr>
+								 <td><?php echo $d['jml']; ?></td>
+								</tr>
 							</tbody>
 							</table>
+							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							</div>
 							<div class="btn-group">
 								<a href="#">
@@ -318,9 +157,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									</button>
 								</a>
 							</div>
-							
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_b411_excel/export_excel";?>">
+								<a href="<?php echo base_url()."index.php/Apd_b411_excel";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal 
 									</button>

@@ -123,6 +123,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th><center>PS-<?php echo $no++; ?> <br><?php echo $p['prodi']; ?></center></th>
 									 <?php } ?>
 									 <th><center>Total di Institusi</center></th>
+									 <th><center>Aksi</center></th>
 								 </tr>
 							</thead>
 							<tbody>
@@ -143,6 +144,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								 		foreach ($total1 as $t) {
 								 	 ?>
 								 	 <td><?php echo $t['total1'] ?></td>
+								 	 <td class="center">
+										<a href="<?php echo base_url()."index.php/Apd_b412_excel/ubah1/".$t['id'];?>" >Edit</a>
+									 </td>
 								 	 <?php } ?>
 								 </tr>
 								  <tr>
@@ -162,6 +166,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								 		foreach ($total2 as $t) {
 								 	 ?>
 								 	 <td><?php echo $t['total2'] ?></td>
+								 	 <td class="center">
+										<a href="<?php echo base_url()."index.php/Apd_b412_excel/ubah2/".$t['id'];?>" >Edit</a>
+									 </td>
 								 	 <?php } ?>
 								 </tr>
 							</tbody>

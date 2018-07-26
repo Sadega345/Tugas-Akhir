@@ -13,13 +13,16 @@ public function index() {
  // $data = array( 'title' => 'TABEL DATA BUTIR 4.5.3 : KEGIATAN DOSEN TETAP',
  // 'a453' => $this->apd_a453_model->listing());
  $data=$this->Apd_a453_model->listing();
- $this->load->view('User/Butir4/tampilan_borang4.5.3.php',array('data'=>$data));
+ $dosen=$this->Apd_a453_model->getdosen();
+ $this->load->view('User/Butir4/tampilan_borang4.5.3.php',array('data'=>$data,
+																'dosen'=>$dosen));
  }
 
- public function ubah($tahun){
+ public function ubah($id){
  	$this->model_squrity->getsqurity();
-		$res=$this->Apd_a453_model->update("where tahun='$tahun'");
+		$res=$this->Apd_a453_model->update("where id='$id'");
 		$data=array(
+			"id"=>$res[0]['id'],
 			"nama_dosen"=>$res[0]['nama_dosen'],
 			"jenis_kegiatan"=>$res[0]['jenis_kegiatan'],
 			"tempat"=>$res[0]['tempat'],
@@ -33,23 +36,22 @@ public function index() {
  }
 
  public function do_edit(){
-		// $nama_dosen=$_POST['nama_dosen'];
+		$id=$_POST['id'];
 		$jenis_kegiatan=$_POST['jenis_kegiatan'];
 		$tempat=$_POST['tempat'];
 		$tahun=$_POST['tahun'];
-		$sbg_penyaji=implode(',', $_POST['sbg_penyaji']);
-
-		$sbg_peserta=implode(',', $_POST['sbg_peserta']);
-		
+		$sbg_penyaji=$_POST['sbg_penyaji'];
+		$sbg_peserta=$_POST['sbg_peserta'];
 		$data_update=array(
 			"jenis_kegiatan"=>$jenis_kegiatan,
 			"tempat"=>$tempat,
 			"tahun"=>$tahun,
 			"sbg_penyaji"=>$sbg_penyaji,
-			"sbg_peserta"=>$sbg_peserta
+			"sbg_peserta"=>$sbg_peserta,
 			
 		);
-		$where=array('tahun'=>$tahun);
+		$where=array('id'=>$id);
+		// print_r($data_update);die();
 		$res=$this->Apd_a453_model->rubah('kegiatan_dsn_ttp',$data_update,$where);
 		if ($res>=1) {
 			redirect('Apd_a453_excel');
@@ -78,7 +80,7 @@ public function index() {
 			'tempat'=>$tempat,
 			'tahun'=>$tahun,
 			'sbg_penyaji' => $sbg_penyaji,
-			'sbg_peserta' => $sbg_peserta
+			'sbg_peserta' => $sbg_peserta,
 		);
 		// print_r($data_insert);die();
 		$res=$this->Apd_a453_model->insert('kegiatan_dsn_ttp',$data_insert);
@@ -93,7 +95,8 @@ public function export_excel(){
  // $data = array( 'title' => 'TABEL DATA BUTIR 4.5.3 : KEGIATAN DOSEN TETAP',
  // 'a453' => $this->apd_a453_model->listing());
  $data=$this->Apd_a453_model->listing();
- $this->load->view('User/Butir4/tampilan_borang4.5.3_excel.php',array('data'=>$data));
+ $dosen=$this->Apd_a453_model->getdosen();
+ $this->load->view('User/Butir4/tampilan_borang4.5.3_excel.php',array('data'=>$data, 'dosen'=>$dosen));
  }
 
  public function do_hapus($id){

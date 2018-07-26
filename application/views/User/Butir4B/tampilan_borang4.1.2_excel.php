@@ -11,18 +11,18 @@ header("Expires: 0");
 ?>
 <p>TABEL DATA BUTIR 4.1.2 : SUMBER DAYA MANUSIA</p>
 <table border="1" width="50%">
-		<thead>
+							<thead>
 								<tr>
-									 <th><center>No</center></th>
-									 <th><center>Hal</center></th>
-									 <th><center>Total di Unit Pengelola**</center></th>
+									 <th bgcolor="#D3D3D3"><center>No</center></th>
+									 <th bgcolor="#D3D3D3"><center>Hal</center></th>
+									 <th bgcolor="#D3D3D3"><center>Total di Unit Pengelola**</center></th>
 									 <?php 
 									 	$no=1;
 									 	foreach ($prodi as $p) {
 									  ?>
-									 <th><center>PS-<?php echo $no++; ?> <br><?php echo $p['prodi']; ?></center></th>
+									 <th bgcolor="#D3D3D3"><center>PS-<?php echo $no++; ?> <br><?php echo $p['prodi']; ?></center></th>
 									 <?php } ?>
-									 <th><center>Total di Institusi</center></th>
+									 <th bgcolor="#D3D3D3"><center>Total di Institusi</center></th>
 								 </tr>
 							</thead>
 							<tbody>
@@ -32,17 +32,17 @@ header("Expires: 0");
 								 	<?php 
 								 		foreach ($total1 as $t) {
 								 	 ?>
-								 	 <td><?php echo $t['total1'] ?></td>
+								 	 <td bgcolor="#7FFF00"><?php echo $t['total1'] ?></td>
 								 	 <?php } ?>
 								 	 <?php 
 								 	 	foreach ($banyak1 as $j) {
 								 	  ?>
-								 	 <td><?php echo $j['banyak1'] ?></td>
+								 	 <td bgcolor="#FFFF00"><?php echo $j['banyak1'] ?></td>
 								 	 <?php } ?>
 								 	 <?php 
 								 		foreach ($total1 as $t) {
 								 	 ?>
-								 	 <td><?php echo $t['total1'] ?></td>
+								 	 <td bgcolor="#FFFF00"><?php echo $t['total1'] ?></td>
 								 	 <?php } ?>
 								 </tr>
 								  <tr>
@@ -51,17 +51,17 @@ header("Expires: 0");
 								 	<?php 
 								 		foreach ($total2 as $t) {
 								 	 ?>
-								 	 <td><?php echo $t['total2'] ?></td>
+								 	 <td bgcolor="#7FFF00"><?php echo $t['total2'] ?></td>
 								 	 <?php } ?>
 								 	 <?php 
 								 	 	foreach ($banyak2 as $j) {
 								 	  ?>
-								 	 <td><?php echo $j['banyak2'] ?></td>
+								 	 <td bgcolor="#FFFF00"><?php echo $j['banyak2'] ?></td>
 								 	 <?php } ?>
 								 	 <?php 
 								 		foreach ($total2 as $t) {
 								 	 ?>
-								 	 <td><?php echo $t['total2'] ?></td>
+								 	 <td bgcolor="#FFFF00"><?php echo $t['total2'] ?></td>
 								 	 <?php } ?>
 								 </tr>
 							</tbody>

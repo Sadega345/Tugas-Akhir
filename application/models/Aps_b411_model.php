@@ -10,8 +10,9 @@ class Aps_b411_model extends CI_Model {
 //  }
 
 // Listing
- public function getprodi(){
-$prodi=$this->db->query('select distinct(p.jurusan) as prodi from prodi_tbl p inner join sdm s on s.kd_prodi=p.kode_prodi where p.kode_fakultas="F001";');
+public function getprodi(){
+$kdprodi = $this->session->userdata('kd_prodi');
+$prodi=$this->db->query('select distinct p.jurusan as prodi from sdm s inner join prodi_tbl p on p.kode_prodi=s.kd_prodi where s.kd_prodi='."'$kdprodi'");
 return $prodi->result_array();
 }
 

@@ -136,15 +136,15 @@ License: You must have a valid license purchased only from themeforest(the above
 								 	<td class="center">
 										<a href="<?php echo base_url()."index.php/Apd_b321_excel/ubah/".$m['id'];?>" >Edit</a>
 									</td>
-								 	<?php } ?>
 								 </tr>
+								 <?php } ?>
 								 <tr>
 								 	<td colspan="2">Rata-rata di Unit Pengelola**</td>
 								 	<?php 
 								 		foreach ($rata as $r) {
 								 	 ?>
-								 	 <td><?php echo $r['rata_mastud'] ?></td>
-								 	 <td><?php echo $r['rata2'] ?></td>
+								 	 <td><?php echo number_format($r['rata_mastud'],2,'.',','); ?></td>
+								 	 <td><?php echo  number_format($r['rata2'],2,'.',','); ?></td>
 								 	 <td></td>
 								 	 <?php } ?>
 								 </tr>

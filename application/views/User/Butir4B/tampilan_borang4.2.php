@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>Butir 4.2 : TENAGA Kependidikan</title>
+<title>Butir 4.2 : TENAGA KEPENDIDIKAN</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -117,6 +117,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2"><center>Jenis Tenaga Kependidikan</center></th>
 									 <th colspan="8"><center>Jumlah Tenaga Kependidikan dengan Pendidikan Terakhir</center></th>
 									 <th rowspan="2"><center>Unit Kerja</center></th>
+									 <th rowspan="2"><center>Aksi</center></th>
 								 </tr>
 								 <tr>
 								 	<td><center>S3</center></td>
@@ -146,21 +147,24 @@ License: You must have a valid license purchased only from themeforest(the above
 								<td><?php echo $d['d1']; ?></td>
 								<td><?php echo $d['sma']; ?></td>
 								<td><?php echo $d['unit_kerja']; ?></td>
+								<td class="center">
+									<a href="<?php echo base_url()."index.php/Apd_b42_excel/ubah/".$d['id'];?>" >Edit</a>
+								</td>
 							 </tr>
 							 <?php } ?>
 							 <tr>
-							 	<td colspan="2">Total</td>
+							 	<th colspan="2">Total</th>
 							 	<?php 
 							 		foreach ($total as $d) {
 							 	 ?>
-							 	<td><?php echo $d['totals3']; ?></td>
-								<td><?php echo $d['totals2']; ?></td>
-								<td><?php echo $d['totals1']; ?></td>
-								<td><?php echo $d['totald4']; ?></td>
-								<td><?php echo $d['totald3']; ?></td>
-								<td><?php echo $d['totald2']; ?></td>
-								<td><?php echo $d['totald1']; ?></td>
-								<td><?php echo $d['totalsma']; ?></td>
+							 	<th><?php echo $d['totals3']; ?></th>
+								<th><?php echo $d['totals2']; ?></th>
+								<th><?php echo $d['totals1']; ?></th>
+								<th><?php echo $d['totald4']; ?></th>
+								<th><?php echo $d['totald3']; ?></th>
+								<th><?php echo $d['totald2']; ?></th>
+								<th><?php echo $d['totald1']; ?></th>
+								<th><?php echo $d['totalsma']; ?></th>
 								<?php } ?>
 							 </tr>	
 							</tbody>
