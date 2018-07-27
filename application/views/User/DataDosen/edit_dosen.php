@@ -122,25 +122,25 @@ License: You must have a valid license purchased only from themeforest(the above
 							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 							<thead>
 								<tr>
-									 <th rowspan="2">No</th>
-									 <th rowspan="2">Nama Dosen Tetap</th>
-									 <th rowspan="2">NIDN</th>
-									 <th rowspan="2">Tanggal lahir (dd/mm/yyyy)</th>
-									 <th rowspan="2">Jabatan Akademik</th>
-									 <th colspan="3">S1</th>
-									 <th colspan="3">S2</th>
-									 <th colspan="3">S3</th>
+									 <th rowspan="2"><center>No</center></th>
+									 <th rowspan="2"><center>Nama Dosen Tetap</center></th>
+									 <th rowspan="2"><center>NIDN</center></th>
+									 <th rowspan="2"><center>Tanggal lahir (dd/mm/yyyy)</center></th>
+									 <th rowspan="2"><center>Jabatan Akademik</center></th>
+									 <th colspan="3"><center>S1</center></th>
+									 <th colspan="3"><center>S2</center></th>
+									 <th colspan="3"><center>S3</center></th>
 								 </tr>
 								 <tr>
-								 	<td>Gelar Akademik</td>
-								 	<td>Asal PT</td>
-								 	<td>Bidang Keahlian</td>
-								 	<td>Gelar Akademik</td>
-								 	<td>Asal PT</td>
-								 	<td>Bidang Keahlian</td>
-								 	<td>Gelar Akademik</td>
-								 	<td>Asal PT</td>
-								 	<td>Bidang Keahlian</td>
+								 	<td><center>Gelar Akademik</center></td>
+								 	<td><center>Asal PT</center></td>
+								 	<td><center>Bidang Keahlian</center></td>
+								 	<td><center>Gelar Akademik</center></td>
+								 	<td><center>Asal PT</center></td>
+								 	<td><center>Bidang Keahlian</center></td>
+								 	<td><center>Gelar Akademik</center></td>
+								 	<td><center>Asal PT</center></td>
+								 	<td><center>Bidang Keahlian</center></td>
 								 </tr>
 								 <tr>
 								 	<th>(1)</th>

@@ -136,15 +136,15 @@ License: You must have a valid license purchased only from themeforest(the above
 									</td> 
 								 </tr>
 								 <?php } ?>
-								 <tr>
+								 <!-- <tr>
 								 	<td colspan="2">Rata-rata di Unit Pengelola**</td>
 								 	<?php 
 								 		foreach ($rata as $r) {
 								 	 ?>
-								 	 <td><?php echo $r['rata_mastud'] ?></td>
+								 	 <td><?php echo number_format((double)$r['rata_mastud'],2,',',','); ?></td>
 								 	 <td><?php echo $r['rata2'] ?></td>
 								 	 <?php } ?>
-								 </tr>
+								 </tr> -->
 							</tbody>
 							</table>
 							</div>

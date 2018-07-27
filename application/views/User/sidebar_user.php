@@ -314,7 +314,7 @@ BEGIN CONTAINER -->
 				</li>
 				<li >
 					<a href="javascript:;">
-					<a href="<?php echo base_url(); ?>index.php/Data_dosen_excel">
+					<a href="<?php echo base_url(); ?>index.php/Export_Excel_User">
 						<i class="icon-briefcase"></i>
 						<span class="title">Export Excel</span>
 					</a>

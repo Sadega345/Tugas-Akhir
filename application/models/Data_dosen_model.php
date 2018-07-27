@@ -3,11 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Data_dosen_model extends CI_Model {
 
-// public function __construct()
-//  {
-//  parent::__construct();
-//  $this->load->database();
-//  }
+public function __construct()
+ {
+ parent::__construct();
+ $this->db2 = $this->load->database('repository-dosen',TRUE);
+ }
 
 // Listing
  public function listing() {
@@ -15,6 +15,28 @@ class Data_dosen_model extends CI_Model {
  $data=$this->db->query('SELECT D.id_dosen,D.NAMA_DOSEN,D.NIDN,D.TGL_LHR,J.NM_JAB_AKD,D.GELAR_S1,D.ASAL_PT_S1,D.BID_KEAHLIAN_S1,D.GELAR_S2,D.ASAL_PT_S2,D.BID_KEAHLIAN_S2,
 D.GELAR_S3,D.ASAL_PT_S3,D.BID_KEAHLIAN_S3 FROM dosen_tbl D LEFT JOIN jab_akademik J ON D.kd_jab=J.kd_jab WHERE D.kd_prodi='."'$kdprodi'");
  return $data->result_array();
+ }
+
+ public function listed(){
+ 	$data=$this->db->query('select id_dosen from dosen_tbl;');
+ 	return $data->result_array();
+ }
+
+ // public function listedload(){
+ // 	$data=$this->db2->query('select idLecturer from masterlecturer;');
+ // 	return $data->result_array();
+ // }
+
+ public function loadlisting() {	
+ $kdprodi = $this->session->userdata('kd_prodi');
+ $data= $this->db2->query('select idLecturer,nameLecturer,birthdate,nidn,state,nameUniversity1,degree1,studyProgram1,nameUniversity2,degree2,studyProgram2,nameUniversity3,degree3,studyProgram3 from masterlecturer where idMajor='."'$kdprodi'");
+ return $data->result_array();
+ }
+
+ public function updateload($where){
+ 	 $kdprodi = $this->session->userdata('kd_prodi');
+ 	 $data=$this->db2->query('select idLecturer,nameLecturer,birthdate,nidn,state,nameUniversity1,degree1,studyProgram1,nameUniversity2,degree2,studyProgram2,nameUniversity3,degree3,studyProgram3 from masterlecturer '.$where);
+ 	 return $data->result_array();
  }
 
  public function update($where="") {

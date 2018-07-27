@@ -84,7 +84,7 @@ public function tambah(){
 		$bid_keahlian=$_POST['bid_keahlian'];
 		$kode_mk=$_POST['kode_mk'];
 		$nama_mk=$_POST['nama_mk'];
-		$jum_kls=$_POST['jum_kls'];
+		$jml_sks=$_POST['jml_sks'];
 		$jp_rencana=$_POST['jp_rencana'];
 		$jp_dilaksanakan=$_POST['jp_dilaksanakan'];
 		$data_insert=array(
@@ -92,7 +92,7 @@ public function tambah(){
 			'bid_keahlian' => $bid_keahlian,
 			'kode_mk'=>$kode_mk,
 			'nama_mk'=>$nama_mk,
-			'jum_kls'=>$jum_kls,
+			'jml_sks'=>$jml_sks,
 			'jp_rencana' => $jp_rencana,
 			'jp_dilaksanakan' => $jp_dilaksanakan
 		);

@@ -53,44 +53,28 @@ License: You must have a valid license purchased only from themeforest(the above
 </div>
 <!-- END SIDEBAR TOGGLER BUTTON -->
 <!-- BEGIN LOGO -->
-<div class="logo">
-	<h1 align="center" style="color:white">Aplikasi Pengolah Format Data Borang Akreditasi <br>Universitas Nasional PASIM</h1> 		
-</div>
-	<center><img alt="" src="<?php echo base_url()."assets/";?>frontend/layout/img/universitas nasional pasim.png" width="120px" height="120px"/></center>
-<!-- END LOGO -->
-<!-- BEGIN LOGIN -->
 <div class="content">
 	<!-- BEGIN LOGIN FORM -->
-	<form class="login-form" method="post" action="<?php echo base_url(); ?>index.php/Login/user_login" >
-		<h3 class="form-title">Login</h3>
-		<div class="alert alert-danger display-hide">
-			<button class="close" data-close="alert"></button>
-			<span>
-			Masukan username dan password. </span>
-		</div>
-		<div class="form-group">
-			<!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
-			<label class="control-label visible-ie8 visible-ie9">Username</label>
-			<input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="Username" name="username" />
-		</div>
-		<div class="form-group">
-			<label class="control-label visible-ie8 visible-ie9">Password</label>
-			<input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="password" />
+	<table class="table table-striped table-bordered table-hover" id="sample_1">
+		<tr>
+			<th>No</th>
+			<th>Nama File Instrumen</th>
+			<th>Download</th>
+		</tr>
+		<tr>
 			<?php 
-				$info = $this->session->flashdata('info');
-				if (!empty($info)) {
-					echo $info;
-				}
-			 ?>
-
-		</div>
-		<div class="form-actions">
-			<button type="submit" class="btn btn-success uppercase" name="ok">Submit</button>
-		</div>
+			$no=1;
+			foreach($result as $s){
+			?>
+			<td><?php echo $no++;?></td>
+			<td><?php echo $s['instrumen'];?></td>
+			<td><a href="<?php echo base_url().'Download/download/'.$s['file'];?>">Download</a></td>
+		</tr>
+		<?php } ?>
+	</table>
+	<form action="<?php echo base_url()."index.php/Login"; ?>">
+			<button type="submit" class="btn btn-danger">Kembali</button>
 	</form>
-	<div>
-		<p style="color:#20B2AA">Download instrumen borang? <a href="<?php echo base_url()."index.php/Download";?>">klik disini</a></p>
-	</div>
 	<!-- END LOGIN FORM -->
 	<!-- BEGIN FORGOT PASSWORD FORM -->
 	
@@ -98,6 +82,11 @@ License: You must have a valid license purchased only from themeforest(the above
 </div>
 <div class="copyright">
 	 2018 © Universitas Nasional Pasim
+</div>
+	<!-- END LOGIN FORM -->
+	<!-- BEGIN FORGOT PASSWORD FORM -->
+	
+	<!-- END REGISTRATION FORM -->
 </div>
 <!-- END LOGIN -->
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->

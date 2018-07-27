@@ -110,9 +110,9 @@ License: You must have a valid license purchased only from themeforest(the above
 											<a href="<?php echo base_url()."index.php/Pengisis_excel/export_excel";?>">
 											<button id="sample_editable_1_new" class="btn blue">
 											Export ke Excel 
-									</button>
-								</a>
-							</div>
+											</button>
+											</a>
+										</div>
 									</div>
 									<!-- <div class="col-md-6">
 										<div class="btn-group pull-right">

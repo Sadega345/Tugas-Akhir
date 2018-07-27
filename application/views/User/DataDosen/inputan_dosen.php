@@ -113,7 +113,11 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="row">
 										<div class="form-group">
 											<label>ID Dosen</label>
-											<input type="text" class="form-control" name="id_dosen" readonly="" value="<?php echo $id_dosen; ?>">
+											<?php 
+												$data=$this->Data_dosen_model->listed();
+												$id = count($data)+1;
+											 ?>
+											<input type="text" class="form-control" name="id_dosen" readonly="" value="<?php echo $id; ?>">
 										</div>
 									</div>
 									<div class="row">
@@ -124,13 +128,13 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 									<div class="row">
 										<div class="form-group">
-											<label>NIDN</label>
+											<label>NIDN*</label>
 											<input type="text" class="form-control" name="nidn">
 										</div>
 									</div>
 									<div class="row">
 										<div class="form-group">
-											<label>Nama Dosen</label>
+											<label>Nama Dosen*</label>
 											<input type="text" class="form-control" name="nama_dosen">
 										</div>
 									</div>
@@ -142,9 +146,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 									<div class="row">
 										<div class="form-group">
-											<label>Kode Jabatan</label>
+											<label>Jabatan*</label>
 											<select name="kd_jab" class="form-control">
-												<option disabled selected>-- Kode Jabatan --</option>
+												<option disabled selected>-- Pilih Jabatan --</option>
 												<?php 
 													$data=$this->Data_dosen_model->GetJabatan();
 													foreach($data as $d) { ?>
@@ -155,9 +159,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 									<div class="row">
 										<div class="form-group">
-											<label>Kode Jenis Dosen</label>
+											<label>Jenis Dosen*</label>
 											<select name="kd_jns_dosen" class="form-control">
-												<option disabled selected>-- Kode Jenis Dosen --</option>
+												<option disabled selected>-- Pilih Jenis Dosen --</option>
 												<?php 
 													$data=$this->Data_dosen_model->GetJnsDosen();
 													foreach($data as $d) { ?>
@@ -168,9 +172,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 									<div class="row">
 										<div class="form-group">
-											<label>Sertifikasi</label>
+											<label>Sertifikasi*</label>
 											<select name="sertifikasi" class="form-control">
-												<option disabled selected>-- Sertifikasi --</option>
+												<option disabled selected>-- Pilih Sertifikasi --</option>
 									                <option value="YA">YA</option>
 									                <option value="TIDAK">TIDAK</option>
 											</select>
@@ -250,9 +254,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>	
 									<div class="row">
 										<div class="form-group">
-											<label>Status Ahli</label>
+											<label>Status Ahli*</label>
 											<select name="sts_ahli" class="form-control">
-												<option disabled selected>-- Status Ahli --</option>
+												<option disabled selected>-- Pilih Status Ahli --</option>
 									                <option value="YA">YA</option>
 									                <option value="TIDAK">TIDAK</option>
 											</select>

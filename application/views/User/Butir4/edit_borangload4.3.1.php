@@ -62,12 +62,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <body class="page-header-fixed page-quick-sidebar-over-content">
 	<!-- BEGIN HEADER -->
 		<?php 
-			$this->load->view('Users/header_Users.php');
+			$this->load->view('User/header_user.php');
 		?>
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('Users/sidebar_Users.php');
+			$this->load->view('User/sidebar_user.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 
@@ -99,18 +99,34 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="table-toolbar">
 								<div class="row">
 									<div class="col-md-6">
-										<!-- <div class="btn-group">
-											<a href="#">
+										<div class="btn-group">
+											<!-- <a href="#">
 											<button id="sample_editable_1_new" class="btn green">
 											Load 
 											</button>
-											</a>
-										</div> -->
+											</a> -->
+										</div>
 									</div>
+									<!-- <div class="col-md-6">
+										<div class="btn-group pull-right">
+											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+											</button>
+											<ul class="dropdown-menu pull-right">
+												<li>
+													<a href="javascript:;">
+													Print </a>
+												</li>
+												<li>
+													<a href="javascript:;">
+													Export to Excel </a>
+												</li>
+											</ul>
+										</div>
+									</div> -->
 								</div>
 							</div>
-							<div style="overflow-x:auto;" class="col-md-20">
-							
+							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Apd_a431_excel/do_editload"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 							<thead>
 								<tr>
@@ -120,66 +136,90 @@ License: You must have a valid license purchased only from themeforest(the above
 									 <th rowspan="2">Tanggal Lahir<br> (dd/mm/yyyy)</th>
 									 <th rowspan="2">Jabatan Akademik</th>
 									 <th rowspan="2">Sertifikasi**<br>(Ya/Tidak)</th>
-									 <th colspan="3"><center>S1</center></th>
-									 <th colspan="3"><center>S2</center></th>
-									 <th colspan="3"><center>S3</center></th>
-									 <th rowspan="2">Aksi</th>
+									 <th colspan="3">S1*</th>
+									 <th colspan="3">S2*</th>
+									 <th colspan="3">S3*</th>
+									 <th colspan="3">Keahlian Praktis***</th>
 								 </tr>
 								 <tr>
-								 	<th>Gelar</th>
-								 	<th>PT Asal</th>
-								 	<th>Bidang Keahlian</th>
-								 	<th>Gelar</th>
-								 	<th>PT Asal</th>
-								 	<th>Bidang Keahlian</th>
-								 	<th>Gelar</th>
-								 	<th>PT Asal</th>
-								 	<th>Bidang Keahlian</th>
+								 	<td>Gelar</td>
+								 	<td>PT Asal</td>
+								 	<td>Bidang Keahlian</td>
+								 	<td>Gelar</td>
+								 	<td>PT Asal</td>
+								 	<td>Bidang Keahlian</td>
+								 	<td>Gelar</td>
+								 	<td>PT Asal</td>
+								 	<td>Bidang Keahlian</td>
+								 	<td>Gelar</td>
+								 	<td>Pengakuan</td>
+								 	<td>Bidang Keahlian</td>
+								 </tr>
+								 <tr align="center">
+								 	<td>(1)</td>
+								 	<td>(2)</td>
+								 	<td>(3)</td>
+								 	<td>(4)</td>
+								 	<td>(5)</td>
+								 	<td>(6)</td>
+								 	<td>(7)</td>
+								 	<td>(8)</td>
+								 	<td>(9)</td>
+								 	<td>(10)</td>
+								 	<td>(11)</td>
+								 	<td>(12)</td>
+								 	<td>(13)</td>
+								 	<td>(14)</td>
+								 	<td>(15)</td>
+								 	<td>(16)</td>
+								 	<td>(17)</td>
+								 	<td>(18)</td>
 								 </tr>
 							</thead>
 							<tbody>
-							<?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?>
-								<tr>
-							 	<td><?php echo $no++; ?></td>
-							 	<td><?php echo $d['nama_dosen']; ?></td>
-							 	<td><?php echo $d['nidn']; ?></td>
-							 	<td><?php echo $d['tgl_lhr']; ?></td>
-							 	<td><?php echo $d['NM_JAB_AKD']; ?></td>
-							 	<td><?php echo $d['sertifikasi']; ?></td>
-							 	<td><?php echo $d['GELAR_S1']; ?></td>
-							 	<td><?php echo $d['ASAL_PT_S1']; ?></td>
-							 	<td><?php echo $d['BID_KEAHLIAN_S1']; ?></td>
-							 	<td><?php echo $d['GELAR_S2']; ?></td>
-							 	<td><?php echo $d['ASAL_PT_S2']; ?></td>
-							 	<td><?php echo $d['BID_KEAHLIAN_S2']; ?></td>
-							 	<td><?php echo $d['GELAR_S3']; ?></td>
-							 	<td><?php echo $d['ASAL_PT_S3']; ?></td>
-							 	<td><?php echo $d['BID_KEAHLIAN_S3']; ?></td>
-							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Aps_a431_excel/ubah/".$d['nidn'];?>" >Edit</a>
-								</td>
+							
+							<tr>
+							 	<td>1</td>
+							 	<td><input type="text" name="nameLecturer" value="<?php echo $nameLecturer; ?>"></td>
+							 	<td><input type="text" name="nidn" value="<?php echo $nidn; ?>" readonly=""></td>
+							 	<td><input type="text" name="birthdate" value="<?php echo $birthdate; ?>"></td>
+							 	<td>
+							 		<select name="kd_jab" >
+										<option disabled selected>-- Nama Jabatan --</option>
+										<option value="1">Lektor</option>
+										<option value="2">Asisten Ahli</option>
+										<option value="3">Tidak Ada</option>
+									</select>
+							 	</td>
+							 	<td><input type="text" name="state" value="<?php echo $state; ?>"></td>
+							 	<td><input type="text" name="degree1" value="<?php echo $degree1; ?>"></td>
+							 	<td><input type="text" name="nameUniversity1" value="<?php echo $nameUniversity1; ?>"></td>
+							 	<td><input type="text" name="studyProgram1" value="<?php echo $studyProgram1; ?>"></td>
+							 	<td><input type="text" name="degree2" value="<?php echo $degree2; ?>"></td>
+							 	<td><input type="text" name="nameUniversity2" value="<?php echo $nameUniversity2; ?>"></td>
+							 	<td><input type="text" name="studyProgram2" value="<?php echo $studyProgram2; ?>"></td>
+							 	<td><input type="text" name="degree3" value="<?php echo $degree3; ?>"></td>
+							 	<td><input type="text" name="nameUniversity3" value="<?php echo $nameUniversity3; ?>"></td>
+							 	<td><input type="text" name="studyProgram3" value="<?php echo $studyProgram3; ?>"></td>
+							 	<td><input type="text" name="GELAR" value="<?php echo $GELAR; ?>"></td>
+							 	<td><input type="text" name="PENGAKUAN" value=""></td>
+							 	<td><input type="text" name="BID_KEAHLIAN" value=""></td>
 							 </tr>
-							<?php } ?>
+		
 							</tbody>
 							</table>
 							</div>
-							<!-- <div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a431_excel/rubah";?>">
-									<button id="sample_editable_1_new" class="btn green">
-										Ubah
-									</button>
-								</a>
-							</div> -->
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Aps_a431_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn blue">
-										Export To Excel 
+								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+							</div>
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Apd_a431_excel/load";?>">
+									<button id="sample_editable_1_new" class="btn red">
+										Batal 
 									</button>
 								</a>
 							</div>
+							</form>
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

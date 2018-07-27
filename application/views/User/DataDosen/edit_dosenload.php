@@ -118,29 +118,29 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</div>
 							<div style="overflow-x:auto;">
-							<form action="<?php echo base_url()."index.php/Data_dosen_excel/do_edit"; ?>" method="POST">
+							<form action="<?php echo base_url()."index.php/Data_dosen_excel/do_editload"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 							<thead>
 								<tr>
-									 <th rowspan="2">No</th>
-									 <th rowspan="2">Nama Dosen Tetap</th>
-									 <th rowspan="2">NIDN</th>
-									 <th rowspan="2">Tanggal lahir (dd/mm/yyyy)</th>
-									 <th rowspan="2">Jabatan Akademik</th>
-									 <th colspan="3">S1</th>
-									 <th colspan="3">S2</th>
-									 <th colspan="3">S3</th>
+									 <th rowspan="2"><center>No</center></th>
+									 <th rowspan="2"><center>Nama Dosen Tetap</center></th>
+									 <th rowspan="2"><center>NIDN</center></th>
+									 <th rowspan="2"><center>Tanggal lahir (dd/mm/yyyy)</center></th>
+									 <th rowspan="2"><center>Jabatan Akademik</center></th>
+									 <th colspan="3"><center>S1</center></th>
+									 <th colspan="3"><center>S2</center></th>
+									 <th colspan="3"><center>S3</center></th>
 								 </tr>
 								 <tr>
-								 	<td>Gelar Akademik</td>
-								 	<td>Asal PT</td>
-								 	<td>Bidang Keahlian</td>
-								 	<td>Gelar Akademik</td>
-								 	<td>Asal PT</td>
-								 	<td>Bidang Keahlian</td>
-								 	<td>Gelar Akademik</td>
-								 	<td>Asal PT</td>
-								 	<td>Bidang Keahlian</td>
+								 	<td><center>Gelar Akademik</center></td>
+								 	<td><center>Asal PT</center></td>
+								 	<td><center>Bidang Keahlian</center></td>
+								 	<td><center>Gelar Akademik</center></td>
+								 	<td><center>Asal PT</center></td>
+								 	<td><center>Bidang Keahlian</center></td>
+								 	<td><center>Gelar Akademik</center></td>
+								 	<td><center>Asal PT</center></td>
+								 	<td><center>Bidang Keahlian</center></td>
 								 </tr>
 								 <tr>
 								 	<th>(1)</th>
@@ -162,22 +162,29 @@ License: You must have a valid license purchased only from themeforest(the above
 							<tbody>
 								<tr>
 								 	<td>1</td>
-								 	<td><input type="text" name="NAMA_DOSEN" value="<?php echo $NAMA_DOSEN; ?>"></td>
-								 	<td><input type="text" name="NIDN" value="<?php echo $NIDN; ?>" readonly></td>
-								 	<td><input type="text" name="TGL_LHR" value="<?php echo $TGL_LHR; ?>"></td>
-								 	<td><input type="text" name="NM_JAB_AKD" value="<?php echo $NM_JAB_AKD; ?>"></td>
+								 	<td><input type="text" name="nameLecturer" value="<?php echo $nameLecturer; ?>"></td>
+								 	<td><input type="text" name="nidn" value="<?php echo $nidn; ?>" readonly></td>
+								 	<td><input type="text" name="birthdate" value="<?php echo $birthdate; ?>"></td>
+								 	<td>
+								 		<select name="kd_jab">
+												<?php 
+													$data=$this->Data_dosen_model->GetJabatan();
+													foreach($data as $d) { ?>
+									                <option value="<?php echo $d['kd_jab'];?>"><?php echo $d['nm_jab_akd'];?></option>
+									            <?php } ?>
+											</select>
+									</td>
+								 	<td><input type="text" name="degree1" value="<?php echo $degree1; ?>"></td>
+								 	<td><input type="text" name="nameUniversity1" value="<?php echo $nameUniversity1; ?>"></td>
+								 	<td><input type="text" name="studyProgram1" value="<?php echo $studyProgram1; ?>"></td>
 
-								 	<td><input type="text" name="GELAR_S1" value="<?php echo $GELAR_S1; ?>"></td>
-								 	<td><input type="text" name="ASAL_PT_S1" value="<?php echo $ASAL_PT_S1; ?>"></td>
-								 	<td><input type="text" name="BID_KEAHLIAN_S1" value="<?php echo $BID_KEAHLIAN_S1; ?>"></td>
+								 	<td><input type="text" name="degree2" value="<?php echo $degree2; ?>"></td>
+								 	<td><input type="text" name="nameUniversity2" value="<?php echo $nameUniversity2; ?>"></td>
+								 	<td><input type="text" name="studyProgram2" value="<?php echo $studyProgram2; ?>"></td>
 
-								 	<td><input type="text" name="GELAR_S2" value="<?php echo $GELAR_S2; ?>"></td>
-								 	<td><input type="text" name="ASAL_PT_S2" value="<?php echo $ASAL_PT_S2; ?>"></td>
-								 	<td><input type="text" name="BID_KEAHLIAN_S2" value="<?php echo $BID_KEAHLIAN_S2; ?>"></td>
-
-								 	<td><input type="text" name="GELAR_S3" value="<?php echo $GELAR_S3; ?>"></td>
-								 	<td><input type="text" name="ASAL_PT_S3" value="<?php echo $ASAL_PT_S3; ?>"></td>
-								 	<td><input type="text" name="BID_KEAHLIAN_S3" value="<?php echo $BID_KEAHLIAN_S3; ?>"></td>
+								 	<td><input type="text" name="degree3" value="<?php echo $degree3; ?>"></td>
+								 	<td><input type="text" name="nameUniversity3" value="<?php echo $nameUniversity3; ?>"></td>
+								 	<td><input type="text" name="studyProgram3" value="<?php echo $studyProgram3; ?>"></td>
 							 	</tr>
 							</tbody>
 							</table>
@@ -186,7 +193,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Data_dosen_excel";?>">
+								<a href="<?php echo base_url()."index.php/Data_dosen_excel/load";?>">
 									<button id="sample_editable_1_new" class="btn red">
 										Batal 
 									</button>

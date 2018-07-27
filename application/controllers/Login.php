@@ -16,6 +16,7 @@ class Login extends CI_Controller {
 		// print_r($this->session());die;
 		$this->load->view("login");
 
+
 	}
 
 	public function user_login()
@@ -46,6 +47,6 @@ class Login extends CI_Controller {
 		redirect('Login');
 	}
 
-
+	
 
 }

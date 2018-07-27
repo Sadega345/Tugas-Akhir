@@ -99,13 +99,13 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="table-toolbar">
 								<div class="row">
 									<div class="col-md-6">
-										<div class="btn-group">
+										<!-- <div class="btn-group">
 											<a href="<?php echo base_url()."index.php/Apd_a431_excel/load" ?>">
 											<button id="sample_editable_1_new" class="btn green">
 											Load 
 											</button>
 											</a>
-										</div>
+										</div> -->
 									</div>
 								</div>
 							</div>

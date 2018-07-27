@@ -6,12 +6,12 @@ class Aps_a455_excel extends CI_Controller {
 // Load database
  // public function __construct() {
  // parent::__construct();
- // $this->load->model('Aps_a455_model');
+ // $this->load->model('apd_a455_model');
  // }
 
 public function index() {
  // $data = array( 'title' => ' TABEL DATA BUTIR 4.5.5 : KEIKUTSERTAAN DOSEN TETAP DALAM ORGANISASI KEILMUAN/PROFESI',
- // 'a455' => $this->Aps_a455_model->listing());
+ // 'a455' => $this->apd_a455_model->listing());
  $data=$this->Aps_a455_model->listing();
  $this->load->view('Users/Butir4/tampilan_borang4.5.5.php',array('data'=>$data));
  }
@@ -34,14 +34,13 @@ public function index() {
  }
 
  public function do_edit(){
-		//$nama_dosen=$_POST['nama_dosen'];
+		$id=$_POST['id'];
 		$nm_organisasi=$_POST['nm_organisasi'];
 		$thn_awal=$_POST['thn_awal'];
 		$thn_akhir=$_POST['thn_akhir'];
 		$internasional=$_POST['internasional'];
 		$nasional=$_POST['nasional'];
 		$lokal=$_POST['lokal'];
-		$id=$_POST['id'];
 		
 		$data_update=array(
 			"nm_organisasi"=>$nm_organisasi,
@@ -53,6 +52,7 @@ public function index() {
 			
 		);
 		$where=array('id'=>$id);
+		// print_r($data_update);die();
 		$res=$this->Aps_a455_model->rubah('keikutsertaan_org',$data_update,$where);
 		if ($res>=1) {
 			redirect('Aps_a455_excel');
@@ -63,14 +63,7 @@ public function index() {
 		// }
 	}
 
-public function export_excel(){
- // $data = array( 'title' => ' TABEL DATA BUTIR 4.5.5 : KEIKUTSERTAAN DOSEN TETAP DALAM ORGANISASI KEILMUAN/PROFESI',
- // 'a455' => $this->Aps_a455_model->listing());
- $data=$this->Aps_a455_model->listing();
- $this->load->view('Users/Butir4/tampilan_borang4.5.5_excel.php',array('data'=>$data));
- }
-
- public function tambah(){
+	public function tambah(){
 		$this->load->view('Users/Butir4/inputan_borang4.5.5.php');
   }
 
@@ -92,7 +85,7 @@ public function export_excel(){
 			'nasional' => $nasional,
 			'lokal' => $lokal,
 		);
-		$res=$this->Aps_a455_model->insert('keikutsertaan_org',$data_insert);
+		$res=$this->Aps_a452_model->insert('keikutsertaan_org',$data_insert);
 		if ($res>=1) {
 			redirect('Aps_a455_excel');
 		}else {
@@ -100,5 +93,22 @@ public function export_excel(){
 		}
 	}
 
+public function do_hapus($id){
+		$this->model_squrity->getsqurity();
+		$where=array('id'=>$id);
+		$res=$this->Aps_a452_model->Delete('keikutsertaan_org',$where);
+		if($res>=1){
+			redirect('Aps_a455_excel');
+		}else {
+			alert('Gagal Hapus');
+		}
+}
+
+public function export_excel(){
+ // $data = array( 'title' => ' TABEL DATA BUTIR 4.5.5 : KEIKUTSERTAAN DOSEN TETAP DALAM ORGANISASI KEILMUAN/PROFESI',
+ // 'a455' => $this->apd_a455_model->listing());
+ $data=$this->Aps_a455_model->listing();
+ $this->load->view('Users/Butir4/tampilan_borang4.5.5_excel.php',array('data'=>$data));
+ }
 
 }

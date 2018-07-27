@@ -89,7 +89,7 @@
 					<i class="icon-briefcase"></i>
 					Kelola User </a>
 				</li>
-				<li>
+				<!-- <li>
 					<a href="javascript:;">
 					<i class="icon-briefcase"></i>
 					<span class="title">Kelola Data Borang</span>
@@ -298,10 +298,10 @@
 						Butir 7.2.1</a>
 						</li>
 					</ul>
-				</li>
-
+				</li> -->
+<!-- 
 				</ul>
-				</li>
+				</li> -->
 				<li>
 					<a href="javascript:;">
 					<i class="icon-settings"></i>

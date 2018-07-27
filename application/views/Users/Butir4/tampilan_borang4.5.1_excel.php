@@ -12,27 +12,28 @@ header("Expires: 0");
 <p> TABEL DATA BUTIR 4.5.1 : KEGIATAN TENAGA AHLI/PAKAR (TIDAK TERMASUK DOSEN TETAP)</p>
 <table border="1" width="50%">
 		<thead>
-			 <tr>
-				 <th>No</th>
-				 <th>Nama Tenaga Ahli/Pakar</th>
-				 <th>Instansi/Jabatan</th>
-				 <th>Nama dan Judul Kegiatan</th>
-				 <th>Tahun Pelaksanaan</th>
-			 </tr>
-		</thead>
-		<tbody>
-			<tr>
-			<?php 
-				$no=1; 
-				foreach ($data as $d ) { 
-			?>
-			 	<td><?php echo $no++; ?></td>
-			 	<td><?php echo $d['nama_pakar']; ?></td>
-			 	<td><?php echo $d['instansi']; ?></td>
-			 	<td><?php echo $d['judul_keg']; ?></td>
-			 	<td><?php echo $d['pelaksanaan']; ?></td>
-			 </tr>
-			 <?php } ?>
-		</tbody>
+								 <tr>
+									 <th bgcolor="#D3D3D3"><center>No</center></th>
+									 <th bgcolor="#D3D3D3"><center>Nama Tenaga Ahli/Pakar</center></th>
+									 <th bgcolor="#D3D3D3"><center>Instansi/Jabatan</center></th>
+									 <th bgcolor="#D3D3D3"><center>Nama dan Judul Kegiatan</center></th>
+									 <th bgcolor="#D3D3D3"><center>Tahun Pelaksanaan</center></th>
+								 </tr>
+							</thead>
+							<tbody>
+							<tr>
+							<?php 
+								$no=1; 
+								foreach ($data as $d ) { 
+							?>
+							 	<td bgcolor="#FFFF00"><?php echo $no++; ?></td>
+							 	<td bgcolor="#FFFF00"><?php echo $d['nama_pakar']; ?></td>
+							 	<td bgcolor="#FFFF00"><?php echo $d['instansi']; ?></td>
+							 	<td bgcolor="#FFFF00"><?php echo $d['judul_keg']; ?></td>
+							 	<td bgcolor="#FFFF00"><?php echo $d['pelaksanaan']; ?></td>
+							 </tr>
+							 <input type="hidden" name="id" value="<?php echo $d['id']; ?>">
+							 <?php } ?>
+							</tbody>
 	</table>
 

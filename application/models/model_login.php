@@ -62,6 +62,8 @@ class Model_login extends CI_model {
 		}
 	}
 
+	
+
 	// public function masuk($username,$password){
 		
 	// 	$pwd=md5($password);

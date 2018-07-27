@@ -11,13 +11,12 @@ header("Expires: 0");
 ?>
 <p>TABEL DATA BUTIR 3.2.1 : MAHASISWA DAN LULUSAN</p>
 <table border="1" width="50%">
-		<thead>
+<thead>
 								<tr>
-									 <th>No.</th>
-									 <th>Program Studi</th>
-									 <th>Rata-rata Masa Studi (tahun)*</th>
-									 <th>Rata-rata IPK Lulusan*</th>
-									 <!-- <th rowspan="2">Aksi</th> -->
+									 <th bgcolor="#D3D3D3">No.</th>
+									 <th bgcolor="#D3D3D3">Program Studi</th>
+									 <th bgcolor="#D3D3D3">Rata-rata Masa Studi (tahun)*</th>
+									 <th bgcolor="#D3D3D3">Rata-rata IPK Lulusan*</th>
 								 </tr>
 							</thead>
 							<tbody>
@@ -26,23 +25,20 @@ header("Expires: 0");
 									foreach ($masastudi as $m) {
 								 ?>
 								<tr>
-								 	<td><?php echo $no++; ?></td>
-								 	<td><?php echo $m['prodi'] ?></td>
-								 	<td><?php echo $m['rata_masa_std'] ?></td>
-								 	<td><?php echo $m['rata_ipk'] ?></td>
-								 	<!-- <td class="center">
-										<a href="<?php echo base_url()."index.php/Aps_b321_excel/ubah/".$m['id'];?>" >Edit</a>
-									</td> -->
+								 	<td bgcolor="#FFFF00"><?php echo $no++; ?></td>
+								 	<td bgcolor="#FFFF00"><?php echo $m['prodi'] ?></td>
+								 	<td bgcolor="#FFFF00"><?php echo number_format((double)$m['rata_masa_std'],2,',',','); ?></td>
+								 	<td bgcolor="#FFFF00"><?php echo number_format((double)$m['rata_ipk'],2,',',','); ?></td> 
 								 </tr>
 								 <?php } ?>
-								 <tr>
-								 	<td colspan="2">Rata-rata di Unit Pengelola**</td>
+								 <!-- <tr>
+								 	<td colspan="2" bgcolor="#FFFF00">Rata-rata di Unit Pengelola**</td>
 								 	<?php 
 								 		foreach ($rata as $r) {
 								 	 ?>
-								 	 <td><?php echo $r['rata_mastud'] ?></td>
-								 	 <td><?php echo $r['rata2'] ?></td>
+								 	 <td bgcolor="#FFFF00"><?php echo $r['rata_mastud'] ?></td>
+								 	 <td bgcolor="#FFFF00"><?php echo $r['rata2'] ?></td>
 								 	 <?php } ?>
-								 </tr>
+								 </tr> -->
 							</tbody>
 	</table>

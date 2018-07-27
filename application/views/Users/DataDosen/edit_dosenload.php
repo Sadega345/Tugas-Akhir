@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>Butir 4.3.1 : DOSEN TETAP YANG BIDANG KEAHLIANNYA SESUAI BIDANG PS</title>
+<title>Data Dosen</title>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.7.0
@@ -62,12 +62,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <body class="page-header-fixed page-quick-sidebar-over-content">
 	<!-- BEGIN HEADER -->
 		<?php 
-			$this->load->view('Users/header_Users.php');
+			$this->load->view('Users/header_users.php');
 		?>
 
 	<!-- BEGIN CONTAINER -->
 		<?php 
-			$this->load->view('Users/sidebar_Users.php');
+			$this->load->view('Users/sidebar_users.php');
 		 ?>
 	<!-- BEGIN CONTENT -->
 		<?php 
@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Butir 4.3.1 : DOSEN TETAP YANG BIDANG KEAHLIANNYA SESUAI BIDANG PS
+								<i class="fa fa-edit"></i>Data Dosen
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -98,88 +98,109 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="portlet-body">
 							<div class="table-toolbar">
 								<div class="row">
-									<div class="col-md-6">
-										<!-- <div class="btn-group">
-											<a href="#">
-											<button id="sample_editable_1_new" class="btn green">
-											Load 
+									
+									<!-- <div class="col-md-6">
+										<div class="btn-group pull-right">
+											<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
 											</button>
-											</a>
-										</div> -->
-									</div>
+											<ul class="dropdown-menu pull-right">
+												<li>
+													<a href="javascript:;">
+													Print </a>
+												</li>
+												<li>
+													<a href="javascript:;">
+													Export to Excel </a>
+												</li>
+											</ul>
+										</div>
+									</div> -->
 								</div>
 							</div>
-							<div style="overflow-x:auto;" class="col-md-20">
-							
+							<div style="overflow-x:auto;">
+							<form action="<?php echo base_url()."index.php/Data_dosens_excel/do_editload"; ?>" method="POST">
 							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 							<thead>
 								<tr>
-									 <th rowspan="2">No</th>
-									 <th rowspan="2">Nama Dosen Tetap</th>
-									 <th rowspan="2">NIDN (Nomor Induk Dosen Nasional)</th>
-									 <th rowspan="2">Tanggal Lahir<br> (dd/mm/yyyy)</th>
-									 <th rowspan="2">Jabatan Akademik</th>
-									 <th rowspan="2">Sertifikasi**<br>(Ya/Tidak)</th>
+									 <th rowspan="2"><center>No</center></th>
+									 <th rowspan="2"><center>Nama Dosen Tetap</center></th>
+									 <th rowspan="2"><center>NIDN</center></th>
+									 <th rowspan="2"><center>Tanggal lahir (dd/mm/yyyy)</center></th>
+									 <th rowspan="2"><center>Jabatan Akademik</center></th>
 									 <th colspan="3"><center>S1</center></th>
 									 <th colspan="3"><center>S2</center></th>
 									 <th colspan="3"><center>S3</center></th>
-									 <th rowspan="2">Aksi</th>
 								 </tr>
 								 <tr>
-								 	<th>Gelar</th>
-								 	<th>PT Asal</th>
-								 	<th>Bidang Keahlian</th>
-								 	<th>Gelar</th>
-								 	<th>PT Asal</th>
-								 	<th>Bidang Keahlian</th>
-								 	<th>Gelar</th>
-								 	<th>PT Asal</th>
-								 	<th>Bidang Keahlian</th>
+								 	<td><center>Gelar Akademik</center></td>
+								 	<td><center>Asal PT</center></td>
+								 	<td><center>Bidang Keahlian</center></td>
+								 	<td><center>Gelar Akademik</center></td>
+								 	<td><center>Asal PT</center></td>
+								 	<td><center>Bidang Keahlian</center></td>
+								 	<td><center>Gelar Akademik</center></td>
+								 	<td><center>Asal PT</center></td>
+								 	<td><center>Bidang Keahlian</center></td>
+								 </tr>
+								 <tr>
+								 	<th>(1)</th>
+								 	<th>(2)</th>
+								 	<th>(3)</th>
+								 	<th>(4)</th>
+								 	<th>(5)</th>
+								 	<th>(6)</th>
+								 	<th>(7)</th>
+								 	<th>(8)</th>
+								 	<th>(9)</th>
+								 	<th>(10)</th>
+								 	<th>(11)</th>
+								 	<th>(12)</th>
+								 	<th>(13)</th>
+								 	<th>(14)</th>
 								 </tr>
 							</thead>
 							<tbody>
-							<?php 
-								$no=1; 
-								foreach ($data as $d ) { 
-							?>
 								<tr>
-							 	<td><?php echo $no++; ?></td>
-							 	<td><?php echo $d['nama_dosen']; ?></td>
-							 	<td><?php echo $d['nidn']; ?></td>
-							 	<td><?php echo $d['tgl_lhr']; ?></td>
-							 	<td><?php echo $d['NM_JAB_AKD']; ?></td>
-							 	<td><?php echo $d['sertifikasi']; ?></td>
-							 	<td><?php echo $d['GELAR_S1']; ?></td>
-							 	<td><?php echo $d['ASAL_PT_S1']; ?></td>
-							 	<td><?php echo $d['BID_KEAHLIAN_S1']; ?></td>
-							 	<td><?php echo $d['GELAR_S2']; ?></td>
-							 	<td><?php echo $d['ASAL_PT_S2']; ?></td>
-							 	<td><?php echo $d['BID_KEAHLIAN_S2']; ?></td>
-							 	<td><?php echo $d['GELAR_S3']; ?></td>
-							 	<td><?php echo $d['ASAL_PT_S3']; ?></td>
-							 	<td><?php echo $d['BID_KEAHLIAN_S3']; ?></td>
-							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Aps_a431_excel/ubah/".$d['nidn'];?>" >Edit</a>
-								</td>
-							 </tr>
-							<?php } ?>
+								 	<td>1</td>
+								 	<td><input type="text" name="nameLecturer" value="<?php echo $nameLecturer; ?>"></td>
+								 	<td><input type="text" name="nidn" value="<?php echo $nidn; ?>" readonly></td>
+								 	<td><input type="text" name="birthdate" value="<?php echo $birthdate; ?>"></td>
+								 	<td>
+								 		<select name="kd_jab">
+												<?php 
+													$data=$this->Data_dosens_model->GetJabatan();
+													foreach($data as $d) { ?>
+									                <option value="<?php echo $d['kd_jab'];?>"><?php echo $d['nm_jab_akd'];?></option>
+									            <?php } ?>
+											</select>
+									</td>
+								 	<td><input type="text" name="degree1" value="<?php echo $degree1; ?>"></td>
+								 	<td><input type="text" name="nameUniversity1" value="<?php echo $nameUniversity1; ?>"></td>
+								 	<td><input type="text" name="studyProgram1" value="<?php echo $studyProgram1; ?>"></td>
+
+								 	<td><input type="text" name="degree2" value="<?php echo $degree2; ?>"></td>
+								 	<td><input type="text" name="nameUniversity2" value="<?php echo $nameUniversity2; ?>"></td>
+								 	<td><input type="text" name="studyProgram2" value="<?php echo $studyProgram2; ?>"></td>
+
+								 	<td><input type="text" name="degree3" value="<?php echo $degree3; ?>"></td>
+								 	<td><input type="text" name="nameUniversity3" value="<?php echo $nameUniversity3; ?>"></td>
+								 	<td><input type="text" name="studyProgram3" value="<?php echo $studyProgram3; ?>"></td>
+							 	</tr>
 							</tbody>
 							</table>
 							</div>
-							<!-- <div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a431_excel/rubah";?>">
-									<button id="sample_editable_1_new" class="btn green">
-										Ubah
-									</button>
-								</a>
-							</div> -->
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Aps_a431_excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn blue">
-										Export To Excel 
+								<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+							</div>
+							<div class="btn-group">
+								<a href="<?php echo base_url()."index.php/Data_dosens_excel/load";?>">
+									<button id="sample_editable_1_new" class="btn red">
+										Batal 
 									</button>
 								</a>
 							</div>
+						</form>
+						</div>
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

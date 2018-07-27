@@ -17,11 +17,77 @@ public function index() {
  }
 
 public function load(){
- 	$loadlisting=$this->Apd_a431_model->loadlisting();
-	$data=$this->Apd_a431_model->listing();
-	$this->load->view('User/Butir4/load_tampilan_borang4.3.1.php',array('loadlisting'=>$loadlisting,
-																	'data'=>$data));
+ 	$data=$this->Apd_a431_model->loadlisting();
+	// $data=$this->Apd_a431_model->listing();
+	$this->load->view('User/Butir4/load_tampilan_borang4.3.1.php',array('data'=>$data));
  }
+
+ public function ubahload($nidn){
+ 	$this->model_squrity->getsqurity();
+	$res=$this->Apd_a431_model->updateload("where nidn='$nidn'");
+	$data=array(
+		"nameLecturer"=>$res[0]['nameLecturer'],
+		"nidn"=>$res[0]['nidn'],
+		"birthdate"=>$res[0]['birthdate'],
+		"state"=>$res[0]['state'],
+		"nameUniversity1"=>$res[0]['nameUniversity1'],
+		"degree1"=>$res[0]['degree1'],
+		"studyProgram1"=>$res[0]['studyProgram1'],
+		"nameUniversity2"=>$res[0]['nameUniversity2'],
+		"degree2"=>$res[0]['degree2'],
+		"studyProgram2"=>$res[0]['studyProgram2'],
+		"nameUniversity3"=>$res[0]['nameUniversity3'],
+		"degree3"=>$res[0]['degree3'],
+		"studyProgram3"=>$res[0]['studyProgram3'],
+	);
+ 	$this->load->view('User/Butir4/edit_borangload4.3.1.php',$data);
+ }
+
+ public function do_editload(){
+		$nameLecturer=$_POST['nameLecturer'];
+		$nidn=$_POST['nidn'];
+		$birthdate=$_POST['birthdate'];
+		$kd_jab=$_POST['kd_jab'];
+		$state=$_POST['state'];
+		$degree1=$_POST['degree1'];
+		$nameUniversity1=$_POST['nameUniversity1'];
+		$studyProgram1=$_POST['studyProgram1'];
+		$degree2=$_POST['degree2'];
+		$nameUniversity2=$_POST['nameUniversity2'];
+		$studyProgram2=$_POST['studyProgram2'];
+		$degree3=$_POST['degree3'];
+		$nameUniversity3=$_POST['nameUniversity3'];
+		$studyProgram3=$_POST['studyProgram3'];
+		$GELAR=$_POST['GELAR'];
+		$PENGAKUAN=$_POST['PENGAKUAN'];
+		$BID_KEAHLIAN=$_POST['BID_KEAHLIAN'];
+		$data_update=array(
+			"nama_dosen"=>$nameLecturer,
+			"nidn"=>$nidn,
+			"tgl_lhr"=>$birthdate,
+			"kd_jab"=>$kd_jab,
+			"sertifikasi"=>$state,
+			"GELAR_S1"=>$degree1,
+			"ASAL_PT_S1"=>$nameUniversity1,
+			"BID_KEAHLIAN_S1"=>$studyProgram1,
+			"GELAR_S2"=>$degree2,
+			"ASAL_PT_S2"=>$nameUniversity2,
+			"BID_KEAHLIAN_S2"=>$studyProgram2,
+			"GELAR_S3"=>$degree3,
+			"ASAL_PT_S3"=>$nameUniversity3,
+			"BID_KEAHLIAN_S3"=>$studyProgram3,
+			"GELAR"=>$GELAR,
+			"PENGAKUAN"=>$PENGAKUAN,
+			"BID_KEAHLIAN"=>$BID_KEAHLIAN
+		);
+		$where=array('nidn'=>$nidn);
+		$res=$this->Apd_a431_model->rubah('dosen_tbl',$data_update,$where);
+		// print_r($data_update);die;
+		if ($res>=1) {
+			redirect('Apd_a431_excel');
+		}
+	}
+	
 
  public function ubah($nidn){
  	$this->model_squrity->getsqurity();

@@ -31,4 +31,8 @@ class Model_Instrumen extends CI_Model {
 		$res=$this->db->delete($tablename,$where);
 		return $res;
 	}
+
+	
+
+	
 }

@@ -129,14 +129,14 @@ License: You must have a valid license purchased only from themeforest(the above
 											<input type="password" class="form-control" name="pwdlama" id="pwdlama">
 										</div>
 									</div>
-									<div id="alert_tidakcocok" style="color:red">
+									<!-- <div id="alert_tidakcocok" style="color:red">
 									</div><br>
 									<?php 
 										$info = $this->session->flashdata('info');
 										if (!empty($info)) {
 											echo $info;
 										}
-									 ?>
+									 ?> -->
 									<div class="row">
 										<div class="form-group">
 											<label>Password Baru</label>

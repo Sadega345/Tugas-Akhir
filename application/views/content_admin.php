@@ -20,7 +20,7 @@
 			<!-- BEGIN DASHBOARD STATS -->
 			<h1>Selamat datang di Aplikasi Pengolahan Format Data Borang Akreditasi </h1>
 			<br>
-			<form action="<?php echo base_url()."index.php/User/gettahun"; ?>" method="POST">
+			<!-- <form action="<?php echo base_url()."index.php/User/gettahun"; ?>" method="POST">
 			<div class="row">
 				<div class="form-group">
 					<label>Pilih tahun Referensi untuk Akreditasi</label>
@@ -38,7 +38,7 @@
             <div class="row">
             	<button type="submit" class="btn btn-primary" name="pilih" >Pilih</button>
             </div>
-       	 	</form>
+       	 	</form> -->
 			<!-- <div class="row">
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 					<div class="dashboard-stat blue-madison">

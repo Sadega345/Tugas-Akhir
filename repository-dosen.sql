@@ -212,7 +212,7 @@ CREATE TABLE `masterlecturer` (
 
 LOCK TABLES `masterlecturer` WRITE;
 
-insert  into `masterlecturer`(`idLecturer`,`nameLecturer`,`address`,`birthdate`,`birthplace`,`email`,`username`,`password`,`nidn`,`numberPhone`,`idGender`,`idMajor`,`idReligion`,`state`,`nameUniversity1`,`degree1`,`studyProgram1`,`nameUniversity2`,`degree2`,`studyProgram2`,`nameUniversity3`,`degree3`,`studyProgram3`) values (1,'Erna Hikmawati','bandung','1992-08-21','bandung','erna@gmail.com','erna','erna','0421089201','0847465578',2,'P001',1,'Tidak','Universitas Nasional Pasim','S. Kom','Teknik Informatika','STMIK Likmi','M. Kom','Sistem Informasi',NULL,NULL,NULL),(2,'Soleh Sabarudin','cimahi','1972-09-08','cimahi','soleh@gmail.com','soleh','soleh','0408097207','028878787',1,'P001',1,'Tidak','Universitas Nasional Pasim','S. Kom','Teknik Informatika','STMIK Likmi','M. Kom','Sistem Informasi',NULL,NULL,NULL),(3,'Eni Triningsih','bandung','1989-09-24','bandung','eni@gmail.com','eni','eni','8863350017','0825625626',2,'P001',1,'Tidak','Universitas Nasional Pasim','S. Kom','Teknik Informatika','Institut Teknologi Bandung','M.T','Sistem Informasi',NULL,NULL,NULL),(4,'Eko Travada SP','bandung','1973-01-23','bandung','eko@gmail.com','eko','eko','0408047305','081524124154',1,'P001',1,'Ya','Universitas Kristen Maranatha','S.T','Teknik Elektro','Institut Teknologi Bandung','M.T','Teknik Elektro','Sedang Studi Lanjut (S3 STEI ITB)',NULL,'Elektro dan Informatika'),(5,'Yudhistira Sulaeman','cimahi','1973-07-03','cimahi','yudhis@gmail.com','yudhis','yudhis','8891700016','0825663164',1,'P001',1,'Tidak','Institut Teknologi Bandung','S.Si','Matematika','STMIK Likmi','M.Kom','Sistem Informasi',NULL,NULL,NULL),(6,'Lucky Handayani','bandung','1974-09-28','bandung','lucky@gmail.com','lucky','lucky','0428097402','087676647',2,'P001',1,'Tidak','Universitas Jenderal Ahmad Yani','S.T','Teknik Mesin','Institut Teknologi Bandung ','M.T','Teknik Mesin',NULL,NULL,NULL),(7,'Tjandra Tjahyarini','bandung','1966-10-18','bandung','tjandra@gmail.com','tjandra','tjandra','0418106603','0887467246',2,'P001',1,'Tidak','Institut Teknologi Bandung','Ir','Geofisika','(Sedang Studi Lanjut) STMIK LIKMI',NULL,'Sistem Informasi',NULL,NULL,NULL),(8,'Juhridin','bandung','1962-10-14\r\n','bandung','juhridin@gmail.com','juhridin','juhridin','8836400016\r\n','089676878',1,'P001',1,'Tidak','STAI Siliwangi Bandung','S.Pd','Bahasa Inggris','Pasca Sarjana UIN SGD Bandng','M.Ag','PAI',NULL,NULL,NULL),(9,'Sri Wisnu Noloadi\r\n','padalarang','1969\r\n-03-23','padalarang','sri@gmail.com','sri','sri','0423036904\r\n','087767868765',1,'P002',1,'Tidak','Politeknik Bandung','S.T','Teknik Informatika','Institut Teknologi Bandung','M.T','Teknik Informatika',NULL,NULL,NULL),(10,'Selly Meliana\r\n','padalarang','1978-10-04\r\n','padalarang','selly@gmail.com','selly','selly','0404107803\r\n','08977611461',2,'P002',1,'Tidak','Universitas Indonesia','S.Kom','Teknik Informatika','STIMIK LIKMI','M. Kom','Sistem Informasi',NULL,NULL,NULL),(11,'Lismah Azriani\r\n','bandung','1976-05-02','bandung','lizmah@gmail.com','lizmah','lizmah','0402057602\r\n','08257265656',2,'P002',1,'Tidak','Universitas Komputer','S.T','Teknik Informatika','(Sedang Studi Lanjut) ITB',NULL,'Teknik Elektro',NULL,NULL,NULL),(12,'Abdul Hafiz Tanjung\r\n','pawenang','1970-06-02\r\n','bandung','abdul@gmail.com','abdul','abdul','0402067001\r\n','08676451666',1,'P002',1,'Tidak','Universitas padjajaran','S.E','Akuntansi','Universitas Padjajaran','M.Si','Akuntansi',NULL,NULL,NULL),(13,'Dewi Saparina\r\n','bandung','1955-05-27\r\n','bandung','dewi@gmail.com','dewi','dewi','0427056601\r\n','086746724565',2,'P002',1,'Tidak','Universitas Padjajaran','S.Pd','Bahasa Indonesia','(Sedang Studi Lanjut) Universitas Padjajaran','M.hum','Sastra Indonesia',NULL,NULL,NULL),(14,'Fristi Arfiawati\r\n','bandung','1976-02-20\r\n','bandung','fristi@gmail.com','fristi','fristi','0428106907\r\n','08978614998',2,'P002',1,'Tidak','Universitas Padjajaran','S.Pd','Bahasa Inggris','Universitas Padjajaran','M.hum','Sastra Inggris',NULL,NULL,NULL),(15,'Sarip Topik Hidayat\r\n','bandung','1976-02-20\r\n','bandung','sarip@gmail.com','sarip','sarip','8829740017\r\n','08677461469',1,'P002',1,'Tidak','Politeknik Bandung','S.T','Teknik Informatika','Institut Teknologi Bandung','M.T','Teknik Informatika',NULL,NULL,NULL),(16,'Nurachadi','bandung','1971-12-17\r\n','bandung','nurachadi@gmail.com','nurachadi','nurachadi','0417127101\r\n','08798717394',1,'P002',1,'Tidak','Universitas Widiyatama','S.Kom','Teknik Informatika','Universitas Padjajaran','M.Kom','Teknik Komputer',NULL,NULL,NULL);
+insert  into `masterlecturer`(`idLecturer`,`nameLecturer`,`address`,`birthdate`,`birthplace`,`email`,`username`,`password`,`nidn`,`numberPhone`,`idGender`,`idMajor`,`idReligion`,`state`,`nameUniversity1`,`degree1`,`studyProgram1`,`nameUniversity2`,`degree2`,`studyProgram2`,`nameUniversity3`,`degree3`,`studyProgram3`) values (1,'Erna Hikmawati','bandung','1992-08-21','bandung','erna@gmail.com','erna','erna','0421089201','0847465578',2,'P001',1,'Tidak','Universitas Nasional Pasim','S. Kom','Teknik Informatika','STMIK Likmi','M. Kom','Sistem Informasi',NULL,NULL,NULL),(2,'Soleh Sabarudin','cimahi','1972-09-08','cimahi','soleh@gmail.com','soleh','soleh','0408097207','028878787',1,'P001',1,'Tidak','Universitas Nasional Pasim','S. Kom','Teknik Informatika','STMIK Likmi','M. Kom','Sistem Informasi',NULL,NULL,NULL),(3,'Eni Triningsih','bandung','1989-09-24','bandung','eni@gmail.com','eni','eni','8863350017','0825625626',2,'P001',1,'Tidak','Universitas Nasional Pasim','S. Kom','Teknik Informatika','Institut Teknologi Bandung','M.T','Sistem Informasi',NULL,NULL,NULL),(4,'Eko Travada SP','bandung','1973-01-23','bandung','eko@gmail.com','eko','eko','0408047305','081524124154',1,'P001',1,'Ya','Universitas Kristen Maranatha','S.T','Teknik Elektro','Institut Teknologi Bandung','M.T','Teknik Elektro','Sedang Studi Lanjut (S3 STEI ITB)',NULL,'Elektro dan Informatika'),(5,'Yudhistira Sulaeman','cimahi','1973-07-03','cimahi','yudhis@gmail.com','yudhis','yudhis','8891700016','0825663164',1,'P001',1,'Tidak','Institut Teknologi Bandung','S.Si','Matematika','STMIK Likmi','M.Kom','Sistem Informasi',NULL,NULL,NULL),(6,'Lucky Handayani','bandung','1974-09-28','bandung','lucky@gmail.com','lucky','lucky','0428097402','087676647',2,'P001',1,'Tidak','Universitas Jenderal Ahmad Yani','S.T','Teknik Mesin','Institut Teknologi Bandung ','M.T','Teknik Mesin',NULL,NULL,NULL),(7,'Tjandra Tjahyarini','bandung','1966-10-18','bandung','tjandra@gmail.com','tjandra','tjandra','0418106603','0887467246',2,'P001',1,'Tidak','Institut Teknologi Bandung','Ir','Geofisika','(Sedang Studi Lanjut) STMIK LIKMI',NULL,'Sistem Informasi',NULL,NULL,NULL),(8,'Juhridin','bandung','1962-10-14\r\n','bandung','juhridin@gmail.com','juhridin','juhridin','8836400016\r\n','089676878',1,'P001',1,'Tidak','STAI Siliwangi Bandung','S.Pd','Bahasa Inggris','Pasca Sarjana UIN SGD Bandng','M.Ag','PAI',NULL,NULL,NULL),(9,'Sri Wisnu Noloadi\r\n','padalarang','1969\r\n-03-23','padalarang','sri@gmail.com','sri','sri','0423036904\r\n','087767868765',1,'P002',1,'Tidak','Politeknik Bandung','S.T','Teknik Informatika','Institut Teknologi Bandung','M.T','Teknik Informatika',NULL,NULL,NULL),(10,'Selly Meliana\r\n','padalarang','1978-10-04\r\n','padalarang','selly@gmail.com','selly','selly','0404107803\r\n','08977611461',2,'P002',1,'Tidak','Universitas Indonesia','S.Kom','Teknik Informatika','STIMIK LIKMI','M. Kom','Sistem Informasi',NULL,NULL,NULL),(11,'Lismah Azriani\r\n','bandung','1976-05-02','bandung','lizmah@gmail.com','lizmah','lizmah','0402057602\r\n','08257265656',2,'P002',1,'Tidak','Universitas Komputer','S.T','Teknik Informatika','(Sedang Studi Lanjut) ITB',NULL,'Teknik Elektro',NULL,NULL,NULL),(12,'Abdul Hafiz Tanjung\r\n','pawenang','1970-06-02\r\n','bandung','abdul@gmail.com','abdul','abdul','0402067001\r\n','08676451666',1,'P002',1,'Tidak','Universitas padjajaran','S.E','Akuntansi','Universitas Padjajaran','M.Si','Akuntansi',NULL,NULL,NULL),(13,'Dewi Saparina\r\n','bandung','1955-05-27\r\n','bandung','dewi@gmail.com','dewi','dewi','0427056601\r\n','086746724565',2,'P002',1,'Tidak','Universitas Padjajaran','S.Pd','Bahasa Indonesia','(Sedang Studi Lanjut) Universitas Padjajaran','M.hum','Sastra Indonesia',NULL,NULL,NULL),(14,'Fristi Arfiawati\r\n','bandung','1976-02-20\r\n','bandung','fristi@gmail.com','fristi','fristi','0428106907\r\n','08978614998',2,'P002',1,'Tidak','Universitas Padjajaran','S.Pd','Bahasa Inggris','Universitas Padjajaran','M.hum','Sastra Inggris',NULL,NULL,NULL),(15,'Sarip Topik Hidayat\r\n','bandung','1976-02-20\r\n','bandung','sarip@gmail.com','sarip','sarip','8829740017\r\n','08677461469',1,'P002',1,'Tidak','Politeknik Bandung','S.T','Teknik Informatika','Institut Teknologi Bandung','M.T','Teknik Informatika',NULL,NULL,NULL),(16,'Nurachadi','bandung','1971-12-17\r\n','bandung','nurachadi@gmail.com','nurachadi','nurachadi','0417127101\r\n','08798717394',1,'P002',1,'Tidak','Universitas Widiyatama','S.Kom','Teknik Informatika','STMIK Likmi','M.Kom','Sistem Informasi',NULL,NULL,NULL);
 
 UNLOCK TABLES;
 
@@ -329,8 +329,8 @@ CREATE TABLE `tranfile` (
   PRIMARY KEY (`idTranFile`),
   KEY `FK_r2fsuu8wccwbn8dj6g0t99iur` (`idLecturer`),
   KEY `FK_af2thys60lf1itg1d2w8wkwyh` (`idDetail`),
-  CONSTRAINT `FK_tranfilelecturer` FOREIGN KEY (`idLecturer`) REFERENCES `masterlecturer` (`idLecturer`),
-  CONSTRAINT `FK_af2thys60lf1itg1d2w8wkwyh` FOREIGN KEY (`idDetail`) REFERENCES `detailfile` (`idDetail`)
+  CONSTRAINT `FK_af2thys60lf1itg1d2w8wkwyh` FOREIGN KEY (`idDetail`) REFERENCES `detailfile` (`idDetail`),
+  CONSTRAINT `FK_tranfilelecturer` FOREIGN KEY (`idLecturer`) REFERENCES `masterlecturer` (`idLecturer`)
 ) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
 
 /*Data for the table `tranfile` */
@@ -356,9 +356,9 @@ CREATE TABLE `tranfunctionalhistory` (
   KEY `FK_in58atr4xoae51rt2gp5f611u` (`idLecturer`),
   KEY `FK_dsvth32hi53bgxcxfjqqtv99s` (`idFunctional`),
   KEY `FK_j3husff9aqr40gi3455h27ha8` (`idTranFile`),
-  CONSTRAINT `FK_tranfunctionalhistorylecturer` FOREIGN KEY (`idLecturer`) REFERENCES `masterlecturer` (`idLecturer`),
   CONSTRAINT `FK_dsvth32hi53bgxcxfjqqtv99s` FOREIGN KEY (`idFunctional`) REFERENCES `masterfunctional` (`idFunctional`),
-  CONSTRAINT `FK_j3husff9aqr40gi3455h27ha8` FOREIGN KEY (`idTranFile`) REFERENCES `tranfile` (`idTranFile`)
+  CONSTRAINT `FK_j3husff9aqr40gi3455h27ha8` FOREIGN KEY (`idTranFile`) REFERENCES `tranfile` (`idTranFile`),
+  CONSTRAINT `FK_tranfunctionalhistorylecturer` FOREIGN KEY (`idLecturer`) REFERENCES `masterlecturer` (`idLecturer`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 /*Data for the table `tranfunctionalhistory` */
@@ -384,9 +384,9 @@ CREATE TABLE `tranlecturehistory` (
   KEY `FK_riwdlhs5vvs9l5eqi7808u9lm` (`idLecturer`),
   KEY `FK_ame3lowc7kjqfndevd99bvxl0` (`idTranFile`),
   KEY `FK_6o86dv85bxl827rdmb1qwif24` (`idLecture`),
-  CONSTRAINT `FK_tranlecturehistorylecturer` FOREIGN KEY (`idLecturer`) REFERENCES `masterlecturer` (`idLecturer`),
   CONSTRAINT `FK_6o86dv85bxl827rdmb1qwif24` FOREIGN KEY (`idLecture`) REFERENCES `masterlecture` (`idLecture`),
-  CONSTRAINT `FK_ame3lowc7kjqfndevd99bvxl0` FOREIGN KEY (`idTranFile`) REFERENCES `tranfile` (`idTranFile`)
+  CONSTRAINT `FK_ame3lowc7kjqfndevd99bvxl0` FOREIGN KEY (`idTranFile`) REFERENCES `tranfile` (`idTranFile`),
+  CONSTRAINT `FK_tranlecturehistorylecturer` FOREIGN KEY (`idLecturer`) REFERENCES `masterlecturer` (`idLecturer`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 /*Data for the table `tranlecturehistory` */
@@ -484,8 +484,8 @@ CREATE TABLE `transertificationhistory` (
   PRIMARY KEY (`idSertificationHistory`),
   KEY `FK_46lpu8wx3gw2sj3j39c41gpb6` (`idLecturer`),
   KEY `FK_adaxnusjx9qhfjcixp2jmnkad` (`idTranFile`),
-  CONSTRAINT `FK_transertificationhistorylecturer` FOREIGN KEY (`idLecturer`) REFERENCES `masterlecturer` (`idLecturer`),
-  CONSTRAINT `FK_adaxnusjx9qhfjcixp2jmnkad` FOREIGN KEY (`idTranFile`) REFERENCES `tranfile` (`idTranFile`)
+  CONSTRAINT `FK_adaxnusjx9qhfjcixp2jmnkad` FOREIGN KEY (`idTranFile`) REFERENCES `tranfile` (`idTranFile`),
+  CONSTRAINT `FK_transertificationhistorylecturer` FOREIGN KEY (`idLecturer`) REFERENCES `masterlecturer` (`idLecturer`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 /*Data for the table `transertificationhistory` */
@@ -514,9 +514,9 @@ CREATE TABLE `transtudyhistory` (
   KEY `FK_itbjic19amu9ayiyygr8nwbma` (`idLecturer`),
   KEY `FK_1hk1bj0rrcr23fl0a39x274x2` (`idStudy`),
   KEY `FK_t39f3bcbpmo7m0qemfx0rqy8v` (`idTranFile`),
-  CONSTRAINT `FK_transtudyhistorylecturer` FOREIGN KEY (`idLecturer`) REFERENCES `masterlecturer` (`idLecturer`),
   CONSTRAINT `FK_1hk1bj0rrcr23fl0a39x274x2` FOREIGN KEY (`idStudy`) REFERENCES `masterstudy` (`idStudy`),
-  CONSTRAINT `FK_t39f3bcbpmo7m0qemfx0rqy8v` FOREIGN KEY (`idTranFile`) REFERENCES `tranfile` (`idTranFile`)
+  CONSTRAINT `FK_t39f3bcbpmo7m0qemfx0rqy8v` FOREIGN KEY (`idTranFile`) REFERENCES `tranfile` (`idTranFile`),
+  CONSTRAINT `FK_transtudyhistorylecturer` FOREIGN KEY (`idLecturer`) REFERENCES `masterlecturer` (`idLecturer`)
 ) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=latin1;
 
 /*Data for the table `transtudyhistory` */

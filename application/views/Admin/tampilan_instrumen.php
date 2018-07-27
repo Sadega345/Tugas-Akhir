@@ -164,7 +164,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<?php echo $d['file']; ?>
 								</td>
 								<td class="center">
-									<!-- <a href="<?php echo base_url()."index.php/CrudInstrumen/do_edit/".$d['id'];?>">Edit</a> || -->
+									<a href="<?php echo base_url()."index.php/CrudInstrumen/edit_data/".$d['id'];?>">Edit</a> ||
          							<a href="<?php echo base_url()."index.php/CrudInstrumen/do_hapus/".$d['id'];?>">Delete</a>
 								</td>
 							</tr>

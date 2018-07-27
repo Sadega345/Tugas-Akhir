@@ -86,7 +86,7 @@ class Pengisis_excel extends CI_Controller {
 
 public function export_excel(){
 	 $data = $this->Pengisis_model->listing();
-	 $this->load->view('Users/PengisiBorang/tampilan_Pengisis_excel.php',array('data' => $data));
+	 $this->load->view('Users/PengisiBorang/tampilan_Pengisi_excel.php',array('data' => $data));
  }
 
 

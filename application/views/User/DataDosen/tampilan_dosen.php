@@ -109,13 +109,13 @@ License: You must have a valid license purchased only from themeforest(the above
 								</a>
 							</div>
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Data_Dosen_Excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn blue">
-										Export ke Excel 
-									</button>
-								</a>
-							</div>
-							<br>
+											<a href="<?php echo base_url()."index.php/Data_dosen_excel/load" ?>">
+											<button id="sample_editable_1_new" class="btn green">
+											Load 
+											</button>
+											</a>
+										</div>
+							<br><br>
 							<table class="table table-striped table-bordered table-hover" id="sample_1" >
 							<thead>
 								<tr>
@@ -148,8 +148,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							?>
 							<tr align="center">
 								 	<tr>
-									 	<!-- <td><?php echo $no++; ?></td> -->
-									 	<td><?php echo $d['id_dosen']; ?></td>
+									 	<td><?php echo $no++; ?></td>
+									 	<!-- <td><?php echo $d['id_dosen']; ?></td> -->
 									 	<td><?php echo $d['NAMA_DOSEN']; ?></td>
 									 	<td><?php echo $d['NIDN']; ?></td>
 									 	<td><?php echo $d['TGL_LHR']; ?></td>
@@ -165,8 +165,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									 	<td><?php echo $d['BID_KEAHLIAN_S3']; ?></td>
 									 	<td class="center">
 											<a href="<?php echo base_url()."index.php/Data_dosen_excel/ubah/".$d['NIDN'];?>" >Edit</a>
-											||
-         									<a href="<?php echo base_url()."index.php/Data_dosen_excel/do_hapus/".$d['NIDN'];?>" id="alerthapus">Hapus</a>
+											<!-- ||
+         									<a href="<?php echo base_url()."index.php/Data_dosen_excel/do_hapus/".$d['NIDN'];?>" id="alerthapus">Hapus</a> -->
 										</td>
 									 </tr>
 							<?php } ?>
@@ -179,14 +179,14 @@ License: You must have a valid license purchased only from themeforest(the above
 										Load 
 									</button>
 								</a>
-							</div>
+							</div>-->
 							<div class="btn-group">
 								<a href="<?php echo base_url()."index.php/Data_Dosen_Excel/export_excel";?>">
-									<button id="sample_editable_1_new" class="btn green">
+									<button id="sample_editable_1_new" class="btn blue">
 										Export ke Excel 
 									</button>
 								</a>
-							</div> -->
+							</div>
 						</div>
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->

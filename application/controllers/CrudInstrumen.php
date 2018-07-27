@@ -70,14 +70,14 @@ class CrudInstrumen extends CI_Controller {
 			"id"=>$res[0]['id'],
 			"instrumen"=>$res[0]['instrumen']
 		);
-		$this->load->view('Admin/tampilan_instrumen',$data);
+		$this->load->view('Admin/edit_instrumen',$data);
 	}
 
 	public function do_edit(){
 		$id=$_POST['id'];
 		$instrumen=$_POST['instrumen'];
 		$data_update=array(
-			'id'=>$id,
+			// 'id'=>$id,
 			'instrumen'=>$instrumen,
 		);
 		$where=array('id'=>$id);
@@ -89,4 +89,6 @@ class CrudInstrumen extends CI_Controller {
 			alert("Gagal Update") ;
 		}
 	}
+
+	
 }

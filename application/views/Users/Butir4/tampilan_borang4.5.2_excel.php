@@ -12,30 +12,30 @@ header("Expires: 0");
 <p> TABEL DATA BUTIR 4.5.2 : PENINGKATAN KEMAMPUAN DOSEN TETAP MELALUI TUGAS BELAJAR</p>
 <table border="1" width="50%">
 		<thead>
-			 <tr>
-				 <th>No</th>
-				 <th>Nama Dosen Tetap</th>
-				 <th>Jenjang Pendidikan</th>
-				 <th>Bidang Studi</th>
-				 <th>Perguruan Tinggi</th>
-				 <th>Negara</th>
-				 <th>Tahun Mulai Studi</th>
-			 </tr>
-		</thead>
-		<tbody>
-			<tr>
-				<?php 
-					$no=1; 
-					foreach ($data as $d ) { 
-				?>
-				 	<td><?php echo $no++; ?></td>
-				 	<td><?php echo $d['nama_dosen']; ?></td>
-				 	<td><?php echo $d['jenjang_pend']; ?></td>
-				 	<td><?php echo $d['bid_studi']; ?></td>
-				 	<td><?php echo $d['perguruan_tinggi']; ?></td>
-				 	<td><?php echo $d['negara']; ?></td>
-				 	<td><?php echo $d['thn_mulai_std']; ?></td>
-				 </tr>
-			</tbody>
-		<?php } ?>
+								<tr>
+									 <th bgcolor="#D3D3D3"><center>No</center></th>
+									 <th bgcolor="#D3D3D3"><center>Nama Dosen Tetap</center></th>
+									 <th bgcolor="#D3D3D3"><center>Jenjang Pendidikan</center></th>
+									 <th bgcolor="#D3D3D3"><center>Bidang Studi</center></th>
+									 <th bgcolor="#D3D3D3"><center>Perguruan Tinggi</center></th>
+									 <th bgcolor="#D3D3D3"><center>Negara</center></th>
+									 <th bgcolor="#D3D3D3"><center>Tahun Mulai Studi</center></th>
+								 </tr>
+							</thead>
+							<tbody>
+							<tr>
+								<?php 
+									$no=1; 
+									foreach ($data as $d ) { 
+								?>
+								 	<td bgcolor="#FFFF00"><?php echo $no++; ?></td>
+								 	<td bgcolor="#FFFF00"><?php echo $d['nama_dosen']; ?></td>
+								 	<td bgcolor="#FFFF00"><?php echo $d['jenjang_pend']; ?></td>
+								 	<td bgcolor="#FFFF00"><?php echo $d['bid_studi']; ?></td>
+								 	<td bgcolor="#FFFF00"><?php echo $d['perguruan_tinggi']; ?></td>
+								 	<td bgcolor="#FFFF00"><?php echo $d['negara']; ?></td>
+								 	<td bgcolor="#FFFF00"><?php echo $d['thn_mulai_std']; ?></td>
+								 </tr>
+								<?php } ?>
+							</tbody>
 	</table>

@@ -149,25 +149,25 @@ License: You must have a valid license purchased only from themeforest(the above
 							?>
 								<tr>
 							 	<td><?php echo $no++; ?></td>
-							 	<td><?php echo $d['nama_dosen']; ?></td>
+							 	<td><?php echo $d['nameLecturer']; ?></td>
 							 	<td><?php echo $d['nidn']; ?></td>
-							 	<td><?php echo $d['tgl_lhr']; ?></td>
-							 	<td><?php echo $d['NM_JAB_AKD']; ?></td>
-							 	<td><?php echo $d['sertifikasi']; ?></td>
-							 	<td><?php echo $d['GELAR_S1']; ?></td>
-							 	<td><?php echo $d['ASAL_PT_S1']; ?></td>
-							 	<td><?php echo $d['BID_KEAHLIAN_S1']; ?></td>
-							 	<td><?php echo $d['GELAR_S2']; ?></td>
-							 	<td><?php echo $d['ASAL_PT_S2']; ?></td>
-							 	<td><?php echo $d['BID_KEAHLIAN_S2']; ?></td>
-							 	<td><?php echo $d['GELAR_S3']; ?></td>
-							 	<td><?php echo $d['ASAL_PT_S3']; ?></td>
-							 	<td><?php echo $d['BID_KEAHLIAN_S3']; ?></td>
-							 	<td><?php echo $d['GELAR']; ?></td>
-							 	<td><?php echo $d['PENGAKUAN']; ?></td>
-							 	<td><?php echo $d['BID_KEAHLIAN']; ?></td>
+							 	<td><?php echo $d['birthdate']; ?></td>
+							 	<td></td>
+								<td><?php echo $d['state']; ?></td>
+							 	<td><?php echo $d['degree1']; ?></td>
+							 	<td><?php echo $d['nameUniversity1']; ?></td>
+							 	<td><?php echo $d['studyProgram1']; ?></td>
+							 	<td><?php echo $d['degree2']; ?></td>
+							 	<td><?php echo $d['nameUniversity2']; ?></td>
+							 	<td><?php echo $d['studyProgram2']; ?></td>
+							 	<td><?php echo $d['degree3']; ?></td>
+							 	<td><?php echo $d['nameUniversity3']; ?></td>
+							 	<td><?php echo $d['studyProgram3']; ?></td>
+							 	<td></td>
+							 	<td></td>
+							 	<td></td>
 							 	<td class="center">
-									<a href="<?php echo base_url()."index.php/Apd_a431_excel/ubah/".$d['nidn'];?>" >Edit</a>
+									<a href="<?php echo base_url()."index.php/Apd_a431_excel/ubahload/".$d['nidn'];?>" >Edit</a>
 								</td>
 							 </tr>
 							<?php } ?>
@@ -182,9 +182,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								</a>
 							</div> -->
 							<div class="btn-group">
-								<a href="<?php echo base_url()."index.php/Apd_a431_excel";?>">
+								<a href="<?php echo base_url()."index.php/Apd_a431_excel/export_excel";?>">
 									<button id="sample_editable_1_new" class="btn blue">
-										Batal
+										Export To Excel 
 									</button>
 								</a>
 							</div>

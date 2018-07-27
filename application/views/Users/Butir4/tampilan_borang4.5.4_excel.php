@@ -2,56 +2,43 @@
 
 header("Content-type: application/octet-stream");
 
-header("Content-Disposition: attachment; filename=$title.xls");
+header("Content-Disposition: attachment; filename=TABEL DATA BUTIR 4.5.4 : PENCAPAIAN PRESTASI/REPUTASI DOSEN.xls");
 
 header("Pragma: no-cache");
 
 header("Expires: 0");
 
 ?>
-<p> TABEL DATA BUTIR 4.5.3 : KEGIATAN DOSEN TETAP</p>
+<p> TABEL DATA BUTIR 4.5.4 : PENCAPAIAN PRESTASI/REPUTASI DOSEN</p>
 <table border="1" width="50%">
-		<thead>
-			 <tr>
-				 <th rowspan="2">No</th>
-				 <th rowspan="2">Nama Dosen Tetap</th>
-				 <th rowspan="2">Jenis Kegiatan*</th>
-				 <th rowspan="2">Tempat</th>
-				 <th rowspan="2">Tahun</th>
-				 <th colspan="2">Sebagai**</th>
-			 </tr>
-			 <tr>
-			 	<th>Peyaji</th>
-			 	<th>Peserta</th>
-			 </tr>
-			 <tr align="center">
-			 	<td>(1)</td>
-			 	<td>(2)</td>
-			 	<td>(3)</td>
-			 	<td>(4)</td>
-			 	<td>(5)</td>
-			 	<td>(6)</td>
-			 	<td>(7)</td>
-			 </tr>
-		</thead>
-		<tbody>
-			 <tr>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-			 <tr>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 	<td></td>
-			 </tr>
-		</tbody>
+<thead>
+								<tr>
+									 <th rowspan="2" bgcolor="#D3D3D3">No</th>
+									 <th rowspan="2" bgcolor="#D3D3D3">Nama Dosen</th>
+									 <th rowspan="2" bgcolor="#D3D3D3">Prestasi yang Dicapai *</th>
+									 <th rowspan="2" bgcolor="#D3D3D3">Tahun Pencapaian</th>
+									 <th colspan="3" bgcolor="#D3D3D3">Tingkat**</th>
+								 </tr>
+								 <tr>
+								 	<th bgcolor="#D3D3D3">Internasional</th>
+								 	<th bgcolor="#D3D3D3">Nasional</th>
+								 	<th bgcolor="#D3D3D3">Lokal</th>
+								 </tr>
+							</thead>
+							<tbody>
+							<tr>
+								<?php 
+									$no=1;
+									foreach ($data as $d) {
+								 ?>
+								<td bgcolor="#FFFF00"><?php echo $no++; ?></td>
+								<td bgcolor="#FFFF00"><?php echo $d['nama_dosen']; ?></td>
+								<td bgcolor="#FFFF00"><?php echo $d['prestasi']; ?></td>
+								<td bgcolor="#FFFF00"><?php echo $d['tahun']; ?></td>
+								<td bgcolor="#FFFF00"><?php echo $d['internasional']; ?></td>
+								<td bgcolor="#FFFF00"><?php echo $d['nasional']; ?></td>
+								<td bgcolor="#FFFF00"><?php echo $d['lokal']; ?></td>
+							</tr>
+								<?php } ?>
+							</tbody>
 	</table>

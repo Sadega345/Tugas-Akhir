@@ -49,4 +49,13 @@ ON a.id_dosen=d.id_dosen WHERE d.kd_prodi='."'$kdprodi'".' AND d.sts_ahli="Tidak
  	return $data->result_array();
  }
 
+  public function insert($tablename,$data){
+	$res=$this->db->insert($tablename,$data);
+	return $res;
+}
+public function delete($tablename,$where){
+	$res=$this->db->delete($tablename,$where);
+	return $res;
+}
+
 }

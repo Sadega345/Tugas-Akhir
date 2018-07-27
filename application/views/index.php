@@ -79,7 +79,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 	<!-- BEGIN PAGE HEADER-->
 		<?php 
-			echo $this->load->view('content.php');
+			echo $this->load->view('content_admin.php');
 		 ?>
 	<!-- END CONTAINER -->		
 	<!-- BEGIN FOOTER -->

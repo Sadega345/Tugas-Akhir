@@ -119,16 +119,16 @@ License: You must have a valid license purchased only from themeforest(the above
 											<input type="text" class="form-control" name="instrumen" value="<?php echo $instrumen; ?>">
 										</div>
 									</div>
-									<div class="row">
+									<!-- <div class="row">
 										<div class="form-group">
 											<label>File</label>
-											<input type="file" class="form-control" name="file" value="<?php echo $instrumen; ?>">
+											<input type="file" class="form-control" name="file" value="<?php echo $instrumen; ?>" readonly>
 										</div>
-									</div>
+									</div> -->
 									<div class="row">
 										<button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
 										<form action="<?php echo base_url()."index.php/CrudInstrumen"; ?>" method="POST">
-											<button type="submit" class="btn btn-danger" name="simpan">Cancel</button>
+											<button type="submit" class="btn btn-danger" name="simpan">Batal</button>
 										</form>	
 									</div>
 									</form>
