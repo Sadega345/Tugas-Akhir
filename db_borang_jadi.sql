@@ -1363,13 +1363,13 @@ CREATE TABLE `tahun_akd` (
   `id_ts` int(4) NOT NULL AUTO_INCREMENT,
   `tahun` int(4) DEFAULT NULL,
   PRIMARY KEY (`id_ts`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
 /*Data for the table `tahun_akd` */
 
 LOCK TABLES `tahun_akd` WRITE;
 
-insert  into `tahun_akd`(`id_ts`,`tahun`) values (1,2012),(2,2013),(3,2014),(4,2015),(5,2016),(6,2017),(7,2018),(8,2019),(15,2016),(16,2018);
+insert  into `tahun_akd`(`id_ts`,`tahun`) values (1,2012),(2,2013),(3,2014),(4,2015),(5,2016),(6,2017),(7,2018),(8,2019),(15,2016),(16,2018),(17,2016);
 
 UNLOCK TABLES;
 
